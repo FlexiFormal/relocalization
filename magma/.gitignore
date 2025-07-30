@@ -1,2 +1,5 @@
 *.gfo
 pgf
+*.png
+*.dot
+*.pdf
