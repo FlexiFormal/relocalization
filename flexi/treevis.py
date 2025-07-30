@@ -50,7 +50,7 @@ def mast_to_dot(node: MAst) -> str:
             display_val = f'{type(n).__name__}({display_val})'
 
         l(f'  n{id(n)} [label="{display_val}", shape={shape}{extra}]')
-        for c in n.children:
+        for c in n._children:
             traverse(c)
             l(f'  n{id(n)} -> n{id(c)}')
 

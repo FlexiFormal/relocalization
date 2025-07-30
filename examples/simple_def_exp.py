@@ -1,5 +1,4 @@
 import sys
-import webbrowser
 from pathlib import Path
 
 # ensure flexi is in path, even if not installed
@@ -8,7 +7,6 @@ sys.path.append(str(Path(__file__).parent.parent))
 from flexi.parsing.document import ftml_to_doc
 from flexi.parsing.magma import MagmaGrammar
 from flexi.config import TEST_FILE_DIR
-import flexi.workbench as wb
 
 grammar = MagmaGrammar('XLTenMagma', 'Eng')
 

@@ -46,8 +46,13 @@ from lxml import etree
 
 @functools.cache
 def require_nltk_punkt():
-    nltk.download('punkt')
-
+    try:
+        PunktSentenceTokenizer()
+    except LookupError:
+        import sys
+        nltk.download('punkt')
+        print('Downloaded NLTK punkt tokenizer data. Please restart the program to use it.', file=sys.stderr)
+        sys.exit(1)
 
 class GfXmlNode:
     def to_gf(self) -> tuple[list[tuple[str, str]], str]:

@@ -1,3 +1,8 @@
+"""
+A MAst is an AST from the MAGMA grammar where semantic annotations from the HTML
+are represented as custom MAst subclasses.
+"""
+
 from __future__ import annotations
 
 import re
@@ -17,30 +22,45 @@ class GfSymb(str):
 
 
 class MAst:
-    """ A MAGMA AST node. (should never be instantiated directly) """
-    __match_args__ = ('value', 'children')
+    """ A MAGMA AST node. (abstract class, should never be instantiated directly) """
+    __match_args__ = ('value', '_children')
     value: Any
-    children: list[MAst]
-    parent: Optional[MAst] = None
-    parent_pos: Optional[int] = None   # position of this node in the parent's children list
+    _children: list[MAst]
+    _parent: Optional[MAst] = None
+    _parent_pos: Optional[int] = None   # position of this node in the parent's children list
 
     def __init__(self, value: Any, children: Optional[list[MAst]] = None):
         if self.__class__ == MAst:
             raise TypeError("MAst is an abstract class and cannot be instantiated directly")
         self.value = value
-        self.children = children if children is not None else []
-        for i, child in enumerate(self.children):
-            if child.parent:
+        self._children = children if children is not None else []
+        for i, child in enumerate(self._children):
+            if child._parent:
                 raise ValueError("Child already has a parent")
-            child.parent = self
-            child.parent_pos = i
+            child._parent = self
+            child._parent_pos = i
 
     def __repr__(self):
-        return f"{self.__class__.__name__}({self.value!r}, {self.children!r})"
+        return f"{self.__class__.__name__}({self.value!r}, {self._children!r})"
 
     def __eq__(self, other):
-        return type(self) == type(other) and self.value == other.value and self.children == other.children
+        return type(self) is type(other) and self.value == other.value and self._children == other._children
 
+    def __len__(self):
+        return len(self._children)
+
+    def __getitem__(self, item):
+        return self._children[item]
+
+    def __iter__(self):
+        return iter(self._children)
+
+    def __setitem__(self, index, mast):
+        assert isinstance(mast, MAst)
+        mast = mast.clone()
+        self._children[index] = mast
+        mast._parent = self
+        mast._parent_pos = index
 
     def find_children(
             self,
@@ -51,7 +71,7 @@ class MAst:
             yield self
             if not recurse_on_match:
                 return
-        for child in self.children:
+        for child in self._children:
             yield from child.find_children(filter, recurse_on_match)
 
     def find_child(self, filter: Callable[[MAst], bool]) -> Optional[MAst]:
@@ -62,13 +82,13 @@ class MAst:
         node = self
         while node:
             yield node
-            node = node.parent
+            node = node._parent
 
     def clone(self) -> MAst:
         """ Create a clone of this node. """
         clone = deepcopy(self)
-        clone.parent = None
-        clone.parent_pos = None
+        clone._parent = None
+        clone._parent_pos = None
         return clone
 
 
@@ -156,7 +176,7 @@ class M(MAst):
 
 class Formula(MAst):
     """ A formula node (i.e. <math> node) """
-    __match_args__ = ('children',)
+    __match_args__ = ('_children',)
     value: None
     wrapfun: str
 
@@ -167,14 +187,14 @@ class Formula(MAst):
 
 class MSeq(MAst):
     """ A sequence (as argument for a flexary operator) """
-    __match_args__ = ('children',)
+    __match_args__ = ('_children',)
     value: None
 
     def add_arg(self, arg: MAst):
         arg = deepcopy(arg)
-        arg.parent = self
-        arg.parent_pos = len(self.children)
-        self.children.append(arg)
+        arg._parent = self
+        arg._parent_pos = len(self._children)
+        self._children.append(arg)
 
 
 class MathArg(MAst):
@@ -246,7 +266,7 @@ class TermRef(S):
             'span',
             [XmlNode(
                 'span',
-                [mast_to_gfxml(child) for child in self.children],
+                [mast_to_gfxml(child) for child in self._children],
                 attrs={'data-ftml-comp': '', 'class': 'ftml-comp'},
                 wrapfun=self.wrapfun
             )],
@@ -270,7 +290,7 @@ class TermDef(S):
     def to_gfxml(self) -> XmlNode:
         return XmlNode(
             'span',
-            [mast_to_gfxml(child) for child in self.children],
+            [mast_to_gfxml(child) for child in self._children],
             {'data-ftml-definiendum': self.value},
             wrapfun=self.wrapfun
         )
@@ -422,13 +442,13 @@ def mast_to_gfxml(node: MAst, args: Optional[dict[str, MAst]] = None) -> GfXmlNo
                 raise ValueError(f"Missing argument for MathArg: {value}")
             arg = args[value]
             assert isinstance(arg, MSeq)
-            if len(arg.children) > 1:
+            if len(arg._children) > 1:
                 assert msa.separator is not None, f"Expected separator for MathSeqArg {value} with multiple children"
             updated_children: list[MAst] = []
-            for i in range(len(arg.children)):
+            for i in range(len(arg._children)):
                 if i > 0 and msa.separator:
                     updated_children.extend(deepcopy(msa.separator))  # separator is a list of MI nodes
-                updated_children.append(arg.children[i])
+                updated_children.append(arg._children[i])
             return XmlNode(
                 'mrow',
                 [mast_to_gfxml(child, None) for child in updated_children],
