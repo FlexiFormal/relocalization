@@ -62,6 +62,11 @@ class MAst:
         mast._parent = self
         mast._parent_pos = index
 
+    def replace_in_parent(self, new_mast: MAst):
+        if self._parent is None:
+            raise Exception("Cannot replace in parent: this node has no parent")
+        self._parent[self._parent_pos] = new_mast.clone()
+
     def find_children(
             self,
             filter: Callable[[MAst], bool],
