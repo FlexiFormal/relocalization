@@ -4,6 +4,7 @@ abstract Magma = MagmaFormula ** {
         Sentence;       -- "There is an odd integer ."
         Def;            -- "an integer is called odd iff it is not divisible by 2"
         DefCore;        -- "an integer is called odd"
+        Assumption;     -- "assume that x is even", "let x be even"
 
         Quantification; -- "some", "every", "at least one"
         Polarity;       -- positive/negative
@@ -14,9 +15,12 @@ abstract Magma = MagmaFormula ** {
         Kind;           -- "bijective function ... from X to Y"
         NamedKind;      -- "bijective function f from X to Y"
         Term;           -- "every function f from X to Y"
-        Ident;          -- "f"
+        Ident;          -- "f", "f, g, and h"
         Property;       -- "divisible by 2"
         ArgMarker;      -- "by", "of degree", ...
+
+        -- predicates
+        Predicate;      -- "divides 2", ...
 
     fun
         -- polarities
@@ -34,6 +38,7 @@ abstract Magma = MagmaFormula ** {
         
         -- identifiers
         no_ident : Ident;
+        no_idents : Ident;
         math_ident : Formula -> Ident;
 
         -- prekinds/kinds/named kinds
@@ -54,13 +59,10 @@ abstract Magma = MagmaFormula ** {
 
         -- quantifications
         existential_quantification : Quantification;
-        existential_quantification_v1 : Quantification;
+        existential_quantification_v1 : Quantification;  -- some
 
-        -- "every" (sg) and "all" (pl) cannot be used interchangeably
-        -- specifically, we can say "for all integers x, y",
-        -- but not "for every integer x, y"
-        universal_quantification_sg : Quantification;
-        universal_quantification_pl : Quantification;
+        universal_quantification : Quantification;       -- every for sg, all for pl
+        universal_quantification_v1 : Quantification;    -- all for sg, all for pl
 
         -- properties
         property_with_arg : Property -> ArgMarker -> Term -> Property;
@@ -73,12 +75,12 @@ abstract Magma = MagmaFormula ** {
         term_has_nkind_stmt : Term -> NamedKind -> Stmt;
         term_is_property_stmt : Term -> Property -> Stmt;
         term_is_term_stmt : Term -> Term -> Stmt;
+        term_predicate_stmt : Term -> Predicate -> Stmt;
 
         let_kind_stmt : Ident -> NamedKind -> Stmt;    -- in practice, NamedKind should be anonymous, but Kind is too restricted (e.g. no "such that")
 
-        exists_nkind : NamedKind -> Stmt;
-        exists_nkind_v1 : NamedKind -> Stmt;
-        exists_nkind_pl : NamedKind -> Stmt;
+        exists_nkind : NamedKind -> Stmt;       -- there is a ...
+        exists_nkind_v1 : NamedKind -> Stmt;    -- there exists a ...
 
         -- sentences
         fin_stmt : Stmt -> Sentence;
