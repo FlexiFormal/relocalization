@@ -22,4 +22,6 @@ resource MDictEng = open SyntaxEng, ParadigmsEng in {
         dict_countable_A: A = mkA "countable";
         dict_consistent_A: A = mkA "consistent";
         dict_derivable_A: A = mkA "derivable";
+
+        dict_divide: V = mkV "divide";
 }

@@ -3,6 +3,7 @@ abstract TestEngLex = Magma ** {
         lex_argmark_by : ArgMarker;
         lex_argmark_of : ArgMarker;
         lex_argmark_from : ArgMarker;
+        lex_argmark_invis : ArgMarker;
 
         lex_integer : PreKind;
         lex_element : PreKind;
@@ -26,4 +27,6 @@ abstract TestEngLex = Magma ** {
         lex_countable : Property;
         lex_consistent : Property;
         lex_derivable : Property;
+
+        lex_divide : Predicate;
 }

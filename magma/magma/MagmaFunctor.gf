@@ -25,6 +25,7 @@ incomplete concrete MagmaFunctor of Magma = MagmaFormulaConcr ** open Syntax, Gr
         Stmt = S;
         Polarity = Pol;
         Def = S;
+        Assumption = S;
         DefCore = S;
         Formula = {s: Str};
         Sentence = {s: Str};
@@ -84,6 +85,9 @@ incomplete concrete MagmaFunctor of Magma = MagmaFormulaConcr ** open Syntax, Gr
         -- properties
         property_with_arg p am t = AdvAP p (PrepNP am t);
 
+        -- predicates
+        predicate_with_arg pred am t = mkVP pred (PrepNP am t);
+
         -- definitions
         define_nkind_as_nkind nk1 nk2 = mkS (mkCl (DetCN (indefart nk1.num) nk1.cn) (DetCN (indefart nk2.num) nk2.cn));
 
@@ -104,9 +108,11 @@ incomplete concrete MagmaFunctor of Magma = MagmaFormulaConcr ** open Syntax, Gr
         term_is_term_stmt t1 t2 = mkS (mkCl t1 t2);
         term_predicate_stmt t pred = mkS (mkCl t pred);
 
-        let_kind_stmt i nk = lin S { s = (ImpP3 (symb i.s) (mkVP (mkNP (indefart nk.num) nk.cn))).s };
+        -- declaration
+        let_kind_decl i nk = lin S { s = (ImpP3 (symb i.s) (mkVP (mkNP (indefart nk.num) nk.cn))).s };
 
         -- sentences
-        fin_stmt s = {s = {- CAPIT ++ -} s.s ++ "."};
+        stmt_sentence s = {s = {- CAPIT ++ -} s.s ++ "."};
         def_sentence d = {s = {- CAPIT ++ -} d.s ++ "."};
+        declaration_sentence a = {s = {- CAPIT ++ -} a.s ++ "."};
 }

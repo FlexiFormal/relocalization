@@ -3,6 +3,7 @@ concrete TestEngLexConcr of TestEngLex = MagmaEng ** open MDictEng, ParadigmsEng
         lex_argmark_by = mkPrep "by";
         lex_argmark_of = mkPrep "of";
         lex_argmark_from = mkPrep "from";
+        lex_argmark_invis = mkPrep "";
 
         lex_integer = mkCN dict_integer_N;
         lex_element = mkCN dict_element_N;
@@ -26,4 +27,6 @@ concrete TestEngLexConcr of TestEngLex = MagmaEng ** open MDictEng, ParadigmsEng
         lex_countable = mkAP dict_countable_A;
         lex_consistent = mkAP dict_consistent_A;
         lex_derivable = mkAP dict_derivable_A;
+
+        lex_divide = mkVP dict_divide;
 }

@@ -4,7 +4,7 @@ abstract Magma = MagmaFormula ** {
         Sentence;       -- "There is an odd integer ."
         Def;            -- "an integer is called odd iff it is not divisible by 2"
         DefCore;        -- "an integer is called odd"
-        Assumption;     -- "assume that x is even", "let x be even"
+        Declaration;    -- "let x be an integer"
 
         Quantification; -- "some", "every", "at least one"
         Polarity;       -- positive/negative
@@ -67,6 +67,9 @@ abstract Magma = MagmaFormula ** {
         -- properties
         property_with_arg : Property -> ArgMarker -> Term -> Property;
 
+        -- predicates
+        predicate_with_arg : Predicate -> ArgMarker -> Term -> Predicate;
+
         -- statements
         conj_stmt : Conj -> Stmt -> Stmt -> Stmt;
         formula_stmt : Formula -> Stmt;
@@ -77,14 +80,17 @@ abstract Magma = MagmaFormula ** {
         term_is_term_stmt : Term -> Term -> Stmt;
         term_predicate_stmt : Term -> Predicate -> Stmt;
 
-        let_kind_stmt : Ident -> NamedKind -> Stmt;    -- in practice, NamedKind should be anonymous, but Kind is too restricted (e.g. no "such that")
 
         exists_nkind : NamedKind -> Stmt;       -- there is a ...
         exists_nkind_v1 : NamedKind -> Stmt;    -- there exists a ...
 
+        -- declarations
+        let_kind_decl : Ident -> NamedKind -> Declaration;    -- in practice, NamedKind should be anonymous, but Kind is too restricted (e.g. no "such that")
+
         -- sentences
-        fin_stmt : Stmt -> Sentence;
+        stmt_sentence : Stmt -> Sentence;
         def_sentence : Def -> Sentence;
+        declaration_sentence : Declaration -> Sentence;
 
         -- definitions
         define_nkind_as_nkind : NamedKind -> NamedKind -> DefCore;
