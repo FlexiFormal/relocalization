@@ -151,6 +151,7 @@ def parse_shtml(path: Path) -> etree._ElementTree:
 
 
 def xify(node: etree._Element | str) -> XmlNode:
+    assert not isinstance(node, etree._Comment)
     if isinstance(node, str):
         node = etree.parse(StringIO(node)).getroot()
     x = XmlNode(
@@ -161,6 +162,8 @@ def xify(node: etree._Element | str) -> XmlNode:
     if node.text and node.text.strip():
         x.children.append(XmlText(node.text))
     for child in node:
+        if isinstance(child, etree._Comment):
+            continue
         x.children.append(xify(child))
         if child.tail and child.tail.strip():
             x.children.append(XmlText(child.tail))
@@ -205,6 +208,10 @@ def get_gfxml_string(shtml: etree._Element) -> tuple[list[XmlNode], str]:
         if node.tail:
             strings.append(node.tail)
 
+    if isinstance(shtml, etree._Element) and shtml.tag == 'html':
+        bodies = [child for child in shtml if child.tag == 'body']
+        assert len(bodies) == 1, 'Expected exactly one <body> tag in the HTML document'
+        shtml = bodies[0]
     _recurse(shtml)
 
     return nodes, ''.join(strings)
@@ -275,10 +282,16 @@ def sentence_tokenize(text: str) -> list[str]:
         # strip away outer tags
         # e.g. < 0 > < 1 > </ 1 > Words </ 0 > -> Words
         while True:
+            _just_tags = r'(\s+|</? [0-9]+ >)*'
+            # _just_tags = r'\s*'
             m = (
+                    # "< i > sentence </ i >"
                     re.match(r'^\s*(< (?P<i>[0-9]+) >)(?P<sentence>.*?)(</ (?P=i) >\s*)$', sentence)
-                    or re.match(r'^\s*(< (?P<i>[0-9]+) >)\s*(</ (?P=i) >)\s*(?P<sentence>.*?)$', sentence)
-                    or re.match(r'^(?P<sentence>.*?)\s*(< (?P<i>[0-9]+) >)\s*(</ (?P=i) >)\s*$', sentence)
+                    # "< i > </ i > sentence"
+                    # but also "< i > < j > </ j > < k > </ k > </ i > sentence" etc.
+                    or re.match(r'^\s*(< (?P<i>[0-9]+) >)' + _just_tags + r'(</ (?P=i) >)\s*(?P<sentence>.*?)$', sentence)
+                    # "sentence < i > </ i >" (and more nested)
+                    or re.match(r'^(?P<sentence>.*?)\s*(< (?P<i>[0-9]+) >)' + _just_tags + r'(</ (?P=i) >)\s*$', sentence)
             )
             if m:
                 sentence = m.group('sentence')
@@ -495,7 +508,7 @@ def parse_mtext_contents(parse_fn: Callable[[str], list[str]], tree: GfXmlNode) 
 
 
 def linearize_mtree_contents(linearize_fn: Callable[[str], str], tree: GfXmlNode):
-    if isinstance(tree, XmlNode) and tree.tag == 'mtext' and hasattr(tree, '::already_processed'):
+    if isinstance(tree, XmlNode) and tree.tag == 'mtext': # and hasattr(tree, '::already_processed'):
         assert len(tree.children) == 1
         recovery_info, gf_input = tree.children[0].to_gf()
         gf_lin = linearize_fn(gf_input)

@@ -75,7 +75,7 @@ class GFShellRaw(object):
 
 
 def handle_parse_output(output: str) -> list[str]:
-    if output.startswith("The parser failed at token"):
+    if output.startswith("The parser failed at token") or output.startswith('The sentence is not complete'):
         return []
     return output.splitlines()
 

@@ -23,7 +23,9 @@ with wb.new_workbench(result_file, 'Parsing example sentences'):
     for input_file in [
         TEST_FILE_DIR / 'ftml' / 'positive-integer.en.html',
         TEST_FILE_DIR / 'ftml' / 'quiver-walk.en.html',
-    ]:
+        TEST_FILE_DIR / 'ftml' / 'comprehension-reduction-minimal.en.html',
+        TEST_FILE_DIR / 'ftml' / 'inner-product-minimal.en.html',
+    ] if len(sys.argv) == 1 else [Path(arg) for arg in sys.argv[1:]]:
 
         wb.set_default_grammar(grammar)
         wb.push_html(f'<h1>Original definition (<code>{input_file.name}</code>)</h1>')

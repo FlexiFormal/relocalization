@@ -333,6 +333,8 @@ def process_math_sem_node(nodes: list[GfXmlNode]) -> tuple[list[MAst], list[tupl
                 # part of the notation
                 _children2, _args2 = process_math_sem_node(children)
                 args.extend(_args2)
+                if not isinstance(tag, str):
+                    print('OOPS', tag, repr(tag), type(tag))
                 notations.append(MI(tag, _children2, x.attrs))
             case XmlText(text):
                 notations.append(MT(text))
@@ -363,7 +365,7 @@ def gf_xml_math_to_mast(node: GfXmlNode) -> MAst:
     match node:
         case XmlText(text):
             return MT(text)
-        case XmlNode('mrow', children) as x if (tp := x.attrs.get('data-ftml-term')) in {'OMA', 'OMV'}:
+        case XmlNode('mrow', children) as x if (tp := x.attrs.get('data-ftml-term')) in {'OMA', 'OMV', 'OMID'}:
             if tp == 'OMA':
                 notations, args = process_math_sem_node(children)
             else:
@@ -384,6 +386,8 @@ def gf_xml_math_to_mast(node: GfXmlNode) -> MAst:
                 args2,
                 notations
             )
+        case XmlNode('mtext', children) as x:
+            return MI('mtext', [gf_xml_to_mast(child) for child in children], x.attrs)
         case XmlNode(tag, children) as x:
             # an informal math node
             return MI(tag, [gf_xml_math_to_mast(child) for child in children], x.attrs)
@@ -396,11 +400,12 @@ def gf_xml_to_mast(node: GfXmlNode) -> MAst:
         case GfNode(value, children):
             return G(value, [gf_xml_to_mast(child) for child in children])
         case XmlNode('math') as m:
+            assert m.wrapfun
+            wrapfun = m.wrapfun
             if len(m.children) == 1 and isinstance(m.children[0], XmlNode) and m.children[0].tag == 'mrow' and not m.children[0].attrs:
                 # swallow bare mrow
                 m = m.children[0]
-            assert m.wrapfun
-            return Formula([gf_xml_math_to_mast(child) for child in m.children], m.wrapfun)
+            return Formula([gf_xml_math_to_mast(child) for child in m.children], wrapfun)
         case XmlNode(tag, children, attrs, wrapfun) as x:
             for anno in _ANNOS:
                 if r := anno.try_from_gfxml(x):

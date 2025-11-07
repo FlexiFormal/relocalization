@@ -10,6 +10,7 @@ class TestGrammar(unittest.TestCase):
         # pairs (sentence, number of readings)
         sentences = [
             ('There is an integer.', 1),
+            ('There are integers.', 1),
             ('Let $...$ be an even integer.', 1),
             ('$...$ is an even integer.', 1),
             ('$...$ is an even integer iff $...$.', 1),

@@ -78,7 +78,7 @@ class MagmaGrammar:
             fail_on_parse_error: bool = True,
     ) -> list[Sentence]:
         if isinstance(ftml, Path):
-            ftml = etree.parse(StringIO(ftml.read_text())).getroot()
+            ftml = etree.parse(StringIO(ftml.read_text()), parser=etree.HTMLParser()).getroot()
         recovery_info, string = gfxml.get_gfxml_string(ftml)
         sentences = gfxml.sentence_tokenize(string)
         result: list[Sentence] = []
@@ -94,6 +94,7 @@ class MagmaGrammar:
 
             for ast in asts:
                 tree = gfxml.build_tree(recovery_info, ast)
+                # print(tree)
                 try:
                     trees = gfxml.parse_mtext_contents(
                         lambda s: self.parse_to_aststr(s, category='Stmt'),
@@ -128,6 +129,7 @@ class MagmaGrammar:
         Linearize a MAGMA AST to a sentence.
         """
         gfxml_tree = mast_to_gfxml(ast)
+        # print('GFXMLTree', gfxml_tree)
         gfxml.linearize_mtree_contents(lambda s: self.shell.handle_command(f'linearize {s}'), gfxml_tree)
         recovery_info, ast_str = gfxml_tree.to_gf()
         gf_lin = self.linearize_ast_str(ast_str)
