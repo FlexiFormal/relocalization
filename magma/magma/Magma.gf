@@ -1,4 +1,4 @@
-abstract Magma = MagmaFormula ** {
+abstract Magma = {
     cat
         Stmt;           -- "there is an odd integer"
         Sentence;       -- "There is an odd integer ."
@@ -39,7 +39,6 @@ abstract Magma = MagmaFormula ** {
         -- identifiers
         no_ident : Ident;
         no_idents : Ident;
-        math_ident : Formula -> Ident;
 
         -- prekinds/kinds/named kinds
         prekind_to_kind : PreKind -> Kind;
@@ -50,12 +49,10 @@ abstract Magma = MagmaFormula ** {
         nkind_that_is_property : NamedKind -> Polarity -> Property -> NamedKind;
         property_prekind : Property -> PreKind -> PreKind;
         kind_with_arg : Kind -> ArgMarker -> Term -> Kind;
-        formula_named_kind : Formula -> NamedKind;    -- as in "iff there is some n∈N such that ..."
 
         -- terms
         quantified_nkind : Quantification -> NamedKind -> Term;
         plural_term : NamedKind -> Term;
-        math_term : Formula -> Term;
 
         -- quantifications
         existential_quantification : Quantification;
@@ -72,7 +69,6 @@ abstract Magma = MagmaFormula ** {
 
         -- statements
         conj_stmt : Conj -> Stmt -> Stmt -> Stmt;
-        formula_stmt : Formula -> Stmt;
         stmt_for_term : Stmt -> Term -> Stmt;
 
         term_has_nkind_stmt : Term -> NamedKind -> Stmt;
@@ -95,12 +91,13 @@ abstract Magma = MagmaFormula ** {
         -- definitions
         define_nkind_as_nkind : NamedKind -> NamedKind -> DefCore;
         define_nkind_as_nkind_v1 : NamedKind -> NamedKind -> DefCore;
-        define_formula_prop : Formula -> Property -> DefCore;      -- `t` is called `p`
-        define_formula_prop_v1 : Formula -> Property -> DefCore;   -- `t` is said to be `p`
-        define_formula_prop_v2 : Formula -> Property -> DefCore;   -- `t` is `p`
         define_nkind_prop : NamedKind -> Property -> DefCore;
         define_nkind_prop_v1 : NamedKind -> Property -> DefCore;
         define_nkind_prop_v2 : NamedKind -> Property -> DefCore;
+
+        define_ident_prop : Ident -> Property -> DefCore;      -- `t` is called `p`
+        define_ident_prop_v1 : Ident -> Property -> DefCore;   -- `t` is said to be `p`
+        define_ident_prop_v2 : Ident -> Property -> DefCore;   -- `t` is `p`
 
         plain_defcore : DefCore -> Def;
         defcore_iff_stmt : DefCore -> Stmt -> Def;

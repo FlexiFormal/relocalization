@@ -1,4 +1,4 @@
-abstract DollarMath = Magma ** {
+abstract DollarMath = OpaqueFormulae ** {
     fun
-        dollarmath : Formula;
+        dollarmath : String -> Formula;
 }

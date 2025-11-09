@@ -1,4 +1,4 @@
-incomplete concrete MagmaFunctor of Magma = MagmaFormulaConcr ** open Syntax, Grammar, Symbolic, Extend in {
+incomplete concrete MagmaFunctor of Magma = open Syntax, Grammar, Symbolic, Extend in {
     oper
         _Kind = {cn: CN; adv: Adv};   -- inspired by Aarne's new grammar
         _Ident = {s: Str; num: Number};
@@ -51,7 +51,6 @@ incomplete concrete MagmaFunctor of Magma = MagmaFormulaConcr ** open Syntax, Gr
         -- identifiers
         no_ident = {s = ""; num = Sg};
         no_idents = {s = ""; num = Pl};
-        math_ident m = {s = m.s; num = Sg};
 
         -- prekinds/kinds/named kinds
         prekind_to_kind pk = mkKind pk;
@@ -61,10 +60,6 @@ incomplete concrete MagmaFunctor of Magma = MagmaFormulaConcr ** open Syntax, Gr
             cn = k.cn;
             adv = mergeAdv k.adv (PrepNP am t);
         };
-        formula_named_kind m = { cn = lin CN {
-            s = table { _ => table { _ => m.s } };
-            g = Neutr
-        }; num = Sg };
         nkind_that_is_property nk pol pp = {cn = mkCN nk.cn (mkRS pol (mkRCl IdRP pp)); num = nk.num};
 
         -- terms
@@ -74,7 +69,6 @@ incomplete concrete MagmaFunctor of Magma = MagmaFormulaConcr ** open Syntax, Gr
                 Pl => q.pl
             }
         ) nk.cn;
-        math_term m = symb m.s;
         plural_term nk = DetCN aPl_Det nk.cn;
 
         -- quantifications
@@ -99,7 +93,6 @@ incomplete concrete MagmaFunctor of Magma = MagmaFormulaConcr ** open Syntax, Gr
         -- statements
         conj_stmt c s1 s2 = mkS c s1 s2;
 
-        formula_stmt m = lin S {s = m.s};
         exists_nkind nk = mkS (mkCl (DetCN (indefart nk.num) nk.cn));
         exists_nkind_v1 nk = mkS (ExistsNP (DetCN (indefart nk.num) nk.cn));
 

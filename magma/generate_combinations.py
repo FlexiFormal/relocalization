@@ -1,4 +1,7 @@
 """
+NOTE: THIS IS NOT USED ANYMORE
+INSTEAD, COMBINATIONS ARE MAINTAINED MANUALLY
+
 This script populates the ``magma/combinations`` directory.
 
 ``.parsing`` files in that directory will be removed and regenerated whenever this script is run.
