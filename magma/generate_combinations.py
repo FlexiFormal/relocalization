@@ -2,7 +2,7 @@
 NOTE: THIS IS NOT USED ANYMORE
 INSTEAD, COMBINATIONS ARE MAINTAINED MANUALLY
 
-This script populates the ``magma/combinations`` directory.
+This script populates the ``magma/combined`` directory.
 
 ``.parsing`` files in that directory will be removed and regenerated whenever this script is run.
 """
@@ -36,16 +36,16 @@ dollarmath = Module("DollarMath", "DollarMathConcr", "D")
 
 testlex = Module("TestEngLex", {"Eng": "TestEngLexConcr"}, "LTen")
 
-directory = Path(__file__).parent / "combinations"
+directory = Path(__file__).parent / "combined"
 
 
-print("Delete old combinations")
+print("Delete old combined")
 
 for file in directory.glob("*.parsing"):
     print(f"    Deleting {file}")
     file.unlink()
 
-print("Generating new combinations")
+print("Generating new combined")
 
 extensions = [xml, dollarmath]
 # lexica cannot be combined with other lexica

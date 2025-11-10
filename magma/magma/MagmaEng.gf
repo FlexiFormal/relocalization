@@ -1,6 +1,5 @@
-concrete MagmaEng of Magma =
-    MagmaFunctor with 
-        (Syntax=SyntaxEng), (Grammar=GrammarEng), (Symbolic=SymbolicEng), (Extend=ExtendEng)
+concrete MagmaEng of Magma = MagmaFunctor with 
+        (MagmaUtils = MagmaUtilsEng), (Syntax=SyntaxEng), (Grammar=GrammarEng), (Symbolic=SymbolicEng), (Extend=ExtendEng)
 ** open ParadigmsEng, ResEng, Prelude, StructuralEng, MorphoEng in {
     oper
         _call_V2 : V2 = mkV2 (mkV "call");

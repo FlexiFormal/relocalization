@@ -10,14 +10,11 @@ abstract Magma = {
         Polarity;       -- positive/negative
         Conj;           -- "and", "iff", ...
 
-        -- distinction of Kind and PreKind reduces number of readings (properties can only be applied to PreKind, arguments only to Kind)
-        PreKind;        -- "bijective function"
         Kind;           -- "bijective function ... from X to Y"
         NamedKind;      -- "bijective function f from X to Y"
         Term;           -- "every function f from X to Y"
         Ident;          -- "f", "f, g, and h"
         Property;       -- "divisible by 2"
-        ArgMarker;      -- "by", "of degree", ...
 
         -- predicates
         Predicate;      -- "divides 2", ...
@@ -40,15 +37,12 @@ abstract Magma = {
         no_ident : Ident;
         no_idents : Ident;
 
-        -- prekinds/kinds/named kinds
-        prekind_to_kind : PreKind -> Kind;
+        -- kinds/named kinds
         name_kind : Kind -> Ident -> NamedKind;
         such_that_named_kind : NamedKind -> Stmt -> NamedKind;
         such_that_named_kind_v1 : NamedKind -> Stmt -> NamedKind;
         such_that_named_kind_v2 : NamedKind -> Stmt -> NamedKind;
         nkind_that_is_property : NamedKind -> Polarity -> Property -> NamedKind;
-        property_prekind : Property -> PreKind -> PreKind;
-        kind_with_arg : Kind -> ArgMarker -> Term -> Kind;
 
         -- terms
         quantified_nkind : Quantification -> NamedKind -> Term;
@@ -62,10 +56,8 @@ abstract Magma = {
         universal_quantification_v1 : Quantification;    -- all for sg, all for pl
 
         -- properties
-        property_with_arg : Property -> ArgMarker -> Term -> Property;
 
         -- predicates
-        predicate_with_arg : Predicate -> ArgMarker -> Term -> Predicate;
 
         -- statements
         conj_stmt : Conj -> Stmt -> Stmt -> Stmt;

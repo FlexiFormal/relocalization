@@ -1,4 +1,4 @@
-concrete TestEngLexConcr of TestEngLex = MagmaEng ** open MDictEng, ParadigmsEng, SyntaxEng, GrammarEng in {
+concrete TestEngLexConcr of TestEngLex = FreeArgsEng ** open MDictEng, ParadigmsEng, SyntaxEng, GrammarEng in {
     lin
         lex_argmark_by = mkPrep "by";
         lex_argmark_of = mkPrep "of";

@@ -1,4 +1,4 @@
-abstract TestEngLex = Magma ** {
+abstract TestEngLex = FreeArgs ** {
     fun
         lex_argmark_by : ArgMarker;
         lex_argmark_of : ArgMarker;
