@@ -10,22 +10,22 @@ The basic pipeline is as follows:
 These ASTs can be manipulated and later turned back into HTML.
 
 The whole code was a quick hack that grew organically and is barely comprehensible by now.
-It has to be re-implemented cleanly at some point, but unfortunately, this is
+It has to be re-implemented cleanly at some point, but, unfortunately, this is
 neither easy nor a priority right now.
 
 
-A (unfortunately German) description of what happens with an example:
+A (German -- sorry) description of what happens with an example:
 
 Wenn wir das Dokument
 <html><body>Hello word. Look at <emph>this</emph>: <math>...</math></body></html>
 verarbeiten wollen, wird es zunächst mit einem HTML parser geparst.
 Aus dem HTML-Baum, wird nun ein neuer, xml-artiger String erstellt, bei dem alle Tags durch Zahlen ersetzt wurden:
-<0><1>Hello word. Look at <2>this</2>: <m 3/></1></0>
+<0><1>Hello word. Look at <2>this</2>: $ 3 $</1></0>
 Außerdem wird ein String erstellt, der keine Tags hat, aber bei dem noch gespeichert wurde, welche Zeichen woher kamen:
 Hello word. Look at this: X
 Darauf können wir dann einen Standard sentence tokenizer laufen lassen.
 Letztlich kriegen wir dann eine Liste von Sätzen:
-["Hello word.", "Look at <2>this</2>: <m 3/>"]
+["Hello word.", "Look at <2>this</2>: $ 3 $"]
 Diese Sätze können nun von GF peparst werden.
 Die ASTs werden dann nochmal nachverarbeitet, sodass die Zahlen wieder durch die ursprünglichen Tags ersetzt werden.
 Damit haben wir dann eine Mischform aus XML/HTML-Knoten und GF-Knoten als Baumstruktur, auf der wir arbeiten können und Ersetzungen machen können.
@@ -92,7 +92,7 @@ class XmlNode(GfXmlNode):
         # if self.wrapfun is None:
         if self.tag == 'math':
             _tags.append(self.pure_node_strings())
-            return f'(wrap_math (tag {tag_num}) epsilon)'
+            return f'(dollarmath "{tag_num}")'
         else:
             _tags.append(
                 (f'<{self.tag} ' + ' '.join(f'{k}="{v}"' for k, v in self.attrs.items()) + '>', f'</{self.tag}>'))
@@ -187,8 +187,7 @@ def get_gfxml_string(shtml: etree._Element) -> tuple[list[XmlNode], str]:
         if node.tag.endswith('math'):
             # don't recurse into math nodes - place them as-is
             nodes.append(xify(node))
-            strings.append(f'<m {tag_num} >')
-            strings.append(f'</m {tag_num} >')
+            strings.append(f'$ {tag_num} $')
             if node.tail:
                 strings.append(node.tail)
             return
@@ -221,9 +220,6 @@ def sentence_tokenize(text: str) -> list[str]:
     # simplify whitespace
     text = re.sub(r'\s+', ' ', text)
 
-    # replace math tags <m i > </m i > with Xi
-    text = re.sub(r'<m (?P<i>[0-9]+) ></m [0-9]+ >', r'X\g<i>', text)
-
     # we will remove all tags, but remember them to reinsert them later
     tags: list[list[str]] = [[]]  # tags[i] is the list of tags that are should be reinserted at position i
     # open_tags = [[]]   # open_tags[i] is the list of tags that are open at position i
@@ -243,8 +239,6 @@ def sentence_tokenize(text: str) -> list[str]:
             without_tags += text[i]
             assert len(tags) == len(without_tags) + 1
         i += 1
-
-    # print(text)
 
     require_nltk_punkt()
     tokenizer = PunktSentenceTokenizer()
@@ -302,8 +296,6 @@ def sentence_tokenize(text: str) -> list[str]:
         sentence = sentence.replace('>', '> ')
         sentence = sentence.replace('<', ' <')
 
-        sentence = re.sub(r'\bX(?P<i>[0-9]+)\b', r'<m \g<i> > </m \g<i> >', sentence)
-
         sentences.append(sentence)
 
     return sentences
@@ -336,16 +328,39 @@ def build_tree(nodes: list[XmlNode], ast_str: str) -> GfXmlNode:
         expect_str(') ')
         return number
 
+    def read_string_lit() -> str:
+        nonlocal i
+        expect_str(' "')
+        string = ''
+        while i < len(ast_str):
+            if ast_str[i] == '"':
+                i += 1
+                break
+            elif ast_str[i] == '\\':
+                i += 1
+                if i >= len(ast_str):
+                    raise ValueError('Unexpected end of string in string literal')
+                string += ast_str[i]
+            else:
+                string += ast_str[i]
+            i += 1
+        if i < len(ast_str) and ast_str[i] == ' ':
+            i += 1
+        return string
+
     def read_node() -> GfXmlNode:
         nonlocal i
         tag = read_label()
         if tag.lower().startswith('wrap'):
             node = deepcopy(nodes[read_tag()])
             node.wrapfun = tag
-            if tag == 'wrap_math':
-                read_node()
-            else:
-                node.children = [read_node()]
+            node.children = [read_node()]
+            return node
+        elif tag == 'dollarmath':
+            node = deepcopy(nodes[int(read_string_lit())])
+            node.wrapfun = tag
+            if i < len(ast_str):
+                expect_str(')')
             return node
         else:
             children = []
@@ -380,8 +395,7 @@ def build_tree(nodes: list[XmlNode], ast_str: str) -> GfXmlNode:
 def final_recovery(string: str, recovery_info: list[tuple[str, str]]) -> str:
     for i, (open_tag, close_tag) in enumerate(recovery_info):
         if open_tag.startswith('<math'):
-            string = string.replace(f'<m {i} >', open_tag)
-            string = string.replace(f'</m {i} >', close_tag)
+            string = string.replace(f'$ {i} $', open_tag + close_tag)
         else:
             string = string.replace(f'< {i} >', open_tag)
             string = string.replace(f'</ {i} >', close_tag)
@@ -476,8 +490,7 @@ def parse_mtext_contents(parse_fn: Callable[[str], list[str]], tree: GfXmlNode) 
                 nodes.append(node)
 
                 if node.tag.endswith('math'):
-                    strings.append(f'<m {tag_num} >')
-                    strings.append(f'</m {tag_num} >')
+                    strings.append(f'$ {tag_num} $')
                     return
 
                 strings.append(f'< {tag_num} >')

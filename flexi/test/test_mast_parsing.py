@@ -9,7 +9,7 @@ from flexi.parsing.magma import MagmaGrammar
 
 class TestGrammar(unittest.TestCase):
     def test_basic(self):
-        grammar = MagmaGrammar('XLTenMagma', 'Eng')
+        grammar = MagmaGrammar('EnglishFtmlTestGrammar', 'Eng')
         masts = grammar.parse_ftml_to_sentences(
             etree.parse(
                 StringIO(
@@ -25,7 +25,7 @@ class TestGrammar(unittest.TestCase):
         self.assertEqual(string, 'There is a <emph > node </emph>.')
 
     def test_ftml_files_parsability(self):
-        grammar = MagmaGrammar('XLTenMagma', 'Eng')
+        grammar = MagmaGrammar('EnglishFtmlTestGrammar', 'Eng')
         for testfile in ['positive-integer.en.html']:
             with self.subTest(testfile=testfile):
                 ftml = etree.parse(

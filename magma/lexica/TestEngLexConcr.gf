@@ -3,7 +3,7 @@ concrete TestEngLexConcr of TestEngLex = FreeArgsEng ** open MDictEng, Paradigms
         lex_argmark_by = mkPrep "by";
         lex_argmark_of = mkPrep "of";
         lex_argmark_from = mkPrep "from";
-        lex_argmark_invis = mkPrep "";
+        -- lex_argmark_invis = mkPrep "";
 
         lex_integer = mkCN dict_integer_N;
         lex_element = mkCN dict_element_N;

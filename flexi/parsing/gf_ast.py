@@ -38,8 +38,9 @@ class GfAst:
             while (
                 i < len(s)
                 and (s[i].isalnum()
-                or s[i] in {"_", "'", "/", "?", ":", "#", ".", "-"})
+                or s[i] in {"_", "'", "/", "?", ":", "#", ".", "-", '"'})
             ):
+                # Note: quick hack for string literals (does not allow spaces)
                 label += s[i]
                 i += 1
             return label
@@ -58,7 +59,7 @@ class GfAst:
                 if not stack:
                     raise ValueError("Unexpected closing parenthesis")
                 stack.pop()
-            elif s[i].isalnum() or s[i] in {"_", "'", "/", "?", ":", "#", ".", "-"}:
+            elif s[i].isalnum() or s[i] in {"_", "'", "/", "?", ":", "#", ".", "-", '"'}:
                 stack[-1].children.append(GfAst(read_label()))
             else:
                 raise ValueError(f"Unexpected character in AST: {s[i]}")

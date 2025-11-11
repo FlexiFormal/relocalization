@@ -17,7 +17,7 @@ import flexi.workbench as wb
 result_file = Path('/tmp/simple-def-exp.html')
 # input_file = TEST_FILE_DIR / 'ftml' / 'positive-integer.en.html'
 
-grammar = MagmaGrammar('XLTenMagma', 'Eng')
+grammar = MagmaGrammar('EnglishFtmlTestGrammar', 'Eng')
 
 with wb.new_workbench(result_file, 'Parsing example sentences'):
     for input_file in [

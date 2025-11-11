@@ -8,7 +8,7 @@ from flexi.parsing.document import ftml_to_doc
 from flexi.parsing.magma import MagmaGrammar
 from flexi.config import TEST_FILE_DIR
 
-grammar = MagmaGrammar('XLTenMagma', 'Eng')
+grammar = MagmaGrammar('EnglishFtmlTestGrammar', 'Eng')
 
 definition_file = TEST_FILE_DIR / 'ftml' / 'positive-integer.en.html'
 definition_doc = ftml_to_doc(definition_file, grammar)
