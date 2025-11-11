@@ -11,7 +11,7 @@ concrete MagmaEng of Magma = MagmaFunctor with
         str_adv : Str -> Adv = \s -> lin Adv {s = s};
         property_to_adv : AP -> Adv = \p -> lin Adv {s = p.s ! AgP3Sg Neutr};
 
-        all_Det = mkDeterminer plural "all";
+        all_Det = lin Det (mkDeterminer plural "all");
 
     lin
         negative_pol = lin Pol {s = [] ; p = CNeg True};
@@ -35,9 +35,9 @@ concrete MagmaEng of Magma = MagmaFunctor with
         -- definitions
         define_nkind_as_nkind_v1 nk1 nk2 = mkS (mkCl (DetCN (indefart nk1.num) nk1.cn) (mkVP (passiveVP _call_V2) (term_to_adv (DetCN (indefart nk2.num) nk2.cn))));
 
-        define_nkind_prop nk p = mkS (mkCl (mkNP (indefart nk.num) nk.cn) (mkVP (passiveVP _call_V2) (property_to_adv p)));
-        define_nkind_prop_v1 nk p = mkS (mkCl (mkNP (indefart nk.num) nk.cn) (mkVP (passiveVP _say_V2) (str_adv (infVP VVInf (mkVP p) False Simul CPos (agrP3 Sg)))));
-        define_nkind_prop_v2 nk p = mkS (mkCl (mkNP (indefart nk.num) nk.cn) p);
+        define_nkind_prop nk p = mkS (mkCl (SyntaxEng.mkNP (indefart nk.num) nk.cn) (mkVP (passiveVP _call_V2) (property_to_adv p)));
+        define_nkind_prop_v1 nk p = mkS (mkCl (SyntaxEng.mkNP (indefart nk.num) nk.cn) (mkVP (passiveVP _say_V2) (str_adv (infVP VVInf (mkVP p) False Simul CPos (agrP3 Sg)))));
+        define_nkind_prop_v2 nk p = mkS (mkCl (SyntaxEng.mkNP (indefart nk.num) nk.cn) p);
 
         -- for the following: TODO: support plural (probably rarely needed)
         define_formula_prop f p = mkS (mkCl (symb f.s) (mkVP (passiveVP _call_V2) (property_to_adv p)));

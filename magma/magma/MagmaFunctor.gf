@@ -1,22 +1,19 @@
-incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Symbolic, Extend in {
+incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Symbolic, Extend, ParamX in {
     lincat
-        Conj = Conj;
+        Conj = Grammar.Conj;
         Quantification = _Quantification;
         Stmt = S;
         Polarity = Pol;
         Def = S;
-        Assumption = S;
         DefCore = S;
-        Formula = {s: Str};
+        Declaration = S;
         Sentence = {s: Str};
-        PreKind = CN;
         Kind = _Kind;
-        NamedKind = {cn: CN; num: Number};
+        NamedKind = {cn: CN; num: ParamX.Number};
         Term = NP;
         Ident = _Ident;
         Property = AP;
-        ArgMarker = Prep;
-        Predicate = VP;
+        Predicate = Grammar.VP;
 
     lin
         -- polarities
@@ -74,7 +71,7 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         term_predicate_stmt t pred = mkS (mkCl t pred);
 
         -- declaration
-        let_kind_decl i nk = lin S { s = (ImpP3 (symb i.s) (mkVP (mkNP (indefart nk.num) nk.cn))).s };
+        let_kind_decl i nk = lin S { s = (ImpP3 (symb i.s) (mkVP (Syntax.mkNP (indefart nk.num) nk.cn))).s };
 
         -- sentences
         stmt_sentence s = {s = {- CAPIT ++ -} s.s ++ "."};

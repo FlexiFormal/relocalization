@@ -1,10 +1,7 @@
-incomplete concrete XmlConcr of Xml = {
+incomplete concrete XmlConcr of Xml = open XmlResource in {
     lincat
         Tag = {s: Str};
 
     lin
         tag i = {s = i.s};
-
-    oper
-        wrap : Tag -> Str -> Str = \t,s -> "<" ++ t.s ++ ">" ++ s ++ "</" ++ t.s ++ ">";
 }

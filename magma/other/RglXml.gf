@@ -1,6 +1,6 @@
-abstract RglXml = Grammar, Xml ** {
-    oper
-        TagT : Type = {s: Str};
+abstract RglXml = Grammar, Xml ** open XmlResource in {
+    cat
+        TagT;
     fun
         -- Categories from https://www.grammaticalframework.org/lib/doc/synopsis/index.html
 
