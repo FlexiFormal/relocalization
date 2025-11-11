@@ -40,7 +40,7 @@ concrete MagmaEng of Magma = MagmaFunctor with
         define_nkind_prop_v2 nk p = mkS (mkCl (SyntaxEng.mkNP (indefart nk.num) nk.cn) p);
 
         -- for the following: TODO: support plural (probably rarely needed)
-        define_formula_prop f p = mkS (mkCl (symb f.s) (mkVP (passiveVP _call_V2) (property_to_adv p)));
-        define_formula_prop_v1 f p = mkS (mkCl (symb f.s) (mkVP (passiveVP _say_V2) (str_adv (infVP VVInf (mkVP p) False Simul CPos (agrP3 Sg)))));
-        define_formula_prop_v2 f p = mkS (mkCl (symb f.s) p);
+        define_ident_prop id p = mkS (mkCl (symb id.s) (mkVP (passiveVP _call_V2) (property_to_adv p)));
+        define_ident_prop_v1 id p = mkS (mkCl (symb id.s) (mkVP (passiveVP _say_V2) (str_adv (infVP VVInf (mkVP p) False Simul CPos (agrP3 Sg)))));
+        define_ident_prop_v2 id p = mkS (mkCl (symb id.s) p);
 }

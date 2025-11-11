@@ -1,3 +1,5 @@
+-- Based on https://github.com/10S1/definitionexpansion
+
 concrete RglXmlEng of RglXml = XmlConcr, GrammarEng ** open ResEng, XmlResource in {	    
     lincat
         TagT = _Tag;
