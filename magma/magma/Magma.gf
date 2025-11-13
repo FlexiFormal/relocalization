@@ -1,19 +1,19 @@
 abstract Magma = {
     cat
-        Stmt;           -- "there is an odd integer"
+        Statement;      -- "there is an odd integer"
         Sentence;       -- "There is an odd integer ."
-        Def;            -- "an integer is called odd iff it is not divisible by 2"
+        Definition;     -- "an integer is called odd iff it is not divisible by 2"
         DefCore;        -- "an integer is called odd"
         Declaration;    -- "let x be an integer"
 
         Quantification; -- "some", "every", "at least one"
         Polarity;       -- positive/negative
-        Conj;           -- "and", "iff", ...
+        Conjunction;    -- "and", "iff", ...
 
         Kind;           -- "bijective function ... from X to Y"
         NamedKind;      -- "bijective function f from X to Y"
         Term;           -- "every function f from X to Y"
-        Ident;          -- "f", "f, g, and h"
+        Identifier;     -- "f", "f, g, and h"
         Property;       -- "divisible by 2"
 
         -- predicates
@@ -26,22 +26,22 @@ abstract Magma = {
         negative_pol_v1 : Polarity;
 
         -- conjunctions
-        and_conj : Conj;        -- a ∧ b
-        or_conj : Conj;         -- a ∨ b
-        iff_conj : Conj;        -- a ⇔ b
-        iff_conj_v1 : Conj;
-        if_conj : Conj;         -- a ⇐ b
-        if_then_conj : Conj;    -- a ⇒ b
+        and_conj : Conjunction;        -- a ∧ b
+        or_conj : Conjunction;         -- a ∨ b
+        iff_conj : Conjunction;        -- a ⇔ b
+        iff_conj_v1 : Conjunction;
+        if_conj : Conjunction;         -- a ⇐ b
+        if_then_conj : Conjunction;    -- a ⇒ b
         
         -- identifiers
-        no_ident : Ident;
-        no_idents : Ident;
+        no_ident : Identifier;
+        no_idents : Identifier;
 
         -- kinds/named kinds
-        name_kind : Kind -> Ident -> NamedKind;
-        such_that_named_kind : NamedKind -> Stmt -> NamedKind;
-        such_that_named_kind_v1 : NamedKind -> Stmt -> NamedKind;
-        such_that_named_kind_v2 : NamedKind -> Stmt -> NamedKind;
+        name_kind : Kind -> Identifier -> NamedKind;
+        such_that_named_kind : NamedKind -> Statement -> NamedKind;
+        such_that_named_kind_v1 : NamedKind -> Statement -> NamedKind;
+        such_that_named_kind_v2 : NamedKind -> Statement -> NamedKind;
         nkind_that_is_property : NamedKind -> Polarity -> Property -> NamedKind;
 
         -- terms
@@ -60,24 +60,24 @@ abstract Magma = {
         -- predicates
 
         -- statements
-        conj_stmt : Conj -> Stmt -> Stmt -> Stmt;
-        stmt_for_term : Stmt -> Term -> Stmt;
+        conj_stmt : Conjunction -> Statement -> Statement -> Statement;
+        stmt_for_term : Statement -> Term -> Statement;
 
-        term_has_nkind_stmt : Term -> NamedKind -> Stmt;
-        term_is_property_stmt : Term -> Property -> Stmt;
-        term_is_term_stmt : Term -> Term -> Stmt;
-        term_predicate_stmt : Term -> Predicate -> Stmt;
+        term_has_nkind_stmt : Term -> NamedKind -> Statement;
+        term_is_property_stmt : Term -> Property -> Statement;
+        term_is_term_stmt : Term -> Term -> Statement;
+        term_predicate_stmt : Term -> Predicate -> Statement;
 
 
-        exists_nkind : NamedKind -> Stmt;       -- there is a ...
-        exists_nkind_v1 : NamedKind -> Stmt;    -- there exists a ...
+        exists_nkind : NamedKind -> Statement;       -- there is a ...
+        exists_nkind_v1 : NamedKind -> Statement;    -- there exists a ...
 
         -- declarations
-        let_kind_decl : Ident -> NamedKind -> Declaration;    -- in practice, NamedKind should be anonymous, but Kind is too restricted (e.g. no "such that")
+        let_kind_decl : Identifier -> NamedKind -> Declaration;    -- in practice, NamedKind should be anonymous, but Kind is too restricted (e.g. no "such that")
 
         -- sentences
-        stmt_sentence : Stmt -> Sentence;
-        def_sentence : Def -> Sentence;
+        stmt_sentence : Statement -> Sentence;
+        def_sentence : Definition -> Sentence;
         declaration_sentence : Declaration -> Sentence;
 
         -- definitions
@@ -87,16 +87,16 @@ abstract Magma = {
         define_nkind_prop_v1 : NamedKind -> Property -> DefCore;
         define_nkind_prop_v2 : NamedKind -> Property -> DefCore;
 
-        define_ident_prop : Ident -> Property -> DefCore;      -- `t` is called `p`
-        define_ident_prop_v1 : Ident -> Property -> DefCore;   -- `t` is said to be `p`
-        define_ident_prop_v2 : Ident -> Property -> DefCore;   -- `t` is `p`
+        define_ident_prop : Identifier -> Property -> DefCore;      -- `t` is called `p`
+        define_ident_prop_v1 : Identifier -> Property -> DefCore;   -- `t` is said to be `p`
+        define_ident_prop_v2 : Identifier -> Property -> DefCore;   -- `t` is `p`
 
-        plain_defcore : DefCore -> Def;
-        defcore_iff_stmt : DefCore -> Stmt -> Def;
-        defcore_iff_stmt_v1 : DefCore -> Stmt -> Def;
+        plain_defcore : DefCore -> Definition;
+        defcore_iff_stmt : DefCore -> Statement -> Definition;
+        defcore_iff_stmt_v1 : DefCore -> Statement -> Definition;
         -- looking at real-world definitions, "if" could also be a variant of "iff"
         -- even though the prescriptivist in me disagrees
         -- I'll keep it separate to avoid generating "if" as a variant of "iff", which some people would consider wrong
-        defcore_if_stmt : DefCore -> Stmt -> Def;
+        defcore_if_stmt : DefCore -> Statement -> Definition;
 }
 

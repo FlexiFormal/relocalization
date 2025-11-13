@@ -1,17 +1,17 @@
 incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Symbolic, Extend, ParamX in {
     lincat
-        Conj = Grammar.Conj;
+        Conjunction = Syntax.Conj;
         Quantification = _Quantification;
-        Stmt = S;
+        Statement = S;
         Polarity = Pol;
-        Def = S;
+        Definition = S;
         DefCore = S;
         Declaration = S;
         Sentence = {s: Str};
         Kind = _Kind;
         NamedKind = {cn: CN; num: ParamX.Number};
         Term = NP;
-        Ident = _Ident;
+        Identifier = _Ident;
         Property = AP;
         Predicate = Grammar.VP;
 
@@ -55,9 +55,9 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         define_nkind_as_nkind nk1 nk2 = mkS (mkCl (DetCN (indefart nk1.num) nk1.cn) (DetCN (indefart nk2.num) nk2.cn));
 
         plain_defcore dc = dc;
-        defcore_iff_stmt dc s = mkS iff_conj dc s;
-        defcore_iff_stmt_v1 dc s = mkS iff_conj_v1 dc s;
-        defcore_if_stmt dc s = mkS if_conj dc s;
+        defcore_iff_stmt dc s = mkS _iff_conj dc s;
+        defcore_iff_stmt_v1 dc s = mkS _iff_conj_v1 dc s;
+        defcore_if_stmt dc s = mkS _if_conj dc s;
 
         -- statements
         conj_stmt c s1 s2 = mkS c s1 s2;
