@@ -11,9 +11,11 @@ class TestGrammar(unittest.TestCase):
         sentences = [
             ('There is an integer.', 1),
             ('There are integers.', 1),
-            ('Let $ ? $ be an even integer.', 1),
-            ('$ ? $ is an even integer.', 1),
-            ('$ ? $ is an even integer iff $ ? $.', 1),
+            ('Let $ n $ be an even integer.', 1),
+            ('$ n $ is an even integer.', 1),
+            ('$ n $ is an even integer iff $ ? $.', 1),
+            ('$ 1 $ divides every integer.', 1),
+            ('Some integer $ n $ divides every integer.', 1),
         ]
 
         for sentence, num_readings in sentences:

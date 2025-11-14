@@ -19,6 +19,7 @@ abstract TestEngLex = FreeArgs ** {
         lex_model : PreKind;
         lex_formula : PreKind;
         lex_proposition : PreKind;
+        lex_subset : PreKind;
 
         lex_finite : Property;
         lex_even : Property;
@@ -28,5 +29,5 @@ abstract TestEngLex = FreeArgs ** {
         lex_consistent : Property;
         lex_derivable : Property;
 
-        lex_divide : Predicate;
+        lex_divide : PrePredicate;
 }

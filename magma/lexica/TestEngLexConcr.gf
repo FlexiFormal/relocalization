@@ -19,6 +19,7 @@ concrete TestEngLexConcr of TestEngLex = FreeArgsEng ** open MDictEng, Paradigms
         lex_model = mkCN dict_model_N;
         lex_formula = mkCN dict_formula_N;
         lex_proposition = mkCN dict_proposition_N;
+        lex_subset = mkCN dict_subset_N;
 
         lex_finite = mkAP dict_finite_A;
         lex_even = mkAP dict_even_A;
@@ -28,5 +29,5 @@ concrete TestEngLexConcr of TestEngLex = FreeArgsEng ** open MDictEng, Paradigms
         lex_consistent = mkAP dict_consistent_A;
         lex_derivable = mkAP dict_derivable_A;
 
-        lex_divide = mkVP dict_divide;
+        lex_divide = dict_divide;
 }

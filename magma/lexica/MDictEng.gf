@@ -14,6 +14,7 @@ resource MDictEng = open SyntaxEng, ParadigmsEng in {
         dict_model_N: N = mkN "model";
         dict_formula_N: N = mkN "formula";
         dict_proposition_N: N = mkN "proposition";
+        dict_subset_N: N = mkN "subset";
 
         dict_positive_A: A = mkA "positive";
         dict_even_A: A = mkA "even";
