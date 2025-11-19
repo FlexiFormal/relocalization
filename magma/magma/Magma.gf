@@ -8,7 +8,8 @@ abstract Magma = {
 
         Quantification; -- "some", "every", "at least one"
         Polarity;       -- positive/negative
-        Conjunction;    -- "and", "iff", ...
+        Conjunction;    -- "and", "or", ...
+        Subjunction;    -- "if", "iff", ...
 
         Kind;           -- "bijective function ... from X to Y"
         NamedKind;      -- "bijective function f from X to Y"
@@ -25,13 +26,16 @@ abstract Magma = {
         negative_pol : Polarity;
         negative_pol_v1 : Polarity;
 
-        -- conjunctions
+        -- conjunctions and subjunctions
         and_conj : Conjunction;        -- a ∧ b
         or_conj : Conjunction;         -- a ∨ b
-        iff_conj : Conjunction;        -- a ⇔ b
-        iff_conj_v1 : Conjunction;
-        if_conj : Conjunction;         -- a ⇐ b
-        if_then_conj : Conjunction;    -- a ⇒ b
+
+        iff_subj : Subjunction;        -- a ⇔ b
+        iff_subj_v1 : Subjunction;
+        if_subj : Subjunction;         -- a ⇐ b
+
+        -- if ... then ... is a weird special case, at least in German
+        -- if_then_conj : Conjunction;    -- a ⇒ b
         
         -- identifiers
         no_ident : Identifier;
@@ -61,6 +65,7 @@ abstract Magma = {
 
         -- statements
         conj_stmt : Conjunction -> Statement -> Statement -> Statement;
+        subj_stmt : Subjunction -> Statement -> Statement -> Statement;
         stmt_for_term : Statement -> Term -> Statement;
 
         term_has_nkind_stmt : Term -> NamedKind -> Statement;

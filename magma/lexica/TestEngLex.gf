@@ -3,6 +3,7 @@ abstract TestEngLex = FreeArgs ** {
         lex_argmark_by : ArgMarker;
         lex_argmark_of : ArgMarker;
         lex_argmark_from : ArgMarker;
+        lex_argmark_to : ArgMarker;
         -- lex_argmark_invis : ArgMarker;
 
         lex_integer : PreKind;
@@ -20,6 +21,7 @@ abstract TestEngLex = FreeArgs ** {
         lex_formula : PreKind;
         lex_proposition : PreKind;
         lex_subset : PreKind;
+        lex_function : PreKind;
 
         lex_finite : Property;
         lex_even : Property;

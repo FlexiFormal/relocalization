@@ -3,6 +3,7 @@ concrete TestEngLexConcr of TestEngLex = FreeArgsEng ** open MDictEng, Paradigms
         lex_argmark_by = mkPrep "by";
         lex_argmark_of = mkPrep "of";
         lex_argmark_from = mkPrep "from";
+        lex_argmark_to = mkPrep "to";
         -- lex_argmark_invis = mkPrep "";
 
         lex_integer = mkCN dict_integer_N;
@@ -20,6 +21,7 @@ concrete TestEngLexConcr of TestEngLex = FreeArgsEng ** open MDictEng, Paradigms
         lex_formula = mkCN dict_formula_N;
         lex_proposition = mkCN dict_proposition_N;
         lex_subset = mkCN dict_subset_N;
+        lex_function = mkCN dict_function_N;
 
         lex_finite = mkAP dict_finite_A;
         lex_even = mkAP dict_even_A;

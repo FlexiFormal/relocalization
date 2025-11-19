@@ -21,4 +21,5 @@ incomplete resource MagmaUtils = open Syntax, ParamX in {
 
         mkQuantification : Det -> Det -> _Quantification = \sgDet, plDet -> { sg = sgDet; pl = plDet };
 
+        my_ssubjs : S -> Subj -> S -> S = SSubjS;
 }

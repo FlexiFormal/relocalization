@@ -1,12 +1,13 @@
 incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Symbolic, Extend, ParamX in {
     lincat
         Conjunction = Syntax.Conj;
+        Subjunction = Syntax.Subj;
         Quantification = _Quantification;
         Statement = S;
         Polarity = Pol;
         Definition = S;
         DefCore = S;
-        Declaration = S;
+        Declaration = Utt;
         Sentence = {s: Str};
         Kind = _Kind;
         NamedKind = {cn: CN; num: ParamX.Number};
@@ -20,10 +21,12 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         positive_pol = positivePol;
         negative_pol = negativePol;
 
-        -- conjunctions
+        -- conjunctions/subjunctions
         and_conj = and_Conj;
         or_conj = or_Conj;
-        if_then_conj = if_then_Conj;
+
+        if_subj = if_Subj;
+        -- if_then_conj = if_then_Conj;
 
         -- identifiers
         no_ident = {s = ""; num = Sg};
@@ -55,12 +58,13 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         define_nkind_as_nkind nk1 nk2 = mkS (mkCl (DetCN (indefart nk1.num) nk1.cn) (DetCN (indefart nk2.num) nk2.cn));
 
         plain_defcore dc = dc;
-        defcore_iff_stmt dc s = mkS _iff_conj dc s;
-        defcore_iff_stmt_v1 dc s = mkS _iff_conj_v1 dc s;
-        defcore_if_stmt dc s = mkS _if_conj dc s;
+        defcore_iff_stmt dc s = my_ssubjs dc _iff_subj s;
+        defcore_iff_stmt_v1 dc s = my_ssubjs dc _iff_subj_v1 s;
+        defcore_if_stmt dc s = my_ssubjs dc _if_subj s;
 
         -- statements
         conj_stmt c s1 s2 = mkS c s1 s2;
+        subj_stmt ssubj s1 s2 = my_ssubjs s1 ssubj s2;
 
         exists_nkind nk = mkS (mkCl (DetCN (indefart nk.num) nk.cn));
         exists_nkind_v1 nk = mkS (ExistsNP (DetCN (indefart nk.num) nk.cn));
@@ -71,10 +75,10 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         term_predicate_stmt t pred = mkS (mkCl t pred);
 
         -- declaration
-        let_kind_decl i nk = lin S { s = (ImpP3 (symb i.s) (mkVP (Syntax.mkNP (indefart nk.num) nk.cn))).s };
+        let_kind_decl i nk = ImpP3 (symb i.s) (mkVP (Syntax.mkNP (indefart nk.num) nk.cn));
 
         -- sentences
-        stmt_sentence s = {s = {- CAPIT ++ -} s.s ++ "."};
-        def_sentence d = {s = {- CAPIT ++ -} d.s ++ "."};
+        stmt_sentence s = {s = {- CAPIT ++ -} (mkUtt s).s ++ "."};
+        def_sentence d = {s = {- CAPIT ++ -} (mkUtt d).s ++ "."};
         declaration_sentence a = {s = {- CAPIT ++ -} a.s ++ "."};
 }
