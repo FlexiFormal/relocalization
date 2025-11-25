@@ -8,10 +8,10 @@ incomplete concrete FreeArgsFunctor of FreeArgs = MagmaFunctor ** open MagmaUtil
         property_prekind pp pk = mkCN pp pk;
         kind_with_arg k am t = {
             cn = k.cn;
-            adv = mergeAdv k.adv (PrepNP am t);
+            adv = mergeAdv k.adv (PrepNP am t.np);
         };
-        property_with_arg p am t = AdvAP p (PrepNP am t);
-        predicate_with_arg pred am t = mkVP pred (PrepNP am t);
+        property_with_arg p am t = AdvAP p (PrepNP am t.np);
+        predicate_with_arg pred am t = mkVP pred (PrepNP am t.np);
 
         intransitive_predicate pp = mkVP pp;
 }

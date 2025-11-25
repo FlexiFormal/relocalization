@@ -25,7 +25,7 @@ concrete MagmaEng of Magma = MagmaFunctor with
         universal_quantification = mkQuantification every_Det all_Det;
         universal_quantification_v1 = mkQuantification all_Det all_Det;
 
-        stmt_for_term stmt term = lin S {s = stmt.s ++ (PrepNP (mkPrep "for") term).s};
+        stmt_for_term stmt term = lin S {s = stmt.s ++ (PrepNP (mkPrep "for") term.np).s};
 
         -- definitions
         define_nkind_as_nkind_v1 nk1 nk2 = mkS (mkCl (DetCN (indefart nk1.num) nk1.cn) (mkVP (passiveVP _call_V2) (term_to_adv (DetCN (indefart nk2.num) nk2.cn))));

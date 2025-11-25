@@ -11,7 +11,7 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         Sentence = {s: Str};
         Kind = _Kind;
         NamedKind = {cn: CN; num: ParamX.Number};
-        Term = NP;
+        Term = {np: NP; just_formula: Bool};
         Identifier = _Ident;
         Property = AP;
         Predicate = Grammar.VP;
@@ -37,13 +37,12 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         nkind_that_is_property nk pol pp = {cn = mkCN nk.cn (mkRS pol (mkRCl IdRP pp)); num = nk.num};
 
         -- terms
-        quantified_nkind q nk = DetCN (
-            case nk.num of {
-                Sg => q.sg;
-                Pl => q.pl
-            }
-        ) nk.cn;
-        plural_term nk = DetCN aPl_Det nk.cn;
+        quantified_nkind q nk = {
+            np = DetCN ( case nk.num of { Sg => q.sg; Pl => q.pl }) nk.cn;
+            just_formula = False
+        };
+        -- TODO: Do we need this? Singular is a quantification...
+        plural_term nk = { np = DetCN aPl_Det nk.cn; just_formula = False };
 
         -- quantifications
         existential_quantification = mkQuantification aSg_Det aPl_Det;
@@ -69,10 +68,10 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         exists_nkind nk = mkS (mkCl (DetCN (indefart nk.num) nk.cn));
         exists_nkind_v1 nk = mkS (ExistsNP (DetCN (indefart nk.num) nk.cn));
 
-        term_has_nkind_stmt t nk = mkS (mkCl t have_V2 (DetCN (indefart nk.num) nk.cn));
-        term_is_property_stmt t p = mkS (mkCl t p);
-        term_is_term_stmt t1 t2 = mkS (mkCl t1 t2);
-        term_predicate_stmt t pred = mkS (mkCl t pred);
+        term_has_nkind_stmt t nk = mkS (mkCl t.np have_V2 (DetCN (indefart nk.num) nk.cn));
+        term_is_property_stmt t p = mkS (mkCl t.np p);
+        term_is_term_stmt t1 t2 = mkS (mkCl t1.np t2.np);
+        term_predicate_stmt t pred = mkS (mkCl t.np pred);
 
         -- declaration
         let_kind_decl i nk = ImpP3 (symb i.s) (mkVP (Syntax.mkNP (indefart nk.num) nk.cn));

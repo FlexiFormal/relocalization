@@ -8,4 +8,5 @@ concrete OpaqueFormulaeEng of OpaqueFormulae = MagmaEng ** OpaqueFormulaeFunctor
 
     lin
         formula_named_kind m = { cn = simple_cn m.s; num = Sg };
+        formula_stmt m = lin S {s = m.s};
 }
