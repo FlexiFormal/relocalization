@@ -41,8 +41,6 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
             np = DetCN ( case nk.num of { Sg => q.sg; Pl => q.pl }) nk.cn;
             just_formula = False
         };
-        -- TODO: Do we need this? Singular is a quantification...
-        plural_term nk = { np = DetCN aPl_Det nk.cn; just_formula = False };
 
         -- quantifications
         existential_quantification = mkQuantification aSg_Det aPl_Det;

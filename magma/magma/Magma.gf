@@ -50,7 +50,6 @@ abstract Magma = {
 
         -- terms
         quantified_nkind : Quantification -> NamedKind -> Term;
-        plural_term : NamedKind -> Term;
 
         -- quantifications
         existential_quantification : Quantification;
