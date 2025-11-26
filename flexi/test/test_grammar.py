@@ -4,7 +4,7 @@ from flexi.parsing.magma import MagmaGrammar
 
 
 class TestGrammar(unittest.TestCase):
-    def test_sentences(self):
+    def test_sentences_eng(self):
         grammar = MagmaGrammar('EnglishTestGrammar', 'Eng')
 
         # pairs (sentence, number of readings)

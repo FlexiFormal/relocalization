@@ -71,10 +71,11 @@ def main():
         print(f'Processing {file}...')
         with file.open() as f:
             paragraphs = json.load(f)
-        for para in paragraphs[:NUMBER_OF_PARAGRAPHS]:
+        for paranum, para in enumerate(paragraphs[:NUMBER_OF_PARAGRAPHS]):
             print(f'Processing {para["paper"]}')
             for sentence in para['sentences']:
                 total[file] += 1
+                print('---', file.name, f'({paranum})')
                 print(f'Sentence: {sentence}')
                 try:
                     number = len(process_sentence_pgf(sentence))
@@ -89,7 +90,6 @@ def main():
                     if is_train or 'Unexpected token' in str(e):
                         print('ERROR:', e)
 
-
                 # shell_output = process_sentence_shell(sentence)
                 # if shell_output.startswith('The parser failed at token') or \
                 #         shell_output.startswith('The sentence is not complete'):
@@ -97,7 +97,6 @@ def main():
                 # else:
                 #     ok[file] += 1
                 #     print('OK:', len(shell_output.splitlines()), 'readings')
-                print('---')
 
     print('Coverage results:')
     for file in COVERAGE_FILES:

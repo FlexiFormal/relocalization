@@ -29,6 +29,8 @@ concrete MagmaEng of Magma = MagmaFunctor with
         universal_quantification = mkQuantification every_Det all_Det;
         universal_quantification_v1 = mkQuantification all_Det all_Det;
 
+        let_ident_decl id = lin Utt { s = "let " ++ id.s } ;
+
         stmt_for_term stmt term = lin S {s = stmt.s ++ (PrepNP (mkPrep "for") term.np).s};
 
         -- definitions
