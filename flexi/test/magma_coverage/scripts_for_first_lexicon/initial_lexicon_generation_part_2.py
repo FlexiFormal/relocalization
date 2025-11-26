@@ -50,6 +50,7 @@ with open('pre-lexicon.json', 'r') as fp:
 result = {}
 
 for verb in prelexicon['V']:
+    print('VERB', verb)
     message = '''
 Given a verb, tell me its past form.
 
@@ -85,6 +86,7 @@ Your input:
 
 
 for noun in prelexicon['N']:
+    print('NOUN', noun)
     message = '''
 Given a noun, tell me its plural form
 
@@ -113,7 +115,7 @@ Your input:
         jp = json.loads(j.group(0))
     except json.JSONDecodeError:
         continue
-    if 'plural_form' not in jp:
+    if 'plural_form' not in jp or not isinstance(jp['plural_form'], str):
         continue
 
     result.setdefault('N', {})[keyify(noun)] = [noun, jp['plural_form']]

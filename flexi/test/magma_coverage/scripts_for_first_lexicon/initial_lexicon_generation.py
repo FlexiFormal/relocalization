@@ -92,7 +92,7 @@ def get_sentences():
         with open(file, 'r') as f:
             data = json.load(f)
             for i, entry in enumerate(data):
-                print('-----------', i, '-----------')
+                print('-----------', i, file, '-----------')
                 if not i % 100:
                     print(f'Processing {file}, entry {i}')
                 # if i > 50:
