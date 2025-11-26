@@ -64,7 +64,7 @@ class MagmaGrammar:
         cmd = f'p -cat={category} "{string}"'
         shell_output = self.shell.handle_command(cmd)
         if shell_output.startswith('The parser failed at token') or \
-                shell_output.startswith('The sentence is not compelte'):
+                shell_output.startswith('The sentence is not complete'):
             self.parser_error = shell_output
             raise ParseError(f'Parser error for "{string}": {shell_output}')
         return [s.strip() for s in shell_output.split('\n') if s.strip()]
