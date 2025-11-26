@@ -466,7 +466,7 @@
     "paper": "https://ar5iv.org/abs/1610.01515",
     "identifier": "Definition 2.12.",
     "sentences": [
-      "@LtxCite@ Let @MathNode@ be a non-empty set and @MathNode@ be non-empty a parameter set.",
+      "Let @MathNode@ be a non-empty set and @MathNode@ be non-empty a parameter set.",
       "A mapping @MathNode@ is said to be a soft metric on the soft set @MathNode@ if @MathNode@ satisfies the following conditions: (M1) @MathNode@, for all @MathNode@.",
       "(M2) @MathNode@ if and only if @MathNode@.",
       "(M3) @MathNode@ for all @MathNode@.",
@@ -678,7 +678,6 @@
     "paper": "https://ar5iv.org/abs/2301.06797",
     "identifier": "Definition 2.2.",
     "sentences": [
-      "@LtxCite@",
       "The Reimann-Liouville integral operator, which is of order @MathNode@ and greater than 0, is applied to a function @MathNode@ @MathEquation@"
     ]
   },
@@ -907,7 +906,6 @@
     "paper": "https://ar5iv.org/abs/2301.10525",
     "identifier": "Definition 6.1.",
     "sentences": [
-      "@LtxCite@",
       "We say an object @MathNode@ of @MathNode@ is spherical if @MathNode@, and for any object @MathNode@ of @MathNode@, @MathNode@ and @MathNode@ are of finite total rank and the composition @MathEquation@ is a non-degenerate pairing."
     ]
   },
@@ -1109,7 +1107,7 @@
     "paper": "https://ar5iv.org/abs/1410.3703",
     "identifier": "Definition 5.15.",
     "sentences": [
-      "@LtxCite@ Let @MathNode@.",
+      "Let @MathNode@.",
       "A Schubert union code is defined as the projection of @MathNode@ on @MathNode@.",
       "That is @MathEquation@"
     ]
@@ -1136,7 +1134,7 @@
     "paper": "https://ar5iv.org/abs/2308.09283",
     "identifier": "Definition 2.5.",
     "sentences": [
-      "@LtxCite@ Let @MathNode@ be analytic and @MathNode@.",
+      "Let @MathNode@ be analytic and @MathNode@.",
       "Then, the function @MathNode@, satisfying the third order differential subordination relation @MathEquation@ is called its solution."
     ]
   },
@@ -2122,7 +2120,6 @@
     "paper": "https://ar5iv.org/abs/2401.00397",
     "identifier": "Definition 2.4.",
     "sentences": [
-      "@LtxCite@",
       "An admissible preconditioner for the operator @MathNode@ is a linear, bounded, self-adjoint and positive semi-definite operator @MathNode@ such that warped resolvent @MathGroup@ is single-valued and has full domain."
     ]
   },
@@ -2253,7 +2250,6 @@
     "paper": "https://ar5iv.org/abs/1610.08333",
     "identifier": "Definition 2.4.",
     "sentences": [
-      "@LtxCite@",
       "The framed quiver associated with a quiver @MathNode@ is the ice quiver @MathNode@ such that:",
       "@MathEquation@ @MathEquation@"
     ]
@@ -2576,7 +2572,7 @@
     "paper": "https://ar5iv.org/abs/1301.5727",
     "identifier": "Definition 2.3.",
     "sentences": [
-      "@LtxCite@, A map @MathNode@ is called pointwise subadditive if @MathEquation@ for all @MathNode@ and @MathNode@,"
+      "A map @MathNode@ is called pointwise subadditive if @MathEquation@ for all @MathNode@ and @MathNode@,"
     ]
   },
   {
@@ -2989,7 +2985,7 @@
     "paper": "https://ar5iv.org/abs/1811.12127",
     "identifier": "Definition 2.",
     "sentences": [
-      "@LtxCite@ Suppose @MathNode@ is a HKB over Boolean and real variables @MathNode@ and @MathNode@, and literals @MathNode@.",
+      "Suppose @MathNode@ is a HKB over Boolean and real variables @MathNode@ and @MathNode@, and literals @MathNode@.",
       "Suppose @MathNode@, where @MathNode@ are expressions over @MathNode@.",
       "Then we define WMI as: @MathEquation@ where: @MathEquation@ and WEIGHT is defined as described in Def @LtxRef@."
     ]
@@ -3897,7 +3893,6 @@
     "paper": "https://ar5iv.org/abs/1611.00569",
     "identifier": "Definition 2.2.",
     "sentences": [
-      "@LtxCite@",
       "We define the Donaldson-Futaki invariant of @MathNode@ to be @MathEquation@"
     ]
   },
@@ -3905,7 +3900,7 @@
     "paper": "https://ar5iv.org/abs/2211.07407",
     "identifier": "Definition 7.9 (Rounding function).",
     "sentences": [
-      "@LtxCite@ Given @MathNode@ such that @MathNode@ is an integer, for any point @MathNode@, we define @MathNode@ to be the point @MathNode@ such that the @MathNode@-th element, @MathNode@, where @MathNode@.",
+      "Given @MathNode@ such that @MathNode@ is an integer, for any point @MathNode@, we define @MathNode@ to be the point @MathNode@ such that the @MathNode@-th element, @MathNode@, where @MathNode@.",
       "We also define @MathNode@.",
       "Note here that for any point @MathNode@, @MathNode@.",
       "Also, note that the process of picking @MathNode@ uniformly and independently at random from @MathNode@ and then using the rounding function @MathNode@ on @MathNode@ is equivalent to the process of picking an element uniformly and independently at random from @MathNode@."
@@ -4417,7 +4412,6 @@
     "paper": "https://ar5iv.org/abs/1911.13189",
     "identifier": "Definition 2.1.",
     "sentences": [
-      "@LtxCite@",
       "The quantum affine algebra @MathNode@ associated with the Cartan datum @MathNode@ is the associative algebra with unit element over @MathNode@ (where @MathNode@ is an indeterminate) with generators @MathNode@, and @MathNode@, satisfying the defining relations: (1) @MathNode@ for @MathNode@,",
       "(2) @MathNode@ for @MathNode@, @MathNode@,",
       "(3) @MathNode@ for @MathNode@, @MathNode@,",
@@ -4448,7 +4442,7 @@
     "paper": "https://ar5iv.org/abs/1805.08812",
     "identifier": "Definition 4.1.",
     "sentences": [
-      "@LtxCite@ Let @MathNode@ be an algebra with a unit @MathNode@.",
+      "Let @MathNode@ be an algebra with a unit @MathNode@.",
       "We say that @MathNode@ is invertible if @MathNode@ has a left and a right inverse (that is, there exists @MathNode@ such that @MathNode@).",
       "The set of invertible elements of the algebra @MathNode@ was denoted by @MathNode@"
     ]
@@ -5297,7 +5291,6 @@
     "paper": "https://ar5iv.org/abs/1505.06985",
     "identifier": "Definition 5.7.",
     "sentences": [
-      "@LtxCite@",
       "The quadruple @MathNode@ is called a generalized vertex algebra (GVA) if (1) @MathNode@, @MathNode@, @MathNode@;",
       "(2) @MathNode@, @MathNode@;",
       "(3) there exist an abelian group @MathNode@, a @MathNode@-grading @MathNode@ and a function @MathNode@ such that for any @MathNode@, @MathNode@, @MathNode@, (a) @MathNode@ is bimultiplicative;",
@@ -5690,7 +5683,7 @@
     "paper": "https://ar5iv.org/abs/2208.02476",
     "identifier": "Definition 2.2.",
     "sentences": [
-      "@LtxCite@ Yoshino tensor product of matrix factorizations Let @MathNode@ be an @MathNode@ matrix factorization of @MathNode@ and @MathNode@ an @MathNode@ matrix factorization of @MathNode@.",
+      "Yoshino tensor product of matrix factorizations Let @MathNode@ be an @MathNode@ matrix factorization of @MathNode@ and @MathNode@ an @MathNode@ matrix factorization of @MathNode@.",
       "These matrices can be considered as matrices over @MathNode@ and the tensor product @MathNode@ is given by (@MathNode@) where each component is an endomorphism on @MathNode@."
     ]
   },
@@ -5881,7 +5874,7 @@
     "paper": "https://ar5iv.org/abs/1407.4223",
     "identifier": "Definition 3.2.5.",
     "sentences": [
-      "@LtxCite@ Let @MathNode@ and @MathNode@ be submodules of an @MathNode@-module @MathNode@.",
+      "Let @MathNode@ and @MathNode@ be submodules of an @MathNode@-module @MathNode@.",
       "We say that @MathNode@ is subordinate to @MathNode@ if @MathEquation@",
       "We say that @MathNode@ is tight if it is subordinate to no submodule other than itself."
     ]
@@ -5920,7 +5913,7 @@
     "paper": "https://ar5iv.org/abs/1611.00202",
     "identifier": "Definition 1.5.",
     "sentences": [
-      "@LtxCite@ Let @MathNode@ be a subspace of a paratopological group @MathNode@.",
+      "Let @MathNode@ be a subspace of a paratopological group @MathNode@.",
       "Assume that (1) The set @MathNode@ generates @MathNode@ algebraically, that is @MathNode@;",
       "(2) Each continuous mapping @MathNode@ to a paratopological group @MathNode@ extends to a continuous homomorphism @MathNode@.",
       "Then @MathNode@ is called the Markov free paratopological group on @MathNode@ and is denoted by @MathNode@."
@@ -6005,7 +5998,7 @@
     "paper": "https://ar5iv.org/abs/1101.4720",
     "identifier": "Definition 4.6.",
     "sentences": [
-      "@LtxCite@A @MathNode@-semigroup @MathNode@ is called regular if, for each @MathNode@ there exist @MathNode@ and @MathNode@ such that @MathNode@"
+      "A @MathNode@-semigroup @MathNode@ is called regular if, for each @MathNode@ there exist @MathNode@ and @MathNode@ such that @MathNode@"
     ]
   },
   {
@@ -6021,7 +6014,6 @@
     "paper": "https://ar5iv.org/abs/2306.08589",
     "identifier": "Definition 2.13.",
     "sentences": [
-      "@LtxCite@",
       "A weak stability condition on @MathNode@ is a function @MathNode@ from the non-zero objects, @MathNode@, of @MathNode@ to @MathNode@, which is constant on isomorphism classes, such that for each short exact sequence @MathNode@ of non-zero objects in @MathNode@ we have that either @MathEquation@",
       "A weak stability condition, @MathNode@, is a stability condition in the sense of Rudakov @LtxCite@ if for all short exact sequences as above, we have that the so called see-saw condition: @MathEquation@ is satisfied.",
       "A weak stability condition (on @MathNode@), @MathNode@, is quasi-Noetherian if for all chains of proper subobjects @MathNode@ in @MathNode@, there exists an @MathNode@ such that @MathNode@.",
@@ -6748,10 +6740,9 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2009.09864",
-    "identifier": null,
+    "identifier": "Definition IV.3",
     "sentences": [
-      "Definition IV.3",
-      "@LtxCite@ The system (@LtxRef@)-(@LtxRef@) (or simply @MathNode@) is said to be exactly observable, if there exists a @MathNode@ such that for any @MathNode@, @MathNode@ implies @MathNode@.",
+      "The system (@LtxRef@)-(@LtxRef@) (or simply @MathNode@) is said to be exactly observable, if there exists a @MathNode@ such that for any @MathNode@, @MathNode@ implies @MathNode@.",
       "If @MathNode@, then the system, abbreviated as @MathNode@, is observable."
     ]
   },
@@ -6775,7 +6766,6 @@
     "paper": "https://ar5iv.org/abs/2207.07546",
     "identifier": "Definition 2.13.",
     "sentences": [
-      "@LtxCite@",
       "A quandle @MathNode@ is called involutive or involutory if @MathNode@ ."
     ]
   },
@@ -6816,8 +6806,6 @@
     "paper": "https://ar5iv.org/abs/1810.00649",
     "identifier": null,
     "sentences": [
-      "Definition \\thedefinition.",
-      "@LtxCite@",
       "A presheaf with equivariant transfers is a presheaf of abelian groups on the category @MathNode@."
     ]
   },
@@ -7397,7 +7385,6 @@
     "paper": "https://ar5iv.org/abs/2105.10616",
     "identifier": "Definition 2.",
     "sentences": [
-      "@LtxCite@",
       "The associated Lie algebra @MathNode@ of a Poisson Lie group @MathNode@ is a Lie bi-algebra; it is the Lie algebra of @MathNode@, with its Lie bracket and an additional structure, the co-cycle map @MathNode@ derived from the Poisson bivector of @MathNode@.",
       "The co-cycle map satisfies the co-Jacobi identity: cyclic permutations of @MathNode@ sum to zero.",
       "It also satisfies the co-cycle condition, @MathGroup@"
@@ -7824,7 +7811,6 @@
     "paper": "https://ar5iv.org/abs/2008.09032",
     "identifier": "Definition 1.1.",
     "sentences": [
-      "@LtxCite@",
       "We say that the map @MathNode@ satisfies the restricted isometry property of order @MathNode@ if there exist positive constants @MathNode@ and @MathNode@ such that the inequality @MathEquation@ holds for all @MathNode@ with @MathNode@ and @MathNode@."
     ]
   },
@@ -9642,7 +9628,7 @@
     "paper": "https://ar5iv.org/abs/2106.15254",
     "identifier": "Definition 72.",
     "sentences": [
-      "@LtxCite@ Let @MathNode@ ba a @MathNode@-graph with a perfect matching @MathNode@, and \u201cAM\u201d=arithmetic matching.",
+      "Let @MathNode@ ba a @MathNode@-graph with a perfect matching @MathNode@, and \u201cAM\u201d=arithmetic matching.",
       "M-1. If @MathNode@ admits a super graceful labeling @MathNode@ holding @MathNode@ for each matching edge @MathNode@, then @MathNode@ is called an AM-super graceful labeling.",
       "M-2. If there is an injection @MathNode@ such that the edge color set @MathNode@, then @MathNode@ is called an all-odd graceful labeling of @MathNode@.",
       "Moreover, if @MathNode@ holds @MathNode@ for each matching edge @MathNode@, we call @MathNode@ an AM-all-odd graceful labeling.",
@@ -9799,7 +9785,6 @@
     "paper": "https://ar5iv.org/abs/0906.2393",
     "identifier": "Definition 1.3.",
     "sentences": [
-      "@LtxCite@",
       "A trihomomorphism of tricategories @MathNode@ is called a triequivalence if it induces biequivalences @MathNode@ of hom-bicategories for all objects @MathNode@ in @MathNode@ (@MathNode@ is locally a biequivalence), and every object in @MathNode@ is biequivalent in @MathNode@ to an object of the form @MathNode@ where @MathNode@ is an object in @MathNode@."
     ]
   },

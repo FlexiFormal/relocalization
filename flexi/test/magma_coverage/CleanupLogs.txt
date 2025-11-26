@@ -1,0 +1,4 @@
+* Citations in beginning of paragraph. This typically happens in the preliminaries, when an author does something like "\begin{defn}\label{Csemi} $(${\rm cf.} \cite[Proposition 1]{R}$)$" (from https://arxiv.org/abs/1702.00244)
+
+* Remove non-English papers (on demand - systematic recognation with nltk was not accurate enough)
+

@@ -12,7 +12,6 @@
     "paper": "https://ar5iv.org/abs/2107.05751",
     "identifier": "Definition 2.2.",
     "sentences": [
-      "@LtxCite@",
       "The @MathNode@th Chen-Ruan cohomology group of @MathNode@ is @MathEquation@ and @MathEquation@"
     ]
   },
@@ -77,7 +76,7 @@
     "paper": "https://ar5iv.org/abs/1911.08441",
     "identifier": "Definition 3.1.",
     "sentences": [
-      "@LtxCite@ Let @MathNode@ be an @MathNode@-module and @MathNode@ and @MathNode@-module.",
+      "Let @MathNode@ be an @MathNode@-module and @MathNode@ and @MathNode@-module.",
       "If @MathNode@ is a @MathNode@-regular sequence and @MathNode@, then @MathNode@ is said a @MathNode@-lifting of @MathNode@ to @MathNode@.",
       "If @MathNode@, then @MathNode@ is just called a lifting of @MathNode@."
     ]
@@ -1099,14 +1098,13 @@
     "paper": "https://ar5iv.org/abs/1906.03636",
     "identifier": "Definition 3.4.",
     "sentences": [
-      "@LtxCite@ A Priestley space @MathNode@ is an Esakia space if @MathNode@ clopen in @MathNode@ implies that @MathNode@ is clopen."
+      "A Priestley space @MathNode@ is an Esakia space if @MathNode@ clopen in @MathNode@ implies that @MathNode@ is clopen."
     ]
   },
   {
     "paper": "https://ar5iv.org/abs/1909.07525",
     "identifier": "Definition 2.1.",
     "sentences": [
-      "@LtxCite@",
       "The time dependent measure @MathNode@ is said to be a measure-valued solution to (@LtxRef@) with the initial measure @MathNode@ if the following conditions hold: (1) @MathNode@ is weakly continuous in time: for any @MathNode@, the map @MathNode@ is continuous.",
       "(2) @MathNode@ satisfies (@LtxRef@) in the sense of distribution: for any @MathNode@, @MathGroup@ where @MathNode@ and @MathNode@ are defined as @MathGroup@"
     ]
@@ -1183,7 +1181,6 @@
     "paper": "https://ar5iv.org/abs/1801.05325",
     "identifier": "Definition 2.10.",
     "sentences": [
-      "@LtxCite@",
       "A @MathNode@-simulation function is a mapping @MathNode@ satisfying the following: (a) @MathNode@ for all @MathNode@, where @MathNode@ is a @MathNode@-class function,",
       "(b) if @MathNode@ and @MathNode@ are sequences in @MathNode@ such that @MathNode@ and @MathNode@, then @MathNode@"
     ]
@@ -1382,7 +1379,7 @@
     "paper": "https://ar5iv.org/abs/2312.16140",
     "identifier": "Definition 3.2.",
     "sentences": [
-      "@LtxCite@, @LtxCite@ Let @MathNode@ be an lc pair.",
+      "Let @MathNode@ be an lc pair.",
       "Let @MathNode@ be a closed irreducible analytic subset of @MathNode@.",
       "The minimal log discrepancy of @MathNode@ with respect to @MathNode@ is defined as @MathEquation@ where the infimum is taken over all prime divisors @MathNode@ over @MathNode@, whose center on @MathNode@ is @MathNode@.",
       "If @MathNode@ is a closed analytic subset of @MathNode@, we define @MathEquation@ where the @MathNode@\u2019s are irreducible components of @MathNode@."
@@ -2892,7 +2889,7 @@
     "paper": "https://ar5iv.org/abs/2301.07556",
     "identifier": "Definition 7.",
     "sentences": [
-      "@LtxCite@ A function @MathNode@ is said to be quasi strongly @MathNode@-preinvex (QSEP) w.r.t. @MathNode@ on SEI set @MathNode@, if @MathGroup@ @MathNode@, @MathNode@.",
+      "A function @MathNode@ is said to be quasi strongly @MathNode@-preinvex (QSEP) w.r.t. @MathNode@ on SEI set @MathNode@, if @MathGroup@ @MathNode@, @MathNode@.",
       "If the above inequality is strict and @MathNode@, then @MathNode@ is said to be strictly quasi strongly @MathNode@-preinvex(SQSEP) function."
     ]
   },
@@ -2900,7 +2897,7 @@
     "paper": "https://ar5iv.org/abs/2011.03388",
     "identifier": "Definition 2.7.",
     "sentences": [
-      "@LtxCite@ Let @MathNode@ and @MathNode@ be Hilbert spaces over @MathNode@.",
+      "Let @MathNode@ and @MathNode@ be Hilbert spaces over @MathNode@.",
       "A linear subspace of @MathNode@ is called a linear relation @MathNode@ from @MathNode@ to @MathNode@ and the elements @MathNode@ will in general be written as pairs @MathNode@ with components @MathNode@ and @MathNode@.",
       "If @MathNode@ then we will just say @MathNode@ is a linear relation in @MathNode@."
     ]
@@ -2934,10 +2931,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2010.11749",
-    "identifier": null,
+    "identifier": "Definition III.2.",
     "sentences": [
-      "Definition III.2.",
-      "@LtxCite@",
       "Strong mixing for stationary processes: If @MathNode@ is a stationary process, then @MathNode@ is said to be strongly mixing if @MathNode@ as @MathNode@, where @MathNode@."
     ]
   },
@@ -3166,7 +3161,6 @@
     "paper": "https://ar5iv.org/abs/1202.0875",
     "identifier": "Definition 2.9.",
     "sentences": [
-      "@LtxCite@",
       "The settled completion, @MathNode@, of a metric space @MathNode@ with a measure @MathNode@ is the collection of points @MathNode@ in the metric completion @MathNode@ which have positive lower density: @MathEquation@",
       "The resulting space is then \u201dcompletely settled\u201d."
     ]
@@ -3364,7 +3358,7 @@
     "paper": "https://ar5iv.org/abs/0905.0913",
     "identifier": "Definition 2.1.",
     "sentences": [
-      "@LtxCite@ Let @MathNode@ and @MathNode@.",
+      "Let @MathNode@ and @MathNode@.",
       "We say that (1) @MathNode@ stabilizes @MathNode@ or @MathNode@ leaves invariant @MathNode@, if @MathNode@;",
       "(2) @MathNode@ centralizes @MathNode@, if @MathNode@ fixes pointwise some chain @MathNode@ from @MathNode@.",
       "The set of all elements that centralize @MathNode@ forms a group, called the centralizer of @MathNode@."
@@ -3756,7 +3750,7 @@
     "paper": "https://ar5iv.org/abs/1911.13189",
     "identifier": "Definition 2.11.",
     "sentences": [
-      "@LtxCite@ Let @MathNode@ be a module, and @MathNode@ be the corresponding crystal base.",
+      "Let @MathNode@ be a module, and @MathNode@ be the corresponding crystal base.",
       "An energy function on @MathNode@ is a map @MathNode@ satisfying @MathEquation@ for all @MathNode@ and @MathNode@ with @MathNode@."
     ]
   },
@@ -3877,7 +3871,7 @@
     "paper": "https://ar5iv.org/abs/1010.2469",
     "identifier": "Definition 2.1",
     "sentences": [
-      "@LtxCite@ Let @MathNode@ and @MathNode@ be two additive commutative semigroups.",
+      "Let @MathNode@ and @MathNode@ be two additive commutative semigroups.",
       "Then @MathNode@ is called a @MathNode@@MathNode@semiring if there exists a mapping @MathNode@ (image to be denoted by @MathNode@ where @MathNode@ and @MathNode@) satisfying the following conditions: (1) @MathNode@ (2) @MathNode@ (3) @MathNode@ (4) @MathNode@ for all @MathNode@ and for all @MathNode@."
     ]
   },
@@ -3930,7 +3924,7 @@
     "paper": "https://ar5iv.org/abs/2001.10475",
     "identifier": "Definition 8.4.",
     "sentences": [
-      "@LtxCite@ Let @MathNode@ be a smooth variety.",
+      "Let @MathNode@ be a smooth variety.",
       "The quasi-Albanese map @MathEquation@ is a morphism to a semi-abelian variety @MathNode@ such that (1)",
       "For any other morphism @MathNode@ to a semi-abelian variety @MathNode@, there is a morphism @MathNode@ such that @MathNode@, and",
       "(2) the morphism @MathNode@ is uniquely determined.",
@@ -4750,7 +4744,7 @@
     "paper": "https://ar5iv.org/abs/2309.06696",
     "identifier": "Definition 3.1 (@MathNode@-expander (for @MathNode@)).",
     "sentences": [
-      "@LtxCite@ Let @MathNode@ be a graph, @MathNode@ be a vertex weighting for @MathNode@, and @MathNode@.",
+      "Let @MathNode@ be a graph, @MathNode@ be a vertex weighting for @MathNode@, and @MathNode@.",
       "@MathNode@ is a @MathNode@-expander for @MathNode@ if @MathNode@.",
       "We also say @MathNode@ is @MathNode@-expanding in @MathNode@.",
       "If @MathNode@ is @MathNode@-expanding for @MathNode@ we simply say @MathNode@ is a @MathNode@-expander (leaving the \u201dfor @MathNode@\u201d implied)."
@@ -4822,7 +4816,7 @@
     "paper": "https://ar5iv.org/abs/1904.13070",
     "identifier": "Definition 5.",
     "sentences": [
-      "@LtxCite@ Let @MathNode@ be an interval-valued map.",
+      "Let @MathNode@ be an interval-valued map.",
       "@MathNode@ is locally Lipschitz at @MathNode@ if there exist @MathNode@ and a neighborhood @MathNode@ of @MathNode@ such that @MathGroup@"
     ]
   },
@@ -5423,7 +5417,7 @@
     "paper": "https://ar5iv.org/abs/1912.11484",
     "identifier": "Definition 2.2.",
     "sentences": [
-      "@LtxCite@ Let @MathNode@ and @MathNode@ has absolutely continuous derivatives up to order @MathNode@",
+      "Let @MathNode@ and @MathNode@ has absolutely continuous derivatives up to order @MathNode@",
       "Then the left sided Riemann-Liouville fractional derivative of order @MathNode@ of @MathNode@ is defined by @MathGroup@ where @MathNode@ and @MathNode@ denotes the integer part of the real number @MathNode@"
     ]
   },
@@ -5707,7 +5701,7 @@
     "paper": "https://ar5iv.org/abs/0811.2160",
     "identifier": "Definition 27.",
     "sentences": [
-      "@LtxCite@ Let @MathNode@ be a morphism between two definable subassignments of @MathNode@ and @MathNode@, respectively.",
+      "Let @MathNode@ be a morphism between two definable subassignments of @MathNode@ and @MathNode@, respectively.",
       "Assume that both @MathNode@ and @MathNode@ are of dimension @MathNode@, and the fibres of @MathNode@ have dimension @MathNode@.",
       "Then the order of Jacobian 7In geometric motivic integration, the order of Jacobian is given a very geometric meaning: if @MathNode@ is a morphism of varieties, the order of Jacobian is the function on the arc space of @MathNode@ that assigns to each arc its order of tangency to the singular locus of the morphism @MathNode@.",
       "As we discuss in Appendix 1, motivic integration theory described here specializes to geometric motivic integration.",
@@ -6217,8 +6211,6 @@
     "paper": "https://ar5iv.org/abs/1702.00244",
     "identifier": "Definition 2.27.",
     "sentences": [
-      "@MathNode@cf.",
-      "@LtxCite@@MathNode@",
       "A preabelian category @MathNode@ is called left semi-abelian if in any pull-back diagram @MathEquation@ in @MathNode@, the morphism @MathNode@ is an epimorphism whenever @MathNode@ is a cokernel morphism.",
       "Dually for a right semi-abelian category.",
       "@MathNode@ is called semi-abelian if it is both left and right semi-abelian."
@@ -6343,8 +6335,8 @@
       "1. @MathNode@ is an effective epimorphism, i.e., @MathNode@ is an equivalence, @LtxCite@.",
       "2. @MathNode@ is an effective epimorphism in the 1-topos @MathNode@.",
       "In other words, @MathNode@ is an isomorphism, @LtxCite@.",
-      "For @MathNode@, a morphism @MathNode@ is @MathNode@-connective if it satisfies the following equivalent conditions: (a) @MathNode@ is @MathNode@-connective and @MathNode@ for @MathNode@,18Here @MathNode@ where @MathNode@ and @MathNode@.",
-      "@LtxCite@.",
+      "For @MathNode@, a morphism @MathNode@ is @MathNode@-connective if it satisfies the following equivalent conditions: (a) @MathNode@ is @MathNode@-connective and @MathNode@ for @MathNode@, @LtxCite@.",
+      "Here @MathNode@ where @MathNode@ and @MathNode@.",
       "(b) @MathNode@ is @MathNode@-connective and @MathNode@ is @MathNode@-connective, @LtxCite@.",
       "(c) @MathNode@ is an equivalence, where @MathNode@ is the truncation in the slice \u221e-topos @LtxCite@.19",
       "Notice that the other two conditions are independent of whether we consider @MathNode@ as an object of @MathNode@ or @MathNode@, so @LtxCite@ really does apply."
@@ -7850,7 +7842,6 @@
     "paper": "https://ar5iv.org/abs/1404.6766",
     "identifier": "Definition 11.",
     "sentences": [
-      "@LtxCite@",
       "In a node symmetric graph, for every pair of vertices @MathNode@ and @MathNode@ of @MathNode@, there is some automorphism @MathNode@ such that @MathNode@."
     ]
   },
@@ -8179,7 +8170,6 @@
     "paper": "https://ar5iv.org/abs/2402.16450",
     "identifier": "Definition 3.11.",
     "sentences": [
-      "@LtxCite@",
       "A morphism @MathNode@ between post-groups @MathNode@ and @MathNode@ by definition satisfies for all @MathNode@ @MathEquation@"
     ]
   },
@@ -8343,7 +8333,6 @@
     "paper": "https://ar5iv.org/abs/1908.11576",
     "identifier": "Definition 2.26 (circumcenter operator)",
     "sentences": [
-      "@LtxCite@",
       "The circumcenter operator is @MathEquation@",
       "In particular, when @MathNode@, that is, @MathNode@, we say that the circumcenter of @MathNode@ exists and we call @MathNode@ the circumcenter of @MathNode@."
     ]
@@ -9453,7 +9442,6 @@
     "paper": "https://ar5iv.org/abs/1111.0577",
     "identifier": "Definition 5.1.",
     "sentences": [
-      "@LtxCite@",
       "A subset @MathNode@ of @MathNode@ is negligible if there exists @MathNode@ such that all but finitely many @MathNode@ have a piece such that @MathEquation@",
       "A complement of a negligible subset is co-negligible."
     ]

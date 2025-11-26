@@ -65,6 +65,7 @@ def main():
     ok = {}
     total = {}
     for file in COVERAGE_FILES:
+        is_train = 'train' in file.name
         total[file] = 0
         ok[file] = 0
         print(f'Processing {file}...')
@@ -78,12 +79,15 @@ def main():
                 try:
                     number = len(process_sentence_pgf(sentence))
                     if number < 100:
-                        print('OK:', number, 'readings')
+                        if is_train:
+                            print('OK:', number, 'readings')
                         ok[file] += 1
                     else:
-                        print('ERROR: more than 100 readings')
+                        if is_train:
+                            print('ERROR: more than 100 readings')
                 except pgf.ParseError as e:
-                    print('ERROR:', e)
+                    if is_train or 'Unexpected token' in str(e):
+                        print('ERROR:', e)
 
 
                 # shell_output = process_sentence_shell(sentence)

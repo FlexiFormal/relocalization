@@ -531,14 +531,6 @@
     ]
   },
   {
-    "paper": "https://ar5iv.org/abs/1412.5066",
-    "identifier": null,
-    "sentences": [
-      "\u0422\u0435\u043e\u0440\u0435\u043c\u0430 2.1.",
-      "@LtxCite@ HD0L-periodicity problem \u0430\u043b\u0433\u043e\u0440\u0438\u0442\u043c\u0438\u0447\u0435\u0441\u043a\u0438 \u0440\u0430\u0437\u0440\u0435\u0448\u0438\u043c\u0430."
-    ]
-  },
-  {
     "paper": "https://ar5iv.org/abs/1708.02077",
     "identifier": "Theorem 3",
     "sentences": [
@@ -1399,7 +1391,6 @@
     "paper": "https://ar5iv.org/abs/1701.05087",
     "identifier": "Theorem 2.9.",
     "sentences": [
-      "@LtxCite@",
       "For subanalytic stratifications, @MathNode@ implies @MathNode@ and @MathNode@ implies @MathNode@."
     ]
   },
@@ -1569,7 +1560,6 @@
     "paper": "https://ar5iv.org/abs/2001.03682",
     "identifier": "Theorem 3.1.",
     "sentences": [
-      "@LtxCite@",
       "For any compact set @MathNode@, there exist positive constants @MathNode@ and @MathNode@ such that the family of solutions of Hitchin\u2019s equations @MathNode@ satisfy @MathEquation@ in @MathNode@."
     ]
   },
@@ -2437,7 +2427,6 @@
     "paper": "https://ar5iv.org/abs/1510.01903",
     "identifier": "Theorem 1.1",
     "sentences": [
-      "@LtxCite@",
       "A nonincreasing sequence of nonnegative integers @MathNode@ @MathNode@ is graphic degree sequence if and only if @MathNode@ is even and @MathEquation@ for @MathNode@"
     ]
   },
@@ -3419,7 +3408,7 @@
     "paper": "https://ar5iv.org/abs/1801.04617",
     "identifier": "Theorem 5.3",
     "sentences": [
-      "@LtxCite@ Let @MathNode@ be the number of nodes with exactly @MathNode@ descendants in a URT.",
+      "Let @MathNode@ be the number of nodes with exactly @MathNode@ descendants in a URT.",
       "@MathEquation@ as @MathNode@.",
       "Here, @MathNode@, where @MathNode@ is as in (@LtxRef@)."
     ]
@@ -3476,7 +3465,6 @@
     "paper": "https://ar5iv.org/abs/2008.04587",
     "identifier": "Theorem 1.2",
     "sentences": [
-      "@LtxCite@",
       "For a graph @MathNode@ the following properties are equivalent:",
       "(i) @MathNode@ is a K\u00f6nig-Egerv\u00e1ry graph;",
       "(ii) there is @MathNode@ such that each maximum matching of @MathNode@ is contained in @MathNode@;",
@@ -3599,7 +3587,6 @@
     "paper": "https://ar5iv.org/abs/1511.08878",
     "identifier": "Theorem 3.3.",
     "sentences": [
-      "@LtxCite@",
       "Let @MathNode@ be a (not necessarily bounded) normal operator on the separable (complex) Hilbert space @MathNode@.",
       "Then for @MathNode@ there exists a diagonal operator @MathNode@ and a compact operator @MathNode@ with norm less than @MathNode@ such that @MathNode@."
     ]
@@ -3615,7 +3602,7 @@
     "paper": "https://ar5iv.org/abs/1910.06021",
     "identifier": "Theorem 1.",
     "sentences": [
-      "@LtxCite@ Let @MathNode@ and @MathNode@, then @MathGroup@"
+      "Let @MathNode@ and @MathNode@, then @MathGroup@"
     ]
   },
   {
@@ -4165,7 +4152,7 @@
     "paper": "https://ar5iv.org/abs/1502.02232",
     "identifier": "Theorem 5.2",
     "sentences": [
-      "@LtxCite@ For @MathNode@ as above, @MathNode@.",
+      "For @MathNode@ as above, @MathNode@.",
       "On the other hand, for any sufficiently large integer @MathNode@ of the form @MathNode@, there exists @MathNode@ of size @MathNode@ with @MathNode@, which is best possible for such @MathNode@.",
       "Thus, the upper bound is asymptotically tight up to the second-order terms."
     ]
@@ -4242,7 +4229,7 @@
     "paper": "https://ar5iv.org/abs/2005.08089",
     "identifier": "Theorem 5.1.",
     "sentences": [
-      "@LtxCite@ Let @MathNode@ be a topological semigroup.",
+      "Let @MathNode@ be a topological semigroup.",
       "Then the following assertions equivalent: (i) @MathNode@ has a multiplicative left invariant mean.",
       "(ii) whenever @MathNode@ acts on a compact Hausdorg space @MathNode@, where the map @MathNode@ is jointly continuous, then @MathNode@ contains a common fixed point of @MathNode@."
     ]
@@ -4315,7 +4302,7 @@
     "paper": "https://ar5iv.org/abs/1108.3102",
     "identifier": "Theorem 6.1.",
     "sentences": [
-      "@LtxCite@ Let @MathNode@ be a Seifert matrix with @MathNode@ a prime or @MathNode@.",
+      "Let @MathNode@ be a Seifert matrix with @MathNode@ a prime or @MathNode@.",
       "Then any matrix which is @MathNode@-equivalent to @MathNode@ is congruent to @MathNode@ over @MathNode@."
     ]
   },
@@ -4591,7 +4578,6 @@
     "paper": "https://ar5iv.org/abs/1505.03428",
     "identifier": "Theorem 3.2 (@MathNode@-Reifenberg).",
     "sentences": [
-      "@LtxCite@",
       "For each @MathNode@ and @MathNode@ there exists @MathNode@ such that the following holds.",
       "Let @MathNode@ be a closed subset with @MathNode@, and assume for each @MathNode@ and @MathNode@ that @MathGroup@",
       "Then the following hold: (1) there exists a mapping @MathNode@ which is a @MathNode@ bi-@MathNode@ map onto its image and such that @MathNode@.",
@@ -4685,7 +4671,6 @@
     "paper": "https://ar5iv.org/abs/2102.00500",
     "identifier": "Theorem 4.1.",
     "sentences": [
-      "@LtxCite@",
       "For a latent clustering @MathNode@ of @MathNode@ at time @MathNode@, denote the @MathNode@ maximizers of @MathNode@ as @MathNode@.",
       "If @MathNode@, there is a permutation @MathNode@ of @MathNode@ such that @MathNode@ maximizes empirical density among points in the cluster @MathNode@."
     ]
@@ -4726,7 +4711,7 @@
     "paper": "https://ar5iv.org/abs/1307.1877",
     "identifier": "Theorem 29.4.",
     "sentences": [
-      "@LtxCite@ Let @MathNode@ be a @MathNode@-product in @MathNode@.",
+      "Let @MathNode@ be a @MathNode@-product in @MathNode@.",
       "Then we have @MathGroup@ where @MathNode@ and @MathNode@.",
       "If the equality sign of (@LtxRef@) holds, then @MathNode@ and @MathNode@ are both totally geodesic in @MathNode@.",
       "Moreover, the immersion is rigid and the @MathNode@-product is a standard one."
@@ -5187,7 +5172,6 @@
     "paper": "https://ar5iv.org/abs/0705.1701",
     "identifier": "Theorem 1.4.",
     "sentences": [
-      "@LtxCite@",
       "With the same rescaling as in (@LtxRef@), Theorem @LtxRef@ actually holds in the case where @MathNode@."
     ]
   },
@@ -6003,7 +5987,6 @@
     "paper": "https://ar5iv.org/abs/math/0106242",
     "identifier": "Theorem 4.2.",
     "sentences": [
-      "@LtxCite@",
       "An operad @MathNode@ is an @MathNode@ operad if and only if its operad structure lifts to a @MathNode@ operad structure on its universal cover @MathNode@."
     ]
   },
@@ -6095,7 +6078,6 @@
     "paper": "https://ar5iv.org/abs/1505.02662",
     "identifier": "Theorem 1.2.",
     "sentences": [
-      "@LtxCite@",
       "All partially hyperbolic diffeomorphisms @MathNode@ are dynamically coherent."
     ]
   },
@@ -6114,7 +6096,7 @@
     "paper": "https://ar5iv.org/abs/1506.06974",
     "identifier": "Theorem 4.6.",
     "sentences": [
-      "@LtxCite@ Suppose that @MathNode@ is an exact sequence of hyperbolic groups with Cannon\u2013Thurston map @MathNode@.",
+      "Suppose that @MathNode@ is an exact sequence of hyperbolic groups with Cannon\u2013Thurston map @MathNode@.",
       "Then for distinct points @MathNode@, @MathNode@ if and only if @MathNode@ if and only if @MathNode@ for some @MathNode@."
     ]
   },
@@ -6472,8 +6454,7 @@
     "paper": "https://ar5iv.org/abs/math/0307341",
     "identifier": "Theorem 3.2.",
     "sentences": [
-      "@LtxCite@\\quaThe moduli space of Seiberg\u2013",
-      "Witten solutions for the Seifert fibered @MathNode@\u2013manifold @MathNode@ and @MathNode@ structure @MathNode@ contains only reducible solutions, for all of which the associated Dirac operator has trivial kernel."
+      "The moduli space of Seiberg\u2013Witten solutions for the Seifert fibered @MathNode@\u2013manifold @MathNode@ and @MathNode@ structure @MathNode@ contains only reducible solutions, for all of which the associated Dirac operator has trivial kernel."
     ]
   },
   {
@@ -6663,7 +6644,7 @@
     "paper": "https://ar5iv.org/abs/1809.07464",
     "identifier": "Theorem 2.8.",
     "sentences": [
-      "@LtxCite@ Let @MathNode@ be a monomial ideal of @MathNode@.",
+      "Let @MathNode@ be a monomial ideal of @MathNode@.",
       "Then @MathEquation@"
     ]
   },
@@ -6972,7 +6953,6 @@
     "paper": "https://ar5iv.org/abs/1612.00889",
     "identifier": "Theorem 3.7",
     "sentences": [
-      "@LtxCite@",
       "Let the distance function @MathNode@ used in projective clustering be the @MathNode@-th power of the Euclidean distance for some fixed @MathNode@.",
       "For @MathNode@, the total sensitivity @MathNode@ satisfies @MathNode@, whereas for @MathNode@, we have @MathNode@."
     ]
@@ -7003,7 +6983,6 @@
     "paper": "https://ar5iv.org/abs/1002.2090",
     "identifier": "Theorem 1.4.",
     "sentences": [
-      "@LtxCite@",
       "There exists @MathNode@ such that for any geodesic @MathNode@, the retraction @MathNode@ satisfies:",
       "Then @MathNode@."
     ]
@@ -7894,7 +7873,6 @@
     "paper": "https://ar5iv.org/abs/2403.05646",
     "identifier": "Theorem 4.8.",
     "sentences": [
-      "@LtxCite@",
       "If @MathNode@ is an asymptotically upper semicompact multivalued semiflow which is bounded dissipative and such that @MathNode@ is upper semicontinuous, for each @MathNode@, then @MathNode@ has the global attractor @MathNode@."
     ]
   },
@@ -8124,7 +8102,7 @@
     "paper": "https://ar5iv.org/abs/1604.06393",
     "identifier": "Theorem 5.16.",
     "sentences": [
-      "@LtxCite@ (1) Let @MathNode@ be a Hopf algebra with invertible antipode, then @MathNode@ is a Hopf algebroid over the base algebra @MathNode@.",
+      "(1) Let @MathNode@ be a Hopf algebra with invertible antipode, then @MathNode@ is a Hopf algebroid over the base algebra @MathNode@.",
       "(2) There is a functor @MathNode@, between the category of Hopf algebras with invertible antipode and the category of Hopf algebroids, sending @MathNode@ to @MathNode@.",
       "(3) The category of partial @MathNode@-modules (or @MathNode@-modules), is a monoidal category @MathNode@ and the forgetful functor @MathNode@ is strictly monoidal.",
       "(4) Algebras in the monoidal category @MathNode@ coincide with partial @MathNode@-modules algebras."
@@ -8996,10 +8974,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1111.7057",
-    "identifier": null,
+    "identifier": "Theorem A.6.",
     "sentences": [
-      "Theorem A.6.",
-      "@LtxCite@*Theorem 2.1.5, Corollary 3.4.6 and Remark 2.1.7",
       "Suppose all the hypotheses mentioned in \u00a7@LtxRef@ hold.",
       "If @MathNode@, then the distributions @MathNode@ form a basis of @MathNode@, and @MathEquation@"
     ]
@@ -9091,7 +9067,7 @@
     "paper": "https://ar5iv.org/abs/1301.3940",
     "identifier": "Theorem 1.1.",
     "sentences": [
-      "@LtxCite@ Assume that 1. @MathNode@ are independent standardized random variables.",
+      "Assume that 1. @MathNode@ are independent standardized random variables.",
       "2. There exists a @MathNode@ and a random variable @MathNode@ with finite fourth moment for which there exists @MathNode@ and integer number @MathNode@ such that, for any @MathNode@ and any integer numbers @MathNode@, we have @MathEquation@",
       "3. There exists a positive function @MathNode@ as @MathNode@ and @MathNode@ such that @MathEquation@",
       "4. @MathNode@ is an @MathNode@ nonrandom matrix such that @MathNode@ is uniformly bounded.",
@@ -9265,7 +9241,7 @@
     "paper": "https://ar5iv.org/abs/math/0209404",
     "identifier": "Theorem 3.2.",
     "sentences": [
-      "@LtxCite@ Suppose that the subscheme @MathNode@ of @MathNode@ is locally a complete intersection, then the complex @MathNode@ is a minimal resolution of @MathNode@."
+      "Suppose that the subscheme @MathNode@ of @MathNode@ is locally a complete intersection, then the complex @MathNode@ is a minimal resolution of @MathNode@."
     ]
   },
   {
@@ -9294,7 +9270,7 @@
     "paper": "https://ar5iv.org/abs/1108.4958",
     "identifier": "Theorem 20.",
     "sentences": [
-      "@LtxCite@ For @MathNode@ and @MathNode@ (that is, @MathNode@), we have @MathGroup@ Moreover these structure constants determine the Schubert basis @MathNode@ and the ring @MathNode@ up to isomorphism as @MathNode@-algebras."
+      "For @MathNode@ and @MathNode@ (that is, @MathNode@), we have @MathGroup@ Moreover these structure constants determine the Schubert basis @MathNode@ and the ring @MathNode@ up to isomorphism as @MathNode@-algebras."
     ]
   },
   {
@@ -9599,7 +9575,6 @@
     "paper": "https://ar5iv.org/abs/1003.1781",
     "identifier": "Theorem 16.3.",
     "sentences": [
-      "@LtxCite@.",
       "Solutions of @MathNode@ are smooth and those of finite energy converge exponentially fast to Hamiltonian orbits at the ends, that is near each end @MathNode@ for some constants @MathNode@."
     ]
   },
