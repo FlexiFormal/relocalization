@@ -3,10 +3,14 @@ concrete MagmaEng of Magma = MagmaFunctor with
 ** open ParadigmsEng, ResEng, Prelude, StructuralEng, MorphoEng in {
     oper
         _call_V2 : V2 = mkV2 (mkV "call");
-        _say_V2 : V2 = mkV2 (mkV "say" "said" "said");
+        _say_V : V = mkV "say" "said" "said";
+        _say_V2 : V2 = mkV2 (_say_V);
 
         -- mergeAdv a b = lin Adv {s = a.s ++ b.s};
 
+        called_an_nkind_vp : NamedKind -> VP = \nk -> mkVP (passiveVP _call_V2) (term_to_adv (indef_nk nk));
+        said_vp_vp : VP -> VP = \vp -> mkVP (passiveVP _say_V2) (str_adv (infVP VVInf vp False Simul CPos (agrP3 Sg)));
+        we_say_that : S -> S = \s -> mkS (mkCl we_NP (mkVS _say_V) s);
 
 
     lin
@@ -28,15 +32,23 @@ concrete MagmaEng of Magma = MagmaFunctor with
         stmt_for_term stmt term = lin S {s = stmt.s ++ (PrepNP (mkPrep "for") term.np).s};
 
         -- definitions
-        define_nkind_as_nkind_v1 nk1 nk2 = mkS (mkCl (DetCN (indefart nk1.num) nk1.cn) (mkVP (passiveVP _call_V2) (term_to_adv (DetCN (indefart nk2.num) nk2.cn))));
+        define_nkind_as_nkind nk1 nk2 = mkS (mkCl (indef_nk nk1) (called_an_nkind_vp nk2));
+        define_nkind_as_nkind_v1 nk1 nk2 = mkS (mkCl (indef_nk nk1) (said_vp_vp (mkVP (indef_nk nk2))));
+        define_nkind_as_nkind_v3 nk1 nk2 = we_say_that (mkS (mkCl (indef_nk nk1) (indef_nk nk2)));
 
-        define_nkind_prop nk p = mkS (mkCl (SyntaxEng.mkNP (indefart nk.num) nk.cn) (mkVP (passiveVP _call_V2) (property_to_adv p)));
-        define_nkind_prop_v1 nk p = mkS (mkCl (SyntaxEng.mkNP (indefart nk.num) nk.cn) (mkVP (passiveVP _say_V2) (str_adv (infVP VVInf (mkVP p) False Simul CPos (agrP3 Sg)))));
-        define_nkind_prop_v2 nk p = mkS (mkCl (SyntaxEng.mkNP (indefart nk.num) nk.cn) p);
+        define_nkind_prop nk p = mkS (mkCl (indef_nk nk) (mkVP (passiveVP _call_V2) (property_to_adv p)));
+        define_nkind_prop_v1 nk p = mkS (mkCl (indef_nk nk) (said_vp_vp (mkVP p)));
+        define_nkind_prop_v2 nk p = mkS (mkCl (indef_nk nk) p);
+        define_nkind_prop_v3 nk p = we_say_that (mkS (mkCl (indef_nk nk) p));
 
         -- for the following: TODO: support plural (probably rarely needed)
         define_ident_prop id p = mkS (mkCl (symb id.s) (mkVP (passiveVP _call_V2) (property_to_adv p)));
-        define_ident_prop_v1 id p = mkS (mkCl (symb id.s) (mkVP (passiveVP _say_V2) (str_adv (infVP VVInf (mkVP p) False Simul CPos (agrP3 Sg)))));
+        define_ident_prop_v1 id p = mkS (mkCl (symb id.s) (said_vp_vp (mkVP p)));
         define_ident_prop_v2 id p = mkS (mkCl (symb id.s) p);
+        define_ident_prop_v3 id p = we_say_that (mkS (mkCl (symb id.s) p));
 
+        define_ident_nkind id nk = mkS (mkCl (symb id.s) (called_an_nkind_vp nk));
+        define_ident_nkind_v1 id nk = mkS (mkCl (symb id.s) (said_vp_vp (mkVP (indef_nk nk))));
+        define_ident_nkind_v2 id nk = mkS (mkCl (symb id.s) (indef_nk nk));
+        define_ident_nkind_v3 id nk = we_say_that (mkS (mkCl (symb id.s) (indef_nk nk)));
 }

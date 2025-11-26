@@ -3,6 +3,7 @@ incomplete resource MagmaUtils = open Syntax, ParamX in {
         _Kind = {cn: CN; adv: Adv};   -- inspired by Aarne's new grammar
         _Ident = {s: Str; num: ParamX.Number};
         _Quantification = { sg: Det; pl: Det };    -- sg if it refers to singular object; can be "some (integer n)" or "all (integers n)"
+        _NamedKind = {cn: CN; num: ParamX.Number};
 
         mergeAdv : Adv -> Adv -> Adv = \a,b -> lin Adv {s = a.s ++ b.s};
 
@@ -22,4 +23,6 @@ incomplete resource MagmaUtils = open Syntax, ParamX in {
         mkQuantification : Det -> Det -> _Quantification = \sgDet, plDet -> { sg = sgDet; pl = plDet };
 
         my_ssubjs : S -> Subj -> S -> S = SSubjS;
+
+        indef_nk : _NamedKind -> NP = \nk -> DetCN (indefart nk.num) nk.cn;
 }

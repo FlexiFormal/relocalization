@@ -10,7 +10,7 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         Declaration = Utt;
         Sentence = {s: Str};
         Kind = _Kind;
-        NamedKind = {cn: CN; num: ParamX.Number};
+        NamedKind = _NamedKind;
         Term = {np: NP; just_formula: Bool};
         Identifier = _Ident;
         Property = AP;
@@ -52,7 +52,7 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         -- predicates
 
         -- definitions
-        define_nkind_as_nkind nk1 nk2 = mkS (mkCl (DetCN (indefart nk1.num) nk1.cn) (DetCN (indefart nk2.num) nk2.cn));
+        define_nkind_as_nkind_v2 nk1 nk2 = mkS (mkCl (indef_nk nk1) (indef_nk nk2));
 
         plain_defcore dc = dc;
         defcore_iff_stmt dc s = my_ssubjs dc _iff_subj s;
@@ -63,10 +63,10 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         conj_stmt c s1 s2 = mkS c s1 s2;
         subj_stmt ssubj s1 s2 = my_ssubjs s1 ssubj s2;
 
-        exists_nkind nk = mkS (mkCl (DetCN (indefart nk.num) nk.cn));
-        exists_nkind_v1 nk = mkS (ExistsNP (DetCN (indefart nk.num) nk.cn));
+        exists_nkind nk = mkS (mkCl (indef_nk nk));
+        exists_nkind_v1 nk = mkS (ExistsNP (indef_nk nk));
 
-        term_has_nkind_stmt t nk = mkS (mkCl t.np have_V2 (DetCN (indefart nk.num) nk.cn));
+        term_has_nkind_stmt t nk = mkS (mkCl t.np have_V2 (indef_nk nk));
         term_is_property_stmt t p = mkS (mkCl t.np p);
         term_is_term_stmt t1 t2 = mkS (mkCl t1.np t2.np);
         term_predicate_stmt t pred = mkS (mkCl t.np pred);

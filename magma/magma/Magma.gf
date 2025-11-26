@@ -85,15 +85,25 @@ abstract Magma = {
         declaration_sentence : Declaration -> Sentence;
 
         -- definitions
-        define_nkind_as_nkind : NamedKind -> NamedKind -> DefCore;
-        define_nkind_as_nkind_v1 : NamedKind -> NamedKind -> DefCore;
+        define_nkind_as_nkind : NamedKind -> NamedKind -> DefCore;   -- an `n1` is called a `n2`
+        define_nkind_as_nkind_v1 : NamedKind -> NamedKind -> DefCore;-- an `n1` is said to be a `n2`
+        define_nkind_as_nkind_v2 : NamedKind -> NamedKind -> DefCore;-- an `n1` is a `n2`
+        define_nkind_as_nkind_v3 : NamedKind -> NamedKind -> DefCore;-- we say that an `n1` is a `n2`
+
         define_nkind_prop : NamedKind -> Property -> DefCore;
         define_nkind_prop_v1 : NamedKind -> Property -> DefCore;
         define_nkind_prop_v2 : NamedKind -> Property -> DefCore;
+        define_nkind_prop_v3 : NamedKind -> Property -> DefCore;
 
         define_ident_prop : Identifier -> Property -> DefCore;      -- `t` is called `p`
         define_ident_prop_v1 : Identifier -> Property -> DefCore;   -- `t` is said to be `p`
         define_ident_prop_v2 : Identifier -> Property -> DefCore;   -- `t` is `p`
+        define_ident_prop_v3 : Identifier -> Property -> DefCore;   -- we say that `t` is `p`
+
+        define_ident_nkind : Identifier -> NamedKind -> DefCore;    -- `t` is called a `n`
+        define_ident_nkind_v1 : Identifier -> NamedKind -> DefCore; -- `t` is said to be a `n`
+        define_ident_nkind_v2 : Identifier -> NamedKind -> DefCore; -- `t` is a `n`
+        define_ident_nkind_v3 : Identifier -> NamedKind -> DefCore; -- we say that `t` is a `n`
 
         plain_defcore : DefCore -> Definition;
         defcore_iff_stmt : DefCore -> Statement -> Definition;
