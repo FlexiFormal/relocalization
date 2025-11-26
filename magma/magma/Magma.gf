@@ -35,7 +35,8 @@ abstract Magma = {
         if_subj : Subjunction;         -- a ⇐ b
 
         -- if ... then ... is a weird special case, at least in German
-        -- if_then_conj : Conjunction;    -- a ⇒ b
+        if_then_stmt : Statement -> Statement -> Statement;    -- a ⇒ b
+        if_then_stmt_v1 : Statement -> Statement -> Statement;    -- a ⇒ b
         
         -- identifiers
         no_ident : Identifier;
