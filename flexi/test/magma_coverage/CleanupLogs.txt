@@ -2,3 +2,7 @@
 
 * Remove non-English papers (on demand - systematic recognation with nltk was not accurate enough)
 
+
+* in sentence preprocessing: Append "." if sentence ends with equation
+
+* PLANNED: For enumerations: put each item in a separate sentence. It's not clear if this is the correct design decision, but otherwise we can get giant sentence with lots of nested sentences (think "we define: 1. ... 2. ... etc.")

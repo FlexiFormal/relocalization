@@ -26,5 +26,5 @@ concrete SigTestLexiconGer of SigTestLexicon = SigArgsGer ** open MagmaUtilsGer,
     lin
         integer = mkKind (mkCN (mkA "ganz") (mkN "Zahl" feminine));
         subset = mkKind2 (mkCN (mkN "Teilmenge" feminine)) gen_von_MP;
-        function = mkKind3 (mkCN (mkN "function")) von_MP nach_MP;
+        function = mkKind3 (mkCN (mkN "Funktion" feminine)) von_MP nach_MP;
 }

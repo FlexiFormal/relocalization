@@ -22,3 +22,16 @@ class TestGrammar(unittest.TestCase):
             with self.subTest(sentence=sentence):
                 readings = grammar.parse_to_gfast(sentence)
                 self.assertEqual(len(readings), num_readings)
+
+    def test_sentences_ger(self):
+        grammar = MagmaGrammar('SigTestGrammar', 'Ger')
+
+        # pairs (sentence, number of readings)
+        sentences = [
+            ('Es gibt eine Funktion von $ X $ nach $ Y $.', 2),
+        ]
+
+        for sentence, num_readings in sentences:
+            with self.subTest(sentence=sentence):
+                readings = grammar.parse_to_gfast(sentence)
+                self.assertEqual(len(readings), num_readings)

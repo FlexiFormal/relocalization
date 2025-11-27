@@ -61,15 +61,16 @@
     "paper": "https://ar5iv.org/abs/2012.03073",
     "identifier": "Definition 2.4.",
     "sentences": [
-      "For any scheme @MathNode@, let @MathNode@ be the set of equivalence classes 3More precisely, we choose a set of representatives, one from each equivalence class.",
-      "Such a set of representatives exists because line bundles are locally finitely presented.",
-      "But, the equivalence classes themselves are proper classes, not eligible for set membership without expanding the universe.",
-      "We do not belabor the difference any further in this paper.",
-      "of pairs @MathNode@, where: \u2022 @MathNode@ is a line bundle on @MathNode@ such that @MathNode@;",
+      "For any scheme @MathNode@, let @MathNode@ be the set of equivalence classes of pairs @MathNode@, where:",
+      "\u2022 @MathNode@ is a line bundle on @MathNode@ such that @MathNode@;",
       "\u2022 @MathNode@ is an @MathNode@ matrix of global sections of @MathNode@ such that the determinant @MathEquation@ is a nowhere-vanishing section of @MathNode@;",
       "\u2022 @MathNode@ if there exists an isomorphism @MathNode@ such that @MathNode@, with @MathNode@ computed by applying @MathNode@ to each entry of @MathNode@.",
       "We endow @MathNode@ with a group structure via @MathNode@, where @MathNode@ denotes \u201ctensor multiplication\u201d.",
-      "That is, @MathNode@."
+      "That is, @MathNode@.",
+      "More precisely, we choose a set of representatives, one from each equivalence class.",
+      "Such a set of representatives exists because line bundles are locally finitely presented.",
+      "But, the equivalence classes themselves are proper classes, not eligible for set membership without expanding the universe.",
+      "We do not belabor the difference any further in this paper."
     ]
   },
   {

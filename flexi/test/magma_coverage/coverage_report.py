@@ -21,10 +21,10 @@ from flexi.parsing.magma import get_pgf
 
 COVERAGE_FILES = [
     BASE_PATH / p for p in [
-        'definitions_train.json',
         'theorems_train.json',
-        'definitions_test.json',
+        'definitions_train.json',
         'theorems_test.json',
+        'definitions_test.json',
     ]
 ]
 
@@ -43,6 +43,8 @@ def sentence_preprocess(sentence):
         sentence = sentence[0].lower() + sentence[1:]
     if sentence[-1] == '.':
         sentence = sentence[:-1] + ' .'
+    if sentence.endswith('MathGroup $ ') or sentence.endswith('MathEquation $ '):
+        sentence += '.'
     return sentence
 
 def process_sentence_shell(sentence):
@@ -75,20 +77,20 @@ def main():
             print(f'Processing {para["paper"]}')
             for sentence in para['sentences']:
                 total[file] += 1
-                print('---', file.name, f'({paranum})')
-                print(f'Sentence: {sentence}')
+                print('---', '' if is_train else '\033[48;2;255;0;255m', file.name, f'({paranum}) \033[0m')
+                print(f'Sentence: \033[48;2;255;255;0m{sentence}\033[0m')
                 try:
                     number = len(process_sentence_pgf(sentence))
                     if number < 100:
                         if is_train:
-                            print('OK:', number, 'readings')
+                            print('\033[30;42m' + f'OK: {number} readings' + '\033[0m')
                         ok[file] += 1
                     else:
                         if is_train:
-                            print('ERROR: more than 100 readings')
+                            print('\033[30;41m' + f'ERROR: more than 100 readings' + '\033[0m')
                 except pgf.ParseError as e:
                     if is_train or 'Unexpected token' in str(e):
-                        print('ERROR:', e)
+                        print('\033[30;41m' + f'ERROR: {e}' + '\033[0m')
 
                 # shell_output = process_sentence_shell(sentence)
                 # if shell_output.startswith('The parser failed at token') or \
