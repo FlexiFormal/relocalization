@@ -8,7 +8,6 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         Polarity = Pol;
         Definition = S;
         DefCore = S;
-        Declaration = Utt;
         Sentence = {s: Str};
         Kind = _Kind;
         NamedKind = _NamedKind;
@@ -20,6 +19,10 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         Identifier = _Ident;
         Identifiers = _Ident;   -- can reuse type
         IdentifierList = {tail: Str; head: Str };   
+
+        -- declarations
+        Declaration = Utt;
+        DeclarationList = {head: Str; tail: Str };
 
     lin
         -- polarities
@@ -83,12 +86,17 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         term_is_term_stmt t1 t2 = mkS (mkCl t1.np t2.np);
         term_predicate_stmt t pred = mkS (mkCl t.np pred);
 
-        -- declaration
+        -- declarations
         let_kind_decl i nk = ImpP3 (symb i.s) (mkVP (Syntax.mkNP (indefart nk.num) nk.cn));
+        BaseDeclarationList d1 d2 = {head = d1.s; tail = d2.s};
+        ConsDeclarationList d dl = {head = d.s; tail = dl.tail ++ "," ++ d.s};
+        ConsDeclarationList_v1 d dl = {head = d.s; tail = dl.tail ++ _and_str ++ d.s};
 
         -- sentences
         stmt_sentence s = {s = {- CAPIT ++ -} (mkUtt s).s ++ "."};
         def_sentence d = {s = {- CAPIT ++ -} (mkUtt d).s ++ "."};
         declaration_sentence a = {s = {- CAPIT ++ -} a.s ++ "."};
+        declaration_list_sentence dl = {s = dl.tail ++ _and_str ++ dl.head ++ "."};
+        declaration_list_sentence_v2 dl = {s = dl.tail ++ "," ++ dl.head ++ "."};
         topstmt_sentence ts = {s = (mkUtt ts).s ++ "."};
 }

@@ -5,7 +5,6 @@ abstract Magma = {
         Sentence;       -- "There is an odd integer ."
         Definition;     -- "an integer is called odd iff it is not divisible by 2"
         DefCore;        -- "an integer is called odd"
-        Declaration;    -- "let x be an integer"
 
         Quantification; -- "some", "every", "at least one"
         Polarity;       -- positive/negative
@@ -16,6 +15,10 @@ abstract Magma = {
         NamedKind;      -- "bijective function f from X to Y"
         Term;           -- "every function f from X to Y"
         Property;       -- "divisible by 2"
+
+        -- declarations
+        Declaration;    -- "let x be an integer"
+        DeclarationList;
 
         -- predicates
         Predicate;      -- "divides 2", ...
@@ -106,10 +109,17 @@ abstract Magma = {
         let_such_that_v1 : Identifiers -> Statement -> Declaration; -- "let k be where ..."
         let_such_that_v2 : Identifiers -> Statement -> Declaration; -- "let k be with ..."
 
+        BaseDeclarationList : Declaration -> Declaration -> DeclarationList;
+        ConsDeclarationList : Declaration -> DeclarationList -> DeclarationList;
+        ConsDeclarationList_v1 : Declaration -> DeclarationList -> DeclarationList;
+
         -- sentences
         stmt_sentence : Statement -> Sentence;
         def_sentence : Definition -> Sentence;
         declaration_sentence : Declaration -> Sentence;
+        declaration_list_sentence : DeclarationList -> Sentence;
+        declaration_list_sentence_v1 : DeclarationList -> Sentence;
+        declaration_list_sentence_v2 : DeclarationList -> Sentence;
         topstmt_sentence : TopStatement -> Sentence;
 
         -- definitions
