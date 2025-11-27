@@ -41,6 +41,7 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
             s = il.tail ++ _and_str ++ il.head;
             num = Pl  -- lists are always plural
         };
+        finalizeIdentifierList_v1 il = { s = il.tail ++ "," ++ il.head; num = Pl };
         single_identifier id = {s = id.s; num = id.num};
 
         -- kinds/named kinds

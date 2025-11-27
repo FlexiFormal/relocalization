@@ -49,6 +49,8 @@ abstract Magma = {
         BaseIdentifierList : Identifier -> Identifier -> IdentifierList;
         ConsIdentifierList : Identifier -> IdentifierList -> IdentifierList;
         finalizeIdentifierList : IdentifierList -> Identifiers;
+        finalizeIdentifierList_v1 : IdentifierList -> Identifiers;
+        finalizeIdentifierList_v2 : IdentifierList -> Identifiers;
         single_identifier : Identifier -> Identifiers;
 
         -- kinds/named kinds
