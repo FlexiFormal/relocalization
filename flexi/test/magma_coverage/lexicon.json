@@ -1,5 +1,9 @@
 {
     "V": {
+        "contain": [
+            "contain",
+            "contained"
+        ],
         "satisfy": [
             "satisfy",
             "satisfied"

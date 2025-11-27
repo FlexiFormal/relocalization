@@ -2534,6 +2534,7 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pk_lex_w_h_p : PreKind;
 
 -- PrePredicates
+    pp_lex_contain : PrePredicate;
     pp_lex_satisfy : PrePredicate;
     pp_lex_reverse : PrePredicate;
     pp_lex_require : PrePredicate;
@@ -2938,7 +2939,6 @@ abstract TestCoverageLexicon = FreeArgs ** {
     prop_lex_continuous : Property;
     prop_lex_Balmer : Property;
     prop_lex_feasible : Property;
-    prop_lex_the : Property;
     prop_lex_unique : Property;
     prop_lex_Hausdorff : Property;
     prop_lex_topological : Property;

@@ -43,6 +43,7 @@ def sentence_preprocess(sentence):
         sentence = sentence[0].lower() + sentence[1:]
     if sentence[-1] == '.':
         sentence = sentence[:-1] + ' .'
+    sentence = sentence.replace(', ', ' , ')
     if sentence.endswith('MathGroup $ ') or sentence.endswith('MathEquation $ '):
         sentence += '.'
     return sentence
