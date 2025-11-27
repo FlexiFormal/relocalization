@@ -118,6 +118,8 @@ abstract Magma = {
         indeed_stmt : Statement -> TopStatement;
         indeed_stmt_v1 : Statement -> TopStatement;
 
+        assume_stmt : Statement -> TopStatement;
+        assume_stmt_v1 : Statement -> TopStatement;
 
         -- declarations
         let_kind_decl : Identifiers -> NamedKind -> Declaration;    -- "let k be an integer"; in practice, NamedKind should be anonymous, but Kind is too restricted (e.g. no "such that")

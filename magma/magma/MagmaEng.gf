@@ -66,6 +66,9 @@ concrete MagmaEng of Magma = MagmaFunctor with
         indeed_stmt stmt = lin Utt {s = "indeed" ++ "," ++ stmt.s};
         indeed_stmt_v1 stmt = lin Utt {s = "in fact" ++ "," ++ stmt.s};
 
+        assume_stmt stmt = lin Utt {s = "assume" ++ stmt.s};
+        assume_stmt_v1 stmt = lin Utt {s = "suppose" ++ stmt.s};
+
         -- definitions
         define_nkind_as_nkind nk1 nk2 = mkS (mkCl (indef_nk nk1) (called_an_nkind_vp nk2));
         define_nkind_as_nkind_v1 nk1 nk2 = mkS (mkCl (indef_nk nk1) (said_vp_vp (mkVP (indef_nk nk2))));
