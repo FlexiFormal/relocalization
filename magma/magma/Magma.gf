@@ -103,6 +103,11 @@ abstract Magma = {
         therefore_stmt_v7 : Statement -> TopStatement;
         therefore_stmt_v8 : Statement -> TopStatement;
 
+        furthermore_stmt : Statement -> TopStatement;
+        furthermore_stmt_v1 : Statement -> TopStatement;
+        furthermore_stmt_v2 : Statement -> TopStatement;
+
+
         -- declarations
         let_kind_decl : Identifiers -> NamedKind -> Declaration;    -- "let k be an integer"; in practice, NamedKind should be anonymous, but Kind is too restricted (e.g. no "such that")
         let_property_decl : Identifiers -> Property -> Declaration; -- "let k∈N be divisible by 2"

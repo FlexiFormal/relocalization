@@ -54,6 +54,10 @@ concrete MagmaEng of Magma = MagmaFunctor with
         therefore_stmt_v7 stmt = lin Utt {s = "then" ++ stmt.s}; -- is it really semantically equivalent?
         therefore_stmt_v8 stmt = lin Utt {s = "then" ++ "," ++ stmt.s};
 
+        furthermore_stmt stmt = lin Utt {s = "furthermore" ++ "," ++ stmt.s};
+        furthermore_stmt_v1 stmt = lin Utt {s = "in addition" ++ "," ++ stmt.s};
+        furthermore_stmt_v2 stmt = lin Utt {s = "additionally" ++ "," ++ stmt.s};
+
         -- definitions
         define_nkind_as_nkind nk1 nk2 = mkS (mkCl (indef_nk nk1) (called_an_nkind_vp nk2));
         define_nkind_as_nkind_v1 nk1 nk2 = mkS (mkCl (indef_nk nk1) (said_vp_vp (mkVP (indef_nk nk2))));
