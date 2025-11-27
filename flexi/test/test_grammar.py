@@ -12,8 +12,8 @@ class TestGrammar(unittest.TestCase):
             ('There is an integer.', 1),
             ('There are integers.', 1),
             ('Let $ n $ be an even integer.', 1),
-            ('$ n $ is an even integer.', 1),
-            ('$ n $ is an even integer iff $ ? $.', 1),
+            ('$ n $ is an even integer.', 2),           # can be def or stmt
+            ('$ n $ is an even integer iff $ ? $.', 2), # can be def or stmt
             ('$ 1 $ divides every integer.', 1),
             ('Some integer $ n $ divides every integer.', 1),
         ]

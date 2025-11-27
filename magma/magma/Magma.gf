@@ -15,11 +15,15 @@ abstract Magma = {
         Kind;           -- "bijective function ... from X to Y"
         NamedKind;      -- "bijective function f from X to Y"
         Term;           -- "every function f from X to Y"
-        Identifier;     -- "f", "f, g, and h"
         Property;       -- "divisible by 2"
 
         -- predicates
         Predicate;      -- "divides 2", ...
+
+        -- identifiers
+        Identifier;     -- "$f$", "$f, g$"
+        Identifiers;    -- "$f$, $g$, and $h$"
+        IdentifierList; -- gets finalized into `Identifiers`
 
     fun
         -- polarities
@@ -40,11 +44,15 @@ abstract Magma = {
         if_then_stmt_v1 : Statement -> Statement -> Statement;    -- a ⇒ b
         
         -- identifiers
-        no_ident : Identifier;
-        no_idents : Identifier;
+        no_idents_sg : Identifiers;
+        no_idents_pl : Identifiers;
+        BaseIdentifierList : Identifier -> Identifier -> IdentifierList;
+        ConsIdentifierList : Identifier -> IdentifierList -> IdentifierList;
+        finalizeIdentifierList : IdentifierList -> Identifiers;
+        single_identifier : Identifier -> Identifiers;
 
         -- kinds/named kinds
-        name_kind : Kind -> Identifier -> NamedKind;
+        name_kind : Kind -> Identifiers -> NamedKind;
         such_that_named_kind : NamedKind -> Statement -> NamedKind;
         such_that_named_kind_v1 : NamedKind -> Statement -> NamedKind;
         such_that_named_kind_v2 : NamedKind -> Statement -> NamedKind;
@@ -90,11 +98,11 @@ abstract Magma = {
         therefore_stmt_v8 : Statement -> TopStatement;
 
         -- declarations
-        let_kind_decl : Identifier -> NamedKind -> Declaration;    -- "let k be an integer"; in practice, NamedKind should be anonymous, but Kind is too restricted (e.g. no "such that")
-        let_ident_decl : Identifier -> Declaration;   -- "let k∈K" - in practice, it should be a 'guarded identifier'
-        let_such_that : Identifier -> Statement -> Declaration; -- "let k be such that ..."
-        let_such_that_v1 : Identifier -> Statement -> Declaration; -- "let k be where ..."
-        let_such_that_v2 : Identifier -> Statement -> Declaration; -- "let k be with ..."
+        let_kind_decl : Identifiers -> NamedKind -> Declaration;    -- "let k be an integer"; in practice, NamedKind should be anonymous, but Kind is too restricted (e.g. no "such that")
+        let_ident_decl : Identifiers -> Declaration;   -- "let k∈K" - in practice, it should be a 'guarded identifier'
+        let_such_that : Identifiers -> Statement -> Declaration; -- "let k be such that ..."
+        let_such_that_v1 : Identifiers -> Statement -> Declaration; -- "let k be where ..."
+        let_such_that_v2 : Identifiers -> Statement -> Declaration; -- "let k be with ..."
 
         -- sentences
         stmt_sentence : Statement -> Sentence;

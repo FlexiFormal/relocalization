@@ -13,9 +13,13 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         Kind = _Kind;
         NamedKind = _NamedKind;
         Term = {np: NP; just_formula: Bool};
-        Identifier = _Ident;
         Property = AP;
         Predicate = Grammar.VP;
+
+        -- identifiers
+        Identifier = _Ident;
+        Identifiers = _Ident;   -- can reuse type
+        IdentifierList = {tail: Str; head: Str };   
 
     lin
         -- polarities
@@ -29,8 +33,15 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         if_subj = if_Subj;
 
         -- identifiers
-        no_ident = {s = ""; num = Sg};
-        no_idents = {s = ""; num = Pl};
+        no_idents_sg = {s = ""; num = Sg};
+        no_idents_pl = {s = ""; num = Pl};
+        BaseIdentifierList id1 id2 = {head = id1.s; tail = id2.s};
+        ConsIdentifierList id il = {head = id.s; tail = il.tail ++ "," ++ il.head};
+        finalizeIdentifierList il = {
+            s = il.tail ++ _and_str ++ il.head;
+            num = Pl  -- lists are always plural
+        };
+        single_identifier id = {s = id.s; num = id.num};
 
         -- kinds/named kinds
         name_kind k i = {cn = mkCN (mkCN k.cn (symb i.s)) k.adv; num = i.num};

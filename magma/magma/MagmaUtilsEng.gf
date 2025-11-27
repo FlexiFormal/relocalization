@@ -14,4 +14,6 @@ resource MagmaUtilsEng = MagmaUtils - [ my_ssubjs ] with (Syntax = SyntaxEng) **
         -- (this is also backed descriptively by looking at a few arxiv samples)
         my_ssubjs : S -> Subj -> S -> S =
             \a,s,b -> lin S {s = a.s ++ s.s ++ b.s} ;
+
+        _and_str: Str = "and";
 }

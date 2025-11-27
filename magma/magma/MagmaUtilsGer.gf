@@ -9,4 +9,6 @@ resource MagmaUtilsGer = MagmaUtils with (Syntax = SyntaxGer) ** open GrammarGer
         _iff_subj: Subj = mkSubj "gdw.";
         _iff_subj_v1: Subj = mkSubj "genau dann, wenn";
         _if_subj: Subj = mkSubj "if";
+
+        _and_str: Str = "und";
 }
