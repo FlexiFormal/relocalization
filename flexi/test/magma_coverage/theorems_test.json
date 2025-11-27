@@ -7359,19 +7359,6 @@
     ]
   },
   {
-    "paper": "https://ar5iv.org/abs/math/0211271",
-    "identifier": null,
-    "sentences": [
-      "Th\u00e9or\u00e8me 2.3.1",
-      "Avec les notations ci-dessus, soit @MathNode@ une valeur d\u2019adh\u00e9rence de la suite @MathNode@.",
-      "Alors 1. @MathNode@ est une mesure invariante: @MathNode@.",
-      "2. @MathNode@.",
-      "3. @MathNode@ sur @MathNode@.",
-      "On a @MathNode@ lorsque @MathNode@ d\u00e9finit un rev\u00eatement ramifi\u00e9 de @MathNode@ au dessus de @MathNode@.",
-      "4. L\u2019entropie @MathNode@ de la mesure @MathNode@ est sup\u00e9rieure ou \u00e9gale \u00e0 @MathNode@."
-    ]
-  },
-  {
     "paper": "https://ar5iv.org/abs/1206.3093",
     "identifier": "Theorem 9.2",
     "sentences": [
@@ -9347,20 +9334,6 @@
       "We set @MathNode@.",
       "An irreducible divisor @MathNode@ is contained in the fixed locus of a nontrivial element @MathNode@ of @MathNode@ if and only if it is a Heegner divisor @MathNode@, where @MathNode@ is primitive with @MathNode@, defines a nontrivial reflection in @MathNode@ and @MathNode@.",
       "Moreover, each irreducible divisor of @MathNode@ is contained in the fixed locus of at most one nontrivial element @MathNode@."
-    ]
-  },
-  {
-    "paper": "https://ar5iv.org/abs/0809.3656",
-    "identifier": null,
-    "sentences": [
-      "Th\u00e9or\u00e8me 2.11\\pointrait",
-      "Soient @MathNode@ un corps muni d\u2019une valeur absolue ultram\u00e9trique pour laquelle il est complet.",
-      "Soient @MathNode@ un espace @MathNode@-analytique et @MathNode@ une partie compacte de @MathNode@ qui poss\u00e8de un syst\u00e8me fondamental de voisinages affino\u00efdes g\u00e9om\u00e9triquement int\u00e8gres.",
-      "Supposons que pour tout nombre premier @MathNode@ diff\u00e9rent de la caract\u00e9ristique du corps @MathNode@ et tout entier @MathNode@, il existe une famille infinie @MathNode@ de corps deux \u00e0 deux non isomorphes satisfaisant les propri\u00e9t\u00e9s suivantes : i) tout \u00e9l\u00e9ment de @MathNode@ est une extension finie et s\u00e9parable de @MathNode@ contenant une racine primitive @MathNode@ de l\u2019unit\u00e9 ;",
-      "ii) pour tout \u00e9l\u00e9ment @MathNode@ de @MathNode@, il existe un \u00e9l\u00e9ment @MathNode@ de @MathNode@ et un \u00e9l\u00e9ment @MathNode@ de @MathNode@ nul en tout point de @MathNode@ tels que les corps @MathNode@ et @MathNode@ soient lin\u00e9airement disjoints et le polyn\u00f4me @MathNode@ soit irr\u00e9ductible sur leur compositum.",
-      "Si la caract\u00e9ristique du corps @MathNode@ est un nombre premier @MathNode@, supposons en outre qu\u2019il existe une famille infinie @MathNode@ de corps deux \u00e0 deux non isomorphes satisfaisant les propri\u00e9t\u00e9s suivantes : i) tout \u00e9l\u00e9ment de @MathNode@ est une extension finie et s\u00e9parable de @MathNode@ ;",
-      "ii) pour tout \u00e9l\u00e9ment @MathNode@ de @MathNode@, il existe un \u00e9l\u00e9ment @MathNode@ de @MathNode@ et un \u00e9l\u00e9ment @MathNode@ de @MathNode@ nul en tout point de @MathNode@ tels que les corps @MathNode@ et @MathNode@ soient lin\u00e9airement disjoints et le polyn\u00f4me @MathNode@ soit irr\u00e9ductible sur leur compositum.",
-      "Alors, tout groupe fini est groupe de Galois d\u2019une extension finie et r\u00e9guli\u00e8re du corps @MathNode@."
     ]
   },
   {

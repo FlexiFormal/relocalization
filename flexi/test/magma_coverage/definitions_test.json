@@ -1290,14 +1290,6 @@
     ]
   },
   {
-    "paper": "https://ar5iv.org/abs/1510.06650",
-    "identifier": null,
-    "sentences": [
-      "D\u00e9finition 1.4.",
-      "On d\u00e9finit la composition d\u2019un @MathNode@ et d\u2019un @MathNode@-enchev\u00eatrements plats en pla\u00e7ant le premier au dessus du second et en faisant une homoth\u00e9tie divisant la hauteur totale par deux, c\u2019est-\u00e0-dire que pour @MathNode@ et @MathNode@ on a @MathEquation@"
-    ]
-  },
-  {
     "paper": "https://ar5iv.org/abs/1910.03148",
     "identifier": "Definition 2.2.",
     "sentences": [
@@ -5037,16 +5029,6 @@
     ]
   },
   {
-    "paper": "https://ar5iv.org/abs/1512.00874",
-    "identifier": null,
-    "sentences": [
-      "\u041e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 1.4.1.",
-      "\u041f\u0443\u0441\u0442\u044c @MathNode@ \u2014 \u043f\u0440\u043e\u0438\u0437\u0432\u043e\u043b\u044c\u043d\u0430\u044f \u0433\u0440\u0443\u043f\u043f\u0430.",
-      "\u0420\u0430\u0441\u0441\u043c\u043e\u0442\u0440\u0438\u043c @MathNode@-\u043c\u043e\u0434\u0443\u043b\u044c @MathNode@, \u0441\u0432\u043e\u0431\u043e\u0434\u043d\u044b\u0439 \u043a\u0430\u043a @MathNode@-\u043c\u043e\u0434\u0443\u043b\u044c.",
-      "\u0413\u043e\u0432\u043e\u0440\u044f\u0442, \u0447\u0442\u043e @MathNode@ \u044f\u0432\u043b\u044f\u0435\u0442\u0441\u044f \u043f\u0435\u0440\u043c\u0443\u0442\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u043c @MathNode@-\u043c\u043e\u0434\u0443\u043b\u0435\u043c, \u0435\u0441\u043b\u0438 \u0432 @MathNode@ \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442 \u0431\u0430\u0437\u0438\u0441 \u043d\u0430\u0434 @MathNode@, \u043d\u0430 \u043a\u043e\u0442\u043e\u0440\u043e\u043c \u0433\u0440\u0443\u043f\u043f\u0430 @MathNode@ \u0434\u0435\u0439\u0441\u0442\u0432\u0443\u0435\u0442 \u043f\u0435\u0440\u0435\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430\u043c\u0438."
-    ]
-  },
-  {
     "paper": "https://ar5iv.org/abs/1408.3311",
     "identifier": "Definition 6.7.",
     "sentences": [
@@ -5733,15 +5715,6 @@
     ]
   },
   {
-    "paper": "https://ar5iv.org/abs/1305.5457",
-    "identifier": null,
-    "sentences": [
-      "D\u00e9finition 2.1.",
-      "L\u2019espace @MathNode@ des @MathNode@-op\u00e9rateurs diff\u00e9rentiels lisses jusqu\u2019au bord agissant sur @MathNode@ est engendr\u00e9 par @MathNode@ et la composition d\u2019au plus @MathNode@ champs de vecteurs de @MathNode@.",
-      "Plus g\u00e9n\u00e9ralement, si @MathNode@ est un ensemble indiciel, on d\u00e9finit alors par @MathEquation@ l\u2019ensemble des @MathNode@-op\u00e9rateurs diff\u00e9rentiels qui sont polyhomog\u00e8nes par rapport \u00e0 @MathNode@."
-    ]
-  },
-  {
     "paper": "https://ar5iv.org/abs/1808.02711",
     "identifier": "Definition 4.1.",
     "sentences": [
@@ -6086,15 +6059,6 @@
       "Given a DFA @MathNode@ and two distinct strings @MathNode@, we say @MathNode@ separates two strings @MathNode@ and @MathNode@, if it accepts @MathNode@ but rejects @MathNode@.",
       "Now we can define @MathNode@ as the minimum number of states required for a DFA to separate @MathNode@ and @MathNode@.",
       "Also, we say that @MathNode@ distinguishes @MathNode@ and @MathNode@ if @MathNode@."
-    ]
-  },
-  {
-    "paper": "https://ar5iv.org/abs/1302.3142",
-    "identifier": null,
-    "sentences": [
-      "D\u00e9finition 3.2.",
-      "Un feuilletage sur @MathNode@ est presque grassmannien si ses feuilles sont des sous-vari\u00e9t\u00e9s distingu\u00e9es de @MathNode@.",
-      "Un tissu est presque grassmannien si les feuilletages qui le composent le sont."
     ]
   },
   {
@@ -6479,19 +6443,6 @@
     "identifier": "Definition 7",
     "sentences": [
       "A crossing @MathNode@ of @MathNode@ is called a f-crossing if @MathNode@ is of type 1 and the under cross of @MathNode@ is in the oriented arc from @MathNode@ to the over cross of @MathNode@ in @MathNode@."
-    ]
-  },
-  {
-    "paper": "https://ar5iv.org/abs/1101.4909",
-    "identifier": null,
-    "sentences": [
-      "\u041e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 2.1",
-      "\u0430) \u0415\u0441\u043b\u0438 \u0432 \u0441\u043b\u043e\u0432\u0435 @MathNode@ \u0441\u043e\u0434\u0435\u0440\u0436\u0438\u0442\u0441\u044f \u043f\u043e\u0434\u0441\u043b\u043e\u0432\u043e \u0432\u0438\u0434\u0430 @MathNode@ \u0442\u043e \u0431\u0443\u0434\u0435\u043c \u0433\u043e\u0432\u043e\u0440\u0438\u0442\u044c, \u0447\u0442\u043e \u0432 \u0441\u043b\u043e\u0432\u0435 @MathNode@ \u0441\u043e\u0434\u0435\u0440\u0436\u0438\u0442\u0441\u044f \u043f\u0435\u0440\u0438\u043e\u0434 \u0434\u043b\u0438\u043d\u044b @MathNode@",
-      "\u0431) \u0415\u0441\u043b\u0438 \u0441\u043b\u043e\u0432\u043e @MathNode@ \u044f\u0432\u043b\u044f\u0435\u0442\u0441\u044f \u043d\u0430\u0447\u0430\u043b\u043e\u043c \u0441\u043b\u043e\u0432\u0430 @MathNode@, \u0442\u043e \u0442\u0430\u043a\u0438\u0435 \u0441\u043b\u043e\u0432\u0430 \u043d\u0430\u0437\u044b\u0432\u0430\u044e\u0442 \u043d\u0435\u0441\u0440\u0430\u0432\u043d\u0438\u043c\u044b\u043c\u0438.",
-      "\u0432) \u0421\u043b\u043e\u0432\u043e @MathNode@ \u2013 \u0445\u0432\u043e\u0441\u0442 \u0441\u043b\u043e\u0432\u0430 @MathNode@, \u0435\u0441\u043b\u0438 \u043d\u0430\u0439\u0434\u0435\u0442\u0441\u044f \u0441\u043b\u043e\u0432\u043e @MathNode@ \u0442\u0430\u043a\u043e\u0435, \u0447\u0442\u043e @MathNode@.",
-      "\u0433) \u0421\u043b\u043e\u0432\u043e @MathNode@ \u2013 @MathNode@-\u0445\u0432\u043e\u0441\u0442 \u0441\u043b\u043e\u0432\u0430 @MathNode@, \u0435\u0441\u043b\u0438 @MathNode@ \u0441\u043e\u0441\u0442\u043e\u0438\u0442 \u0438\u0437 @MathNode@ \u043f\u0435\u0440\u0432\u044b\u0445 \u0431\u0443\u043a\u0432 \u043d\u0435\u043a\u043e\u0442\u043e\u0440\u043e\u0433\u043e \u0445\u0432\u043e\u0441\u0442\u0430 @MathNode@.",
-      "\u0433*) @MathNode@-\u043d\u0430\u0447\u0430\u043b\u043e \u0442\u043e \u0436\u0435 \u0441\u0430\u043c\u043e\u0435, \u0447\u0442\u043e \u0438 @MathNode@-\u0445\u0432\u043e\u0441\u0442.",
-      "\u0434) \u041f\u0443\u0441\u0442\u044c \u0441\u043b\u043e\u0432\u043e @MathNode@ \u043b\u0435\u0432\u0435\u0435 \u0441\u043b\u043e\u0432\u0430 @MathNode@, \u0435\u0441\u043b\u0438 \u043d\u0430\u0447\u0430\u043b\u043e \u0441\u043b\u043e\u0432\u0430 @MathNode@ \u043b\u0435\u0432\u0435\u0435 \u043d\u0430\u0447\u0430\u043b\u0430 \u0441\u043b\u043e\u0432\u0430 @MathNode@."
     ]
   },
   {

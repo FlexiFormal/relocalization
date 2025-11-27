@@ -3168,18 +3168,6 @@
     ]
   },
   {
-    "paper": "https://ar5iv.org/abs/0811.4690",
-    "identifier": null,
-    "sentences": [
-      "Th\u00e9or\u00e8me 3.3.1 (@LtxCite@)",
-      "Soit @MathNode@ une alg\u00e8bre @MathNode@-sommable et multiplicative, et @MathNode@ un quasihomomorphisme de parit\u00e9 @MathNode@ admissible relativement \u00e0 une extension quasi-libre de @MathNode@.",
-      "Supposons @MathNode@.",
-      "Alors @MathNode@ induit un morphisme d\u2019image directe @MathNode@ qui s\u2019ins\u00e8re dans un diagramme gradu\u00e9-commutatif @MathEquation@",
-      "Les fl\u00eaches verticales sont invariantes sous conjugaison de @MathNode@; la fl\u00eache en @MathNode@-th\u00e9orie topologique est aussi invariante sous homotopie.",
-      "De plus (@LtxRef@) est compatible avec le diagramme du corollaire @LtxRef@ (avec @MathNode@ multipli\u00e9 par un facteur @MathNode@) en prenant les caract\u00e8res de Chern @MathNode@ et @MathNode@."
-    ]
-  },
-  {
     "paper": "https://ar5iv.org/abs/1402.4996",
     "identifier": "Theorem 4.2.",
     "sentences": [
@@ -4023,15 +4011,6 @@
     ]
   },
   {
-    "paper": "https://ar5iv.org/abs/math/0602064",
-    "identifier": null,
-    "sentences": [
-      "Th\u00e9or\u00e8me 3.10.",
-      "Soit @MathNode@ un @MathNode@-faisceau sur @MathNode@ tel que @MathNode@ soit adapt\u00e9.",
-      "Alors le morphisme canonique @MathNode@ est un isomorphisme."
-    ]
-  },
-  {
     "paper": "https://ar5iv.org/abs/0909.0492",
     "identifier": "Theorem 2 (Ghidaglia-Saut @LtxCite@).",
     "sentences": [
@@ -4849,16 +4828,6 @@
     "identifier": "Theorem 5",
     "sentences": [
       "Let @MathNode@One has @MathGroup@"
-    ]
-  },
-  {
-    "paper": "https://ar5iv.org/abs/2107.11543",
-    "identifier": null,
-    "sentences": [
-      "Th\u00e9or\u00e8me 6.2.1 (Non divergence quantitative).",
-      "Soient @MathNode@ un @MathNode@-groupe semi-simple, @MathNode@ un sous-groupe arithm\u00e9tique, et @MathNode@.",
-      "Il existe deux constantes positives @MathNode@ telles qu\u2019on ait la propri\u00e9t\u00e9 suivante.",
-      "Soit @MathNode@ une mesure bor\u00e9lienne finie @MathNode@-doublante sur @MathNode@ et @MathNode@ une boule satisfaisant: @MathEquation@ Alors, pour tout @MathNode@, @MathEquation@"
     ]
   },
   {
