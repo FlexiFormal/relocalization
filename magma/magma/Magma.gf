@@ -80,7 +80,8 @@ abstract Magma = {
         -- statements
         conj_stmt : Conjunction -> Statement -> Statement -> Statement;
         subj_stmt : Subjunction -> Statement -> Statement -> Statement;
-        stmt_for_term : Statement -> Term -> Statement;
+        stmt_for_term : Statement -> Term -> Statement;     -- "φ for every x"
+        stmt_for_term_v1 : Statement -> Term -> Statement;  -- "for every x, φ"
 
         term_has_nkind_stmt : Term -> NamedKind -> Statement;
         term_is_property_stmt : Term -> Property -> Statement;
