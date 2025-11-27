@@ -86,6 +86,8 @@ abstract Magma = {
         therefore_stmt_v4 : Statement -> TopStatement;
         therefore_stmt_v5 : Statement -> TopStatement;
         therefore_stmt_v6 : Statement -> TopStatement;
+        therefore_stmt_v7 : Statement -> TopStatement;
+        therefore_stmt_v8 : Statement -> TopStatement;
 
         -- declarations
         let_kind_decl : Identifier -> NamedKind -> Declaration;    -- in practice, NamedKind should be anonymous, but Kind is too restricted (e.g. no "such that")

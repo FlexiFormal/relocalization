@@ -44,6 +44,8 @@ concrete MagmaEng of Magma = MagmaFunctor with
         therefore_stmt_v4 stmt = lin Utt {s = "it follows that" ++ stmt.s};
         therefore_stmt_v5 stmt = lin Utt {s = "thus" ++ stmt.s};
         therefore_stmt_v6 stmt = lin Utt {s = "thus" ++ "," ++ stmt.s};
+        therefore_stmt_v7 stmt = lin Utt {s = "then" ++ stmt.s}; -- is it really semantically equivalent?
+        therefore_stmt_v8 stmt = lin Utt {s = "then" ++ "," ++ stmt.s};
 
         -- definitions
         define_nkind_as_nkind nk1 nk2 = mkS (mkCl (indef_nk nk1) (called_an_nkind_vp nk2));
