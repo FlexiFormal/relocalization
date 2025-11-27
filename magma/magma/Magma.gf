@@ -109,6 +109,10 @@ abstract Magma = {
         furthermore_stmt : Statement -> TopStatement;
         furthermore_stmt_v1 : Statement -> TopStatement;
         furthermore_stmt_v2 : Statement -> TopStatement;
+        furthermore_stmt_v3 : Statement -> TopStatement;
+
+        indeed_stmt : Statement -> TopStatement;
+        indeed_stmt_v1 : Statement -> TopStatement;
 
 
         -- declarations

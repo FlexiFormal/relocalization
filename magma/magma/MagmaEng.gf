@@ -59,6 +59,10 @@ concrete MagmaEng of Magma = MagmaFunctor with
         furthermore_stmt stmt = lin Utt {s = "furthermore" ++ "," ++ stmt.s};
         furthermore_stmt_v1 stmt = lin Utt {s = "in addition" ++ "," ++ stmt.s};
         furthermore_stmt_v2 stmt = lin Utt {s = "additionally" ++ "," ++ stmt.s};
+        furthermore_stmt_v3 stmt = lin Utt {s = "moreover" ++ "," ++ stmt.s};
+
+        indeed_stmt stmt = lin Utt {s = "indeed" ++ "," ++ stmt.s};
+        indeed_stmt_v1 stmt = lin Utt {s = "in fact" ++ "," ++ stmt.s};
 
         -- definitions
         define_nkind_as_nkind nk1 nk2 = mkS (mkCl (indef_nk nk1) (called_an_nkind_vp nk2));
