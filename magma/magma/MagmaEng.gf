@@ -59,6 +59,10 @@ concrete MagmaEng of Magma = MagmaFunctor with
         therefore_stmt_v6 stmt = lin Utt {s = "thus" ++ "," ++ stmt.s};
         therefore_stmt_v7 stmt = lin Utt {s = "then" ++ stmt.s}; -- is it really semantically equivalent?
         therefore_stmt_v8 stmt = lin Utt {s = "then" ++ "," ++ stmt.s};
+        therefore_stmt_v9 stmt = lin Utt {s = "as a consequence" ++ "," ++ stmt.s};
+
+        specifically_stmt stmt = lin Utt {s = "specifically" ++ "," ++ stmt.s};
+        more_precisely_stmt stmt = lin Utt {s = "more precisely" ++ "," ++ stmt.s};
 
         furthermore_stmt marker stmt = lin Utt {s = marker.s ++ stmt.s};
 
