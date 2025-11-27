@@ -72,6 +72,7 @@ abstract Magma = {
 
         universal_quantification : Quantification;       -- every for sg, all for pl
         universal_quantification_v1 : Quantification;    -- all for sg, all for pl
+        universal_quantification_v2 : Quantification;    -- any
 
         -- properties
 
