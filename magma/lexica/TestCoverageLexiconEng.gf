@@ -4,6 +4,7 @@ concrete TestCoverageLexiconEng of TestCoverageLexicon = FreeArgsEng ** open Par
         lex_argmark_of = mkPrep "of";
         lex_argmark_from = mkPrep "from";
         lex_argmark_to = mkPrep "to";
+        lex_with_respect_to = mkPrep "with respect to";
     pk_lex_group = mkCN (mkN "group" "groups");
     pk_lex_subbarrier = mkCN (mkN "subbarrier" "subbarriers");
     pk_lex_barrier = mkCN (mkN "barrier" "barriers");

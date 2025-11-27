@@ -19,6 +19,10 @@ incomplete resource MagmaUtils = open Syntax, ParamX in {
             Sg => a_Det;
             Pl => aPl_Det
         };
+        defart : ParamX.Number -> Det = \num -> case num of {
+            Sg => theSg_Det;
+            Pl => thePl_Det
+        };
 
         mkQuantification : Det -> Det -> _Quantification = \sgDet, plDet -> { sg = sgDet; pl = plDet };
 

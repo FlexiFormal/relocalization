@@ -89,6 +89,7 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
 
         -- declarations
         let_kind_decl i nk = ImpP3 (symb i.s) (mkVP (Syntax.mkNP (indefart nk.num) nk.cn));
+        let_kind_def_decl i nk = ImpP3 (symb i.s) (mkVP (Syntax.mkNP (defart nk.num) nk.cn));
         let_property_decl i p = ImpP3 (symb i.s) (mkVP p);
         BaseDeclarationList d1 d2 = {head = d1.s; tail = d2.s};
         ConsDeclarationList d dl = {head = d.s; tail = dl.tail ++ "," ++ d.s};

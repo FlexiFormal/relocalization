@@ -11,6 +11,8 @@ with open('../../../magma/lexica/TestCoverageLexicon.gf', 'w') as abstract, \
         lex_argmark_of : ArgMarker;
         lex_argmark_from : ArgMarker;
         lex_argmark_to : ArgMarker;
+        lex_with_respect_to : ArgMarker;
+        lex_with_respect_to_v1 : ArgMarker;
 ''')
 
     concrete.write('''concrete TestCoverageLexiconEng of TestCoverageLexicon = FreeArgsEng ** open ParadigmsEng, SyntaxEng, GrammarEng in {
@@ -19,6 +21,8 @@ with open('../../../magma/lexica/TestCoverageLexicon.gf', 'w') as abstract, \
         lex_argmark_of = mkPrep "of";
         lex_argmark_from = mkPrep "from";
         lex_argmark_to = mkPrep "to";
+        lex_with_respect_to = mkPrep "with respect to";
+        lex_with_respect_to_v1 = mkPrep "w.r.t.";
 ''')
 
     abstract.write('\n-- Prekinds\n')

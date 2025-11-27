@@ -4,6 +4,7 @@ abstract TestCoverageLexicon = FreeArgs ** {
         lex_argmark_of : ArgMarker;
         lex_argmark_from : ArgMarker;
         lex_argmark_to : ArgMarker;
+        lex_with_respect_to : ArgMarker;
 
 -- Prekinds
     pk_lex_group : PreKind;
