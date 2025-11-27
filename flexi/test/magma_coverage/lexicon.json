@@ -3310,10 +3310,6 @@
             "atom",
             "atoms"
         ],
-        "s": [
-            "s",
-            ""
-        ],
         "validity": [
             "validity",
             "validities"
@@ -3341,10 +3337,6 @@
         "volume": [
             "volume",
             "volumes"
-        ],
-        "C": [
-            "C",
-            ""
         ],
         "stack": [
             "stack",
@@ -3722,10 +3714,6 @@
             "event",
             "events"
         ],
-        "m": [
-            "m",
-            ""
-        ],
         "earliest": [
             "earliest",
             "earliests"
@@ -3929,10 +3917,6 @@
         "simplex": [
             "simplex",
             "simplexes"
-        ],
-        "a": [
-            "a",
-            ""
         ],
         "gallery": [
             "gallery",
@@ -6370,10 +6354,6 @@
             "Fulton",
             "Fultons"
         ],
-        "Todd": [
-            "Todd",
-            ""
-        ],
         "bottleneck": [
             "bottleneck",
             "bottlenecks"
@@ -7618,10 +7598,6 @@
             "constellation",
             "constellations"
         ],
-        "p": [
-            "p",
-            ""
-        ],
         "Maltsev": [
             "Maltsev",
             "Maltsevs"
@@ -8004,7 +7980,7 @@
         ],
         "Russian": [
             "Russian",
-            ""
+            "Russians"
         ],
         "evader": [
             "evader",
@@ -8445,10 +8421,6 @@
         "jump": [
             "jump",
             "jumps"
-        ],
-        "k": [
-            "k",
-            ""
         ],
         "variability": [
             "variability",
@@ -10062,10 +10034,6 @@
             "aag",
             "aags"
         ],
-        "Lee": [
-            "Lee",
-            ""
-        ],
         "Peps": [
             "Peps",
             "peps"
@@ -11221,10 +11189,6 @@
         "greedy": [
             "greedy",
             "greedies"
-        ],
-        "so": [
-            "so",
-            ""
         ],
         "Gleason": [
             "Gleason",

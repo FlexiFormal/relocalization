@@ -453,7 +453,6 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pk_lex_fact : PreKind;
     pk_lex_opinon : PreKind;
     pk_lex_atom : PreKind;
-    pk_lex_s : PreKind;
     pk_lex_validity : PreKind;
     pk_lex_logic : PreKind;
     pk_lex_satisfy : PreKind;
@@ -461,7 +460,6 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pk_lex_neighbourhood : PreKind;
     pk_lex_consequence : PreKind;
     pk_lex_volume : PreKind;
-    pk_lex_C : PreKind;
     pk_lex_stack : PreKind;
     pk_lex_pushout : PreKind;
     pk_lex_object : PreKind;
@@ -556,7 +554,6 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pk_lex_realize : PreKind;
     pk_lex_coaugmentation : PreKind;
     pk_lex_event : PreKind;
-    pk_lex_m : PreKind;
     pk_lex_earliest : PreKind;
     pk_lex_concentration : PreKind;
     pk_lex_average : PreKind;
@@ -608,7 +605,6 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pk_lex_dilation : PreKind;
     pk_lex_nerve : PreKind;
     pk_lex_simplex : PreKind;
-    pk_lex_a : PreKind;
     pk_lex_gallery : PreKind;
     pk_lex_neutral : PreKind;
     pk_lex_rd : PreKind;
@@ -1218,7 +1214,6 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pk_lex_bin : PreKind;
     pk_lex_Baum : PreKind;
     pk_lex_Fulton : PreKind;
-    pk_lex_Todd : PreKind;
     pk_lex_bottleneck : PreKind;
     pk_lex_Bpu : PreKind;
     pk_lex_comparability : PreKind;
@@ -1530,7 +1525,6 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pk_lex_hyperedge : PreKind;
     pk_lex_reweight : PreKind;
     pk_lex_constellation : PreKind;
-    pk_lex_p : PreKind;
     pk_lex_Maltsev : PreKind;
     pk_lex_subalgebra : PreKind;
     pk_lex_cosheaf : PreKind;
@@ -1737,7 +1731,6 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pk_lex_centroid : PreKind;
     pk_lex_directX : PreKind;
     pk_lex_jump : PreKind;
-    pk_lex_k : PreKind;
     pk_lex_variability : PreKind;
     pk_lex_simulator : PreKind;
     pk_lex_Prop : PreKind;
@@ -2141,7 +2134,6 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pk_lex_body : PreKind;
     pk_lex_landing : PreKind;
     pk_lex_aag : PreKind;
-    pk_lex_Lee : PreKind;
     pk_lex_Peps : PreKind;
     pk_lex_bond : PreKind;
     pk_lex_calmness : PreKind;
@@ -2431,7 +2423,6 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pk_lex_Thm : PreKind;
     pk_lex_maximize : PreKind;
     pk_lex_greedy : PreKind;
-    pk_lex_so : PreKind;
     pk_lex_Gleason : PreKind;
     pk_lex_zigzag : PreKind;
     pk_lex_ocp : PreKind;
