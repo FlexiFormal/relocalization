@@ -65,6 +65,7 @@ abstract Magma = {
 
         -- terms
         quantified_nkind : Quantification -> NamedKind -> Term;
+        it_term : Term;    -- "it". This is tricky for gendered languages... We'd need to anaphor resolution to get the gender right in recontextualizations/translations...
 
         -- quantifications
         existential_quantification : Quantification;

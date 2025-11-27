@@ -580,7 +580,6 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pk_lex_guard : PreKind;
     pk_lex_argument : PreKind;
     pk_lex_construct : PreKind;
-    pk_lex_hold : PreKind;
     pk_lex_cellular : PreKind;
     pk_lex_underline : PreKind;
     pk_lex_current : PreKind;
@@ -2917,6 +2916,7 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pp_lex_outperform : PrePredicate;
 
 -- Properties
+    prop_lex_transitive : Property;
     prop_lex_Chen : Property;
     prop_lex_invertible : Property;
     prop_lex_normalized : Property;

@@ -3822,10 +3822,6 @@
             "construct",
             "constructs"
         ],
-        "hold": [
-            "hold",
-            "holds"
-        ],
         "cellular": [
             "cellular",
             "cells"
@@ -12456,6 +12452,9 @@
         ]
     },
     "A": {
+        "transitive": [
+            "transitive"
+        ],
         "Chen": [
             "Chen"
         ],

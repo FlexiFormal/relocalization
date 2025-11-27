@@ -56,6 +56,7 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
             np = DetCN ( case nk.num of { Sg => q.sg; Pl => q.pl }) nk.cn;
             just_formula = False
         };
+        it_term = {np = it_NP; just_formula = False};
 
         -- quantifications
         existential_quantification = mkQuantification aSg_Det aPl_Det;
