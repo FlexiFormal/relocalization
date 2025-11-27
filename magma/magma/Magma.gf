@@ -105,6 +105,7 @@ abstract Magma = {
 
         -- declarations
         let_kind_decl : Identifiers -> NamedKind -> Declaration;    -- "let k be an integer"; in practice, NamedKind should be anonymous, but Kind is too restricted (e.g. no "such that")
+        let_property_decl : Identifiers -> Property -> Declaration; -- "let k∈N be divisible by 2"
         let_ident_decl : Identifiers -> Declaration;   -- "let k∈K" - in practice, it should be a 'guarded identifier'
         let_such_that : Identifiers -> Statement -> Declaration; -- "let k be such that ..."
         let_such_that_v1 : Identifiers -> Statement -> Declaration; -- "let k be where ..."
