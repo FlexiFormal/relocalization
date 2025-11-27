@@ -1,6 +1,7 @@
 abstract Magma = {
     cat
         Statement;      -- "there is an odd integer"
+        TopStatement;   -- "hence, x is even"   (statements that can only appear in specific, high-level places, e.g. after "hence"/"therefore"/"it follows that"/...)
         Sentence;       -- "There is an odd integer ."
         Definition;     -- "an integer is called odd iff it is not divisible by 2"
         DefCore;        -- "an integer is called odd"
@@ -77,6 +78,15 @@ abstract Magma = {
         exists_nkind : NamedKind -> Statement;       -- there is a ...
         exists_nkind_v1 : NamedKind -> Statement;    -- there exists a ...
 
+        -- top statements
+        therefore_stmt : Statement -> TopStatement;
+        therefore_stmt_v1 : Statement -> TopStatement;
+        therefore_stmt_v2 : Statement -> TopStatement;
+        therefore_stmt_v3 : Statement -> TopStatement;
+        therefore_stmt_v4 : Statement -> TopStatement;
+        therefore_stmt_v5 : Statement -> TopStatement;
+        therefore_stmt_v6 : Statement -> TopStatement;
+
         -- declarations
         let_kind_decl : Identifier -> NamedKind -> Declaration;    -- in practice, NamedKind should be anonymous, but Kind is too restricted (e.g. no "such that")
         let_ident_decl : Identifier -> Declaration;   -- "let k∈K" - in practice, it should be a 'guarded identifier'
@@ -85,6 +95,7 @@ abstract Magma = {
         stmt_sentence : Statement -> Sentence;
         def_sentence : Definition -> Sentence;
         declaration_sentence : Declaration -> Sentence;
+        topstmt_sentence : TopStatement -> Sentence;
 
         -- definitions
         define_nkind_as_nkind : NamedKind -> NamedKind -> DefCore;   -- an `n1` is called a `n2`

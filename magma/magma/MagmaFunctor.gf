@@ -4,6 +4,7 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         Subjunction = Syntax.Subj;
         Quantification = _Quantification;
         Statement = S;
+        TopStatement = Utt;
         Polarity = Pol;
         Definition = S;
         DefCore = S;
@@ -77,4 +78,5 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         stmt_sentence s = {s = {- CAPIT ++ -} (mkUtt s).s ++ "."};
         def_sentence d = {s = {- CAPIT ++ -} (mkUtt d).s ++ "."};
         declaration_sentence a = {s = {- CAPIT ++ -} a.s ++ "."};
+        topstmt_sentence ts = {s = (mkUtt ts).s ++ "."};
 }

@@ -37,6 +37,14 @@ concrete MagmaEng of Magma = MagmaFunctor with
 
         stmt_for_term stmt term = lin S {s = stmt.s ++ (PrepNP (mkPrep "for") term.np).s};
 
+        therefore_stmt stmt = lin Utt {s = "therefore" ++ "," ++ stmt.s};
+        therefore_stmt_v1 stmt = lin Utt {s = "therefore" ++ stmt.s};
+        therefore_stmt_v2 stmt = lin Utt {s = "hence" ++ stmt.s};
+        therefore_stmt_v3 stmt = lin Utt {s = "hence" ++ "," ++ stmt.s};
+        therefore_stmt_v4 stmt = lin Utt {s = "it follows that" ++ stmt.s};
+        therefore_stmt_v5 stmt = lin Utt {s = "thus" ++ stmt.s};
+        therefore_stmt_v6 stmt = lin Utt {s = "thus" ++ "," ++ stmt.s};
+
         -- definitions
         define_nkind_as_nkind nk1 nk2 = mkS (mkCl (indef_nk nk1) (called_an_nkind_vp nk2));
         define_nkind_as_nkind_v1 nk1 nk2 = mkS (mkCl (indef_nk nk1) (said_vp_vp (mkVP (indef_nk nk2))));
