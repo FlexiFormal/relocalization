@@ -24,6 +24,8 @@ concrete MagmaEng of Magma = MagmaFunctor with
 
         if_then_stmt s1 s2 = mkS (mkConj "if" ", then" singular) s1 s2;
         if_then_stmt_v1 s1 s2 = mkS (mkConj "if" "then" singular) s1 s2;
+        if_then_stmt_v2 s1 s2 = mkS (mkConj "when" "," singular) s1 s2;
+        if_then_stmt_v3 s1 s2 = mkS (mkConj "when" "" singular) s1 s2;
 
         -- oxford comma
         finalizeIdentifierList_v2 il = { s = il.tail ++ ", and" ++ il.head; num = Pl };

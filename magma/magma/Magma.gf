@@ -49,8 +49,8 @@ abstract Magma = {
         -- if ... then ... is a weird special case, at least in German
         if_then_stmt : Statement -> Statement -> Statement;    -- a ⇒ b
         if_then_stmt_v1 : Statement -> Statement -> Statement;    -- a ⇒ b
-
-        -- "when ..., ..."
+        if_then_stmt_v2 : Statement -> Statement -> Statement;    -- a ⇒ b
+        if_then_stmt_v3 : Statement -> Statement -> Statement;    -- a ⇒ b
         
         -- identifiers
         no_idents_sg : Identifiers;
