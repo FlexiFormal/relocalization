@@ -90,8 +90,11 @@ abstract Magma = {
         therefore_stmt_v8 : Statement -> TopStatement;
 
         -- declarations
-        let_kind_decl : Identifier -> NamedKind -> Declaration;    -- in practice, NamedKind should be anonymous, but Kind is too restricted (e.g. no "such that")
+        let_kind_decl : Identifier -> NamedKind -> Declaration;    -- "let k be an integer"; in practice, NamedKind should be anonymous, but Kind is too restricted (e.g. no "such that")
         let_ident_decl : Identifier -> Declaration;   -- "let k∈K" - in practice, it should be a 'guarded identifier'
+        let_such_that : Identifier -> Statement -> Declaration; -- "let k be such that ..."
+        let_such_that_v1 : Identifier -> Statement -> Declaration; -- "let k be where ..."
+        let_such_that_v2 : Identifier -> Statement -> Declaration; -- "let k be with ..."
 
         -- sentences
         stmt_sentence : Statement -> Sentence;
