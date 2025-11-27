@@ -41,6 +41,8 @@ abstract Magma = {
         iff_subj : Subjunction;        -- a ⇔ b
         iff_subj_v1 : Subjunction;
         if_subj : Subjunction;         -- a ⇐ b
+        where_subj : Subjunction;
+        where_subj_v1 : Subjunction;
 
         -- if ... then ... is a weird special case, at least in German
         if_then_stmt : Statement -> Statement -> Statement;    -- a ⇒ b
@@ -59,8 +61,10 @@ abstract Magma = {
         -- kinds/named kinds
         name_kind : Kind -> Identifiers -> NamedKind;
         such_that_named_kind : NamedKind -> Statement -> NamedKind;
-        such_that_named_kind_v1 : NamedKind -> Statement -> NamedKind;
-        such_that_named_kind_v2 : NamedKind -> Statement -> NamedKind;
+        -- idea: with/where aren't synonyms for "such that"
+        -- and act on statements/declarations, not NamedKinds
+        -- such_that_named_kind_v1 : NamedKind -> Statement -> NamedKind;
+        -- such_that_named_kind_v2 : NamedKind -> Statement -> NamedKind;
         nkind_that_is_property : NamedKind -> Polarity -> Property -> NamedKind;
 
         -- terms

@@ -19,6 +19,8 @@ concrete MagmaEng of Magma = MagmaFunctor with
 
         iff_subj = lin Subjunction _iff_subj;
         iff_subj_v1 = lin Subjunction _iff_subj_v1;
+        where_subj = lin Subjunction (mkSubj "where");
+        where_subj_v1 = lin Subjunction (mkSubj ", where");
 
         if_then_stmt s1 s2 = mkS (mkConj "if" ", then" singular) s1 s2;
         if_then_stmt_v1 s1 s2 = mkS (mkConj "if" "then" singular) s1 s2;
@@ -27,8 +29,8 @@ concrete MagmaEng of Magma = MagmaFunctor with
         finalizeIdentifierList_v2 il = { s = il.tail ++ ", and" ++ il.head; num = Pl };
         
         such_that_named_kind nk s = {cn = mkCN nk.cn (lin Adv {s = "such that" ++ s.s}); num = nk.num};
-        such_that_named_kind_v1 nk s = {cn = mkCN nk.cn (lin Adv {s = "where" ++ s.s}); num = nk.num};
-        such_that_named_kind_v2 nk s = {cn = mkCN nk.cn (lin Adv {s = "with" ++ s.s}); num = nk.num};
+        -- such_that_named_kind_v1 nk s = {cn = mkCN nk.cn (lin Adv {s = "where" ++ s.s}); num = nk.num};
+        -- such_that_named_kind_v2 nk s = {cn = mkCN nk.cn (lin Adv {s = "with" ++ s.s}); num = nk.num};
 
 
         existential_quantification_v1 = mkQuantification someSg_Det aPl_Det;
