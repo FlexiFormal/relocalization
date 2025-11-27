@@ -5,6 +5,7 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         Quantification = _Quantification;
         Statement = S;
         TopStatement = Utt;
+        FurthermoreMarker = {s: Str};
         Polarity = Pol;
         Definition = S;
         DefCore = S;
@@ -94,6 +95,7 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         BaseDeclarationList d1 d2 = {head = d1.s; tail = d2.s};
         ConsDeclarationList d dl = {head = d.s; tail = dl.tail ++ "," ++ d.s};
         ConsDeclarationList_v1 d dl = {head = d.s; tail = dl.tail ++ _and_str ++ d.s};
+        furthermore_decl marker d = lin Utt {s = marker.s ++ d.s};
 
         -- sentences
         stmt_sentence s = {s = {- CAPIT ++ -} (mkUtt s).s ++ "."};

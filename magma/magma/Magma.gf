@@ -2,6 +2,8 @@ abstract Magma = {
     cat
         Statement;      -- "there is an odd integer"
         TopStatement;   -- "hence, x is even"   (statements that can only appear in specific, high-level places, e.g. after "hence"/"therefore"/"it follows that"/...)
+        FurthermoreMarker;
+
         Sentence;       -- "There is an odd integer ."
         Definition;     -- "an integer is called odd iff it is not divisible by 2"
         DefCore;        -- "an integer is called odd"
@@ -99,6 +101,11 @@ abstract Magma = {
         exists_nkind : NamedKind -> Statement;       -- there is a ...
         exists_nkind_v1 : NamedKind -> Statement;    -- there exists a ...
 
+        furthermore_marker : FurthermoreMarker;
+        furthermore_marker_v1 : FurthermoreMarker;
+        furthermore_marker_v2 : FurthermoreMarker;
+        furthermore_marker_v3 : FurthermoreMarker;
+
         -- top statements
         therefore_stmt : Statement -> TopStatement;
         therefore_stmt_v1 : Statement -> TopStatement;
@@ -110,10 +117,7 @@ abstract Magma = {
         therefore_stmt_v7 : Statement -> TopStatement;
         therefore_stmt_v8 : Statement -> TopStatement;
 
-        furthermore_stmt : Statement -> TopStatement;
-        furthermore_stmt_v1 : Statement -> TopStatement;
-        furthermore_stmt_v2 : Statement -> TopStatement;
-        furthermore_stmt_v3 : Statement -> TopStatement;
+        furthermore_stmt : FurthermoreMarker -> Statement -> TopStatement;
 
         indeed_stmt : Statement -> TopStatement;
         indeed_stmt_v1 : Statement -> TopStatement;
@@ -131,6 +135,7 @@ abstract Magma = {
         let_such_that : Identifiers -> Statement -> Declaration; -- "let k be such that ..."
         let_such_that_v1 : Identifiers -> Statement -> Declaration; -- "let k be where ..."
         let_such_that_v2 : Identifiers -> Statement -> Declaration; -- "let k be with ..."
+        furthermore_decl : FurthermoreMarker -> Declaration -> Declaration;
 
         BaseDeclarationList : Declaration -> Declaration -> DeclarationList;
         ConsDeclarationList : Declaration -> DeclarationList -> DeclarationList;

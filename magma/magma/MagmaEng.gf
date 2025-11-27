@@ -58,10 +58,12 @@ concrete MagmaEng of Magma = MagmaFunctor with
         therefore_stmt_v7 stmt = lin Utt {s = "then" ++ stmt.s}; -- is it really semantically equivalent?
         therefore_stmt_v8 stmt = lin Utt {s = "then" ++ "," ++ stmt.s};
 
-        furthermore_stmt stmt = lin Utt {s = "furthermore" ++ "," ++ stmt.s};
-        furthermore_stmt_v1 stmt = lin Utt {s = "in addition" ++ "," ++ stmt.s};
-        furthermore_stmt_v2 stmt = lin Utt {s = "additionally" ++ "," ++ stmt.s};
-        furthermore_stmt_v3 stmt = lin Utt {s = "moreover" ++ "," ++ stmt.s};
+        furthermore_stmt marker stmt = lin Utt {s = marker.s ++ stmt.s};
+
+        furthermore_marker = {s = "furthermore" ++ "," ++ " "};
+        furthermore_marker_v1 = {s = "in addition" ++ "," ++ " "};
+        furthermore_marker_v2 = {s = "additionally" ++ "," ++ " "};
+        furthermore_marker_v3 = {s = "moreover" ++ "," ++ " "};
 
         indeed_stmt stmt = lin Utt {s = "indeed" ++ "," ++ stmt.s};
         indeed_stmt_v1 stmt = lin Utt {s = "in fact" ++ "," ++ stmt.s};
