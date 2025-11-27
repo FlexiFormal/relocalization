@@ -96,6 +96,8 @@ concrete MagmaEng of Magma = MagmaFunctor with
         define_ident_nkind_v2 id nk = mkS (mkCl (symb id.s) (indef_nk nk));
         define_ident_nkind_v3 id nk = we_say_that (mkS (mkCl (symb id.s) (indef_nk nk)));
 
+        define_ident_kind id k = mkS (mkCl we_NP (mkVP (mkVP _call_V2 (symb id.s)) (term_to_adv (mkNP (indefart id.num) (kind2CN  k)))));
+
         -- sentences
         declaration_list_sentence_v1 dl = {s = dl.tail ++ "," ++ "and" ++ dl.head ++ "."};
 }

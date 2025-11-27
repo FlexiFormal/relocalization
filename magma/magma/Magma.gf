@@ -174,6 +174,8 @@ abstract Magma = {
         define_ident_nkind_v2 : Identifier -> NamedKind -> DefCore; -- `t` is a `n`
         define_ident_nkind_v3 : Identifier -> NamedKind -> DefCore; -- we say that `t` is a `n`
 
+        define_ident_kind : Identifier -> Kind -> DefCore; -- we call `t` a `n`
+
         plain_defcore : DefCore -> Definition;
         defcore_iff_stmt : DefCore -> Statement -> Definition;
         defcore_iff_stmt_v1 : DefCore -> Statement -> Definition;
