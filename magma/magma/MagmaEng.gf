@@ -43,6 +43,8 @@ concrete MagmaEng of Magma = MagmaFunctor with
         let_such_that id stmt = lin Utt { s = "let" ++ id.s ++ "be such that" ++ stmt.s } ;
         let_such_that_v1 id stmt = lin Utt { s = "let" ++ id.s ++ "where" ++ stmt.s } ;
         let_such_that_v2 id stmt = lin Utt { s = "let" ++ id.s ++ "with" ++ stmt.s } ;
+        fix_ident_decl id = lin Utt { s = "fix" ++ id.s } ;
+        fix_nkind_decl nk = lin Utt { s = "fix" ++ (mkUtt (Syntax.mkNP (indefart nk.num) nk.cn)).s } ;
 
 
         stmt_for_term stmt term = lin S {s = stmt.s ++ (PrepNP (mkPrep "for") term.np).s};

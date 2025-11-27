@@ -136,6 +136,9 @@ abstract Magma = {
         let_such_that_v1 : Identifiers -> Statement -> Declaration; -- "let k be where ..."
         let_such_that_v2 : Identifiers -> Statement -> Declaration; -- "let k be with ..."
         furthermore_decl : FurthermoreMarker -> Declaration -> Declaration;
+        fix_ident_decl : Identifiers -> Declaration;  -- "fix k∈K"
+        fix_nkind_decl : NamedKind -> Declaration;  -- "fix an integer k"
+
 
         BaseDeclarationList : Declaration -> Declaration -> DeclarationList;
         ConsDeclarationList : Declaration -> DeclarationList -> DeclarationList;
