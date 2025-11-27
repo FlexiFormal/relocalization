@@ -2,6 +2,8 @@
 
 * Remove non-English papers (on demand - systematic recognation with nltk was not accurate enough)
 
+* If one paragraph contains lots of paragraphs (\begin{definition}...\begin{proposition}...\end{proposition}...\end{definition}). Only the initial paragraph is kept. Proofs (if included in theorems) are also removed.
+
 
 * in sentence preprocessing: Append "." if sentence ends with equation
 

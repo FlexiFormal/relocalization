@@ -793,12 +793,7 @@
     "sentences": [
       "Let @MathNode@ be a poset satisfying the following: @MathNode@ with order @MathNode@.(that is to say, @MathNode@ such that @MathNode@ is reached by succeeding @MathNode@ times from some minimal element @MathNode@).",
       "Let @MathNode@ be finite and static.",
-      "Then, for @MathNode@, number of elements @MathNode@, with order @MathNode@, such that @MathNode@ is at most @MathNode@.",
-      "Proof.",
-      "Fix some @MathNode@.",
-      "Let @MathNode@.",
-      "Let @MathNode@ be order of @MathNode@ and @MathNode@, @MathNode@. @MathNode@ as @MathNode@",
-      "If even a single term is not a presentation, @MathNode@ can replace @MathNode@ in the sum. \u220e"
+      "Then, for @MathNode@, number of elements @MathNode@, with order @MathNode@, such that @MathNode@ is at most @MathNode@."
     ]
   },
   {
@@ -835,14 +830,7 @@
       "Lemma.",
       "Given a weakly special @MathNode@ for each analytic component @MathNode@ there is a Zariski closed Zariski irreducible subset @MathNode@ such that (i) @MathNode@",
       "(ii) @MathNode@ is an irreducible analytic component of the set @MathNode@",
-      "(iii) @MathEquation@ for @MathNode@",
-      "Proof.",
-      "We may assume @MathNode@ is essential in @MathNode@ By @LtxRef@ @MathNode@ is semi-algebraic and thus, for some open semi-algebraic @MathNode@ @MathNode@ By @LtxRef@ there is a Zariski closed set @MathNode@ such that @MathNode@ Clearly, the minimal such @MathNode@ must be Zariski irreducible.",
-      "Since the complex algebraic dimension coincides with the complex analytic dimension on Zariski closed sets, and the latter is local, we have @MathEquation@",
-      "This gives us (i).",
-      "This also implies (ii) since by irreducibility of @MathNode@ we will have @MathNode@ and by equality of dimension @MathNode@ has to be a component in @MathNode@",
-      "Now (iii) follows by @LtxRef@.",
-      "@MathNode@"
+      "(iii) @MathEquation@ for @MathNode@"
     ]
   },
   {
@@ -3646,20 +3634,7 @@
       "Then the normalized sequence @MathGroup@ is an exceptional collection of line bundles if and only if the ordered set of divisors @MathNode@ is one of the following types: (1) @MathNode@,",
       "(2) @MathNode@,",
       "where @MathNode@.",
-      "Moreover, by mutations and normalizations, they are related as: @MathGroup@",
-      "Proof.",
-      "Write @MathNode@.",
-      "The sequence (@LtxRef@) is an exceptional collection if and only if for any integers @MathNode@, the line bundles @MathNode@ are cohomologically zero.",
-      "To make the sequence (@LtxRef@) an exceptional collection, @MathNode@ must be one of the line bundles in Proposition @LtxRef@.",
-      "To find out all the possible exceptional collections, we need Table @LtxRef@.",
-      "From Table @LtxRef@, we observe that @MathNode@ must be one of @MathNode@ or @MathNode@.",
-      "To finish the proof, we shall discuss case by case: Case1.",
-      "Suppose @MathNode@.",
-      "In this case, the only possible combination is @MathNode@, which is @MathNode@ in Theorem @LtxRef@.",
-      "Case2.",
-      "Suppose @MathNode@.",
-      "In this case, the only possible choice for @MathNode@ is @MathNode@: @MathNode@ which is @MathNode@ in Theorem @LtxRef@.",
-      "\u220e"
+      "Moreover, by mutations and normalizations, they are related as: @MathGroup@"
     ]
   },
   {

@@ -2200,21 +2200,7 @@
     "sentences": [
       "The following statements hold:",
       "(i) The uniform distribution over the vertices of a regular simplex @MathNode@ minimizes the continuous energy @MathNode@ for @MathNode@ for all @MathNode@.",
-      "(ii) Whenever a maximal ETF exists, @MathNode@ (with coherence @MathNode@), the uniform distribution over its points minimizes the continuous energy @MathNode@ for @MathNode@ for all @MathNode@.",
-      "Proof.",
-      "Note that the inequalities",
-      "@MathEquation@ hold for @MathNode@.",
-      "The first inequality implies @MathNode@ and the equality holds for the uniform distribution over the regular simplex.",
-      "The second inequality implies @MathNode@ and the equality holds for the uniform distribution over a maximal ETF.",
-      "It is sufficient then to prove the theorem for @MathNode@.",
-      "For the proof in the case @MathNode@, we use the notion of positive definite functions on unit spheres.",
-      "A function of inner products is positive definite on @MathNode@ if for any collection of points @MathNode@ and sequence of complex numbers @MathNode@ it is true that @MathEquation@",
-      "This condition implies that for any positive definite @MathNode@ and any measure @MathNode@ on @MathNode@, @MathEquation@",
-      "Positive definite functions on spheres were characterized by Schoenberg @LtxCite@.",
-      "In particular, @MathNode@, @MathNode@, and @MathNode@ (Gegenbauer polynomials of degrees 1, 2, 4) are positive definite functions on @MathNode@.",
-      "Since @MathNode@, @MathEquation@",
-      "It is easy to check that for the uniform distribution over the regular simplex, @MathNode@ is precisely @MathNode@.",
-      "Using @MathEquation@ we conclude that @MathEquation@ Again it is easy to check that the equality is attained on the uniform distribution over the maximal ETF. \u220e"
+      "(ii) Whenever a maximal ETF exists, @MathNode@ (with coherence @MathNode@), the uniform distribution over its points minimizes the continuous energy @MathNode@ for @MathNode@ for all @MathNode@."
     ]
   },
   {
@@ -2436,9 +2422,7 @@
     "paper": "https://ar5iv.org/abs/1811.11636",
     "identifier": "Theorem 5.1 (Generalized Parseval\u2019s Theorem).",
     "sentences": [
-      "Given an eigenbasis @MathNode@ of @MathNode@ that is orthonormal in @MathNode@, the corresponding Fourier transform is an isometric operator from @MathNode@ to @MathNode@ @MathEquation@",
-      "Proof.",
-      "@MathNode@ \u220e"
+      "Given an eigenbasis @MathNode@ of @MathNode@ that is orthonormal in @MathNode@, the corresponding Fourier transform is an isometric operator from @MathNode@ to @MathNode@ @MathEquation@"
     ]
   },
   {
@@ -2628,25 +2612,7 @@
     "identifier": "Theorem 12.",
     "sentences": [
       "Let a system of vectors @MathNode@ be Chebyshev and let @MathNode@.",
-      "Then the generalized Remez algorithm finds the solution to the problem of the best approximation in a finite number of operations.",
-      "Proof.",
-      "Let @MathNode@ be the current set of indices and @MathNode@.",
-      "Denote @MathEquation@",
-      "Assume that in the vector @MathNode@ the element with the maximum absolute value is attained at the position @MathNode@.",
-      "Then consider the problem of the best approximation for the submatrix taken on the set of rows with numbers @MathNode@.",
-      "For this problem, there is a characteristic set of @MathNode@ elements.",
-      "Note that it cannot entirely consist of elements of the set @MathNode@, since for an optimal solution on this set, a strictly larger value of the residual element is attained in the position @MathNode@.",
-      "This means that the characteristic set contains @MathNode@ and @MathNode@ elements from the set @MathNode@, that is, it is obtained by replacing one of the elements in @MathNode@ with @MathNode@.",
-      "Let us denote this set by @MathNode@.",
-      "Let us show that in this case the error of the optimal approximation on the new set @MathNode@ is strictly greater than on the set @MathNode@.",
-      "Indeed, assume that the error of the optimal approximation on the set @MathNode@ is @MathNode@, and that the corresponding solution gives the error @MathNode@ on the element in the position @MathNode@.",
-      "Note that @MathNode@.",
-      "Similarly, let the optimal approximation on the set @MathNode@ on the set itself get the error @MathNode@, and on the element removed from @MathNode@, the error @MathNode@.",
-      "Note that since @MathNode@ is a characteristic set, then @MathNode@.",
-      "Then @MathEquation@ whence it follows that the error of the optimal approximation on the new set @MathNode@ is strictly greater than the error of the optimal approximation on the set @MathNode@.",
-      "Hence it follows that @MathEquation@",
-      "But since there are finitely many subsets of size @MathNode@, the sequence @MathNode@ cannot be infinite and reaches its maximum value on some set, which, according to the reasoning of Theorem @LtxRef@, indicates that the found set is characteristic and optimal solution is constructed.",
-      "\u220e"
+      "Then the generalized Remez algorithm finds the solution to the problem of the best approximation in a finite number of operations."
     ]
   },
   {
@@ -3137,25 +3103,7 @@
       "Then the following statements hold.",
       "(i) @MathNode@ is a generating-cogenerating functorially finite subcategory of @MathNode@.",
       "(ii) For every @MathNode@ there exists an exact sequence @MathEquation@ in @MathNode@ such that @MathNode@\u2019s are in @MathNode@.",
-      "(iii) We have @MathNode@.",
-      "Proof.",
-      "(i) Clearly @MathNode@ is a generating subcategory.",
-      "By Propositions @LtxRef@ and @LtxRef@ we identify @MathNode@ and @MathNode@ with @MathNode@ and @MathNode@ respectively.",
-      "By Proposition @LtxRef@, @MathNode@ is a Grothendieck category and so has enough injective objects.",
-      "By Lemma @LtxRef@, every injective object in @MathNode@ is a @MathNode@-exact functor.",
-      "Thus @MathNode@ is a cogenerating subcategory of @MathNode@.",
-      "Clearly @MathNode@ is a subcategory of @MathNode@ which is closed under direct limits and products.",
-      "Therefore by Proposition @LtxRef@, @MathNode@ is a functorially finite subcategory of locally finitely presented category @MathNode@.",
-      "(ii) Let @MathNode@.",
-      "Choose a right @MathNode@-approximation @MathNode@ which is an epimorphism by Remark @LtxRef@.",
-      "Consider the following short exact sequence of functors in @MathNode@.",
-      "@MathEquation@",
-      "Applying this short exact sequence of functors to an arbitrary @MathNode@-exact sequence @MathNode@ and using the long exact sequence theorem @LtxCite@ we see that @MathNode@.",
-      "Again choose a right @MathNode@-approximation @MathNode@ and repeating this argument, inductively we obtain an exact sequence @MathEquation@ in @MathNode@ with desired properties.",
-      "(iii) Let @MathNode@.",
-      "Choose a minimal injective coresolution @MathEquation@ in @MathNode@.",
-      "By Proposition @LtxRef@, @MathNode@ if and only if the injective coresolution (@LtxRef@) is exact in @MathNode@.",
-      "The later follows from the assumption that (@LtxRef@) remain exact after applying the functor @MathNode@ for every @MathNode@. \u220e"
+      "(iii) We have @MathNode@."
     ]
   },
   {
@@ -7428,22 +7376,7 @@
     "identifier": "Theorem 5.9.",
     "sentences": [
       "Let @MathNode@ be an operator.",
-      "For every @MathNode@ there exist a diagonal operator @MathNode@ with diagonal elements in @MathNode@ such that @MathNode@ is an orthogonal factor of @MathNode@ with error @MathNode@.",
-      "Proof.",
-      "Let an arbitrary @MathNode@.",
-      "Choose an increasing sequence of positive integers @MathNode@ such that @MathGroup@ and put @MathNode@.",
-      "We will construct by induction on the linear order of @MathNode@ a distributional copy @MathNode@ of @MathNode@ with @MathGroup@ where @MathNode@ with @MathNode@ and @MathNode@.",
-      "So the block sequence @MathNode@ will define the operators @MathNode@ and @MathNode@ in Notation @LtxRef@ such that @MathGroup@ where @MathNode@ is a diagonal operator defined by @MathGroup@ with diagonal elements in @MathNode@.",
-      "So, @MathNode@ because if @MathNode@ with @MathGroup@ then @MathGroup@",
-      "Firstly, we start with @MathNode@ and @MathNode@.",
-      "Define the random variable @MathGroup@ where @MathNode@ and @MathGroup@ By Lemma @LtxRef@ there exist signs @MathNode@ such that @MathGroup@",
-      "Now, assume that we have defined the blocks for every @MathNode@ such that @MathNode@ with @MathNode@.",
-      "We will construct a block @MathNode@ with @MathNode@ and @MathNode@ such that for the random variables @MathGroup@ @MathGroup@ @MathGroup@ there exist signs @MathNode@ such that @MathGroup@ Let @MathNode@ and we assume without loss of generality that @MathNode@.",
-      "So, by the induction hypothesis there exists a block @MathNode@ with @MathNode@ and @MathNode@.",
-      "Set @MathGroup@ and take @MathGroup@ Now, we are looking for sings @MathNode@ such that the vector @MathGroup@ implies the inequalities (@LtxRef@), (@LtxRef@) and (@LtxRef@).",
-      "By Lemma @LtxRef@ we get the existence of the signs.",
-      "Now, fix @MathNode@.",
-      "We have that @MathGroup@ by the inequalities (@LtxRef@), (@LtxRef@) and (@LtxRef@). \u220e"
+      "For every @MathNode@ there exist a diagonal operator @MathNode@ with diagonal elements in @MathNode@ such that @MathNode@ is an orthogonal factor of @MathNode@ with error @MathNode@."
     ]
   },
   {
@@ -7577,9 +7510,7 @@
     "paper": "https://ar5iv.org/abs/1610.04728",
     "identifier": "Theorem 3.4.2 (The Tait conjecture in @MathNode@).",
     "sentences": [
-      "Every reduced alternating diagram of links in @MathNode@ has the minimal number of crossings.",
-      "Proof.",
-      "See for instance @LtxCite@ or Chapter @LtxRef@. \u220e"
+      "Every reduced alternating diagram of links in @MathNode@ has the minimal number of crossings."
     ]
   },
   {
@@ -7778,13 +7709,7 @@
     "identifier": "Theorem 4.3.",
     "sentences": [
       "The Edge connectivity of @MathNode@ for @MathNode@ is r .",
-      "That is r-edge connected where @MathNode@ for @MathNode@.",
-      "Proof.",
-      "We group the vertex set and choose the suitable set @MathNode@ as in Theorem @LtxRef@.",
-      "Since the vertices of @MathNode@ are adjacent only with the vertices of @MathNode@, the deletion of all edges incident with the any vertex of @MathNode@ leaves that vertex isolated and hence the graph becomes disconnected.",
-      "Also in all other possible combinations of @MathNode@ and @MathNode@ the graph is still connected.",
-      "Therefore, the minimum number of edges to be deleted to make the graph disconnected is @MathNode@.",
-      "Thus edge connectivity of @MathNode@ is @MathNode@. \u220e"
+      "That is r-edge connected where @MathNode@ for @MathNode@."
     ]
   },
   {
@@ -8618,21 +8543,7 @@
       "Let @MathNode@ be the set of complex numbers such that @MathNode@ for @MathNode@, @MathNode@ and @MathNode@ and let @MathNode@ be nonnegative numbers where @MathNode@ and @MathNode@ for @MathNode@ Suppose that",
       "(1) there is a partition @MathNode@ of @MathNode@, where for each @MathNode@, @MathNode@ with @MathNode@, such that at most one set of @MathNode@\u2019s is of odd size and for each @MathNode@, the set @MathNode@, @MathNode@, @MathNode@ is realizable by a normal centrosymmetric nonnegative matrix with the Perron root @MathNode@, and",
       "(2) there is an @MathNode@ normal nonnegative matrix @MathNode@ with all eigenvalues as @MathNode@ and the diagonal entries as @MathNode@",
-      "Then @MathNode@ is realizable by a normal centrosymmetric nonnegative matrix.",
-      "Proof.",
-      "First, we suppose that @MathNode@ is of even size for each @MathNode@.",
-      "For each @MathNode@, let @MathNode@ be realizable by a normal centrosymmetric nonnegative matrix @MathNode@ of @MathNode@ size.",
-      "By Theorem @LtxRef@, we can write @MathNode@ , where @MathNode@ and @MathNode@ are @MathNode@ matrices.",
-      "Then @MathEquation@ is a normal centrosymmetric nonnegative matrix with all eigenvalues obtained from all numbers in @MathNode@ for @MathNode@.",
-      "By Lemma @LtxRef@, for each @MathNode@ we can find the nonnegative unit eigenvector @MathNode@ of @MathNode@ corresponding to @MathNode@.",
-      "Then @MathEquation@ form an orthonormal set in @MathNode@ and @MathNode@ are eigenvectors of @MathNode@ corresponding to @MathNode@, respectively.",
-      "Clearly, the @MathNode@ matrix @MathEquation@ is a nonnegative matrix with @MathNode@, where @MathNode@ is the @MathNode@ reverse identity matrix, and @MathNode@, where @MathNode@ is diag@MathNode@.",
-      "Therefore @MathNode@ is a normal matrix with the eigenvalues @MathNode@ by Theorem @LtxRef@.",
-      "Since the diagonal entries of @MathNode@ are @MathNode@, @MathNode@ is a nonnegative matrix.",
-      "Thus @MathNode@ is also a nonnegative matrix.",
-      "Moreover, @MathNode@ is a centrosymmetric matrix because @MathNode@ is centrosymmetric and @MathNode@.",
-      "Therefore @MathNode@ is a desired matrix.",
-      "If there is a @MathNode@ such that @MathNode@ is odd, then if @MathNode@ is realizable by the nonnegative centrosymmetric matrix @MathNode@, we put @MathNode@ in the center of the matrix @MathNode@ above and thus we can construct our desired matrix using the same idea as in the above case. \u220e"
+      "Then @MathNode@ is realizable by a normal centrosymmetric nonnegative matrix."
     ]
   },
   {
