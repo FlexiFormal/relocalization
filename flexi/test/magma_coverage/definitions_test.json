@@ -32,10 +32,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1804.07209",
-    "identifier": null,
+    "identifier": "Definition A.1. (Non-autonomous behaviour set)",
     "sentences": [
-      "Definition A.1.",
-      "(Non-autonomous behaviour set)",
       "The set @MathNode@ is referred to as the set of fully non-autonomous behaviour in the extended state-input space, and its set-projection over @MathNode@, namely, @MathEquation@ is the set of fully non-autonomous behaviour in the state space.",
       "This is the only set in which every output dimension of the ResNet with input skip connection can be directly influenced by the input, given a non-zero9The concept of controllability is not introduced here.",
       "In the case of deep networks we just need @MathNode@ to be non-zero to provide input skip connections.",
@@ -273,9 +271,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2106.01420",
-    "identifier": null,
+    "identifier": "Definition C.7.",
     "sentences": [
-      "Definition C.7.",
       "Define @MathNode@ as the event @MathEquation@"
     ]
   },
@@ -351,9 +348,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2401.02219",
-    "identifier": null,
+    "identifier": "Definition \\thetheorem.",
     "sentences": [
-      "Definition \\thetheorem.",
       "A node is defined as @MathNode@, where @MathNode@ denotes the geographic location of the node, @MathNode@ denotes the RAM size, @MathNode@ denotes the bandwidth connected to @MathNode@, and @MathNode@ denotes the CPU processing rate given in Million Instructions Per Second (MIPS)."
     ]
   },
@@ -410,9 +406,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/math/0608345",
-    "identifier": null,
+    "identifier": "Definition Definition 3.4",
     "sentences": [
-      "Definition Definition 3.4",
       "Let @MathNode@ and @MathNode@ be integers.",
       "If @MathNode@, then define @MathNode@ by @MathEquation@",
       "If @MathNode@, then define @MathNode@ to be @MathEquation@",
@@ -525,9 +520,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1604.03897",
-    "identifier": null,
+    "identifier": "Definition \\thedefinition.",
     "sentences": [
-      "Definition \\thedefinition.",
       "For @MathNode@, define @MathEquation@"
     ]
   },
@@ -573,9 +567,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1708.00276",
-    "identifier": null,
+    "identifier": "Definition B.7.",
     "sentences": [
-      "Definition B.7.",
       "Call a node @MathNode@ heavy in a given iteration @MathNode@ if @MathNode@.",
       "Moreover, call an augmenting path @MathNode@ heavy in that iteration if it goes through at least one heavy node."
     ]
@@ -770,9 +763,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1811.04226",
-    "identifier": null,
+    "identifier": "Definition \\thedefn.",
     "sentences": [
-      "Definition \\thedefn.",
       "A Lie algebroid morphism is a bundle morphism @MathNode@ for which the induced map @MathNode@ is a chain map, i.e. satisfies @MathNode@."
     ]
   },
@@ -1044,18 +1036,16 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1612.08429",
-    "identifier": null,
+    "identifier": "Definition A.9.",
     "sentences": [
-      "Definition A.9.",
       "For a simplicial space @MathNode@, define the @MathNode@-th latching space @MathNode@ by @MathEquation@",
       "A simplicial space @MathNode@ is said to be cofibrant if the inclusion @MathNode@, the @MathNode@-th latching map, is a closed cofibration for all @MathNode@."
     ]
   },
   {
     "paper": "https://ar5iv.org/abs/1308.6250",
-    "identifier": null,
+    "identifier": "Definition V.3",
     "sentences": [
-      "Definition V.3",
       "Denote the reference vector as the vector from the current location of the UAV to the target.",
       "The bearing angle @MathNode@ at time @MathNode@ is defined as the angle from the reference vector to the current heading of the UAV measured counterclockwise."
     ]
@@ -1684,9 +1674,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2003.02521",
-    "identifier": null,
+    "identifier": "Definition V.8.",
     "sentences": [
-      "Definition V.8.",
       "A superinstance @MathNode@ of @MathNode@ is relation-saturated if for every @MathNode@ there is an @MathNode@-fact in @MathNode@."
     ]
   },
@@ -1914,17 +1903,15 @@
   },
   {
     "paper": "https://ar5iv.org/abs/alg-geom/9311007",
-    "identifier": null,
+    "identifier": "Definition Definition 2.3.5",
     "sentences": [
-      "Definition Definition 2.3.5",
       "A threefold @MathNode@ is called strongly projective (respectively very strongly projective) if the following statement holds: a set @MathNode@ of extremal rays of the type (II) is extremal of Kodaira dimension 3 (respectively generates the simplicial face @MathNode@ of @MathNode@ of the dimension @MathNode@ and Kodaira dimension 3) if its divisors @MathNode@ do not intersect one another."
     ]
   },
   {
     "paper": "https://ar5iv.org/abs/1910.08764",
-    "identifier": null,
+    "identifier": "Definition A.1.",
     "sentences": [
-      "Definition A.1.",
       "For @MathNode@, the (left sided half axis) Riemann-Liouville fractional integral operator @MathNode@ is defined by @MathEquation@ wherever the integral converges.",
       "For @MathNode@, the (left sided half axis) Caputo fractional derivative operator @MathNode@ is defined by @MathEquation@ wherever it converges.",
       "For nonnegative integers @MathNode@, the @MathNode@th sequential (left sided half axis)",
@@ -1958,9 +1945,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1403.5491",
-    "identifier": null,
+    "identifier": "Definition A.5.",
     "sentences": [
-      "Definition A.5.",
       "An @MathNode@-tree is a metric space @MathNode@ with the following properties: 1. It is geodesically linear, i.e. for every @MathNode@, there is a unique isometry @MathNode@ such that @MathNode@ and @MathNode@.",
       "2. It is \u201cwithout loops\u201d, i.e. for every @MathNode@, if @MathNode@ and @MathNode@ are continuous injective maps from @MathNode@ to @MathNode@ such that @MathNode@ and @MathNode@, and @MathNode@ and @MathNode@, then @MathNode@.",
       "Elements of @MathNode@ are called the vertices of the @MathNode@-tree.",
@@ -2266,9 +2252,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2201.08349",
-    "identifier": null,
+    "identifier": "Definition (Transformed density functions).",
     "sentences": [
-      "Definition (Transformed density functions).",
       "For a probability density @MathNode@ with full support in @MathNode@, its transformed density function under a smooth invertible transformation map (or a diffeomorphism) @MathNode@ is given by @MathNode@ for all @MathNode@."
     ]
   },
@@ -2281,9 +2266,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2303.14238",
-    "identifier": null,
+    "identifier": "Definition III.5.",
     "sentences": [
-      "Definition III.5.",
       "The flow-productive cone, denoted by @MathNode@, is defined to be the cone generated by the elementary modes of production of an autocatalytic core in a MAS, @MathGroup@"
     ]
   },
@@ -2348,9 +2332,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/0806.0855",
-    "identifier": null,
+    "identifier": "Definition II.1 (Iteration process).",
     "sentences": [
-      "Definition II.1 (Iteration process).",
       "Given the operator @MathNode@ with @MathNode@ together with a starting operator @MathNode@, the iteration process contains the following sequences with @MathNode@.",
       "Each sequence depends on the set of unitaries @MathNode@, which are chosen in the steps before. \u2022",
       "The sequence of operators @MathNode@, which are recursively defined by @MathGroup@ and the operator @MathNode@ is the given starting operator.",
@@ -2537,9 +2520,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2201.02602",
-    "identifier": null,
+    "identifier": "Definition B.1 (element-by-element construction, @LtxCite@)",
     "sentences": [
-      "Definition B.1 (element-by-element construction, @LtxCite@)",
       "Let @MathNode@ be the reference simplex in @MathNode@, @MathNode@.",
       "A polynomial @MathNode@ is said to permit an element-by-element construction of polynomial degree @MathNode@ for @MathNode@, @MathNode@, if:",
       "(i) @MathNode@ for all @MathNode@ vertices @MathNode@ of @MathNode@",
@@ -2765,9 +2747,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/math/0406314",
-    "identifier": null,
+    "identifier": "Definition I.1.1.",
     "sentences": [
-      "Definition I.1.1.",
       "@MathNode@ is a @MathNode@-Galois extension if it satisfies the following conditions: (G-1) @MathNode@; (G-2) @MathNode@ is an isomorphism."
     ]
   },
@@ -2870,9 +2851,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/math/0002022",
-    "identifier": null,
+    "identifier": "Definition.",
     "sentences": [
-      "Definition.",
       "Two locally trivial fibrations @MathNode@ and @MathNode@ are said to be equivalent if there are diffeomorphisms @MathNode@ and @MathNode@, such that the following diagram @MathEquation@ commutes.",
       "When @MathNode@, we say that @MathNode@ and @MathNode@ are strongly equivalent if @MathNode@ is isotopic to the identity."
     ]
@@ -2945,9 +2925,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1301.0936",
-    "identifier": null,
+    "identifier": "Definition III.8.",
     "sentences": [
-      "Definition III.8.",
       "Let @MathNode@ be a density matrix on the bosonic Fock space @MathNode@ over @MathNode@.",
       "If @MathNode@, we define @MathNode@ through @MathEquation@",
       "We single out @MathEquation@ i.e., @MathNode@ is the unique vector such that @MathNode@, for all @MathNode@.",
@@ -3269,9 +3248,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2107.13322",
-    "identifier": null,
+    "identifier": "Definition (Lelek fans).",
     "sentences": [
-      "Definition (Lelek fans).",
       "A fan with top @MathNode@ is called a Lelek fan if it has the following two properties.",
       "(i) Smoothness:",
       "For any sequence @MathNode@ converging to @MathNode@ the arcs @MathNode@ converge to @MathNode@ in the Hausdorff metric.",
@@ -3410,9 +3388,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1907.10662",
-    "identifier": null,
+    "identifier": "Definition IV.4 (Input Space Abstraction).",
     "sentences": [
-      "Definition IV.4 (Input Space Abstraction).",
       "An input space abstraction @MathNode@ refines a correctness property @MathNode@ into a set of correctness properties @MathNode@ such that @MathNode@.",
       "Given a neural network @MathNode@ and an input space abstraction @MathNode@, @MathNode@."
     ]
@@ -3868,9 +3845,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1601.05372",
-    "identifier": null,
+    "identifier": "Definition \\thedefinition.",
     "sentences": [
-      "Definition \\thedefinition.",
       "In @MathNode@, a 2-morphism is rotational if it is composed only from @MathNode@, @MathNode@, @MathNode@, @MathNode@, @MathNode@, @MathNode@, @MathNode@, @MathNode@, @MathNode@, @MathNode@ and interchangers; we write @MathNode@ to denote a composite of rotational generators of length at least 0."
     ]
   },
@@ -3972,9 +3948,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1906.03330",
-    "identifier": null,
+    "identifier": "Definition B.3",
     "sentences": [
-      "Definition B.3",
       "@MathGroup@",
       "Then the maximal flow of @MathNode@ is the map @MathEquation@ with domain @MathNode@.",
       "@MathNode@"
@@ -4258,9 +4233,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2008.04452",
-    "identifier": null,
+    "identifier": "Definition III.2.",
     "sentences": [
-      "Definition III.2.",
       "(Safety) A state @MathNode@ is individually safe if and only if @MathNode@, for some safety threshold @MathNode@.",
       "In addition to individual safety, a set @MathNode@ defines jointly unsafe states."
     ]
@@ -4321,9 +4295,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1905.12435",
-    "identifier": null,
+    "identifier": "Definition.",
     "sentences": [
-      "Definition.",
       "The system @MathNode@ of paths is called weakly distinguished if @MathNode@ is the free group on the generators @MathNode@, where @MathNode@ is the simple loop belonging to @MathNode@.",
       "A system @MathNode@ of vanishing cycles @MathNode@ is called weakly distinguished if @MathNode@ is a vanishing cycle along a path @MathNode@ of a weakly distinguished system @MathNode@ of paths."
     ]
@@ -4517,9 +4490,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/math/0301104",
-    "identifier": null,
+    "identifier": "Definition Definition 3.1.2",
     "sentences": [
-      "Definition Definition 3.1.2",
       "Let @MathNode@ and @MathNode@ be as in part (a)(i) (respectively, part (b)(i)) of Proposition 3.1.1.",
       "We call the passage from @MathNode@ to @MathNode@ a short braid move (respectively, long braid move).",
       "We say that two root sequences are commutation equivalent if one can be transformed into the other by applying a (possibly empty) sequence of short braid moves.",
@@ -4594,9 +4566,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1911.07338",
-    "identifier": null,
+    "identifier": "Definition B.9 (Isothermal CRN @LtxCite@).",
     "sentences": [
-      "Definition B.9 (Isothermal CRN @LtxCite@).",
       "An isothermal CRN is quadruplet @MathNode@, in which \u2022 @MathNode@ is the species set representing the considered substances,",
       "\u2022 @MathNode@ is the complex set consisting of all distinguished complexes where @MathNode@ is the size of the set.",
       "\u2022 @MathNode@ is the reaction set with @MathNode@ and @MathNode@ @MathNode@ being respectively the indexes of the substrate and product complexes of the @MathNode@-th reaction.",
@@ -4614,9 +4585,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/dg-ga/9505003",
-    "identifier": null,
+    "identifier": "Definition Definition 1",
     "sentences": [
-      "Definition Definition 1",
       "If @MathNode@ is an accessory loop of a ribbon complement @MathNode@ than the set of Whitney loops that intersect @MathNode@ is called the Whitney set of @MathNode@."
     ]
   },
@@ -5639,9 +5609,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2308.05874",
-    "identifier": null,
+    "identifier": "Definition A.1.",
     "sentences": [
-      "Definition A.1.",
       "Let @MathNode@, @MathNode@. (i) We say that @MathNode@ is a @MathNode@ function if there exists a continuous map @MathNode@ such that for all @MathNode@ we have @MathNode@ and @MathEquation@",
       "We will use the symbol @MathNode@ for the map @MathNode@, which is called the Wasserstein flat derivative.",
       "(ii) If @MathNode@ is of class @MathNode@ and @MathNode@ is @MathNode@ with respect to the space variable, we define the intrinsic derivative (Wasserstein derivative) @MathNode@ as @MathNode@"
@@ -5792,9 +5761,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2211.05952",
-    "identifier": null,
+    "identifier": "Definition II.1.",
     "sentences": [
-      "Definition II.1.",
       "We say that the group of agents @MathNode@ is an @MathNode@-subcover configuration for a compact domain @MathNode@ if 1.",
       "@MathNode@ for all @MathNode@,",
       "2. @MathNode@ for all pairs @MathNode@, @MathNode@.",
@@ -5831,9 +5799,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/math/0205146",
-    "identifier": null,
+    "identifier": "Definition.",
     "sentences": [
-      "Definition.",
       "Let @MathNode@ be a primitive embedding of @MathNode@ into the K3 lattice @MathNode@ and denote by @MathNode@.",
       "Fixed a positive sign structure @MathNode@ on @MathNode@ the \u201dperiod space\u201d @MathNode@ is defined by setting @MathEquation@"
     ]
@@ -6132,9 +6099,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/0808.2729",
-    "identifier": null,
+    "identifier": "Definition B.0.7.",
     "sentences": [
-      "Definition B.0.7.",
       "Let @MathNode@ be a @MathNode@-module.",
       "Choose a good filtration on @MathNode@.",
       "Consider @MathNode@ as a module over @MathNode@.",
@@ -6431,9 +6397,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1610.00747",
-    "identifier": null,
+    "identifier": "Definition A.18.",
     "sentences": [
-      "Definition A.18.",
       "A super Lie groupoid is a groupoid internal to supermanifolds."
     ]
   },
@@ -6911,9 +6876,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1307.3066",
-    "identifier": null,
+    "identifier": "Definition.",
     "sentences": [
-      "Definition.",
       "A subset @MathNode@ is called @MathNode@-(semi-)stable if there exists a @MathNode@-(semi-)stable representation @MathNode@ with @MathNode@."
     ]
   },
@@ -6945,9 +6909,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/hep-th/9903250",
-    "identifier": null,
+    "identifier": "Definition A.1.",
     "sentences": [
-      "Definition A.1.",
       "A functor homomorphism @MathNode@ is smooth iff the morphism: @MathEquation@ is surjective for every surjection @MathNode@ in @MathNode@."
     ]
   },
@@ -7014,9 +6977,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/math/0109073",
-    "identifier": null,
+    "identifier": "Definition Definitions of technical nature",
     "sentences": [
-      "Definition Definitions of technical nature",
       "@MathNode@ is acyclic@MathNode@ if @MathNode@ for all @MathNode@.",
       "So, @MathNode@ isn\u2019t acyclic@MathNode@.",
       "@MathNode@ is weakly direct@MathNode@ if @MathNode@ for some i and some A-module \ud835\udcab. @MathNode@ is locally weakly direct@MathNode@ if @MathNode@ for some i, some A-module \ud835\udcac and some @MathNode@.",
@@ -7122,9 +7084,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2105.14037",
-    "identifier": null,
+    "identifier": "Definition A.3.",
     "sentences": [
-      "Definition A.3.",
       "Define @MathNode@ to be the standard Friedrichs bump function, i.e., @MathEquation@ and define, for @MathNode@, @MathEquation@ where the positive constant @MathNode@ is chosen such that @MathNode@."
     ]
   },
@@ -7192,9 +7153,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/math/9801116",
-    "identifier": null,
+    "identifier": "Definition.",
     "sentences": [
-      "Definition.",
       "@MathEquation@ where @MathNode@ is the set of the sequences with values in @MathNode@ of length @MathNode@ and such that",
       "(i) @MathNode@;",
       "(ii) @MathNode@ of the @MathNode@\u2019s are equal to @MathNode@ and @MathNode@ of the @MathNode@\u2019s are equal to @MathNode@.",
@@ -7233,9 +7193,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2106.07142",
-    "identifier": null,
+    "identifier": "Definition A.1 (@LtxCite@).",
     "sentences": [
-      "Definition A.1 (@LtxCite@).",
       "A decorated ordered set partition @MathNode@ of @MathNode@ is an ordered set partition @MathNode@ of @MathNode@ together with an ordered list of integers @MathNode@ with @MathNode@.",
       "It is said to be of type @MathNode@ if we have additionally @MathNode@, for each @MathNode@.",
       "In this case we write @MathNode@, and we denote by @MathNode@ the convex polyhedral cone in the affine hyperplane in @MathNode@ where @MathNode@, that is cut out by the facet inequalities @MathGroup@",
@@ -7644,9 +7603,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/math/0611066",
-    "identifier": null,
+    "identifier": "Definition.",
     "sentences": [
-      "Definition.",
       "Let @MathNode@ be a @MathNode@-bimodule, @MathNode@ a composition and @MathNode@.",
       "We denote by @MathNode@ the degree zero morphism @MathNode@ induced by a contraction sequence of the equivalence class @MathNode@."
     ]
@@ -7730,9 +7688,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/gr-qc/0111108",
-    "identifier": null,
+    "identifier": "Definition A.1.",
     "sentences": [
-      "Definition A.1.",
       "Let @MathNode@ be a one-parameter family of distributions on a manifold @MathNode@ and let @MathNode@ be a family of cones.",
       "We say that @MathNode@ varies smoothly with @MathNode@ with respect to @MathNode@ if the wave front set of the corresponding distribution @MathNode@ on @MathNode@ satisfies @MathEquation@"
     ]
@@ -7761,9 +7718,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1604.02549",
-    "identifier": null,
+    "identifier": "Definition.",
     "sentences": [
-      "Definition.",
       "A permutation @MathNode@ is balanced if the number of @MathNode@-cycles in its cycle decomposition is even for all @MathNode@.",
       "Moreover, @MathNode@ is nearly balanced if the number of @MathNode@-cycles in its cycle decomposition is even for all @MathNode@."
     ]
@@ -7785,17 +7741,15 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2103.05316",
-    "identifier": null,
+    "identifier": "Definition.",
     "sentences": [
-      "Definition.",
       "Given @MathNode@, let @MathNode@ be the expected number of vertices @MathNode@ such that @MathEquation@"
     ]
   },
   {
     "paper": "https://ar5iv.org/abs/1905.09951",
-    "identifier": null,
+    "identifier": "Definition A.6",
     "sentences": [
-      "Definition A.6",
       "Let @MathNode@ be a possibly non-stationary and history dependent policy, @MathNode@ a random path generated by @MathNode@, @MathNode@ a positive constant, @MathNode@ the (possibly infinite) set of time steps for which @MathNode@, and define @MathGroup@ The Total Cost of Exploration (TCE) for parameter @MathNode@ is defined as the un-discounted infinite sum @MathNode@.",
       "To avoid encumbering the notation, we use @MathNode@ instead of @MathNode@ when the context is clear."
     ]
@@ -7884,9 +7838,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/0803.1763",
-    "identifier": null,
+    "identifier": "Definition.",
     "sentences": [
-      "Definition.",
       "The wheeled Koszul dual cooperad of the quadratic wheeled operad @MathNode@ is defined as @MathEquation@"
     ]
   },
@@ -8277,9 +8230,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2006.12028",
-    "identifier": null,
+    "identifier": "Definition (ILP-QIRREDUCIBLECOMMUTE-GIVEN-k):",
     "sentences": [
-      "Definition (ILP-QIRREDUCIBLECOMMUTE-GIVEN-k):",
       "Given a set @MathNode@ of linear constraints and constraint values @MathNode@ such that @MathNode@ over a space @MathNode@ with @MathNode@, and a set of basis terms @MathNode@ such that @MathNode@, does @MathNode@ connect the entire nonzero eigenspace of the operator @MathNode@?"
     ]
   },
@@ -8513,9 +8465,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/alg-geom/9502004",
-    "identifier": null,
+    "identifier": "Definition Definition 4.3.7",
     "sentences": [
-      "Definition Definition 4.3.7",
       "We say the natural isomorphism @MathNode@ a monomial divisor mirror map according to @LtxCite@."
     ]
   },
@@ -8662,9 +8613,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/0901.2399",
-    "identifier": null,
+    "identifier": "Definition \\thethm (Function pair representation).",
     "sentences": [
-      "Definition \\thethm (Function pair representation).",
       "A closed term @MathNode@ represents the pair of functions @MathNode@ where @MathNode@ and @MathNode@ if for all @MathNode@ and for every @MathNode@ we have: @MathEquation@",
       "By extension we will say that an open term @MathNode@ from @MathNode@ represents the pair @MathNode@ just if @MathNode@."
     ]
@@ -8893,13 +8843,6 @@
       "2) For any finite sequence of objects @MathNode@ in @MathNode@ a morphism of graded vector spaces @MathNode@",
       "It is required that for any finite collection of objects @MathNode@ @MathNode@ the sequence @MathNode@ @MathNode@ defines an @MathNode@morphism",
       "@MathEquation@"
-    ]
-  },
-  {
-    "paper": "https://ar5iv.org/abs/1101.2667",
-    "identifier": null,
-    "sentences": [
-      "Definition VI.2"
     ]
   },
   {
@@ -9158,9 +9101,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1511.09280",
-    "identifier": null,
+    "identifier": "Definition.",
     "sentences": [
-      "Definition.",
       "We say that a nonempty set @MathNode@ of probability measures on a Cantor space @MathNode@ is a dynamical simplex if it satisfies the following conditions: \u2022 @MathNode@ is compact and convex.",
       "\u2022 All elements of @MathNode@ are atomless and have full support.",
       "\u2022 @MathNode@ is good.",
@@ -9228,9 +9170,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2205.11874",
-    "identifier": null,
+    "identifier": "Definition VI.2 (@MathNode@-encodable @MathNode@ in @MathNode@). \u2014",
     "sentences": [
-      "Definition VI.2 (@MathNode@-encodable @MathNode@ in @MathNode@). \u2014",
       "Let @MathNode@ be a metric space.",
       "Let @MathNode@ be an arbitrary sequence of (by default, non-empty) subsets of @MathNode@.",
       "Let @MathNode@.",
@@ -9436,9 +9377,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2310.09979",
-    "identifier": null,
+    "identifier": "Definition A.25.",
     "sentences": [
-      "Definition A.25.",
       "If @MathNode@ is a coefficient pair, we define the @MathNode@-subcategory, @MathNode@ (resp. @MathNode@) (resp. @MathNode@) @MathNode@ to be the essential image of @MathNode@ (resp. @MathNode@) (resp. @MathNode@) under the restriction functor @MathNode@."
     ]
   },

@@ -122,9 +122,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2110.02205",
-    "identifier": null,
+    "identifier": "Theorem A.2.",
     "sentences": [
-      "Theorem A.2.",
       "Let @MathNode@, @MathNode@, be an open set satisfying the corkscrew condition with @MathNode@-AD regular boundary.",
       "If @MathNode@ is solvable in @MathNode@ then @MathNode@ is solvable in @MathNode@."
     ]
@@ -138,9 +137,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1609.07437",
-    "identifier": null,
+    "identifier": "Theorem IV.1",
     "sentences": [
-      "Theorem IV.1",
       "Consider the distributed parameters @MathNode@, @MathNode@ and @MathNode@ belonging to the spaces (@LtxRef@), (@LtxRef@) and (@LtxRef@) respectively.",
       "Then, there exist constants @MathNode@ such that the origin of the system (@LtxRef@), corresponding to @MathNode@ with time-varying @MathNode@ as in (@LtxRef@), is locally exponentially stable for all @MathNode@ in the compact set @MathNode@.",
       "In particular, the formation will converge exponentially fast to the time-varying shape defined by @MathNode@ with the speed @MathNode@ satisfying (@LtxRef@) and the agents\u2019 velocities @MathEquation@ where the @MathNode@\u2019s are given by the desired @MathNode@, @MathNode@ and @MathNode@, that are determined by @MathNode@, @MathNode@ and @MathNode@."
@@ -356,9 +354,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/math/0501112",
-    "identifier": null,
+    "identifier": "Theorem and Definition 3.1.",
     "sentences": [
-      "Theorem and Definition 3.1.",
       "For each @MathNode@ let @MathNode@ be a representation of @MathNode@.",
       "We say that the sequence @MathNode@ has the character factorization property if it fulfills one (hence all) of the following equivalent conditions: \u2022 for any cycles @MathNode@ with disjoint supports @MathEquation@",
       "\u2022 for any integers @MathNode@ @MathEquation@",
@@ -418,9 +415,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2109.06811",
-    "identifier": null,
+    "identifier": "Theorem .36 (Agreement Liveness).",
     "sentences": [
-      "Theorem .36 (Agreement Liveness).",
       "In synchronous phases a client request will commit eventually."
     ]
   },
@@ -750,9 +746,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1602.08210",
-    "identifier": null,
+    "identifier": "Theorem A.1.",
     "sentences": [
-      "Theorem A.1.",
       "Given an RNN cyclic graph and its unfolded representation @MathNode@, we denote @MathNode@ the set of directed cycles in @MathNode@.",
       "For @MathNode@, denote @MathNode@ the length of @MathNode@ and @MathNode@ the sum of @MathNode@ along @MathNode@.",
       "Write @MathNode@.9@MathNode@ is not defined when there does not exist a path from time @MathNode@ to time @MathNode@.",
@@ -956,9 +951,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1710.02120",
-    "identifier": null,
+    "identifier": "Theorem C.",
     "sentences": [
-      "Theorem C.",
       "Assume that @MathNode@ is a continuous and positive function.",
       "If @MathNode@ and @MathNode@, then problem (@LtxRef@) admits a positive solution if, and only if, @MathNode@."
     ]
@@ -1413,9 +1407,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/math/0007056",
-    "identifier": null,
+    "identifier": "Theorem.",
     "sentences": [
-      "Theorem.",
       "(Order Formula) Let @MathNode@ be the minimal integer with @MathNode@, as in Theorem @LtxRef@.",
       "Then the exponent of the group @MathNode@ is @MathNode@, and the order of a Richardson element of @MathNode@ is @MathNode@."
     ]
@@ -1508,9 +1501,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1307.8353",
-    "identifier": null,
+    "identifier": "Theorem .2 (Quantitative semi-cylindrical definable decomposition).",
     "sentences": [
-      "Theorem .2 (Quantitative semi-cylindrical definable decomposition).",
       "Let @MathNode@ be a definable set, then there exists constants @MathNode@ and a finite family of definable sets @MathNode@, @MathNode@, and @MathEquation@ which satisfy the following property.",
       "For any @MathNode@ points @MathNode@, some sub-collection of the sets @MathEquation@ @MathNode@ and @MathNode@, form a semi-cylindrical decomposition of @MathNode@ adapted to @MathNode@.",
       "Also, the number of sets in the decomposition is bounded by @MathNode@."
@@ -1536,9 +1528,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2011.14357",
-    "identifier": null,
+    "identifier": "Theorem (@LtxRef@).",
     "sentences": [
-      "Theorem (@LtxRef@).",
       "The following assertions are equivalent. (1) the functor from @MathNode@ to @MathNode@ is an equivalence;",
       "(2) the composite functor @MathEquation@ is conservative and sends elements of @MathNode@ to the essential image of the functor @MathNode@ from @MathNode@ to @MathNode@;",
       "(3) the composite functor @MathEquation@ is conservative."
@@ -1599,9 +1590,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2109.02121",
-    "identifier": null,
+    "identifier": "Theorem II.2.",
     "sentences": [
-      "Theorem II.2.",
       "Let @MathNode@ satisfy @LtxRef@ and let @MathNode@. For @MathNode@, define @MathNode@ as in (@LtxRef@), with @MathNode@ and @MathNode@ such that @MathNode@.",
       "For any compact sets @MathNode@ and @MathNode@, there exists a constant @MathNode@ so that @MathEquation@ where the edge kernel @MathNode@ is given by (@LtxRef@) below."
     ]
@@ -1651,9 +1641,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1310.5844",
-    "identifier": null,
+    "identifier": "Theorem A.2.",
     "sentences": [
-      "Theorem A.2.",
       "Let @MathNode@ be a vertical edge in the hexagon.",
       "Define @MathNode@ (@MathNode@ are automatically integers with the present convention for coordinates).",
       "One has @MathEquation@ where the integration contours on @MathNode@ and @MathNode@ have to chosen such that: \u2022 The @MathNode@ contour runs counter-clockwise and includes the integer real points @MathNode@ and no other integer point of the real line;",
@@ -1810,9 +1799,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1209.2995",
-    "identifier": null,
+    "identifier": "Theorem C.1.1.",
     "sentences": [
-      "Theorem C.1.1.",
       "(a) The coderived category @MathNode@ of the abelian category of @MathNode@-torsion @MathNode@-modules is equivalent to the homotopy category of complexes of injective @MathNode@-torsion @MathNode@-modules.",
       "(b) The contraderived category @MathNode@ of the abelian category of @MathNode@-contramodules is equivalent to the contraderived category of the exact category of @MathNode@-flat (i. e., @MathNode@-contraflat) @MathNode@-contramodules.",
       "(c) Assume that the Noetherian ring @MathNode@ has finite Krull dimension.",
@@ -1870,9 +1858,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2310.16001",
-    "identifier": null,
+    "identifier": "Theorem A.1.",
     "sentences": [
-      "Theorem A.1.",
       "Let @MathNode@.",
       "There exists an absolute constant @MathNode@ independent of @MathNode@ and @MathNode@ such that the following holds for @MathEquation@",
       "For any @MathNode@, if @MathNode@ and @MathNode@ solve the following initial boundary value problem, @MathEquation@ then @MathGroup@"
@@ -2087,9 +2074,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1805.03382",
-    "identifier": null,
+    "identifier": "Theorem (Uniform Distribution on a Triangle).",
     "sentences": [
-      "Theorem (Uniform Distribution on a Triangle2In the recent versions since 2020, @LtxCite@ followed our methodology to discover and prove the optimal mechanisms for the uniform distribution on a shifted and scaled triangle, i.e., @MathNode@.).",
       "The optimal mechanism for an additive buyer with value uniformly distributed in @MathNode@ (hence a correlated distribution) is as follows: \u2022 if @MathNode@, two menu items: @MathNode@ and @MathNode@;",
       "\u2022 if @MathNode@, three menu items: @MathNode@, @MathNode@, and @MathNode@."
     ]
@@ -2104,9 +2090,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2006.08690",
-    "identifier": null,
+    "identifier": "Theorem B.8.",
     "sentences": [
-      "Theorem B.8.",
       "(Leaf Permutation bound) Let @MathNode@ be any permutation of @MathNode@.",
       "Let @MathNode@ and @MathNode@ be trees with leaves @MathNode@ and @MathNode@ respectively, i.e., the leaves in @MathNode@ correspond to a permutation of the leaves in d.",
       "Then the objective lower bounds of @MathNode@ and @MathNode@ are the same and their child trees correspond to permutations of each other."
@@ -2199,9 +2184,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1703.10689",
-    "identifier": null,
+    "identifier": "Theorem C.3.",
     "sentences": [
-      "Theorem C.3.",
       "If for each player @MathNode@ there exists a default action @MathNode@ for which the first set of constraints in @LtxRef@ hold strictly for all @MathNode@, then an equilibrium always exists."
     ]
   },
@@ -2405,9 +2389,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1808.08462",
-    "identifier": null,
+    "identifier": "Theorem @LtxRef@.",
     "sentences": [
-      "Theorem @LtxRef@.",
       "For all positive integers @MathNode@, @MathNode@."
     ]
   },
@@ -2435,9 +2418,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/0805.0174",
-    "identifier": null,
+    "identifier": "Theorem.",
     "sentences": [
-      "Theorem.",
       "There exists a universal deformation quantization such that the two algebras @MathNode@ and @MathNode@ are Koszul dual as algebras over @MathNode@.",
       "In particular, @MathEquation@ and @MathEquation@",
       "The Tamarkin\u2019s deformation quantization defined from any Drinfeld\u2019s associator (which is clearly universal) satisfies the condition of Theorem."
@@ -2566,9 +2548,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2302.03801",
-    "identifier": null,
+    "identifier": "Theorem D (Theorem @LtxRef@).",
     "sentences": [
-      "Theorem D (Theorem @LtxRef@).",
       "Let @MathNode@ denote any CAT(0) cube complex, endowed with the standard piecewise @MathNode@-metric, for some @MathNode@.",
       "Then @MathNode@ is Busemann-convex and uniformly convex.",
       "If @MathNode@, then @MathNode@ is also uniformly smooth and strongly bolic."
@@ -2851,9 +2832,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1904.02291",
-    "identifier": null,
+    "identifier": "Theorem I.2.",
     "sentences": [
-      "Theorem I.2.",
       "Let @MathNode@ be as in @LtxRef@.",
       "Then for all @MathNode@, it holds that @MathEquation@"
     ]
@@ -2881,9 +2861,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2206.02567",
-    "identifier": null,
+    "identifier": "Theorem VI.1 (@LtxCite@)",
     "sentences": [
-      "Theorem VI.1 (@LtxCite@)",
       "(1) @MathNode@ and @MathNode@ if and only if @MathNode@.",
       "(2) @MathNode@ if and only if (@MathNode@ and @MathNode@) or (@MathNode@ and @MathNode@).",
       "(3) @MathNode@.",
@@ -3014,9 +2993,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1802.05772",
-    "identifier": null,
+    "identifier": "Theorem A.1.",
     "sentences": [
-      "Theorem A.1.",
       "Suppose @MathNode@ is a finite Blaschke product with @MathNode@ and @MathNode@.",
       "We have @MathEquation@ where in the sum over the zeros of @MathNode@, we omit the trivial zero at the origin."
     ]
@@ -3382,9 +3360,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1411.6322",
-    "identifier": null,
+    "identifier": "Theorem C.1.",
     "sentences": [
-      "Theorem C.1.",
       "Given a symmetric matrix @MathNode@ such that exactly one row/column in @MathNode@ has a dominating diagonal, \u2022 it is NP-complete to check if game @MathNode@ has a mixed Nash stable (or linearly stable) strategy.",
       "\u2022 it is NP-complete to check if game @MathNode@ has a mixed strict Nash stable strategy.",
       "\u2022 it is NP-hard to check if dynamics (@LtxRef@) applied on @MathNode@ has a mixed stable fixed-point.",
@@ -3461,9 +3438,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2302.10034",
-    "identifier": null,
+    "identifier": "Theorem @LtxRef@.",
     "sentences": [
-      "Theorem @LtxRef@.",
       "Suppose the initial condition in Lemma @LtxRef@ holds.",
       "For any @MathNode@, there exists @MathNode@ such that for any @MathNode@ and @MathNode@, by setting @MathNode@3",
       "Here we set @MathNode@ such that @MathNode@.",
@@ -3647,9 +3623,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2301.01158",
-    "identifier": null,
+    "identifier": "Theorem B (Beukers).",
     "sentences": [
-      "Theorem B (Beukers).",
       "Let @MathNode@ be a vector of @MathNode@-functions which is solution of a differential system @MathNode@ for some @MathNode@.",
       "Assume @MathNode@ are linearly independent over @MathNode@ and that @MathNode@ is not a pole of an entry of @MathNode@.",
       "Then the numbers @MathNode@ are linearly independent over @MathNode@."
@@ -3739,10 +3714,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1611.06673",
-    "identifier": null,
+    "identifier": "Theorem III.3 (Main Theorem II)",
     "sentences": [
-      "Theorem III.3",
-      "(Main Theorem II)",
       "For every prime power @MathNode@ and a real @MathNode@, there exists a constant @MathNode@, such that for every small @MathNode@ and all large enough @MathNode@, a @MathNode@-ary random symplectic self-orthogonal code @MathNode@ of length @MathNode@ and rate @MathNode@ is @MathNode@-list-decodable with probability @MathNode@."
     ]
   },
@@ -4070,9 +4043,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/0905.0044",
-    "identifier": null,
+    "identifier": "Theorem VII.3",
     "sentences": [
-      "Theorem VII.3",
       "Let @MathNode@ be a rank-@MathNode@ matrix and let @MathNode@, where @MathNode@ is defined in (@LtxRef@).",
       "Then after at most @MathEquation@ iterations, the estimate @MathNode@ produced by ADMiRA satisfies @MathEquation@"
     ]
@@ -4178,14 +4150,6 @@
     ]
   },
   {
-    "paper": "https://ar5iv.org/abs/hep-th/0403157",
-    "identifier": null,
-    "sentences": [
-      "Proposition 3.14",
-      ":"
-    ]
-  },
-  {
     "paper": "https://ar5iv.org/abs/2210.13613",
     "identifier": "Theorem 3.2.",
     "sentences": [
@@ -4283,9 +4247,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1901.05445",
-    "identifier": null,
+    "identifier": "Theorem I.4 ( @LtxCite@).",
     "sentences": [
-      "Theorem I.4 ( @LtxCite@).",
       "Let @MathNode@ and suppose @MathNode@.",
       "Let @MathNode@ be the ordered evaluation set for @MathNode@.",
       "The @MathNode@ words @MathEquation@ are distinct deep hole classes of @MathNode@."
@@ -4384,9 +4347,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1811.02979",
-    "identifier": null,
+    "identifier": "Theorem D.1.",
     "sentences": [
-      "Theorem D.1.",
       "Suppose @MathNode@ and @MathNode@ for at least @MathNode@ rows of @MathNode@ where @MathNode@ is a universal constant.",
       "Let @MathNode@ be any stationary point of @MathNode@ where @MathNode@.",
       "Then @MathEquation@ with probability at least @MathNode@."
@@ -4562,9 +4524,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1205.4484",
-    "identifier": null,
+    "identifier": "Theorem (Restatement of @LtxRef@).",
     "sentences": [
-      "Theorem (Restatement of @LtxRef@).",
       "For every regular graph @MathNode@, @MathNode@ and even @MathNode@, 1. (Norm bound implies expansion)",
       "For all @MathNode@, @MathNode@ implies that @MathNode@.",
       "2. (Expansion implies norm bound)",
@@ -4598,18 +4559,16 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2109.00261",
-    "identifier": null,
+    "identifier": "Theorem A.",
     "sentences": [
-      "Theorem A.",
       "Let @MathNode@ be a perverse full filtered complex.",
       "Then, the inclusion @MathNode@, associated to an order verifying (@LtxRef@), induces the isomorphism @MathEquation@"
     ]
   },
   {
     "paper": "https://ar5iv.org/abs/2109.01741",
-    "identifier": null,
+    "identifier": "Theorem G.2",
     "sentences": [
-      "Theorem G.2",
       "If Assumptions @LtxRef@, @LtxRef@, and @LtxRef@ hold, then @MathEquation@",
       "where @MathNode@ are the estimates resulting from a GMM minimization using @MathNode@ as a weighting matrix,",
       "@MathNode@, and @MathNode@ where @MathNode@ is the submatrix of @MathNode@ that corresponds to the variance covariance matrix of @MathNode@."
@@ -4990,9 +4949,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2002.12777",
-    "identifier": null,
+    "identifier": "Theorem.",
     "sentences": [
-      "Theorem.",
       "The circumcircles of @MathNode@ are concurrent.",
       "Intersection point @MathNode@ is called the Miquel-Steiner\u2019s point (Fig.3)."
     ]
@@ -5097,9 +5055,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1904.06107",
-    "identifier": null,
+    "identifier": "Theorem @LtxRef@.",
     "sentences": [
-      "Theorem @LtxRef@.",
       "@MathNode@ parameterised by @MathNode@, formula-size, or formula-depth is in FPT."
     ]
   },
@@ -5122,9 +5079,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/math/0507047",
-    "identifier": null,
+    "identifier": "Proposition 7 (@LtxCite@, Corollary 1.7).",
     "sentences": [
-      "Proposition 7 (@LtxCite@, Corollary 1.7).",
       "A Lie algebra @MathNode@ admits an @MathNode@-invariant skew-symmetric bilinear form if and only if @MathNode@."
     ]
   },
@@ -5192,9 +5148,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1805.10330",
-    "identifier": null,
+    "identifier": "Theorem C.30 (CGD extension into IMCGD).",
     "sentences": [
-      "Theorem C.30 (CGD extension into IMCGD).",
       "For all CGD @MathNode@, there exists a IMCGD @MathNode@ whose projection @MathNode@ coincides with @MathNode@ on all graphs but a finite number of them."
     ]
   },
@@ -5424,9 +5379,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2203.12404",
-    "identifier": null,
+    "identifier": "Theorem D.",
     "sentences": [
-      "Theorem D.",
       "A minimal unit vector field @MathNode@ on @MathNode@, whose integral curves are great circles, is a Hopf vector field and the corresponding quotient map @MathNode@ is a Hopf fibration."
     ]
   },
@@ -5820,9 +5774,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2106.07472",
-    "identifier": null,
+    "identifier": "Theorem C.10.",
     "sentences": [
-      "Theorem C.10.",
       "We have the following: (i) @MathNode@",
       "(ii) @MathNode@",
       "(iii) @MathNode@"
@@ -5841,9 +5794,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2307.13675",
-    "identifier": null,
+    "identifier": "Theorem G.",
     "sentences": [
-      "Theorem G.",
       "Let @MathNode@ be a Noetherian ring.",
       "If @MathNode@, then the following are equivalent: (1) @MathNode@;",
       "(2) @MathNode@ for all @MathNode@;",
@@ -5885,9 +5837,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1112.3835",
-    "identifier": null,
+    "identifier": "Theorem.",
     "sentences": [
-      "Theorem.",
       "Let @MathNode@.",
       "Let @MathNode@.",
       "Then @MathNode@ and @MathNode@ belong to the same block of @MathNode@ if and only if @MathEquation@"
@@ -6034,9 +5985,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1507.07149",
-    "identifier": null,
+    "identifier": "Theorem A.7.",
     "sentences": [
-      "Theorem A.7.",
       "@MathNode@ is a Poisson map if and only if @MathNode@ satisfies the gauge transformation equation (@LtxRef@), @MathNode@."
     ]
   },
@@ -6141,10 +6091,9 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2301.05467",
-    "identifier": null,
+    "identifier": "Theorem. (L\u00e9vy process is semi-martingale)",
     "sentences": [
-      "Theorem.",
-      "(L\u00e9vy process is semi-martingale) A L\u00e9vy process @MathNode@ is a semi-martingale w.r.t. @MathNode@."
+      "A L\u00e9vy process @MathNode@ is a semi-martingale w.r.t. @MathNode@."
     ]
   },
   {
@@ -6204,9 +6153,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2210.12575",
-    "identifier": null,
+    "identifier": "Theorem A.1 (Domain-adaptation learning bound from @LtxCite@).",
     "sentences": [
-      "Theorem A.1 (Domain-adaptation learning bound from @LtxCite@).",
       "Suppose two domains with distributions @MathNode@ and @MathNode@.",
       "Let @MathNode@ be a hypothesis space of @MathNode@-dimension @MathNode@ and @MathNode@ be the dataset induced by samples of size @MathNode@ drawn from @MathNode@, respectively.",
       "Then with probability at least @MathNode@ over the choice of samples, for each @MathNode@, @MathGroup@ where @MathNode@ is the optimal loss, i.e., @MathNode@, and @MathNode@ denotes the divergence between domain @MathNode@ and @MathNode@."
@@ -6257,9 +6205,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2208.03246",
-    "identifier": null,
+    "identifier": "Theorem A.1 (Sub-Gaussian Norm Concentration, @LtxCite@).",
     "sentences": [
-      "Theorem A.1 (Sub-Gaussian Norm Concentration, @LtxCite@).",
       "Let @MathNode@ be a @MathNode@-dimensional sub-Gaussian random vector with @MathNode@, @MathNode@.",
       "Then, for any @MathNode@ with probability at least @MathNode@ it holds that @MathGroup@"
     ]
@@ -6539,9 +6486,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1804.06863",
-    "identifier": null,
+    "identifier": "Theorem D (Simplified spectral sequence).",
     "sentences": [
-      "Theorem D (Simplified spectral sequence).",
       "There is a spectral sequence with @MathEquation@",
       "Here, the summands are indexed by poset elements @MathNode@ of rank @MathNode@, and @MathNode@ denotes the corresponding layer in @MathNode@.",
       "The term @MathNode@ denotes the reduced cohomology of the order complex for the interval @MathNode@, and is therefore described explicitly by Theorem @LtxRef@.",
@@ -6764,9 +6710,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1511.09031",
-    "identifier": null,
+    "identifier": "Theorem (@LtxRef@).",
     "sentences": [
-      "Theorem (@LtxRef@).",
       "The motivic cohomology groups @MathNode@ are independent of @MathNode@ as long as @MathNode@ and @MathNode@ is at least @MathNode@."
     ]
   },
@@ -6847,9 +6792,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2308.03438",
-    "identifier": null,
+    "identifier": "Theorem J.",
     "sentences": [
-      "Theorem J.",
       "(i) (@LtxRef@)",
       "If @MathNode@ is simply connected then @MathEquation@ is projection to length zero.",
       "(ii) (@LtxRef@) If @MathNode@ is simply connected and weakly exact then @MathNode@ is identified with @MathEquation@"
@@ -6872,9 +6816,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2403.20305",
-    "identifier": null,
+    "identifier": "Theorem A.1 (essentially due to Reed @LtxCite@).",
     "sentences": [
-      "Theorem A.1 (essentially due to Reed @LtxCite@).",
       "Fix any Abelian group @MathNode@",
       "There is a @MathNode@-time algorithm that, given oracle access to a function @MathNode@ produces the unique polynomial @MathNode@ such that @MathNode@, assuming that such a @MathNode@ exists."
     ]
@@ -7256,9 +7199,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1508.03600",
-    "identifier": null,
+    "identifier": "Theorem C.4.",
     "sentences": [
-      "Theorem C.4.",
       "Given an @MathNode@-point metric space @MathNode@, if @MathNode@ admits a @MathNode@-outlier embedding in @MathNode@, then Algorithm @LtxRef@ returns an outlier set @MathNode@ that witnesses an @MathNode@-outlier embedding of @MathNode@ in @MathNode@ with @MathNode@.",
       "Here @MathNode@ hides constants depending on the dimension @MathNode@."
     ]
@@ -7274,9 +7216,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1811.07971",
-    "identifier": null,
+    "identifier": "Theorem D.2.",
     "sentences": [
-      "Theorem D.2.",
       "Suppose that @MathNode@ is an algorithm that takes as input a set of @MathNode@-DP mechanisms @MathNode@, and outputs an index @MathNode@.",
       "If @MathNode@ is @MathNode@-weakly useful for @MathNode@ for a small enough @MathNode@, then @MathNode@ cannot by @MathNode@-DP for any @MathNode@."
     ]
@@ -7825,18 +7766,16 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1408.2354",
-    "identifier": null,
+    "identifier": "Theorem B.2.",
     "sentences": [
-      "Theorem B.2.",
       "Let @MathNode@ be the infinitesimal generator of a @MathNode@ semigroup on a Banach space @MathNode@.",
       "Then for any @MathNode@, @MathNode@, and any @MathNode@, there exists @MathNode@ such that @MathEquation@"
     ]
   },
   {
     "paper": "https://ar5iv.org/abs/0904.1835",
-    "identifier": null,
+    "identifier": "Theorem C.1 (Thm VI. 14 of @LtxCite@).",
     "sentences": [
-      "Theorem C.1 (Thm VI. 14 of @LtxCite@).",
       "Let @MathNode@ be an open connected subset of @MathNode@.",
       "Let @MathNode@ be an analytic operator-valued function such that for each @MathNode@, @MathNode@ is compact.",
       "Then, either a) @MathNode@ exists for no @MathNode@; or",
@@ -8288,9 +8227,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1910.05565",
-    "identifier": null,
+    "identifier": "Theorem C.1.",
     "sentences": [
-      "Theorem C.1.",
       "At any node @MathNode@, we have 1.",
       "@MathNode@ and @MathNode@ in a @MathNode@-regular tree,",
       "2. @MathNode@ and @MathNode@ in an (@MathNode@)-lattice, and",
@@ -8407,9 +8345,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1704.00401",
-    "identifier": null,
+    "identifier": "Theorem D (Scaling limits of the principal eigenvalue).",
     "sentences": [
-      "Theorem D (Scaling limits of the principal eigenvalue).",
       "Suppose (H1), (H2) and (@LtxRef@).",
       "(1) As @MathNode@, there holds @MathEquation@",
       "(2) As @MathNode@, there holds @MathEquation@",
@@ -8433,9 +8370,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1811.08403",
-    "identifier": null,
+    "identifier": "Theorem B.",
     "sentences": [
-      "Theorem B.",
       "The order complex of the poset @MathNode@ is homotopy equivalent to a wedge of @MathEquation@ @MathNode@-dimensional spheres, except for the empty poset @MathNode@.",
       "Here @MathNode@ for @MathNode@ and @MathNode@ for @MathNode@."
     ]
@@ -8664,9 +8600,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1607.06135",
-    "identifier": null,
+    "identifier": "Theorem.",
     "sentences": [
-      "Theorem.",
       "Every cardinal @MathNode@ below the first Mahlo cardinal has a basis.",
       "Consequently, for every such cardinal @MathNode@ and every @MathNode@, there is a reflexive Banach space @MathNode@ of density @MathNode@ with a long unconditional basis and such that every bounded sequence in @MathNode@ has an @MathNode@-spreading model subsequence but the space @MathNode@ does not have @MathNode@-spreading model subsequences for @MathNode@ large enough, depending only on @MathNode@.",
       "In particular, @MathNode@ contains no infinite subsymmetric basic sequence."
@@ -8699,9 +8634,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1602.01274",
-    "identifier": null,
+    "identifier": "Theorem C.",
     "sentences": [
-      "Theorem C.",
       "The Quillen pair @MathNode@ is a Quillen equivalence.",
       "If @MathNode@ is a fibrant simplicial category, then the pair @MathNode@ is a Quillen equivalence as well."
     ]
@@ -8726,9 +8660,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1502.01014",
-    "identifier": null,
+    "identifier": "Theorem B.",
     "sentences": [
-      "Theorem B.",
       "Let @MathNode@, @MathNode@ be defined by (@LtxRef@), @MathNode@.",
       "Suppose that there exist @MathNode@ and @MathNode@ such that @MathGroup@ Let @MathNode@.",
       "Then @MathNode@ and for any @MathNode@, @MathNode@ there exists a linear continuous operator @MathNode@ such that for any subtree @MathNode@ rooted at @MathNode@ and for any function @MathNode@ @MathEquation@"
@@ -8874,9 +8807,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1302.2275",
-    "identifier": null,
+    "identifier": "Theorem @LtxRef@ (Jarn\u00edk\u2013Besicovitch type theorem).",
     "sentences": [
-      "Theorem @LtxRef@ (Jarn\u00edk\u2013Besicovitch type theorem).",
       "For any nonincreasing function @MathNode@, @MathNode@.",
       "In fact, for any nondecreasing function @MathNode@, @MathNode@."
     ]
@@ -9205,9 +9137,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2308.01617",
-    "identifier": null,
+    "identifier": "Theorem A.2.",
     "sentences": [
-      "Theorem A.2.",
       "Let @MathNode@ be an algebraic space of finite type over @MathNode@.",
       "For any closed immersion @MathNode@, the canonical map @MathNode@ is invertible."
     ]
@@ -9310,9 +9241,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1605.02345",
-    "identifier": null,
+    "identifier": "Theorem VI.3",
     "sentences": [
-      "Theorem VI.3",
       "(@LtxCite@) Let @MathNode@ be a geodesically complete strongly causal Ricci-flat @MathNode@-dimensional Brinkmann spacetime with a complete parallel vector field @MathNode@.",
       "Assume also that there exists a Killing vector field conjugate to @MathNode@.",
       "Then, @MathNode@ is (a quotient of) a plane wave."
@@ -9370,9 +9300,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/0706.4358",
-    "identifier": null,
+    "identifier": "Theorem A.",
     "sentences": [
-      "Theorem A.",
       "Let @MathNode@ be a code with weights in @MathNode@.",
       "Then @MathNode@."
     ]
