@@ -191,9 +191,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1503.03399",
-    "identifier": null,
+    "identifier": "Main Theorem.",
     "sentences": [
-      "Main Theorem.",
       "For an irreducible smooth representation @MathNode@ of @MathNode@, let @MathNode@ as a representation of @MathNode@.",
       "Then",
       "@MathNode@ @MathNode@ if @MathNode@ is not a theta lift from @MathNode@.",
@@ -771,9 +770,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/math/0205270",
-    "identifier": null,
+    "identifier": "Main Theorem.",
     "sentences": [
-      "Main Theorem.",
       "@MathNode@ is special if and only if it is @MathNode@-special."
     ]
   },
@@ -1509,9 +1507,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1906.06817",
-    "identifier": null,
+    "identifier": "Main Theorem.",
     "sentences": [
-      "Main Theorem.",
       "The natural generators of a double determinantal ideal form a Gr\u00f6bner basis under any diagonal term order.",
       "Double determinantal varieties are irreducible, normal, and arithmetically Cohen-Macaulay.",
       "In addition, they are glicci."

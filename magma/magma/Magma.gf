@@ -128,6 +128,7 @@ abstract Magma = {
         therefore_stmt_v9 : Statement -> TopStatement;
 
         specifically_stmt : Statement -> TopStatement;
+        specifically_stmt_v1 : Statement -> TopStatement;
         more_precisely_stmt : Statement -> TopStatement;
 
         furthermore_stmt : FurthermoreMarker -> Statement -> TopStatement;

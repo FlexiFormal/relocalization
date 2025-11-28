@@ -65,6 +65,7 @@ concrete MagmaEng of Magma = MagmaFunctor with
         therefore_stmt_v9 stmt = lin Utt {s = "as a consequence" ++ "," ++ stmt.s};
 
         specifically_stmt stmt = lin Utt {s = "specifically" ++ "," ++ stmt.s};
+        specifically_stmt_v1 stmt = lin Utt {s = "in particular" ++ "," ++ stmt.s};
         more_precisely_stmt stmt = lin Utt {s = "more precisely" ++ "," ++ stmt.s};
 
         furthermore_stmt marker stmt = lin Utt {s = marker.s ++ stmt.s};

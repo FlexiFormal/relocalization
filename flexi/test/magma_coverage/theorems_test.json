@@ -2797,9 +2797,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1502.04376",
-    "identifier": null,
+    "identifier": "Main Theorem.",
     "sentences": [
-      "Main Theorem.",
       "Given a proper geodesic space @MathNode@, the Morse boundary, @MathNode@, equipped with the direct limit topology, is (1) a visibility space;",
       "(2) invariant under quasi-isometry of @MathNode@; and",
       "(3) homeomorphic to the visual boundary if @MathNode@ is hyperbolic and the contracting boundary if @MathNode@ is proper @MathNode@."
@@ -5122,9 +5121,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/math/0412385",
-    "identifier": null,
+    "identifier": "Main Theorem.",
     "sentences": [
-      "Main Theorem.",
       "If @MathNode@ and @MathNode@ are two linear limits of some triple @MathNode@, then there exists a finite chain @MathNode@ of subtriples @MathNode@ of @MathNode@, starting with @MathNode@ and ending with @MathNode@, such that, for each @MathNode@, either @MathNode@ is an @MathNode@-conjugate of @MathNode@, or @MathNode@ covers @MathNode@ modulo @MathNode@, or @MathNode@ covers @MathNode@ module @MathNode@."
     ]
   },
@@ -9047,9 +9045,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1903.11486",
-    "identifier": null,
+    "identifier": "Main Theorem (Theorem @LtxRef@, Proposition @LtxRef@).",
     "sentences": [
-      "Main Theorem (Theorem @LtxRef@, Proposition @LtxRef@).",
       "Let @MathNode@ be a finitely generated group of polynomial or exponential growth and let @MathNode@ with @MathNode@.",
       "Then the canonical homomorphism @MathNode@ is an isomorphism."
     ]
