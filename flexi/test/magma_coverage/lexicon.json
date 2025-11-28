@@ -1,5 +1,9 @@
 {
     "V": {
+        "generate": [
+            "generate",
+            "generated"
+        ],
         "contain": [
             "contain",
             "contained"
@@ -554,7 +558,7 @@
         ],
         "suffice": [
             "suffice",
-            "sufficiented"
+            "sufficed"
         ],
         "place": [
             "place",
@@ -850,7 +854,7 @@
         ],
         "group": [
             "group",
-            "groupped"
+            "grouped"
         ],
         "influence": [
             "influence",
@@ -1019,10 +1023,6 @@
         "happen": [
             "happen",
             "happened"
-        ],
-        "do": [
-            "do",
-            "did"
         ],
         "emphasize": [
             "emphasize",
@@ -1526,6 +1526,18 @@
         ]
     },
     "N": {
+        "strategy": [
+            "strategy",
+            "strategies"
+        ],
+        "point": [
+            "point",
+            "points"
+        ],
+        "curvature": [
+            "curvature",
+            "curvatures"
+        ],
         "group": [
             "group",
             "groups"
@@ -1581,6 +1593,10 @@
         "vector": [
             "vector",
             "vectors"
+        ],
+        "poset": [
+            "poset",
+            "posets"
         ],
         "field": [
             "field",
@@ -1841,10 +1857,6 @@
         "pattern": [
             "pattern",
             "patterns"
-        ],
-        "i": [
-            "i",
-            "is"
         ],
         "leave": [
             "leave",
@@ -2954,10 +2966,6 @@
             "stopping",
             "stoppages"
         ],
-        "with_respect_to": [
-            "with respect to",
-            "with respects to"
-        ],
         "elliptic": [
             "elliptic",
             "ellipses"
@@ -3377,6 +3385,14 @@
         "regularity": [
             "regularity",
             "regularities"
+        ],
+        "hypersurface": [
+            "hypersurface",
+            "hypersurfaces"
+        ],
+        "interpolation": [
+            "interpolation",
+            "interpolations"
         ],
         "ideal": [
             "ideal",
@@ -4021,10 +4037,6 @@
         "empirical": [
             "empirical",
             "empirics"
-        ],
-        "generate": [
-            "generate",
-            "generates"
         ],
         "double": [
             "double",
@@ -4774,10 +4786,6 @@
             "Lie",
             "Lies"
         ],
-        "V": [
-            "V",
-            "Vs"
-        ],
         "Pseudocover": [
             "Pseudocover",
             "pseudocovers"
@@ -5461,6 +5469,10 @@
         "eigenbasis": [
             "eigenbasis",
             "eigenbases"
+        ],
+        "basis": [
+            "basis",
+            "bases"
         ],
         "ultraS": [
             "ultraS",
@@ -8202,10 +8214,6 @@
             "dfa",
             "dfas"
         ],
-        "ii_4": [
-            "ii-4",
-            "II-4s"
-        ],
         "disagree": [
             "disagree",
             "disagreements"
@@ -8289,10 +8297,6 @@
         "gassner": [
             "gassner",
             "Gassners"
-        ],
-        "under": [
-            "under",
-            "unders"
         ],
         "nachalom": [
             "nachalom",
@@ -10314,10 +10318,6 @@
             "cotype",
             "cotypes"
         ],
-        "viii": [
-            "viii",
-            "viiis"
-        ],
         "bifurcation": [
             "bifurcation",
             "bifurcations"
@@ -11130,10 +11130,6 @@
             "solubility",
             "solubilities"
         ],
-        "denote": [
-            "denote",
-            "denotes"
-        ],
         "GLTC": [
             "GLTC",
             "GLTCs"
@@ -11628,9 +11624,6 @@
         ]
     },
     "PN": {
-        "point": [
-            "point"
-        ],
         "Wenzl": [
             "Wenzl"
         ],
@@ -11879,9 +11872,6 @@
         ],
         "Exchange": [
             "Exchange"
-        ],
-        "strategy": [
-            "strategy"
         ],
         "Babel": [
             "Babel"
@@ -12452,6 +12442,21 @@
         ]
     },
     "A": {
+        "large": [
+            "large"
+        ],
+        "differentiable": [
+            "differentiable"
+        ],
+        "initial": [
+            "initial"
+        ],
+        "generated": [
+            "generated"
+        ],
+        "total": [
+            "total"
+        ],
         "transitive": [
             "transitive"
         ],
@@ -12583,6 +12588,12 @@
         ],
         "empty": [
             "empty"
+        ],
+        "nonempty": [
+            "nonempty"
+        ],
+        "non_empty": [
+            "non-empty"
         ],
         "algebraic": [
             "algebraic"
@@ -13072,9 +13083,6 @@
         ],
         "visual": [
             "visual"
-        ],
-        "defining": [
-            "defining"
         ],
         "critical": [
             "critical"
@@ -14102,6 +14110,15 @@
         "semi_simplicial": [
             "semi-simplicial"
         ],
+        "simplicial": [
+            "simplicial"
+        ],
+        "optimal": [
+            "optimal"
+        ],
+        "odd": [
+            "odd"
+        ],
         "skew": [
             "skew"
         ],
@@ -14644,6 +14661,9 @@
         ],
         "orientable": [
             "orientable"
+        ],
+        "oriented": [
+            "oriented"
         ],
         "zero": [
             "zero"

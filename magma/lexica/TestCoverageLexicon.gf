@@ -4,9 +4,15 @@ abstract TestCoverageLexicon = FreeArgs ** {
         lex_argmark_of : ArgMarker;
         lex_argmark_from : ArgMarker;
         lex_argmark_to : ArgMarker;
+        lex_argmark_on : ArgMarker;
+        lex_argmark_under : ArgMarker;
         lex_with_respect_to : ArgMarker;
+        lex_with_respect_to_v1 : ArgMarker;
 
 -- Prekinds
+    pk_lex_strategy : PreKind;
+    pk_lex_point : PreKind;
+    pk_lex_curvature : PreKind;
     pk_lex_group : PreKind;
     pk_lex_subbarrier : PreKind;
     pk_lex_barrier : PreKind;
@@ -21,6 +27,7 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pk_lex_detail : PreKind;
     pk_lex_invariance : PreKind;
     pk_lex_vector : PreKind;
+    pk_lex_poset : PreKind;
     pk_lex_field : PreKind;
     pk_lex_manifold : PreKind;
     pk_lex_boundary : PreKind;
@@ -86,7 +93,6 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pk_lex_vertex : PreKind;
     pk_lex_order : PreKind;
     pk_lex_pattern : PreKind;
-    pk_lex_i : PreKind;
     pk_lex_leave : PreKind;
     pk_lex_figure : PreKind;
     pk_lex_signature : PreKind;
@@ -237,7 +243,6 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pk_lex_correspondence : PreKind;
     pk_lex_coalescence : PreKind;
     pk_lex_scheme : PreKind;
-    pk_lex_point : PreKind;
     pk_lex_variety : PreKind;
     pk_lex_retract : PreKind;
     pk_lex_modulus : PreKind;
@@ -364,7 +369,6 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pk_lex_encoding : PreKind;
     pk_lex_transmitter : PreKind;
     pk_lex_stopping : PreKind;
-    pk_lex_with_respect_to : PreKind;
     pk_lex_elliptic : PreKind;
     pk_lex_residue : PreKind;
     pk_lex_monoid : PreKind;
@@ -470,6 +474,8 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pk_lex_table : PreKind;
     pk_lex_schematic : PreKind;
     pk_lex_regularity : PreKind;
+    pk_lex_hypersurface : PreKind;
+    pk_lex_interpolation : PreKind;
     pk_lex_ideal : PreKind;
     pk_lex_matching : PreKind;
     pk_lex_monomorphism : PreKind;
@@ -631,7 +637,6 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pk_lex_estimator : PreKind;
     pk_lex_ResidueHat : PreKind;
     pk_lex_empirical : PreKind;
-    pk_lex_generate : PreKind;
     pk_lex_double : PreKind;
     pk_lex_H : PreKind;
     pk_lex_fundamental : PreKind;
@@ -819,7 +824,6 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pk_lex_truth : PreKind;
     pk_lex_A : PreKind;
     pk_lex_Lie : PreKind;
-    pk_lex_V : PreKind;
     pk_lex_Pseudocover : PreKind;
     pk_lex_hom : PreKind;
     pk_lex_coverability : PreKind;
@@ -991,6 +995,7 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pk_lex_neighbour : PreKind;
     pk_lex_cluster : PreKind;
     pk_lex_eigenbasis : PreKind;
+    pk_lex_basis : PreKind;
     pk_lex_ultraS : PreKind;
     pk_lex_sub_algebra : PreKind;
     pk_lex_convection : PreKind;
@@ -1676,7 +1681,6 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pk_lex_churn : PreKind;
     pk_lex_snake : PreKind;
     pk_lex_dfa : PreKind;
-    pk_lex_ii_4 : PreKind;
     pk_lex_disagree : PreKind;
     pk_lex_Dynkin : PreKind;
     pk_lex_coprime : PreKind;
@@ -1698,7 +1702,6 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pk_lex_reduce : PreKind;
     pk_lex_Schur : PreKind;
     pk_lex_gassner : PreKind;
-    pk_lex_under : PreKind;
     pk_lex_nachalom : PreKind;
     pk_lex_slow : PreKind;
     pk_lex_nacionalizat : PreKind;
@@ -2204,7 +2207,6 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pk_lex_HT : PreKind;
     pk_lex_stretching : PreKind;
     pk_lex_cotype : PreKind;
-    pk_lex_viii : PreKind;
     pk_lex_bifurcation : PreKind;
     pk_lex_parameteric : PreKind;
     pk_lex_Sot : PreKind;
@@ -2408,7 +2410,6 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pk_lex_exterior : PreKind;
     pk_lex_CDG : PreKind;
     pk_lex_solubility : PreKind;
-    pk_lex_denote : PreKind;
     pk_lex_GLTC : PreKind;
     pk_lex_desingularize : PreKind;
     pk_lex_fs : PreKind;
@@ -2534,6 +2535,7 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pk_lex_w_h_p : PreKind;
 
 -- PrePredicates
+    pp_lex_generate : PrePredicate;
     pp_lex_contain : PrePredicate;
     pp_lex_satisfy : PrePredicate;
     pp_lex_reverse : PrePredicate;
@@ -2547,7 +2549,6 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pp_lex_dominate : PrePredicate;
     pp_lex_respect : PrePredicate;
     pp_lex_belong : PrePredicate;
-    pp_lex_generate : PrePredicate;
     pp_lex_carry : PrePredicate;
     pp_lex_lead : PrePredicate;
     pp_lex_stress : PrePredicate;
@@ -2789,7 +2790,6 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pp_lex_discriminate : PrePredicate;
     pp_lex_reflects : PrePredicate;
     pp_lex_happen : PrePredicate;
-    pp_lex_do : PrePredicate;
     pp_lex_emphasize : PrePredicate;
     pp_lex_fail : PrePredicate;
     pp_lex_weight : PrePredicate;
@@ -2917,6 +2917,11 @@ abstract TestCoverageLexicon = FreeArgs ** {
     pp_lex_outperform : PrePredicate;
 
 -- Properties
+    prop_lex_large : Property;
+    prop_lex_differentiable : Property;
+    prop_lex_initial : Property;
+    prop_lex_generated : Property;
+    prop_lex_total : Property;
     prop_lex_transitive : Property;
     prop_lex_Chen : Property;
     prop_lex_invertible : Property;
@@ -2961,6 +2966,8 @@ abstract TestCoverageLexicon = FreeArgs ** {
     prop_lex_infinitesimally : Property;
     prop_lex_usual : Property;
     prop_lex_empty : Property;
+    prop_lex_nonempty : Property;
+    prop_lex_non_empty : Property;
     prop_lex_algebraic : Property;
     prop_lex_dual : Property;
     prop_lex_mixed : Property;
@@ -3124,7 +3131,6 @@ abstract TestCoverageLexicon = FreeArgs ** {
     prop_lex_metrize : Property;
     prop_lex_derived : Property;
     prop_lex_visual : Property;
-    prop_lex_defining : Property;
     prop_lex_critical : Property;
     prop_lex_weighty : Property;
     prop_lex_singular : Property;
@@ -3467,6 +3473,9 @@ abstract TestCoverageLexicon = FreeArgs ** {
     prop_lex_adapted : Property;
     prop_lex_cohomological : Property;
     prop_lex_semi_simplicial : Property;
+    prop_lex_simplicial : Property;
+    prop_lex_optimal : Property;
+    prop_lex_odd : Property;
     prop_lex_skew : Property;
     prop_lex_Lojasiewicz : Property;
     prop_lex_Sasakian : Property;
@@ -3648,6 +3657,7 @@ abstract TestCoverageLexicon = FreeArgs ** {
     prop_lex_reflective : Property;
     prop_lex_brownian : Property;
     prop_lex_orientable : Property;
+    prop_lex_oriented : Property;
     prop_lex_zero : Property;
     prop_lex_discriminate : Property;
     prop_lex_discriminant : Property;

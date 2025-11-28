@@ -12,6 +12,7 @@ with open('../../../magma/lexica/TestCoverageLexicon.gf', 'w') as abstract, \
         lex_argmark_from : ArgMarker;
         lex_argmark_to : ArgMarker;
         lex_argmark_on : ArgMarker;
+        lex_argmark_under : ArgMarker;
         lex_with_respect_to : ArgMarker;
         lex_with_respect_to_v1 : ArgMarker;
 ''')
@@ -23,6 +24,7 @@ with open('../../../magma/lexica/TestCoverageLexicon.gf', 'w') as abstract, \
         lex_argmark_from = mkPrep "from";
         lex_argmark_to = mkPrep "to";
         lex_argmark_on = mkPrep "on";
+        lex_argmark_under = mkPrep "under";
         lex_with_respect_to = mkPrep "with respect to";
         lex_with_respect_to_v1 = mkPrep "w.r.t.";
 ''')
