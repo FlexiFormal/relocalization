@@ -39,6 +39,7 @@ concrete MagmaEng of Magma = MagmaFunctor with
         universal_quantification = mkQuantification every_Det all_Det;
         universal_quantification_v1 = mkQuantification all_Det all_Det;
         universal_quantification_v2 = mkQuantification (mkDeterminer singular "any") (mkDeterminer plural "any");
+        universal_quantification_v3 = mkQuantification (mkDeterminer singular "each") all_Det;
         definite_quantification = mkQuantification theSg_Det thePl_Det;
 
         let_ident_decl id = lin Utt { s = "let" ++ id.s } ;
