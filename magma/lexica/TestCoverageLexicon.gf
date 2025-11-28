@@ -5,6 +5,7 @@ abstract TestCoverageLexicon = FreeArgs ** {
         lex_argmark_from : ArgMarker;
         lex_argmark_to : ArgMarker;
         lex_argmark_on : ArgMarker;
+        lex_argmark_in : ArgMarker;
         lex_argmark_under : ArgMarker;
         lex_with_respect_to : ArgMarker;
         lex_with_respect_to_v1 : ArgMarker;

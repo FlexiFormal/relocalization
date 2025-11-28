@@ -20,6 +20,7 @@ abstract FreeArgs = Magma ** {
         kind_with_arg : Kind -> ArgMarker -> Term -> Kind;
         property_with_arg : Property -> ArgMarker -> Term -> Property;
         predicate_with_arg : Predicate -> ArgMarker -> Term -> Predicate;
+        prekind_argmarker : PreKind -> ArgMarker -> ArgMarker;  -- "degree" -> "of" -> "of degree"
 
         transitive_predicate : PrePredicate -> Term -> Predicate;
         intransitive_predicate : PrePredicate -> Predicate;

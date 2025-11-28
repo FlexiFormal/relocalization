@@ -5,6 +5,7 @@ concrete TestCoverageLexiconEng of TestCoverageLexicon = FreeArgsEng ** open Par
         lex_argmark_from = mkPrep "from";
         lex_argmark_to = mkPrep "to";
         lex_argmark_on = mkPrep "on";
+        lex_argmark_in = mkPrep "in";
         lex_argmark_under = mkPrep "under";
         lex_with_respect_to = mkPrep "with respect to";
         lex_with_respect_to_v1 = mkPrep "w.r.t.";
