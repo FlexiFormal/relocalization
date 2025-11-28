@@ -15,6 +15,7 @@ abstract FreeArgs = Magma ** {
     fun
         prekind_to_kind : PreKind -> Kind;
         property_prekind : Property -> PreKind -> PreKind;
+        property_prekind_v1 : Property -> PreKind -> PreKind;
 
         kind_with_arg : Kind -> ArgMarker -> Term -> Kind;
         property_with_arg : Property -> ArgMarker -> Term -> Property;
