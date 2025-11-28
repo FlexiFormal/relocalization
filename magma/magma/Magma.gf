@@ -113,6 +113,7 @@ abstract Magma = {
         furthermore_marker_v1 : FurthermoreMarker;
         furthermore_marker_v2 : FurthermoreMarker;
         furthermore_marker_v3 : FurthermoreMarker;
+        furthermore_marker_v4 : FurthermoreMarker;
 
         -- top statements
         therefore_stmt : Statement -> TopStatement;

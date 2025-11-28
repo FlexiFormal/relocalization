@@ -73,6 +73,7 @@ concrete MagmaEng of Magma = MagmaFunctor with
         furthermore_marker_v1 = {s = "in addition" ++ "," ++ " "};
         furthermore_marker_v2 = {s = "additionally" ++ "," ++ " "};
         furthermore_marker_v3 = {s = "moreover" ++ "," ++ " "};
+        furthermore_marker_v4 = {s = "further" ++ "," ++ " "};
 
         indeed_stmt stmt = lin Utt {s = "indeed" ++ "," ++ stmt.s};
         indeed_stmt_v1 stmt = lin Utt {s = "in fact" ++ "," ++ stmt.s};
