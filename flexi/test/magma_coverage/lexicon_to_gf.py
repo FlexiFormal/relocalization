@@ -6,7 +6,12 @@ with open('lexicon.json', 'r') as fp:
 with open('../../../magma/lexica/TestCoverageLexicon.gf', 'w') as abstract, \
         open('../../../magma/lexica/TestCoverageLexiconEng.gf', 'w') as concrete:
     abstract.write('''abstract TestCoverageLexicon = FreeArgs ** {
+    cat
+        Noun;
     fun
+        noun_to_prekind : Noun -> PreKind;
+        compound_noun : Noun -> Noun -> Noun;
+        
         lex_argmark_by : ArgMarker;
         lex_argmark_of : ArgMarker;
         lex_argmark_from : ArgMarker;
@@ -18,8 +23,13 @@ with open('../../../magma/lexica/TestCoverageLexicon.gf', 'w') as abstract, \
         lex_with_respect_to_v1 : ArgMarker;
 ''')
 
-    concrete.write('''concrete TestCoverageLexiconEng of TestCoverageLexicon = FreeArgsEng ** open ParadigmsEng, SyntaxEng, GrammarEng in {
+    concrete.write('''concrete TestCoverageLexiconEng of TestCoverageLexicon = FreeArgsEng ** open ParadigmsEng, SyntaxEng, GrammarEng, ResEng in {
+    lincat
+        Noun = N;
     lin
+        noun_to_prekind noun = mkCN noun;
+        compound_noun n1 n2 = mkN (n1.s ! Sg ! Nom) n2;
+
         lex_argmark_by = mkPrep "by";
         lex_argmark_of = mkPrep "of";
         lex_argmark_from = mkPrep "from";
@@ -33,9 +43,9 @@ with open('../../../magma/lexica/TestCoverageLexicon.gf', 'w') as abstract, \
 
     abstract.write('\n-- Prekinds\n')
     for noun, forms in lexicon['N'].items():
-        symb = f'pk_lex_{noun}'
-        abstract.write(f'    {symb} : PreKind;\n')
-        concrete.write(f'    {symb} = mkCN (mkN "{forms[0]}" "{forms[1]}");\n')
+        symb = f'noun_lex_{noun}'
+        abstract.write(f'    {symb} : Noun;\n')
+        concrete.write(f'    {symb} = mkN "{forms[0]}" "{forms[1]}";\n')
 
     abstract.write('\n-- PrePredicates\n')
     for verb, forms in lexicon['V'].items():

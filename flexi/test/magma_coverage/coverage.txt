@@ -1,5 +1,5 @@
-theorems_train.json: 227 / 2713 = 8.37 %
-definitions_train.json: 158 / 2823 = 5.60 %
-theorems_test.json: 238 / 2709 = 8.79 %
-definitions_test.json: 143 / 2779 = 5.15 %
+theorems_train.json: 262 / 2707 = 9.68 %
+definitions_train.json: 182 / 2822 = 6.45 %
+theorems_test.json: 265 / 2707 = 9.79 %
+definitions_test.json: 166 / 2777 = 5.98 %
 
