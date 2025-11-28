@@ -13,8 +13,11 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         Kind = _Kind;
         NamedKind = _NamedKind;
         Term = {np: NP; just_formula: Bool};
-        Property = AP;
         Predicate = Grammar.VP;
+
+        -- properties
+        Property = AP;
+        PropertyList = ListAP;
 
         -- identifiers
         Identifier = _Ident;
@@ -65,6 +68,8 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         -- universal_quantification_sg = ;
 
         -- properties
+        BasePropertyList p1 p2 = BaseAP p1 p2;
+        ConsPropertyList p pl = ConsAP p pl;
 
         -- predicates
 

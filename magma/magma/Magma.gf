@@ -16,7 +16,10 @@ abstract Magma = {
         Kind;           -- "bijective function ... from X to Y"
         NamedKind;      -- "bijective function f from X to Y"
         Term;           -- "every function f from X to Y"
+
+        -- properties
         Property;       -- "divisible by 2"
+        PropertyList;
 
         -- declarations
         Declaration;    -- "let x be an integer"
@@ -86,6 +89,8 @@ abstract Magma = {
         definite_quantification : Quantification;        -- the
 
         -- properties
+        BasePropertyList : Property -> Property -> PropertyList;
+        ConsPropertyList : Property -> PropertyList -> PropertyList;
 
         -- predicates
 
