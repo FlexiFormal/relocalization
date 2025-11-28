@@ -2516,9 +2516,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/math/0012125",
-    "identifier": null,
+    "identifier": "DEFINITION 2.3",
     "sentences": [
-      "DEFINITION 2.3",
       "Given two @MathNode@-algebras @MathNode@ and @MathNode@, we denote by @MathNode@ the @MathNode@-semi-norm on @MathNode@ defined for @MathNode@ by @MathNode@ where @MathNode@ is the map @MathNode@."
     ]
   },

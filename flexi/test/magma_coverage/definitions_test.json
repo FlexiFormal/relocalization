@@ -6161,9 +6161,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/math/0406075",
-    "identifier": null,
+    "identifier": "DEFINITION 2.6",
     "sentences": [
-      "DEFINITION 2.6",
       "The algebra with orthogonal involution @MathNode@ is called a product of quaternions with involution if there exists an integer @MathNode@ and quaternion algebras with involution @MathNode@ for @MathNode@ such that @MathNode@."
     ]
   },
@@ -8770,9 +8769,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2112.11326",
-    "identifier": null,
+    "identifier": "DEFINITION 3.1.",
     "sentences": [
-      "DEFINITION 3.1.",
       "Let @MathNode@ where @MathNode@ is a standard Borel space with finite diameter.",
       "Let @MathNode@ be a probability measure on @MathNode@.",
       "We say that @MathNode@ satisfies the Gaussian concentration bound with constant @MathNode@, abbreviated @MathNode@, if for all bounded local functions @MathNode@ we have @MathEquation@"
@@ -9437,9 +9435,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1107.1910",
-    "identifier": null,
+    "identifier": "DEFINITION 6.1.",
     "sentences": [
-      "DEFINITION 6.1.",
       "Let @MathNode@ be a complete separable metric space.",
       "Given @MathNode@, a subset @MathNode@ is a @MathNode@-net, or Delaunay set, if: (1) @MathNode@ is @MathNode@-separated: for all @MathNode@, @MathNode@;",
       "(2) @MathNode@ is @MathNode@-dense: for all @MathNode@, there exists some @MathNode@ such that @MathNode@."

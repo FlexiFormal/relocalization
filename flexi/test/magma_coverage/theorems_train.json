@@ -889,9 +889,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1610.06502",
-    "identifier": null,
+    "identifier": "THEOREM 13.1.",
     "sentences": [
-      "THEOREM 13.1.",
       "Let @MathNode@ and @MathNode@ be a shift-invariant probability measure.",
       "Assume that the following conditions hold: 1. @MathNode@ satisfies the central limit theorem with variance @MathNode@ (in the sense of Definition @LtxRef@);",
       "2. @MathNode@ satisfies @MathNode@ (in the sense of Definition @LtxRef@);",
@@ -1067,9 +1066,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/math-ph/0202001",
-    "identifier": null,
+    "identifier": "THEOREM 2.",
     "sentences": [
-      "THEOREM 2.",
       "Let @MathNode@ satisfy the conditions (i)-(iii), and @MathNode@ be the ground state of @MathNode@ with corresponding energy @MathNode@.",
       "Then @MathEquation@ for some positive number @MathNode@ depending on @MathNode@ and the cut-off @MathNode@.",
       "Moreover, there exists a number @MathNode@, such that for all @MathNode@ @MathEquation@"
@@ -4113,9 +4111,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/math-ph/0511029",
-    "identifier": null,
+    "identifier": "THEOREM 8",
     "sentences": [
-      "THEOREM 8",
       "Let @MathNode@ and @MathNode@.",
       "Let @MathNode@, where @MathNode@, @MathNode@ are @MathNode@ distinct points in @MathNode@ and @MathNode@ are real numbers different from zero.",
       "Then the following holds:",
