@@ -177,10 +177,15 @@
     "identifier": "Theorem 6 (Momose, Kenku, Kamienny).",
     "sentences": [
       "Let @MathNode@ range through all quadratic number fields, and @MathNode@ all elliptic curves over these fields.",
-      "Then the torsion subgroup @MathNode@ of @MathNode@ is isomorphic to one of the following 26 groups: \u2022 @MathNode@ for @MathNode@",
-      "\u2022 the direct sum of @MathNode@ with @MathNode@ for @MathNode@,",
-      "\u2022 the direct sum of @MathNode@ with @MathNode@ for @MathNode@,",
-      "\u2022 @MathNode@."
+      [
+        "Then the torsion subgroup @MathNode@ of @MathNode@ is isomorphic to one of the following 26 groups:",
+        [
+          "\u2022 @MathNode@ for @MathNode@",
+          "\u2022 the direct sum of @MathNode@ with @MathNode@ for @MathNode@,",
+          "\u2022 the direct sum of @MathNode@ with @MathNode@ for @MathNode@,",
+          "\u2022 @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -357,10 +362,15 @@
     "identifier": "Theorem and Definition 3.1.",
     "sentences": [
       "For each @MathNode@ let @MathNode@ be a representation of @MathNode@.",
-      "We say that the sequence @MathNode@ has the character factorization property if it fulfills one (hence all) of the following equivalent conditions: \u2022 for any cycles @MathNode@ with disjoint supports @MathEquation@",
-      "\u2022 for any integers @MathNode@ @MathEquation@",
-      "\u2022 for any integers @MathNode@ @MathEquation@",
-      "\u2022 for any integers @MathNode@ @MathEquation@"
+      [
+        "We say that the sequence @MathNode@ has the character factorization property if it fulfills one (hence all) of the following equivalent conditions:",
+        [
+          "\u2022 for any cycles @MathNode@ with disjoint supports @MathEquation@",
+          "\u2022 for any integers @MathNode@ @MathEquation@",
+          "\u2022 for any integers @MathNode@ @MathEquation@",
+          "\u2022 for any integers @MathNode@ @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -732,8 +742,13 @@
     "sentences": [
       "Let @MathNode@ be a function of @MathNode@.",
       "Let us define for @MathNode@ in @MathNode@, @MathEquation@",
-      "Then @MathNode@ belongs to @MathNode@ if \u2022 either @MathNode@ is supported in @MathNode@",
-      "\u2022 or @MathNode@ is supported in @MathNode@ for some positive real number @MathNode@ and satisfies @MathEquation@"
+      [
+        "Then @MathNode@ belongs to @MathNode@ if",
+        [
+          "\u2022 either @MathNode@ is supported in @MathNode@",
+          "\u2022 or @MathNode@ is supported in @MathNode@ for some positive real number @MathNode@ and satisfies @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -753,8 +768,13 @@
       "Write @MathNode@.9@MathNode@ is not defined when there does not exist a path from time @MathNode@ to time @MathNode@.",
       "We simply omit undefined cases when we consider the limsup.",
       "In a more rigorous sense, it is the limsup of a subsequence of @MathNode@, where @MathNode@ is defined.",
-      "we have : \u2022 The quantity @MathNode@ is periodic, in the sense that @MathNode@.",
-      "\u2022 Let @MathNode@, then @MathEquation@"
+      [
+        "we have :",
+        [
+          "\u2022 The quantity @MathNode@ is periodic, in the sense that @MathNode@.",
+          "\u2022 Let @MathNode@, then @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -811,9 +831,14 @@
     "identifier": "Theorem 4.5.",
     "sentences": [
       "Let @MathNode@ be a finitely generated group acting fixed-point freely and minimally on a real tree @MathNode@, and @MathNode@ a subgroup fixing a point of @MathNode@.",
-      "Suppose that: \u2022 arc-stabilisers are finitely generated;",
-      "\u2022 a non-decreasing sequence of arc-stabilisers stabilises;",
-      "\u2022 for every arc @MathNode@, there does not exist @MathNode@ satisfying @MathNode@.",
+      [
+        "Suppose that:",
+        [
+          "\u2022 arc-stabilisers are finitely generated;",
+          "\u2022 a non-decreasing sequence of arc-stabilisers stabilises;",
+          "\u2022 for every arc @MathNode@, there does not exist @MathNode@ satisfying @MathNode@."
+        ]
+      ],
       "Assuming that @MathNode@ is not a line, then @MathNode@ splits relatively to @MathNode@ over a cyclic-by-(arc-stabiliser) subgroup."
     ]
   },
@@ -1181,9 +1206,14 @@
     "sentences": [
       "For any @MathNode@, there exists @MathNode@ such that for all @MathNode@ the following is true.",
       "Suppose @MathNode@ is a multigraph whose edges are coloured with @MathNode@ colours, such that each colour class is a disjoint union of cliques of order at most three.",
-      "If the edge-multiplicity of @MathNode@ is at most @MathNode@, and moreover, \u2022 @MathNode@ and @MathNode@, for every colour @MathNode@,",
-      "\u2022 @MathNode@, for every vertex @MathNode@,",
-      "then @MathNode@ contains a full rainbow matching."
+      [
+        "If the edge-multiplicity of @MathNode@ is at most @MathNode@, and moreover,",
+        [
+          "\u2022 @MathNode@ and @MathNode@, for every colour @MathNode@,",
+          "\u2022 @MathNode@, for every vertex @MathNode@,"
+        ],
+        "then @MathNode@ contains a full rainbow matching."
+      ]
     ]
   },
   {
@@ -1645,8 +1675,13 @@
     "sentences": [
       "Let @MathNode@ be a vertical edge in the hexagon.",
       "Define @MathNode@ (@MathNode@ are automatically integers with the present convention for coordinates).",
-      "One has @MathEquation@ where the integration contours on @MathNode@ and @MathNode@ have to chosen such that: \u2022 The @MathNode@ contour runs counter-clockwise and includes the integer real points @MathNode@ and no other integer point of the real line;",
-      "\u2022 The @MathNode@ contour runs counter-clockwise; it contains the @MathNode@ contour and also integer points @MathNode@ (it may contain other integer points)."
+      [
+        "One has @MathEquation@ where the integration contours on @MathNode@ and @MathNode@ have to chosen such that:",
+        [
+          "\u2022 The @MathNode@ contour runs counter-clockwise and includes the integer real points @MathNode@ and no other integer point of the real line;",
+          "\u2022 The @MathNode@ contour runs counter-clockwise; it contains the @MathNode@ contour and also integer points @MathNode@ (it may contain other integer points)."
+        ]
+      ]
     ]
   },
   {
@@ -1781,12 +1816,16 @@
     "sentences": [
       "Let @MathNode@ be a nonnegative integer.",
       "We have that @MathNode@ is divisible by @MathNode@ if and only if one of the following conditions holds.",
-      "\u2022 @MathNode@.",
-      "\u2022 @MathNode@.",
-      "\u2022 @MathNode@.",
-      "\u2022 @MathNode@.",
-      "\u2022 @MathNode@",
-      "\u2022 @MathNode@."
+      [
+        [
+          "\u2022 @MathNode@.",
+          "\u2022 @MathNode@.",
+          "\u2022 @MathNode@.",
+          "\u2022 @MathNode@.",
+          "\u2022 @MathNode@",
+          "\u2022 @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -1886,8 +1925,13 @@
     "paper": "https://ar5iv.org/abs/2208.07266",
     "identifier": "Theorem 6.4.",
     "sentences": [
-      "The multiplicity of @MathNode@ of @MathNode@ is the number of all @MathNode@-avoiding permutations @MathNode@ of @MathNode@ such that \u2022 For each @MathNode@, if @MathNode@ with @MathNode@, then @MathNode@.",
-      "\u2022 For each @MathNode@, if @MathNode@ with @MathNode@, then @MathNode@."
+      [
+        "The multiplicity of @MathNode@ of @MathNode@ is the number of all @MathNode@-avoiding permutations @MathNode@ of @MathNode@ such that",
+        [
+          "\u2022 For each @MathNode@, if @MathNode@ with @MathNode@, then @MathNode@.",
+          "\u2022 For each @MathNode@, if @MathNode@ with @MathNode@, then @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -2002,10 +2046,15 @@
     "identifier": "Theorem 5.1.",
     "sentences": [
       "Let @MathNode@.",
-      "If @MathNode@ is @MathNode@-extremal, then: \u2022 either @MathNode@",
-      "\u2022 or @MathNode@ is a symmetric odd wheel (only in the case @MathNode@),",
-      "\u2022 or @MathNode@ is a directed Haj\u00f3s join of two @MathNode@-extremal digraphs,",
-      "\u2022 or @MathNode@ is a Haj\u00f3s bijoin of two @MathNode@ extremal-digraphs."
+      [
+        "If @MathNode@ is @MathNode@-extremal, then:",
+        [
+          "\u2022 either @MathNode@",
+          "\u2022 or @MathNode@ is a symmetric odd wheel (only in the case @MathNode@),",
+          "\u2022 or @MathNode@ is a directed Haj\u00f3s join of two @MathNode@-extremal digraphs,",
+          "\u2022 or @MathNode@ is a Haj\u00f3s bijoin of two @MathNode@ extremal-digraphs."
+        ]
+      ]
     ]
   },
   {
@@ -2076,8 +2125,13 @@
     "paper": "https://ar5iv.org/abs/1805.03382",
     "identifier": "Theorem (Uniform Distribution on a Triangle).",
     "sentences": [
-      "The optimal mechanism for an additive buyer with value uniformly distributed in @MathNode@ (hence a correlated distribution) is as follows: \u2022 if @MathNode@, two menu items: @MathNode@ and @MathNode@;",
-      "\u2022 if @MathNode@, three menu items: @MathNode@, @MathNode@, and @MathNode@."
+      [
+        "The optimal mechanism for an additive buyer with value uniformly distributed in @MathNode@ (hence a correlated distribution) is as follows:",
+        [
+          "\u2022 if @MathNode@, two menu items: @MathNode@ and @MathNode@;",
+          "\u2022 if @MathNode@, three menu items: @MathNode@, @MathNode@, and @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -2335,10 +2389,15 @@
     "paper": "https://ar5iv.org/abs/2312.06649",
     "identifier": "Theorem 5.11 (Another structure theorem for spherical Gowers norms in @MathNode@).",
     "sentences": [
-      "For every @MathNode@, every @MathNode@, every @MathNode@, and every growth function @MathNode@, there exist @MathNode@ and @MathNode@ such that for every prime @MathNode@, every non-degenerate quadratic form @MathNode@, and every @MathNode@ taking values in @MathNode@, there exist a decomposition @MathEquation@ such that the followings hold: \u2022 @MathNode@ and @MathNode@ take values in @MathNode@;",
-      "\u2022 we may write @MathNode@ as @MathEquation@ for some @MathNode@-filtered nilmanifold @MathNode@ of degree at most @MathNode@ and complexity at most @MathNode@, some @MathNode@-irrational @MathNode@, and some @MathNode@ of Lipschitz norm at most @MathNode@;",
-      "\u2022 @MathNode@;",
-      "\u2022 @MathNode@."
+      [
+        "For every @MathNode@, every @MathNode@, every @MathNode@, and every growth function @MathNode@, there exist @MathNode@ and @MathNode@ such that for every prime @MathNode@, every non-degenerate quadratic form @MathNode@, and every @MathNode@ taking values in @MathNode@, there exist a decomposition @MathEquation@ such that the followings hold:",
+        [
+          "\u2022 @MathNode@ and @MathNode@ take values in @MathNode@;",
+          "\u2022 we may write @MathNode@ as @MathEquation@ for some @MathNode@-filtered nilmanifold @MathNode@ of degree at most @MathNode@ and complexity at most @MathNode@, some @MathNode@-irrational @MathNode@, and some @MathNode@ of Lipschitz norm at most @MathNode@;",
+          "\u2022 @MathNode@;",
+          "\u2022 @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -2527,8 +2586,13 @@
     "identifier": "Theorem 4.8.",
     "sentences": [
       "Suppose that @MathNode@ is a multigraph where each edge has a palette of size @MathNode@.",
-      "We can obtain an LFD of @MathNode@ of diameter @MathNode@ w.h.p., under the following conditions: \u2022 If @MathNode@, the complexity is @MathNode@ rounds and @MathNode@.",
-      "\u2022 If @MathNode@, the complexity is @MathNode@ rounds and @MathNode@."
+      [
+        "We can obtain an LFD of @MathNode@ of diameter @MathNode@ w.h.p., under the following conditions:",
+        [
+          "\u2022 If @MathNode@, the complexity is @MathNode@ rounds and @MathNode@.",
+          "\u2022 If @MathNode@, the complexity is @MathNode@ rounds and @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -2976,18 +3040,24 @@
       "Denote by @MathNode@ a smooth autonomous Hamiltonian on a closed symplectic manifold @MathNode@ of dimension at least 4.",
       "Let @MathNode@ be two points in @MathNode@.",
       "Suppose that there exists a smooth embedded curve @MathNode@ such that @MathNode@, such that @MathNode@ is not constant on @MathNode@, and the map @MathNode@ defined by @MathNode@ is a smooth embedding on @MathNode@.",
-      "Then, for any constants @MathNode@ and any neighborhood @MathNode@ of @MathNode@, there exist",
-      "\u2022 a Hamiltonian diffeomorphism @MathNode@,",
-      "\u2022 and a smooth embedded curve @MathNode@, where @MathNode@,",
-      "such that:",
-      "1. @MathNode@ for any @MathNode@,",
-      "2. There exists @MathNode@ such that for all @MathNode@, @MathNode@, and @MathNode@,",
-      "3. Let @MathNode@ be any neighborhood of the point @MathNode@.",
-      "Then, @MathNode@ can be chosen to satisfy the following property: @MathEquation@ for some small @MathNode@.",
-      "Furthermore, @MathNode@ for @MathNode@,",
-      "4. @MathNode@ and the Hamiltonian diffeomorphism @MathNode@ is generated by a Hamiltonian, say @MathNode@, such that @MathNode@.",
-      "Furthermore, @MathNode@ is supported inside @MathNode@,",
-      "5. @MathNode@ has the same set of fixed points as @MathNode@."
+      [
+        "Then, for any constants @MathNode@ and any neighborhood @MathNode@ of @MathNode@, there exist",
+        [
+          "\u2022 a Hamiltonian diffeomorphism @MathNode@,",
+          "\u2022 and a smooth embedded curve @MathNode@, where @MathNode@,"
+        ],
+        "such that:",
+        [
+          "1. @MathNode@ for any @MathNode@,",
+          "2. There exists @MathNode@ such that for all @MathNode@, @MathNode@, and @MathNode@,",
+          "3. Let @MathNode@ be any neighborhood of the point @MathNode@.",
+          "Then, @MathNode@ can be chosen to satisfy the following property: @MathEquation@ for some small @MathNode@.",
+          "Furthermore, @MathNode@ for @MathNode@,",
+          "4. @MathNode@ and the Hamiltonian diffeomorphism @MathNode@ is generated by a Hamiltonian, say @MathNode@, such that @MathNode@.",
+          "Furthermore, @MathNode@ is supported inside @MathNode@,",
+          "5. @MathNode@ has the same set of fixed points as @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -3361,11 +3431,16 @@
     "paper": "https://ar5iv.org/abs/1411.6322",
     "identifier": "Theorem C.1.",
     "sentences": [
-      "Given a symmetric matrix @MathNode@ such that exactly one row/column in @MathNode@ has a dominating diagonal, \u2022 it is NP-complete to check if game @MathNode@ has a mixed Nash stable (or linearly stable) strategy.",
-      "\u2022 it is NP-complete to check if game @MathNode@ has a mixed strict Nash stable strategy.",
-      "\u2022 it is NP-hard to check if dynamics (@LtxRef@) applied on @MathNode@ has a mixed stable fixed-point.",
-      "\u2022 it is NP-hard to check if dynamics (@LtxRef@) applied on @MathNode@ has a mixed asymptotically stable fixed-point.",
-      "even if @MathNode@ is a assumed to be positive."
+      [
+        "Given a symmetric matrix @MathNode@ such that exactly one row/column in @MathNode@ has a dominating diagonal,",
+        [
+          "\u2022 it is NP-complete to check if game @MathNode@ has a mixed Nash stable (or linearly stable) strategy.",
+          "\u2022 it is NP-complete to check if game @MathNode@ has a mixed strict Nash stable strategy.",
+          "\u2022 it is NP-hard to check if dynamics (@LtxRef@) applied on @MathNode@ has a mixed stable fixed-point.",
+          "\u2022 it is NP-hard to check if dynamics (@LtxRef@) applied on @MathNode@ has a mixed asymptotically stable fixed-point."
+        ],
+        "even if @MathNode@ is a assumed to be positive."
+      ]
     ]
   },
   {
@@ -3495,13 +3570,18 @@
     "paper": "https://ar5iv.org/abs/2306.03356",
     "identifier": "Theorem 4.1 (Informal version of Theorem @LtxRef@).",
     "sentences": [
-      "If the following conditions hold \u2022 Let @MathNode@ be the function family of @MathNode@-nearly orthonormal basis @MathNode@ as defined in Definition @LtxRef@.",
-      "\u2022 @MathNode@ is an unknown distribution on @MathNode@ over @MathNode@.",
-      "\u2022 Let @MathNode@ minimize @MathNode@.",
-      "\u2022 @MathNode@ is an orthogonal parameter.",
-      "\u2022 @MathNode@ is an accuracy parameter.",
-      "\u2022 Let the dataset @MathNode@ contains @MathNode@ i.i.d. unlabeled samples from @MathNode@.",
-      "\u2022 @MathNode@ represents the condition number.",
+      [
+        "If the following conditions hold",
+        [
+          "\u2022 Let @MathNode@ be the function family of @MathNode@-nearly orthonormal basis @MathNode@ as defined in Definition @LtxRef@.",
+          "\u2022 @MathNode@ is an unknown distribution on @MathNode@ over @MathNode@.",
+          "\u2022 Let @MathNode@ minimize @MathNode@.",
+          "\u2022 @MathNode@ is an orthogonal parameter.",
+          "\u2022 @MathNode@ is an accuracy parameter.",
+          "\u2022 Let the dataset @MathNode@ contains @MathNode@ i.i.d. unlabeled samples from @MathNode@.",
+          "\u2022 @MathNode@ represents the condition number."
+        ]
+      ],
       "Then, there exists a randomized algorithm that takes @MathNode@ labels to output a @MathNode@ such that, @MathGroup@"
     ]
   },
@@ -4136,8 +4216,12 @@
     "identifier": "Theorem 5.15\u2013",
     "sentences": [
       "Let @MathNode@ be a number field and @MathNode@ be an elliptic curve over @MathNode@.",
-      "\u2022 If Hypothesis @MathNode@ holds then the function @MathEquation@ where @MathNode@, is @MathNode@-mean-periodic (respectively @MathNode@-mean-periodic), and the function @MathNode@ is @MathNode@-mean-periodic (respectively @MathNode@-mean-periodic), where @MathNode@ is the inverse Mellin transform of @MathNode@ defined in (@LtxRef@).",
-      "\u2022 If @MathNode@ is @MathNode@-mean-periodic or @MathNode@-mean-periodic, or @MathNode@ is @MathNode@-mean-periodic or @MathNode@-mean-periodic, then @MathNode@ extends to a meromorphic function on @MathNode@, which satisfies the functional equation @MathEquation@"
+      [
+        [
+          "\u2022 If Hypothesis @MathNode@ holds then the function @MathEquation@ where @MathNode@, is @MathNode@-mean-periodic (respectively @MathNode@-mean-periodic), and the function @MathNode@ is @MathNode@-mean-periodic (respectively @MathNode@-mean-periodic), where @MathNode@ is the inverse Mellin transform of @MathNode@ defined in (@LtxRef@).",
+          "\u2022 If @MathNode@ is @MathNode@-mean-periodic or @MathNode@-mean-periodic, or @MathNode@ is @MathNode@-mean-periodic or @MathNode@-mean-periodic, then @MathNode@ extends to a meromorphic function on @MathNode@, which satisfies the functional equation @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -4210,10 +4294,15 @@
     "paper": "https://ar5iv.org/abs/2402.12364",
     "identifier": "Theorem 1.4.",
     "sentences": [
-      "The data structure of @LtxRef@, when furthermore initialized with a given integer @MathNode@, can also support the following operations: \u2022 @MathNode@: Given an edge update sentence @MathNode@ of length at most @MathNode@, either returns that the graph resulting from applying @MathNode@ to @MathNode@ would have rankwidth more than @MathNode@, or applies @MathNode@ to update @MathNode@.",
-      "Runs in @MathNode@ amortized time.",
-      "\u2022 @MathNode@: Given a @MathNode@ sentence @MathNode@ of length at most @MathNode@ with @MathNode@ free set variables and @MathNode@ vertex subsets @MathNode@, returns the value of @MathNode@ on @MathNode@.",
-      "Runs in time @MathNode@ if @MathNode@, and in time @MathNode@ otherwise."
+      [
+        "The data structure of @LtxRef@, when furthermore initialized with a given integer @MathNode@, can also support the following operations:",
+        [
+          "\u2022 @MathNode@: Given an edge update sentence @MathNode@ of length at most @MathNode@, either returns that the graph resulting from applying @MathNode@ to @MathNode@ would have rankwidth more than @MathNode@, or applies @MathNode@ to update @MathNode@.",
+          "Runs in @MathNode@ amortized time.",
+          "\u2022 @MathNode@: Given a @MathNode@ sentence @MathNode@ of length at most @MathNode@ with @MathNode@ free set variables and @MathNode@ vertex subsets @MathNode@, returns the value of @MathNode@ on @MathNode@.",
+          "Runs in time @MathNode@ if @MathNode@, and in time @MathNode@ otherwise."
+        ]
+      ]
     ]
   },
   {
@@ -4302,11 +4391,20 @@
       "Let @MathNode@ be a locally compact quantum group.",
       "Let @MathNode@ be a reduced continuous coaction of @MathNode@ on the C\u2217-algebra @MathNode@.",
       "Then, the following conditions are equivalent.",
-      "a)",
-      "There exists a C\u2217-algebra @MathNode@ and a continuous coaction @MathNode@ such that @MathNode@, where @MathNode@ denotes the dual coaction.",
-      "b) There exists a corepresentation @MathNode@ of @MathNode@ in @MathNode@ which is covariant in the sense that @MathEquation@",
-      "If the second condition is fulfilled, @MathNode@ can be taken as the unique C\u2217-subalgebra of @MathNode@ satisfying \u2022 the map @MathNode@ defines a continuous coaction of @MathNode@ on @MathNode@;",
-      "\u2022 @MathNode@ is the closed linear span of @MathNode@.",
+      [
+        [
+          "a)",
+          "There exists a C\u2217-algebra @MathNode@ and a continuous coaction @MathNode@ such that @MathNode@, where @MathNode@ denotes the dual coaction.",
+          "b) There exists a corepresentation @MathNode@ of @MathNode@ in @MathNode@ which is covariant in the sense that @MathEquation@"
+        ]
+      ],
+      [
+        "If the second condition is fulfilled, @MathNode@ can be taken as the unique C\u2217-subalgebra of @MathNode@ satisfying",
+        [
+          "\u2022 the map @MathNode@ defines a continuous coaction of @MathNode@ on @MathNode@;",
+          "\u2022 @MathNode@ is the closed linear span of @MathNode@."
+        ]
+      ],
       "Moreover, an explicit \u2217-isomorphism @MathNode@ is then given by @MathNode@."
     ]
   },
@@ -4860,8 +4958,13 @@
     "sentences": [
       "Let @MathNode@ have Kalton\u2019s property.",
       "Then @MathNode@ is tight.",
-      "More precisely, for every @MathNode@ there exist a compact @MathNode@ and a linear map @MathNode@ such that \u2022 @MathNode@ for all @MathNode@, and",
-      "\u2022 there is a sequence of bounded linear operators @MathNode@ such that @MathNode@ uniformly on @MathNode@."
+      [
+        "More precisely, for every @MathNode@ there exist a compact @MathNode@ and a linear map @MathNode@ such that",
+        [
+          "\u2022 @MathNode@ for all @MathNode@, and",
+          "\u2022 there is a sequence of bounded linear operators @MathNode@ such that @MathNode@ uniformly on @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -4887,18 +4990,29 @@
     "identifier": "Theorem 4.5.",
     "sentences": [
       "Suppose the billiard table @MathNode@ satisfies assumptions @LtxRef@, @LtxRef@ and @LtxRef@.",
-      "Assume that 1. the generalization of Theorem @LtxRef@, or alternatively, Theorem 5.67 from @LtxCite@ is proven for this class of billiards, with @MathNode@ replaced by @MathNode@,",
-      "2. the generalization of Theorem @LtxRef@, or alternatively, Proposition 5.48 from @LtxCite@ is proven for this class of billiards, with @MathNode@ replaced by @MathNode@,",
-      "3. the generalization of Theorem @LtxRef@, or alternatively, Theorem 5.42 from @LtxCite@ is proven for this class of billiards, with @MathNode@ replaced by @MathNode@,",
-      "4. the generalization of Theorem @LtxRef@ (which is Corollary 1.3 in @LtxCite@) is proven for this class of billiards.",
+      [
+        "Assume that",
+        [
+          "1. the generalization of Theorem @LtxRef@, or alternatively, Theorem 5.67 from @LtxCite@ is proven for this class of billiards, with @MathNode@ replaced by @MathNode@,",
+          "2. the generalization of Theorem @LtxRef@, or alternatively, Proposition 5.48 from @LtxCite@ is proven for this class of billiards, with @MathNode@ replaced by @MathNode@,",
+          "3. the generalization of Theorem @LtxRef@, or alternatively, Theorem 5.42 from @LtxCite@ is proven for this class of billiards, with @MathNode@ replaced by @MathNode@,",
+          "4. the generalization of Theorem @LtxRef@ (which is Corollary 1.3 in @LtxCite@) is proven for this class of billiards."
+        ]
+      ],
       "Then there is exponential equidistribution for the evolution of the standard pair under the flow:",
       "Let @MathNode@, @MathNode@ and @MathNode@.",
       "Then there exist @MathNode@ and @MathNode@ with the following properties:",
       "Let @MathNode@ be a standard pair with a dynamically @MathNode@-H\u00f6lder @MathNode@.",
       "Assume that the @MathNode@-neighbourhood of @MathNode@ is disjoint from the boundary of @MathNode@.",
       "Let @MathNode@ be generalized @MathNode@-H\u00f6lder continuous.",
-      "Then, for every @MathNode@, @MathEquation@ Here \u2022 @MathNode@ and @MathNode@ depend on the billiard table @MathNode@, the regularity of good @MathNode@-curves quantified in @MathNode@, and the regularity classes of @MathNode@ and @MathNode@ given by @MathNode@ and @MathNode@.",
-      "They do not depend on @MathNode@, @MathNode@ and @MathNode@.",
+      "Then, for every @MathNode@, @MathEquation@",
+      [
+        "Here",
+        [
+          "\u2022 @MathNode@ and @MathNode@ depend on the billiard table @MathNode@, the regularity of good @MathNode@-curves quantified in @MathNode@, and the regularity classes of @MathNode@ and @MathNode@ given by @MathNode@ and @MathNode@.",
+          "They do not depend on @MathNode@, @MathNode@ and @MathNode@."
+        ]
+      ],
       "Moreover, @MathNode@ depends on @MathNode@ only through @MathNode@ from (@LtxRef@) and @MathNode@ from the generalization of Theorem @LtxRef@ with some @MathNode@.",
       "Similarly, @MathNode@ depends on @MathNode@ only through @MathNode@ from the generalization of Theorem @LtxRef@ with the same @MathNode@.",
       "That is, @MathEquation@ and @MathEquation@"
@@ -5536,9 +5650,13 @@
     "paper": "https://ar5iv.org/abs/1911.06358",
     "identifier": "Theorem 3.1",
     "sentences": [
-      "For any constants @MathNode@ and @MathNode@, there exists a choice of @MathNode@ and @MathNode@ in Theorem @LtxRef@ and a polynomial time reduction from the corresponding @MathNode@ instance @MathNode@ to a distribution @MathNode@ supported on point label pairs in @MathNode@ such that \u2022 Completeness:",
-      "If @MathNode@ is a YES instance, then there exists two ORs @MathNode@ and @MathNode@ such that @MathEquation@",
-      "\u2022 Soundness: If @MathNode@ is a NO instance, then for any function @MathNode@ of @MathNode@-halfspaces @MathEquation@"
+      [
+        "For any constants @MathNode@ and @MathNode@, there exists a choice of @MathNode@ and @MathNode@ in Theorem @LtxRef@ and a polynomial time reduction from the corresponding @MathNode@ instance @MathNode@ to a distribution @MathNode@ supported on point label pairs in @MathNode@ such that",
+        [
+          "\u2022 Completeness: If @MathNode@ is a YES instance, then there exists two ORs @MathNode@ and @MathNode@ such that @MathEquation@",
+          "\u2022 Soundness: If @MathNode@ is a NO instance, then for any function @MathNode@ of @MathNode@-halfspaces @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -5744,8 +5862,13 @@
     "paper": "https://ar5iv.org/abs/1702.08079",
     "identifier": "Theorem 7.",
     "sentences": [
-      "In a conflict digraph @MathNode@, an arc is critical, if it belongs to the following: \u2022 the unique minimal dicycle when the dicycle-vertex incidence matrix of @MathNode@ is ideal;",
-      "\u2022 the unique maximal clique when @MathNode@ is a perfect digraph."
+      [
+        "In a conflict digraph @MathNode@, an arc is critical, if it belongs to the following:",
+        [
+          "\u2022 the unique minimal dicycle when the dicycle-vertex incidence matrix of @MathNode@ is ideal;",
+          "\u2022 the unique maximal clique when @MathNode@ is a perfect digraph."
+        ]
+      ]
     ]
   },
   {
@@ -6249,8 +6372,12 @@
     "identifier": "Theorem 2.1 (@LtxCite@).",
     "sentences": [
       "Let @MathNode@ be a @MathNode@-Fano variety.",
-      "\u2022 @MathNode@ is @MathNode@-semistable if and only if @MathNode@;",
-      "\u2022 @MathNode@ is uniformly @MathNode@-stable if and only if @MathNode@."
+      [
+        [
+          "\u2022 @MathNode@ is @MathNode@-semistable if and only if @MathNode@;",
+          "\u2022 @MathNode@ is uniformly @MathNode@-stable if and only if @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -6948,9 +7075,14 @@
     "identifier": "Theorem 7.14 (@LtxCite@, Theorem 3.2.18).",
     "sentences": [
       "Let @MathNode@ be an integer.",
-      "Then \u2022 @MathNode@,",
-      "\u2022 @MathNode@",
-      "\u2022 @MathNode@",
+      [
+        "Then",
+        [
+          "\u2022 @MathNode@,",
+          "\u2022 @MathNode@",
+          "\u2022 @MathNode@"
+        ]
+      ],
       "In particular @MathEquation@"
     ]
   },
@@ -7542,18 +7674,32 @@
     "identifier": "Theorem 3.5 (Static ACR in networks with 2 reactions and 2 or fewer species).",
     "sentences": [
       "Let @MathNode@ be as in (@LtxRef@)-(@LtxRef@).",
-      "The following are equivalent: 1. @MathNode@ has the capacity for static ACR.",
-      "2. @MathNode@ is static ACR.",
-      "3. @MathNode@ is strong static ACR.",
-      "4. \u2022 the two source complexes are different: @MathNode@",
-      "\u2022 the source complexes share a common coordinate: @MathNode@, and",
-      "\u2022 reaction vectors are negative scalar multiples of each other: @MathNode@ (in particular @MathNode@).",
-      "Furthermore, the following hold when @MathNode@ has 2 species and is static ACR.",
-      "\u2022 Either @MathNode@ or @MathNode@, but not both, is a static ACR species.",
-      "\u2022 @MathNode@ is an ACR species if @MathNode@.",
-      "The variable @MathNode@ has the static ACR value @MathNode@.",
-      "\u2022 @MathNode@ is an ACR species if @MathNode@.",
-      "The variable @MathNode@ has the static ACR value @MathNode@."
+      [
+        "The following are equivalent:",
+        [
+          "1. @MathNode@ has the capacity for static ACR.",
+          "2. @MathNode@ is static ACR.",
+          "3. @MathNode@ is strong static ACR.",
+          [
+            "4.",
+            [
+              "\u2022 the two source complexes are different: @MathNode@",
+              "\u2022 the source complexes share a common coordinate: @MathNode@, and",
+              "\u2022 reaction vectors are negative scalar multiples of each other: @MathNode@ (in particular @MathNode@)."
+            ],
+            "Furthermore, the following hold when @MathNode@ has 2 species and is static ACR."
+          ],
+          [
+            [
+              "\u2022 Either @MathNode@ or @MathNode@, but not both, is a static ACR species.",
+              "\u2022 @MathNode@ is an ACR species if @MathNode@.",
+              "The variable @MathNode@ has the static ACR value @MathNode@.",
+              "\u2022 @MathNode@ is an ACR species if @MathNode@.",
+              "The variable @MathNode@ has the static ACR value @MathNode@."
+            ]
+          ]
+        ]
+      ]
     ]
   },
   {
@@ -7912,10 +8058,15 @@
     "sentences": [
       "Let @MathNode@ be a BX2P-folder and @MathNode@.",
       "Suppose @MathNode@ is a finite nonabelian simple group.",
-      "If @MathNode@, then: \u2022 There exists an integer @MathNode@ with @MathNode@ or @MathNode@ a Fermat prime, @MathNode@,",
-      "\u2022 @MathNode@ or @MathNode@ (for @MathNode@ only),",
-      "\u2022 @MathNode@ and",
-      "\u2022 @MathNode@ consists of 1 and all involutions in @MathNode@ outside @MathNode@.",
+      [
+        "If @MathNode@, then:",
+        [
+          "\u2022 There exists an integer @MathNode@ with @MathNode@ or @MathNode@ a Fermat prime, @MathNode@,",
+          "\u2022 @MathNode@ or @MathNode@ (for @MathNode@ only),",
+          "\u2022 @MathNode@ and",
+          "\u2022 @MathNode@ consists of 1 and all involutions in @MathNode@ outside @MathNode@."
+        ]
+      ],
       "In particular the nonpassive simple groups are among the groups @MathNode@ for @MathNode@ or a Fermat prime @MathNode@."
     ]
   },
@@ -8959,14 +9110,24 @@
     "paper": "https://ar5iv.org/abs/1301.3940",
     "identifier": "Theorem 1.1.",
     "sentences": [
-      "Assume that 1. @MathNode@ are independent standardized random variables.",
-      "2. There exists a @MathNode@ and a random variable @MathNode@ with finite fourth moment for which there exists @MathNode@ and integer number @MathNode@ such that, for any @MathNode@ and any integer numbers @MathNode@, we have @MathEquation@",
-      "3. There exists a positive function @MathNode@ as @MathNode@ and @MathNode@ such that @MathEquation@",
-      "4. @MathNode@ is an @MathNode@ nonrandom matrix such that @MathNode@ is uniformly bounded.",
-      "5. As @MathNode@ tends to infinity, @MathNode@.",
-      "6. The empirical spectral measure @MathNode@ of @MathNode@ converges weakly to some probability distribution @MathNode@.",
-      "7. Let @MathNode@ be such that the couple @MathNode@ of the following properties is satisfied: \u2022 (i) there exists @MathNode@ such that for all large @MathNode@, @MathNode@,",
-      "\u2022 (ii) @MathNode@ denoting the matrix resulting from removing the @MathNode@-th column from @MathNode@, there exists @MathNode@ and a positive @MathNode@ such that for all @MathNode@ large, the number of j\u2019s with no eigenvalues of @MathNode@ appearing in @MathNode@ is greater than @MathNode@.",
+      [
+        "Assume that",
+        [
+          "1. @MathNode@ are independent standardized random variables.",
+          "2. There exists a @MathNode@ and a random variable @MathNode@ with finite fourth moment for which there exists @MathNode@ and integer number @MathNode@ such that, for any @MathNode@ and any integer numbers @MathNode@, we have @MathEquation@",
+          "3. There exists a positive function @MathNode@ as @MathNode@ and @MathNode@ such that @MathEquation@",
+          "4. @MathNode@ is an @MathNode@ nonrandom matrix such that @MathNode@ is uniformly bounded.",
+          "5. As @MathNode@ tends to infinity, @MathNode@.",
+          "6. The empirical spectral measure @MathNode@ of @MathNode@ converges weakly to some probability distribution @MathNode@.",
+          [
+            "7. Let @MathNode@ be such that the couple @MathNode@ of the following properties is satisfied:",
+            [
+              "\u2022 (i) there exists @MathNode@ such that for all large @MathNode@, @MathNode@,",
+              "\u2022 (ii) @MathNode@ denoting the matrix resulting from removing the @MathNode@-th column from @MathNode@, there exists @MathNode@ and a positive @MathNode@ such that for all @MathNode@ large, the number of j\u2019s with no eigenvalues of @MathNode@ appearing in @MathNode@ is greater than @MathNode@."
+            ]
+          ]
+        ]
+      ],
       "Then, @MathNode@ being defined in (@LtxRef@), @MathEquation@"
     ]
   },
@@ -9213,7 +9374,12 @@
     "paper": "https://ar5iv.org/abs/1609.00610",
     "identifier": "Theorem 1.4 (Sequential composition preserves the refinement relation).",
     "sentences": [
-      "Given two IBAs @MathNode@ and @MathNode@ and two replacements @MathNode@ and @MathNode@ for the black box state @MathNode@ of @MathNode@, \u2022 if @MathNode@ and @MathNode@ then @MathNode@"
+      [
+        "Given two IBAs @MathNode@ and @MathNode@ and two replacements @MathNode@ and @MathNode@ for the black box state @MathNode@ of @MathNode@,",
+        [
+          "\u2022 if @MathNode@ and @MathNode@ then @MathNode@"
+        ]
+      ]
     ]
   },
   {

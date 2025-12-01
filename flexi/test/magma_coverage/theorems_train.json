@@ -273,8 +273,13 @@
     "paper": "https://ar5iv.org/abs/2004.09613",
     "identifier": "Theorem 5.",
     "sentences": [
-      "The expected fixed-target time for Algorithm @LtxRef@ with @MathNode@, whose mutation distribution @MathNode@ selects a single bit to flip with probability @MathNode@, to reach a target of at least @MathNode@ on OneMax of size @MathNode@ is at most: \u2022 @MathNode@ when initializing with the worst solution;",
-      "\u2022 @MathNode@ when initializing randomly, assuming @MathNode@."
+      [
+        "The expected fixed-target time for Algorithm @LtxRef@ with @MathNode@, whose mutation distribution @MathNode@ selects a single bit to flip with probability @MathNode@, to reach a target of at least @MathNode@ on OneMax of size @MathNode@ is at most:",
+        [
+          "\u2022 @MathNode@ when initializing with the worst solution;",
+          "\u2022 @MathNode@ when initializing randomly, assuming @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -872,8 +877,13 @@
     "identifier": "Theorem 2.1.",
     "sentences": [
       "We consider a BRW on a Cayley graph @MathNode@ with law @MathNode@ and offspring distribution @MathNode@ (whose support excludes @MathNode@) and mean @MathNode@.",
-      "Then: \u2022 if @MathNode@ and @MathNode@ then @MathEquation@",
-      "\u2022 if @MathNode@ then @MathEquation@"
+      [
+        "Then:",
+        [
+          "\u2022 if @MathNode@ and @MathNode@ then @MathEquation@",
+          "\u2022 if @MathNode@ then @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -2082,14 +2092,19 @@
     "paper": "https://ar5iv.org/abs/math/0506130",
     "identifier": "Theorem 0.4",
     "sentences": [
-      "The analytic algebraic actions of @MathNode@ on surfaces (with or without boundary) consist exactly of: \u2022 the projective action (on @MathNode@),",
-      "\u2022 the conformal action (on @MathNode@),",
-      "\u2022 the standard product action on @MathNode@,",
-      "\u2022 one action on the projective plane with an open dense orbit,",
-      "\u2022 a countable family of actions on the Klein bottle,",
-      "\u2022 a countable family of actions on the torus with two open cylindric orbits and two circular orbits,",
-      "\u2022 a countable family of actions on the torus with four open cylindric orbits and four circular orbits,",
-      "and of any subaction (i.e. union of orbits) of any one of these actions."
+      [
+        "The analytic algebraic actions of @MathNode@ on surfaces (with or without boundary) consist exactly of:",
+        [
+          "\u2022 the projective action (on @MathNode@),",
+          "\u2022 the conformal action (on @MathNode@),",
+          "\u2022 the standard product action on @MathNode@,",
+          "\u2022 one action on the projective plane with an open dense orbit,",
+          "\u2022 a countable family of actions on the Klein bottle,",
+          "\u2022 a countable family of actions on the torus with two open cylindric orbits and two circular orbits,",
+          "\u2022 a countable family of actions on the torus with four open cylindric orbits and four circular orbits,"
+        ],
+        "and of any subaction (i.e. union of orbits) of any one of these actions."
+      ]
     ]
   },
   {
@@ -2324,8 +2339,13 @@
     "sentences": [
       "Let @MathNode@ be a semisimple Lie group with finite center and finitely many connected components.",
       "Let @MathNode@ be a minimal parabolic subgroup, @MathNode@ a maximal split torus and @MathNode@ a representative of the longest element in the Weyl group associated to @MathNode@.",
-      "Then \u2022 @MathNode@ for @MathNode@;",
-      "\u2022 @MathNode@ for @MathNode@."
+      [
+        "Then",
+        [
+          "\u2022 @MathNode@ for @MathNode@;",
+          "\u2022 @MathNode@ for @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -3145,10 +3165,15 @@
       "Moreover, @MathNode@ is homotopical Lie, for any @MathNode@",
       "(ii) The algebra @MathNode@ is @MathNode@-left commutative, if and only if @MathNode@",
       "(iii)",
-      "The algebra @MathNode@ is @MathNode@-Lie, if and only if one of the following conditions are hold \u2022 @MathNode@ and @MathNode@ is any prime number or @MathNode@",
-      "\u2022 @MathNode@ and @MathNode@",
-      "\u2022 @MathNode@ and @MathNode@",
-      "\u2022 @MathNode@ and @MathNode@"
+      [
+        "The algebra @MathNode@ is @MathNode@-Lie, if and only if one of the following conditions are hold",
+        [
+          "\u2022 @MathNode@ and @MathNode@ is any prime number or @MathNode@",
+          "\u2022 @MathNode@ and @MathNode@",
+          "\u2022 @MathNode@ and @MathNode@",
+          "\u2022 @MathNode@ and @MathNode@"
+        ]
+      ]
     ]
   },
   {
@@ -3336,8 +3361,13 @@
     "identifier": "Theorem 3.",
     "sentences": [
       "Suppose @MathNode@ and @MathNode@ and @MathNode@ are @MathNode@ non-negative convex functions satisfying @MathNode@.",
-      "For every @MathNode@, we have the following dichotomy: \u2022 Either the escaping radially symmetric vortex solutions @MathNode@ exist and they are the only two minimizers of @MathNode@ in @MathNode@,",
-      "\u2022 Or the escaping radially symmetric vortex solutions @MathNode@ do not exist and the non-escaping vortex solution @MathNode@ is the unique minimizer of @MathNode@ in @MathNode@.",
+      [
+        "For every @MathNode@, we have the following dichotomy:",
+        [
+          "\u2022 Either the escaping radially symmetric vortex solutions @MathNode@ exist and they are the only two minimizers of @MathNode@ in @MathNode@,",
+          "\u2022 Or the escaping radially symmetric vortex solutions @MathNode@ do not exist and the non-escaping vortex solution @MathNode@ is the unique minimizer of @MathNode@ in @MathNode@."
+        ]
+      ],
       "In particular, minimizers of @MathNode@ in @MathNode@ are always radially symmetric for every @MathNode@."
     ]
   },
@@ -3734,11 +3764,16 @@
     "identifier": "Theorem 1.3.",
     "sentences": [
       "Let @MathNode@ be a contracting rigid germ.",
-      "Then @MathNode@ is holomorphically conjugated to @MathEquation@ where \u2022 @MathNode@, @MathNode@ and @MathNode@;",
-      "\u2022 @MathNode@ and @MathNode@;",
-      "\u2022 @MathNode@ is a permutation matrix, @MathNode@ and @MathNode@;",
-      "\u2022 @MathNode@, @MathNode@;",
-      "\u2022 @MathNode@."
+      [
+        "Then @MathNode@ is holomorphically conjugated to @MathEquation@ where",
+        [
+          "\u2022 @MathNode@, @MathNode@ and @MathNode@;",
+          "\u2022 @MathNode@ and @MathNode@;",
+          "\u2022 @MathNode@ is a permutation matrix, @MathNode@ and @MathNode@;",
+          "\u2022 @MathNode@, @MathNode@;",
+          "\u2022 @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -3923,8 +3958,13 @@
     "paper": "https://ar5iv.org/abs/1604.04928",
     "identifier": "Theorem 3.2.",
     "sentences": [
-      "When @MathNode@, there always exists a unique threshold @MathNode@ such that @MathNode@ is a symmetric BNE for the PA game: \u2022 When @MathNode@, @MathNode@.",
-      "\u2022 O.w. @MathNode@ is the unique solution to Eqn. (@LtxRef@)."
+      [
+        "When @MathNode@, there always exists a unique threshold @MathNode@ such that @MathNode@ is a symmetric BNE for the PA game:",
+        [
+          "\u2022 When @MathNode@, @MathNode@.",
+          "\u2022 O.w. @MathNode@ is the unique solution to Eqn. (@LtxRef@)."
+        ]
+      ]
     ]
   },
   {
@@ -4255,8 +4295,13 @@
       "Let @MathNode@ be a @MathNode@-finite measure space with a basis of sets @MathNode@.",
       "Let @MathNode@, let @MathNode@ be a set, and let @MathNode@ be a map.",
       "Moreover, suppose @MathEquation@ is a map for which there is an increasing function @MathNode@ such that for all @MathNode@ and @MathNode@ with @MathNode@ we have @MathEquation@ Let @MathNode@ be a Banach function space over @MathNode@.",
-      "Then @MathNode@ is well-defined for any @MathNode@ with @MathNode@ and for all sequences @MathNode@ in @MathNode@ with @MathNode@ we have @MathEquation@ provided that the following holds: \u2022 If @MathNode@, @MathEquation@ is bounded.",
-      "\u2022 If @MathNode@, @MathEquation@ is bounded."
+      [
+        "Then @MathNode@ is well-defined for any @MathNode@ with @MathNode@ and for all sequences @MathNode@ in @MathNode@ with @MathNode@ we have @MathEquation@ provided that the following holds:",
+        [
+          "\u2022 If @MathNode@, @MathEquation@ is bounded.",
+          "\u2022 If @MathNode@, @MathEquation@ is bounded."
+        ]
+      ]
     ]
   },
   {
@@ -4467,8 +4512,13 @@
     "paper": "https://ar5iv.org/abs/math/0604074",
     "identifier": "Theorem 2.6 (Th. 4.1 in @LtxCite@)",
     "sentences": [
-      "Let @MathNode@ be the Laguerre-Sobolev orthogonal polynomials of case II, then for @MathNode@ \u2022 All the zeros of @MathNode@ are real, simple, and at most one of them is in @MathNode@",
-      "\u2022 The zeros of @MathNode@ interlace with the zeros of Laguerre @MathNode@ in the same sense as (@LtxRef@)."
+      [
+        "Let @MathNode@ be the Laguerre-Sobolev orthogonal polynomials of case II, then for @MathNode@",
+        [
+          "\u2022 All the zeros of @MathNode@ are real, simple, and at most one of them is in @MathNode@",
+          "\u2022 The zeros of @MathNode@ interlace with the zeros of Laguerre @MathNode@ in the same sense as (@LtxRef@)."
+        ]
+      ]
     ]
   },
   {
@@ -4649,8 +4699,13 @@
     "identifier": "Theorem 2.6",
     "sentences": [
       "Let @MathNode@ be a connected graph of the theory (@LtxRef@) with an attribution.",
-      "For any quasilocal subgraph @MathNode@ with @MathNode@, \u2022 The counterterm @MathNode@ is a functional of the form of (@LtxRef@) in the field @MathNode@ (but divergent for @MathNode@ together with @MathNode@).",
-      "\u2022 The rest @MathNode@ is convergent for @MathNode@."
+      [
+        "For any quasilocal subgraph @MathNode@ with @MathNode@,",
+        [
+          "\u2022 The counterterm @MathNode@ is a functional of the form of (@LtxRef@) in the field @MathNode@ (but divergent for @MathNode@ together with @MathNode@).",
+          "\u2022 The rest @MathNode@ is convergent for @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -4972,10 +5027,14 @@
       "There exists an @MathNode@-qubit Hamiltonian @MathNode@, which is a sum of commuting local terms, each of which can be computed in time polynomial in @MathNode@ from @MathNode@ and @MathNode@, and which has the following properties.",
       "The states @MathNode@ and @MathNode@ are zero energy ground states of @MathNode@.",
       "Moreover, for any @MathNode@, @MathNode@ such that @MathNode@, the following hold.",
-      "\u2022 (Completeness) Suppose @MathNode@ for some efficiently preparable state @MathNode@.",
-      "Then there exists a sequence of 2-local unitaries @MathNode@, for @MathNode@, such that @MathEquation@ and @MathEquation@ where @MathNode@.",
-      "\u2022 (Soundness) Suppose @MathNode@ for all @MathNode@.",
-      "Then for any sequence of 2-local unitaries @MathNode@ satisfying @MathEquation@ we have @MathEquation@"
+      [
+        [
+          "\u2022 (Completeness) Suppose @MathNode@ for some efficiently preparable state @MathNode@.",
+          "Then there exists a sequence of 2-local unitaries @MathNode@, for @MathNode@, such that @MathEquation@ and @MathEquation@ where @MathNode@.",
+          "\u2022 (Soundness) Suppose @MathNode@ for all @MathNode@.",
+          "Then for any sequence of 2-local unitaries @MathNode@ satisfying @MathEquation@ we have @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -5571,11 +5630,16 @@
     "paper": "https://ar5iv.org/abs/2102.08020",
     "identifier": "Theorem 1.7 (Fundamental examples of concentrated vectors).",
     "sentences": [
-      "The following sequences of random vectors are concentrated and satisfy @MathNode@: \u2022 @MathNode@ is uniformly distributed on the sphere @MathNode@.",
-      "\u2022 @MathNode@ has independent standard Gaussian entries.",
-      "\u2022 @MathNode@ is uniformly distributed on the ball @MathNode@.",
-      "\u2022 @MathNode@ is uniformly distributed on @MathNode@.",
-      "\u2022 @MathNode@ has the density @MathNode@ where @MathNode@ is a positive functional with Hessian bounded from below by, say, @MathNode@ with @MathNode@ and @MathNode@ is the Lebesgue measure on @MathNode@.",
+      [
+        "The following sequences of random vectors are concentrated and satisfy @MathNode@:",
+        [
+          "\u2022 @MathNode@ is uniformly distributed on the sphere @MathNode@.",
+          "\u2022 @MathNode@ has independent standard Gaussian entries.",
+          "\u2022 @MathNode@ is uniformly distributed on the ball @MathNode@.",
+          "\u2022 @MathNode@ is uniformly distributed on @MathNode@.",
+          "\u2022 @MathNode@ has the density @MathNode@ where @MathNode@ is a positive functional with Hessian bounded from below by, say, @MathNode@ with @MathNode@ and @MathNode@ is the Lebesgue measure on @MathNode@."
+        ]
+      ],
       "Some fundamental results also give concentrations @MathNode@ (when @MathNode@ has independent entries with density density @MathNode@, @LtxCite@) or @MathNode@ (when @MathNode@ is uniformly distributed on the unit ball of the norm @MathNode@, @LtxCite@). ."
     ]
   },
@@ -5655,9 +5719,14 @@
     "paper": "https://ar5iv.org/abs/1805.02180",
     "identifier": "Theorem 1.5 (Metric @MathNode@-transforms)",
     "sentences": [
-      "There is a family of @MathNode@-transforms, @MathNode@, @MathNode@, we call the metric @MathNode@-transforms, with the following properties: \u2022 The @MathNode@-skins @MathNode@ of @MathNode@ bound the outer @MathNode@-distance collar of @MathNode@ in @MathNode@.",
-      "\u2022 @MathNode@",
-      "\u2022 @MathNode@."
+      [
+        "There is a family of @MathNode@-transforms, @MathNode@, @MathNode@, we call the metric @MathNode@-transforms, with the following properties:",
+        [
+          "\u2022 The @MathNode@-skins @MathNode@ of @MathNode@ bound the outer @MathNode@-distance collar of @MathNode@ in @MathNode@.",
+          "\u2022 @MathNode@",
+          "\u2022 @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -5885,8 +5954,13 @@
       "Let @MathNode@ be one of polynomials from Proposition @LtxRef@.",
       "Let @MathNode@ be a knot @MathNode@ from Lemma @LtxRef@.",
       "Let @MathNode@ be a copy of the complement of the trivial string link with @MathNode@ components embedded in @MathNode@ such that each meridian @MathNode@ of @MathNode@ is mapped to a unique @MathNode@ from Lemma @LtxRef@.",
-      "Let @MathNode@ be a @MathNode@-component string link such that \u2022 the standard closure of @MathNode@ is a ribbon link from Proposition @LtxRef@",
-      "\u2022 the torsion Alexander polynomial @MathNode@",
+      [
+        "Let @MathNode@ be a @MathNode@-component string link such that",
+        [
+          "\u2022 the standard closure of @MathNode@ is a ribbon link from Proposition @LtxRef@",
+          "\u2022 the torsion Alexander polynomial @MathNode@"
+        ]
+      ],
       "Let @MathNode@ be an unknotted representative of the generator of @MathNode@ which exists by Proposition @LtxRef@.",
       "Let @MathNode@ be robust doubling operators as in @LtxCite@ for all @MathNode@, note that these are knots.",
       "Let @MathNode@.",
@@ -6127,8 +6201,13 @@
     "identifier": "Theorem 3.2.",
     "sentences": [
       "Let @MathNode@ be a finite set of (distinct) odd primes.",
-      "Suppose that @MathNode@ is a @MathNode@\u2013homology @MathNode@\u2013ball and @MathNode@, where \u2022 @MathNode@ for each @MathNode@ and some @MathNode@.",
-      "\u2022 @MathNode@ is a @MathNode@\u2013homology @MathNode@\u2013sphere.",
+      [
+        "Suppose that @MathNode@ is a @MathNode@\u2013homology @MathNode@\u2013ball and @MathNode@, where",
+        [
+          "\u2022 @MathNode@ for each @MathNode@ and some @MathNode@.",
+          "\u2022 @MathNode@ is a @MathNode@\u2013homology @MathNode@\u2013sphere."
+        ]
+      ],
       "Then for each @MathNode@, there is a metabolizer @MathNode@ for which @MathNode@ for all @MathNode@."
     ]
   },
@@ -6139,8 +6218,12 @@
       "Let @MathNode@, and @MathNode@ be the Bass-Serre tree on which @MathNode@ acts via the HNN decomposition, @MathNode@, where @MathNode@.",
       "Moreover, assume that @MathNode@ is the trivial group, as in Remark @LtxRef@.",
       "We form the tree of cylinders, @MathNode@, and collapsed tree of cylinders @MathNode@ taking maximal infinite cyclic groups to be the family @MathNode@ and equality to be the admissible equivalence relation.",
-      "\u2022 If @MathNode@, then @MathNode@, or @MathNode@ is simply a subdivision of @MathNode@.",
-      "\u2022 If @MathNode@, then @MathNode@ has one edge orbit, with infinite cyclic stabilisers, conjugates of @MathNode@, and two vertex orbits, with stabilisers conjugates of @MathNode@ and @MathNode@."
+      [
+        [
+          "\u2022 If @MathNode@, then @MathNode@, or @MathNode@ is simply a subdivision of @MathNode@.",
+          "\u2022 If @MathNode@, then @MathNode@ has one edge orbit, with infinite cyclic stabilisers, conjugates of @MathNode@, and two vertex orbits, with stabilisers conjugates of @MathNode@ and @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -6227,8 +6310,13 @@
     "paper": "https://ar5iv.org/abs/1705.10179",
     "identifier": "Theorem 7.4.",
     "sentences": [
-      "The matrix representation of the Lie group @MathNode@ corresponding to the Lie algebra @MathNode@, determined by (@LtxRef@) and having the matrix representation (@LtxRef@), is as follows: \u2022 If @MathNode@, then @MathEquation@ where @MathNode@.",
-      "\u2022 If @MathNode@, then @MathEquation@ where both @MathNode@ and @MathNode@ are zero or non-zero."
+      [
+        "The matrix representation of the Lie group @MathNode@ corresponding to the Lie algebra @MathNode@, determined by (@LtxRef@) and having the matrix representation (@LtxRef@), is as follows:",
+        [
+          "\u2022 If @MathNode@, then @MathEquation@ where @MathNode@.",
+          "\u2022 If @MathNode@, then @MathEquation@ where both @MathNode@ and @MathNode@ are zero or non-zero."
+        ]
+      ]
     ]
   },
   {
@@ -6330,10 +6418,15 @@
     "sentences": [
       "Let @MathNode@ be a distance-hereditary graph on the vertices @MathNode@ and let @MathNode@ be a subset of @MathNode@.",
       "Furthermore, let @MathNode@ be a partition of @MathNode@ and let @MathNode@ be a star graph on the vertices @MathNode@.",
-      "Then the following statements hold \u2022 If @MathNode@ is a star-star graph and @MathNode@, then @MathEquation@",
-      "\u2022 If @MathNode@ is a star-star graph then @MathEquation@",
-      "\u2022 If @MathNode@ is a star-star graph and @MathNode@ is the center of the star graph @MathNode@, then @MathEquation@",
-      "\u2022 If @MathNode@ is a complete-star graph then @MathEquation@",
+      [
+        "Then the following statements hold",
+        [
+          "\u2022 If @MathNode@ is a star-star graph and @MathNode@, then @MathEquation@",
+          "\u2022 If @MathNode@ is a star-star graph then @MathEquation@",
+          "\u2022 If @MathNode@ is a star-star graph and @MathNode@ is the center of the star graph @MathNode@, then @MathEquation@",
+          "\u2022 If @MathNode@ is a complete-star graph then @MathEquation@"
+        ]
+      ],
       "@MathNode@"
     ]
   },
@@ -6391,9 +6484,14 @@
     "sentences": [
       "Let @MathNode@ be some Euler vector field, @MathNode@ some neighborhood of @MathNode@, @MathNode@ two cones in @MathNode@ which satisfy the conormal landing condition and @MathNode@.",
       "Set @MathNode@.",
-      "If @MathNode@ satisfies the conormal landing condition then there exists a bilinear map @MathNode@ satisfying the following properties: \u2022 @MathNode@",
-      "\u2022 @MathNode@",
-      "\u2022 @MathNode@"
+      [
+        "If @MathNode@ satisfies the conormal landing condition then there exists a bilinear map @MathNode@ satisfying the following properties:",
+        [
+          "\u2022 @MathNode@",
+          "\u2022 @MathNode@",
+          "\u2022 @MathNode@"
+        ]
+      ]
     ]
   },
   {
@@ -6624,11 +6722,16 @@
     "identifier": "Theorem 28.",
     "sentences": [
       "Let @MathNode@ and let @MathNode@.",
-      "Then, \u2022 [Non-degeneracy] @MathNode@ and @MathNode@ if @MathNode@,",
-      "\u2022 [Triangle inequality] @MathNode@,",
-      "\u2022 [Symplectic invariance] @MathNode@,",
-      "\u2022 [Symmetry] @MathNode@,",
-      "\u2022 [Hofer bound] @MathNode@."
+      [
+        "Then,",
+        [
+          "\u2022 [Non-degeneracy] @MathNode@ and @MathNode@ if @MathNode@,",
+          "\u2022 [Triangle inequality] @MathNode@,",
+          "\u2022 [Symplectic invariance] @MathNode@,",
+          "\u2022 [Symmetry] @MathNode@,",
+          "\u2022 [Hofer bound] @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -6966,12 +7069,15 @@
     "identifier": "Theorem 2.3.",
     "sentences": [
       "Let @MathNode@ be a complete @MathNode@surface with @MathNode@ constant.",
-      "\u2022",
-      "If @MathNode@ on @MathNode@, then @MathNode@ is either a slice in @MathNode@ or @MathNode@ if @MathNode@, or @MathNode@ is invariant by a one-parameter group of isometries of @MathNode@.",
-      "Moreover, the Gauss curvature of these examples is \u2013 If @MathNode@, then @MathNode@ they are the rotationally invariant spheres.",
-      "\u2013 If @MathNode@ and @MathNode@, then @MathNode@ and @MathNode@ is either a vertical plane in @MathNode@, or a vertical cylinder over a horocycle in @MathNode@ or @MathNode@.",
-      "\u2013 There exists a point with negative Gauss curvature in the remaining cases.",
-      "\u2022 If @MathNode@ on @MathNode@, then @MathNode@ is a vertical cylinder over a complete curve of curvature @MathNode@ on @MathNode@."
+      [
+        [
+          "\u2022 If @MathNode@ on @MathNode@, then @MathNode@ is either a slice in @MathNode@ or @MathNode@ if @MathNode@, or @MathNode@ is invariant by a one-parameter group of isometries of @MathNode@.",
+          "Moreover, the Gauss curvature of these examples is \u2013 If @MathNode@, then @MathNode@ they are the rotationally invariant spheres.",
+          "\u2013 If @MathNode@ and @MathNode@, then @MathNode@ and @MathNode@ is either a vertical plane in @MathNode@, or a vertical cylinder over a horocycle in @MathNode@ or @MathNode@.",
+          "\u2013 There exists a point with negative Gauss curvature in the remaining cases.",
+          "\u2022 If @MathNode@ on @MathNode@, then @MathNode@ is a vertical cylinder over a complete curve of curvature @MathNode@ on @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -7986,10 +8092,14 @@
       "Equip @MathNode@, @MathNode@, @MathNode@ with symplectic forms @MathNode@, @MathNode@, @MathNode@ respectively.",
       "Let @MathNode@ be a Lagrangian immersion between closed surfaces.",
       "Suppose @MathNode@ has transverse bisingular points only.",
-      "Then there is a number @MathNode@ and an isotopy of Lagrangian immersions @MathEquation@ such that the followings hold. \u2022",
-      "The homotopy starts at @MathNode@, i.e. @MathNode@.",
-      "\u2022 The elements in the bisingular set are bifold points of @MathNode@ except finitely many points.",
-      "\u2022 These finitely many points are cusp points of @MathNode@ or @MathNode@."
+      "Then there is a number @MathNode@ and an isotopy of Lagrangian immersions @MathEquation@ such that the followings hold.",
+      [
+        [
+          "\u2022 The homotopy starts at @MathNode@, i.e. @MathNode@.",
+          "\u2022 The elements in the bisingular set are bifold points of @MathNode@ except finitely many points.",
+          "\u2022 These finitely many points are cusp points of @MathNode@ or @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -8194,12 +8304,21 @@
       "There exists a solution to problem (@LtxRef@).",
       "Any solution @MathNode@ is Lipschitz continuous in @MathNode@ and the set @MathNode@ has a locally finite perimeter in @MathNode@.",
       "The free boundary @MathNode@ is a disjoint union of a regular part @MathNode@, a (one-phase) singular set @MathNode@ and a set of branching points @MathNode@.",
-      "(1) The regular part @MathNode@ is an open subset of @MathNode@ and is locally the graph of a @MathNode@ function.",
-      "(2) The one-phase singular set @MathNode@ consists only of points in which the Lebesgue density of @MathNode@ is strictly between @MathNode@ and @MathNode@.",
-      "Moreover, there is @MathNode@ such that: \u2022 if @MathNode@, then @MathNode@ is empty;",
-      "\u2022 if @MathNode@, then the singular set @MathNode@ contains at most a finite number of isolated points;",
-      "\u2022 if @MathNode@, then the @MathNode@-dimensional Hausdorff measure of @MathNode@ is locally finite in @MathNode@.",
-      "(3) The set of branching points @MathNode@ is a closed set of locally finite @MathNode@-Hausdorff measure in @MathNode@ and consists only of points in which the Lebesgue density of @MathNode@ is @MathNode@ and the blow-up limits are linear functions."
+      [
+        [
+          "(1) The regular part @MathNode@ is an open subset of @MathNode@ and is locally the graph of a @MathNode@ function.",
+          "(2) The one-phase singular set @MathNode@ consists only of points in which the Lebesgue density of @MathNode@ is strictly between @MathNode@ and @MathNode@.",
+          [
+            "Moreover, there is @MathNode@ such that:",
+            [
+              "\u2022 if @MathNode@, then @MathNode@ is empty;",
+              "\u2022 if @MathNode@, then the singular set @MathNode@ contains at most a finite number of isolated points;",
+              "\u2022 if @MathNode@, then the @MathNode@-dimensional Hausdorff measure of @MathNode@ is locally finite in @MathNode@."
+            ]
+          ],
+          "(3) The set of branching points @MathNode@ is a closed set of locally finite @MathNode@-Hausdorff measure in @MathNode@ and consists only of points in which the Lebesgue density of @MathNode@ is @MathNode@ and the blow-up limits are linear functions."
+        ]
+      ]
     ]
   },
   {
@@ -8428,8 +8547,13 @@
     "paper": "https://ar5iv.org/abs/2111.14279",
     "identifier": "Theorem 5.",
     "sentences": [
-      "Given positive numbers @MathNode@ and @MathNode@. \u2022 From a WAK-code @MathNode@, we can construct a testing scheme for a U-HT problem @MathNode@ such that @MathGroup@",
-      "\u2022 For a given U-HT testing scheme @MathNode@, there exists a WAK-code @MathNode@ such that @MathGroup@"
+      "Given positive numbers @MathNode@ and @MathNode@.",
+      [
+        [
+          "\u2022 From a WAK-code @MathNode@, we can construct a testing scheme for a U-HT problem @MathNode@ such that @MathGroup@",
+          "\u2022 For a given U-HT testing scheme @MathNode@, there exists a WAK-code @MathNode@ such that @MathGroup@"
+        ]
+      ]
     ]
   },
   {
@@ -8577,10 +8701,15 @@
     "identifier": "Theorem I.1.",
     "sentences": [
       "Let @MathNode@ be a braid on @MathNode@ strands such that @MathNode@ for some strictly homogeneous braid @MathNode@.",
-      "Then there exists a function @MathNode@ such that \u2022 @MathNode@ is a polynomial in @MathNode@, @MathNode@ and @MathNode@,",
-      "\u2022 as a map from @MathNode@ to @MathNode@ the map @MathNode@ has an isolated singularity at the origin,",
-      "\u2022 @MathNode@ is ambient isotopic to the closure of @MathNode@ for all positive @MathNode@,",
-      "\u2022 @MathNode@.",
+      [
+        "Then there exists a function @MathNode@ such that",
+        [
+          "\u2022 @MathNode@ is a polynomial in @MathNode@, @MathNode@ and @MathNode@,",
+          "\u2022 as a map from @MathNode@ to @MathNode@ the map @MathNode@ has an isolated singularity at the origin,",
+          "\u2022 @MathNode@ is ambient isotopic to the closure of @MathNode@ for all positive @MathNode@,",
+          "\u2022 @MathNode@."
+        ]
+      ],
       "Hence the closure of @MathNode@ is real algebraic."
     ]
   },
@@ -8962,11 +9091,24 @@
     "paper": "https://ar5iv.org/abs/2104.03348",
     "identifier": "Theorem 1.10.",
     "sentences": [
-      "Let @MathNode@ be a finitely generated subgroup. (1) If @MathNode@, then @MathNode@ is locally discrete.",
-      "(2) If @MathNode@ is locally discrete and is \u2022 neither one-ended, non-finitely presentable, nor",
-      "\u2022 one-ended, with unbounded torsion,",
-      "then @MathNode@ must be of the following type: \u2022 either virtually free and @MathNode@, or",
-      "\u2022 @MathNode@ conjugate to a finite central extension of a cocompact Fuchsian group, and @MathNode@."
+      "Let @MathNode@ be a finitely generated subgroup.",
+      [
+        [
+          "(1) If @MathNode@, then @MathNode@ is locally discrete.",
+          [
+            "(2) If @MathNode@ is locally discrete and is",
+            [
+              "\u2022 neither one-ended, non-finitely presentable, nor",
+              "\u2022 one-ended, with unbounded torsion,"
+            ],
+            "then @MathNode@ must be of the following type:",
+            [
+              "\u2022 either virtually free and @MathNode@, or",
+              "\u2022 @MathNode@ conjugate to a finite central extension of a cocompact Fuchsian group, and @MathNode@."
+            ]
+          ]
+        ]
+      ]
     ]
   },
   {
