@@ -134,9 +134,14 @@
     "sentences": [
       "Let @MathNode@ with @MathNode@ and @MathEquation@ a tupel of vectors of generators @MathNode@.",
       "Let @MathNode@ be a partition.",
-      "Using Notation @LtxRef@, we associate with @MathNode@ the following relations, denoted by @MathNode@: (i) @MathNode@.",
-      "(ii) @MathNode@.",
-      "(iii) @MathNode@."
+      [
+        "Using Notation @LtxRef@, we associate with @MathNode@ the following relations, denoted by @MathNode@:",
+        [
+          "(i) @MathNode@.",
+          "(ii) @MathNode@.",
+          "(iii) @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -518,8 +523,13 @@
     "paper": "https://ar5iv.org/abs/1110.6578",
     "identifier": "Definition 2.5.",
     "sentences": [
-      "Let @MathNode@ be a Borel probability measure on @MathNode@. (i) The Hausdorff dimension of @MathNode@ is defined as @MathEquation@",
-      "(ii) Say that @MathNode@ is exactly dimensional if there is a constant @MathNode@ such that @MathEquation@"
+      "Let @MathNode@ be a Borel probability measure on @MathNode@.",
+      [
+        [
+          "(i) The Hausdorff dimension of @MathNode@ is defined as @MathEquation@",
+          "(ii) Say that @MathNode@ is exactly dimensional if there is a constant @MathNode@ such that @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -829,12 +839,23 @@
     "sentences": [
       "Let @MathNode@ be a graph property, @MathNode@ be the set of vertices, and @MathNode@ be the set of allowed edges.",
       "Write @MathNode@.",
-      "Define the game @MathNode@ between two players, Alice and Bob, as follows: (1) During the game Alice and Bob construct a (transfinite) sequence @MathNode@ of @MathNode@-pregraphs with @MathNode@.",
-      "(2) The game terminates when either every @MathNode@-graph extenting @MathNode@ has property @MathNode@, or no @MathNode@-graph extenting @MathNode@ has property @MathNode@.",
-      "(3) If @MathNode@ is a limit ordinal, then let @MathNode@ and @MathNode@.",
-      "(4) If @MathNode@ and the game has not terminated, then @MathNode@ has undetermined pairs, and (i) Alice picks an undetermined pair @MathNode@,",
-      "(ii) Bob decides if @MathNode@ is an edge, or a nonedge in @MathNode@, i.e. Bob selects an @MathNode@-pregraph @MathNode@ such that @MathNode@ and @MathNode@.",
-      "(5) Bob wins iff @MathNode@, i.e. @MathNode@ and so @MathNode@.",
+      [
+        "Define the game @MathNode@ between two players, Alice and Bob, as follows:",
+        [
+          "(1) During the game Alice and Bob construct a (transfinite) sequence @MathNode@ of @MathNode@-pregraphs with @MathNode@.",
+          "(2) The game terminates when either every @MathNode@-graph extenting @MathNode@ has property @MathNode@, or no @MathNode@-graph extenting @MathNode@ has property @MathNode@.",
+          "(3) If @MathNode@ is a limit ordinal, then let @MathNode@ and @MathNode@.",
+          [
+            "(4) If @MathNode@ and the game has not terminated, then @MathNode@ has undetermined pairs, and",
+            [
+              "(i) Alice picks an undetermined pair @MathNode@,",
+              "(ii) Bob decides if @MathNode@ is an edge, or a nonedge in @MathNode@, i.e."
+            ]
+          ],
+          "Bob selects an @MathNode@-pregraph @MathNode@ such that @MathNode@ and @MathNode@.",
+          "(5) Bob wins iff @MathNode@, i.e. @MathNode@ and so @MathNode@."
+        ]
+      ],
       "If the property @MathNode@ is monotone, then (2) can be written in the following form: (2\u2019)",
       "The game terminates in turn @MathNode@ if either @MathNode@ has property @MathNode@ or @MathNode@ does not have property @MathNode@.",
       "To simplify the notation, we will write @MathNode@ for @MathNode@, @MathNode@ for @MathNode@, @MathNode@ for @MathNode@, and @MathNode@ for @MathNode@.",
@@ -1540,9 +1561,14 @@
     "paper": "https://ar5iv.org/abs/1704.00812",
     "identifier": "Definition 1.",
     "sentences": [
-      "A bikei is a set @MathNode@ with two binary operations @MathNode@ satisfying for all @MathNode@ (i) @MathNode@,",
-      "(ii) @MathEquation@ and",
-      "(iii) (Exchange Laws) @MathEquation@"
+      [
+        "A bikei is a set @MathNode@ with two binary operations @MathNode@ satisfying for all @MathNode@",
+        [
+          "(i) @MathNode@,",
+          "(ii) @MathEquation@ and",
+          "(iii) (Exchange Laws) @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -1748,8 +1774,13 @@
     "identifier": "Definition 8.",
     "sentences": [
       "Let @MathNode@ be a matching problem where each agent @MathNode@ owns an object @MathNode@.",
-      "A horizon-@MathNode@ improving path from a matching @MathNode@ to a matching @MathNode@ is a finite sequence of distinct matchings @MathNode@ with @MathNode@ and @MathNode@ such that for every @MathNode@ either (i) @MathNode@ for some @MathNode@ such that @MathNode@, or",
-      "(ii) @MathNode@ for some @MathNode@ such that @MathNode@ and @MathNode@."
+      [
+        "A horizon-@MathNode@ improving path from a matching @MathNode@ to a matching @MathNode@ is a finite sequence of distinct matchings @MathNode@ with @MathNode@ and @MathNode@ such that for every @MathNode@ either",
+        [
+          "(i) @MathNode@ for some @MathNode@ such that @MathNode@, or",
+          "(ii) @MathNode@ for some @MathNode@ such that @MathNode@ and @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -1839,12 +1870,15 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1010.3482",
-    "identifier": null,
+    "identifier": "25.1 Definition (Convolution).",
     "sentences": [
-      "25.1 Definition (Convolution).",
-      "(i) Let @MathNode@ and let @MathNode@ be the corresponding mapping.",
-      "We define the non-standard extension @MathNode@ of @MathNode@ by the formula @MathEquation@ where @MathNode@.",
-      "(ii) Let @MathNode@ and @MathNode@.",
+      [
+        [
+          "(i) Let @MathNode@ and let @MathNode@ be the corresponding mapping.",
+          "We define the non-standard extension @MathNode@ of @MathNode@ by the formula @MathEquation@ where @MathNode@.",
+          "(ii) Let @MathNode@ and @MathNode@."
+        ]
+      ],
       "We define the convolution between @MathNode@ and @MathNode@ by the formula @MathEquation@ where @MathNode@ is the usual convolution between @MathNode@ and @MathNode@ in the sense of distribution theory (i.e. @MathNode@ for every @MathNode@ and every @MathNode@)."
     ]
   },
@@ -2615,10 +2649,14 @@
     "identifier": "Definition B.1 (element-by-element construction, @LtxCite@)",
     "sentences": [
       "Let @MathNode@ be the reference simplex in @MathNode@, @MathNode@.",
-      "A polynomial @MathNode@ is said to permit an element-by-element construction of polynomial degree @MathNode@ for @MathNode@, @MathNode@, if:",
-      "(i) @MathNode@ for all @MathNode@ vertices @MathNode@ of @MathNode@",
-      "(ii) for every edge @MathNode@ of @MathNode@, the restriction @MathNode@ is the unique minimizer of @MathEquation@ under the constraint that @MathNode@ satisfies (@LtxRef@); here the Sobolev norm @MathNode@ is defined in (@LtxRef@).",
-      "(iii) (for @MathNode@) for every face @MathNode@ of @MathNode@, the restriction @MathNode@ is the unique minimizer of @MathEquation@ under the constraint that @MathNode@ satisfies (@LtxRef@), (@LtxRef@) for all vertices and edges of the face @MathNode@."
+      [
+        "A polynomial @MathNode@ is said to permit an element-by-element construction of polynomial degree @MathNode@ for @MathNode@, @MathNode@, if:",
+        [
+          "(i) @MathNode@ for all @MathNode@ vertices @MathNode@ of @MathNode@",
+          "(ii) for every edge @MathNode@ of @MathNode@, the restriction @MathNode@ is the unique minimizer of @MathEquation@ under the constraint that @MathNode@ satisfies (@LtxRef@); here the Sobolev norm @MathNode@ is defined in (@LtxRef@).",
+          "(iii) (for @MathNode@) for every face @MathNode@ of @MathNode@, the restriction @MathNode@ is the unique minimizer of @MathEquation@ under the constraint that @MathNode@ satisfies (@LtxRef@), (@LtxRef@) for all vertices and edges of the face @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -3220,10 +3258,14 @@
     "identifier": "Definition 4.1.",
     "sentences": [
       "Let @MathNode@ be a RKHS and let @MathNode@ be an admissible weight.",
-      "A measurable function @MathNode@ is called @MathNode@-localized in @MathNode@ if (i) @MathNode@ for all @MathNode@;",
-      "(ii) @MathNode@ for all @MathNode@;",
-      "(iii)",
-      "There exists a non-negative envelope @MathNode@ such that @MathGroup@",
+      [
+        "A measurable function @MathNode@ is called @MathNode@-localized in @MathNode@ if",
+        [
+          "(i) @MathNode@ for all @MathNode@;",
+          "(ii) @MathNode@ for all @MathNode@;",
+          "(iii) There exists a non-negative envelope @MathNode@ such that @MathGroup@"
+        ]
+      ],
       "Given a @MathNode@-localized kernel @MathNode@, the adjoint kernel @MathNode@ is defined by @MathNode@."
     ]
   },
@@ -3370,9 +3412,12 @@
     "identifier": "Definition (Lelek fans).",
     "sentences": [
       "A fan with top @MathNode@ is called a Lelek fan if it has the following two properties.",
-      "(i) Smoothness:",
-      "For any sequence @MathNode@ converging to @MathNode@ the arcs @MathNode@ converge to @MathNode@ in the Hausdorff metric.",
-      "(ii) Density of endpoints: The endpoints of @MathNode@ are dense in @MathNode@."
+      [
+        [
+          "(i) Smoothness: For any sequence @MathNode@ converging to @MathNode@ the arcs @MathNode@ converge to @MathNode@ in the Hausdorff metric.",
+          "(ii) Density of endpoints: The endpoints of @MathNode@ are dense in @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -3629,9 +3674,13 @@
     "paper": "https://ar5iv.org/abs/2107.12252",
     "identifier": "Definition 3.19.",
     "sentences": [
-      "(i) Let @MathNode@ be the set of elements of @MathNode@ annihilated by @MathNode@.",
-      "(ii) @MathNode@.",
-      "(iii) @MathNode@."
+      [
+        [
+          "(i) Let @MathNode@ be the set of elements of @MathNode@ annihilated by @MathNode@.",
+          "(ii) @MathNode@.",
+          "(iii) @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -4396,8 +4445,13 @@
     "paper": "https://ar5iv.org/abs/1610.01881",
     "identifier": "Definition 1.2.1.",
     "sentences": [
-      "An algebra @MathNode@ is called a twisted Calabi-Yau algebra of dimension @MathNode@ if (i) @MathNode@ is homologically smooth, that is, @MathNode@ has a bounded resolution by finitely generated projective @MathNode@-modules;",
-      "(ii) There is an automorphism @MathNode@ of @MathNode@ such that @MathEquation@ as @MathNode@-modules.",
+      [
+        "An algebra @MathNode@ is called a twisted Calabi-Yau algebra of dimension @MathNode@ if",
+        [
+          "(i) @MathNode@ is homologically smooth, that is, @MathNode@ has a bounded resolution by finitely generated projective @MathNode@-modules;",
+          "(ii) There is an automorphism @MathNode@ of @MathNode@ such that @MathEquation@ as @MathNode@-modules."
+        ]
+      ],
       "If such an automorphism @MathNode@ exists, it is unique up to an inner automorphism and is called the Nakayama automorphism of @MathNode@.",
       "In the definition, the dimension @MathNode@ is usually called the Calabi-Yau dimension of @MathNode@.",
       "A Calabi-Yau algebra in the sense of Ginzburg @LtxCite@ is a twisted Calabi-Yau algebra whose Nakayama automorphism is an inner automorphism.",
@@ -4417,11 +4471,14 @@
     "paper": "https://ar5iv.org/abs/1402.0036",
     "identifier": "Definition 2.2.",
     "sentences": [
-      "@MathNode@ is an admissible parabolic domain with \u2018character\u2019 @MathNode@ if there exists a positive scale @MathNode@ such that for any time @MathNode@ there are at most @MathNode@ @MathNode@-cylinders @MathNode@ of diameter @MathNode@, with @MathNode@ such that",
-      "(i) @MathNode@ is the graph @MathNode@ of a function @MathNode@, such that @MathEquation@ and @MathEquation@",
-      "(ii) @MathNode@,",
-      "(iii)",
-      "In the coordinate system @MathNode@ of the @MathNode@-cylinder @MathNode@: @MathEquation@"
+      [
+        "@MathNode@ is an admissible parabolic domain with \u2018character\u2019 @MathNode@ if there exists a positive scale @MathNode@ such that for any time @MathNode@ there are at most @MathNode@ @MathNode@-cylinders @MathNode@ of diameter @MathNode@, with @MathNode@ such that",
+        [
+          "(i) @MathNode@ is the graph @MathNode@ of a function @MathNode@, such that @MathEquation@ and @MathEquation@",
+          "(ii) @MathNode@,",
+          "(iii) In the coordinate system @MathNode@ of the @MathNode@-cylinder @MathNode@: @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -4676,10 +4733,14 @@
       "Assume that @MathNode@, @MathNode@ for all @MathNode@, and that the multiplicity of the covering @MathNode@ is finite.",
       "We then say that @MathNode@ is an atlas.",
       "Let @MathNode@.",
-      "We say that an open set @MathNode@ in @MathNode@ is of class @MathNode@ if the following conditions are satisfied:",
-      "(i) For every @MathNode@, we have @MathNode@.",
-      "(ii) @MathNode@.",
-      "(iii) For every @MathNode@, the set @MathNode@ satisfies the following condition: either @MathNode@ (in which case @MathNode@), or @MathNode@ is a bounded elementary H\u00f6lder continuous domain of the form @MathEquation@ where @MathNode@ is a real-valued H\u00f6lder continuous function with exponent @MathNode@, defined on @MathNode@ such that @MathEquation@ (in which case @MathNode@).",
+      [
+        "We say that an open set @MathNode@ in @MathNode@ is of class @MathNode@ if the following conditions are satisfied:",
+        [
+          "(i) For every @MathNode@, we have @MathNode@.",
+          "(ii) @MathNode@.",
+          "(iii) For every @MathNode@, the set @MathNode@ satisfies the following condition: either @MathNode@ (in which case @MathNode@), or @MathNode@ is a bounded elementary H\u00f6lder continuous domain of the form @MathEquation@ where @MathNode@ is a real-valued H\u00f6lder continuous function with exponent @MathNode@, defined on @MathNode@ such that @MathEquation@ (in which case @MathNode@)."
+        ]
+      ],
       "Finally, we say that an open set @MathNode@ in @MathNode@ is of class @MathNode@ if it is of class @MathNode@ for some @MathNode@ and @MathNode@."
     ]
   },
@@ -4712,10 +4773,14 @@
     "paper": "https://ar5iv.org/abs/1601.06242",
     "identifier": "Definition 12 (Roots of Tree-like Multisets)",
     "sentences": [
-      "Given a set @MathNode@, we define a function @MathNode@, as follows:",
-      "(i) @MathNode@, for any @MathNode@.",
-      "(ii) @MathNode@ for any @MathNode@ satisfying the conditions in Definition @LtxRef@(ii).",
-      "(iii) @MathNode@ for any @MathNode@ and @MathNode@ satisfying the conditions in Definition @LtxRef@(iii) @MathNode@"
+      [
+        "Given a set @MathNode@, we define a function @MathNode@, as follows:",
+        [
+          "(i) @MathNode@, for any @MathNode@.",
+          "(ii) @MathNode@ for any @MathNode@ satisfying the conditions in Definition @LtxRef@(ii).",
+          "(iii) @MathNode@ for any @MathNode@ and @MathNode@ satisfying the conditions in Definition @LtxRef@(iii) @MathNode@"
+        ]
+      ]
     ]
   },
   {
@@ -4988,9 +5053,13 @@
     "identifier": "Definition 3.1.",
     "sentences": [
       "A Markov process @MathNode@ with values in @MathNode@ such that the three following properties hold is called a L\u00e9vy process.",
-      "(i) @MathNode@ almost surely;",
-      "(ii) @MathNode@ is a stationary process with independent increments, i.e. for all @MathNode@, the random variable @MathNode@ is independent from @MathNode@ and has the same law has @MathNode@;",
-      "(iii) @MathNode@ converge in probability to @MathNode@ when @MathNode@."
+      [
+        [
+          "(i) @MathNode@ almost surely;",
+          "(ii) @MathNode@ is a stationary process with independent increments, i.e. for all @MathNode@, the random variable @MathNode@ is independent from @MathNode@ and has the same law has @MathNode@;",
+          "(iii) @MathNode@ converge in probability to @MathNode@ when @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -5495,8 +5564,13 @@
     "identifier": "Definition 9.1.",
     "sentences": [
       "An @MathNode@-stable pair or Bryan\u2013Steinberg pair @MathNode@ consists of @MathNode@ and a section @MathNode@.",
-      "This data satisfies two stability requirements: (i) @MathNode@ pushes down to a zero-dimensional sheaf, i.e., @MathNode@, and",
-      "(ii) @MathNode@ admits no maps from such sheaves, i.e., @MathNode@,",
+      [
+        "This data satisfies two stability requirements:",
+        [
+          "(i) @MathNode@ pushes down to a zero-dimensional sheaf, i.e., @MathNode@, and",
+          "(ii) @MathNode@ admits no maps from such sheaves, i.e., @MathNode@,"
+        ]
+      ],
       "Two f-stable pairs @MathNode@ and @MathNode@ are isomorphic if there exists an isomorphism @MathNode@ such that @MathNode@."
     ]
   },
@@ -5769,9 +5843,14 @@
     "paper": "https://ar5iv.org/abs/2308.05874",
     "identifier": "Definition A.1.",
     "sentences": [
-      "Let @MathNode@, @MathNode@. (i) We say that @MathNode@ is a @MathNode@ function if there exists a continuous map @MathNode@ such that for all @MathNode@ we have @MathNode@ and @MathEquation@",
-      "We will use the symbol @MathNode@ for the map @MathNode@, which is called the Wasserstein flat derivative.",
-      "(ii) If @MathNode@ is of class @MathNode@ and @MathNode@ is @MathNode@ with respect to the space variable, we define the intrinsic derivative (Wasserstein derivative) @MathNode@ as @MathNode@"
+      "Let @MathNode@, @MathNode@.",
+      [
+        [
+          "(i) We say that @MathNode@ is a @MathNode@ function if there exists a continuous map @MathNode@ such that for all @MathNode@ we have @MathNode@ and @MathEquation@",
+          "We will use the symbol @MathNode@ for the map @MathNode@, which is called the Wasserstein flat derivative.",
+          "(ii) If @MathNode@ is of class @MathNode@ and @MathNode@ is @MathNode@ with respect to the space variable, we define the intrinsic derivative (Wasserstein derivative) @MathNode@ as @MathNode@"
+        ]
+      ]
     ]
   },
   {
@@ -6327,10 +6406,16 @@
     "identifier": "Definition 3.1.",
     "sentences": [
       "The internal Grothendieck construction is the functor @MathEquation@ defined as follows.",
-      "It sends a @MathNode@-functor @MathNode@ to its internal category of elements @MathNode@ to @MathNode@ whose (i) object of objects and object of morphisms are given by the coproducts in @MathNode@ @MathEquation@",
-      "(ii) source and target maps @MathNode@ are given by the unique maps in @MathNode@ making the following diagrams commute, for all objects @MathNode@,",
-      "@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@ where @MathNode@ is the map introduced in @LtxRef@, (iii) composition map @MathNode@ is given by the unique map in @MathNode@ making the following diagram commute, for all objects @MathNode@, @MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@",
-      "(iv) identity map @MathNode@ is given by the unique map in @MathNode@ making the following diagram commute, for every object @MathNode@.",
+      [
+        "It sends a @MathNode@-functor @MathNode@ to its internal category of elements @MathNode@ to @MathNode@ whose",
+        [
+          "(i) object of objects and object of morphisms are given by the coproducts in @MathNode@ @MathEquation@",
+          "(ii) source and target maps @MathNode@ are given by the unique maps in @MathNode@ making the following diagrams commute, for all objects @MathNode@,",
+          "@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@ where @MathNode@ is the map introduced in @LtxRef@,",
+          "(iii) composition map @MathNode@ is given by the unique map in @MathNode@ making the following diagram commute, for all objects @MathNode@, @MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@",
+          "(iv) identity map @MathNode@ is given by the unique map in @MathNode@ making the following diagram commute, for every object @MathNode@."
+        ]
+      ],
       "@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@@MathNode@",
       "Compatibility with target is straightforward, compatibility with source follows from the @MathNode@-functoriality of @MathNode@ as described in @LtxRef@, and unitality and associativity of composition follows from the respective properties in @MathNode@.",
       "This comes with a projection internal functor @MathNode@ such that @MathNode@ and @MathNode@ are given by the unique maps in @MathNode@ making the following diagrams commute, for all objects @MathNode@.",
@@ -6941,18 +7026,28 @@
     "identifier": "Definition 3",
     "sentences": [
       "Let @MathNode@ satisfy Assumption @LtxRef@.",
-      "A subset @MathNode@ of @MathNode@ is a non-degenerate chain of connectedness of @MathNode@ if (i) for every @MathNode@ in @MathNode@, @MathNode@ is a non-degenerate transition of @MathNode@ and (ii) for every @MathNode@ in @MathNode@, there exists a finite sequence @MathNode@ in @MathNode@ such that, for every @MathNode@, @MathNode@ belongs to @MathNode@."
+      [
+        "A subset @MathNode@ of @MathNode@ is a non-degenerate chain of connectedness of @MathNode@ if",
+        [
+          "(i) for every @MathNode@ in @MathNode@, @MathNode@ is a non-degenerate transition of @MathNode@ and",
+          "(ii) for every @MathNode@ in @MathNode@, there exists a finite sequence @MathNode@ in @MathNode@ such that, for every @MathNode@, @MathNode@ belongs to @MathNode@."
+        ]
+      ]
     ]
   },
   {
     "paper": "https://ar5iv.org/abs/2309.12199",
     "identifier": "Definition 2.8.",
     "sentences": [
-      "(i) Let @MathNode@ be a chain complex in @MathNode@.",
-      "We shall say that @MathNode@ is of type @MathNode@ if there exists a smooth stratification @MathNode@ for @MathNode@ such that the flat bundle @MathNode@ belongs to @MathNode@ for every @MathNode@ and @MathNode@.",
-      "In this situation, @MathNode@ is called an @MathNode@-stratification for @MathNode@.",
-      "(In particular, the notion of an @MathNode@-stratification, i.e., the case of @MathNode@, is nothing but the notion of a stratification in the sense of Definition @LtxRef@.)",
-      "(ii) Let @MathNode@ be a holonomic @MathNode@-module.",
+      [
+        [
+          "(i) Let @MathNode@ be a chain complex in @MathNode@.",
+          "We shall say that @MathNode@ is of type @MathNode@ if there exists a smooth stratification @MathNode@ for @MathNode@ such that the flat bundle @MathNode@ belongs to @MathNode@ for every @MathNode@ and @MathNode@.",
+          "In this situation, @MathNode@ is called an @MathNode@-stratification for @MathNode@.",
+          "(In particular, the notion of an @MathNode@-stratification, i.e., the case of @MathNode@, is nothing but the notion of a stratification in the sense of Definition @LtxRef@.)",
+          "(ii) Let @MathNode@ be a holonomic @MathNode@-module."
+        ]
+      ],
       "We shall say that @MathNode@ is of type @MathNode@ if it is of type @MathNode@ when considered as an object of @MathNode@."
     ]
   },
@@ -7189,8 +7284,13 @@
     "identifier": "Definition 1.1.",
     "sentences": [
       "Let @MathNode@ be a topological semigroup and let @MathNode@ be a subset of @MathNode@.",
-      "Then @MathNode@ has Property X with respect to @MathNode@ if for all @MathNode@ there exist @MathNode@ and @MathNode@ such that (i) @MathNode@",
-      "(ii) for every @MathNode@-neighbourhood @MathNode@ of @MathNode@, the set @MathNode@ is a @MathNode@-neighbourhood of @MathNode@."
+      [
+        "Then @MathNode@ has Property X with respect to @MathNode@ if for all @MathNode@ there exist @MathNode@ and @MathNode@ such that",
+        [
+          "(i) @MathNode@",
+          "(ii) for every @MathNode@-neighbourhood @MathNode@ of @MathNode@, the set @MathNode@ is a @MathNode@-neighbourhood of @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -7319,10 +7419,14 @@
     "paper": "https://ar5iv.org/abs/math/9801116",
     "identifier": "Definition.",
     "sentences": [
-      "@MathEquation@ where @MathNode@ is the set of the sequences with values in @MathNode@ of length @MathNode@ and such that",
-      "(i) @MathNode@;",
-      "(ii) @MathNode@ of the @MathNode@\u2019s are equal to @MathNode@ and @MathNode@ of the @MathNode@\u2019s are equal to @MathNode@.",
-      "(iii) if @MathNode@, @MathNode@, @MathNode@ and @MathNode@, then @MathNode@ is odd.",
+      [
+        "@MathEquation@ where @MathNode@ is the set of the sequences with values in @MathNode@ of length @MathNode@ and such that",
+        [
+          "(i) @MathNode@;",
+          "(ii) @MathNode@ of the @MathNode@\u2019s are equal to @MathNode@ and @MathNode@ of the @MathNode@\u2019s are equal to @MathNode@.",
+          "(iii) if @MathNode@, @MathNode@, @MathNode@ and @MathNode@, then @MathNode@ is odd."
+        ]
+      ],
       "In other words, there are an even number of @MathNode@\u2019s between the two nearest @MathNode@\u2019s."
     ]
   },
@@ -7525,9 +7629,13 @@
     "paper": "https://ar5iv.org/abs/1208.0434",
     "identifier": "Definition 7.12.",
     "sentences": [
-      "(i) The @MathNode@-functional is defined on @MathNode@ by @MathEquation@",
-      "(ii) For any @MathNode@ we define the @MathNode@-functional by @MathEquation@ provided @MathNode@ and @MathNode@ otherwise.",
-      "(iii) For any @MathNode@ we define the @MathNode@-functional by @MathGroup@"
+      [
+        [
+          "(i) The @MathNode@-functional is defined on @MathNode@ by @MathEquation@",
+          "(ii) For any @MathNode@ we define the @MathNode@-functional by @MathEquation@ provided @MathNode@ and @MathNode@ otherwise.",
+          "(iii) For any @MathNode@ we define the @MathNode@-functional by @MathGroup@"
+        ]
+      ]
     ]
   },
   {
@@ -8496,9 +8604,14 @@
     "identifier": "Definition 4.1.",
     "sentences": [
       "Let @MathNode@ @MathNode@ with @MathNode@ that @MathNode@ for all @MathNode@ (@MathNode@ small) and @MathNode@ be a closed operator.",
-      "A strongly continuous operator family @MathNode@ is a local (resp. global in case @MathNode@) @MathNode@-regularized resolvent family generated by @MathNode@ if the following conditions are satisfied: (i) @MathNode@ for all @MathNode@",
-      "(ii) @MathNode@;",
-      "(iii) @MathNode@ for @MathNode@ and @MathNode@ and the following Volterra equation holds @MathEquation@"
+      [
+        "A strongly continuous operator family @MathNode@ is a local (resp. global in case @MathNode@) @MathNode@-regularized resolvent family generated by @MathNode@ if the following conditions are satisfied:",
+        [
+          "(i) @MathNode@ for all @MathNode@",
+          "(ii) @MathNode@;",
+          "(iii) @MathNode@ for @MathNode@ and @MathNode@ and the following Volterra equation holds @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -9137,9 +9250,13 @@
     "paper": "https://ar5iv.org/abs/1907.13225",
     "identifier": "Definition 1.5 (Global Attractor).",
     "sentences": [
-      "A set @MathNode@ in a Banach space @MathNode@ is called a global attractor for a semiflow @MathNode@ on @MathNode@, if the following two properties are satisfied:",
-      "(i) @MathNode@ is a nonempty, compact, and invariant set in the space @MathNode@.",
-      "(ii) @MathNode@ attracts any given bounded set @MathNode@ in the sense @MathEquation@"
+      [
+        "A set @MathNode@ in a Banach space @MathNode@ is called a global attractor for a semiflow @MathNode@ on @MathNode@, if the following two properties are satisfied:",
+        [
+          "(i) @MathNode@ is a nonempty, compact, and invariant set in the space @MathNode@.",
+          "(ii) @MathNode@ attracts any given bounded set @MathNode@ in the sense @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -9777,8 +9894,13 @@
     "identifier": "Definition 8.",
     "sentences": [
       "Denote for each boundary point @MathNode@ the boundary space @MathEquation@ of state vectors satisfying the homogeneous boundary condition.",
-      "@MathNode@ is called maximal nonpositive if (i) @MathNode@ for all @MathNode@,",
-      "(ii) @MathNode@ is maximal with respect to condition (i); that is, if @MathNode@ is a linear subspace of @MathNode@ containing @MathNode@ which satisfies (i), then @MathNode@.",
+      [
+        "@MathNode@ is called maximal nonpositive if",
+        [
+          "(i) @MathNode@ for all @MathNode@,",
+          "(ii) @MathNode@ is maximal with respect to condition (i); that is, if @MathNode@ is a linear subspace of @MathNode@ containing @MathNode@ which satisfies (i), then @MathNode@."
+        ]
+      ],
       "The boundary condition @MathNode@ is called maximal dissipative if the associated boundary spaces @MathNode@ are maximal nonpositive for all @MathNode@."
     ]
   },
