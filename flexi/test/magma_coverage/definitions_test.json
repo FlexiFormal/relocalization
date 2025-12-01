@@ -59,10 +59,14 @@
     "paper": "https://ar5iv.org/abs/2012.03073",
     "identifier": "Definition 2.4.",
     "sentences": [
-      "For any scheme @MathNode@, let @MathNode@ be the set of equivalence classes of pairs @MathNode@, where:",
-      "\u2022 @MathNode@ is a line bundle on @MathNode@ such that @MathNode@;",
-      "\u2022 @MathNode@ is an @MathNode@ matrix of global sections of @MathNode@ such that the determinant @MathEquation@ is a nowhere-vanishing section of @MathNode@;",
-      "\u2022 @MathNode@ if there exists an isomorphism @MathNode@ such that @MathNode@, with @MathNode@ computed by applying @MathNode@ to each entry of @MathNode@.",
+      [
+        "For any scheme @MathNode@, let @MathNode@ be the set of equivalence classes of pairs @MathNode@, where:",
+        [
+          "\u2022 @MathNode@ is a line bundle on @MathNode@ such that @MathNode@;",
+          "\u2022 @MathNode@ is an @MathNode@ matrix of global sections of @MathNode@ such that the determinant @MathEquation@ is a nowhere-vanishing section of @MathNode@;",
+          "\u2022 @MathNode@ if there exists an isomorphism @MathNode@ such that @MathNode@, with @MathNode@ computed by applying @MathNode@ to each entry of @MathNode@."
+        ]
+      ],
       "We endow @MathNode@ with a group structure via @MathNode@, where @MathNode@ denotes \u201ctensor multiplication\u201d.",
       "That is, @MathNode@.",
       "More precisely, we choose a set of representatives, one from each equivalence class.",
@@ -82,8 +86,13 @@
     "paper": "https://ar5iv.org/abs/2310.04069",
     "identifier": "Definition 9 (ODT pattern)",
     "sentences": [
-      "An ODT pattern @MathNode@ is an ODT triple where: \u2022 the ratio of atomic triples in @MathNode@, which are atomic patterns, is at least equal to a minimum ratio threshold @MathNode@",
-      "\u2022 there exists a minimal specialization of @MathNode@ which is an ODT pattern"
+      [
+        "An ODT pattern @MathNode@ is an ODT triple where:",
+        [
+          "\u2022 the ratio of atomic triples in @MathNode@, which are atomic patterns, is at least equal to a minimum ratio threshold @MathNode@",
+          "\u2022 there exists a minimal specialization of @MathNode@ which is an ODT pattern"
+        ]
+      ]
     ]
   },
   {
@@ -93,9 +102,14 @@
       "Let @MathNode@ be a geodesic metric space, let @MathNode@ be an isometry of @MathNode@ with quasi-isometrically embedded orbits.",
       "A system of checkpoints for @MathNode@ is the data of a finite subset @MathNode@ of @MathNode@, an error constant @MathNode@, and a quasi-isometry @MathNode@ such that the following holds:",
       "Let @MathNode@ be points of @MathNode@ and @MathNode@ be projections on @MathNode@ of @MathNode@ respectively.",
-      "For every checkpoint @MathNode@ such that: \u2022 @MathNode@ coarsely separates @MathNode@ and @MathNode@ , that is, @MathNode@ and @MathNode@ lie in different unbounded connected components of @MathNode@,",
-      "\u2022 @MathNode@ is at distance at least @MathNode@ from @MathNode@ and @MathNode@,",
-      "then every geodesic between @MathNode@ and @MathNode@ meets @MathNode@.",
+      [
+        "For every checkpoint @MathNode@ such that:",
+        [
+          "\u2022 @MathNode@ coarsely separates @MathNode@ and @MathNode@ , that is, @MathNode@ and @MathNode@ lie in different unbounded connected components of @MathNode@,",
+          "\u2022 @MathNode@ is at distance at least @MathNode@ from @MathNode@ and @MathNode@,"
+        ],
+        "then every geodesic between @MathNode@ and @MathNode@ meets @MathNode@."
+      ],
       "A hyperbolic isometry @MathNode@ of @MathNode@ is \u00fcber-contracting, or is an \u00fcber-contraction, if it admits a system of checkpoints."
     ]
   },
@@ -129,14 +143,18 @@
     "paper": "https://ar5iv.org/abs/1501.01817",
     "identifier": "Definition 6",
     "sentences": [
-      "\u2022 The ideal green full s-pider, denoted as \u2729, is @MathNode@ \u2013 the canonical structure of the green version of @MathNode@.",
-      "The ideal red full s-pider @MathNode@, denoted as \u2605, is @MathNode@.",
-      "\u2022 An ideal green 1-lame upper s-pider, denoted @MathNode@, is @MathNode@.",
-      "An ideal red 1-lame upper s-pider, denoted @MathNode@, is @MathNode@.",
-      "\u2022 An ideal green 1-lame lower s-pider, denoted @MathNode@, is @MathNode@.",
-      "An ideal red 1-lame lower s-pider, denoted @MathNode@, is @MathNode@.",
-      "\u2022 An ideal green 2-lame s-pider, denoted @MathNode@, is @MathNode@.",
-      "\u2022 An ideal red 2-lame s-pider, denoted @MathNode@, is @MathNode@."
+      [
+        [
+          "\u2022 The ideal green full s-pider, denoted as \u2729, is @MathNode@ \u2013 the canonical structure of the green version of @MathNode@.",
+          "The ideal red full s-pider @MathNode@, denoted as \u2605, is @MathNode@.",
+          "\u2022 An ideal green 1-lame upper s-pider, denoted @MathNode@, is @MathNode@.",
+          "An ideal red 1-lame upper s-pider, denoted @MathNode@, is @MathNode@.",
+          "\u2022 An ideal green 1-lame lower s-pider, denoted @MathNode@, is @MathNode@.",
+          "An ideal red 1-lame lower s-pider, denoted @MathNode@, is @MathNode@.",
+          "\u2022 An ideal green 2-lame s-pider, denoted @MathNode@, is @MathNode@.",
+          "\u2022 An ideal red 2-lame s-pider, denoted @MathNode@, is @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -262,11 +280,15 @@
     "identifier": "Definition 5.",
     "sentences": [
       "Let @MathNode@ be a ground rule and @MathNode@ be a partial interpretation.",
-      "\u2022 @MathNode@ is supported w.r.t. @MathNode@ when @MathNode@,",
-      "\u2022 @MathNode@ is blocked w.r.t. @MathNode@ when @MathNode@,",
-      "\u2022 @MathNode@ is unblocked w.r.t. @MathNode@ when @MathNode@,",
-      "\u2022 @MathNode@ is applicable w.r.t. @MathNode@ when @MathNode@ is supported and not blocked.",
-      "2The negation of blocked, not blocked, is different from unblocked."
+      [
+        [
+          "\u2022 @MathNode@ is supported w.r.t. @MathNode@ when @MathNode@,",
+          "\u2022 @MathNode@ is blocked w.r.t. @MathNode@ when @MathNode@,",
+          "\u2022 @MathNode@ is unblocked w.r.t. @MathNode@ when @MathNode@,",
+          "\u2022 @MathNode@ is applicable w.r.t. @MathNode@ when @MathNode@ is supported and not blocked."
+        ]
+      ],
+      "The negation of blocked, not blocked, is different from unblocked."
     ]
   },
   {
@@ -439,8 +461,13 @@
       "Let @MathNode@ be a random vector in @MathNode@, where both @MathNode@ have mean zero and unit variance.",
       "We set @MathNode@.",
       "For each @MathNode@, let @MathNode@ be a @MathNode@ random matrix.",
-      "We say the sequence of random matrices @MathNode@ satisfies condition C0 with atom variables @MathNode@ if the following conditions hold: \u2022 The sequence @MathNode@ satisfies condition C1 with atom variables @MathNode@,",
-      "\u2022 We have @MathEquation@"
+      [
+        "We say the sequence of random matrices @MathNode@ satisfies condition C0 with atom variables @MathNode@ if the following conditions hold:",
+        [
+          "\u2022 The sequence @MathNode@ satisfies condition C1 with atom variables @MathNode@,",
+          "\u2022 We have @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -454,8 +481,13 @@
     "paper": "https://ar5iv.org/abs/1109.4812",
     "identifier": "Definition 4.17.",
     "sentences": [
-      "We define: \u2022 The convergence degree (or simply degree) of a graph @MathNode@ is @MathNode@, where the sum runs over all the jackets @MathNode@ of @MathNode@.",
-      "\u2022 The degree of a @MathNode@-dipole @MathNode@ separating the bubbles @MathNode@ and @MathNode@, denoted @MathNode@, is the smallest of the two degrees @MathNode@ and @MathNode@."
+      [
+        "We define:",
+        [
+          "\u2022 The convergence degree (or simply degree) of a graph @MathNode@ is @MathNode@, where the sum runs over all the jackets @MathNode@ of @MathNode@.",
+          "\u2022 The degree of a @MathNode@-dipole @MathNode@ separating the bubbles @MathNode@ and @MathNode@, denoted @MathNode@, is the smallest of the two degrees @MathNode@ and @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -497,9 +529,14 @@
       "For a partition @MathNode@ with @MathNode@, let @MathNode@ be defined as follows:",
       "If @MathNode@, let @MathNode@ be a single vertex @MathNode@ defined to have flow polytope consisting of one point, @MathNode@.",
       "Otherwise, let @MathNode@ have vertices @MathEquation@ and edges @MathEquation@",
-      "The default netflow vector on @MathNode@ is as follows: \u2022 To vertex @MathNode@ for @MathNode@, assign netflow @MathNode@.",
-      "\u2022 To vertex @MathNode@, assign netflow @MathNode@.",
-      "\u2022 To all other vertices, assign netflow @MathNode@.",
+      [
+        "The default netflow vector on @MathNode@ is as follows:",
+        [
+          "\u2022 To vertex @MathNode@ for @MathNode@, assign netflow @MathNode@.",
+          "\u2022 To vertex @MathNode@, assign netflow @MathNode@.",
+          "\u2022 To all other vertices, assign netflow @MathNode@."
+        ]
+      ],
       "Given a flow on @MathNode@, denote the flow value on each edge @MathNode@ by @MathNode@, and denote the flow value on each edge @MathNode@ by @MathNode@."
     ]
   },
@@ -1071,8 +1108,13 @@
     "paper": "https://ar5iv.org/abs/1905.04770",
     "identifier": "Definition 5.1",
     "sentences": [
-      "Define the following shorthand notation for all @MathNode@: \u2022 @MathNode@ (note that @MathNode@ and @MathNode@);",
-      "\u2022 @MathNode@ (note that @MathNode@ and @MathNode@)."
+      [
+        "Define the following shorthand notation for all @MathNode@:",
+        [
+          "\u2022 @MathNode@ (note that @MathNode@ and @MathNode@);",
+          "\u2022 @MathNode@ (note that @MathNode@ and @MathNode@)."
+        ]
+      ]
     ]
   },
   {
@@ -1087,11 +1129,21 @@
     "identifier": "Definition 10.",
     "sentences": [
       "Let @MathNode@ be a group.",
-      "A norm for @MathNode@ is a map @MathNode@ such that \u2022 @MathNode@ for each @MathNode@ and @MathNode@ if and only if @MathNode@;",
-      "\u2022 @MathNode@ for all @MathNode@.",
+      [
+        "A norm for @MathNode@ is a map @MathNode@ such that",
+        [
+          "\u2022 @MathNode@ for each @MathNode@ and @MathNode@ if and only if @MathNode@;",
+          "\u2022 @MathNode@ for all @MathNode@."
+        ]
+      ],
       "We suppose that the resolution is reduced (@MathNode@) and define @MathNode@ as @MathNode@.",
-      "We say that the norm is compatible with the resolution @MathNode@ if for each @MathNode@ we can also define @MathNode@ such that \u2022 @MathNode@ for all @MathNode@ and @MathNode@ a generator of @MathNode@;",
-      "\u2022 there exists @MathNode@ such that @MathNode@ and @MathNode@ for all @MathNode@."
+      [
+        "We say that the norm is compatible with the resolution @MathNode@ if for each @MathNode@ we can also define @MathNode@ such that",
+        [
+          "\u2022 @MathNode@ for all @MathNode@ and @MathNode@ a generator of @MathNode@;",
+          "\u2022 there exists @MathNode@ such that @MathNode@ and @MathNode@ for all @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -1135,8 +1187,13 @@
     "sentences": [
       "(Admissible coordinates) Let @MathNode@ be an @MathNode@-dimensional complex manifold, and let @MathNode@ be a simple normal crossing divisor.",
       "Let @MathNode@ be a point of @MathNode@, and assume that @MathNode@ are the components of @MathNode@ containing @MathNode@.",
-      "An admissible coordinate system around @MathNode@ is a tuple @MathNode@ (or simply @MathNode@ if no confusion arises) where \u2022 @MathNode@ is an open subset of @MathNode@ containing @MathNode@.",
-      "\u2022 @MathNode@ is a holomorphic isomorphism @MathNode@ so that @MathNode@ for any @MathNode@."
+      [
+        "An admissible coordinate system around @MathNode@ is a tuple @MathNode@ (or simply @MathNode@ if no confusion arises) where",
+        [
+          "\u2022 @MathNode@ is an open subset of @MathNode@ containing @MathNode@.",
+          "\u2022 @MathNode@ is a holomorphic isomorphism @MathNode@ so that @MathNode@ for any @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -1150,26 +1207,33 @@
     "paper": "https://ar5iv.org/abs/1904.00886",
     "identifier": "Definition 8.3.2 (@MathNode@-cosmos).",
     "sentences": [
-      "An @MathNode@-cosmos is a simplicially enriched category @MathNode@ whose \u2022 objects we refer to as the @MathNode@-categories in the @MathNode@-cosmos, whose",
-      "\u2022 hom simplicial sets @MathNode@ are all quasi-categories,",
-      "and that is equipped with a specified subcategory of isofibrations, denoted by \u201c@MathNode@\u201d, satisfying the following axioms: (a) (completeness)",
-      "As a simplicially enriched category, @MathNode@ possesses a terminal object @MathNode@, cotensors @MathNode@ of objects @MathNode@ by all20For most purposes, it suffices to require only cotensors with finitely presented simplicial sets (those with only finitely many non-degenerate simplices).",
-      "simplicial sets @MathNode@, and pullbacks of isofibrations along any functor.21For the theory of homotopy coherent adjunctions and monads developed in @LtxCite@, limits of towers of isofibrations are also required, with the accompanying stability properties of @LtxRef@.",
-      "These limits are present in all of the @MathNode@-cosmoi we are aware of, but will not be required for any results discussed here.",
-      "(b) (isofibrations)",
-      "The class of isofibrations contains the isomorphisms and all of the functors @MathNode@ with codomain @MathNode@; is stable under pullback along all functors; and if @MathNode@ is an isofibration in @MathNode@ and @MathNode@ is an inclusion of simplicial sets then the Leibniz cotensor @MathNode@ is an isofibration.",
-      "Moreover, for any object @MathNode@ and isofibration @MathNode@, @MathNode@ is an isofibration of quasi-categories.",
+      [
+        "An @MathNode@-cosmos is a simplicially enriched category @MathNode@ whose",
+        [
+          "\u2022 objects we refer to as the @MathNode@-categories in the @MathNode@-cosmos, whose",
+          "\u2022 hom simplicial sets @MathNode@ are all quasi-categories,"
+        ],
+        "and that is equipped with a specified subcategory of isofibrations, denoted by \u201c@MathNode@\u201d, satisfying the following axioms:",
+        [
+          "(a) (completeness)",
+          "As a simplicially enriched category, @MathNode@ possesses a terminal object @MathNode@, cotensors @MathNode@ of objects @MathNode@ by all implicial sets @MathNode@, and pullbacks of isofibrations along any functor.",
+          "(b) (isofibrations) The class of isofibrations contains the isomorphisms and all of the functors @MathNode@ with codomain @MathNode@; is stable under pullback along all functors; and if @MathNode@ is an isofibration in @MathNode@ and @MathNode@ is an inclusion of simplicial sets then the Leibniz cotensor @MathNode@ is an isofibration.",
+          "Moreover, for any object @MathNode@ and isofibration @MathNode@, @MathNode@ is an isofibration of quasi-categories."
+        ]
+      ],
       "The underlying category of an @MathNode@-cosmos @MathNode@ has a canonical subcategory of equivalences, denoted by \u201c@MathNode@\u201d, satisfying the two-of-six property.",
       "A functor @MathNode@ is an equivalence just when the induced functor @MathNode@ is an equivalence of quasi-categories for all objects @MathNode@.",
       "The trivial fibrations, denoted by \u201c@MathNode@\u201d, are those functors that are both equivalences and isofibrations.",
-      "It follows from @LtxRef@@LtxRef@-@LtxRef@ that: (c) (cofibrancy)",
-      "All objects are cofibrant, in the sense that they enjoy the left lifting property with respect to all trivial fibrations in @MathNode@.",
-      "@MathEquation@",
-      "(d) (trivial fibrations)",
-      "The trivial fibrations define a subcategory containing the isomorphisms; are stable under pullback along all functors; and the Leibniz cotensor @MathNode@ of an isofibration @MathNode@ in @MathNode@ and a monomorphism @MathNode@ between presented simplicial sets is a trivial fibration when @MathNode@ is a trivial fibration in @MathNode@ or @MathNode@ is trivial cofibration in the Joyal model structure on sSet.",
-      "Moreover, for any object @MathNode@ and trivial fibration @MathNode@, @MathNode@ is a trivial fibration of quasi-categories.",
-      "(e) (factorization)",
-      "Any functor @MathNode@ may be factored as @MathNode@ @MathEquation@ where @MathNode@ is an isofibration and @MathNode@ is right inverse to a trivial fibration @MathNode@."
+      [
+        "It follows from @LtxRef@@LtxRef@-@LtxRef@ that:",
+        [
+          "(c) (cofibrancy) All objects are cofibrant, in the sense that they enjoy the left lifting property with respect to all trivial fibrations in @MathNode@.",
+          "@MathEquation@",
+          "(d) (trivial fibrations) The trivial fibrations define a subcategory containing the isomorphisms; are stable under pullback along all functors; and the Leibniz cotensor @MathNode@ of an isofibration @MathNode@ in @MathNode@ and a monomorphism @MathNode@ between presented simplicial sets is a trivial fibration when @MathNode@ is a trivial fibration in @MathNode@ or @MathNode@ is trivial cofibration in the Joyal model structure on sSet.",
+          "Moreover, for any object @MathNode@ and trivial fibration @MathNode@, @MathNode@ is a trivial fibration of quasi-categories.",
+          "(e) (factorization) Any functor @MathNode@ may be factored as @MathNode@ @MathEquation@ where @MathNode@ is an isofibration and @MathNode@ is right inverse to a trivial fibration @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -1413,17 +1477,25 @@
     "sentences": [
       "We now define a function @MathNode@.",
       "Recall Notation @LtxRef@ and @LtxRef@.",
-      "(1) Construction on @MathNode@: We define (cf. (@LtxRef@)) @MathEquation@",
-      "(2) Construction on @MathNode@: Let @MathNode@ and @MathNode@.",
+      [
+        [
+          "(1) Construction on @MathNode@: We define (cf. (@LtxRef@)) @MathEquation@",
+          "(2) Construction on @MathNode@: Let @MathNode@ and @MathNode@."
+        ]
+      ],
       "By (@LtxRef@), it suffices to consider the following cases.",
-      "\u2022 @MathNode@ with @MathNode@: @MathEquation@",
-      "\u2022 @MathNode@ with @MathNode@ and @MathNode@ (the case @MathNode@ is considered above): @MathEquation@ where @MathNode@.",
-      "\u2022 @MathNode@: By the definition of @MathNode@, we can find a canonical configuration @MathNode@ in @MathNode@ such that @MathNode@.",
-      "If such @MathNode@ is unique, we set @MathNode@.",
-      "In view of Lemmas @LtxRef@ and @LtxRef@, it is also possible that there are two such canonical configurations @MathNode@ and @MathNode@, but in that case we have @MathNode@ for some @MathNode@ and therefore @MathNode@ by the definition above.",
-      "We set @MathNode@ in this case.",
-      "We note in this moment that parts (1) and (2) do not collide on the set @MathNode@ (cf. Proposition @LtxRef@-(1)), since both definitions assign the same value @MathNode@ (resp. @MathNode@) on @MathNode@ (resp. @MathNode@).",
-      "(3) Construction on @MathNode@: For @MathNode@, we define (cf. (@LtxRef@)) @MathEquation@ By Proposition @LtxRef@-(2), the constructions above define @MathNode@ on the set @MathNode@."
+      [
+        [
+          "\u2022 @MathNode@ with @MathNode@: @MathEquation@",
+          "\u2022 @MathNode@ with @MathNode@ and @MathNode@ (the case @MathNode@ is considered above): @MathEquation@ where @MathNode@.",
+          "\u2022 @MathNode@: By the definition of @MathNode@, we can find a canonical configuration @MathNode@ in @MathNode@ such that @MathNode@.",
+          "If such @MathNode@ is unique, we set @MathNode@.",
+          "In view of Lemmas @LtxRef@ and @LtxRef@, it is also possible that there are two such canonical configurations @MathNode@ and @MathNode@, but in that case we have @MathNode@ for some @MathNode@ and therefore @MathNode@ by the definition above.",
+          "We set @MathNode@ in this case.",
+          "We note in this moment that parts (1) and (2) do not collide on the set @MathNode@ (cf. Proposition @LtxRef@-(1)), since both definitions assign the same value @MathNode@ (resp. @MathNode@) on @MathNode@ (resp. @MathNode@).",
+          "(3) Construction on @MathNode@: For @MathNode@, we define (cf. (@LtxRef@)) @MathEquation@ By Proposition @LtxRef@-(2), the constructions above define @MathNode@ on the set @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -1859,27 +1931,36 @@
     "paper": "https://ar5iv.org/abs/1612.06054",
     "identifier": "Definition 3.1 (Weaver @LtxCite@).",
     "sentences": [
-      "\u2022 A metric @MathNode@-algebra is a tuple @MathNode@ where @MathNode@ is a metric space and @MathNode@ is a @MathNode@-algebra.",
-      "It is called a quantitative algebra if each @MathNode@ is non-expansive (where @MathNode@ is equipped with the sup metric).",
-      "\u2022 A map @MathNode@ between metric algebras is an M-homomorphism if @MathNode@ is @MathNode@-homomorphic and non-expansive.",
-      "\u2022 An M-subalgebra @MathNode@ of a metric algebra @MathNode@ is a subalgebra of @MathNode@ equipped with the induced metric.",
-      "It can be identified with an embedding, i.e. a pair @MathNode@ of a metric algebra @MathNode@ and an isometric homomorphism @MathNode@.",
-      "\u2022 The M-product of metric algebras is the product as @MathNode@-algebras equipped with the sup metric.",
-      "\u2022 An M-quotient of a metric algebra @MathNode@ is a pair @MathNode@ where @MathNode@ is a metric algebra and @MathNode@ is a surjective @MathNode@-homomorphism.",
-      "It is a Q-quotient if @MathNode@ and @MathNode@ are quantitative algebras.",
-      "\u2022 For a set @MathNode@ of variables, an M-equation (or an atomic inequality @LtxCite@) is a formula of the form @MathNode@ where @MathNode@ is a set, @MathNode@ and @MathNode@.",
-      "We omit @MathNode@ if @MathNode@ is obvious.",
-      "A metric algebra @MathNode@ satisfies an M-equation @MathNode@ (denoted by @MathNode@) if it satisfies @MathNode@ for each map @MathNode@.",
-      "\u2022 A class of metric (resp. quantitative) algebras is called a variety of metric (quantitative) algebras if it is defined by a set of @MathNode@-equations."
+      [
+        [
+          "\u2022 A metric @MathNode@-algebra is a tuple @MathNode@ where @MathNode@ is a metric space and @MathNode@ is a @MathNode@-algebra.",
+          "It is called a quantitative algebra if each @MathNode@ is non-expansive (where @MathNode@ is equipped with the sup metric).",
+          "\u2022 A map @MathNode@ between metric algebras is an M-homomorphism if @MathNode@ is @MathNode@-homomorphic and non-expansive.",
+          "\u2022 An M-subalgebra @MathNode@ of a metric algebra @MathNode@ is a subalgebra of @MathNode@ equipped with the induced metric.",
+          "It can be identified with an embedding, i.e. a pair @MathNode@ of a metric algebra @MathNode@ and an isometric homomorphism @MathNode@.",
+          "\u2022 The M-product of metric algebras is the product as @MathNode@-algebras equipped with the sup metric.",
+          "\u2022 An M-quotient of a metric algebra @MathNode@ is a pair @MathNode@ where @MathNode@ is a metric algebra and @MathNode@ is a surjective @MathNode@-homomorphism.",
+          "It is a Q-quotient if @MathNode@ and @MathNode@ are quantitative algebras.",
+          "\u2022 For a set @MathNode@ of variables, an M-equation (or an atomic inequality @LtxCite@) is a formula of the form @MathNode@ where @MathNode@ is a set, @MathNode@ and @MathNode@.",
+          "We omit @MathNode@ if @MathNode@ is obvious.",
+          "A metric algebra @MathNode@ satisfies an M-equation @MathNode@ (denoted by @MathNode@) if it satisfies @MathNode@ for each map @MathNode@.",
+          "\u2022 A class of metric (resp. quantitative) algebras is called a variety of metric (quantitative) algebras if it is defined by a set of @MathNode@-equations."
+        ]
+      ]
     ]
   },
   {
     "paper": "https://ar5iv.org/abs/1411.1736",
     "identifier": "Definition 3.4.4.5.",
     "sentences": [
-      "Given @MathNode@, a \\myemphunit type over @MathNode@ consists of: \u2022 a type @MathNode@;",
-      "\u2022 a section @MathNode@;",
-      "\u2022 for any type @MathNode@ and section @MathNode@ of @MathNode@, a section @MathNode@ of @MathNode@, such that @MathNode@.",
+      [
+        "Given @MathNode@, a \\myemphunit type over @MathNode@ consists of:",
+        [
+          "\u2022 a type @MathNode@;",
+          "\u2022 a section @MathNode@;",
+          "\u2022 for any type @MathNode@ and section @MathNode@ of @MathNode@, a section @MathNode@ of @MathNode@, such that @MathNode@."
+        ]
+      ],
       "@MathNode@ has \\myemphweakly stable unit types if for each @MathNode@, there is some @MathNode@ over @MathNode@ such that for every @MathNode@, elimination sections can be chosen making @MathNode@ a unit type over @MathNode@.",
       "A split comprehension category @MathNode@ has \\myemphstrictly stable unit types if it is equipped with functions giving unit types @MathNode@, @MathNode@, and elimination sections @MathNode@, all commuting strictly with reindexing."
     ]
@@ -2013,11 +2094,16 @@
     "paper": "https://ar5iv.org/abs/0905.4251",
     "identifier": "Definition 3.4.",
     "sentences": [
-      "For any @MathNode@-term @MathNode@ possibly containing constants from @MathNode@, for any @MathNode@ distinct such that @MathNode@, we define, by induction on @MathNode@, @MathNode@: \u2022 @MathNode@;",
-      "\u2022 for any @MathNode@, @MathNode@;",
-      "\u2022 @MathNode@;",
-      "\u2022 the value of @MathNode@ is @MathEquation@",
-      "with the conventions @MathNode@ and @MathNode@ if @MathNode@."
+      [
+        "For any @MathNode@-term @MathNode@ possibly containing constants from @MathNode@, for any @MathNode@ distinct such that @MathNode@, we define, by induction on @MathNode@, @MathNode@:",
+        [
+          "\u2022 @MathNode@;",
+          "\u2022 for any @MathNode@, @MathNode@;",
+          "\u2022 @MathNode@;",
+          "\u2022 the value of @MathNode@ is @MathEquation@"
+        ],
+        "with the conventions @MathNode@ and @MathNode@ if @MathNode@."
+      ]
     ]
   },
   {
@@ -2327,10 +2413,14 @@
     "identifier": "Definition II.1 (Iteration process).",
     "sentences": [
       "Given the operator @MathNode@ with @MathNode@ together with a starting operator @MathNode@, the iteration process contains the following sequences with @MathNode@.",
-      "Each sequence depends on the set of unitaries @MathNode@, which are chosen in the steps before. \u2022",
-      "The sequence of operators @MathNode@, which are recursively defined by @MathGroup@ and the operator @MathNode@ is the given starting operator.",
-      "\u2022 The sequence of expectation values @MathNode@, that are defined via @MathEquation@",
-      "\u2022 The sequence of improvements @MathNode@, which characterize the detection improvement in each step, are given by @MathEquation@"
+      "Each sequence depends on the set of unitaries @MathNode@, which are chosen in the steps before.",
+      [
+        [
+          "\u2022 The sequence of operators @MathNode@, which are recursively defined by @MathGroup@ and the operator @MathNode@ is the given starting operator.",
+          "\u2022 The sequence of expectation values @MathNode@, that are defined via @MathEquation@",
+          "\u2022 The sequence of improvements @MathNode@, which characterize the detection improvement in each step, are given by @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -2368,12 +2458,17 @@
     "identifier": "Definition 19 (Trapdoor claw-free function family).",
     "sentences": [
       "For every security parameter @MathNode@, Let @MathNode@ and @MathNode@ be finite sets of inputs, outputs and keys respectively.",
-      "A family of injective functions @MathEquation@ is said to be trapdoor claw-free (TCF) family if the following holds: \u2022 Efficient Function Generation:",
-      "There exists a PPT algorithm @MathNode@ which takes the security parameter @MathNode@ and outputs a key @MathNode@ and a trapdoor @MathNode@.",
-      "\u2022 Trapdoor: For all keys @MathNode@ there exists an efficient deterministic algorithm @MathNode@ such that, given @MathNode@, for all @MathNode@ and @MathNode@, @MathNode@.",
-      "\u2022 Claw-Free: For every QPT algorithm @MathNode@ receiving as input @MathNode@ and outputting a pair @MathNode@ the probability to find a claw is negligible.",
-      "I.e. there exists a negligible function @MathNode@ for which the following holds.",
-      "@MathEquation@"
+      [
+        "A family of injective functions @MathEquation@ is said to be trapdoor claw-free (TCF) family if the following holds:",
+        [
+          "\u2022 Efficient Function Generation:",
+          "There exists a PPT algorithm @MathNode@ which takes the security parameter @MathNode@ and outputs a key @MathNode@ and a trapdoor @MathNode@.",
+          "\u2022 Trapdoor: For all keys @MathNode@ there exists an efficient deterministic algorithm @MathNode@ such that, given @MathNode@, for all @MathNode@ and @MathNode@, @MathNode@.",
+          "\u2022 Claw-Free: For every QPT algorithm @MathNode@ receiving as input @MathNode@ and outputting a pair @MathNode@ the probability to find a claw is negligible.",
+          "I.e. there exists a negligible function @MathNode@ for which the following holds.",
+          "@MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -2504,9 +2599,14 @@
     "paper": "https://ar5iv.org/abs/2305.03721",
     "identifier": "Definition 6.19 (Coherence).",
     "sentences": [
-      "Given a subsurface @MathNode@, we say a family @MathNode@ is @MathNode@\u2013coherent if for all pairs @MathNode@ \u2022 @MathNode@ is compatible with @MathNode@ and @MathNode@,",
-      "\u2022 @MathNode@ and @MathNode@ agree on @MathNode@, and",
-      "\u2022 @MathNode@ and @MathNode@.",
+      [
+        "Given a subsurface @MathNode@, we say a family @MathNode@ is @MathNode@\u2013coherent if for all pairs @MathNode@",
+        [
+          "\u2022 @MathNode@ is compatible with @MathNode@ and @MathNode@,",
+          "\u2022 @MathNode@ and @MathNode@ agree on @MathNode@, and",
+          "\u2022 @MathNode@ and @MathNode@."
+        ]
+      ],
       "The displacement of the family is @MathNode@."
     ]
   },
@@ -2620,8 +2720,13 @@
     "sentences": [
       "Let @MathNode@ (equivalently @MathNode@), and let @MathNode@ be the winning strategy for the spoiler computed by Algorithm @LtxRef@.",
       "We construct a formula @MathNode@ as follows: assume that @MathNode@ where @MathNode@.",
-      "Then set @MathNode@, @MathNode@ and @MathNode@, where @MathNode@ is constructed by recursion as follows: \u2022 @MathNode@: @MathNode@",
-      "\u2022 @MathNode@: @MathNode@",
+      [
+        "Then set @MathNode@, @MathNode@ and @MathNode@, where @MathNode@ is constructed by recursion as follows:",
+        [
+          "\u2022 @MathNode@: @MathNode@",
+          "\u2022 @MathNode@: @MathNode@"
+        ]
+      ],
       "If @MathNode@, then we set @MathNode@ and @MathNode@ instead.",
       "The recursion terminates because @MathNode@ (since @MathNode@ is an equivalence class of @MathNode@ where @MathNode@)."
     ]
@@ -2732,9 +2837,13 @@
       "This gives an orientation on an open subset of @MathNode@.",
       "If the same as the orientation already given, we say that @MathNode@ has the boundary orientation; we express that this is possible for some orientation on @MathNode@ by saying that @MathNode@ is consistently orientable with respect to @MathNode@.",
       "For any sequence of codimension 1 faces @MathNode@, we may thus inductively define the notion of any sequence being consistently orientable with respect to @MathNode@.",
-      "We say that @MathNode@ is an oriented @MathNode@-chain if @MathNode@ is equipped with an orientation on its top stratum @MathNode@, satisfying the follwing conditions: \u2022",
-      "Any sequence of codimension 1 faces of @MathNode@ is consistently orientable with respect to @MathNode@,",
-      "\u2022 Given a codimension @MathNode@ inclusion @MathNode@, there are two intermediate faces @MathNode@ and @MathNode@; we demand that if we fix an orientation on @MathNode@ (induced from @MathNode@ by some sequence of codimension 1 faces as above), then the boundary orientation that arises on @MathNode@ from the sequence @MathNode@ is negative that from the sequence @MathNode@."
+      [
+        "We say that @MathNode@ is an oriented @MathNode@-chain if @MathNode@ is equipped with an orientation on its top stratum @MathNode@, satisfying the follwing conditions:",
+        [
+          "\u2022 Any sequence of codimension 1 faces of @MathNode@ is consistently orientable with respect to @MathNode@,",
+          "\u2022 Given a codimension @MathNode@ inclusion @MathNode@, there are two intermediate faces @MathNode@ and @MathNode@; we demand that if we fix an orientation on @MathNode@ (induced from @MathNode@ by some sequence of codimension 1 faces as above), then the boundary orientation that arises on @MathNode@ from the sequence @MathNode@ is negative that from the sequence @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -2759,20 +2868,24 @@
     "sentences": [
       "Let @MathNode@ be one of the systems of delay differential equations ((@LtxRef@) \u2013 (@LtxRef@), (@LtxRef@) \u2013 (@LtxRef@), or (@LtxRef@) \u2013 (@LtxRef@)).",
       "We define the U path through the system as follows.",
-      "\u2022 Differentiate the first equation.",
-      "We arrive at @MathEquation@",
-      "\u2022 Apply the second equation to substitute @MathNode@ for @MathNode@.",
-      "\u2022 Differentiate the current expression, which is now @MathEquation@ and use the third equation to make a substitution for the integer degree two (and differential degree one) term.",
-      "\u2022 Continue to differentiate the current expression and use the @MathNode@ equation to make a substitution for the term @MathNode@ such that @MathNode@ and @MathNode@ in terms of @MathNode@ and @MathNode@.",
-      "Stop this process when we have used the final equation to substitute @MathNode@ for @MathNode@ for some @MathNode@.",
-      "This step in the @MathNode@ path is called \u201cthe turn\u201d.",
-      "\u2022 Note that all of the equations in our system (and their derivatives) can be used in the \u201creverse direction\u201d, that is, we are given that @MathEquation@ for any @MathNode@, whenever @MathNode@.",
-      "When @MathNode@, we have @MathEquation@ Using such an equation in the \u201creverse direction\u201d lowers integer degree using the general equations (@LtxRef@) and (@LtxRef@).",
-      "In the case when @MathNode@ is the largest integer appearing in the system, using the final equation @MathEquation@ already reduces the integer degree of every term.",
-      "So, the process of trading integer degrees for differential degrees begins at the turn.",
-      "With this observation, we can describe the final step of the @MathNode@ path.",
-      "After the turn, use the equations in the reverse direction to reduce the integer degree of all terms in the current expression until all have integer degree zero.",
-      "From here, we must show that the ODE we have created is non-trivial."
+      [
+        [
+          "\u2022 Differentiate the first equation.",
+          "We arrive at @MathEquation@",
+          "\u2022 Apply the second equation to substitute @MathNode@ for @MathNode@.",
+          "\u2022 Differentiate the current expression, which is now @MathEquation@ and use the third equation to make a substitution for the integer degree two (and differential degree one) term.",
+          "\u2022 Continue to differentiate the current expression and use the @MathNode@ equation to make a substitution for the term @MathNode@ such that @MathNode@ and @MathNode@ in terms of @MathNode@ and @MathNode@.",
+          "Stop this process when we have used the final equation to substitute @MathNode@ for @MathNode@ for some @MathNode@.",
+          "This step in the @MathNode@ path is called \u201cthe turn\u201d.",
+          "\u2022 Note that all of the equations in our system (and their derivatives) can be used in the \u201creverse direction\u201d, that is, we are given that @MathEquation@ for any @MathNode@, whenever @MathNode@.",
+          "When @MathNode@, we have @MathEquation@ Using such an equation in the \u201creverse direction\u201d lowers integer degree using the general equations (@LtxRef@) and (@LtxRef@).",
+          "In the case when @MathNode@ is the largest integer appearing in the system, using the final equation @MathEquation@ already reduces the integer degree of every term.",
+          "So, the process of trading integer degrees for differential degrees begins at the turn.",
+          "With this observation, we can describe the final step of the @MathNode@ path.",
+          "After the turn, use the equations in the reverse direction to reduce the integer degree of all terms in the current expression until all have integer degree zero.",
+          "From here, we must show that the ODE we have created is non-trivial."
+        ]
+      ]
     ]
   },
   {
@@ -2909,10 +3022,14 @@
     "identifier": "Definition 5.7 (@MathNode@-groups - finite rank case).",
     "sentences": [
       "Let @MathNode@, @MathNode@, @MathNode@, @MathNode@, @MathNode@ be as in Assumption @LtxRef@.",
-      "Then:",
-      "\u2022 @MathNode@ is the abelian monoid of isomorphism classes of triples @MathNode@ with addition given by the direct sum of triples;",
-      "\u2022 @MathNode@ is the submonoid consisting of isomorphism classes of triples @MathNode@ such that @MathNode@ and @MathNode@ are homotopy equivalent;",
-      "\u2022 @MathNode@ is the quotient monoid."
+      [
+        "Then:",
+        [
+          "\u2022 @MathNode@ is the abelian monoid of isomorphism classes of triples @MathNode@ with addition given by the direct sum of triples;",
+          "\u2022 @MathNode@ is the submonoid consisting of isomorphism classes of triples @MathNode@ such that @MathNode@ and @MathNode@ are homotopy equivalent;",
+          "\u2022 @MathNode@ is the quotient monoid."
+        ]
+      ]
     ]
   },
   {
@@ -2946,11 +3063,16 @@
     "identifier": "Definition 4.2.",
     "sentences": [
       "Let @MathNode@ be a triple as above.",
-      "We call the triple @MathNode@ profitable if for each @MathNode@ \u2022 we have @MathEquation@ for each @MathNode@ containing @MathNode@;",
-      "\u2022 we have @MathGroup@",
-      "\u2022 the map @MathNode@ exists;",
-      "\u2022 every prime @MathNode@ dividing @MathNode@ splits completely in @MathEquation@",
-      "\u2022 @MathNode@ and @MathNode@ split completely in @MathNode@;"
+      [
+        "We call the triple @MathNode@ profitable if for each @MathNode@",
+        [
+          "\u2022 we have @MathEquation@ for each @MathNode@ containing @MathNode@;",
+          "\u2022 we have @MathGroup@",
+          "\u2022 the map @MathNode@ exists;",
+          "\u2022 every prime @MathNode@ dividing @MathNode@ splits completely in @MathEquation@",
+          "\u2022 @MathNode@ and @MathNode@ split completely in @MathNode@;"
+        ]
+      ]
     ]
   },
   {
@@ -3052,9 +3174,14 @@
     "paper": "https://ar5iv.org/abs/2203.05101",
     "identifier": "Definition 4.",
     "sentences": [
-      "A Hermitian form on @MathNode@ is a map @MathNode@ satisfying the following properties: \u2022 @MathNode@;",
-      "\u2022 @MathNode@;",
-      "\u2022 @MathNode@."
+      [
+        "A Hermitian form on @MathNode@ is a map @MathNode@ satisfying the following properties:",
+        [
+          "\u2022 @MathNode@;",
+          "\u2022 @MathNode@;",
+          "\u2022 @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -3366,9 +3493,13 @@
       "We label each node in @MathNode@ by the pair of node labels associated to the corresponding edge of @MathNode@ @MathEquation@",
       "The edges @MathNode@ and their labels @MathNode@ are determined by the head-to-tail (@MathNode@), tail-to-tail (@MathNode@), and head-to-head (@MathNode@) relationships between edges in @MathNode@.",
       "Let @MathNode@ and @MathNode@ be edges in @MathNode@.",
-      "\u2022 @MathNode@ with @MathNode@ if and only if @MathNode@, meaning head meets tail in @MathNode@.",
-      "\u2022 @MathNode@ with @MathNode@ if and only if @MathNode@ meaning tail meets tail in @MathNode@.",
-      "\u2022 @MathNode@ with @MathNode@ if and only if @MathNode@ meaning head meets head in @MathNode@."
+      [
+        [
+          "\u2022 @MathNode@ with @MathNode@ if and only if @MathNode@, meaning head meets tail in @MathNode@.",
+          "\u2022 @MathNode@ with @MathNode@ if and only if @MathNode@ meaning tail meets tail in @MathNode@.",
+          "\u2022 @MathNode@ with @MathNode@ if and only if @MathNode@ meaning head meets head in @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -3683,10 +3814,19 @@
     "paper": "https://ar5iv.org/abs/cs/0011039",
     "identifier": "Definition 5.2 (Type Interpretation Domain).",
     "sentences": [
-      "1. A type interpretation domain is a quadruple @MathNode@ such that: \u2022 @MathNode@ is a @MathNode@-applicative structure;",
-      "\u2022 @MathNode@ is a subset of @MathNode@, called the functionality set, such that @MathNode@ for all @MathNode@.",
-      "2. A type interpretation domain @MathNode@ is a simple interpretation domain if @MathNode@;",
-      "3. A type interpretation domain @MathNode@ is an F-interpretation domain if @MathNode@. \u220e"
+      [
+        [
+          [
+            "1. A type interpretation domain is a quadruple @MathNode@ such that:",
+            [
+              "\u2022 @MathNode@ is a @MathNode@-applicative structure;",
+              "\u2022 @MathNode@ is a subset of @MathNode@, called the functionality set, such that @MathNode@ for all @MathNode@."
+            ]
+          ],
+          "2. A type interpretation domain @MathNode@ is a simple interpretation domain if @MathNode@;",
+          "3. A type interpretation domain @MathNode@ is an F-interpretation domain if @MathNode@. \u220e"
+        ]
+      ]
     ]
   },
   {
@@ -3879,10 +4019,14 @@
     "paper": "https://ar5iv.org/abs/2006.13626",
     "identifier": "Definition 2.3.",
     "sentences": [
-      "A Fourier\u2013Mukai action of @MathNode@ on @MathNode@ consists of2We write @MathNode@ to indicate the composition of correspondences @MathNode@.",
-      "\u2022 for every @MathNode@ a Fourier\u2013Mukai kernel @MathNode@,",
-      "\u2022 for every pair @MathNode@ an isomorphism @MathNode@",
-      "such that for all @MathNode@ the diagram (@LtxRef@) commutes with @MathNode@ replaced by @MathNode@."
+      [
+        "A Fourier\u2013Mukai action of @MathNode@ on @MathNode@ consists of",
+        [
+          "\u2022 for every @MathNode@ a Fourier\u2013Mukai kernel @MathNode@,",
+          "\u2022 for every pair @MathNode@ an isomorphism @MathNode@"
+        ],
+        "such that for all @MathNode@ the diagram (@LtxRef@) commutes with @MathNode@ replaced by @MathNode@."
+      ]
     ]
   },
   {
@@ -3905,8 +4049,13 @@
     "paper": "https://ar5iv.org/abs/1910.12954",
     "identifier": "Definition 2 (Nice activation functions).",
     "sentences": [
-      "We define @MathNode@ to be the class of activation functions @MathNode@ satisfying the following conditions: \u2022 @MathNode@.",
-      "\u2022 @MathNode@, @MathNode@ and @MathNode@ for all @MathNode@.",
+      [
+        "We define @MathNode@ to be the class of activation functions @MathNode@ satisfying the following conditions:",
+        [
+          "\u2022 @MathNode@.",
+          "\u2022 @MathNode@, @MathNode@ and @MathNode@ for all @MathNode@."
+        ]
+      ],
       "We call this the class of nice activation functions."
     ]
   },
@@ -4098,8 +4247,13 @@
     "paper": "https://ar5iv.org/abs/1808.01580",
     "identifier": "Definition 2.4.",
     "sentences": [
-      "A torsion quasi-Kisin module of height @MathNode@ is a pair @MathNode@ where \u2022 @MathNode@ is a finitely presented @MathNode@-module killed by a power of @MathNode@, and of @MathNode@-projective dimension @MathNode@;",
-      "\u2022 @MathNode@ is a @MathNode@-semilinear endomorphism such that @MathNode@ is killed by @MathNode@."
+      [
+        "A torsion quasi-Kisin module of height @MathNode@ is a pair @MathNode@ where",
+        [
+          "\u2022 @MathNode@ is a finitely presented @MathNode@-module killed by a power of @MathNode@, and of @MathNode@-projective dimension @MathNode@;",
+          "\u2022 @MathNode@ is a @MathNode@-semilinear endomorphism such that @MathNode@ is killed by @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -4297,14 +4451,16 @@
     "paper": "https://ar5iv.org/abs/1502.04586",
     "identifier": "Definition 2.2.",
     "sentences": [
-      "Suppose that @MathNode@ is a locally finite root supersystem. \u2022",
-      "The subgroup @MathNode@ of @MathNode@ generated by @MathNode@ (@MathNode@) mapping @MathNode@ to @MathNode@ is called the Weyl group of @MathNode@",
-      "\u2022 A subset @MathNode@ of @MathNode@ is called a sub-supersystem if the restriction of the form to @MathNode@ is nondegenerate, @MathNode@ for @MathNode@ and @MathNode@ with @MathNode@ @MathNode@ and @MathNode@ see @LtxCite@.",
-      "\u2022 A sub-supersystem @MathNode@ of @MathNode@ is called closed if for @MathNode@ with @MathNode@ we have @MathNode@",
-      "\u2022 If @MathNode@ is irreducible, @MathNode@ is said to be of real type if @MathNode@ otherwise, we say it is of imaginary type.",
-      "\u2022 The locally finite root supersystem @MathNode@ is called a locally finite root system if @MathNode@ see @LtxCite@.",
-      "\u2022 @MathNode@ is said to be isomorphic to another locally finite root supersystem @MathNode@ if there is a group isomorphism @MathNode@ and a nonzero scalar @MathNode@ such that @MathNode@ and @MathNode@ for all @MathNode@",
-      "In this case, we write @MathNode@"
+      "Suppose that @MathNode@ is a locally finite root supersystem.",
+      [
+        "\u2022 The subgroup @MathNode@ of @MathNode@ generated by @MathNode@ (@MathNode@) mapping @MathNode@ to @MathNode@ is called the Weyl group of @MathNode@",
+        "\u2022 A subset @MathNode@ of @MathNode@ is called a sub-supersystem if the restriction of the form to @MathNode@ is nondegenerate, @MathNode@ for @MathNode@ and @MathNode@ with @MathNode@ @MathNode@ and @MathNode@ see @LtxCite@.",
+        "\u2022 A sub-supersystem @MathNode@ of @MathNode@ is called closed if for @MathNode@ with @MathNode@ we have @MathNode@",
+        "\u2022 If @MathNode@ is irreducible, @MathNode@ is said to be of real type if @MathNode@ otherwise, we say it is of imaginary type.",
+        "\u2022 The locally finite root supersystem @MathNode@ is called a locally finite root system if @MathNode@ see @LtxCite@.",
+        "\u2022 @MathNode@ is said to be isomorphic to another locally finite root supersystem @MathNode@ if there is a group isomorphism @MathNode@ and a nonzero scalar @MathNode@ such that @MathNode@ and @MathNode@ for all @MathNode@",
+        "In this case, we write @MathNode@"
+      ]
     ]
   },
   {
@@ -4426,9 +4582,13 @@
     "paper": "https://ar5iv.org/abs/2111.09256",
     "identifier": "Definition 2.29.",
     "sentences": [
-      "We say that the Max-CSP(@MathNode@) is @MathNode@-UFG-NP-hard if there is an explicit family of factor graphs @MathNode@ for @MathNode@ and a polynomial time reduction @MathNode@ from 3-Sat instances @MathNode@ on @MathNode@ variables to Max-CSP(@MathNode@) instances @MathNode@ with the factor graph @MathNode@ such that the following holds \u2022 Completeness:",
-      "If @MathNode@ is satisfiable then @MathNode@.",
-      "\u2022 Soundness: If @MathNode@ is not satisfiable then @MathNode@.",
+      [
+        "We say that the Max-CSP(@MathNode@) is @MathNode@-UFG-NP-hard if there is an explicit family of factor graphs @MathNode@ for @MathNode@ and a polynomial time reduction @MathNode@ from 3-Sat instances @MathNode@ on @MathNode@ variables to Max-CSP(@MathNode@) instances @MathNode@ with the factor graph @MathNode@ such that the following holds",
+        [
+          "\u2022 Completeness: If @MathNode@ is satisfiable then @MathNode@.",
+          "\u2022 Soundness: If @MathNode@ is not satisfiable then @MathNode@."
+        ]
+      ],
       "We will say that Max-CSP(@MathNode@) has \u201cuniversal factor graphs\u201d to mean that Max-CSP(@MathNode@) is @MathNode@-UFG-NP-hard, in which case the values of @MathNode@ and @MathNode@ will be clear from the context."
     ]
   },
@@ -4528,13 +4688,15 @@
     "identifier": "Definition 3.3.",
     "sentences": [
       "Let @MathNode@ be an analytic equivalence relation on a Polish space @MathNode@.",
-      "Let @MathNode@ be a poset and @MathNode@ a @MathNode@-name forced to be in @MathNode@. \u2022",
-      "The name @MathNode@ is @MathNode@-pinned if @MathNode@ forces that @MathNode@ is @MathNode@-equivalent to @MathNode@, where @MathNode@ and @MathNode@ are the interpretation of @MathNode@ using the left and right generics respectively.",
-      "\u2022 If @MathNode@ is @MathNode@-pinned the pair @MathNode@ is called an @MathNode@-pin.",
-      "\u2022 An @MathNode@-pin @MathNode@ is trivial if there is some @MathNode@ such that @MathNode@.",
-      "\u2022 Given two @MathNode@-pins @MathNode@ and @MathNode@, say that they are @MathNode@-equivalent3",
-      "The extension of @MathNode@ to pins is denoted in @LtxCite@ as @MathNode@.",
-      "Here we use @MathNode@, due to laziness., @MathNode@, if @MathNode@."
+      "Let @MathNode@ be a poset and @MathNode@ a @MathNode@-name forced to be in @MathNode@.",
+      [
+        [
+          "\u2022 The name @MathNode@ is @MathNode@-pinned if @MathNode@ forces that @MathNode@ is @MathNode@-equivalent to @MathNode@, where @MathNode@ and @MathNode@ are the interpretation of @MathNode@ using the left and right generics respectively.",
+          "\u2022 If @MathNode@ is @MathNode@-pinned the pair @MathNode@ is called an @MathNode@-pin.",
+          "\u2022 An @MathNode@-pin @MathNode@ is trivial if there is some @MathNode@ such that @MathNode@.",
+          "\u2022 Given two @MathNode@-pins @MathNode@ and @MathNode@, say that they are @MathNode@-equivalent, @MathNode@, if @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -4560,11 +4722,16 @@
     "paper": "https://ar5iv.org/abs/1911.07338",
     "identifier": "Definition B.9 (Isothermal CRN @LtxCite@).",
     "sentences": [
-      "An isothermal CRN is quadruplet @MathNode@, in which \u2022 @MathNode@ is the species set representing the considered substances,",
-      "\u2022 @MathNode@ is the complex set consisting of all distinguished complexes where @MathNode@ is the size of the set.",
-      "\u2022 @MathNode@ is the reaction set with @MathNode@ and @MathNode@ @MathNode@ being respectively the indexes of the substrate and product complexes of the @MathNode@-th reaction.",
-      "Particularly, for each reaction, @MathNode@ and @MathNode@ should not be the same.",
-      "\u2022 @MathNode@ is the kinetics class."
+      [
+        "An isothermal CRN is quadruplet @MathNode@, in which",
+        [
+          "\u2022 @MathNode@ is the species set representing the considered substances,",
+          "\u2022 @MathNode@ is the complex set consisting of all distinguished complexes where @MathNode@ is the size of the set.",
+          "\u2022 @MathNode@ is the reaction set with @MathNode@ and @MathNode@ @MathNode@ being respectively the indexes of the substrate and product complexes of the @MathNode@-th reaction.",
+          "Particularly, for each reaction, @MathNode@ and @MathNode@ should not be the same.",
+          "\u2022 @MathNode@ is the kinetics class."
+        ]
+      ]
     ]
   },
   {
@@ -4595,8 +4762,12 @@
     "identifier": "Definition 3.5 (@MathNode@).",
     "sentences": [
       "Let @MathNode@ be a quasi-order.",
-      "\u2022 @MathNode@ is bqo if for every barrier @MathNode@ every @MathNode@ is good with respect to @MathNode@;",
-      "\u2022 @MathNode@ is bqo(block) if for every block @MathNode@ every @MathNode@ is good with respect to @MathNode@."
+      [
+        [
+          "\u2022 @MathNode@ is bqo if for every barrier @MathNode@ every @MathNode@ is good with respect to @MathNode@;",
+          "\u2022 @MathNode@ is bqo(block) if for every block @MathNode@ every @MathNode@ is good with respect to @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -4626,8 +4797,13 @@
     "identifier": "Definition 2.14.",
     "sentences": [
       "Let @MathNode@ be a submanifold of @MathNode@ .",
-      "We say that @MathNode@ has extrinsically homogeneous tangent holonomy bundle if there exists a connected Lie subgroup @MathNode@ with the following properties: \u2022 @MathNode@ for all @MathNode@ .",
-      "\u2022 For each @MathNode@ and every curve @MathNode@ with @MathNode@ there exists some @MathNode@ such that @MathNode@ and that the parallel displacement along @MathNode@ is given by @MathEquation@"
+      [
+        "We say that @MathNode@ has extrinsically homogeneous tangent holonomy bundle if there exists a connected Lie subgroup @MathNode@ with the following properties:",
+        [
+          "\u2022 @MathNode@ for all @MathNode@ .",
+          "\u2022 For each @MathNode@ and every curve @MathNode@ with @MathNode@ there exists some @MathNode@ such that @MathNode@ and that the parallel displacement along @MathNode@ is given by @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -5766,8 +5942,13 @@
     "identifier": "Definition 6.4 (@MathNode@).",
     "sentences": [
       "Let @MathNode@ be an @MathNode@-decomposable weak Hopf algebra.",
-      "We define @MathNode@, the @MathNode@-weak bialgebra automorphism groupoid of @MathNode@, as follows: \u2022 the object set is @MathNode@,",
-      "\u2022 for any @MathNode@, @MathNode@ is the space of weak bialgebra isomorphisms between the weak bialgebras @MathNode@ and @MathNode@."
+      [
+        "We define @MathNode@, the @MathNode@-weak bialgebra automorphism groupoid of @MathNode@, as follows:",
+        [
+          "\u2022 the object set is @MathNode@,",
+          "\u2022 for any @MathNode@, @MathNode@ is the space of weak bialgebra isomorphisms between the weak bialgebras @MathNode@ and @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -5884,9 +6065,14 @@
     "identifier": "Definition 3.9.",
     "sentences": [
       "Let @MathNode@ be an \u00e9tale groupoid.",
-      "A topological space @MathNode@, equipped with an onto local homeomorphism @MathNode@, is a (left) @MathNode@-sheaf of sets if, for each @MathNode@, there is a bijection @MathNode@ such that \u2022 If @MathNode@ then @MathNode@.",
-      "\u2022 If @MathNode@ then @MathNode@.",
-      "\u2022 The map @MathNode@ given by @MathNode@ is continuous."
+      [
+        "A topological space @MathNode@, equipped with an onto local homeomorphism @MathNode@, is a (left) @MathNode@-sheaf of sets if, for each @MathNode@, there is a bijection @MathNode@ such that",
+        [
+          "\u2022 If @MathNode@ then @MathNode@.",
+          "\u2022 If @MathNode@ then @MathNode@.",
+          "\u2022 The map @MathNode@ given by @MathNode@ is continuous."
+        ]
+      ]
     ]
   },
   {
@@ -6126,9 +6312,14 @@
     "paper": "https://ar5iv.org/abs/1404.3504",
     "identifier": "Definition 3.1.",
     "sentences": [
-      "A @MathNode@ complex vector bundle of rank @MathNode@ on @MathNode@ is the following set of data: \u2022 for any atlas @MathNode@ a @MathNode@ complex vector bundle @MathNode@ of a rank @MathNode@ on @MathNode@,",
-      "\u2022 for any morphism @MathNode@ of two atlases, where @MathNode@ is a local diffeomorphism of differentiable manifolds and @MathNode@ is a 2-isomorphism, an isomorphism of @MathNode@ complex vector bundles of rank @MathNode@ @MathEquation@",
-      "such that for any composition @MathNode@, we have @MathEquation@ @MathNode@"
+      [
+        "A @MathNode@ complex vector bundle of rank @MathNode@ on @MathNode@ is the following set of data:",
+        [
+          "\u2022 for any atlas @MathNode@ a @MathNode@ complex vector bundle @MathNode@ of a rank @MathNode@ on @MathNode@,",
+          "\u2022 for any morphism @MathNode@ of two atlases, where @MathNode@ is a local diffeomorphism of differentiable manifolds and @MathNode@ is a 2-isomorphism, an isomorphism of @MathNode@ complex vector bundles of rank @MathNode@ @MathEquation@"
+        ],
+        "such that for any composition @MathNode@, we have @MathEquation@ @MathNode@"
+      ]
     ]
   },
   {
@@ -6171,9 +6362,14 @@
     "identifier": "Definition 3.4 (Stable labelings @MathNode@).",
     "sentences": [
       "Let @MathNode@ be an @MathNode@-graph.",
-      "We call @MathNode@ stable if there does not exist a different @MathNode@ such that \u2022 @MathNode@ for all @MathNode@, and",
-      "\u2022 for all distinct @MathNode@, one has @MathNode@ if and only if @MathNode@, and",
-      "\u2022 for all @MathNode@, one has @MathNode@ if and only if @MathNode@.",
+      [
+        "We call @MathNode@ stable if there does not exist a different @MathNode@ such that",
+        [
+          "\u2022 @MathNode@ for all @MathNode@, and",
+          "\u2022 for all distinct @MathNode@, one has @MathNode@ if and only if @MathNode@, and",
+          "\u2022 for all @MathNode@, one has @MathNode@ if and only if @MathNode@."
+        ]
+      ],
       "Denote the set of stable labelings by @MathNode@.",
       "Define @MathNode@ to be the set of functions @MathNode@ such that @MathNode@ for all @MathNode@."
     ]
@@ -6270,12 +6466,16 @@
     "identifier": "Definition 2.4.",
     "sentences": [
       "Let @MathNode@ be a continuous function and @MathNode@.",
-      "\u2022 Say that @MathNode@ is @MathNode@-monotone at @MathNode@ if there is a neighborhood @MathNode@ of @MathNode@ such that if @MathNode@ and @MathNode@, then @MathNode@, and monotone at @MathNode@ if it is @MathNode@-monotone at @MathNode@ for some @MathNode@.",
-      "The set of all points where @MathNode@ is @MathNode@-monotone is denoted @MathNode@.",
-      "The set of all points where @MathNode@ is monotone is denoted @MathNode@.",
-      "\u2022 If @MathNode@ is @MathNode@-monotone (monotone) at @MathNode@, we call @MathNode@ an @MathNode@-point (@MathNode@-point) of @MathNode@.",
-      "The set of all @MathNode@-points of @MathNode@ is denoted @MathNode@ or just @MathNode@.",
-      "The set of all @MathNode@-points of @MathNode@ is denoted @MathNode@ or just @MathNode@."
+      [
+        [
+          "\u2022 Say that @MathNode@ is @MathNode@-monotone at @MathNode@ if there is a neighborhood @MathNode@ of @MathNode@ such that if @MathNode@ and @MathNode@, then @MathNode@, and monotone at @MathNode@ if it is @MathNode@-monotone at @MathNode@ for some @MathNode@.",
+          "The set of all points where @MathNode@ is @MathNode@-monotone is denoted @MathNode@.",
+          "The set of all points where @MathNode@ is monotone is denoted @MathNode@.",
+          "\u2022 If @MathNode@ is @MathNode@-monotone (monotone) at @MathNode@, we call @MathNode@ an @MathNode@-point (@MathNode@-point) of @MathNode@.",
+          "The set of all @MathNode@-points of @MathNode@ is denoted @MathNode@ or just @MathNode@.",
+          "The set of all @MathNode@-points of @MathNode@ is denoted @MathNode@ or just @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -6386,12 +6586,16 @@
     "identifier": "Definition 36.",
     "sentences": [
       "(Schur ring) Let @MathNode@ be a finite abelian group and let @MathNode@ denote finite subsets with the following properties.",
-      "\u2022 @MathNode@ is the singleton containing the identity.",
-      "\u2022 We have a disjoint union",
-      "@MathEquation@ with @MathNode@ for all @MathNode@.",
-      "\u2022 for each @MathNode@ there is a @MathNode@ such that @MathNode@ (and if @MathNode@ for all @MathNode@ then we say the Schur ring is symmetric).",
-      "\u2022 for all @MathNode@, we have",
-      "@MathEquation@ for some integers @MathNode@.",
+      [
+        [
+          "\u2022 @MathNode@ is the singleton containing the identity.",
+          "\u2022 We have a disjoint union",
+          "@MathEquation@ with @MathNode@ for all @MathNode@.",
+          "\u2022 for each @MathNode@ there is a @MathNode@ such that @MathNode@ (and if @MathNode@ for all @MathNode@ then we say the Schur ring is symmetric).",
+          "\u2022 for all @MathNode@, we have",
+          "@MathEquation@ for some integers @MathNode@."
+        ]
+      ],
       "The subalgebra of @MathNode@ generated by @MathNode@ is called a Schur ring over @MathNode@."
     ]
   },
@@ -6835,8 +7039,13 @@
     "paper": "https://ar5iv.org/abs/1502.03811",
     "identifier": "Definition 2.10.",
     "sentences": [
-      "Two parabolic subgroups @MathNode@ and @MathNode@ are said to be \u2022 transverse (or opposite) if their intersection is a reductive subgroup;",
-      "\u2022 compatible (or in singular position) if their intersection is a parabolic subgroup."
+      [
+        "Two parabolic subgroups @MathNode@ and @MathNode@ are said to be",
+        [
+          "\u2022 transverse (or opposite) if their intersection is a reductive subgroup;",
+          "\u2022 compatible (or in singular position) if their intersection is a parabolic subgroup."
+        ]
+      ]
     ]
   },
   {
@@ -6965,8 +7174,13 @@
     "identifier": "Definition 2 (The @MathNode@ model).",
     "sentences": [
       "Let @MathNode@ be a @MathNode@ variant function.",
-      "A @MathNode@ protocol for @MathNode@ consists of a pair of algorithms @MathNode@ where @MathNode@ and @MathNode@ such that \u2022 For any @MathNode@ it holds that: @MathNode@",
-      "\u2022 There exists a randomized algorithm (simulator) @MathNode@ such that for @MathNode@ and for @MathNode@ sampled from @MathNode@, it holds that @MathEquation@",
+      [
+        "A @MathNode@ protocol for @MathNode@ consists of a pair of algorithms @MathNode@ where @MathNode@ and @MathNode@ such that",
+        [
+          "\u2022 For any @MathNode@ it holds that: @MathNode@",
+          "\u2022 There exists a randomized algorithm (simulator) @MathNode@ such that for @MathNode@ and for @MathNode@ sampled from @MathNode@, it holds that @MathEquation@"
+        ]
+      ],
       "The communication complexity of the PSM protocol is the encoding length @MathNode@ and the randomness complexity of the protocol is defined to be @MathNode@."
     ]
   },
@@ -7264,13 +7478,20 @@
     "paper": "https://ar5iv.org/abs/1501.01925",
     "identifier": "Definition 3.2.3.",
     "sentences": [
-      "A linear n-category, @MathNode@, is an @MathNode@-globular vector space @MathNode@ (with source and target maps @MathNode@) together with, for any @MathNode@ and any @MathNode@, a linear composition map @MathNode@ and, for any @MathNode@, a linear identity map @MathNode@, such that the properties",
-      "\u2022 for @MathNode@, @MathEquation@ @MathEquation@",
-      "\u2022 @MathEquation@",
-      "\u2022 for any @MathNode@, @MathEquation@",
-      "\u2022 @MathEquation@",
-      "are verified, as well as the compatibility conditions \u2022 for @MathNode@, @MathNode@ and @MathNode@, @MathEquation@",
-      "\u2022 for @MathNode@ and @MathNode@, @MathEquation@"
+      [
+        "A linear n-category, @MathNode@, is an @MathNode@-globular vector space @MathNode@ (with source and target maps @MathNode@) together with, for any @MathNode@ and any @MathNode@, a linear composition map @MathNode@ and, for any @MathNode@, a linear identity map @MathNode@, such that the properties",
+        [
+          "\u2022 for @MathNode@, @MathEquation@ @MathEquation@",
+          "\u2022 @MathEquation@",
+          "\u2022 for any @MathNode@, @MathEquation@",
+          "\u2022 @MathEquation@ are verified,"
+        ],
+        "as well as the compatibility conditions",
+        [
+          "\u2022 for @MathNode@, @MathNode@ and @MathNode@, @MathEquation@",
+          "\u2022 for @MathNode@ and @MathNode@, @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -7328,8 +7549,13 @@
     "paper": "https://ar5iv.org/abs/2307.05218",
     "identifier": "Definition 12 (Probabilistic Correspondence Simulation)",
     "sentences": [
-      "A relation @MathNode@ is a (weak) probabilistic (reduction) correspondence simulation if for each @MathNode@: \u2022 @MathNode@ implies @MathNode@",
-      "\u2022 @MathNode@ implies @MathNode@",
+      [
+        "A relation @MathNode@ is a (weak) probabilistic (reduction) correspondence simulation if for each @MathNode@:",
+        [
+          "\u2022 @MathNode@ implies @MathNode@",
+          "\u2022 @MathNode@ implies @MathNode@"
+        ]
+      ],
       "Two terms are probabilistic correspondence similar if a probabilistic correspondence simulation relates them."
     ]
   },
@@ -7918,11 +8144,15 @@
     "paper": "https://ar5iv.org/abs/2001.11871",
     "identifier": "Definition 2.1.",
     "sentences": [
-      "A t-embedding in the whole plane is an embedded locally finite planar graph with the following properties: \u2022 Properness:",
-      "The edges are non-degenerate straight segments, the faces are convex, do not overlap and cover the whole plane.",
-      "\u2022 Bipartite dual: The dual graph is bipartite, we call the bipartite classes black and white, and denote them @MathNode@ and @MathNode@, respectively.",
-      "(In other words, we assume that the faces of the corresponding tiling of the plane by convex polygons are colored black and white in a chessboard fashion.)",
-      "\u2022 Angle condition: For every vertex @MathNode@ one has @MathEquation@ where @MathNode@ is the angle of a face @MathNode@ at a neighbouring vertex @MathNode@, see Fig. @LtxRef@."
+      [
+        "A t-embedding in the whole plane is an embedded locally finite planar graph with the following properties:",
+        [
+          "\u2022 Properness: The edges are non-degenerate straight segments, the faces are convex, do not overlap and cover the whole plane.",
+          "\u2022 Bipartite dual: The dual graph is bipartite, we call the bipartite classes black and white, and denote them @MathNode@ and @MathNode@, respectively.",
+          "(In other words, we assume that the faces of the corresponding tiling of the plane by convex polygons are colored black and white in a chessboard fashion.)",
+          "\u2022 Angle condition: For every vertex @MathNode@ one has @MathEquation@ where @MathNode@ is the angle of a face @MathNode@ at a neighbouring vertex @MathNode@, see Fig. @LtxRef@."
+        ]
+      ]
     ]
   },
   {
@@ -8088,19 +8318,28 @@
     "sentences": [
       "Let @MathNode@ act as @MathNode@, and assume that @MathNode@ is reductive.",
       "Take @MathNode@, and let @MathNode@ be a lift to @MathNode@.",
-      "We say that @MathNode@ is: \u2022 GIT-semistable if @MathNode@;",
-      "\u2022 GIT-stable if @MathNode@ is closed and its stabilizer is finite;",
-      "\u2022 GIT-polystable if @MathNode@ is closed."
+      [
+        "We say that @MathNode@ is:",
+        [
+          "\u2022 GIT-semistable if @MathNode@;",
+          "\u2022 GIT-stable if @MathNode@ is closed and its stabilizer is finite;",
+          "\u2022 GIT-polystable if @MathNode@ is closed."
+        ]
+      ]
     ]
   },
   {
     "paper": "https://ar5iv.org/abs/0803.3395",
     "identifier": "Definition 8.1.2.",
     "sentences": [
-      "Let @MathNode@ be a pair of reductive groups. \u2022",
-      "We say that @MathNode@ satisfy GP1 if for any irreducible admissible representation @MathNode@ of @MathNode@ we have @MathEquation@",
-      "\u2022 We say that @MathNode@ satisfy GP2 if for any irreducible admissible representation @MathNode@ of @MathNode@ we have @MathEquation@",
-      "\u2022 We say that @MathNode@ satisfy GP3 if for any irreducible unitary representation @MathNode@ of @MathNode@ on a Hilbert space @MathNode@ we have @MathEquation@"
+      "Let @MathNode@ be a pair of reductive groups.",
+      [
+        [
+          "\u2022 We say that @MathNode@ satisfy GP1 if for any irreducible admissible representation @MathNode@ of @MathNode@ we have @MathEquation@",
+          "\u2022 We say that @MathNode@ satisfy GP2 if for any irreducible admissible representation @MathNode@ of @MathNode@ we have @MathEquation@",
+          "\u2022 We say that @MathNode@ satisfy GP3 if for any irreducible unitary representation @MathNode@ of @MathNode@ on a Hilbert space @MathNode@ we have @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -8358,8 +8597,13 @@
       "The series of groups @MathNode@ is called the upper central series of @MathNode@.",
       "Let @MathNode@ and let @MathNode@ (@MathNode@, and @MathNode@ denotes the commutator operation).",
       "The series of groups @MathNode@ is called the lower central series of @MathNode@.",
-      "@MathNode@ is called nilpotent if one (hence both) of the following equivalent conditions hold: \u2022 There exists @MathNode@ such that @MathNode@.",
-      "\u2022 There exists @MathNode@ such that @MathNode@.",
+      [
+        "@MathNode@ is called nilpotent if one (hence both) of the following equivalent conditions hold:",
+        [
+          "\u2022 There exists @MathNode@ such that @MathNode@.",
+          "\u2022 There exists @MathNode@ such that @MathNode@."
+        ]
+      ],
       "If @MathNode@ is a nontrivial nilpotent group, then there exists a natural number @MathNode@ for which @MathNode@, @MathNode@ and @MathNode@, @MathNode@ holds.",
       "@MathNode@ is called the nilpotency class of @MathNode@.",
       "(If @MathNode@ is trivial, then its nilpotency class is zero.)"
@@ -8473,11 +8717,19 @@
     "sentences": [
       "Let @MathNode@ be a monoidal category.",
       "Then a bicomonad on @MathNode@ is a comonoid in the category of monoidal endofunctors from @MathNode@ to @MathNode@.",
-      "Thus, it is an endofunctor @MathNode@, furnished with: \u2022 a natural transformation @MathNode@, and",
-      "\u2022 an arrow @MathNode@",
-      "such that @MathNode@ is a monoidal functor; \u2022 a natural transformation @MathNode@ and",
-      "\u2022 a natural transformation @MathNode@",
-      "such that @MathNode@ is a comonoid in @MathNode@, and four compatibility axioms stating that @MathNode@ is monoidal, @MathGroup@ and that @MathNode@ is monoidal @MathGroup@"
+      [
+        "Thus, it is an endofunctor @MathNode@, furnished with:",
+        [
+          "\u2022 a natural transformation @MathNode@, and",
+          "\u2022 an arrow @MathNode@"
+        ],
+        "such that @MathNode@ is a monoidal functor;",
+        [
+          "\u2022 a natural transformation @MathNode@ and",
+          "\u2022 a natural transformation @MathNode@"
+        ],
+        "such that @MathNode@ is a comonoid in @MathNode@, and four compatibility axioms stating that @MathNode@ is monoidal, @MathGroup@ and that @MathNode@ is monoidal @MathGroup@"
+      ]
     ]
   },
   {
@@ -8639,11 +8891,15 @@
     "paper": "https://ar5iv.org/abs/1105.1697",
     "identifier": "Definition 1",
     "sentences": [
-      "The recursive construction of the k-th order @MathNode@-cherry tree:",
-      "\u2022 (i) The complete graph of @MathNode@ nodes from @MathNode@ represent the smallest @MathNode@-th order t-cherry tree;",
-      "\u2022 (ii) By connecting a new vertex @MathNode@, with all @MathNode@ vertices of a @MathNode@- dimensional complete subgraph of the existing @MathNode@-th order @MathNode@-cherry tree, we obtain a new @MathNode@-th order @MathNode@-cherry tree.",
-      "@MathNode@ is called k-th order hypercherry.",
-      "\u2022 (iii) A k-th order @MathNode@-cherry tree can be obtained from (i) by successive application of (ii).",
+      [
+        "The recursive construction of the k-th order @MathNode@-cherry tree:",
+        [
+          "\u2022 (i) The complete graph of @MathNode@ nodes from @MathNode@ represent the smallest @MathNode@-th order t-cherry tree;",
+          "\u2022 (ii) By connecting a new vertex @MathNode@, with all @MathNode@ vertices of a @MathNode@- dimensional complete subgraph of the existing @MathNode@-th order @MathNode@-cherry tree, we obtain a new @MathNode@-th order @MathNode@-cherry tree.",
+          "@MathNode@ is called k-th order hypercherry.",
+          "\u2022 (iii) A k-th order @MathNode@-cherry tree can be obtained from (i) by successive application of (ii)."
+        ]
+      ],
       "The k-th order @MathNode@-cherry tree is a special triangulated (chordal or rigid circuit) graph therefore a junction tree structure is associated to it (see @LtxCite@)."
     ]
   },
@@ -8723,8 +8979,13 @@
     "sentences": [
       "(@MathNode@) Let @MathNode@ be a field and let @MathNode@ be a natural number.",
       "Let @MathNode@ be a set of elements from @MathNode@.",
-      "Then @MathNode@ denotes the field which is obtained by adjoining the elements @MathNode@ from the algebraic closure of @MathNode@ where: \u2022 @MathNode@.",
-      "\u2022 @MathNode@, @MathNode@."
+      [
+        "Then @MathNode@ denotes the field which is obtained by adjoining the elements @MathNode@ from the algebraic closure of @MathNode@ where:",
+        [
+          "\u2022 @MathNode@.",
+          "\u2022 @MathNode@, @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -8740,17 +9001,31 @@
     "identifier": "Definition 1.13.",
     "sentences": [
       "Let @MathNode@ be a surface with marked points.",
-      "(1) An arc on @MathNode@, is a curve @MathNode@ on @MathNode@ such that: \u2022 the endpoints of @MathNode@ belong to @MathNode@;",
-      "\u2022 @MathNode@ does not intersect itself, except that its endpoints may coincide;",
-      "\u2022 the points in @MathNode@ that are not endpoints do not belong to @MathNode@ nor to the boundary of @MathNode@;",
-      "\u2022 @MathNode@ does not cut out an unpunctured monogon nor an unpunctured digon.",
-      "(2) Two arcs @MathNode@ and @MathNode@ are isotopic relative to @MathNode@ if there exists a continuous function @MathNode@ such that (a) @MathNode@ for all @MathNode@;",
-      "(b) @MathNode@;",
-      "(c) @MathNode@ for all @MathNode@ and all @MathNode@;",
-      "(d) for every @MathNode@, the function @MathNode@ given by @MathNode@ is a homeomorphism.",
-      "Arcs will be considered up to isotopy relative to @MathNode@, parametrization, and orientation.",
-      "(3) Two arcs are compatible if there are arcs in their respective isotopy classes that, except possibly for their endpoints, do not intersect.",
-      "(4) An ideal triangulation of @MathNode@ is any maximal collection @MathNode@ of pairwise compatible arcs."
+      [
+        [
+          [
+            "(1) An arc on @MathNode@, is a curve @MathNode@ on @MathNode@ such that:",
+            [
+              "\u2022 the endpoints of @MathNode@ belong to @MathNode@;",
+              "\u2022 @MathNode@ does not intersect itself, except that its endpoints may coincide;",
+              "\u2022 the points in @MathNode@ that are not endpoints do not belong to @MathNode@ nor to the boundary of @MathNode@;",
+              "\u2022 @MathNode@ does not cut out an unpunctured monogon nor an unpunctured digon."
+            ]
+          ],
+          [
+            "(2) Two arcs @MathNode@ and @MathNode@ are isotopic relative to @MathNode@ if there exists a continuous function @MathNode@ such that",
+            [
+              "(a) @MathNode@ for all @MathNode@;",
+              "(b) @MathNode@;",
+              "(c) @MathNode@ for all @MathNode@ and all @MathNode@;",
+              "(d) for every @MathNode@, the function @MathNode@ given by @MathNode@ is a homeomorphism."
+            ],
+            "Arcs will be considered up to isotopy relative to @MathNode@, parametrization, and orientation."
+          ],
+          "(3) Two arcs are compatible if there are arcs in their respective isotopy classes that, except possibly for their endpoints, do not intersect.",
+          "(4) An ideal triangulation of @MathNode@ is any maximal collection @MathNode@ of pairwise compatible arcs."
+        ]
+      ]
     ]
   },
   {
@@ -8807,8 +9082,13 @@
     "identifier": "Definition 3.23.",
     "sentences": [
       "Let @MathNode@ be a set of path formulas in @MathNode@, and let @MathNode@ be a class of models.",
-      "Define \u2022 @MathNode@ iff for any model @MathNode@, (@MathNode@, @MathNode@ implies @MathNode@).",
-      "\u2022 @MathNode@ iff for any model @MathNode@, (@MathNode@, @MathNode@ implies @MathNode@, @MathNode@)."
+      [
+        "Define",
+        [
+          "\u2022 @MathNode@ iff for any model @MathNode@, (@MathNode@, @MathNode@ implies @MathNode@).",
+          "\u2022 @MathNode@ iff for any model @MathNode@, (@MathNode@, @MathNode@ implies @MathNode@, @MathNode@)."
+        ]
+      ]
     ]
   },
   {
@@ -8828,9 +9108,14 @@
       "Let @MathNode@ be a @MathNode@-manifold, equipped with a smooth measure @MathNode@.",
       "Let @MathNode@ be a hermitian vector bundle of rank @MathNode@ over @MathNode@.",
       "Let @MathNode@ be a differential operator.",
-      "We say that a differential operator @MathNode@ is a local model for @MathNode@ at the point @MathNode@ of order @MathNode@ with respect to a system of dilations @MathNode@ on @MathNode@ if there exist a coordinate chart @MathNode@ of @MathNode@ centered at @MathNode@ and an orthonormal frame @MathNode@ for @MathNode@ such that, if we define \u2022 @MathNode@ by @MathEquation@ where @MathNode@ is the density with respect to the Lebesgue measure of the push-forward of @MathNode@ via @MathNode@, and",
-      "\u2022 @MathNode@, for all @MathNode@, as the differential operator given by @MathEquation@",
-      "then, for all @MathNode@, @MathEquation@"
+      [
+        "We say that a differential operator @MathNode@ is a local model for @MathNode@ at the point @MathNode@ of order @MathNode@ with respect to a system of dilations @MathNode@ on @MathNode@ if there exist a coordinate chart @MathNode@ of @MathNode@ centered at @MathNode@ and an orthonormal frame @MathNode@ for @MathNode@ such that, if we define",
+        [
+          "\u2022 @MathNode@ by @MathEquation@ where @MathNode@ is the density with respect to the Lebesgue measure of the push-forward of @MathNode@ via @MathNode@, and",
+          "\u2022 @MathNode@, for all @MathNode@, as the differential operator given by @MathEquation@"
+        ],
+        "then, for all @MathNode@, @MathEquation@"
+      ]
     ]
   },
   {
@@ -9052,10 +9337,15 @@
     "paper": "https://ar5iv.org/abs/1511.09280",
     "identifier": "Definition.",
     "sentences": [
-      "We say that a nonempty set @MathNode@ of probability measures on a Cantor space @MathNode@ is a dynamical simplex if it satisfies the following conditions: \u2022 @MathNode@ is compact and convex.",
-      "\u2022 All elements of @MathNode@ are atomless and have full support.",
-      "\u2022 @MathNode@ is good.",
-      "\u2022 @MathNode@ is approximately divisible, i.e. for any clopen @MathNode@, any integer @MathNode@ and any @MathNode@, there exists a clopen @MathNode@ such that @MathNode@ for all @MathNode@."
+      [
+        "We say that a nonempty set @MathNode@ of probability measures on a Cantor space @MathNode@ is a dynamical simplex if it satisfies the following conditions:",
+        [
+          "\u2022 @MathNode@ is compact and convex.",
+          "\u2022 All elements of @MathNode@ are atomless and have full support.",
+          "\u2022 @MathNode@ is good.",
+          "\u2022 @MathNode@ is approximately divisible, i.e. for any clopen @MathNode@, any integer @MathNode@ and any @MathNode@, there exists a clopen @MathNode@ such that @MathNode@ for all @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -9417,9 +9707,14 @@
     "paper": "https://ar5iv.org/abs/1907.10953",
     "identifier": "Definition 3 (Abstracted MIL input)",
     "sentences": [
-      "An abstracted MIL input is a tuple @MathNode@ where: \u2022 @MathNode@ where @MathNode@ is a set of Horn clauses and @MathNode@ is (the union of) a set of higher-order definitions",
-      "\u2022 @MathNode@ and @MathNode@ are disjoint sets of ground atoms representing positive and negative examples respectively",
-      "\u2022 @MathNode@ is a set of metarules."
+      [
+        "An abstracted MIL input is a tuple @MathNode@ where:",
+        [
+          "\u2022 @MathNode@ where @MathNode@ is a set of Horn clauses and @MathNode@ is (the union of) a set of higher-order definitions",
+          "\u2022 @MathNode@ and @MathNode@ are disjoint sets of ground atoms representing positive and negative examples respectively",
+          "\u2022 @MathNode@ is a set of metarules."
+        ]
+      ]
     ]
   },
   {
@@ -9428,9 +9723,14 @@
     "sentences": [
       "Let @MathNode@ be a 2-complex with edge set @MathNode@.",
       "Let @MathNode@ be a proper subset of @MathNode@.",
-      "We say that @MathNode@ is \u2022 DR directed away from @MathNode@ if every spherical diagram @MathNode@ that contains an edge with label from @MathNode@ also contains a folding edge with label from @MathNode@;",
-      "\u2022 DR in all directions if every spherical diagram @MathNode@ that contains an edge labeled @MathNode@ also contains a folding edge with label @MathNode@.",
-      "Note that this implies that @MathNode@ is DR directed away from all proper @MathNode@."
+      [
+        "We say that @MathNode@ is",
+        [
+          "\u2022 DR directed away from @MathNode@ if every spherical diagram @MathNode@ that contains an edge with label from @MathNode@ also contains a folding edge with label from @MathNode@;",
+          "\u2022 DR in all directions if every spherical diagram @MathNode@ that contains an edge labeled @MathNode@ also contains a folding edge with label @MathNode@.",
+          "Note that this implies that @MathNode@ is DR directed away from all proper @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -9487,12 +9787,21 @@
     "identifier": "Definition 3 (One-Time Private LDC)",
     "sentences": [
       "Let @MathNode@ be the security parameter.",
-      "A code @MathNode@ consisting of a tuple of PPT algorithms @MathNode@ is a @MathNode@-one time private locally decodable code (private @MathNode@) if: \u2022 @MathNode@ is the key generation algorithm that takes @MathNode@ as input and outputs a secret key @MathNode@, for security parameter @MathNode@;",
-      "\u2022 @MathNode@ is the encoding algorithm that takes as input a message @MathNode@ and a secret key @MathNode@ and outputs a codeword @MathNode@; and",
-      "\u2022 @MathNode@ is the decoding algorithm that takes as input index @MathNode@ and secret key @MathNode@, and is additionally given query access to a corrupted codeword @MathNode@ and outputs @MathNode@ after making at most @MathNode@ queries to @MathNode@.",
-      "We define a predicate @MathNode@ if and only if 1.",
-      "@MathNode@; and",
-      "2. @MathNode@ such that @MathNode@, where the probability is taken over the random coins of @MathNode@.",
+      [
+        "A code @MathNode@ consisting of a tuple of PPT algorithms @MathNode@ is a @MathNode@-one time private locally decodable code (private @MathNode@) if:",
+        [
+          "\u2022 @MathNode@ is the key generation algorithm that takes @MathNode@ as input and outputs a secret key @MathNode@, for security parameter @MathNode@;",
+          "\u2022 @MathNode@ is the encoding algorithm that takes as input a message @MathNode@ and a secret key @MathNode@ and outputs a codeword @MathNode@; and",
+          "\u2022 @MathNode@ is the decoding algorithm that takes as input index @MathNode@ and secret key @MathNode@, and is additionally given query access to a corrupted codeword @MathNode@ and outputs @MathNode@ after making at most @MathNode@ queries to @MathNode@."
+        ]
+      ],
+      [
+        "We define a predicate @MathNode@ if and only if",
+        [
+          "1. @MathNode@; and",
+          "2. @MathNode@ such that @MathNode@, where the probability is taken over the random coins of @MathNode@."
+        ]
+      ],
       "We require that for all adversaries @MathNode@ and all @MathNode@, @MathGroup@ where @MathNode@ and the probability is taken over the random coins of @MathNode@ and @MathNode@ and @MathNode@ (if encoding is randomized)."
     ]
   },

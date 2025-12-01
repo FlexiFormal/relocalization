@@ -9,3 +9,13 @@
 
 * PLANNED: For enumerations: put each item in a separate sentence. It's not clear if this is the correct design decision, but otherwise we can get giant sentence with lots of nested sentences (think "we define: 1. ... 2. ... etc.")
 
+
+* Itemizes/Enumerations:
+    - Sentences containing enum are a list, containing the sequence fragments as string and a list of strings in the position of the enum.
+        example: "If x is (a) even, (b) odd, or (c) prime, then ..." becomes
+        ["If x is ", ["(a) even", "(b) odd", "(c) prime"], ", then ..."]
+    - labels are kept along with marks (e.g. in "(c) (isofibrations) blah...")
+    - if an entry in an enum contains multiple sentences, they are put in sequence into the list.
+
+* footnotes: largely removed (in the beginning, two or so were inlined)
+

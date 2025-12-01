@@ -4,8 +4,12 @@
     "identifier": "Definition 39.",
     "sentences": [
       "Let @MathNode@ be a code.",
-      "\u2022 @MathNode@ is said to be a circular code if for any @MathNode@, we have @MathNode@.",
-      "\u2022 @MathNode@ is said to be a comma-free code if for any @MathNode@ and @MathNode@, we have @MathNode@."
+      [
+        [
+          "\u2022 @MathNode@ is said to be a circular code if for any @MathNode@, we have @MathNode@.",
+          "\u2022 @MathNode@ is said to be a comma-free code if for any @MathNode@ and @MathNode@, we have @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -310,12 +314,17 @@
     "paper": "https://ar5iv.org/abs/2006.15250",
     "identifier": "Definition 4.2.",
     "sentences": [
-      "An @MathNode@-block @MathNode@ is a graph that is isomorphic to a spanning subgraph of @MathNode@ such that every vertex in @MathNode@ has degree at most 2, subject to exactly one of following additional conditions: \u2022 @MathNode@ and every vertex in the left column of @MathNode@ has degree 2.",
-      "In this case, @MathNode@ is a start block.",
-      "\u2022 @MathNode@, the right column of @MathNode@ contains at least one vertex of degree @MathNode@, and no two vertices in the left column of @MathNode@ are adjacent.",
-      "In this case, @MathNode@ is mid block.",
-      "\u2022 @MathNode@, every vertex in the right column of @MathNode@ has degree 2, and no two vertices in the left column of @MathNode@ are adjacent.",
-      "In this case @MathNode@ is an end block.",
+      [
+        "An @MathNode@-block @MathNode@ is a graph that is isomorphic to a spanning subgraph of @MathNode@ such that every vertex in @MathNode@ has degree at most 2, subject to exactly one of following additional conditions:",
+        [
+          "\u2022 @MathNode@ and every vertex in the left column of @MathNode@ has degree 2.",
+          "In this case, @MathNode@ is a start block.",
+          "\u2022 @MathNode@, the right column of @MathNode@ contains at least one vertex of degree @MathNode@, and no two vertices in the left column of @MathNode@ are adjacent.",
+          "In this case, @MathNode@ is mid block.",
+          "\u2022 @MathNode@, every vertex in the right column of @MathNode@ has degree 2, and no two vertices in the left column of @MathNode@ are adjacent.",
+          "In this case @MathNode@ is an end block."
+        ]
+      ],
       "For an ordered sequence of (not necessarily distinct) @MathNode@-blocks @MathNode@ such that @MathNode@ all have right columns of length @MathNode@, define @MathNode@ to be the graph obtained by identifying the @MathNode@-th vertex the right column of @MathNode@ with the @MathNode@-th vertex in the left column of @MathNode@, for @MathNode@ and @MathNode@."
     ]
   },
@@ -696,10 +705,15 @@
     "paper": "https://ar5iv.org/abs/2210.08138",
     "identifier": "Definition 3.2 (Canonical intervals).",
     "sentences": [
-      "We say that the collection of intervals @MathNode@ are canonical if for each @MathNode@, the collection @MathNode@ satisfies the following conditions: \u2022 Covering: @MathEquation@",
-      "\u2022 Ordering: For each @MathNode@, @MathEquation@",
-      "In addition we require @MathNode@ when @MathNode@.",
-      "\u2022 Balance: For each @MathNode@ @MathEquation@ with equality holding unless @MathNode@ and @MathNode@.",
+      [
+        "We say that the collection of intervals @MathNode@ are canonical if for each @MathNode@, the collection @MathNode@ satisfies the following conditions:",
+        [
+          "\u2022 Covering: @MathEquation@",
+          "\u2022 Ordering: For each @MathNode@, @MathEquation@",
+          "In addition we require @MathNode@ when @MathNode@.",
+          "\u2022 Balance: For each @MathNode@ @MathEquation@ with equality holding unless @MathNode@ and @MathNode@."
+        ]
+      ],
       "We call the elements of @MathNode@ canonical intervals for the index @MathNode@."
     ]
   },
@@ -779,8 +793,13 @@
     "paper": "https://ar5iv.org/abs/1710.05241",
     "identifier": "Definition 1.",
     "sentences": [
-      "For a differentiable function @MathNode@: \u2022 @MathNode@ is @MathNode@-strongly convex if @MathNode@, @MathNode@.",
-      "\u2022 @MathNode@ is @MathNode@-smooth if @MathNode@, @MathNode@."
+      [
+        "For a differentiable function @MathNode@:",
+        [
+          "\u2022 @MathNode@ is @MathNode@-strongly convex if @MathNode@, @MathNode@.",
+          "\u2022 @MathNode@ is @MathNode@-smooth if @MathNode@, @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -824,10 +843,16 @@
     "identifier": "Definition III.2 (Pseudo-tiling codes for @MathNode@).",
     "sentences": [
       "An interpretation @MathNode@ @MathNode@over @MathNode@@MathNode@ is a pseudo-tiling code for @MathNode@ if the following holds: Pseudo-tiling T-requirement: for all @MathNode@, @MathNode@ is a cell-code and @MathNode@.",
-      "Moreover, \u2022 there is @MathNode@ such that @MathNode@ has row-number @MathNode@, column-number @MathNode@ and @MathNode@ (initialization);",
-      "\u2022 there is @MathNode@ such that @MathNode@ has row-number @MathNode@, column-number @MathNode@, and @MathNode@ (acceptance).",
-      "Full T-requirement: for all @MathNode@, @MathNode@ and @MathNode@; H-requirement: if @MathNode@, then @MathNode@ for all @MathNode@, and: \u2022 either there is a cell-number code @MathNode@ such that the projection of H over @MathNode@ is @MathNode@;",
-      "\u2022 or for all @MathNode@, @MathNode@ is a singleton contained in @MathNode@."
+      [
+        "Moreover,",
+        [
+          "\u2022 there is @MathNode@ such that @MathNode@ has row-number @MathNode@, column-number @MathNode@ and @MathNode@ (initialization);",
+          "\u2022 there is @MathNode@ such that @MathNode@ has row-number @MathNode@, column-number @MathNode@, and @MathNode@ (acceptance).",
+          "Full T-requirement: for all @MathNode@, @MathNode@ and @MathNode@; H-requirement: if @MathNode@, then @MathNode@ for all @MathNode@, and:",
+          "\u2022 either there is a cell-number code @MathNode@ such that the projection of H over @MathNode@ is @MathNode@;",
+          "\u2022 or for all @MathNode@, @MathNode@ is a singleton contained in @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -852,9 +877,13 @@
     "identifier": "Definition 4.9 (Tree Decomposition and Treewidth).",
     "sentences": [
       "A tree decomposition of a graph @MathNode@ is a tree @MathNode@, where each node in @MathNode@, called a bag, is a subset of vertices in @MathNode@, such that the following holds.",
-      "\u2022 @MathNode@.",
-      "\u2022 @MathNode@, the nodes in @MathNode@ that contain @MathNode@ form a connected component in @MathNode@.",
-      "\u2022 @MathNode@, there exists @MathNode@ such that @MathNode@.",
+      [
+        [
+          "\u2022 @MathNode@.",
+          "\u2022 @MathNode@, the nodes in @MathNode@ that contain @MathNode@ form a connected component in @MathNode@.",
+          "\u2022 @MathNode@, there exists @MathNode@ such that @MathNode@."
+        ]
+      ],
       "The treewidth of @MathNode@, denoted as @MathNode@, is the smallest integer @MathNode@ such that there is a tree decomposition of @MathNode@ with maximum bag size @MathNode@."
     ]
   },
@@ -877,18 +906,27 @@
     "paper": "https://ar5iv.org/abs/1708.09675",
     "identifier": "Definition 3.3 (Total signature morphisms).",
     "sentences": [
-      "A signature morphism @MathNode@ in a @MathNode@-institution is \u2022 @MathNode@-maximal when @MathNode@ is total;",
-      "\u2022 @MathNode@-maximal when for each @MathNode@-model @MathNode@, @MathNode@ is a singleton; and",
-      "\u2022 total when it is both @MathNode@-maximal and @MathNode@-maximal."
+      [
+        "A signature morphism @MathNode@ in a @MathNode@-institution is",
+        [
+          "\u2022 @MathNode@-maximal when @MathNode@ is total;",
+          "\u2022 @MathNode@-maximal when for each @MathNode@-model @MathNode@, @MathNode@ is a singleton; and",
+          "\u2022 total when it is both @MathNode@-maximal and @MathNode@-maximal."
+        ]
+      ]
     ]
   },
   {
     "paper": "https://ar5iv.org/abs/1007.5346",
     "identifier": "Definition 2.3.",
     "sentences": [
-      "Suppose a graph @MathNode@ contains a subgraph @MathNode@ isomorphic to a cycle, and let @MathNode@. \u2022",
-      "We will call @MathNode@ a @MathNode@-tight cycle if for every @MathNode@, @MathNode@.",
-      "\u2022 We will call @MathNode@ a tight cycle if for every pair of vertices @MathNode@ in @MathNode@, @MathNode@."
+      "Suppose a graph @MathNode@ contains a subgraph @MathNode@ isomorphic to a cycle, and let @MathNode@.",
+      [
+        [
+          "\u2022 We will call @MathNode@ a @MathNode@-tight cycle if for every @MathNode@, @MathNode@.",
+          "\u2022 We will call @MathNode@ a tight cycle if for every pair of vertices @MathNode@ in @MathNode@, @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -974,13 +1012,18 @@
     "identifier": "Definition 16 (Intrinsic attributes of a configuration)",
     "sentences": [
       "Let @MathNode@ be a compatible configuration.",
-      "Then we define \u2022 @MathNode@ = @MathNode@.",
-      "\u2022 @MathNode@ = @MathNode@.",
-      "\u2022 @MathNode@.",
-      "\u2022 @MathNode@.",
-      "\u2022 @MathNode@.",
-      "\u2022 @MathNode@.",
-      "\u2022 @MathNode@."
+      [
+        "Then we define",
+        [
+          "\u2022 @MathNode@ = @MathNode@.",
+          "\u2022 @MathNode@ = @MathNode@.",
+          "\u2022 @MathNode@.",
+          "\u2022 @MathNode@.",
+          "\u2022 @MathNode@.",
+          "\u2022 @MathNode@.",
+          "\u2022 @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -1021,8 +1064,23 @@
       "Right class: there exists an execution belonging to the process block containing the trigger leaf, a @MathNode@ on its right, and no @MathNode@ between the trigger leaf and @MathNode@.",
       "Moreover there are no @MathNode@ or @MathNode@ on the left of the trigger leaf.",
       "Formally:",
-      "Given a process block @MathNode@ belongs to this class if and only if: \u2022 @MathNode@ such that: \u2013 @MathNode@ such that @MathNode@, and * @MathNode@ such that @MathNode@, and",
-      "* @MathNode@ such that @MathNode@."
+      [
+        "Given a process block @MathNode@ belongs to this class if and only if:",
+        [
+          [
+            "\u2022 @MathNode@ such that:",
+            [
+              [
+                "\u2013 @MathNode@ such that @MathNode@, and",
+                [
+                  "* @MathNode@ such that @MathNode@, and",
+                  "* @MathNode@ such that @MathNode@."
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
     ]
   },
   {
@@ -1124,9 +1182,14 @@
     "identifier": "Definition 4.2.",
     "sentences": [
       "We define the following involution @MathEquation@",
-      "We say that an operator @MathNode@ is \u2022 real if for all @MathNode@ we have @MathEquation@",
-      "\u2022 reversible if @MathEquation@",
-      "\u2022 reversibility preserving if @MathEquation@"
+      [
+        "We say that an operator @MathNode@ is",
+        [
+          "\u2022 real if for all @MathNode@ we have @MathEquation@",
+          "\u2022 reversible if @MathEquation@",
+          "\u2022 reversibility preserving if @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -1229,11 +1292,16 @@
     "paper": "https://ar5iv.org/abs/1801.07777",
     "identifier": "Definition 1.",
     "sentences": [
-      "An @MathNode@- variable-length code (VLC) for a MAC @MathNode@ with feedback is defined by \u2022 A pair of messages @MathNode@ selected randomly with uniform distribution from @MathNode@.",
-      "\u2022 Two sequences of encoding functions @MathGroup@ one for each transmitter.",
-      "\u2022 A sequence of decoding functions @MathGroup@",
-      "\u2022 A stopping time @MathNode@ with respect to (w.r.t) the filtration @MathNode@ defined as the @MathNode@-algebra of @MathNode@ for @MathNode@.",
-      "Furthermore, it is assumed that @MathNode@ satisfies @MathNode@."
+      [
+        "An @MathNode@- variable-length code (VLC) for a MAC @MathNode@ with feedback is defined by",
+        [
+          "\u2022 A pair of messages @MathNode@ selected randomly with uniform distribution from @MathNode@.",
+          "\u2022 Two sequences of encoding functions @MathGroup@ one for each transmitter.",
+          "\u2022 A sequence of decoding functions @MathGroup@",
+          "\u2022 A stopping time @MathNode@ with respect to (w.r.t) the filtration @MathNode@ defined as the @MathNode@-algebra of @MathNode@ for @MathNode@.",
+          "Furthermore, it is assumed that @MathNode@ satisfies @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -1488,13 +1556,17 @@
     "identifier": "Definition 1.1.",
     "sentences": [
       "Let @MathNode@ be a class of structures of a given vocabulary @MathNode@.",
-      "\u2022 @MathNode@ denotes the minimal class of structures @MathNode@ with the property that for each structure @MathNode@ there exists an enrichment @MathNode@ by a partition @MathNode@, partial unary functions @MathNode@ such that @MathNode@ and @MathNode@ hold for every @MathNode@",
-      "\u2022 For a given model @MathNode@, we define the free algebra @MathNode@ as the model having the language @MathNode@ where each @MathNode@ is a @MathNode@-place function.",
-      "@MathNode@ consists of all the terms constructed in the usual (well-founded inductive) way from elements of @MathNode@ using the functions @MathNode@",
-      "The functions and relations of @MathNode@ are interpreted in @MathNode@ as partial functions and restricted relations on @MathNode@.",
-      "\u2022 Let @MathNode@",
-      "(The power of the set of @MathNode@-terms with @MathNode@ constants).",
-      "\u2022 @MathNode@ denotes the class of models of the form @MathNode@ for every @MathNode@."
+      [
+        [
+          "\u2022 @MathNode@ denotes the minimal class of structures @MathNode@ with the property that for each structure @MathNode@ there exists an enrichment @MathNode@ by a partition @MathNode@, partial unary functions @MathNode@ such that @MathNode@ and @MathNode@ hold for every @MathNode@",
+          "\u2022 For a given model @MathNode@, we define the free algebra @MathNode@ as the model having the language @MathNode@ where each @MathNode@ is a @MathNode@-place function.",
+          "@MathNode@ consists of all the terms constructed in the usual (well-founded inductive) way from elements of @MathNode@ using the functions @MathNode@",
+          "The functions and relations of @MathNode@ are interpreted in @MathNode@ as partial functions and restricted relations on @MathNode@.",
+          "\u2022 Let @MathNode@",
+          "(The power of the set of @MathNode@-terms with @MathNode@ constants).",
+          "\u2022 @MathNode@ denotes the class of models of the form @MathNode@ for every @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -1638,9 +1710,13 @@
     "paper": "https://ar5iv.org/abs/2208.14715",
     "identifier": "Definition 2.",
     "sentences": [
-      "\u2022 Let @MathNode@ be a set and @MathNode@ a monoid.",
-      "@MathNode@ is a left @MathNode@-act if there is a map @MathNode@ s.t. for all @MathNode@ and all @MathNode@, @MathNode@ and @MathNode@.",
-      "\u2022 An abstract consequence relation @MathNode@ on a left @MathNode@-act @MathNode@ is action-invariant if for all @MathNode@ and @MathNode@, whenever @MathNode@ we also have that @MathNode@."
+      [
+        [
+          "\u2022 Let @MathNode@ be a set and @MathNode@ a monoid.",
+          "@MathNode@ is a left @MathNode@-act if there is a map @MathNode@ s.t. for all @MathNode@ and all @MathNode@, @MathNode@ and @MathNode@.",
+          "\u2022 An abstract consequence relation @MathNode@ on a left @MathNode@-act @MathNode@ is action-invariant if for all @MathNode@ and @MathNode@, whenever @MathNode@ we also have that @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -1716,11 +1792,20 @@
       "Given vectors @MathNode@, we define @MathNode@ to keep track of the paths that result from chaining together matchings @MathNode@.",
       "Define @MathNode@ @MathNode@, where each @MathNode@ is a weighted path of length @MathNode@ with weight @MathNode@ and @MathNode@ is the graph with @MathNode@ being the total weight on paths in @MathNode@ going from vertices @MathNode@ to @MathNode@.",
       "The paths and weights in @MathNode@ are defined recursively in the following algorithm.",
-      "Construction of @MathNode@ \u2022 If @MathNode@, then @MathNode@.",
-      "That is, the paths are simply the edges in @MathNode@ with the corresponding weights.",
-      "\u2022 If @MathNode@, then for each @MathNode@ where @MathNode@, run the following loop.",
-      "1. While @MathNode@ and there exists @MathNode@ with @MathNode@, let @MathNode@ be the path obtained by extending @MathNode@ by @MathNode@ and add @MathNode@ to @MathNode@ with weight @MathNode@.",
-      "2. Decrement both @MathNode@ and @MathNode@ by @MathNode@."
+      [
+        "Construction of @MathNode@",
+        [
+          "\u2022 If @MathNode@, then @MathNode@.",
+          "That is, the paths are simply the edges in @MathNode@ with the corresponding weights.",
+          "\u2022 If @MathNode@, then for each @MathNode@ where @MathNode@, run the following loop.",
+          [
+            [
+              "1. While @MathNode@ and there exists @MathNode@ with @MathNode@, let @MathNode@ be the path obtained by extending @MathNode@ by @MathNode@ and add @MathNode@ to @MathNode@ with weight @MathNode@.",
+              "2. Decrement both @MathNode@ and @MathNode@ by @MathNode@."
+            ]
+          ]
+        ]
+      ]
     ]
   },
   {
@@ -1991,18 +2076,32 @@
       "Recall @MathNode@ the @MathNode@-coloration of @MathNode@ in Theorem @LtxRef@.",
       "For all @MathNode@, let fix bijections @MathNode@ and @MathNode@.",
       "Notice that these functions exist because @MathNode@ is a @MathNode@-coloration of @MathNode@ and there are @MathNode@ tuples @MathNode@.",
-      "Let us define @MathNode@, by @MathNode@ where @MathNode@ is the unique element that satisfies: \u2022 @MathNode@;",
-      "\u2022 @MathNode@."
+      [
+        "Let us define @MathNode@, by @MathNode@ where @MathNode@ is the unique element that satisfies:",
+        [
+          "\u2022 @MathNode@;",
+          "\u2022 @MathNode@."
+        ]
+      ]
     ]
   },
   {
     "paper": "https://ar5iv.org/abs/2301.05740",
     "identifier": "Definition 8 (Basic Layer Expressions)",
     "sentences": [
-      "A basic layer expression @MathNode@ has one of the following two forms: \u2022 local layer: @MathNode@ where @MathNode@ is a local path in @MathNode@.",
-      "\u2022 write layer: @MathNode@, where 1. @MathNode@ is a write path in @MathNode@,",
-      "2. for each @MathNode@ is a local path in @MathNode@ and the prefix and suffix are each repeated @MathNode@ times,",
-      "3. @MathNode@ and @MathNode@ do not commute with respect to the ARW in @MathNode@."
+      [
+        "A basic layer expression @MathNode@ has one of the following two forms:",
+        [
+          "\u2022 local layer: @MathNode@ where @MathNode@ is a local path in @MathNode@.",
+          "\u2022 write layer: @MathNode@, where 1. @MathNode@ is a write path in @MathNode@,",
+          [
+            [
+              "2. for each @MathNode@ is a local path in @MathNode@ and the prefix and suffix are each repeated @MathNode@ times,",
+              "3. @MathNode@ and @MathNode@ do not commute with respect to the ARW in @MathNode@."
+            ]
+          ]
+        ]
+      ]
     ]
   },
   {
@@ -2034,8 +2133,13 @@
     "sentences": [
       "@MathNode@universal minimal sufficient set of colors@MathNode@ Let @MathNode@ be a prime such that for any two links, @MathNode@ and @MathNode@, admitting non-trivial @MathNode@-colorings, @MathNode@; in this case, let @MathNode@ denote this common minimum number of colors, @MathNode@.",
       "If there is a set, call it @MathNode@, of @MathNode@ integers mod @MathNode@ such that any diagram supporting minimal @MathNode@-colorings can be colored with colors from this set, then we call @MathNode@ a universal @MathNode@-minimal sufficient set of colors.",
-      "We say there is no universal @MathNode@-minimal set of colors when either \u2022 there are distinct links admitting non-trivial @MathNode@-colorings with different minimum numbers of colors; or",
-      "\u2022 there is a unique minimum number of colors, @MathNode@, but there is no set of @MathNode@ distinct integers mod @MathNode@ such that any diagram supporting a minimal @MathNode@-coloring can be colored with the colors from this set."
+      [
+        "We say there is no universal @MathNode@-minimal set of colors when either",
+        [
+          "\u2022 there are distinct links admitting non-trivial @MathNode@-colorings with different minimum numbers of colors; or",
+          "\u2022 there is a unique minimum number of colors, @MathNode@, but there is no set of @MathNode@ distinct integers mod @MathNode@ such that any diagram supporting a minimal @MathNode@-coloring can be colored with the colors from this set."
+        ]
+      ]
     ]
   },
   {
@@ -2182,9 +2286,14 @@
     "paper": "https://ar5iv.org/abs/1002.3842",
     "identifier": "Definition 1",
     "sentences": [
-      "We will say a map @MathNode@ is strongly invertible provided @MathNode@ satisfies the following three conditions: \u2022 @MathNode@ is invertible, i.e there exists a map @MathNode@ satisfying @MathNode@,",
-      "\u2022 @MathNode@ is sideways invertible, i.e there exists a unique invertible map @MathNode@ satisfying @MathEquation@ for all @MathNode@, and",
-      "\u2022 The sideways maps @MathNode@ and @MathNode@ are diagonally bijective, i.e. the compositions @MathNode@, @MathNode@ of the components of @MathNode@ and @MathNode@ with the map @MathNode@ defined by @MathNode@ are bijections."
+      [
+        "We will say a map @MathNode@ is strongly invertible provided @MathNode@ satisfies the following three conditions:",
+        [
+          "\u2022 @MathNode@ is invertible, i.e there exists a map @MathNode@ satisfying @MathNode@,",
+          "\u2022 @MathNode@ is sideways invertible, i.e there exists a unique invertible map @MathNode@ satisfying @MathEquation@ for all @MathNode@, and",
+          "\u2022 The sideways maps @MathNode@ and @MathNode@ are diagonally bijective, i.e. the compositions @MathNode@, @MathNode@ of the components of @MathNode@ and @MathNode@ with the map @MathNode@ defined by @MathNode@ are bijections."
+        ]
+      ]
     ]
   },
   {
@@ -2326,7 +2435,12 @@
     "paper": "https://ar5iv.org/abs/1306.4493",
     "identifier": "Definition 3",
     "sentences": [
-      "An input signal @MathNode@, @MathNode@ is a worst-case input signal for the STL specification @MathNode@ of the behaviour of a module @MathNode@ if and only if, for each parameter configuration @MathNode@ such that @MathNode@ (and @MathNode@ true) and @MathNode@, the following property holds: \u2022 for each other input signal @MathNode@ satisfying @MathNode@ (and @MathNode@ true), it holds that @MathNode@."
+      [
+        "An input signal @MathNode@, @MathNode@ is a worst-case input signal for the STL specification @MathNode@ of the behaviour of a module @MathNode@ if and only if, for each parameter configuration @MathNode@ such that @MathNode@ (and @MathNode@ true) and @MathNode@, the following property holds:",
+        [
+          "\u2022 for each other input signal @MathNode@ satisfying @MathNode@ (and @MathNode@ true), it holds that @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -2470,15 +2584,20 @@
     "paper": "https://ar5iv.org/abs/1712.00275",
     "identifier": "Definition 1 (Probabilistic Timed Automata @LtxCite@)",
     "sentences": [
-      "A probabilistic timed automaton (PTA) @MathNode@ is a tuple @MathEquation@ where : \u2022 @MathNode@ is a finite set of locations;",
-      "\u2022 @MathNode@ is the initial location;",
-      "\u2022 @MathNode@ is a finite set of clocks;",
-      "\u2022 Act is a finite set of actions;",
-      "\u2022 @MathNode@ is an invariant condition;",
-      "\u2022 @MathNode@ is an enabling condition;",
-      "\u2022 @MathNode@ is a probabilistic transition function;",
-      "\u2022 AP is a finite set of atomic propositions;",
-      "\u2022 @MathNode@ is a labelling function."
+      [
+        "A probabilistic timed automaton (PTA) @MathNode@ is a tuple @MathEquation@ where :",
+        [
+          "\u2022 @MathNode@ is a finite set of locations;",
+          "\u2022 @MathNode@ is the initial location;",
+          "\u2022 @MathNode@ is a finite set of clocks;",
+          "\u2022 Act is a finite set of actions;",
+          "\u2022 @MathNode@ is an invariant condition;",
+          "\u2022 @MathNode@ is an enabling condition;",
+          "\u2022 @MathNode@ is a probabilistic transition function;",
+          "\u2022 AP is a finite set of atomic propositions;",
+          "\u2022 @MathNode@ is a labelling function."
+        ]
+      ]
     ]
   },
   {
@@ -2569,9 +2688,14 @@
     "paper": "https://ar5iv.org/abs/1509.03146",
     "identifier": "Definition 3.3.",
     "sentences": [
-      "With notation as in @LtxRef@, we define root operators @MathNode@, @MathNode@ and @MathNode@ as follows: \u2022 In case (I) let @MathNode@ be the combinatorial gallery defined by @MathEquation@ where @MathEquation@",
-      "\u2022 In case (II) let @MathNode@ be the combinatorial gallery defined by @MathEquation@ where @MathEquation@",
-      "\u2022 In case (III) let @MathNode@ be the combinatorial gallery defined by @MathEquation@ where @MathEquation@"
+      [
+        "With notation as in @LtxRef@, we define root operators @MathNode@, @MathNode@ and @MathNode@ as follows:",
+        [
+          "\u2022 In case (I) let @MathNode@ be the combinatorial gallery defined by @MathEquation@ where @MathEquation@",
+          "\u2022 In case (II) let @MathNode@ be the combinatorial gallery defined by @MathEquation@ where @MathEquation@",
+          "\u2022 In case (III) let @MathNode@ be the combinatorial gallery defined by @MathEquation@ where @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -3404,8 +3528,13 @@
       "Let @MathNode@ be a unimodular local embedding.",
       "Then a symplectic toric manifold over @MathNode@ is a symplectic toric manifold @MathNode@ together with a @MathNode@-quotient map @MathNode@ such that @MathNode@.",
       "This data will be expressed as the triple @MathNode@.",
-      "The groupoid of symplectic toric manifolds over @MathNode@, denoted @MathNode@, is the groupoid with \u2022 objects: symplectic toric manifolds over @MathNode@; and",
-      "\u2022 morphisms: @MathNode@-equivariant symplectomorphisms @MathEquation@ satisfying @MathNode@."
+      [
+        "The groupoid of symplectic toric manifolds over @MathNode@, denoted @MathNode@, is the groupoid with",
+        [
+          "\u2022 objects: symplectic toric manifolds over @MathNode@; and",
+          "\u2022 morphisms: @MathNode@-equivariant symplectomorphisms @MathEquation@ satisfying @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -3641,15 +3770,22 @@
     "paper": "https://ar5iv.org/abs/1410.6740",
     "identifier": "Definition 2.7.",
     "sentences": [
-      "Given a strongly surjective, row-finite functor @MathNode@, a Cuntz-Krieger system associated to @MathNode@ is the following data in a @MathNode@-algebra @MathNode@:",
-      "\u2022 A projection @MathNode@ for each object @MathNode@ of @MathNode@,",
-      "\u2022 A partial isometry @MathNode@ for each morphism @MathNode@ of @MathNode@,",
-      "satisfying the relations 1. For @MathNode@, @MathNode@,",
-      "2. If @MathNode@ and @MathNode@ are composable, then @MathNode@,",
-      "3. For all @MathNode@, @MathNode@,",
-      "4. For all @MathNode@, @MathNode@,",
-      "5. If @MathNode@ and @MathNode@ then @MathNode@,",
-      "6. For all @MathNode@, and for all morphisms @MathNode@ in @MathNode@ @MathEquation@",
+      [
+        "Given a strongly surjective, row-finite functor @MathNode@, a Cuntz-Krieger system associated to @MathNode@ is the following data in a @MathNode@-algebra @MathNode@:",
+        [
+          "\u2022 A projection @MathNode@ for each object @MathNode@ of @MathNode@,",
+          "\u2022 A partial isometry @MathNode@ for each morphism @MathNode@ of @MathNode@,"
+        ],
+        "satisfying the relations",
+        [
+          "1. For @MathNode@, @MathNode@,",
+          "2. If @MathNode@ and @MathNode@ are composable, then @MathNode@,",
+          "3. For all @MathNode@, @MathNode@,",
+          "4. For all @MathNode@, @MathNode@,",
+          "5. If @MathNode@ and @MathNode@ then @MathNode@,",
+          "6. For all @MathNode@, and for all morphisms @MathNode@ in @MathNode@ @MathEquation@"
+        ]
+      ],
       "We denote the smallest @MathNode@-subalgebra of @MathNode@ containing @MathNode@ by @MathNode@"
     ]
   },
@@ -3777,9 +3913,14 @@
     "identifier": "Definition 3.1 (Fixed CT (longest) common subsequence).",
     "sentences": [
       "Let @MathNode@ be a pivot of strings @MathNode@ and @MathNode@.",
-      "A string @MathNode@ is said to be a fixed CT common subsequence (f-CT-CS) of @MathNode@ and @MathNode@ with pivot @MathNode@ if there exist subscript sequences @MathNode@ such that \u2022 @MathNode@,",
-      "\u2022 @MathNode@, and",
-      "\u2022 @MathNode@.",
+      [
+        "A string @MathNode@ is said to be a fixed CT common subsequence (f-CT-CS) of @MathNode@ and @MathNode@ with pivot @MathNode@ if there exist subscript sequences @MathNode@ such that",
+        [
+          "\u2022 @MathNode@,",
+          "\u2022 @MathNode@, and",
+          "\u2022 @MathNode@."
+        ]
+      ],
       "Moreover, a string @MathNode@ is said to be the fixed CT longest common subsequence (f-CT-LCS) of @MathNode@ and @MathNode@ with pivot @MathNode@ if there are no f-CT-CS with pivot @MathNode@ longer than @MathNode@ (see also Fig. @LtxRef@)."
     ]
   },
@@ -3810,12 +3951,17 @@
     "identifier": "Definition 9 (Dual Negation)",
     "sentences": [
       "Let @MathNode@ be a first-order formula in negation normal form.",
-      "Then we write @MathNode@ as a shorthand for the formula thus obtained: \u2022 If @MathNode@ is a positive literal @MathNode@ or @MathNode@, @MathNode@ is its negation (that is, @MathNode@ or @MathNode@;",
-      "\u2022 If @MathNode@ is a negative literal @MathNode@ or @MathNode@, @MathNode@ is the corresponding positive literal (that is, @MathNode@ or @MathNode@;",
-      "\u2022 @MathNode@;",
-      "\u2022 @MathNode@;",
-      "\u2022 @MathNode@;",
-      "\u2022 @MathNode@;"
+      [
+        "Then we write @MathNode@ as a shorthand for the formula thus obtained:",
+        [
+          "\u2022 If @MathNode@ is a positive literal @MathNode@ or @MathNode@, @MathNode@ is its negation (that is, @MathNode@ or @MathNode@;",
+          "\u2022 If @MathNode@ is a negative literal @MathNode@ or @MathNode@, @MathNode@ is the corresponding positive literal (that is, @MathNode@ or @MathNode@;",
+          "\u2022 @MathNode@;",
+          "\u2022 @MathNode@;",
+          "\u2022 @MathNode@;",
+          "\u2022 @MathNode@;"
+        ]
+      ]
     ]
   },
   {
@@ -4058,11 +4204,16 @@
     "identifier": "Definition 3.3 (Schwarzschild sphere data).",
     "sentences": [
       "Let @MathNode@, @MathNode@, and @MathNode@.",
-      "The unique lapse normalized sphere data set satisfying \u2022 @MathNode@,",
-      "\u2022 @MathNode@",
-      "\u2022 @MathNode@, and",
-      "\u2022 all other components zero,",
-      "is called the Schwarzschild sphere data of mass @MathNode@ and radius R and is denoted by @MathNode@.",
+      [
+        "The unique lapse normalized sphere data set satisfying",
+        [
+          "\u2022 @MathNode@,",
+          "\u2022 @MathNode@",
+          "\u2022 @MathNode@, and",
+          "\u2022 all other components zero,"
+        ],
+        "is called the Schwarzschild sphere data of mass @MathNode@ and radius R and is denoted by @MathNode@."
+      ],
       "Note that @MathNode@."
     ]
   },
@@ -4380,8 +4531,13 @@
     "identifier": "Definition 3.1.",
     "sentences": [
       "Let @MathNode@.",
-      "A triple test rooted at @MathNode@ is a (non-necessarily sorted) triple @MathNode@ such that \u2022 @MathNode@ for some integer @MathNode@ satisfying @MathNode@, and",
-      "\u2022 @MathNode@ is either @MathNode@ or @MathNode@.",
+      [
+        "A triple test rooted at @MathNode@ is a (non-necessarily sorted) triple @MathNode@ such that",
+        [
+          "\u2022 @MathNode@ for some integer @MathNode@ satisfying @MathNode@, and",
+          "\u2022 @MathNode@ is either @MathNode@ or @MathNode@."
+        ]
+      ],
       "The element @MathNode@ is called the root, and @MathNode@ is called a hub of @MathNode@.",
       "The integer @MathNode@ is called the height of the triple.",
       "We say that @MathNode@ passes the triple test if the function @MathNode@ is convex on @MathNode@.",
@@ -4438,16 +4594,25 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1704.00064",
-    "identifier": null,
+    "identifier": "2.1 Definition.",
     "sentences": [
-      "2.1 Definition.",
-      "@MathGroup@ (i) We say that @MathNode@ is @MathNode@-quasi-unitary with @MathNode@-quasi-adjoint @MathNode@ if @MathGroup@",
-      "(ii) We say that @MathNode@ and @MathNode@ are @MathNode@-compatible with the identification operators @MathNode@ and @MathNode@ if @MathEquation@",
-      "(iii)",
-      "We say that the energy forms @MathNode@ and @MathNode@ are @MathNode@-close if @MathEquation@",
-      "(iv) We say that @MathNode@ and @MathNode@ are @MathNode@-quasi-unitarily equivalent (on @MathNode@ and @MathNode@), if (@LtxRef@)\u2013(@LtxRef@) are fulfilled, i.e., \u2022 if there exists identification operators @MathNode@ and @MathNode@ such that @MathNode@ is @MathNode@-quasi-unitary with @MathNode@-adjoint @MathNode@ (i.e., (@LtxRef@)\u2013(@LtxRef@) hold);",
-      "\u2022 if there exists identification operators @MathNode@ and @MathNode@ which are @MathNode@-compatible with @MathNode@ and @MathNode@ (i.e., (@LtxRef@) holds);",
-      "\u2022 and if @MathNode@ and @MathNode@ are @MathNode@-close (i.e., (@LtxRef@) holds)."
+      "@MathGroup@",
+      [
+        [
+          "(i) We say that @MathNode@ is @MathNode@-quasi-unitary with @MathNode@-quasi-adjoint @MathNode@ if @MathGroup@",
+          "(ii) We say that @MathNode@ and @MathNode@ are @MathNode@-compatible with the identification operators @MathNode@ and @MathNode@ if @MathEquation@",
+          "(iii)",
+          "We say that the energy forms @MathNode@ and @MathNode@ are @MathNode@-close if @MathEquation@",
+          [
+            "(iv) We say that @MathNode@ and @MathNode@ are @MathNode@-quasi-unitarily equivalent (on @MathNode@ and @MathNode@), if (@LtxRef@)\u2013(@LtxRef@) are fulfilled, i.e.,",
+            [
+              "\u2022 if there exists identification operators @MathNode@ and @MathNode@ such that @MathNode@ is @MathNode@-quasi-unitary with @MathNode@-adjoint @MathNode@ (i.e., (@LtxRef@)\u2013(@LtxRef@) hold);",
+              "\u2022 if there exists identification operators @MathNode@ and @MathNode@ which are @MathNode@-compatible with @MathNode@ and @MathNode@ (i.e., (@LtxRef@) holds);",
+              "\u2022 and if @MathNode@ and @MathNode@ are @MathNode@-close (i.e., (@LtxRef@) holds)."
+            ]
+          ]
+        ]
+      ]
     ]
   },
   {
@@ -4852,8 +5017,12 @@
     "identifier": "Definition 5",
     "sentences": [
       "The dimension @MathNode@ of a Presburger-definable set @MathNode@ is defined as follows.",
-      "\u2022 @MathNode@ iff @MathNode@ is empty or finite;",
-      "\u2022 @MathNode@ iff there is a definable bijection between @MathNode@ and @MathNode@"
+      [
+        [
+          "\u2022 @MathNode@ iff @MathNode@ is empty or finite;",
+          "\u2022 @MathNode@ iff there is a definable bijection between @MathNode@ and @MathNode@"
+        ]
+      ]
     ]
   },
   {
@@ -5013,19 +5182,24 @@
     "paper": "https://ar5iv.org/abs/1811.08143",
     "identifier": "Definition 2 (Classic event log)",
     "sentences": [
-      "An event log is a tuple @MathNode@ where: \u2022 @MathNode@ is a set of case identifiers",
-      "\u2022 @MathNode@ is a set of events",
-      "\u2022 @MathNode@ maps case identifiers onto set of events (belonging to the case)",
-      "\u2022 @MathNode@ maps events onto activities",
-      "\u2022 @MathNode@ maps events onto a partial function assigning values to some attributes",
-      "\u2022 @MathNode@ defines a total order on events."
+      [
+        "An event log is a tuple @MathNode@ where:",
+        [
+          "\u2022 @MathNode@ is a set of case identifiers",
+          "\u2022 @MathNode@ is a set of events",
+          "\u2022 @MathNode@ maps case identifiers onto set of events (belonging to the case)",
+          "\u2022 @MathNode@ maps events onto activities",
+          "\u2022 @MathNode@ maps events onto a partial function assigning values to some attributes",
+          "\u2022 @MathNode@ defines a total order on events."
+        ]
+      ]
     ]
   },
   {
     "paper": "https://ar5iv.org/abs/math/9508206",
-    "identifier": "Definition",
+    "identifier": "Definition (Forcing conditions)",
     "sentences": [
-      "(Forcing conditions) Let @MathNode@",
+      "Let @MathNode@",
       "A set @MathNode@ is shrinkable if for any @MathNode@-admissible function @MathNode@ and any @MathNode@ the set @MathNode@ contains only one point.",
       "We put @MathNode@ and @MathNode@.",
       "@MathNode@"
@@ -5196,10 +5370,15 @@
     "identifier": "Definition 7.",
     "sentences": [
       "Let @MathNode@ and @MathNode@ be metric spaces and let @MathNode@ be a map.",
-      "We say that @MathNode@ is \u2022 an isometric embedding if @MathNode@;",
-      "\u2022 a bi-Lipschitz embedding if there exists a constant @MathNode@ such that @MathEquation@",
-      "\u2022 @MathNode@-quasi-isometric embedding if there exists an @MathNode@ such that @MathEquation@",
-      "\u2022 a coarse embedding if there exist non-decreasing functions @MathNode@ satisfying @MathNode@ and @MathEquation@"
+      [
+        "We say that @MathNode@ is",
+        [
+          "\u2022 an isometric embedding if @MathNode@;",
+          "\u2022 a bi-Lipschitz embedding if there exists a constant @MathNode@ such that @MathEquation@",
+          "\u2022 @MathNode@-quasi-isometric embedding if there exists an @MathNode@ such that @MathEquation@",
+          "\u2022 a coarse embedding if there exist non-decreasing functions @MathNode@ satisfying @MathNode@ and @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -5281,10 +5460,15 @@
     "paper": "https://ar5iv.org/abs/1208.3857",
     "identifier": "Definition 0.1.",
     "sentences": [
-      "A Cancer Hybrid Automaton (CHA) is a tuple @MathEquation@ where \u2022 @MathNode@ is a set of states,",
-      "2Strictly speaking, in the case of hallmarks, a state corresponds to a subset of hallmarks that have been acquired.",
-      "\u2022 @MathNode@ is a set of directed edges labeled with sets of drugs, and",
-      "\u2022 @MathNode@ is the initial state.",
+      [
+        "A Cancer Hybrid Automaton (CHA) is a tuple @MathEquation@ where",
+        [
+          "\u2022 @MathNode@ is a set of states,",
+          "2Strictly speaking, in the case of hallmarks, a state corresponds to a subset of hallmarks that have been acquired.",
+          "\u2022 @MathNode@ is a set of directed edges labeled with sets of drugs, and",
+          "\u2022 @MathNode@ is the initial state."
+        ]
+      ],
       "We usually omit @MathNode@ and write just @MathNode@."
     ]
   },
@@ -5445,8 +5629,12 @@
       "We define the function @MathNode@ to propagate success patterns to the right as follows:",
       "3",
       "Note the non-standard use of function @MathNode@ to propagate success patterns to the right, despite the fact that @MathNode@ is not really a program clause.",
-      "\u2022 @MathNode@ if @MathNode@ (i.e., @MathNode@ is an empty query);",
-      "\u2022 @MathNode@ if @MathNode@, @MathNode@, @MathNode@, @MathNode@, @MathNode@, and @MathNode@."
+      [
+        [
+          "\u2022 @MathNode@ if @MathNode@ (i.e., @MathNode@ is an empty query);",
+          "\u2022 @MathNode@ if @MathNode@, @MathNode@, @MathNode@, @MathNode@, @MathNode@, and @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -5588,8 +5776,13 @@
     "paper": "https://ar5iv.org/abs/2004.13149",
     "identifier": "Definition 10 (An @MathNode@-proof).",
     "sentences": [
-      "Let @MathNode@ be a set of clauses, an @MathNode@-refutation of @MathNode@ is a sequence of clauses @MathNode@ such that: \u2022 For each @MathNode@, either @MathNode@ or there are @MathNode@ such that @MathNode@ follows from @MathNode@ by the resolution rule,",
-      "\u2022 @MathNode@.",
+      [
+        "Let @MathNode@ be a set of clauses, an @MathNode@-refutation of @MathNode@ is a sequence of clauses @MathNode@ such that:",
+        [
+          "\u2022 For each @MathNode@, either @MathNode@ or there are @MathNode@ such that @MathNode@ follows from @MathNode@ by the resolution rule,",
+          "\u2022 @MathNode@."
+        ]
+      ],
       "The number of steps in the refutation is @MathNode@."
     ]
   },
@@ -5915,12 +6108,17 @@
     "identifier": "Definition 6.",
     "sentences": [
       "Let @MathNode@ be a subset of vertices that can be thought of as an error pattern.",
-      "Let us say that a generator @MathNode@ is critical (with respect to @MathNode@) if it can be partitioned as follows: @MathGroup@ where \u2022 @MathNode@ is a partition of @MathNode@ and @MathNode@ is a partition of @MathNode@,",
-      "\u2022 @MathNode@, @MathNode@ and @MathNode@,",
-      "\u2022 every vertex in @MathNode@ has exactly two neighbors in @MathNode@,",
-      "\u2022 every vertex in @MathNode@ has no neighbor in @MathNode@,",
-      "\u2022 every vertex in @MathNode@ and every vertex in @MathNode@ has exactly one neighbor in @MathNode@,",
-      "\u2022 @MathNode@, @MathNode@."
+      [
+        "Let us say that a generator @MathNode@ is critical (with respect to @MathNode@) if it can be partitioned as follows: @MathGroup@ where",
+        [
+          "\u2022 @MathNode@ is a partition of @MathNode@ and @MathNode@ is a partition of @MathNode@,",
+          "\u2022 @MathNode@, @MathNode@ and @MathNode@,",
+          "\u2022 every vertex in @MathNode@ has exactly two neighbors in @MathNode@,",
+          "\u2022 every vertex in @MathNode@ has no neighbor in @MathNode@,",
+          "\u2022 every vertex in @MathNode@ and every vertex in @MathNode@ has exactly one neighbor in @MathNode@,",
+          "\u2022 @MathNode@, @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -5970,8 +6168,13 @@
     "identifier": "Definition 3 (Bisimulation).",
     "sentences": [
       "Let @MathNode@ and @MathNode@ be two image finite @MathNode@-ULTraS.",
-      "An equivalence relation @MathNode@ between @MathNode@ and @MathNode@ is a bisimulation if, and only if, for each pair of states @MathNode@ and @MathNode@, @MathNode@ implies that for each label @MathNode@ the following holds: \u2022 if @MathNode@ then there exists @MathNode@ s.t. for each equivalence class @MathNode@ of @MathNode@: @MathNode@;",
-      "\u2022 if @MathNode@ then there exists @MathNode@ s.t. for each equivalence class @MathNode@ of @MathNode@: @MathNode@.",
+      [
+        "An equivalence relation @MathNode@ between @MathNode@ and @MathNode@ is a bisimulation if, and only if, for each pair of states @MathNode@ and @MathNode@, @MathNode@ implies that for each label @MathNode@ the following holds:",
+        [
+          "\u2022 if @MathNode@ then there exists @MathNode@ s.t. for each equivalence class @MathNode@ of @MathNode@: @MathNode@;",
+          "\u2022 if @MathNode@ then there exists @MathNode@ s.t. for each equivalence class @MathNode@ of @MathNode@: @MathNode@."
+        ]
+      ],
       "Processes @MathNode@ and @MathNode@ are said to be bisimilar if there exists a bisimulation @MathNode@ such that @MathNode@."
     ]
   },
@@ -6323,9 +6526,14 @@
       "Let @MathNode@ be a contraction, @MathNode@ an effective @MathNode@-divisor on @MathNode@, and @MathNode@ a point.",
       "We say that @MathNode@ is an @MathNode@-complement of @MathNode@ if @MathNode@, @MathNode@ is lc and @MathNode@ over an open neighborhood of @MathNode@.",
       "Let @MathNode@ be an integer.",
-      "An @MathNode@-complement of @MathNode@ is a pair @MathNode@, such that over an open neighborhood of @MathNode@, \u2022 @MathNode@ is lc,",
-      "\u2022 @MathNode@, and",
-      "\u2022 @MathNode@.",
+      [
+        "An @MathNode@-complement of @MathNode@ is a pair @MathNode@, such that over an open neighborhood of @MathNode@,",
+        [
+          "\u2022 @MathNode@ is lc,",
+          "\u2022 @MathNode@, and",
+          "\u2022 @MathNode@."
+        ]
+      ],
       "We say that @MathNode@ is a monotonic @MathNode@-complement of @MathNode@ if we additionally have @MathNode@.",
       "If @MathNode@, we may omit @MathNode@ and say that @MathNode@ is an @MathNode@-complement (resp. @MathNode@-complement, monotonic @MathNode@-complement) of @MathNode@, and in this case, we also say that @MathNode@ is a local @MathNode@-complement (resp. local @MathNode@-complement, monotonic local @MathNode@-complement) of @MathNode@ near @MathNode@."
     ]
@@ -6375,13 +6583,21 @@
     "paper": "https://ar5iv.org/abs/2302.07782",
     "identifier": "Definition 2.1 (Grade algebra).",
     "sentences": [
-      "A grade algebra is a tuple @MathNode@ such that: \u2022 @MathNode@ is a partially ordered set;",
-      "\u2022 @MathNode@ is a commutative monoid;",
-      "\u2022 @MathNode@ is a monoid;",
-      "and the following axioms are satisfied: \u2022 @MathNode@ and @MathNode@, for all @MathNode@;",
-      "\u2022 @MathNode@ and @MathNode@, for all @MathNode@;",
-      "\u2022 if @MathNode@ and @MathNode@ then @MathNode@ and @MathNode@, for all @MathNode@;",
-      "\u2022 @MathNode@, for all @MathNode@."
+      [
+        "A grade algebra is a tuple @MathNode@ such that:",
+        [
+          "\u2022 @MathNode@ is a partially ordered set;",
+          "\u2022 @MathNode@ is a commutative monoid;",
+          "\u2022 @MathNode@ is a monoid;"
+        ],
+        "and the following axioms are satisfied:",
+        [
+          "\u2022 @MathNode@ and @MathNode@, for all @MathNode@;",
+          "\u2022 @MathNode@ and @MathNode@, for all @MathNode@;",
+          "\u2022 if @MathNode@ and @MathNode@ then @MathNode@ and @MathNode@, for all @MathNode@;",
+          "\u2022 @MathNode@, for all @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -6885,8 +7101,13 @@
     "paper": "https://ar5iv.org/abs/1209.0417",
     "identifier": "Definition 6.6 (@LtxCite@).",
     "sentences": [
-      "A cyclotomic associator is a pair of group-like elements @MathNode@, @MathNode@ such that @MathNode@ is an associator and @MathEquation@ satisfies: \u2022 the mixed pentagon equation @MathEquation@ in @MathNode@",
-      "\u2022 The octagon equation @MathEquation@ where @MathGroup@"
+      [
+        "A cyclotomic associator is a pair of group-like elements @MathNode@, @MathNode@ such that @MathNode@ is an associator and @MathEquation@ satisfies:",
+        [
+          "\u2022 the mixed pentagon equation @MathEquation@ in @MathNode@",
+          "\u2022 The octagon equation @MathEquation@ where @MathGroup@"
+        ]
+      ]
     ]
   },
   {
@@ -6918,17 +7139,21 @@
     "sentences": [
       "Let @MathNode@ be a learning graph and @MathNode@ be a certificate structure, both on @MathNode@ input variables.",
       "For each @MathNode@, we define a flow on @MathNode@ as a real-valued function @MathNode@ where @MathNode@ is an arc of @MathNode@.",
-      "It has to satisfy the following properties: \u2022 the vertex @MathNode@ is the only source of the flow, and the flow has value 1.",
-      "In other words, the sum of @MathNode@ over all @MathNode@ leaving @MathNode@ is 1;",
-      "\u2022 a vertex labelled by @MathNode@ is a sink only if @MathNode@.",
+      [
+        "It has to satisfy the following properties:",
+        [
+          "\u2022 the vertex @MathNode@ is the only source of the flow, and the flow has value 1.",
+          "In other words, the sum of @MathNode@ over all @MathNode@ leaving @MathNode@ is 1;",
+          "\u2022 a vertex labelled by @MathNode@ is a sink only if @MathNode@."
+        ]
+      ],
       "Thus, if @MathNode@ and @MathNode@ is not marked, then, for a vertex labelled by @MathNode@, the sum of @MathNode@ over all in-coming arcs equals the sum of @MathNode@ over all out-going arcs."
     ]
   },
   {
     "paper": "https://ar5iv.org/abs/2105.10135",
-    "identifier": "Definition 6",
+    "identifier": "Definition 6 (Strongly Typical Sequences) @LtxCite@",
     "sentences": [
-      "(Strongly Typical Sequences) @LtxCite@",
       "For any distribution @MathNode@ on @MathNode@, a sequence @MathNode@ is said to be @MathNode@-typical with constant @MathNode@ if @MathGroup@ and, in addition, no @MathNode@ with @MathNode@ occurs in @MathNode@.",
       "The set of such sequences is denoted by @MathNode@.",
       "If @MathNode@ is a random variable with values in @MathNode@, we also refer to @MathNode@-typical sequences as @MathNode@-typical sequences and write @MathNode@.@MathNode@"
@@ -7164,9 +7389,14 @@
     "paper": "https://ar5iv.org/abs/1804.10809",
     "identifier": "Definition 2.3.",
     "sentences": [
-      "We define the @MathNode@ and @MathNode@ formulas by induction on @MathNode@: \u2022 any first-order formula is both @MathNode@ and @MathNode@,",
-      "\u2022 if each @MathNode@ is @MathNode@ then @MathNode@ is @MathNode@, and",
-      "\u2022 if each @MathNode@ is @MathNode@ then @MathNode@ is @MathNode@."
+      [
+        "We define the @MathNode@ and @MathNode@ formulas by induction on @MathNode@:",
+        [
+          "\u2022 any first-order formula is both @MathNode@ and @MathNode@,",
+          "\u2022 if each @MathNode@ is @MathNode@ then @MathNode@ is @MathNode@, and",
+          "\u2022 if each @MathNode@ is @MathNode@ then @MathNode@ is @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -7220,10 +7450,14 @@
     "paper": "https://ar5iv.org/abs/1701.02332",
     "identifier": "Definition 1.",
     "sentences": [
-      "We say that @MathNode@ is dynamically trivial if there exists two periodic points @MathNode@ of orders @MathNode@ such that",
-      "\u2022 @MathNode@",
-      "\u2022 @MathNode@",
-      "\u2022 for all @MathNode@ which is not in the orbit of @MathNode@, the @MathNode@-limit of @MathNode@ is equal to @MathNode@ the orbit of @MathNode@."
+      [
+        "We say that @MathNode@ is dynamically trivial if there exists two periodic points @MathNode@ of orders @MathNode@ such that",
+        [
+          "\u2022 @MathNode@",
+          "\u2022 @MathNode@",
+          "\u2022 for all @MathNode@ which is not in the orbit of @MathNode@, the @MathNode@-limit of @MathNode@ is equal to @MathNode@ the orbit of @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -7456,11 +7690,16 @@
     "identifier": "Definition 3.1 (Extended learning graph).",
     "sentences": [
       "Let @MathNode@ be finite sets.",
-      "An extended learning graph @MathNode@ is @MathNode@-tuple @MathNode@ satisfying \u2022 @MathNode@ is a directed acyclic graph rooted in some vertex @MathNode@;",
-      "\u2022 @MathNode@ is a vertex labelling mapping each @MathNode@ to @MathNode@ such that @MathNode@ and @MathNode@ for every @MathNode@ and some @MathNode@;",
-      "\u2022 Values @MathNode@ are in @MathNode@ and depend on @MathNode@ only through @MathNode@, for every @MathNode@;",
-      "\u2022 @MathNode@ for all @MathNode@ and edges @MathNode@ such that @MathNode@ and @MathNode@ with @MathNode@.",
-      "\u2022 @MathNode@ is a unit flow whose source is the root and such that @MathNode@ when @MathNode@, for every @MathNode@.",
+      [
+        "An extended learning graph @MathNode@ is @MathNode@-tuple @MathNode@ satisfying",
+        [
+          "\u2022 @MathNode@ is a directed acyclic graph rooted in some vertex @MathNode@;",
+          "\u2022 @MathNode@ is a vertex labelling mapping each @MathNode@ to @MathNode@ such that @MathNode@ and @MathNode@ for every @MathNode@ and some @MathNode@;",
+          "\u2022 Values @MathNode@ are in @MathNode@ and depend on @MathNode@ only through @MathNode@, for every @MathNode@;",
+          "\u2022 @MathNode@ for all @MathNode@ and edges @MathNode@ such that @MathNode@ and @MathNode@ with @MathNode@.",
+          "\u2022 @MathNode@ is a unit flow whose source is the root and such that @MathNode@ when @MathNode@, for every @MathNode@."
+        ]
+      ],
       "We say that @MathNode@ is a learning graph for some function @MathNode@, when @MathNode@ and each sink of @MathNode@ contains a @MathNode@-certificate for @MathNode@ on @MathNode@, for all positive input @MathNode@."
     ]
   },
@@ -7941,9 +8180,18 @@
     "identifier": "Definition 1",
     "sentences": [
       "Let @MathNode@ and @MathNode@ be such that @MathNode@.",
-      "\u2022 @MathNode@ satisfies condition PD if @MathNode@ and at least one of C1 or C2 below holds C1. @MathNode@,",
-      "C2. @MathNode@.",
-      "\u2022 @MathNode@ satisfies condition CO if either @MathNode@ or @MathEquation@"
+      [
+        [
+          "\u2022 @MathNode@ satisfies condition PD if @MathNode@ and at least one of C1 or C2 below holds",
+          [
+            [
+              "C1. @MathNode@,",
+              "C2. @MathNode@."
+            ]
+          ],
+          "\u2022 @MathNode@ satisfies condition CO if either @MathNode@ or @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -8095,8 +8343,13 @@
     "identifier": "Definition 3.1 (Antonim).",
     "sentences": [
       "Antonim is an impartial combinatorial game where each position is represented by @MathNode@.",
-      "The position represented by @MathNode@ is an option of @MathNode@ if: \u2022 @MathNode@ such that @MathNode@, or",
-      "\u2022 @MathNode@ such that @MathNode@ and @MathNode@"
+      [
+        "The position represented by @MathNode@ is an option of @MathNode@ if:",
+        [
+          "\u2022 @MathNode@ such that @MathNode@, or",
+          "\u2022 @MathNode@ such that @MathNode@ and @MathNode@"
+        ]
+      ]
     ]
   },
   {
@@ -8139,8 +8392,13 @@
     "paper": "https://ar5iv.org/abs/2106.00678",
     "identifier": "Definition 4.2.",
     "sentences": [
-      "A Cauchy filter on a uniform locale @MathNode@ is a filter @MathNode@ on @MathNode@ such that \u2022 @MathNode@ only contains positive elements,",
-      "\u2022 @MathNode@ contains an open from every uniform cover.",
+      [
+        "A Cauchy filter on a uniform locale @MathNode@ is a filter @MathNode@ on @MathNode@ such that",
+        [
+          "\u2022 @MathNode@ only contains positive elements,",
+          "\u2022 @MathNode@ contains an open from every uniform cover."
+        ]
+      ],
       "We say a Cauchy filter @MathNode@ is regular if for every @MathNode@ there is a @MathNode@ such that @MathNode@."
     ]
   },
@@ -8388,10 +8646,13 @@
     "identifier": "Definition 2.1.",
     "sentences": [
       "The skew group dg algebra @MathNode@ is the algebra defined as follows.",
-      "\u2022",
-      "As a @MathNode@-module, @MathNode@.",
-      "\u2022 Multiplication is given by @MathEquation@ for all @MathNode@ and @MathNode@.",
-      "\u2022 The differential is defined by @MathEquation@"
+      [
+        [
+          "\u2022 As a @MathNode@-module, @MathNode@.",
+          "\u2022 Multiplication is given by @MathEquation@ for all @MathNode@ and @MathNode@.",
+          "\u2022 The differential is defined by @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -8499,12 +8760,16 @@
       "A language @MathNode@ is piecewise-testable if it satisfies one of the equivalent following properties:",
       "1The last four characterizations refer to notions that we do not redefine in this article because we do not use them.",
       "See references for details.",
-      "\u2022 @MathNode@ is a finite boolean combination of principal filters,",
-      "\u2022 @MathNode@ is a union @MathNode@ of @MathNode@-classes for some @MathNode@,",
-      "\u2022 @MathNode@ can be defined by a @MathNode@-formula in the first-order logic over words @LtxCite@,",
-      "\u2022 the syntactic monoid of @MathNode@ is finite and @MathNode@-trivial (Simon\u2019s theorem) @LtxCite@,",
-      "\u2022 the minimal automaton for @MathNode@ is finite, acyclic, and satisfies the UMS property @LtxCite@,",
-      "\u2022 the minimal automaton for @MathNode@ is finite, acyclic, and locally confluent @LtxCite@."
+      [
+        [
+          "\u2022 @MathNode@ is a finite boolean combination of principal filters,",
+          "\u2022 @MathNode@ is a union @MathNode@ of @MathNode@-classes for some @MathNode@,",
+          "\u2022 @MathNode@ can be defined by a @MathNode@-formula in the first-order logic over words @LtxCite@,",
+          "\u2022 the syntactic monoid of @MathNode@ is finite and @MathNode@-trivial (Simon\u2019s theorem) @LtxCite@,",
+          "\u2022 the minimal automaton for @MathNode@ is finite, acyclic, and satisfies the UMS property @LtxCite@,",
+          "\u2022 the minimal automaton for @MathNode@ is finite, acyclic, and locally confluent @LtxCite@."
+        ]
+      ]
     ]
   },
   {
@@ -8798,9 +9063,14 @@
     "identifier": "Definition 2.1.",
     "sentences": [
       "Let @MathNode@.",
-      "For words @MathNode@, define @MathEquation@ if one of the following holds: \u2022 @MathNode@,",
-      "\u2022 @MathNode@ and @MathNode@, or",
-      "\u2022 @MathNode@ and @MathNode@.",
+      [
+        "For words @MathNode@, define @MathEquation@ if one of the following holds:",
+        [
+          "\u2022 @MathNode@,",
+          "\u2022 @MathNode@ and @MathNode@, or",
+          "\u2022 @MathNode@ and @MathNode@."
+        ]
+      ],
       "Define the signed shift @MathNode@ by letting @MathNode@, where the linear order on @MathNode@ is @MathNode@."
     ]
   },
@@ -9074,9 +9344,14 @@
       "The closest-pair tree that represents @MathNode@, denoted by @MathNode@, is a complete rooted binary tree with @MathNode@ leaves.",
       "Each leaf node @MathNode@ is labeled by a number @MathNode@, and a prefix-sum tree @MathNode@ representing the set @MathNode@.",
       "Each internal node @MathNode@ is labeled by a bit @MathNode@.",
-      "These labels obey the following rules: \u2022 If @MathNode@, then @MathNode@ is the number of boxes @MathNode@, which are neighbours of @MathNode@, and which have @MathNode@ and @MathNode@ for the (unique) @MathNode@.",
-      "\u2022 If @MathNode@, then @MathNode@.",
-      "\u2022 The @MathNode@ if any of the children @MathNode@ descendants to the internal node @MathNode@ have either @MathNode@ or @MathNode@ and @MathNode@."
+      [
+        "These labels obey the following rules:",
+        [
+          "\u2022 If @MathNode@, then @MathNode@ is the number of boxes @MathNode@, which are neighbours of @MathNode@, and which have @MathNode@ and @MathNode@ for the (unique) @MathNode@.",
+          "\u2022 If @MathNode@, then @MathNode@.",
+          "\u2022 The @MathNode@ if any of the children @MathNode@ descendants to the internal node @MathNode@ have either @MathNode@ or @MathNode@ and @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -9092,11 +9367,16 @@
     "identifier": "Definition 2.5.3.",
     "sentences": [
       "Let @MathNode@ be a group.",
-      "A generalized presentation of @MathNode@ is a tuple @MathNode@ with the following properties: \u2022 @MathNode@ is a set with a free involution.",
-      "\u2022 @MathNode@ is an admissible subset of @MathNode@ with @MathNode@.",
-      "\u2022 @MathNode@ is an admissible topology on @MathNode@.",
-      "\u2022 @MathNode@ is a subset of the generalized free group @MathNode@.",
-      "\u2022 There is an epimorphism @MathNode@ such that @MathNode@ is the smallest normal subgroup which contains the set @MathNode@ and is closed with respect to @MathNode@.",
+      [
+        "A generalized presentation of @MathNode@ is a tuple @MathNode@ with the following properties:",
+        [
+          "\u2022 @MathNode@ is a set with a free involution.",
+          "\u2022 @MathNode@ is an admissible subset of @MathNode@ with @MathNode@.",
+          "\u2022 @MathNode@ is an admissible topology on @MathNode@.",
+          "\u2022 @MathNode@ is a subset of the generalized free group @MathNode@.",
+          "\u2022 There is an epimorphism @MathNode@ such that @MathNode@ is the smallest normal subgroup which contains the set @MathNode@ and is closed with respect to @MathNode@."
+        ]
+      ],
       "With other words, @MathNode@.",
       "The sets @MathNode@ and @MathNode@ are called, respectively, the sets of generalized generators and defining generalized relations for this generalized presentation of @MathNode@."
     ]
@@ -9521,8 +9801,13 @@
     "paper": "https://ar5iv.org/abs/2403.19753",
     "identifier": "Definition 2.20.",
     "sentences": [
-      "An iso-set for @MathNode@ is a subset @MathNode@ of @MathNode@ such that \u2022 its elements are linearly independent and",
-      "\u2022 if any pair of odd roots @MathNode@ satisfies @MathNode@, then @MathNode@.",
+      [
+        "An iso-set for @MathNode@ is a subset @MathNode@ of @MathNode@ such that",
+        [
+          "\u2022 its elements are linearly independent and",
+          "\u2022 if any pair of odd roots @MathNode@ satisfies @MathNode@, then @MathNode@."
+        ]
+      ],
       "Let @MathNode@ denote the collection of iso-sets."
     ]
   },
@@ -9574,10 +9859,14 @@
     "identifier": "Definition 4.6.",
     "sentences": [
       "Consider a well posed space-time discretization and select for each agent @MathNode@ and cell configuration @MathNode@ a control law @MathNode@ which generates at least one well posed transition.",
-      "Then, the controlled individual transition system @MathNode@ of each agent @MathNode@ is defined as follows",
-      "\u2022 @MathNode@",
-      "\u2022 @MathNode@",
-      "\u2022 @MathNode@ iff @MathNode@ and @MathNode@, for each @MathNode@, @MathNode@ and @MathNode@, with @MathNode@ as defined in (@LtxRef@).",
+      [
+        "Then, the controlled individual transition system @MathNode@ of each agent @MathNode@ is defined as follows",
+        [
+          "\u2022 @MathNode@",
+          "\u2022 @MathNode@",
+          "\u2022 @MathNode@ iff @MathNode@ and @MathNode@, for each @MathNode@, @MathNode@ and @MathNode@, with @MathNode@ as defined in (@LtxRef@)."
+        ]
+      ],
       "@MathNode@"
     ]
   },
