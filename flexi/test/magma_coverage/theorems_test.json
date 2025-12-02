@@ -162,8 +162,13 @@
       "Let @MathNode@ and @MathNode@ be a m.c.s. of @MathNode@, where @MathNode@ is a commutative ring with @MathNode@ and @MathNode@ is a m.c.s. of @MathNode@ for each @MathNode@.",
       "Let @MathNode@ be an @MathNode@-module, where @MathNode@ is an @MathNode@-module and @MathNode@ is an @MathNode@-module.",
       "Suppose that @MathNode@ is a submodule of @MathNode@.",
-      "Then the following conditions are equivalent: (a) @MathNode@ is an @MathNode@-2-absorbing second submodule of @MathNode@;",
-      "(b) Either @MathNode@ and @MathNode@ is a @MathNode@-2-absorbing second submodule of @MathNode@ or @MathNode@ and @MathNode@ is a @MathNode@-2-absorbing second submodule of @MathNode@ or @MathNode@ is an @MathNode@-second submodule of @MathNode@ and @MathNode@ is an @MathNode@-second submodule of @MathNode@ ."
+      [
+        "Then the following conditions are equivalent:",
+        [
+          "(a) @MathNode@ is an @MathNode@-2-absorbing second submodule of @MathNode@;",
+          "(b) Either @MathNode@ and @MathNode@ is a @MathNode@-2-absorbing second submodule of @MathNode@ or @MathNode@ and @MathNode@ is a @MathNode@-2-absorbing second submodule of @MathNode@ or @MathNode@ is an @MathNode@-second submodule of @MathNode@ and @MathNode@ is an @MathNode@-second submodule of @MathNode@ ."
+        ]
+      ]
     ]
   },
   {
@@ -673,8 +678,13 @@
     "paper": "https://ar5iv.org/abs/1306.1861",
     "identifier": "Theorem 4.1",
     "sentences": [
-      "For any given @MathNode@ and @MathNode@, if the following two conditions are satisfied",
-      "(a) @MathNode@, and (b) @MathNode@",
+      [
+        "For any given @MathNode@ and @MathNode@, if the following two conditions are satisfied",
+        [
+          "(a) @MathNode@, and",
+          "(b) @MathNode@"
+        ]
+      ],
       "then no deterministic algorithm is competitive when run with speedup @MathNode@ against an adversary injecting tasks with cost in @MathNode@ even in a system with one single processor."
     ]
   },
@@ -737,10 +747,19 @@
     "identifier": "Theorem 3.1 (Viehweg-Zuo).",
     "sentences": [
       "There is an abelian scheme @MathNode@ such that: (1) The relative dimension of @MathNode@ is either @MathNode@, if @MathNode@ splits, or @MathNode@ otherwise.",
-      "(2) The local system @MathNode@ corresponds to a representation @MathEquation@ such that: (a) The representation of @MathNode@ on @MathNode@ is a tensor product @MathNode@, where @MathNode@ is the standard representation of @MathNode@, and @MathNode@ is an orthogonal representation of the remaining factor of (@LtxRef@).",
-      "(b) The representation of @MathNode@ on @MathNode@ is isomorphic to a sum of one (if @MathNode@ splits) or two copies (otherwise) of @MathNode@, where @MathNode@ is the standard representation of the @MathNode@th factor of (@LtxRef@).",
-      "(3) The Zariski closure of @MathNode@ and the special Mumford-Tate group of a very general fibre of @MathNode@ are both equal to @MathNode@.",
-      "(4) Corresponding to the decomposition in (2b), the graded Higgs bundle associated to the variation of Hodge structure @MathNode@ is a tensor product @MathEquation@ Furthermore, @MathNode@ is an isomorphism."
+      [
+        [
+          [
+            "(2) The local system @MathNode@ corresponds to a representation @MathEquation@ such that:",
+            [
+              "(a) The representation of @MathNode@ on @MathNode@ is a tensor product @MathNode@, where @MathNode@ is the standard representation of @MathNode@, and @MathNode@ is an orthogonal representation of the remaining factor of (@LtxRef@).",
+              "(b) The representation of @MathNode@ on @MathNode@ is isomorphic to a sum of one (if @MathNode@ splits) or two copies (otherwise) of @MathNode@, where @MathNode@ is the standard representation of the @MathNode@th factor of (@LtxRef@)."
+            ]
+          ],
+          "(3) The Zariski closure of @MathNode@ and the special Mumford-Tate group of a very general fibre of @MathNode@ are both equal to @MathNode@.",
+          "(4) Corresponding to the decomposition in (2b), the graded Higgs bundle associated to the variation of Hodge structure @MathNode@ is a tensor product @MathEquation@ Furthermore, @MathNode@ is an isomorphism."
+        ]
+      ]
     ]
   },
   {
@@ -902,13 +921,16 @@
     "sentences": [
       "Assume that Assumption @LtxRef@ holds.",
       "Then the following assertions hold.",
-      "(a) Let @MathNode@ and @MathNode@ be the weak solution of (@LtxRef@).",
-      "Let @MathNode@ be the weak solution to the state equation (@LtxRef@).",
-      "Then there is a constant @MathNode@ (independent of @MathNode@) such that @MathGroup@",
-      "In particular @MathNode@ converges strongly to @MathNode@ in @MathNode@ as @MathNode@.",
-      "(b) Let @MathNode@ and @MathNode@ be the weak solution of (@LtxRef@).",
-      "Then there is a subsequence that we still denote by @MathNode@ and a @MathNode@ such that @MathNode@ in @MathNode@ as @MathNode@, and @MathNode@ satisfies",
-      "@MathGroup@ for all @MathNode@."
+      [
+        [
+          "(a) Let @MathNode@ and @MathNode@ be the weak solution of (@LtxRef@).",
+          "Let @MathNode@ be the weak solution to the state equation (@LtxRef@).",
+          "Then there is a constant @MathNode@ (independent of @MathNode@) such that @MathGroup@",
+          "In particular @MathNode@ converges strongly to @MathNode@ in @MathNode@ as @MathNode@.",
+          "(b) Let @MathNode@ and @MathNode@ be the weak solution of (@LtxRef@).",
+          "Then there is a subsequence that we still denote by @MathNode@ and a @MathNode@ such that @MathNode@ in @MathNode@ as @MathNode@, and @MathNode@ satisfies @MathGroup@ for all @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -1470,9 +1492,9 @@
   },
   {
     "paper": "https://ar5iv.org/abs/math/0007056",
-    "identifier": "Theorem.",
+    "identifier": "Theorem. (Order Formula)",
     "sentences": [
-      "(Order Formula) Let @MathNode@ be the minimal integer with @MathNode@, as in Theorem @LtxRef@.",
+      "Let @MathNode@ be the minimal integer with @MathNode@, as in Theorem @LtxRef@.",
       "Then the exponent of the group @MathNode@ is @MathNode@, and the order of a Richardson element of @MathNode@ is @MathNode@."
     ]
   },
@@ -1835,8 +1857,13 @@
     "identifier": "Theorem 1.1 (@LtxCite@).",
     "sentences": [
       "Let @MathNode@ be an affine bipermutative CA of smallest neighborhood @MathNode@ with @MathNode@, where @MathNode@ is prime, and let @MathNode@ be an @MathNode@-invariant probability measure.",
-      "Assume that: 1. @MathNode@ is ergodic for @MathNode@;",
-      "2. the measure entropy of @MathNode@ is positive (@MathNode@).",
+      [
+        "Assume that:",
+        [
+          "1. @MathNode@ is ergodic for @MathNode@;",
+          "2. the measure entropy of @MathNode@ is positive (@MathNode@)."
+        ]
+      ],
       "Then @MathNode@."
     ]
   },
@@ -1878,12 +1905,16 @@
     "paper": "https://ar5iv.org/abs/1209.2995",
     "identifier": "Theorem C.1.1.",
     "sentences": [
-      "(a) The coderived category @MathNode@ of the abelian category of @MathNode@-torsion @MathNode@-modules is equivalent to the homotopy category of complexes of injective @MathNode@-torsion @MathNode@-modules.",
-      "(b) The contraderived category @MathNode@ of the abelian category of @MathNode@-contramodules is equivalent to the contraderived category of the exact category of @MathNode@-flat (i. e., @MathNode@-contraflat) @MathNode@-contramodules.",
-      "(c) Assume that the Noetherian ring @MathNode@ has finite Krull dimension.",
-      "Then the contraderived category @MathNode@ is equivalent to the absolute derived category of the exact category of @MathNode@-flat @MathNode@-contramodules.",
-      "(d) Assume that the Noetherian ring @MathNode@ has finite Krull dimension.",
-      "Then the contraderived category @MathNode@ is equivalent to the homotopy category of complexes of projective @MathNode@-contramodules."
+      [
+        [
+          "(a) The coderived category @MathNode@ of the abelian category of @MathNode@-torsion @MathNode@-modules is equivalent to the homotopy category of complexes of injective @MathNode@-torsion @MathNode@-modules.",
+          "(b) The contraderived category @MathNode@ of the abelian category of @MathNode@-contramodules is equivalent to the contraderived category of the exact category of @MathNode@-flat (i. e., @MathNode@-contraflat) @MathNode@-contramodules.",
+          "(c) Assume that the Noetherian ring @MathNode@ has finite Krull dimension.",
+          "Then the contraderived category @MathNode@ is equivalent to the absolute derived category of the exact category of @MathNode@-flat @MathNode@-contramodules.",
+          "(d) Assume that the Noetherian ring @MathNode@ has finite Krull dimension.",
+          "Then the contraderived category @MathNode@ is equivalent to the homotopy category of complexes of projective @MathNode@-contramodules."
+        ]
+      ]
     ]
   },
   {
@@ -1929,8 +1960,13 @@
     "identifier": "Theorem 10",
     "sentences": [
       "Fix @MathNode@ and suppose @MathNode@ is adequate.",
-      "Then: 1. for fixed @MathNode@, @MathNode@ is minimised if and only if @MathNode@.",
-      "2. for fixed @MathNode@, @MathNode@ is minimised if and only if @MathNode@."
+      [
+        "Then:",
+        [
+          "1. for fixed @MathNode@, @MathNode@ is minimised if and only if @MathNode@.",
+          "2. for fixed @MathNode@, @MathNode@ is minimised if and only if @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -2291,8 +2327,12 @@
     "identifier": "Theorem 1.2.",
     "sentences": [
       "Let @MathNode@ be a normalized complete Pick kernel on @MathNode@ and @MathNode@, where @MathNode@ is positive semi-definite, i.e. for all @MathNode@ and all @MathNode@ we have @MathNode@.",
-      "(a) A sequence is interpolating for @MathNode@ if and only if the sequence satisfies the Carleson condition (C) for @MathNode@ and it is interpolating for @MathNode@.",
-      "(b) If a sequence is @MathNode@-separated, then it is interpolating for @MathNode@ if and only if is interpolating for @MathNode@."
+      [
+        [
+          "(a) A sequence is interpolating for @MathNode@ if and only if the sequence satisfies the Carleson condition (C) for @MathNode@ and it is interpolating for @MathNode@.",
+          "(b) If a sequence is @MathNode@-separated, then it is interpolating for @MathNode@ if and only if is interpolating for @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -2742,10 +2782,14 @@
     "identifier": "Theorem 6.7.",
     "sentences": [
       "Let @MathNode@ be a @MathNode@-presentable category and let @MathNode@ be the full subcategory of @MathNode@-presentable objects.",
-      "Then for a monad @MathNode@ the following conditions are equivalent:",
-      "1. @MathNode@ is @MathNode@-accessible.",
-      "2. @MathNode@ has arities in @MathNode@.",
-      "3. @MathNode@ is @MathNode@-nervous."
+      [
+        "Then for a monad @MathNode@ the following conditions are equivalent:",
+        [
+          "1. @MathNode@ is @MathNode@-accessible.",
+          "2. @MathNode@ has arities in @MathNode@.",
+          "3. @MathNode@ is @MathNode@-nervous."
+        ]
+      ]
     ]
   },
   {
@@ -2855,8 +2899,13 @@
     "sentences": [
       "Consider two locally Lipschitz mappings @MathNode@ and @MathNode@, and define the composition @MathNode@.",
       "Consider two locally bounded set-valued mappings @MathNode@ and @MathNode@ and define the composition @MathEquation@ Fix a set @MathNode@, define @MathNode@, and let @MathNode@.",
-      "Suppose that 1. @MathNode@ is @MathNode@-regular along @MathNode@ at @MathNode@ with exponent @MathNode@.",
-      "2. @MathNode@ is @MathNode@-regular along @MathNode@ at @MathNode@ with exponent @MathNode@.",
+      [
+        "Suppose that",
+        [
+          "1. @MathNode@ is @MathNode@-regular along @MathNode@ at @MathNode@ with exponent @MathNode@.",
+          "2. @MathNode@ is @MathNode@-regular along @MathNode@ at @MathNode@ with exponent @MathNode@."
+        ]
+      ],
       "Then @MathNode@ is @MathNode@-regular along @MathNode@ at @MathNode@ with exponent @MathNode@."
     ]
   },
@@ -2973,20 +3022,34 @@
     "identifier": "Theorem 2.18 (Independence on the choice of regularizing spaces).",
     "sentences": [
       "Let @MathNode@ and @MathNode@, @MathNode@, @MathNode@, and @MathNode@ be as above.",
-      "Let @MathNode@ and let @MathNode@, with @MathNode@. 1. (a) Assume that the continuous mappings @MathEquation@ have dense ranges.",
-      "Assume that the operator family @MathNode@ has a limit as @MathNode@, @MathNode@, in the weak operator topology of @MathNode@.",
-      "If there is @MathNode@ such that the operator family @MathNode@ is uniformly bounded in @MathNode@, then this family has a limit as @MathNode@ in the weak operator topology of @MathNode@.",
-      "(b) Assume that @MathNode@, @MathNode@, and @MathNode@ have pre-duals, denoted by @MathNode@, @MathNode@, and @MathNode@, respectively, and that the continuous mappings @MathGroup@ have dense ranges.",
-      "Assume that the operator family @MathNode@ has a limit as @MathNode@, @MathNode@, in the weak\u2217 operator topology of @MathNode@.",
-      "If there is @MathNode@ such that the operator family @MathNode@ is uniformly bounded in @MathNode@, then this family has a limit as @MathNode@ in the weak\u2217 operator topology of @MathNode@.",
-      "2. Let @MathNode@ satisfy Assumption @LtxRef@ (with respect to the weak operator topology), with @MathNode@ a closed extension of @MathNode@ onto @MathNode@. (a) Assume that the continuous mappings @MathGroup@ have dense ranges.",
-      "If the sets @MathNode@ (with respect to weak convergence in Definition @LtxRef@), with @MathNode@, are nonempty, then @MathGroup@",
-      "(b) Assume that @MathNode@ and @MathNode@ have pre-duals @MathNode@ and @MathNode@ and that there is a Hausdorff vector space @MathNode@ and continuous embeddings @MathNode@, @MathNode@.",
-      "Assume that @MathNode@ and @MathNode@ are mutually dense, in the sense that the subsets @MathGroup@ are dense in @MathNode@ and @MathNode@, respectively.3",
-      "That is, @MathNode@ and @MathNode@ form a conjugate couple in the sense of @LtxCite@.",
-      "Then @MathNode@ has a pre-dual; we assume that the closed extension @MathNode@ of @MathNode@ onto @MathNode@ is weak\u2217-closed.",
-      "Assume that the continuous embeddings @MathGroup@ are dense.",
-      "If the sets @MathNode@ (with respect to weak\u2217 convergence in Definition @LtxRef@), @MathNode@ are nonempty, then the relation (@LtxRef@) is satisfied."
+      "Let @MathNode@ and let @MathNode@, with @MathNode@.",
+      [
+        [
+          [
+            [
+              "1. (a) Assume that the continuous mappings @MathEquation@ have dense ranges.",
+              "Assume that the operator family @MathNode@ has a limit as @MathNode@, @MathNode@, in the weak operator topology of @MathNode@.",
+              "If there is @MathNode@ such that the operator family @MathNode@ is uniformly bounded in @MathNode@, then this family has a limit as @MathNode@ in the weak operator topology of @MathNode@.",
+              "(b) Assume that @MathNode@, @MathNode@, and @MathNode@ have pre-duals, denoted by @MathNode@, @MathNode@, and @MathNode@, respectively, and that the continuous mappings @MathGroup@ have dense ranges.",
+              "Assume that the operator family @MathNode@ has a limit as @MathNode@, @MathNode@, in the weak\u2217 operator topology of @MathNode@.",
+              "If there is @MathNode@ such that the operator family @MathNode@ is uniformly bounded in @MathNode@, then this family has a limit as @MathNode@ in the weak\u2217 operator topology of @MathNode@."
+            ]
+          ],
+          "2. Let @MathNode@ satisfy Assumption @LtxRef@ (with respect to the weak operator topology), with @MathNode@ a closed extension of @MathNode@ onto @MathNode@.",
+          [
+            [
+              "(a) Assume that the continuous mappings @MathGroup@ have dense ranges.",
+              "If the sets @MathNode@ (with respect to weak convergence in Definition @LtxRef@), with @MathNode@, are nonempty, then @MathGroup@",
+              "(b) Assume that @MathNode@ and @MathNode@ have pre-duals @MathNode@ and @MathNode@ and that there is a Hausdorff vector space @MathNode@ and continuous embeddings @MathNode@, @MathNode@.",
+              "Assume that @MathNode@ and @MathNode@ are mutually dense, in the sense that the subsets @MathGroup@ are dense in @MathNode@ and @MathNode@, respectively.3",
+              "That is, @MathNode@ and @MathNode@ form a conjugate couple in the sense of @LtxCite@.",
+              "Then @MathNode@ has a pre-dual; we assume that the closed extension @MathNode@ of @MathNode@ onto @MathNode@ is weak\u2217-closed.",
+              "Assume that the continuous embeddings @MathGroup@ are dense.",
+              "If the sets @MathNode@ (with respect to weak\u2217 convergence in Definition @LtxRef@), @MathNode@ are nonempty, then the relation (@LtxRef@) is satisfied."
+            ]
+          ]
+        ]
+      ]
     ]
   },
   {
@@ -3482,10 +3545,15 @@
     "identifier": "Theorem 3.1.",
     "sentences": [
       "Let @MathNode@ in (@LtxRef@).",
-      "Let us consider: 1. scheme (@LtxRef@)-(@LtxRef@) for @MathNode@,",
-      "2. scheme (@LtxRef@)-(@LtxRef@) and (@LtxRef@) for @MathNode@,",
-      "3. scheme (@LtxRef@)-(@LtxRef@) for @MathNode@ (for @MathNode@, the scheme (@LtxRef@)-(@LtxRef@) is the same)",
-      "and set respectively @MathNode@, @MathNode@ and @MathNode@.",
+      [
+        "Let us consider:",
+        [
+          "1. scheme (@LtxRef@)-(@LtxRef@) for @MathNode@,",
+          "2. scheme (@LtxRef@)-(@LtxRef@) and (@LtxRef@) for @MathNode@,",
+          "3. scheme (@LtxRef@)-(@LtxRef@) for @MathNode@ (for @MathNode@, the scheme (@LtxRef@)-(@LtxRef@) is the same)"
+        ],
+        "and set respectively @MathNode@, @MathNode@ and @MathNode@."
+      ],
       "Let the parameters @MathNode@ and @MathNode@ be chosen such that @MathNode@ and @MathNode@ in @MathNode@, and @MathNode@ with some @MathNode@ (see (@LtxRef@)) for the first and second schemes.",
       "Let also @MathNode@, and the condition @MathGroup@ for the first and second schemes, or the explicit condition @MathGroup@ for the third scheme, be valid (see also Remark @LtxRef@ below).",
       "Then, for any free terms @MathNode@: @MathNode@ and @MathNode@ (not only for those specific defined above), the solutions to all three schemes satisfy the following two stability bounds: @MathGroup@ where the @MathNode@-term can be taken also as @MathNode@ @MathGroup@ where, for @MathNode@, one can replace the @MathNode@-term with @MathNode@."
@@ -4421,11 +4489,15 @@
     "identifier": "Theorem 4.14.",
     "sentences": [
       "Let @MathNode@ be a finite group and @MathNode@ be an abelian group.",
-      "1. To each cocycle @MathNode@ there corresponds a cocycle extension functor @MathEquation@",
-      "The algebra @MathNode@ is a flat @MathNode@-deformation of @MathNode@.",
-      "2. If @MathNode@, @MathNode@ are cohomologous cocycles, the functors @MathNode@ and @MathNode@ are naturally isomorphic.",
-      "3. To each cocycle @MathNode@ there corresponds a cocycle twist functor @MathEquation@",
-      "4. For each @MathNode@ one can find a finite cyclic group @MathNode@, an @MathNode@th root of unity @MathNode@ and a cocycle @MathNode@ such that there is a natural isomorphism @MathEquation@ of functors. \u220e"
+      [
+        [
+          "1. To each cocycle @MathNode@ there corresponds a cocycle extension functor @MathEquation@",
+          "The algebra @MathNode@ is a flat @MathNode@-deformation of @MathNode@.",
+          "2. If @MathNode@, @MathNode@ are cohomologous cocycles, the functors @MathNode@ and @MathNode@ are naturally isomorphic.",
+          "3. To each cocycle @MathNode@ there corresponds a cocycle twist functor @MathEquation@",
+          "4. For each @MathNode@ one can find a finite cyclic group @MathNode@, an @MathNode@th root of unity @MathNode@ and a cocycle @MathNode@ such that there is a natural isomorphism @MathEquation@ of functors."
+        ]
+      ]
     ]
   },
   {
@@ -4513,9 +4585,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2005.02896",
-    "identifier": null,
+    "identifier": "1.4",
     "sentences": [
-      "1.4",
       "There exists @MathNode@ such that every hole-with-hat-free graph is @MathNode@-narrow."
     ]
   },
@@ -4633,11 +4704,16 @@
     "paper": "https://ar5iv.org/abs/1703.04576",
     "identifier": "Theorem 5.3 (RS).",
     "sentences": [
-      "The following statements hold: 1. A real orbit @MathNode@ is closed if and only if @MathNode@.",
-      "2. If @MathNode@ is a minimal vector then @MathNode@.",
-      "3. If @MathNode@ is not closed then there exist @MathNode@ and an @MathNode@ such that @MathNode@ exist as @MathNode@, and @MathNode@ is closed.",
-      "Moreover @MathNode@ is the unique closed orbit in the closure @MathNode@.",
-      "4. A vector @MathNode@ is minimal if and only if @MathNode@, where @MathNode@ is the action @MathNode@."
+      [
+        "The following statements hold:",
+        [
+          "1. A real orbit @MathNode@ is closed if and only if @MathNode@.",
+          "2. If @MathNode@ is a minimal vector then @MathNode@.",
+          "3. If @MathNode@ is not closed then there exist @MathNode@ and an @MathNode@ such that @MathNode@ exist as @MathNode@, and @MathNode@ is closed.",
+          "Moreover @MathNode@ is the unique closed orbit in the closure @MathNode@.",
+          "4. A vector @MathNode@ is minimal if and only if @MathNode@, where @MathNode@ is the action @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -4695,20 +4771,28 @@
     "sentences": [
       "(M. Kapovich, B. Kleiner @LtxCite@.)",
       "Let @MathNode@ be a Kleinian subgroup which is an @MathNode@-dimensional duality group.",
-      "Then the manifold @MathNode@ contains a compact submanifold @MathNode@ (the coarse compact core) satisfying the following:",
-      "1. @MathNode@ contains a finite collection @MathNode@ of @MathNode@ subgroups @MathNode@.",
-      "2. The pair @MathNode@ is an @MathNode@-dimensional Poincar\u00e9 duality pair.",
-      "3. The group @MathNode@ maps onto @MathNode@.",
-      "4. The manifold @MathNode@ has exactly @MathNode@ ends @MathNode@, each of which is almost stable; the components @MathNode@ of @MathNode@ are basic neighborhoods of @MathNode@.",
-      "5. For every @MathNode@, @MathNode@ is the image of @MathNode@ in @MathNode@."
+      [
+        "Then the manifold @MathNode@ contains a compact submanifold @MathNode@ (the coarse compact core) satisfying the following:",
+        [
+          "1. @MathNode@ contains a finite collection @MathNode@ of @MathNode@ subgroups @MathNode@.",
+          "2. The pair @MathNode@ is an @MathNode@-dimensional Poincar\u00e9 duality pair.",
+          "3. The group @MathNode@ maps onto @MathNode@.",
+          "4. The manifold @MathNode@ has exactly @MathNode@ ends @MathNode@, each of which is almost stable; the components @MathNode@ of @MathNode@ are basic neighborhoods of @MathNode@.",
+          "5. For every @MathNode@, @MathNode@ is the image of @MathNode@ in @MathNode@."
+        ]
+      ]
     ]
   },
   {
     "paper": "https://ar5iv.org/abs/2402.15867",
     "identifier": "Theorem 6.7.4.",
     "sentences": [
-      "1) A closed subgroup of an amenable topological group is amenable.",
-      "2) If @MathNode@ is a lattice, then @MathNode@ is amenable if and only if @MathNode@ is amenable."
+      [
+        [
+          "1) A closed subgroup of an amenable topological group is amenable.",
+          "2) If @MathNode@ is a lattice, then @MathNode@ is amenable if and only if @MathNode@ is amenable."
+        ]
+      ]
     ]
   },
   {
@@ -4734,10 +4818,13 @@
     "paper": "https://ar5iv.org/abs/1205.4484",
     "identifier": "Theorem (Restatement of @LtxRef@).",
     "sentences": [
-      "For every regular graph @MathNode@, @MathNode@ and even @MathNode@, 1. (Norm bound implies expansion)",
-      "For all @MathNode@, @MathNode@ implies that @MathNode@.",
-      "2. (Expansion implies norm bound)",
-      "There are constants @MathNode@ such that for all @MathNode@, @MathNode@ implies @MathNode@."
+      [
+        "For every regular graph @MathNode@, @MathNode@ and even @MathNode@,",
+        [
+          "1. (Norm bound implies expansion) For all @MathNode@, @MathNode@ implies that @MathNode@.",
+          "2. (Expansion implies norm bound) There are constants @MathNode@ such that for all @MathNode@, @MathNode@ implies @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -7297,12 +7384,17 @@
     "paper": "https://ar5iv.org/abs/1407.5900",
     "identifier": "Theorem 1.29.",
     "sentences": [
-      "The Rees functor @MathEquation@ has the following properties: 1. it has a left adjoint functor, given by @MathGroup@ where the complex @MathNode@ is seen as a bigraded @MathNode@-module;",
-      "2. for all pairs @MathNode@, @MathNode@ there is bijection @MathEquation@ which is natural in all variables;",
-      "3. its essential image consists of the full subcategory of @MathNode@-torsion-free @MathNode@-modules in complexes;",
-      "4. it induces an equivalence on the homotopy categories;",
-      "5. it preserves compact objects;10In particular this means that the Rees functor maps filtered perfect complexes to perfect complexes: we will be more precise about this in Section 2.2 and Section 2.3.",
-      "6. it maps fibrations to fibrations.",
+      [
+        "The Rees functor @MathEquation@ has the following properties:",
+        [
+          "1. it has a left adjoint functor, given by @MathGroup@ where the complex @MathNode@ is seen as a bigraded @MathNode@-module;",
+          "2. for all pairs @MathNode@, @MathNode@ there is bijection @MathEquation@ which is natural in all variables;",
+          "3. its essential image consists of the full subcategory of @MathNode@-torsion-free @MathNode@-modules in complexes;",
+          "4. it induces an equivalence on the homotopy categories;",
+          "5. it preserves compact objects;10In particular this means that the Rees functor maps filtered perfect complexes to perfect complexes: we will be more precise about this in Section 2.2 and Section 2.3.",
+          "6. it maps fibrations to fibrations."
+        ]
+      ],
       "In particular the Rees construction provides a Quillen equivalence between the categories @MathNode@ and @MathNode@, both endowed with the projective model structure."
     ]
   },
@@ -7667,15 +7759,20 @@
     "paper": "https://ar5iv.org/abs/1108.2676",
     "identifier": "Theorem 3.3.",
     "sentences": [
-      "A reduced plane curve with polar degree two must be one of the following: 1. Three concurrent lines and a fourth line not meeting the center point.",
-      "2. A smooth conic and a secant line.",
-      "3. A smooth conic, a tangent and a line passing thru the tangency point.",
-      "4. A smooth conic and two tangent lines.",
-      "5. Two smooth conics meeting at a single point.",
-      "6. Two smooth conics meeting at a single point and the common tangent.",
-      "7. An irreducible cuspidal cubic.",
-      "8. An irreducible cuspidal cubic and its tangent at the smooth flex point.",
-      "9. An irreducible cuspidal cubic and its tangent at the cusp."
+      [
+        "A reduced plane curve with polar degree two must be one of the following:",
+        [
+          "1. Three concurrent lines and a fourth line not meeting the center point.",
+          "2. A smooth conic and a secant line.",
+          "3. A smooth conic, a tangent and a line passing thru the tangency point.",
+          "4. A smooth conic and two tangent lines.",
+          "5. Two smooth conics meeting at a single point.",
+          "6. Two smooth conics meeting at a single point and the common tangent.",
+          "7. An irreducible cuspidal cubic.",
+          "8. An irreducible cuspidal cubic and its tangent at the smooth flex point.",
+          "9. An irreducible cuspidal cubic and its tangent at the cusp."
+        ]
+      ]
     ]
   },
   {
@@ -7754,8 +7851,12 @@
     "identifier": "Theorem 8.1.",
     "sentences": [
       "Suppose @MathNode@ is a strongly Lipschitz domain and that @MathNode@ satisfies condition (G).",
-      "1. In the case of Dirichlet boundary condition, @MathNode@ is bounded from @MathNode@ into @MathNode@ and @MathNode@ from @MathNode@ into @MathNode@.",
-      "2. In the case of Neumann boundary condition, @MathNode@ is bounded from @MathNode@ into @MathNode@ and @MathNode@ from @MathNode@ into @MathNode@."
+      [
+        [
+          "1. In the case of Dirichlet boundary condition, @MathNode@ is bounded from @MathNode@ into @MathNode@ and @MathNode@ from @MathNode@ into @MathNode@.",
+          "2. In the case of Neumann boundary condition, @MathNode@ is bounded from @MathNode@ into @MathNode@ and @MathNode@ from @MathNode@ into @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -7770,18 +7871,22 @@
     "paper": "https://ar5iv.org/abs/0707.0323",
     "identifier": "Theorem 5",
     "sentences": [
-      "The total number of degrees of freedom @MathNode@ for the @MathNode@ user interference channel under various cognitive message sharing scenarios are determined as follows:",
-      "1. If only one message (e.g. @MathNode@) is shared among all nodes the degrees of freedom are unchanged.",
-      "@MathGroup@",
-      "Note that this includes all scenarios where message @MathNode@ is made available to only the transmitter, only the receiver or both transmitter and receiver of users @MathNode@ and @MathNode@.",
-      "In all these cases, there is no benefit in terms of degrees of freedom.",
-      "2. If two messages (e.g. @MathNode@) are shared among all nodes then we have @MathNode@ degrees of freedom.",
-      "@MathGroup@",
-      "Note that the messages @MathNode@ may be shared through cognitive transmitters, receivers or both.",
-      "3. If only one receiver (e.g. receiver 3) is fully cognitive then we have @MathNode@ degrees of freedom.",
-      "@MathGroup@",
-      "4. If only one transmitter (e.g. transmitter 3) is fully cognitive then we have @MathNode@ degrees of freedom.",
-      "@MathGroup@"
+      [
+        "The total number of degrees of freedom @MathNode@ for the @MathNode@ user interference channel under various cognitive message sharing scenarios are determined as follows:",
+        [
+          "1. If only one message (e.g. @MathNode@) is shared among all nodes the degrees of freedom are unchanged.",
+          "@MathGroup@",
+          "Note that this includes all scenarios where message @MathNode@ is made available to only the transmitter, only the receiver or both transmitter and receiver of users @MathNode@ and @MathNode@.",
+          "In all these cases, there is no benefit in terms of degrees of freedom.",
+          "2. If two messages (e.g. @MathNode@) are shared among all nodes then we have @MathNode@ degrees of freedom.",
+          "@MathGroup@",
+          "Note that the messages @MathNode@ may be shared through cognitive transmitters, receivers or both.",
+          "3. If only one receiver (e.g. receiver 3) is fully cognitive then we have @MathNode@ degrees of freedom.",
+          "@MathGroup@",
+          "4. If only one transmitter (e.g. transmitter 3) is fully cognitive then we have @MathNode@ degrees of freedom.",
+          "@MathGroup@"
+        ]
+      ]
     ]
   },
   {
@@ -8208,14 +8313,18 @@
     "identifier": "Theorem 2.14 (Generation Lemma)",
     "sentences": [
       "Let @MathNode@ be a type theory.",
-      "1. Assume @MathNode@.",
-      "Then @MathNode@ iff @MathNode@ and @MathNode@ for some @MathNode@.",
-      "2. Assume @MathNode@.",
-      "Then @MathNode@ iff @MathNode@, @MathNode@, and @MathNode@ for some @MathNode@ and @MathNode@.",
-      "3. Assume @MathNode@ and let @MathNode@ validate @MathNode@a.",
-      "Then @MathNode@ iff @MathNode@, and @MathNode@ for some @MathNode@.",
-      "4. Assume @MathNode@.",
-      "Then @MathNode@ iff @MathNode@, and @MathNode@ for some @MathNode@ and @MathNode@."
+      [
+        [
+          "1. Assume @MathNode@.",
+          "Then @MathNode@ iff @MathNode@ and @MathNode@ for some @MathNode@.",
+          "2. Assume @MathNode@.",
+          "Then @MathNode@ iff @MathNode@, @MathNode@, and @MathNode@ for some @MathNode@ and @MathNode@.",
+          "3. Assume @MathNode@ and let @MathNode@ validate @MathNode@a.",
+          "Then @MathNode@ iff @MathNode@, and @MathNode@ for some @MathNode@.",
+          "4. Assume @MathNode@.",
+          "Then @MathNode@ iff @MathNode@, and @MathNode@ for some @MathNode@ and @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -8847,10 +8956,13 @@
       "Let @MathNode@ be a positive and bounded sequence.",
       "Let further @MathNode@ and define @MathNode@.",
       "Then we have the following regularity results.",
-      "1. It holds @MathEquation@ Furthermore, the sequence @MathNode@ is bounded in these spaces if @MathNode@ is bounded in @MathNode@.",
-      "2. If additionally @MathNode@ for all @MathNode@, then it holds for all open and compactly contained subsets @MathNode@ of @MathNode@",
-      "@MathEquation@",
-      "Furthermore, the sequence @MathNode@ is bounded in @MathNode@ and @MathNode@ if @MathNode@ is bounded in @MathNode@."
+      [
+        [
+          "1. It holds @MathEquation@ Furthermore, the sequence @MathNode@ is bounded in these spaces if @MathNode@ is bounded in @MathNode@.",
+          "2. If additionally @MathNode@ for all @MathNode@, then it holds for all open and compactly contained subsets @MathNode@ of @MathNode@ @MathEquation@",
+          "Furthermore, the sequence @MathNode@ is bounded in @MathNode@ and @MathNode@ if @MathNode@ is bounded in @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -9301,11 +9413,15 @@
     "sentences": [
       "Assume the model of Section @LtxRef@ and the procedure of Section @LtxRef@.",
       "Fix @MathNode@.",
-      "1. Suppose the null hypothesis @MathNode@ is rejected at @MathNode@ if @MathEquation@",
-      "Then, for all @MathNode@, @MathNode@, as @MathNode@.",
-      "2. Suppose the null hypothesis @MathNode@ is rejected at @MathNode@ by the Bonferroni procedure with @MathNode@ tests, i.e. if @MathEquation@",
-      "If @MathNode@ we define @MathNode@ as infinity.",
-      "Then @MathNode@, as @MathNode@ and @MathNode@, such that for all @MathNode@ for any constant @MathNode@ ."
+      [
+        [
+          "1. Suppose the null hypothesis @MathNode@ is rejected at @MathNode@ if @MathEquation@",
+          "Then, for all @MathNode@, @MathNode@, as @MathNode@.",
+          "2. Suppose the null hypothesis @MathNode@ is rejected at @MathNode@ by the Bonferroni procedure with @MathNode@ tests, i.e. if @MathEquation@",
+          "If @MathNode@ we define @MathNode@ as infinity.",
+          "Then @MathNode@, as @MathNode@ and @MathNode@, such that for all @MathNode@ for any constant @MathNode@ ."
+        ]
+      ]
     ]
   },
   {
@@ -9313,17 +9429,19 @@
     "identifier": "Theorem 2.4",
     "sentences": [
       "Let @MathNode@ be a finite poset and @MathNode@.",
-      "1. If for all @MathNode@ we have @MathNode@ then @MathEquation@",
-      "2. If for all @MathNode@ we have @MathNode@ then @MathEquation@"
+      [
+        [
+          "1. If for all @MathNode@ we have @MathNode@ then @MathEquation@",
+          "2. If for all @MathNode@ we have @MathNode@ then @MathEquation@"
+        ]
+      ]
     ]
   },
   {
     "paper": "https://ar5iv.org/abs/2110.10773",
     "identifier": "Theorem 1.2.11.",
     "sentences": [
-      "(Theorem @LtxRef@)",
-      "Let @MathNode@ be a universally coherent3",
-      "Any finitely presented @MathNode@-algebra @MathNode@ is coherent ring with an ideal @MathNode@ such that @MathNode@ is @MathNode@-flat and @MathNode@.",
+      "Let @MathNode@ be a universally coherent ring with an ideal @MathNode@ such that @MathNode@ is @MathNode@-flat and @MathNode@.",
       "And let @MathNode@ be a separated, finitely presented @MathNode@-scheme.",
       "Let @MathNode@ be an object such that @MathEquation@ for any @MathNode@.",
       "Then @MathNode@."
@@ -9968,8 +10086,13 @@
     "paper": "https://ar5iv.org/abs/1807.07974",
     "identifier": "Theorem 3.",
     "sentences": [
-      "Under the assumptions of Corollary @LtxRef@ and given @MathNode@, the optimal nontrivial cooling protocol in @MathNode@ is such that in each round @MathNode@: 1. The Pauli @MathNode@ unitary is applied to @MathNode@.",
-      "2. The @MathNode@-noisy @MathNode@-swap @MathNode@ is applied to @MathNode@.",
+      [
+        "Under the assumptions of Corollary @LtxRef@ and given @MathNode@, the optimal nontrivial cooling protocol in @MathNode@ is such that in each round @MathNode@:",
+        [
+          "1. The Pauli @MathNode@ unitary is applied to @MathNode@.",
+          "2. The @MathNode@-noisy @MathNode@-swap @MathNode@ is applied to @MathNode@."
+        ]
+      ],
       "The population of the ground state after round @MathNode@ is: @MathGroup@ where @MathNode@ and @MathNode@ as @MathNode@."
     ]
   },

@@ -225,8 +225,13 @@
     "sentences": [
       "Let @MathNode@, @MathNode@ be as in @LtxRef@, and @MathNode@ be an extremal-generic system with support @MathNode@.",
       "Let @MathNode@ be the closed subscheme of @MathNode@ defined by the ideal @MathNode@.",
-      "Then: 1. The subscheme @MathNode@ is not empty.",
-      "2. The sequence @MathNode@ is regular in @MathNode@ if and only if for any @MathNode@, @MathNode@."
+      [
+        "Then:",
+        [
+          "1. The subscheme @MathNode@ is not empty.",
+          "2. The sequence @MathNode@ is regular in @MathNode@ if and only if for any @MathNode@, @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -286,14 +291,19 @@
     "paper": "https://ar5iv.org/abs/2003.08501",
     "identifier": "Theorem 3.1.",
     "sentences": [
-      "Depending on the parameter @MathNode@, the following properties hold: (a) If @MathNode@, then a.a.s. @MathEquation@ where @MathNode@ is any function tending to infinity as @MathNode@.",
-      "Moreover, @MathNode@, where @MathNode@ is the Harmonic number.",
-      "(b) If @MathNode@, then a.a.s. @MathEquation@",
-      "(c) If @MathNode@ for some @MathNode@, then a.a.s. @MathEquation@",
-      "(d) If @MathNode@ for some @MathNode@ such that @MathNode@, then a.a.s. @MathEquation@",
-      "(e) If @MathNode@ for some @MathNode@, @MathNode@, then a.a.s. @MathEquation@",
-      "(f) If @MathNode@ for some @MathNode@, then a.a.s. @MathEquation@",
-      "(g) If @MathNode@ for some @MathNode@, then a.a.s. @MathEquation@"
+      [
+        "Depending on the parameter @MathNode@, the following properties hold:",
+        [
+          "(a) If @MathNode@, then a.a.s. @MathEquation@ where @MathNode@ is any function tending to infinity as @MathNode@.",
+          "Moreover, @MathNode@, where @MathNode@ is the Harmonic number.",
+          "(b) If @MathNode@, then a.a.s. @MathEquation@",
+          "(c) If @MathNode@ for some @MathNode@, then a.a.s. @MathEquation@",
+          "(d) If @MathNode@ for some @MathNode@ such that @MathNode@, then a.a.s. @MathEquation@",
+          "(e) If @MathNode@ for some @MathNode@, @MathNode@, then a.a.s. @MathEquation@",
+          "(f) If @MathNode@ for some @MathNode@, then a.a.s. @MathEquation@",
+          "(g) If @MathNode@ for some @MathNode@, then a.a.s. @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -434,9 +444,13 @@
     "paper": "https://ar5iv.org/abs/1806.10057",
     "identifier": "Theorem 24.",
     "sentences": [
-      "There is an algorithm Test-surface-area which given oracle access to a function @MathNode@ and error parameter @MathNode@ makes @MathNode@ queries and has the following guarantee:",
-      "1. If @MathNode@ is a function with surface area at most @MathNode@, then the algorithm outputs yes with probability at least @MathNode@.",
-      "2. Any function @MathNode@ which passes the test with probability @MathNode@ is @MathNode@-smooth."
+      [
+        "There is an algorithm Test-surface-area which given oracle access to a function @MathNode@ and error parameter @MathNode@ makes @MathNode@ queries and has the following guarantee:",
+        [
+          "1. If @MathNode@ is a function with surface area at most @MathNode@, then the algorithm outputs yes with probability at least @MathNode@.",
+          "2. Any function @MathNode@ which passes the test with probability @MathNode@ is @MathNode@-smooth."
+        ]
+      ]
     ]
   },
   {
@@ -692,9 +706,13 @@
     "sentences": [
       "The class @MathNode@ contains both information systems that satisfy the condition of restricted coverage and information systems that do not satisfy this condition.",
       "Let @MathNode@ be an information system from the class @MathNode@.",
-      "Then",
-      "(a) The system @MathNode@ is @MathNode@-reachable.",
-      "(b) The system @MathNode@ is not @MathNode@-reachable.",
+      [
+        "Then",
+        [
+          "(a) The system @MathNode@ is @MathNode@-reachable.",
+          "(b) The system @MathNode@ is not @MathNode@-reachable."
+        ]
+      ],
       "If the system @MathNode@ does not satisfy the condition of restricted coverage, then @MathNode@ is the optimal boundary @MathNode@-pair of the system @MathNode@.",
       "If the system @MathNode@ satisfies the condition of restricted coverage, then there exist positive constants @MathNode@ and @MathNode@ such that @MathNode@ is a boundary @MathNode@-pair of the system @MathNode@."
     ]
@@ -924,9 +942,14 @@
     "identifier": "THEOREM 13.1.",
     "sentences": [
       "Let @MathNode@ and @MathNode@ be a shift-invariant probability measure.",
-      "Assume that the following conditions hold: 1. @MathNode@ satisfies the central limit theorem with variance @MathNode@ (in the sense of Definition @LtxRef@);",
-      "2. @MathNode@ satisfies @MathNode@ (in the sense of Definition @LtxRef@);",
-      "3. the decay of correlations is summable in the sense of (@LtxRef@).",
+      [
+        "Assume that the following conditions hold:",
+        [
+          "1. @MathNode@ satisfies the central limit theorem with variance @MathNode@ (in the sense of Definition @LtxRef@);",
+          "2. @MathNode@ satisfies @MathNode@ (in the sense of Definition @LtxRef@);",
+          "3. the decay of correlations is summable in the sense of (@LtxRef@)."
+        ]
+      ],
       "Then, for @MathNode@-almost every @MathNode@, @MathEquation@"
     ]
   },
@@ -989,14 +1012,18 @@
     "paper": "https://ar5iv.org/abs/1512.00195",
     "identifier": "Theorem 3.7 (Tannaka-Krein for compact matrix quantum groups @LtxCite@).",
     "sentences": [
-      "(a) Let @MathNode@ be a compact matrix quantum group in the Kac case.",
-      "The class @MathNode@ of all finite-dimensional unitary representations of @MathNode@ is a complete concrete monoidal @MathNode@-category generated by @MathNode@.",
-      "(b) Conversely, let @MathNode@ be a concrete monoidal @MathNode@-category generated by @MathNode@.",
-      "Then there is a compact matrix quantum group @MathNode@ such that: @MathNode@ @MathNode@ is a model of @MathNode@, i.e. for every @MathNode@ there is a representation @MathNode@ with @MathNode@, @MathNode@, @MathNode@ for all @MathNode@, and @MathNode@.",
-      "@MathNode@",
-      "The completion of @MathNode@ coincides with @MathNode@.",
-      "@MathNode@",
-      "The quantum group @MathNode@ is universal in the sense, that any other model of @MathNode@ yields a quantum subgroup of @MathNode@."
+      [
+        [
+          "(a) Let @MathNode@ be a compact matrix quantum group in the Kac case.",
+          "The class @MathNode@ of all finite-dimensional unitary representations of @MathNode@ is a complete concrete monoidal @MathNode@-category generated by @MathNode@.",
+          "(b) Conversely, let @MathNode@ be a concrete monoidal @MathNode@-category generated by @MathNode@.",
+          "Then there is a compact matrix quantum group @MathNode@ such that: @MathNode@ @MathNode@ is a model of @MathNode@, i.e. for every @MathNode@ there is a representation @MathNode@ with @MathNode@, @MathNode@, @MathNode@ for all @MathNode@, and @MathNode@.",
+          "@MathNode@",
+          "The completion of @MathNode@ coincides with @MathNode@.",
+          "@MathNode@",
+          "The quantum group @MathNode@ is universal in the sense, that any other model of @MathNode@ yields a quantum subgroup of @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -1256,11 +1283,15 @@
     "paper": "https://ar5iv.org/abs/1302.7030",
     "identifier": "Theorem 4.1.",
     "sentences": [
-      "(a) the subset of curves in @MathNode@ representing a given homotopy class is open and closed,",
-      "(b) the function sending a curve in @MathNode@ to its length is lower semi-continuous,",
-      "(c) for any @MathNode@, the subset of curves in @MathNode@ of length @MathNode@ which are parameterized proportional to arc-length is compact,",
-      "(d) every homotopy class of curves in @MathNode@ contains at least one minimal geodesic,",
-      "(e) if @MathNode@ has no simple poles then geodesics in @MathNode@ are homotopic only if they are equal."
+      [
+        [
+          "(a) the subset of curves in @MathNode@ representing a given homotopy class is open and closed,",
+          "(b) the function sending a curve in @MathNode@ to its length is lower semi-continuous,",
+          "(c) for any @MathNode@, the subset of curves in @MathNode@ of length @MathNode@ which are parameterized proportional to arc-length is compact,",
+          "(d) every homotopy class of curves in @MathNode@ contains at least one minimal geodesic,",
+          "(e) if @MathNode@ has no simple poles then geodesics in @MathNode@ are homotopic only if they are equal."
+        ]
+      ]
     ]
   },
   {
@@ -1324,8 +1355,13 @@
     "sentences": [
       "Let @MathNode@ be a monic polynomial of degree @MathNode@ and let @MathNode@ be the factorization into irreducible polynomials.",
       "Put @MathNode@.",
-      "Then @MathNode@ is a characteristic polynomial of @MathNode@ if and only if for all @MathNode@, one has (a) @MathNode@ for some positive integer @MathNode@, and",
-      "(b) @MathNode@."
+      [
+        "Then @MathNode@ is a characteristic polynomial of @MathNode@ if and only if for all @MathNode@, one has",
+        [
+          "(a) @MathNode@ for some positive integer @MathNode@, and",
+          "(b) @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -1351,9 +1387,14 @@
     "sentences": [
       "Let @MathNode@ be an irreducible plane curve of degree @MathNode@ defined over a field @MathNode@.",
       "Let @MathNode@ be such that @MathNode@ and @MathNode@.",
-      "The following assertions are equivalent: (a) The functions @MathNode@ and @MathNode@ have no common poles, with @MathNode@ and @MathNode@.",
-      "(b) @MathNode@, where @MathNode@ is a polynomial of degree @MathNode@, such that the degree of @MathNode@ is @MathNode@ and degree of @MathNode@ is @MathNode@.",
-      "(c) @MathNode@ and @MathNode@ have respective multiplicities @MathNode@ and @MathNode@ on @MathNode@ such that @MathNode@."
+      [
+        "The following assertions are equivalent:",
+        [
+          "(a) The functions @MathNode@ and @MathNode@ have no common poles, with @MathNode@ and @MathNode@.",
+          "(b) @MathNode@, where @MathNode@ is a polynomial of degree @MathNode@, such that the degree of @MathNode@ is @MathNode@ and degree of @MathNode@ is @MathNode@.",
+          "(c) @MathNode@ and @MathNode@ have respective multiplicities @MathNode@ and @MathNode@ on @MathNode@ such that @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -1474,8 +1515,13 @@
     "sentences": [
       "(Average-Case Noisy Lower Bounds)",
       "Consider our problem setup with constant parameters @MathNode@, noise variance @MathNode@, and query budget @MathNode@.",
-      "Then, for any algorithm (possibly adaptive and/or randomized) for estimating @MathNode@, we have the following lower bounds on the average-case error: 1. For Mat\u00e9rn kernel with @MathNode@, we have @MathEquation@",
-      "2. For any kernel such that @MathNode@ and @MathNode@ for some @MathNode@ (e.g., the SE or Mat\u00e9rn kernel with @MathNode@), we have: @MathEquation@",
+      [
+        "Then, for any algorithm (possibly adaptive and/or randomized) for estimating @MathNode@, we have the following lower bounds on the average-case error:",
+        [
+          "1. For Mat\u00e9rn kernel with @MathNode@, we have @MathEquation@",
+          "2. For any kernel such that @MathNode@ and @MathNode@ for some @MathNode@ (e.g., the SE or Mat\u00e9rn kernel with @MathNode@), we have: @MathEquation@"
+        ]
+      ],
       "Moreover, these lower bounds hold even under the fixed weight function @MathNode@."
     ]
   },
@@ -1518,11 +1564,15 @@
       "Let @MathNode@ be a surface such that: @MathNode@ or @MathNode@ with @MathNode@, if the surface is orientable, or",
       "@MathNode@ or @MathNode@ with @MathNode@ and @MathNode@ in the non-orientable case.",
       "Let @MathNode@ and @MathNode@ if @MathNode@ is orientable and @MathNode@ if @MathNode@ is non-orientable.",
-      "(a) (Polynomial Betti numbers growth).",
-      "If @MathNode@ is a field, then there are polynomials @MathNode@ of degree at most @MathNode@ such that @MathEquation@ if @MathNode@ (and for all @MathNode@ if the surface @MathNode@ has nonempty boundary).",
-      "(b) (Inductive description).",
-      "The natural map @MathEquation@ is surjective for @MathNode@ (for @MathNode@ if @MathNode@) and, for @MathNode@ (for @MathNode@ if @MathNode@), the kernel of this map is the image of the difference of the two natural maps2See Proposition @LtxRef@ and Remark @LtxRef@ for details.",
-      "@MathEquation@"
+      [
+        [
+          "(a) (Polynomial Betti numbers growth).",
+          "If @MathNode@ is a field, then there are polynomials @MathNode@ of degree at most @MathNode@ such that @MathEquation@ if @MathNode@ (and for all @MathNode@ if the surface @MathNode@ has nonempty boundary).",
+          "(b) (Inductive description).",
+          "The natural map @MathEquation@ is surjective for @MathNode@ (for @MathNode@ if @MathNode@) and, for @MathNode@ (for @MathNode@ if @MathNode@), the kernel of this map is the image of the difference of the two natural maps @MathEquation@"
+        ]
+      ],
+      "See Proposition @LtxRef@ and Remark @LtxRef@ for details."
     ]
   },
   {
@@ -1601,8 +1651,13 @@
     "paper": "https://ar5iv.org/abs/1705.10247",
     "identifier": "Theorem 3.3.",
     "sentences": [
-      "Let @MathNode@, @MathNode@, @MathNode@ for all @MathNode@, and @MathEquation@ (a) If @MathNode@ is left invertible on @MathNode@, then the operator @MathNode@ is invertible on the space @MathNode@, the operator @MathNode@ is a left inverse of @MathNode@, and @MathNode@.",
-      "(b) If @MathNode@ is right invertible on @MathNode@, then the operator @MathNode@ is invertible on the space @MathNode@, the operator @MathNode@ is a right inverse of @MathNode@, and @MathNode@."
+      "Let @MathNode@, @MathNode@, @MathNode@ for all @MathNode@, and @MathEquation@",
+      [
+        [
+          "(a) If @MathNode@ is left invertible on @MathNode@, then the operator @MathNode@ is invertible on the space @MathNode@, the operator @MathNode@ is a left inverse of @MathNode@, and @MathNode@.",
+          "(b) If @MathNode@ is right invertible on @MathNode@, then the operator @MathNode@ is invertible on the space @MathNode@, the operator @MathNode@ is a right inverse of @MathNode@, and @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -1823,11 +1878,15 @@
     "paper": "https://ar5iv.org/abs/1901.03274",
     "identifier": "Theorem 1 (Compute\u2013forward for the DM-MAC).",
     "sentences": [
-      "A rate tuple @MathNode@ is achievable for recovering the @MathNode@ linear combinations with coefficient matrix @MathNode@ if, for some pmf @MathNode@ and symbol mappings @MathNode@, @MathNode@, it is contained in @MathEquation@ where the set operations are over all tuples @MathNode@ satisfying the following constraints:",
-      "1. @MathNode@ runs over all full-rank matrices such that @MathNode@ and @MathNode@,",
-      "2. @MathNode@ runs over all full-rank matrices (including empty matrices) such that @MathNode@,",
-      "3. @MathNode@ runs over all index sets of size @MathNode@ satisfying @MathEquation@",
-      "4. @MathNode@ runs over all index sets of size @MathNode@ satisfying @MathEquation@"
+      [
+        "A rate tuple @MathNode@ is achievable for recovering the @MathNode@ linear combinations with coefficient matrix @MathNode@ if, for some pmf @MathNode@ and symbol mappings @MathNode@, @MathNode@, it is contained in @MathEquation@ where the set operations are over all tuples @MathNode@ satisfying the following constraints:",
+        [
+          "1. @MathNode@ runs over all full-rank matrices such that @MathNode@ and @MathNode@,",
+          "2. @MathNode@ runs over all full-rank matrices (including empty matrices) such that @MathNode@,",
+          "3. @MathNode@ runs over all index sets of size @MathNode@ satisfying @MathEquation@",
+          "4. @MathNode@ runs over all index sets of size @MathNode@ satisfying @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -2111,10 +2170,15 @@
     "paper": "https://ar5iv.org/abs/math/0406228",
     "identifier": "Theorem 5.0.1.",
     "sentences": [
-      "The determinants @MathNode@ of spherical Gram matrices for tetrahedra @MathNode@ satisfy the identities (a) (Asymptotic pentagon identity)",
-      "In the same situation as in (@LtxRef@) @MathEquation@",
-      "(b) (Asymptotic normalization identity)",
-      "In the same situation described as in (@LtxRef@) @MathEquation@ Here, @MathNode@ and @MathNode@ are the lengths of opposite edges and @MathNode@ is the determinant of the spherical Gram matrix associated with the tetrahedron with edge lengths @MathNode@."
+      [
+        "The determinants @MathNode@ of spherical Gram matrices for tetrahedra @MathNode@ satisfy the identities",
+        [
+          "(a) (Asymptotic pentagon identity)",
+          "In the same situation as in (@LtxRef@) @MathEquation@",
+          "(b) (Asymptotic normalization identity)",
+          "In the same situation described as in (@LtxRef@) @MathEquation@ Here, @MathNode@ and @MathNode@ are the lengths of opposite edges and @MathNode@ is the determinant of the spherical Gram matrix associated with the tetrahedron with edge lengths @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -2225,14 +2289,19 @@
     "identifier": "Theorem 4.6.",
     "sentences": [
       "Let @MathNode@ be an @MathNode@-module.",
-      "Then we have the following. (a) A submodule @MathNode@ of @MathNode@ satisfies the strong Property @MathNode@ if and only if @MathNode@ satisfies Property @MathNode@ and @MathNode@ is a submodule of @MathNode@.",
-      "(b) The zero submodule of @MathNode@ satisfies the strong Property @MathNode@.",
-      "(c) If a submodule @MathNode@ of @MathNode@ satisfies Property @MathNode@ (respectively, strong Property @MathNode@) and @MathNode@, then @MathNode@ satisfies Property @MathNode@ (respectively, strong Property @MathNode@).",
-      "(d) Let @MathNode@ be a chain of submodules of @MathNode@ with @MathNode@ for each @MathNode@.",
-      "Then @MathNode@ satisfies Property @MathNode@ (respectively, strong Property @MathNode@) if and only if each @MathNode@ satisfies Property @MathNode@ (respectively, strong Property @MathNode@).",
-      "(e) If for a submodule @MathNode@ of @MathNode@ we have @MathNode@, or more generally, @MathNode@, then @MathNode@ satisfies strong Property @MathNode@.",
-      "(f) If @MathNode@ is an irreducible ideal of @MathNode@ (e.g., @MathNode@ is an integral domain), then every submodule @MathNode@ of @MathNode@ satisfies strong Property @MathNode@.",
-      "(g) If a submodule @MathNode@ of @MathNode@ is a Bezout module (respectively, chained module), then @MathNode@ satisfies Property @MathNode@ (respectively, strong Property @MathNode@)."
+      "Then we have the following.",
+      [
+        [
+          "(a) A submodule @MathNode@ of @MathNode@ satisfies the strong Property @MathNode@ if and only if @MathNode@ satisfies Property @MathNode@ and @MathNode@ is a submodule of @MathNode@.",
+          "(b) The zero submodule of @MathNode@ satisfies the strong Property @MathNode@.",
+          "(c) If a submodule @MathNode@ of @MathNode@ satisfies Property @MathNode@ (respectively, strong Property @MathNode@) and @MathNode@, then @MathNode@ satisfies Property @MathNode@ (respectively, strong Property @MathNode@).",
+          "(d) Let @MathNode@ be a chain of submodules of @MathNode@ with @MathNode@ for each @MathNode@.",
+          "Then @MathNode@ satisfies Property @MathNode@ (respectively, strong Property @MathNode@) if and only if each @MathNode@ satisfies Property @MathNode@ (respectively, strong Property @MathNode@).",
+          "(e) If for a submodule @MathNode@ of @MathNode@ we have @MathNode@, or more generally, @MathNode@, then @MathNode@ satisfies strong Property @MathNode@.",
+          "(f) If @MathNode@ is an irreducible ideal of @MathNode@ (e.g., @MathNode@ is an integral domain), then every submodule @MathNode@ of @MathNode@ satisfies strong Property @MathNode@.",
+          "(g) If a submodule @MathNode@ of @MathNode@ is a Bezout module (respectively, chained module), then @MathNode@ satisfies Property @MathNode@ (respectively, strong Property @MathNode@)."
+        ]
+      ]
     ]
   },
   {
@@ -2251,10 +2320,14 @@
     "paper": "https://ar5iv.org/abs/1006.4009",
     "identifier": "Theorem 3.3.",
     "sentences": [
-      "(a) If @MathNode@ is a finitely generated subgroup of a binate group @MathNode@, then there are structure maps @MathNode@ for @MathNode@ such that, for any distinct @MathNode@, we have @MathNode@.",
-      "Thus, @MathNode@ contains an infinite product of copies of @MathNode@.",
-      "(b) Let @MathNode@ be finitely generated subgroups of a binate group @MathNode@ such that @MathNode@ is finitely generated.",
-      "Then there exists a structure map @MathNode@ for @MathNode@ such that @MathNode@; in other words, @MathNode@."
+      [
+        [
+          "(a) If @MathNode@ is a finitely generated subgroup of a binate group @MathNode@, then there are structure maps @MathNode@ for @MathNode@ such that, for any distinct @MathNode@, we have @MathNode@.",
+          "Thus, @MathNode@ contains an infinite product of copies of @MathNode@.",
+          "(b) Let @MathNode@ be finitely generated subgroups of a binate group @MathNode@ such that @MathNode@ is finitely generated.",
+          "Then there exists a structure map @MathNode@ for @MathNode@ such that @MathNode@; in other words, @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -2538,17 +2611,31 @@
     "identifier": "Theorem 11 (Stable Reduction Preserving Closure).",
     "sentences": [
       "Let @MathNode@ be a Petri net game, @MathNode@ a formula, and @MathNode@ a reduction of @MathNode@ such that for all @MathNode@ the following conditions hold.",
-      "(1) If @MathNode@ and @MathNode@ then @MathNode@.",
-      "(2) If @MathNode@ then @MathNode@.",
-      "(3) @MathNode@",
-      "(4) If @MathNode@ then @MathNode@.",
-      "(5) If @MathNode@ then @MathNode@.",
-      "(6) For all @MathNode@ if @MathNode@ then either (a) there exists @MathNode@ s.t. @MathNode@ and @MathNode@, or",
-      "(b) there exists @MathNode@ s.t. @MathNode@ and @MathNode@.",
-      "(7) For all @MathNode@ if @MathNode@ then (a) for all @MathNode@ we have @MathNode@, and",
-      "(b) for all @MathNode@ we have @MathNode@.",
-      "(8) If @MathNode@ then there exists @MathNode@ s.t. @MathNode@.",
-      "(9) If @MathNode@ and @MathNode@ then @MathNode@.",
+      [
+        [
+          "(1) If @MathNode@ and @MathNode@ then @MathNode@.",
+          "(2) If @MathNode@ then @MathNode@.",
+          "(3) @MathNode@",
+          "(4) If @MathNode@ then @MathNode@.",
+          "(5) If @MathNode@ then @MathNode@.",
+          [
+            "(6) For all @MathNode@ if @MathNode@ then either",
+            [
+              "(a) there exists @MathNode@ s.t. @MathNode@ and @MathNode@, or",
+              "(b) there exists @MathNode@ s.t. @MathNode@ and @MathNode@."
+            ]
+          ],
+          [
+            "(7) For all @MathNode@ if @MathNode@ then",
+            [
+              "(a) for all @MathNode@ we have @MathNode@, and",
+              "(b) for all @MathNode@ we have @MathNode@."
+            ]
+          ],
+          "(8) If @MathNode@ then there exists @MathNode@ s.t. @MathNode@.",
+          "(9) If @MathNode@ and @MathNode@ then @MathNode@."
+        ]
+      ],
       "Then @MathNode@ satisfies @LtxRef@, @LtxRef@, @LtxRef@, @LtxRef@, @LtxRef@, @LtxRef@, @LtxRef@ and @LtxRef@."
     ]
   },
@@ -2692,17 +2779,29 @@
     "sentences": [
       "Fix @MathNode@ and let @MathNode@.",
       "Suppose for any @MathNode@, there exists a ball @MathNode@ centered at @MathNode@ and a @MathNode@ mapping @MathNode@ that vanishes at @MathNode@ and has a symmetric Jacobian @MathNode@ that has at least one positive eigenvalue.",
-      "Suppose @MathNode@ is a stochastic process and for any @MathNode@, @MathNode@, and @MathNode@ define the stopping time: @MathEquation@ Suppose that for any @MathNode@, @MathNode@, and all sufficiently small @MathNode@ the following hold: there exists @MathNode@ possibly depending on @MathNode@, but not on @MathNode@ and @MathNode@, such that on the event @MathNode@, we have 1.",
-      "(Local iteration.)",
-      "There exists a process @MathNode@ satisfying @MathEquation@ for error sequence @MathNode@, noise sequence @MathNode@, and deterministic stepsize sequence @MathNode@ that are square summable, but not summable.",
-      "2. (Noise Conditions.)",
-      "Let @MathNode@ be the sigma algebra generated by @MathNode@ and @MathNode@.",
-      "Define @MathNode@ to be the subspace of eigenvectors of @MathNode@ with positive eigenvalues.",
-      "Then we have (a) @MathNode@.",
-      "(b) @MathNode@.",
-      "(c) @MathNode@",
-      "3. (Error Conditions.) (a) We have @MathNode@.",
-      "(b) For all @MathNode@, we have @MathNode@.",
+      [
+        "Suppose @MathNode@ is a stochastic process and for any @MathNode@, @MathNode@, and @MathNode@ define the stopping time: @MathEquation@ Suppose that for any @MathNode@, @MathNode@, and all sufficiently small @MathNode@ the following hold: there exists @MathNode@ possibly depending on @MathNode@, but not on @MathNode@ and @MathNode@, such that on the event @MathNode@, we have",
+        [
+          "1. (Local iteration.) There exists a process @MathNode@ satisfying @MathEquation@ for error sequence @MathNode@, noise sequence @MathNode@, and deterministic stepsize sequence @MathNode@ that are square summable, but not summable.",
+          "2. (Noise Conditions.) Let @MathNode@ be the sigma algebra generated by @MathNode@ and @MathNode@.",
+          "Define @MathNode@ to be the subspace of eigenvectors of @MathNode@ with positive eigenvalues.",
+          [
+            "Then we have",
+            [
+              "(a) @MathNode@.",
+              "(b) @MathNode@.",
+              "(c) @MathNode@"
+            ]
+          ],
+          [
+            "3. (Error Conditions.)",
+            [
+              "(a) We have @MathNode@.",
+              "(b) For all @MathNode@, we have @MathNode@."
+            ]
+          ]
+        ]
+      ],
       "Then @MathNode@."
     ]
   },
@@ -2885,8 +2984,13 @@
     "identifier": "Theorem 3.2.",
     "sentences": [
       "Let @MathNode@ be a tall ideal on @MathNode@.",
-      "The following are equivalent for any set @MathNode@: (a) @MathNode@;",
-      "(b) for any sequence of real-valued functions defined on @MathNode@, if it @MathNode@QN-converges to some @MathNode@, then one can find its subsequence QN-converging to @MathNode@."
+      [
+        "The following are equivalent for any set @MathNode@:",
+        [
+          "(a) @MathNode@;",
+          "(b) for any sequence of real-valued functions defined on @MathNode@, if it @MathNode@QN-converges to some @MathNode@, then one can find its subsequence QN-converging to @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -2938,9 +3042,14 @@
       "Here @MathNode@ and @MathNode@ are the positively oriented volume forms of @MathNode@ and @MathNode@, respectively.",
       "(II) All other possible cases.",
       "In this category, for @MathNode@ each map @MathNode@ is strictly area decreasing.",
-      "Moreover, depending on the sign of @MathNode@ we have the following behavior: (a) If @MathNode@, then @MathNode@ is the graph of a constant map.",
-      "(b) If @MathNode@, then @MathNode@ is a totally geodesic graph of @MathNode@.",
-      "(c) If @MathNode@, then @MathNode@ is a minimal surface of @MathNode@."
+      [
+        "Moreover, depending on the sign of @MathNode@ we have the following behavior:",
+        [
+          "(a) If @MathNode@, then @MathNode@ is the graph of a constant map.",
+          "(b) If @MathNode@, then @MathNode@ is a totally geodesic graph of @MathNode@.",
+          "(c) If @MathNode@, then @MathNode@ is a minimal surface of @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -3004,11 +3113,16 @@
     "identifier": "Theorem 5.2.",
     "sentences": [
       "Let @MathNode@ be the standard Gaussian cylindrical measure on a separable Hilbert space @MathNode@ with orthonormal basis @MathNode@ and let @MathNode@ be a sequence of independent standard real normal random variables.",
-      "For @MathNode@ the following are equivalent: (a) @MathNode@ is @MathNode@-radonifying;",
-      "(b) the operator @MathNode@ is the covariance operator of a Gaussian measure @MathNode@ on @MathNode@;",
-      "(c) the series @MathNode@ converges a.s. in @MathNode@.",
-      "(d) the series @MathNode@ converges in @MathNode@ for some @MathNode@.",
-      "(e) the series @MathNode@ converges in @MathNode@ for all @MathNode@.",
+      [
+        "For @MathNode@ the following are equivalent:",
+        [
+          "(a) @MathNode@ is @MathNode@-radonifying;",
+          "(b) the operator @MathNode@ is the covariance operator of a Gaussian measure @MathNode@ on @MathNode@;",
+          "(c) the series @MathNode@ converges a.s. in @MathNode@.",
+          "(d) the series @MathNode@ converges in @MathNode@ for some @MathNode@.",
+          "(e) the series @MathNode@ converges in @MathNode@ for all @MathNode@."
+        ]
+      ],
       "In this situation we have for every @MathNode@: @MathGroup@"
     ]
   },
@@ -3600,9 +3714,14 @@
     "identifier": "Theorem A.1.",
     "sentences": [
       "Consider an additive functional @MathNode@ [as at (@LtxRef@)] with toll @MathNode@, with initial conditions @MathNode@.",
-      "Then the following statements are equivalent: (a) @MathNode@ is degenerate for every @MathNode@.",
-      "(b) The toll satisfies @MathEquation@",
-      "(c) @MathNode@ for every @MathNode@.",
+      [
+        "Then the following statements are equivalent:",
+        [
+          "(a) @MathNode@ is degenerate for every @MathNode@.",
+          "(b) The toll satisfies @MathEquation@",
+          "(c) @MathNode@ for every @MathNode@."
+        ]
+      ],
       "Moreover, if (@LtxRef@) does not hold then @MathNode@ as @MathNode@."
     ]
   },
@@ -3826,9 +3945,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1307.3752",
-    "identifier": null,
+    "identifier": "1.13 Theorem (@LtxCite@).",
     "sentences": [
-      "1.13 Theorem (@LtxCite@).",
       "Let @MathNode@, where @MathNode@ is algebraically closed and of characteristic @MathNode@.",
       "For @MathNode@, the following are equivalent: (1) @MathNode@ is a line in @MathNode@, for all @MathNode@;",
       "(2) @MathNode@ is a line in @MathNode@, for almost all @MathNode@;",
@@ -4141,8 +4259,13 @@
     "identifier": "Theorem 2 (Ghidaglia-Saut @LtxCite@).",
     "sentences": [
       "If @MathNode@, the corresponding solution @MathNode@ to @MathNode@ satisfies @MathNode@.",
-      "Furthermore (a) @MathNode@ is maximal in the sense that if @MathNode@, then @MathNode@.",
-      "(b) The mass and energy of the solution are conserved, that is @MathGroup@ for all @MathNode@, where @MathGroup@"
+      [
+        "Furthermore",
+        [
+          "(a) @MathNode@ is maximal in the sense that if @MathNode@, then @MathNode@.",
+          "(b) The mass and energy of the solution are conserved, that is @MathGroup@ for all @MathNode@, where @MathGroup@"
+        ]
+      ]
     ]
   },
   {
@@ -4227,14 +4350,19 @@
     "paper": "https://ar5iv.org/abs/1101.2660",
     "identifier": "Theorem 1.4.",
     "sentences": [
-      "With the above notation and assumptions a) If @MathNode@ then there is perfect tunneling between @MathNode@ and @MathNode@, but no tunneling to and from @MathNode@.",
-      "The tunneling time is @MathNode@.",
-      "b) If @MathNode@ and the particle is started from @MathNode@ then it never tunnels perfectly to a single other state, but it does tunnel to a mixed state of @MathNode@ and @MathNode@.",
-      "This happens on the scale of @MathNode@.",
-      "c) If @MathNode@ and the particle is started from @MathNode@, then it tunnels completely to @MathNode@ if and only if @MathNode@.",
-      "The tunneling time is @MathNode@.",
-      "Note that in particular, unlike in the first case, the particle can tunnel from @MathNode@ to @MathNode@ despite the fact that @MathNode@.",
-      "Comparing to the double-well case, note that the speed of tunneling between @MathNode@ and @MathNode@ increased substantially after introducing the third well at @MathNode@."
+      [
+        "With the above notation and assumptions",
+        [
+          "a) If @MathNode@ then there is perfect tunneling between @MathNode@ and @MathNode@, but no tunneling to and from @MathNode@.",
+          "The tunneling time is @MathNode@.",
+          "b) If @MathNode@ and the particle is started from @MathNode@ then it never tunnels perfectly to a single other state, but it does tunnel to a mixed state of @MathNode@ and @MathNode@.",
+          "This happens on the scale of @MathNode@.",
+          "c) If @MathNode@ and the particle is started from @MathNode@, then it tunnels completely to @MathNode@ if and only if @MathNode@.",
+          "The tunneling time is @MathNode@.",
+          "Note that in particular, unlike in the first case, the particle can tunnel from @MathNode@ to @MathNode@ despite the fact that @MathNode@.",
+          "Comparing to the double-well case, note that the speed of tunneling between @MathNode@ and @MathNode@ increased substantially after introducing the third well at @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -4243,9 +4371,13 @@
     "sentences": [
       "Let @MathNode@ and @MathNode@.",
       "Let @MathNode@, where @MathNode@, @MathNode@ are @MathNode@ distinct points in @MathNode@ and @MathNode@ are real numbers different from zero.",
-      "Then the following holds:",
-      "a) The real number @MathNode@ is an eigenvalue of @MathNode@ if and only if @MathEquation@",
-      "b) For every eigenvalue @MathNode@ the corresponding eigenfunctions have the following form @MathEquation@"
+      [
+        "Then the following holds:",
+        [
+          "a) The real number @MathNode@ is an eigenvalue of @MathNode@ if and only if @MathEquation@",
+          "b) For every eigenvalue @MathNode@ the corresponding eigenfunctions have the following form @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -4346,9 +4478,13 @@
     "paper": "https://ar5iv.org/abs/1801.10519",
     "identifier": "Theorem 9.1 (@LtxCite@).",
     "sentences": [
-      "1. Let @MathNode@.",
-      "Then, @MathNode@ iff @MathNode@.",
-      "2. For all terms @MathNode@ and @MathNode@ in @MathNode@, @MathNode@ iff @MathNode@."
+      [
+        [
+          "1. Let @MathNode@.",
+          "Then, @MathNode@ iff @MathNode@.",
+          "2. For all terms @MathNode@ and @MathNode@ in @MathNode@, @MathNode@ iff @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -4376,12 +4512,17 @@
     "paper": "https://ar5iv.org/abs/2204.04482",
     "identifier": "Theorem 3.3.",
     "sentences": [
-      "Let @MathNode@ be a compact qc manifold of dimension @MathNode@. a) Suppose the positivity condition (@LtxRef@) holds.",
-      "Then we have @MathEquation@",
-      "If the equality holds then @MathEquation@",
-      "b) Suppose the positivity condition (@LtxRef@) holds.",
-      "Then we have @MathEquation@",
-      "If the equality holds then @MathEquation@"
+      "Let @MathNode@ be a compact qc manifold of dimension @MathNode@.",
+      [
+        [
+          "a) Suppose the positivity condition (@LtxRef@) holds.",
+          "Then we have @MathEquation@",
+          "If the equality holds then @MathEquation@",
+          "b) Suppose the positivity condition (@LtxRef@) holds.",
+          "Then we have @MathEquation@",
+          "If the equality holds then @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -4933,9 +5074,13 @@
     "identifier": "Theorem 6 (Dendrinos and Wright @LtxCite@).",
     "sentences": [
       "Let @MathNode@ be a polynomial curve of degree @MathNode@ such that @MathNode@.",
-      "There exists an integer @MathNode@ and a decomposition @MathNode@ where the @MathNode@ are pairwise disjoint open intervals with the following properties:",
-      "1) Whenever @MathNode@ the geometric inequality @MathEquation@ holds.",
-      "2) For every @MathNode@ there exists a positive constant @MathNode@, a non-negative integer @MathNode@ and a real number @MathNode@ such that @MathEquation@"
+      [
+        "There exists an integer @MathNode@ and a decomposition @MathNode@ where the @MathNode@ are pairwise disjoint open intervals with the following properties:",
+        [
+          "1) Whenever @MathNode@ the geometric inequality @MathEquation@ holds.",
+          "2) For every @MathNode@ there exists a positive constant @MathNode@, a non-negative integer @MathNode@ and a real number @MathNode@ such that @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -5175,10 +5320,14 @@
     "identifier": "Theorem 1.1",
     "sentences": [
       "If @MathNode@ and @MathNode@ then @MathEquation@ @MathEquation@ and @MathEquation@",
-      "Moreover, any sequence @MathNode@ with @MathNode@ admits a subsequence that converges in @MathNode@ to a nonnegative function @MathNode@ such that:",
-      "(a) @MathNode@",
-      "(b) @MathNode@ and",
-      "(c) for almost every @MathNode@ the @MathNode@-superlevel set @MathEquation@ is a Cheeger set."
+      [
+        "Moreover, any sequence @MathNode@ with @MathNode@ admits a subsequence that converges in @MathNode@ to a nonnegative function @MathNode@ such that:",
+        [
+          "(a) @MathNode@",
+          "(b) @MathNode@ and",
+          "(c) for almost every @MathNode@ the @MathNode@-superlevel set @MathEquation@ is a Cheeger set."
+        ]
+      ]
     ]
   },
   {
@@ -5274,9 +5423,13 @@
     "sentences": [
       "Denote the Newton polyhedron of the entry @MathNode@ of a holomorphic matrix @MathNode@ by @MathNode@.",
       "Suppose that the differences @MathNode@ are bounded, and @MathNode@.",
-      "1) If the leading coefficients of @MathNode@ are in strong general position, then the determinantal set @MathNode@ is smooth outside the origin.",
-      "2) If the Newton polyhedron @MathNode@ of a germ @MathNode@ intersects all coordinate axes, and the leading coefficients of @MathNode@ are in general position w.r.t. @MathNode@, then the Euler characteristic of a Milnor fiber of @MathNode@ equals @MathEquation@ @MathEquation@",
-      "3) If the Newton polyhedron @MathNode@ of a germ of a 1-form @MathNode@ on @MathNode@ intersects all coordinate axes, and the leading coefficients of @MathNode@ are in general position w.r.t. @MathNode@, then the radial index of @MathNode@ makes sense and equals @MathNode@."
+      [
+        [
+          "1) If the leading coefficients of @MathNode@ are in strong general position, then the determinantal set @MathNode@ is smooth outside the origin.",
+          "2) If the Newton polyhedron @MathNode@ of a germ @MathNode@ intersects all coordinate axes, and the leading coefficients of @MathNode@ are in general position w.r.t. @MathNode@, then the Euler characteristic of a Milnor fiber of @MathNode@ equals @MathEquation@ @MathEquation@",
+          "3) If the Newton polyhedron @MathNode@ of a germ of a 1-form @MathNode@ on @MathNode@ intersects all coordinate axes, and the leading coefficients of @MathNode@ are in general position w.r.t. @MathNode@, then the radial index of @MathNode@ makes sense and equals @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -5331,11 +5484,16 @@
     "paper": "https://ar5iv.org/abs/2107.04679",
     "identifier": "Theorem 3.5",
     "sentences": [
-      "For a 1-convex game @MathNode@, the @MathNode@-value @MathNode@ satisfies: 1. (individual rationality) @MathNode@,",
-      "2. (efficiency) @MathNode@,",
-      "3. (symmetry) for each permutation @MathNode@, we have @MathNode@,",
-      "4. (dummy player) @MathNode@,",
-      "5. (S-equivalence property) @MathNode@."
+      [
+        "For a 1-convex game @MathNode@, the @MathNode@-value @MathNode@ satisfies:",
+        [
+          "1. (individual rationality) @MathNode@,",
+          "2. (efficiency) @MathNode@,",
+          "3. (symmetry) for each permutation @MathNode@, we have @MathNode@,",
+          "4. (dummy player) @MathNode@,",
+          "5. (S-equivalence property) @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -5478,11 +5636,19 @@
     "sentences": [
       "Let @MathNode@ be an integer and @MathNode@ be an algebraically closed field.",
       "Suppose that one of the following conditions holds.",
-      "(a) @MathNode@.",
-      "(b) @MathNode@ is a prime, @MathNode@ is an odd prime that is a primitive root modulo @MathNode@.",
+      [
+        [
+          "(a) @MathNode@.",
+          "(b) @MathNode@ is a prime, @MathNode@ is an odd prime that is a primitive root modulo @MathNode@."
+        ]
+      ],
       "There exists a finite (may be empty) set @MathNode@ of marked genus @MathNode@ hyperelliptic curves over @MathNode@ that enjoys the following properties.",
-      "(1) @MathNode@.",
-      "(2) If @MathNode@ is a marked genus @MathNode@ hyperelliptic curve over @MathNode@ such that @MathNode@, then @MathNode@ is isomorphic to one of the marked curves in @MathNode@."
+      [
+        [
+          "(1) @MathNode@.",
+          "(2) If @MathNode@ is a marked genus @MathNode@ hyperelliptic curve over @MathNode@ such that @MathNode@, then @MathNode@ is isomorphic to one of the marked curves in @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -5503,12 +5669,20 @@
       "System (@LtxRef@)-(@LtxRef@) written in @MathNode@-variables has the form @MathGroup@ where @MathNode@ is a continuous vector-function and @MathNode@ is a new dispersion matrix.",
       "The latter has the size @MathNode@ and consists of two blocks, @MathNode@ so that @MathNode@",
       "The blocks have the form @MathNode@, where @MathNode@, @MathNode@.",
-      "Moreover, for any @MathNode@ and @MathNode@ we have",
-      "1. @MathNode@.",
-      "2.a. @MathNode@ depends only on @MathNode@ such that @MathNode@, and @MathNode@",
-      "b. For any @MathNode@ we have @MathNode@",
-      "3. The functions @MathNode@, defined as in (@LtxRef@), satisfy @MathNode@ for all @MathNode@.",
-      "4. We have @MathNode@ and @MathNode@."
+      [
+        "Moreover, for any @MathNode@ and @MathNode@ we have",
+        [
+          "1. @MathNode@.",
+          [
+            [
+              "2.a. @MathNode@ depends only on @MathNode@ such that @MathNode@, and @MathNode@",
+              "b. For any @MathNode@ we have @MathNode@"
+            ]
+          ],
+          "3. The functions @MathNode@, defined as in (@LtxRef@), satisfy @MathNode@ for all @MathNode@.",
+          "4. We have @MathNode@ and @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -5580,10 +5754,15 @@
     "paper": "https://ar5iv.org/abs/1902.08765",
     "identifier": "Theorem 6",
     "sentences": [
-      "Assume that 1. @MathNode@ incrementally checks @MathNode@ and is preserved by injective functions,",
-      "2. @MathNode@ holds and @MathNode@,",
-      "3. @MathNode@ is a list such that @MathNode@, @MathNode@ contain lists (that all have the same length @MathNode@), and @MathNode@,",
-      "4. @MathNode@ contains all permutations of @MathNode@, @MathNode@.",
+      [
+        "Assume that",
+        [
+          "1. @MathNode@ incrementally checks @MathNode@ and is preserved by injective functions,",
+          "2. @MathNode@ holds and @MathNode@,",
+          "3. @MathNode@ is a list such that @MathNode@, @MathNode@ contain lists (that all have the same length @MathNode@), and @MathNode@,",
+          "4. @MathNode@ contains all permutations of @MathNode@, @MathNode@."
+        ]
+      ],
       "Let @MathNode@.",
       "Then, for all @MathNode@, there exists an @MathNode@ such that @MathNode@ is an iso-base of @MathNode@."
     ]
@@ -6148,9 +6327,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2110.15656",
-    "identifier": "Theorem 2.2.",
+    "identifier": "Theorem 2.2. (fractional integration by parts formula)",
     "sentences": [
-      "(fractional integration by parts formula)",
       "Given @MathNode@ and @MathNode@, we have that for all @MathNode@, @MathEquation@ and @MathEquation@",
       "Then, @MathEquation@"
     ]
@@ -6180,9 +6358,13 @@
     "identifier": "Theorem 3.3.",
     "sentences": [
       "Suppose that the spatio-temporal process is observed at locations @MathNode@ for times @MathNode@.",
-      "Then the following hold true: (a) The joint distribution of the observed variables is a Gaussian mixture and has the following density",
-      "@MathNode@",
-      "@MathNode@ where the mixing density @MathNode@ is obtained by marginalizing the pdf derived at Theorem @LtxRef@ with respect to the variables @MathNode@ and the @MathNode@ th entry of @MathNode@ is given by @MathNode@ where @MathNode@ and @MathNode@. (b) In the extreme case, when the process variance @MathNode@ (@MathNode@) and @MathNode@ (@MathNode@) of each of the Gaussian random function @MathNode@ and @MathNode@ are 0, the joint distribution turns into Gaussian."
+      [
+        "Then the following hold true:",
+        [
+          "(a) The joint distribution of the observed variables is a Gaussian mixture and has the following density @MathNode@ where the mixing density @MathNode@ is obtained by marginalizing the pdf derived at Theorem @LtxRef@ with respect to the variables @MathNode@ and the @MathNode@ th entry of @MathNode@ is given by @MathNode@ where @MathNode@ and @MathNode@.",
+          "(b) In the extreme case, when the process variance @MathNode@ (@MathNode@) and @MathNode@ (@MathNode@) of each of the Gaussian random function @MathNode@ and @MathNode@ are 0, the joint distribution turns into Gaussian."
+        ]
+      ]
     ]
   },
   {
@@ -6198,13 +6380,28 @@
     "identifier": "Theorem 7.1.",
     "sentences": [
       "Let @MathNode@ and @MathNode@ be a constant of value @MathNode@",
-      "We can construct an evolution tree @MathNode@ with root @MathNode@ such that any node @MathNode@ of @MathNode@ at depth @MathNode@ is associated with a feasible solution @MathNode@ that satisfies the following invariants: 1 For variable @MathNode@ @MathNode@, @MathNode@ and @MathNode@",
-      "2 (a) For variable @MathNode@, @MathNode@ @MathNode@",
-      "(b) For variable @MathNode@, @MathNode@ and @MathNode@, @MathNode@.",
-      "(c) For variable @MathNode@, @MathNode@ and @MathNode@, @MathNode@.",
-      "3 For @MathNode@, @MathNode@.",
-      "4 For @MathNode@, (a) if @MathNode@,@MathNode@.",
-      "(b) if @MathNode@,@MathNode@."
+      [
+        "We can construct an evolution tree @MathNode@ with root @MathNode@ such that any node @MathNode@ of @MathNode@ at depth @MathNode@ is associated with a feasible solution @MathNode@ that satisfies the following invariants:",
+        [
+          "1 For variable @MathNode@ @MathNode@, @MathNode@ and @MathNode@",
+          [
+            "2",
+            [
+              "(a) For variable @MathNode@, @MathNode@ @MathNode@",
+              "(b) For variable @MathNode@, @MathNode@ and @MathNode@, @MathNode@.",
+              "(c) For variable @MathNode@, @MathNode@ and @MathNode@, @MathNode@."
+            ]
+          ],
+          "3 For @MathNode@, @MathNode@.",
+          [
+            "4 For @MathNode@,",
+            [
+              "(a) if @MathNode@,@MathNode@.",
+              "(b) if @MathNode@,@MathNode@."
+            ]
+          ]
+        ]
+      ]
     ]
   },
   {
@@ -6464,8 +6661,13 @@
     "paper": "https://ar5iv.org/abs/2205.14487",
     "identifier": "Theorem 1.",
     "sentences": [
-      "Consider the @MathNode@-factor model with @MathNode@ with matrix representation (@LtxRef@). (a) If @MathNode@ does not have full column rank, then the latent variables in @MathNode@ are not identifiable.",
-      "(b) For the Gaussian bi-factor model as a special case of @MathNode@-factor with @MathNode@, if @MathNode@ does not have full column rank, then the Gaussian bi-factor model can be rewritten as an oblique factor model with fewer parameters."
+      "Consider the @MathNode@-factor model with @MathNode@ with matrix representation (@LtxRef@).",
+      [
+        [
+          "(a) If @MathNode@ does not have full column rank, then the latent variables in @MathNode@ are not identifiable.",
+          "(b) For the Gaussian bi-factor model as a special case of @MathNode@-factor with @MathNode@, if @MathNode@ does not have full column rank, then the Gaussian bi-factor model can be rewritten as an oblique factor model with fewer parameters."
+        ]
+      ]
     ]
   },
   {
@@ -6585,8 +6787,13 @@
     "sentences": [
       "Let @MathNode@ be a Cartan geometry modeled on @MathNode@ with @MathNode@ compact.",
       "Let @MathNode@ be a Lie subgroup of @MathNode@.",
-      "Then 1. @MathNode@.",
-      "2. @MathNode@; in particular, if @MathNode@ is connected, then @MathEquation@"
+      [
+        "Then",
+        [
+          "1. @MathNode@.",
+          "2. @MathNode@; in particular, if @MathNode@ is connected, then @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -6832,8 +7039,13 @@
     "identifier": "Theorem 1.3.",
     "sentences": [
       "Suppose the assumptions of Proposition @LtxRef@.",
-      "Then, 1. @MathNode@.",
-      "2. If, moreover, the population is @MathNode@ and @MathNode@, then @MathGroup@ where @MathGroup@"
+      [
+        "Then,",
+        [
+          "1. @MathNode@.",
+          "2. If, moreover, the population is @MathNode@ and @MathNode@, then @MathGroup@ where @MathGroup@"
+        ]
+      ]
     ]
   },
   {
@@ -6984,11 +7196,16 @@
     "identifier": "Theorem 9.10.",
     "sentences": [
       "Let @MathNode@ be a cellset.",
-      "The following are equivalent: (a) @MathNode@ is closed and connected.",
-      "(b) @MathNode@ is connected, and for every @MathNode@, if one minimal path between @MathNode@ and @MathNode@ is in @MathNode@, then every minimal path between @MathNode@ and @MathNode@ is in @MathNode@.",
-      "(c) If @MathNode@, then every minimal path from @MathNode@ to @MathNode@ is in @MathNode@.",
-      "(d) If @MathNode@ are adjacent cells separated by geodesic @MathNode@, and @MathNode@ but @MathNode@, then every cell in @MathNode@ is on the same side of @MathNode@ as @MathNode@.",
-      "(e) @MathNode@ is convex"
+      [
+        "The following are equivalent:",
+        [
+          "(a) @MathNode@ is closed and connected.",
+          "(b) @MathNode@ is connected, and for every @MathNode@, if one minimal path between @MathNode@ and @MathNode@ is in @MathNode@, then every minimal path between @MathNode@ and @MathNode@ is in @MathNode@.",
+          "(c) If @MathNode@, then every minimal path from @MathNode@ to @MathNode@ is in @MathNode@.",
+          "(d) If @MathNode@ are adjacent cells separated by geodesic @MathNode@, and @MathNode@ but @MathNode@, then every cell in @MathNode@ is on the same side of @MathNode@ as @MathNode@.",
+          "(e) @MathNode@ is convex"
+        ]
+      ]
     ]
   },
   {
@@ -7200,9 +7417,13 @@
     "paper": "https://ar5iv.org/abs/math/0512010",
     "identifier": "Theorem 4.4 (McDiarmid)",
     "sentences": [
-      "Let @MathNode@ be a set of directed bipartite graphs with @MathNode@ vertices in each side that satisfies the following two conditions:",
-      "1. @MathNode@ is an anti-chain, i.e., for any @MathNode@, @MathNode@ and @MathNode@.",
-      "2. None of the graphs in @MathNode@ contains opposing edges, i.e. @MathNode@ and @MathNode@.",
+      [
+        "Let @MathNode@ be a set of directed bipartite graphs with @MathNode@ vertices in each side that satisfies the following two conditions:",
+        [
+          "1. @MathNode@ is an anti-chain, i.e., for any @MathNode@, @MathNode@ and @MathNode@.",
+          "2. None of the graphs in @MathNode@ contains opposing edges, i.e. @MathNode@ and @MathNode@."
+        ]
+      ],
       "Then, @MathEquation@"
     ]
   },
@@ -7588,8 +7809,12 @@
     "identifier": "Theorem 3.10.",
     "sentences": [
       "Under Assumption @LtxRef@, the McKean type SDE (@LtxRef@) admits the following properties.",
-      "1. Strong existence and pathwise uniqueness;",
-      "2. existence and uniqueness in law."
+      [
+        [
+          "1. Strong existence and pathwise uniqueness;",
+          "2. existence and uniqueness in law."
+        ]
+      ]
     ]
   },
   {
@@ -7703,8 +7928,12 @@
     "identifier": "Theorem 4.4",
     "sentences": [
       "Assume one of the following.",
-      "1. @LtxRef@ holds, and @MathNode@ for some @MathNode@.",
-      "2. @LtxRef@ holds, and @MathNode@ satisfy @MathEquation@",
+      [
+        [
+          "1. @LtxRef@ holds, and @MathNode@ for some @MathNode@.",
+          "2. @LtxRef@ holds, and @MathNode@ satisfy @MathEquation@"
+        ]
+      ],
       "In addition, suppose that @MathNode@, @MathNode@, are closed subsets of @MathNode@, and that there exists @MathNode@ such that @MathNode@ for all @MathNode@, where we use the usual notation @MathNode@.",
       "Then the following constrained minimization problem admits an optimal control in @MathNode@ @MathEquation@"
     ]
@@ -8011,16 +8240,20 @@
     "sentences": [
       "For @MathNode@, let @MathNode@ be a discretized multi-particle real-space Hamiltonian with @MathNode@ a diagonal matrix whose diagonal elements are specified by the potential function @MathNode@.",
       "Suppose that @MathNode@ is a positive, continuously differentiable function, @MathNode@-Lipschitz in terms of @MathNode@, and can be computed with @MathNode@ bits of precision.",
-      "Then @MathNode@ can be simulated for time @MathNode@ with accuracy @MathNode@ with the following cost: 1. Queries to @MathNode@, @MathNode@, @MathNode@: @MathNode@ where @MathNode@ is defined in (@LtxRef@) and the oracles are defined in @LtxRef@;",
-      "2. One- and two-qubit gates: @MathNode@;",
-      "where @MathNode@ as defined in (@LtxRef@)."
+      [
+        "Then @MathNode@ can be simulated for time @MathNode@ with accuracy @MathNode@ with the following cost:",
+        [
+          "1. Queries to @MathNode@, @MathNode@, @MathNode@: @MathNode@ where @MathNode@ is defined in (@LtxRef@) and the oracles are defined in @LtxRef@;",
+          "2. One- and two-qubit gates: @MathNode@;"
+        ],
+        "where @MathNode@ as defined in (@LtxRef@)."
+      ]
     ]
   },
   {
     "paper": "https://ar5iv.org/abs/0711.3871",
-    "identifier": null,
+    "identifier": "1.10",
     "sentences": [
-      "1.10",
       "Suppose that @MathNode@ is a claw-free graph and @MathNode@ is either 2-connected or connected with exactly two end-blocks.",
       "Then @MathNode@."
     ]
@@ -8253,8 +8486,13 @@
     "sentences": [
       "Let @MathNode@ be a group of F-type.",
       "Suppose that @MathNode@ involves all the generators.",
-      "Then 1. Any subset of @MathNode@-many of the given generators generates a free product of cyclics of the obvious orders.",
-      "2. If both @MathNode@ and @MathNode@ are proper powers in the respective factors @MathNode@ and @MathNode@, then any subset of @MathNode@-many of the given generators generates a free product of cyclics of the obvious orders."
+      [
+        "Then",
+        [
+          "1. Any subset of @MathNode@-many of the given generators generates a free product of cyclics of the obvious orders.",
+          "2. If both @MathNode@ and @MathNode@ are proper powers in the respective factors @MathNode@ and @MathNode@, then any subset of @MathNode@-many of the given generators generates a free product of cyclics of the obvious orders."
+        ]
+      ]
     ]
   },
   {
@@ -8278,8 +8516,12 @@
     "sentences": [
       "Let @MathNode@ be an irreducible representation of @MathNode@ with cuspidal support @MathNode@.",
       "Let @MathNode@ belong to @MathNode@, and denote @MathNode@ and @MathNode@ by @MathNode@ and @MathNode@ respectively.",
-      "a) If @MathNode@ then @MathEquation@",
-      "b) When @MathNode@ there exists a sequence @MathNode@, with @MathNode@, such that @MathNode@ and @MathEquation@"
+      [
+        [
+          "a) If @MathNode@ then @MathEquation@",
+          "b) When @MathNode@ there exists a sequence @MathNode@, with @MathNode@, such that @MathNode@ and @MathEquation@"
+        ]
+      ]
     ]
   },
   {
@@ -8490,8 +8732,12 @@
     "identifier": "Theorem 43.",
     "sentences": [
       "A list of bids @MathNode@ is valid if and only if the following two conditions hold.",
-      "1. For every set @MathNode@ of negative bids that agree on the @MathNode@-th coordinate, that is @MathNode@, the region @MathNode@ is non-negative.",
-      "2. For every set @MathNode@ of negative bids that satisfies @MathNode@ for all @MathNode@ and some @MathNode@, the region @MathNode@ is non-negative."
+      [
+        [
+          "1. For every set @MathNode@ of negative bids that agree on the @MathNode@-th coordinate, that is @MathNode@, the region @MathNode@ is non-negative.",
+          "2. For every set @MathNode@ of negative bids that satisfies @MathNode@ for all @MathNode@ and some @MathNode@, the region @MathNode@ is non-negative."
+        ]
+      ]
     ]
   },
   {
@@ -8575,8 +8821,13 @@
     "paper": "https://ar5iv.org/abs/2304.09705",
     "identifier": "Theorem 7 (Karamata\u2019s Tauberian Theorem, Theorem 8.1.6 in @LtxCite@)",
     "sentences": [
-      "The following statements are equivalent: 1. @MathNode@ is regularly varying with noninteger index @MathNode@ and slowly varying function @MathNode@, i.e. @MathEquation@",
-      "2. For a noninteger index @MathNode@, @MathEquation@ for @MathNode@ a slowly varying function, where @MathNode@"
+      [
+        "The following statements are equivalent:",
+        [
+          "1. @MathNode@ is regularly varying with noninteger index @MathNode@ and slowly varying function @MathNode@, i.e. @MathEquation@",
+          "2. For a noninteger index @MathNode@, @MathEquation@ for @MathNode@ a slowly varying function, where @MathNode@"
+        ]
+      ]
     ]
   },
   {
@@ -9115,8 +9366,13 @@
     "identifier": "Theorem 4",
     "sentences": [
       "Let @MathNode@ be a full rank matrix of size @MathNode@ such that the first non-zero entry in each column is positive.",
-      "Then @MathNode@ defines a term ordering in the following sense: 1. For every vector @MathNode@ with @MathNode@ then @MathNode@ and",
-      "2. For any pair of vectors @MathNode@ such that @MathNode@ then @MathNode@."
+      [
+        "Then @MathNode@ defines a term ordering in the following sense:",
+        [
+          "1. For every vector @MathNode@ with @MathNode@ then @MathNode@ and",
+          "2. For any pair of vectors @MathNode@ such that @MathNode@ then @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -9229,9 +9485,14 @@
     "identifier": "Theorem 3.5.",
     "sentences": [
       "Suppose that in the measure space @MathNode@, @MathNode@ is a nonsingular surjective measurable transformation such that if @MathNode@ then also @MathNode@, where @MathNode@.",
-      "Then ascent of @MathNode@ on Orlicz space @MathNode@ is infinite if and only if there exists a sequence of subsets @MathNode@ of @MathNode@ such that for all @MathNode@ 1. @MathNode@",
-      "2. @MathNode@ but @MathNode@",
-      "3. @MathNode@ and @MathNode@."
+      [
+        "Then ascent of @MathNode@ on Orlicz space @MathNode@ is infinite if and only if there exists a sequence of subsets @MathNode@ of @MathNode@ such that for all @MathNode@",
+        [
+          "1. @MathNode@",
+          "2. @MathNode@ but @MathNode@",
+          "3. @MathNode@ and @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -9292,8 +9553,12 @@
     "identifier": "Theorem 3.13 (@LtxCite@).",
     "sentences": [
       "Suppose @MathNode@ is a triangulated finite type surface and @MathNode@ is a non-zero complex number.",
-      "(a) If @MathNode@ are non-zero elements in @MathNode@, then @MathEquation@",
-      "(b) If @MathNode@ then there is @MathNode@ such that @MathNode@, where and @MathNode@ is the simple diagram whose edge-coloring is @MathNode@."
+      [
+        [
+          "(a) If @MathNode@ are non-zero elements in @MathNode@, then @MathEquation@",
+          "(b) If @MathNode@ then there is @MathNode@ such that @MathNode@, where and @MathNode@ is the simple diagram whose edge-coloring is @MathNode@."
+        ]
+      ]
     ]
   },
   {
@@ -9717,11 +9982,21 @@
     "paper": "https://ar5iv.org/abs/2008.05047",
     "identifier": "Theorem 3.5.",
     "sentences": [
-      "Suppose that @MathNode@ satisfies Hypothesis @LtxRef@. Assume further (a) @MathNode@ is a noetherian AS regular domain generated in degree 1 such that @MathNode@ is prime.",
-      "(b) @MathNode@ has finite global dimension.",
+      "Suppose that @MathNode@ satisfies Hypothesis @LtxRef@.",
+      [
+        "Assume further",
+        [
+          "(a) @MathNode@ is a noetherian AS regular domain generated in degree 1 such that @MathNode@ is prime.",
+          "(b) @MathNode@ has finite global dimension."
+        ]
+      ],
       "Then the following hold.",
-      "(1) @MathNode@.",
-      "(2) Suppose @MathNode@ and that @MathNode@ is algebraically closed of characteristic 0.",
+      [
+        [
+          "(1) @MathNode@.",
+          "(2) Suppose @MathNode@ and that @MathNode@ is algebraically closed of characteristic 0."
+        ]
+      ],
       "Then @MathNode@ where @MathNode@ for @MathNode@, the @MathNode@-action on @MathNode@ is faithful, and @MathNode@ is generated by a quasi-reflection of @MathNode@ in the sense of @LtxCite@."
     ]
   },
@@ -9844,9 +10119,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/math/0702568",
-    "identifier": null,
+    "identifier": "1.4 Theorem.",
     "sentences": [
-      "1.4 Theorem.",
       "Suppose that a discrete group @MathNode@ acts on a tree and that for some vertex @MathNode@ in the tree the function @MathNode@ is proper on @MathNode@.",
       "Then @MathNode@ is weakly amenable with Cowling-Haagerup constant @MathNode@. \u220e"
     ]
