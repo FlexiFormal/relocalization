@@ -14,4 +14,7 @@ abstract CoverageTestGrammar = TestCoverageLexicon, DollarMath ** {
 
         prefix_arg_adj : Formula -> Adjective -> Adjective;
         prefix_arg_noun : Formula -> Noun -> Noun;
+
+
+        statement_enum_placeholder: StatementEnum;
 }

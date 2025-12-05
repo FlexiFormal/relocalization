@@ -4,6 +4,7 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         Subjunction = Syntax.Subj;
         Quantification = _Quantification;
         Statement = S;
+        StatementEnum = S;
         TopStatement = Utt;
         FurthermoreMarker = {s: Str};
         Polarity = Pol;
@@ -84,6 +85,7 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         -- statements
         conj_stmt c s1 s2 = mkS c s1 s2;
         subj_stmt ssubj s1 s2 = my_ssubjs s1 ssubj s2;
+        statement_enum_as_stmt se = se;
 
         exists_nkind nk = mkS (mkCl (indef_nk nk));
         exists_nkind_v1 nk = mkS (ExistsNP (indef_nk nk));

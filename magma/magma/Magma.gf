@@ -2,7 +2,7 @@ abstract Magma = {
     cat
         Statement;      -- "there is an odd integer"
         TopStatement;   -- "hence, x is even"   (statements that can only appear in specific, high-level places, e.g. after "hence"/"therefore"/"it follows that"/...)
-        -- StatementEnum;  -- "1. $R$ is reflexive. 2. $R$ is symmetric. 3. $R$ is transitive."
+        StatementEnum;  -- "1. $R$ is reflexive. 2. $R$ is symmetric. 3. $R$ is transitive."
 
         FurthermoreMarker;  -- "furthermore", "moreover", ...
 
@@ -101,6 +101,7 @@ abstract Magma = {
         -- statements
         conj_stmt : Conjunction -> Statement -> Statement -> Statement;
         subj_stmt : Subjunction -> Statement -> Statement -> Statement;
+        statement_enum_as_stmt : StatementEnum -> Statement;
         stmt_for_term : Statement -> Term -> Statement;     -- "φ for every x"
         stmt_for_term_v1 : Statement -> Term -> Statement;  -- "for every x, φ"
 
