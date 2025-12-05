@@ -57,6 +57,7 @@ abstract Magma = {
         if_then_stmt_v1 : Statement -> Statement -> Statement;    -- a ⇒ b
         if_then_stmt_v2 : Statement -> Statement -> Statement;    -- a ⇒ b
         if_then_stmt_v3 : Statement -> Statement -> Statement;    -- a ⇒ b
+        if_then_stmt_v4 : Statement -> Statement -> Statement;    -- a ⇒ b
         
         -- identifiers
         no_idents_sg : Identifiers;
