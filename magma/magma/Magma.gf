@@ -106,6 +106,8 @@ abstract Magma = {
 
         term_has_nkind_stmt : Term -> NamedKind -> Statement;
         term_is_property_stmt : Term -> Property -> Statement;
+        term_is_not_property_stmt : Term -> Property -> Statement;
+        term_is_not_property_stmt_v1 : Term -> Property -> Statement;
         term_is_term_stmt : Term -> Term -> Statement;
         term_predicate_stmt : Term -> Predicate -> Statement;
 

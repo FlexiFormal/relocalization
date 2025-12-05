@@ -1,4 +1,4 @@
-concrete MagmaEng of Magma = MagmaFunctor with 
+concrete MagmaEng of Magma = MagmaFunctor - [term_is_not_property_stmt] with 
         (MagmaUtils = MagmaUtilsEng), (Syntax=SyntaxEng), (Grammar=GrammarEng), (Symbolic=SymbolicEng), (Extend=ExtendEng)
 ** open ParadigmsEng, ResEng, Prelude, StructuralEng, MorphoEng in {
     oper
@@ -11,6 +11,8 @@ concrete MagmaEng of Magma = MagmaFunctor with
         called_an_nkind_vp : NamedKind -> VP = \nk -> mkVP (passiveVP _call_V2) (term_to_adv (indef_nk nk));
         said_vp_vp : VP -> VP = \vp -> mkVP (passiveVP _say_V2) (str_adv (infVP VVInf vp False Simul CPos (agrP3 Sg)));
         we_say_that : S -> S = \s -> mkS (mkCl we_NP (mkVS _say_V) s);
+
+        not_ap_table : (Agr => Str) -> (Agr => Str) = \t -> table { a => "not" ++ t!a };
 
 
     lin
@@ -51,6 +53,9 @@ concrete MagmaEng of Magma = MagmaFunctor with
         fix_ident_decl id = lin Utt { s = "fix" ++ id.s } ;
         fix_nkind_decl nk = lin Utt { s = "fix" ++ (mkUtt (Syntax.mkNP (indefart nk.num) nk.cn)).s } ;
 
+        
+        term_is_not_property_stmt t p = mkS (mkCl t.np (lin AP {s = not_ap_table p.s; isPre = p.isPre}));
+        term_is_not_property_stmt_v1 t p = mkS negativePol (mkCl t.np p);
 
         stmt_for_term stmt term = lin S {s = stmt.s ++ (PrepNP (mkPrep "for") term.np).s};
         stmt_for_term_v1 stmt term = lin S {s = (PrepNP (mkPrep "for") term.np).s ++ "," ++ stmt.s};
