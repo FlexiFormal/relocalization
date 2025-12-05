@@ -2,7 +2,9 @@ abstract Magma = {
     cat
         Statement;      -- "there is an odd integer"
         TopStatement;   -- "hence, x is even"   (statements that can only appear in specific, high-level places, e.g. after "hence"/"therefore"/"it follows that"/...)
-        FurthermoreMarker;
+        -- StatementEnum;  -- "1. $R$ is reflexive. 2. $R$ is symmetric. 3. $R$ is transitive."
+
+        FurthermoreMarker;  -- "furthermore", "moreover", ...
 
         Sentence;       -- "There is an odd integer ."
         Definition;     -- "an integer is called odd iff it is not divisible by 2"
@@ -48,6 +50,7 @@ abstract Magma = {
         if_subj : Subjunction;         -- a ⇐ b
         where_subj : Subjunction;
         where_subj_v1 : Subjunction;
+        where_subj_v2 : Subjunction;
 
         -- if ... then ... is a weird special case, at least in German
         if_then_stmt : Statement -> Statement -> Statement;    -- a ⇒ b

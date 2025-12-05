@@ -21,6 +21,7 @@ concrete MagmaEng of Magma = MagmaFunctor with
         iff_subj_v1 = lin Subjunction _iff_subj_v1;
         where_subj = lin Subjunction (mkSubj "where");
         where_subj_v1 = lin Subjunction (mkSubj ", where");
+        where_subj_v2 = lin Subjunction (mkSubj "with");
 
         if_then_stmt s1 s2 = mkS (mkConj "if" ", then" singular) s1 s2;
         if_then_stmt_v1 s1 s2 = mkS (mkConj "if" "then" singular) s1 s2;
