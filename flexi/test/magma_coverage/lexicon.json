@@ -2778,10 +2778,6 @@
             "sub",
             "subs"
         ],
-        "_family": [
-            "-family",
-            "-families"
-        ],
         "tangent": [
             "tangent",
             "tangents"
@@ -3421,10 +3417,6 @@
         "stipulation": [
             "stipulation",
             "stipulations"
-        ],
-        "a_p": [
-            "a-p",
-            "a ps"
         ],
         "hypercube": [
             "hypercube",
