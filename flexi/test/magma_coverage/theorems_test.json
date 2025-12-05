@@ -467,9 +467,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2003.11103",
-    "identifier": null,
+    "identifier": "(H4).",
     "sentences": [
-      "(H4).",
       "There exist positive constants @MathNode@ such that for any @MathNode@ @MathEquation@"
     ]
   },
@@ -1279,15 +1278,6 @@
     ]
   },
   {
-    "paper": "https://ar5iv.org/abs/1910.06820",
-    "identifier": null,
-    "sentences": [
-      "Teorema B.1.6 (Cantor\u2013Bernstein).",
-      "Sejam @MathNode@ e @MathNode@ dois conjuntos tais que @MathNode@ e @MathNode@.",
-      "Ent\u00e3o @MathEquation@"
-    ]
-  },
-  {
     "paper": "https://ar5iv.org/abs/1104.0194",
     "identifier": "Theorem 6 (Grynkiewicz @LtxCite@).",
     "sentences": [
@@ -1800,9 +1790,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/math/9912217",
-    "identifier": null,
+    "identifier": "4.18",
     "sentences": [
-      "4.18",
       "Example Scalar conservation laws of the form @MathEquation@ arise in the kinetic theory of traffic flow.",
       "Here @MathNode@ denotes the density, and the propagation velocity @MathNode@ may be a strictly decreasing function of @MathNode@ with one or more jumps.",
       "A typical case is a unimodal flux function (whose derivative is @MathNode@) with a kink at its maximum, as supported by experimental data @LtxCite@.",
@@ -2065,15 +2054,6 @@
     "sentences": [
       "Let @MathNode@ be a MDS.",
       "Then, @MathNode@ has @MathNode@-UPE if and only if for every pair @MathNode@ of nonempty disjoint open sets in @MathNode@, one has @MathNode@."
-    ]
-  },
-  {
-    "paper": "https://ar5iv.org/abs/1910.06820",
-    "identifier": null,
-    "sentences": [
-      "Teorema C.1.21.",
-      "A menos de isomorfismo, existe um e apenas um corpo ordenado completo no sentido de Dedekind.",
-      "Ele \u00e9 chamado o corpo dos reais e denotado @MathNode@."
     ]
   },
   {
@@ -3675,9 +3655,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/math/0701306",
-    "identifier": null,
+    "identifier": "(20.2) Theorem.",
     "sentences": [
-      "(20.2) Theorem.",
       "Let @MathNode@ be a C*-algebra.",
       "We put @MathEquation@",
       "Then @MathNode@ is a two-sided approximate unit in @MathNode@.",
@@ -6589,30 +6568,11 @@
     ]
   },
   {
-    "paper": "https://ar5iv.org/abs/0810.1603",
-    "identifier": null,
-    "sentences": [
-      "Th\u00e9or\u00e8me 6.4.",
-      "Soient @MathNode@ et @MathNode@ deux groupes de points de @MathNode@ de m\u00eame longueur et en position @MathNode@-g\u00e9n\u00e9rale.",
-      "On suppose @MathNode@.",
-      "Alors un des deux cas suivants se produit : 1) @MathNode@.",
-      "2) @MathNode@ et @MathNode@ sont sur une m\u00eame courbe @MathNode@ de degr\u00e9 @MathNode@ et il existe un faisceau @MathNode@ de rang @MathNode@ sur @MathNode@ tel que @MathNode@"
-    ]
-  },
-  {
     "paper": "https://ar5iv.org/abs/2208.03246",
     "identifier": "Theorem A.1 (Sub-Gaussian Norm Concentration, @LtxCite@).",
     "sentences": [
       "Let @MathNode@ be a @MathNode@-dimensional sub-Gaussian random vector with @MathNode@, @MathNode@.",
       "Then, for any @MathNode@ with probability at least @MathNode@ it holds that @MathGroup@"
-    ]
-  },
-  {
-    "paper": "https://ar5iv.org/abs/1111.4543",
-    "identifier": null,
-    "sentences": [
-      "Th\u00e9or\u00e8me 1.3.",
-      "Pour tout @MathNode@ on a @MathNode@ et @MathEquation@"
     ]
   },
   {
@@ -6714,9 +6674,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/0807.4242",
-    "identifier": null,
+    "identifier": "(40.10) Theorem.",
     "sentences": [
-      "(40.10) Theorem.",
       "Let @MathNode@ be a spectral measure acting on @MathNode@.",
       "If @MathNode@ is separable, then there exists a unit vector @MathNode@ such that the probability measure @MathNode@ is a scalar spectral measure for @MathNode@.",
       "The vector @MathNode@ can be chosen to be any unit separating vector for @MathNode@, for example any unit separating vector for @MathNode@."
@@ -6908,9 +6867,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2206.11995",
-    "identifier": null,
+    "identifier": "Lemma @LtxRef@.",
     "sentences": [
-      "Lemma @LtxRef@.",
       "Consider an IID-RUM that satisfies Borda consistency per definition (@LtxRef@).",
       "Fix a @MathNode@, we have @MathEquation@"
     ]
@@ -7516,15 +7474,6 @@
     ]
   },
   {
-    "paper": "https://ar5iv.org/abs/1509.00606",
-    "identifier": null,
-    "sentences": [
-      "Th\u00e9or\u00e8me 8.3.",
-      "L\u2019inclusion pr\u00e9c\u00e9dente est un isomorphisme de @MathNode@-modules et induit un isomorphisme de @MathNode@-modules @MathEquation@",
-      "En composant avec @MathNode@ on obtient un isomorphisme de @MathNode@-modules @MathEquation@"
-    ]
-  },
-  {
     "paper": "https://ar5iv.org/abs/2005.05059",
     "identifier": "Theorem 4.1 (Laurent expansion).",
     "sentences": [
@@ -7569,9 +7518,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1708.02854",
-    "identifier": null,
+    "identifier": "4.1 Theorem.",
     "sentences": [
-      "4.1 Theorem.",
       "Let @MathNode@ be a real number.",
       "Then we have @MathEquation@ with a constant @MathNode@ depending only on @MathNode@, @MathNode@ and @MathNode@.",
       "On the other hand, we have @MathEquation@ where the infimum is taken over all estimators in the PPP Model with intensity (@LtxRef@).",
@@ -8567,9 +8515,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1602.05548",
-    "identifier": null,
+    "identifier": "@MathNode@ 1",
     "sentences": [
-      "@MathNode@ 1",
       "Suppose that @MathNode@ and the multimedia traffic arrival rate @MathNode@ is in within the network capacity region, then under the proposed beamformer design algorithm, all the actual queues and virtual queues are mean-rate stable."
     ]
   },
@@ -8642,9 +8589,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2204.10119",
-    "identifier": null,
+    "identifier": "5.1",
     "sentences": [
-      "5.1",
       "Let @MathNode@ be a minimal candidate with bipartition @MathNode@.",
       "Then @MathNode@ has no @MathNode@-subgraph."
     ]
@@ -8666,9 +8612,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/0801.4320",
-    "identifier": null,
+    "identifier": "Th\u00e9or\u00e8me 3.1.2",
     "sentences": [
-      "Th\u00e9or\u00e8me 3.1.2",
       "([B.95] th.1bis p.31) Let @MathNode@ be an (a,b)-module.",
       "Then the kernel and cokernel of \u201da\u201d are finite dimensional."
     ]
@@ -8742,9 +8687,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/math/0501239",
-    "identifier": null,
+    "identifier": "7.2 Theorem.",
     "sentences": [
-      "7.2 Theorem.",
       "Let @MathNode@ be a Lorentzian manifold, @MathNode@ its conformal tractor bundle and @MathNode@ the conformal tractor connection.",
       "If the holonomy group of the @MathNode@ admits a 2-dimensional totally isotropic invariant subspace, then @MathNode@ is locally conformally equivalent to a Lorentzian manifold with recurrent lightlike vector field and totally isotropic Ricci tensor."
     ]
@@ -9391,15 +9335,6 @@
     ]
   },
   {
-    "paper": "https://ar5iv.org/abs/math/9908097",
-    "identifier": null,
-    "sentences": [
-      "Th\u00e9or\u00e8me 2.23",
-      "Soit @MathNode@ un champ alg\u00e9brique de @MathNode@.",
-      "Alors, il existe un morphisme d\u2019alg\u00e8bres dans @MathNode@ @MathEquation@ qui est compatible avec les images r\u00e9ciproques."
-    ]
-  },
-  {
     "paper": "https://ar5iv.org/abs/1111.7057",
     "identifier": "Theorem A.6.",
     "sentences": [
@@ -9624,9 +9559,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1807.02797",
-    "identifier": null,
+    "identifier": "7.4 Theorem.",
     "sentences": [
-      "7.4 Theorem.",
       "Let @MathNode@ be an extremal curve germ.",
       "Assume that @MathNode@ has only one non-Gorenstein point @MathNode@.",
       "Let @MathNode@ be a general member.",

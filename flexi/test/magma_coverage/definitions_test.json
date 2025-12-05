@@ -314,9 +314,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/0902.4902",
-    "identifier": null,
+    "identifier": "2.2.1 Definition.",
     "sentences": [
-      "2.2.1 Definition.",
       "We denote by @MathNode@ the ideal of @MathNode@ consisting of those morphisms which factor through some object of the form @MathNode@: this is the Lefschetz ideal.",
       "It is a monoidal ideal (i.e. , it is closed with respect to composition and tensor products on the left and on the right)."
     ]
@@ -615,9 +614,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1907.01999",
-    "identifier": null,
+    "identifier": "7.9 Definition (essentially surjective on objects).",
     "sentences": [
-      "7.9 Definition (essentially surjective on objects).",
       "A morphism of @MathNode@-quasi-categories @MathNode@ is said to be essentially surjective on objects if, for each object @MathNode@, there exists an object @MathNode@ and an isomorphism @MathNode@ in @MathNode@."
     ]
   },
@@ -1727,15 +1725,6 @@
     ]
   },
   {
-    "paper": "https://ar5iv.org/abs/1608.02432",
-    "identifier": null,
-    "sentences": [
-      "Problem 2",
-      "((@MathNode@) Crash Fault): Given @MathNode@ anonymous, homogeneous, oblivious, point robots with unlimited visibility in legal initial configuration with no agreement in coordinate system, having the ability to detect multiplicity points in ASYNCIC model.",
-      "The objective is to achieve gathering for all non-faulty robots in (@MathNode@) crash fault system for @MathNode@."
-    ]
-  },
-  {
     "paper": "https://ar5iv.org/abs/2201.03010",
     "identifier": "Definition 3.1 (Differentially-Private Event Log).",
     "sentences": [
@@ -2396,9 +2385,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1906.09117",
-    "identifier": null,
+    "identifier": "2.4.1 Definition.",
     "sentences": [
-      "2.4.1 Definition.",
       "For a finite free @MathNode@-representation @MathNode@ of @MathNode@, its associated @MathNode@-module is called overconvergent if there exists @MathNode@ such that @MathEquation@",
       "In particular, if above holds, we say that @MathNode@ is overconvergent on the interval @MathNode@."
     ]
@@ -5153,9 +5141,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/0802.4096",
-    "identifier": null,
+    "identifier": "2.1 Definition.",
     "sentences": [
-      "2.1 Definition.",
       "Let @MathNode@ be an indexing category, @MathNode@ a model category, and @MathNode@.",
       "Given an orderable cover @MathNode@ of @MathNode@ with associated filtration @MathNode@, let @MathNode@ and @MathNode@ denote the truncation functors, with adjoints indexed accordingly.",
       "A diagram @MathNode@ is called @MathNode@-fibrant if for each @MathNode@, the augmentation @MathNode@ is a fibration in @MathNode@."
@@ -5542,9 +5529,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2010.15961",
-    "identifier": null,
+    "identifier": "2.16 Definition.",
     "sentences": [
-      "2.16 Definition.",
       "The @MathNode@-cube map @MathNode@ is given by @MathNode@.",
       "Thus @MathNode@ is the following back-to-front map of squares: @MathEquation@"
     ]
@@ -7242,9 +7228,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1702.03114",
-    "identifier": null,
+    "identifier": "4.10 Definition.",
     "sentences": [
-      "4.10 Definition.",
       "A manifold-like space is a connected metric measure space @MathNode@ that is obtained from a (possibly not connected) MCP space @MathNode@ through a finite number of glueings."
     ]
   },
@@ -7723,9 +7708,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1009.3485",
-    "identifier": null,
+    "identifier": "6.2.1 Definition.",
     "sentences": [
-      "6.2.1 Definition.",
       "(see @LtxCite@)",
       "A parabolic line bundle on @MathNode@ is a pair @MathNode@, where @MathNode@ is a line bundle on @MathNode@ together with a @MathNode@\u2013tuple of rational numbers @MathNode@ with @MathNode@.",
       "The parabolic degree of a parabolic line bundle is defined as @MathEquation@"
@@ -7847,9 +7831,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1107.1408",
-    "identifier": null,
+    "identifier": "2.2 Definition.",
     "sentences": [
-      "2.2 Definition.",
       "A dg @MathNode@-@MathNode@-module @MathNode@ is a set @MathEquation@ of dg right @MathNode@-modules such that each of them decomposes @MathEquation@ as a dg @MathNode@-module and @MathNode@ acts by a dg @MathNode@-module morphism @MathEquation@",
       "It follows that @MathNode@ is a dg @MathNode@-module.",
       "In particular, the differential commutes with the @MathNode@ action.",

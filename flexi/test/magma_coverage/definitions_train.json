@@ -470,9 +470,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1108.3777",
-    "identifier": null,
+    "identifier": "9.5 Definition.",
     "sentences": [
-      "9.5 Definition.",
       "Let @MathNode@ and @MathNode@.",
       "We say that @MathNode@ is semi-invariant in @MathNode@ over the field @MathNode@, if @MathNode@ is invariant in @MathNode@.",
       "If @MathNode@ is semi-invariant over @MathNode@, then we say it is semi-invariant."
@@ -1426,9 +1425,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1312.0022",
-    "identifier": null,
+    "identifier": "0. Definition.",
     "sentences": [
-      "0. Definition.",
       "We call these @MathNode@, for @MathNode@, the one-dimensional slices of @MathNode@."
     ]
   },
@@ -1918,9 +1916,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1611.05312",
-    "identifier": null,
+    "identifier": "8.1 Definition.",
     "sentences": [
-      "8.1 Definition.",
       "Let @MathNode@ be a filtered submanifold of a filtered manifold @MathNode@.",
       "Denote by @MathNode@ the algebra of Laurent polynomials @MathEquation@ whose coefficients are smooth, real-valued functions on @MathNode@ that satisfy the condition @MathEquation@",
       "The deformation space @MathNode@ is the spectrum of @MathNode@."
@@ -2001,14 +1998,6 @@
       "Suppose that @MathNode@ has a transverse self-crossing at @MathNode@.",
       "Let @MathNode@ be an arc connecting @MathNode@ to @MathNode@.",
       "The resolution of @MathNode@ along @MathNode@ is the multicurve @MathNode@ on the surface @MathNode@ obtained from @MathNode@ by adding a basic @MathNode@-handle @MathNode@ constructed as depicted in @LtxRef@."
-    ]
-  },
-  {
-    "paper": "https://ar5iv.org/abs/math/0609794",
-    "identifier": null,
-    "sentences": [
-      "D\u00e9finition 9.",
-      "Le groupe de structure topologique de @MathNode@, not\u00e9 @MathNode@ ou @MathNode@, est l\u2019ensemble des hom\u00e9omorphismes de @MathNode@ appartenant au groupe de structure @MathNode@ de @MathNode@."
     ]
   },
   {
@@ -3713,9 +3702,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1011.3162",
-    "identifier": null,
+    "identifier": "\\definame \\the\\smf@thm.",
     "sentences": [
-      "\\definame \\the\\smf@thm.",
       "Let @MathNode@ be a complex manifold, and @MathNode@ a hypersurface of @MathNode@.",
       "We pick an almost-psh function @MathNode@ (ie it is locally the sum of a psh function and of a smooth function) non identically equal to @MathNode@ on @MathNode@, @MathNode@ a positive closed current of bidegree @MathNode@ on @MathNode@ well-defined on @MathNode@, and @MathNode@ a singular hermitian metric of some holomorphic line bundle, satisfying @MathNode@.",
       "The we define: @MathNode@",
@@ -4297,9 +4285,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/math/0612235",
-    "identifier": null,
+    "identifier": "3.36 Definition.",
     "sentences": [
-      "3.36 Definition.",
       "Define @MathNode@ as @MathNode@.",
       "Define moreover @MathNode@ if @MathNode@, and @MathNode@ to be the equivalence class of @MathNode@.",
       "Define also @MathNode@ as @MathNode@."
@@ -4602,9 +4589,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1112.0816",
-    "identifier": null,
+    "identifier": "4.1.2 Definition.",
     "sentences": [
-      "4.1.2 Definition.",
       "If @MathNode@ is a vector bundle on @MathNode@ let @MathNode@ be the sheaf of dg modules over @MathNode@.",
       "We call @MathNode@ the sheaf of sections of @MathNode@."
     ]
@@ -4982,9 +4968,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2403.18389",
-    "identifier": null,
+    "identifier": "2.3.1 Definition.",
     "sentences": [
-      "2.3.1 Definition.",
       "Let @MathNode@ be a threefold with terminal @MathNode@-factorial singularities.",
       "An extremal blowup of @MathNode@ is a birational morphism @MathNode@ such that @MathNode@ has only terminal @MathNode@-factorial singularities and @MathNode@."
     ]
@@ -6477,9 +6462,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1407.3877",
-    "identifier": null,
+    "identifier": "22.5 Definition (Librationist semantic specification, short hand).",
     "sentences": [
-      "22.5 Definition (Librationist semantic specification, short hand).",
       "@MathNode@"
     ]
   },
@@ -6598,14 +6582,6 @@
     "identifier": "Definition 4.9.",
     "sentences": [
       "A word @MathNode@ is called standard if @MathEquation@ Let @MathNode@ denote the set of standard words."
-    ]
-  },
-  {
-    "paper": "https://ar5iv.org/abs/physics/0005003",
-    "identifier": null,
-    "sentences": [
-      "Defini\u00e7\u00e3o 2.17",
-      "Um conjunto invariante fechado @MathNode@ \u00e9 chamado conjunto atrator, se existe alguma vizinhan\u00e7a @MathNode@ de @MathNode@, tal que @MathEquation@"
     ]
   },
   {
@@ -6734,9 +6710,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1911.01953",
-    "identifier": null,
+    "identifier": "4.1 Definition.",
     "sentences": [
-      "4.1 Definition.",
       "(Eisert et al. @LtxCite@, Barry et al. @LtxCite@)",
       "A superoperator @MathNode@ is given by a set of Kraus operators @MathNode@ where @MathNode@.",
       "If @MathNode@ is applied to a density matrix @MathNode@, then with probability @MathNode@, the resulting state is @MathNode@ and the observation @MathNode@ is emitted."
@@ -6866,9 +6841,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1407.1663",
-    "identifier": null,
+    "identifier": "4.11 Definition.",
     "sentences": [
-      "4.11 Definition.",
       "A frame @MathNode@ for a Hilbert space @MathNode@ is called orthodecomposable if there are mutually disjoint subsets @MathNode@, @MathNode@, \u2026, @MathNode@ partitioning @MathNode@ and subspaces @MathNode@, @MathNode@, @MathNode@ of @MathNode@ such that @MathNode@ is a frame for @MathNode@ and @MathNode@ for all @MathNode@, so @MathNode@."
     ]
   },
@@ -8494,9 +8468,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2311.13178",
-    "identifier": null,
+    "identifier": "2.3.4 Definition.",
     "sentences": [
-      "2.3.4 Definition.",
       "The infinitesimal cumulants with respect to the couple @MathNode@ are the restriction to @MathNode@ of the infinitesimal cumulants @MathNode@ of @MathNode@ defined from @MathNode@ by (@LtxRef@).",
       "More precisely, the following moments-cumulants formula, for any @MathNode@, are in hold: @MathGroup@"
     ]
@@ -8613,9 +8586,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1712.01613",
-    "identifier": null,
+    "identifier": "3.4 Definition (@MathNode@-space and @MathNode@).",
     "sentences": [
-      "3.4 Definition (@MathNode@-space and @MathNode@).",
       "We call @MathNode@ a @MathNode@-space if it is a locally convex Hausdorff space, the system of seminorms @MathNode@ is directed and, in addition, @MathNode@ for every @MathNode@ if @MathNode@.",
       "We define the point evaluation of @MathNode@ by @MathNode@, @MathNode@, for @MathNode@ and @MathNode@."
     ]
@@ -8710,9 +8682,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2109.11954",
-    "identifier": null,
+    "identifier": "4.13 Definition.",
     "sentences": [
-      "4.13 Definition.",
       "Let @MathNode@ be @MathNode@-fibrations and let @MathEquation@ be a relative adjunction with respect to the structure maps to @MathNode@ (in the sense of @LtxCite@).",
       "We then say that @MathNode@ is a @MathNode@-relative @MathNode@-adjunction if @MathNode@ and @MathNode@ are @MathNode@-functors."
     ]

@@ -89,22 +89,6 @@
     ]
   },
   {
-    "paper": "https://ar5iv.org/abs/1506.07131",
-    "identifier": null,
-    "sentences": [
-      "3.14.10",
-      "Example.",
-      "We return to the two-dimensional heat equation @MathNode@, whose symmetry group we calculated in @LtxRef@, and use the methods of this section to determine the general form of traveling wave solutions to the heat equation.",
-      "In general, a traveling wave solution to a differential equation is one which is invariant under a translation group.",
-      "Here we consider the symmetry of the heat equation given by the translation group @MathEquation@ with generator @MathNode@, for @MathNode@ some fixed constant.",
-      "Global invariants are given by @MathEquation@",
-      "Thus any group-invariant solution is of the form @MathNode@, or @MathNode@, which is a function that doesn\u2019t change its shape along the straight line @MathNode@ const.",
-      "If we express the derivatives of @MathNode@ in terms of the new variables we obtain @MathEquation@",
-      "Inserting into the heat equation, we arrive at the ODE determining all traveling wave solutions of the above form: @MathEquation@ with general solution @MathEquation@ (@MathNode@, @MathNode@ arbitrary constants).",
-      "If we now substitute back into the heat equation we obtain the general form of traveling wave solutions: @MathEquation@"
-    ]
-  },
-  {
     "paper": "https://ar5iv.org/abs/1407.6981",
     "identifier": "Theorem 1",
     "sentences": [
@@ -137,9 +121,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/math/0502393",
-    "identifier": null,
+    "identifier": "3.8 Theorem.",
     "sentences": [
-      "3.8 Theorem.",
       "Every statement about finite sets provable in @MathNode@ holds in THS as well."
     ]
   },
@@ -1832,10 +1815,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1403.5095",
-    "identifier": null,
+    "identifier": "4.8. Corollary.",
     "sentences": [
-      "4.8.",
-      "Corollary.",
       "Let @MathNode@ satisfy the Frobenius property and assume @MathNode@ to be a monad.",
       "(1) For any unital @MathNode@-module @MathNode@, there is some @MathNode@-comodule morphism @MathNode@ (given in @LtxRef@) making @MathNode@ a Frobenius bimodule.",
       "(2) If @MathNode@ allows for a counit, then @MathNode@ is a counital @MathNode@-comodule.",
@@ -1868,9 +1849,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1610.06208",
-    "identifier": null,
+    "identifier": "2.4 Theorem.",
     "sentences": [
-      "2.4 Theorem.",
       "If @MathNode@ is an order unit normed space such that @MathNode@ is monotone @MathNode@-complete, then @MathNode@ is a Banach space under the order-unit norm."
     ]
   },
@@ -2728,9 +2708,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1611.04843",
-    "identifier": null,
+    "identifier": "Statement 1.2.3.2.",
     "sentences": [
-      "Statement 1.2.3.2.",
       "For any @MathNode@ it holds that @MathEquation@"
     ]
   },
@@ -3758,14 +3737,6 @@
     ]
   },
   {
-    "paper": "https://ar5iv.org/abs/2011.08237",
-    "identifier": null,
-    "sentences": [
-      "Th\u00e9or\u00e8me B.2.7.",
-      "Une fonction @MathNode@ corrig\u00e9e de ses singularit\u00e9s \u00e9ventuelles est d\u2019ordre au plus @MathNode@."
-    ]
-  },
-  {
     "paper": "https://ar5iv.org/abs/0809.2363",
     "identifier": "Theorem 4.3.",
     "sentences": [
@@ -4410,9 +4381,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2003.04482",
-    "identifier": null,
+    "identifier": "4.8 Theorem.",
     "sentences": [
-      "4.8 Theorem.",
       "Let @MathNode@ be open and suppose @MathNode@ satisfies @MathGroup@ where @MathNode@ is concave in the first variable.",
       "Then for any @MathNode@ and @MathNode@ there holds @MathGroup@ where @MathNode@ depends on @MathNode@ and the ellipticity constants @MathNode@ of @MathNode@, and @MathNode@ depends on @MathNode@, @MathNode@, bounds for @MathNode@ and @MathNode@, @MathNode@, @MathNode@ and the bounds on the other first and second derivatives of @MathNode@."
     ]
@@ -4558,9 +4528,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1604.00223",
-    "identifier": null,
+    "identifier": "Security Theorem 1.",
     "sentences": [
-      "Security Theorem 1.",
       "The direct requests mechanism is an @MathNode@-private PIR mechanism with @MathEquation@ where @MathNode@ is the number of databases, of which @MathNode@ are adversarial, @MathNode@ is the total number of records, and @MathNode@ is the total number of queries sent by the user."
     ]
   },
@@ -5257,9 +5226,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/hep-th/9408129",
-    "identifier": null,
+    "identifier": "theorem 2",
     "sentences": [
-      "theorem 2",
       "@MathNode@."
     ]
   },
@@ -7443,9 +7411,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/0807.4242",
-    "identifier": null,
+    "identifier": "(11.3) Theorem.",
     "sentences": [
-      "(11.3) Theorem.",
       "For a Banach @MathNode@-algebra @MathNode@ the following statements are equivalent.",
       "@MathNode@ @MathNode@ is Hermitian,",
       "@MathNode@ @MathNode@ whenever @MathNode@ is Hermitian,",
@@ -7704,17 +7671,6 @@
     ]
   },
   {
-    "paper": "https://ar5iv.org/abs/1404.2416",
-    "identifier": null,
-    "sentences": [
-      "Teorema 3.",
-      "Seja @MathNode@ um setor arbitr\u00e1rio e @MathNode@ holomorfa em @MathNode@.",
-      "Suponha que @MathNode@ \u00e9 uma expans\u00e3o assint\u00f3tica de ordem @MathNode@ de @MathNode@ em @MathNode@.",
-      "Seja @MathNode@ satisfazendo @MathNode@ de forma com que @MathNode@ seja holomorfa em @MathNode@.",
-      "Definimos @MathNode@ pela regra @MathEquation@ Ent\u00e3o @MathNode@."
-    ]
-  },
-  {
     "paper": "https://ar5iv.org/abs/1508.07180",
     "identifier": "Theorem 6.",
     "sentences": [
@@ -7886,15 +7842,6 @@
       "(2) @MathNode@ has the @MathNode@-c.c.;",
       "(3) @MathNode@;",
       "(4) in @MathNode@, @MathNode@ fails for some stationary @MathNode@."
-    ]
-  },
-  {
-    "paper": "https://ar5iv.org/abs/1707.05099",
-    "identifier": null,
-    "sentences": [
-      "Th\u00e9or\u00e8me 5.16.",
-      "Toute extension @MathNode@-ferm\u00e9e @MathNode@ d\u2019ordre @MathNode@ se d\u00e9compose compl\u00e8tement en @MathNode@ extensions @MathNode@-simples.",
-      "D\u2019une mani\u00e8re pr\u00e9cise, on a @MathNode@, avec @MathNode@ est @MathNode@-simple pour tout @MathNode@."
     ]
   },
   {
@@ -9531,9 +9478,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/2302.01631",
-    "identifier": null,
+    "identifier": "6.2 Theorem.",
     "sentences": [
-      "6.2 Theorem.",
       "Automorphism groups of principal fiber bundles.",
       "In the setting of @LtxRef@ the following is a smooth extension of regular Lie groups: @MathEquation@",
       "For the corresponding counterpart of mappings with finite regularity we obtain extensions of half-Lie groups admitting local sections as in @LtxRef@ of @LtxRef@ and smooth conjugations as in @LtxRef@: @MathGroup@"
@@ -9625,9 +9571,8 @@
   },
   {
     "paper": "https://ar5iv.org/abs/1706.06662",
-    "identifier": null,
+    "identifier": "2.5.6.",
     "sentences": [
-      "2.5.6.",
       "There is an analog of Theorem @LtxRef@ for @MathNode@ in place of @MathNode@.",
       [
         "Precisely: the map @MathNode@ is an isomorphism as long as one of the following holds",
