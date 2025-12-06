@@ -39,6 +39,7 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         or_conj = or_Conj;
 
         if_subj = if_Subj;
+        -- if_subj_v1 = when_Subj;
 
         -- identifiers
         no_idents_sg = {s = ""; num = Sg};

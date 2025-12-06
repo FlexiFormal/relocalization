@@ -46,8 +46,9 @@ abstract Magma = {
         or_conj : Conjunction;         -- a ∨ b
 
         iff_subj : Subjunction;        -- a ⇔ b
-        iff_subj_v1 : Subjunction;
+        -- iff_subj_v1 : Subjunction;
         if_subj : Subjunction;         -- a ⇐ b
+        if_subj_v1 : Subjunction;         -- a ⇐ b
         where_subj : Subjunction;
         where_subj_v1 : Subjunction;
         where_subj_v2 : Subjunction;
@@ -102,6 +103,7 @@ abstract Magma = {
         conj_stmt : Conjunction -> Statement -> Statement -> Statement;
         subj_stmt : Subjunction -> Statement -> Statement -> Statement;
         statement_enum_as_stmt : StatementEnum -> Statement;
+        statement_enum_as_stmt_v1 : StatementEnum -> Statement;
         stmt_for_term : Statement -> Term -> Statement;     -- "φ for every x"
         stmt_for_term_v1 : Statement -> Term -> Statement;  -- "for every x, φ"
 
