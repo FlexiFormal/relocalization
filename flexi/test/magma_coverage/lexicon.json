@@ -12929,6 +12929,12 @@
         "clopen": [
             "clopen"
         ],
+        "open": [
+            "open"
+        ],
+        "circular": [
+            "circular"
+        ],
         "dependent": [
             "dependent"
         ],

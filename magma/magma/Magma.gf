@@ -46,7 +46,7 @@ abstract Magma = {
         or_conj : Conjunction;         -- a ∨ b
 
         iff_subj : Subjunction;        -- a ⇔ b
-        -- iff_subj_v1 : Subjunction;
+        iff_subj_v1 : Subjunction;
         if_subj : Subjunction;         -- a ⇐ b
         if_subj_v1 : Subjunction;         -- a ⇐ b
         where_subj : Subjunction;

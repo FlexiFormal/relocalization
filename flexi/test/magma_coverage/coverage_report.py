@@ -23,10 +23,10 @@ from flexi.parsing.magma import get_pgf
 
 COVERAGE_FILES = [
     BASE_PATH / p for p in [
-        'theorems_train.json',
         'definitions_train.json',
-        'theorems_test.json',
+        'theorems_train.json',
         'definitions_test.json',
+        'theorems_test.json',
     ]
 ]
 
@@ -48,6 +48,7 @@ def sentence_preprocess(sentence):
     if sentence.endswith('STATEMENT_ENUM_PLACEHOLDER'):
         sentence += ' .'
     sentence = sentence.replace('-', ' - ')
+    sentence = sentence.replace(':', ' : ')
     sentence = sentence.replace(', ', ' , ')
     if sentence.endswith('MathGroup $ ') or sentence.endswith('MathEquation $ '):
         sentence += '.'
