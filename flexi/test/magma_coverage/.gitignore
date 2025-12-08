@@ -1,2 +1,3 @@
 *.gz
 pre-lexicon.json
+coverage_history.json

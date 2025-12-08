@@ -54,18 +54,20 @@ def sentence_preprocess(sentence):
         sentence += '.'
     return sentence
 
-def process_sentence_shell(sentence):
+def process_sentence_shell(sentence, quiet=False):
     shell = get_shell()
     cmd = f'p -cat=Sentence "{sentence_preprocess(sentence)}"'
-    print(cmd)
+    if not quiet:
+        print(cmd)
     response = shell.handle_command(cmd)
     # print(response)
     return response
 
-def process_sentence_pgf(sentence):
+def process_sentence_pgf(sentence, quiet=False):
     pgf = get_pgf('CoverageTestGrammar')
     cmd = f'p -cat=Sentence "{sentence_preprocess(sentence)}"'
-    print(cmd)
+    if not quiet:
+        print(cmd)
     concrete = pgf.languages['CoverageTestGrammarEng']
     results = concrete.parse(sentence_preprocess(sentence), n=100)
     return list(results)
@@ -74,13 +76,13 @@ def process_sentence_pgf(sentence):
 OUTCOME = tuple[Literal['NONE', 'TOO MANY'] | int, int]   # number of readings, sentence length
 
 
-def process_sentence(sentence: str | list, is_train, separator, in_enum: bool = False) -> Iterable[OUTCOME]:
+def process_sentence(sentence: str | list, is_train, separator, in_enum: bool = False, quiet: bool = False) -> Iterable[OUTCOME]:
     if isinstance(sentence, list):
         is_plain_enum = all(isinstance(s, list) for s in sentence)
         for s in sentence:
             if isinstance(s, list):
                 for ss in s:
-                    yield from process_sentence(ss, is_train, separator + f'\033[48;2;255;0;255m+\033[0m', in_enum=True)
+                    yield from process_sentence(ss, is_train, separator + f'\033[48;2;255;0;255m+\033[0m', in_enum=True, quiet=quiet)
         if is_plain_enum:
             return
         else:  # enum is embedded in sentence
@@ -104,22 +106,24 @@ def process_sentence(sentence: str | list, is_train, separator, in_enum: bool = 
                 sentence_actual = sentence_actual[len(m.group(0)):].lstrip()
                 break
 
-    print(separator)
+    if not quiet:
+        print(separator)
+        print(f'Sentence: \033[48;2;255;255;0m{sentence_actual}\033[0m')
+
     sentence_len = sum(len(s) > 1 for s in sentence_actual.split())
 
-    print(f'Sentence: \033[48;2;255;255;0m{sentence_actual}\033[0m')
     try:
-        number = len(process_sentence_pgf(sentence_actual))
+        number = len(process_sentence_pgf(sentence_actual, quiet))
         if number < 100:
-            if is_train:
+            if is_train and not quiet:
                 print('\033[30;42m' + f'OK: {number} readings' + '\033[0m')
             yield number, sentence_len
         else:
-            if is_train:
+            if is_train and not quiet:
                 print('\033[30;41m' + f'ERROR: more than 100 readings' + '\033[0m')
             yield 'TOO MANY', sentence_len
     except pgf.ParseError as e:
-        if is_train or 'Unexpected token' in str(e):
+        if (not quiet) and (is_train or 'Unexpected token' in str(e)):
             print('\033[30;41m' + f'ERROR: {e}' + '\033[0m')
         yield 'NONE', sentence_len
 
