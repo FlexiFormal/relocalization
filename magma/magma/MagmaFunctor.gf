@@ -23,6 +23,7 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         -- identifiers
         Identifier = _Ident;
         Identifiers = _Ident;   -- can reuse type
+        MaybeIdentifiers = _Ident;
         IdentifierList = {tail: Str; head: Str };   
 
         -- declarations
@@ -44,6 +45,7 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         -- identifiers
         no_idents_sg = {s = ""; num = Sg};
         no_idents_pl = {s = ""; num = Pl};
+        cast_Identifiers_MaybeIdentifiers ids = ids;
         BaseIdentifierList id1 id2 = {head = id1.s; tail = id2.s};
         ConsIdentifierList id il = {head = id.s; tail = il.tail ++ "," ++ il.head};
         finalizeIdentifierList il = {
@@ -79,9 +81,9 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         define_nkind_as_nkind_v2 nk1 nk2 = mkS (mkCl (indef_nk nk1) (indef_nk nk2));
 
         plain_defcore dc = dc;
-        defcore_iff_stmt dc s = my_ssubjs dc _iff_subj s;
-        defcore_iff_stmt_v1 dc s = my_ssubjs dc _iff_subj_v1 s;
         defcore_if_stmt dc s = my_ssubjs dc _if_subj s;
+        defcore_if_stmt_v1 dc s = my_ssubjs dc _iff_subj s;
+        defcore_if_stmt_v2 dc s = my_ssubjs dc _iff_subj_v1 s;
 
         -- statements
         conj_stmt c s1 s2 = mkS c s1 s2;

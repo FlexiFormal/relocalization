@@ -33,6 +33,7 @@ abstract Magma = {
         -- identifiers
         Identifier;     -- "$f$", "$f, g$"
         Identifiers;    -- "$f$, $g$, and $h$"
+        MaybeIdentifiers; -- either `Identifiers` or ""
         IdentifierList; -- gets finalized into `Identifiers`
 
     fun
@@ -64,17 +65,18 @@ abstract Magma = {
         if_then_def_v1 : Statement -> Definition -> Sentence;
         
         -- identifiers
-        no_idents_sg : Identifiers;
-        no_idents_pl : Identifiers;
+        no_idents_sg : MaybeIdentifiers;
+        no_idents_pl : MaybeIdentifiers;
         BaseIdentifierList : Identifier -> Identifier -> IdentifierList;
         ConsIdentifierList : Identifier -> IdentifierList -> IdentifierList;
         finalizeIdentifierList : IdentifierList -> Identifiers;
         finalizeIdentifierList_v1 : IdentifierList -> Identifiers;
         finalizeIdentifierList_v2 : IdentifierList -> Identifiers;
         single_identifier : Identifier -> Identifiers;
+        cast_Identifiers_MaybeIdentifiers : Identifiers -> MaybeIdentifiers;
 
         -- kinds/named kinds
-        name_kind : Kind -> Identifiers -> NamedKind;
+        name_kind : Kind -> MaybeIdentifiers -> NamedKind;
         such_that_named_kind : NamedKind -> Statement -> NamedKind;
         -- Are with/where t synonyms for "such that"?
         -- Or do they act on statements/declarations, not NamedKinds?
@@ -211,11 +213,8 @@ abstract Magma = {
         define_ident_kind : Identifier -> Kind -> DefCore; -- we call `t` a `n`
 
         plain_defcore : DefCore -> Definition;
-        defcore_iff_stmt : DefCore -> Statement -> Definition;
-        defcore_iff_stmt_v1 : DefCore -> Statement -> Definition;
-        -- looking at real-world definitions, "if" could also be a variant of "iff"
-        -- even though the prescriptivist in me disagrees
-        -- I'll keep it separate to avoid generating "if" as a variant of "iff", which some people would consider wrong
         defcore_if_stmt : DefCore -> Statement -> Definition;
+        defcore_if_stmt_v1 : DefCore -> Statement -> Definition;
+        defcore_if_stmt_v2 : DefCore -> Statement -> Definition;
 }
 

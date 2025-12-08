@@ -13,7 +13,7 @@ abstract FreeArgs = Magma ** {
         PrePredicate;
 
     fun
-        prekind_to_kind : PreKind -> Kind;
+        cast_PreKind_Kind : PreKind -> Kind;
         property_prekind : Property -> PreKind -> PreKind;
         propertylist_prekind : PropertyList -> PreKind -> PreKind;
 
@@ -23,5 +23,5 @@ abstract FreeArgs = Magma ** {
         prekind_argmarker : PreKind -> ArgMarker -> ArgMarker;  -- "degree" -> "of" -> "of degree"
 
         transitive_predicate : PrePredicate -> Term -> Predicate;
-        intransitive_predicate : PrePredicate -> Predicate;
+        cast_PrePredicate_Predicate : PrePredicate -> Predicate;
 }
