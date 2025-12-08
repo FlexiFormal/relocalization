@@ -73,10 +73,11 @@ abstract Magma = {
         -- kinds/named kinds
         name_kind : Kind -> Identifiers -> NamedKind;
         such_that_named_kind : NamedKind -> Statement -> NamedKind;
-        -- idea: with/where aren't synonyms for "such that"
-        -- and act on statements/declarations, not NamedKinds
-        -- such_that_named_kind_v1 : NamedKind -> Statement -> NamedKind;
-        -- such_that_named_kind_v2 : NamedKind -> Statement -> NamedKind;
+        -- Are with/where t synonyms for "such that"?
+        -- Or do they act on statements/declarations, not NamedKinds?
+        -- my impression: A bit of both...
+        such_that_named_kind_v1 : NamedKind -> Statement -> NamedKind;
+        such_that_named_kind_v2 : NamedKind -> Statement -> NamedKind;
         nkind_that_is_property : NamedKind -> Polarity -> Property -> NamedKind;
 
         -- terms
@@ -186,6 +187,7 @@ abstract Magma = {
         define_nkind_as_nkind_v1 : NamedKind -> NamedKind -> DefCore;-- an `n1` is said to be a `n2`
         define_nkind_as_nkind_v2 : NamedKind -> NamedKind -> DefCore;-- an `n1` is a `n2`
         define_nkind_as_nkind_v3 : NamedKind -> NamedKind -> DefCore;-- we say that an `n1` is a `n2`
+        define_nkind_as_nkind_v4 : NamedKind -> NamedKind -> DefCore;-- we call an `n1` a `n2`
 
         define_nkind_prop : NamedKind -> Property -> DefCore;
         define_nkind_prop_v1 : NamedKind -> Property -> DefCore;
@@ -201,6 +203,7 @@ abstract Magma = {
         define_ident_nkind_v1 : Identifier -> NamedKind -> DefCore; -- `t` is said to be a `n`
         define_ident_nkind_v2 : Identifier -> NamedKind -> DefCore; -- `t` is a `n`
         define_ident_nkind_v3 : Identifier -> NamedKind -> DefCore; -- we say that `t` is a `n`
+        define_ident_nkind_v4 : Identifier -> NamedKind -> DefCore; -- we call `t` a `n`
 
         define_ident_kind : Identifier -> Kind -> DefCore; -- we call `t` a `n`
 

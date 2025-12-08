@@ -37,8 +37,8 @@ concrete MagmaEng of Magma = MagmaFunctor - [term_is_not_property_stmt] with
         finalizeIdentifierList_v2 il = { s = il.tail ++ ", and" ++ il.head; num = Pl };
         
         such_that_named_kind nk s = {cn = mkCN nk.cn (lin Adv {s = "such that" ++ s.s}); num = nk.num};
-        -- such_that_named_kind_v1 nk s = {cn = mkCN nk.cn (lin Adv {s = "where" ++ s.s}); num = nk.num};
-        -- such_that_named_kind_v2 nk s = {cn = mkCN nk.cn (lin Adv {s = "with" ++ s.s}); num = nk.num};
+        such_that_named_kind_v1 nk s = {cn = mkCN nk.cn (lin Adv {s = "where" ++ s.s}); num = nk.num};
+        such_that_named_kind_v2 nk s = {cn = mkCN nk.cn (lin Adv {s = "with" ++ s.s}); num = nk.num};
 
 
         existential_quantification_v1 = mkQuantification someSg_Det aPl_Det;
@@ -100,6 +100,7 @@ concrete MagmaEng of Magma = MagmaFunctor - [term_is_not_property_stmt] with
         define_nkind_as_nkind nk1 nk2 = mkS (mkCl (indef_nk nk1) (called_an_nkind_vp nk2));
         define_nkind_as_nkind_v1 nk1 nk2 = mkS (mkCl (indef_nk nk1) (said_vp_vp (mkVP (indef_nk nk2))));
         define_nkind_as_nkind_v3 nk1 nk2 = we_say_that (mkS (mkCl (indef_nk nk1) (indef_nk nk2)));
+        define_nkind_as_nkind_v4 nk1 nk2 = mkS (mkCl we_NP (mkVP (mkVP _call_V2 (indef_nk nk1)) (term_to_adv (indef_nk nk2))));
 
         define_nkind_prop nk p = mkS (mkCl (indef_nk nk) (mkVP (passiveVP _call_V2) (property_to_adv p)));
         define_nkind_prop_v1 nk p = mkS (mkCl (indef_nk nk) (said_vp_vp (mkVP p)));
@@ -116,6 +117,7 @@ concrete MagmaEng of Magma = MagmaFunctor - [term_is_not_property_stmt] with
         define_ident_nkind_v1 id nk = mkS (mkCl (symb id.s) (said_vp_vp (mkVP (indef_nk nk))));
         define_ident_nkind_v2 id nk = mkS (mkCl (symb id.s) (indef_nk nk));
         define_ident_nkind_v3 id nk = we_say_that (mkS (mkCl (symb id.s) (indef_nk nk)));
+        define_ident_as_nkind_v4 id nk2 = mkS (mkCl we_NP (mkVP (mkVP _call_V2 (symb id.s)) (term_to_adv (indef_nk nk2))));
 
         define_ident_kind id k = mkS (mkCl we_NP (mkVP (mkVP _call_V2 (symb id.s)) (term_to_adv (mkNP (indefart id.num) (kind2CN  k)))));
 
