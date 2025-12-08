@@ -31,6 +31,9 @@ concrete MagmaEng of Magma = MagmaFunctor - [term_is_not_property_stmt] with
         if_then_stmt_v3 s1 s2 = mkS (mkConj "when" "" singular) s1 s2;
         if_then_stmt_v4 s1 s2 = mkS (mkConj "if" "," singular) s1 s2;
 
+        if_then_def s d = {s = (mkS (mkConj "if" ", then" singular) s d).s ++ "."};
+        if_then_def_v1 s d = {s = (mkS (mkConj "if" "then" singular) s d).s ++ "."};
+
         statement_enum_as_stmt_v1 se = mkS (ParadigmsEng.mkAdv ":") se;  -- prepend colon - this is a bit of a hack, but works well (think "A = B iff: 1. ... 2. ...")
 
         -- oxford comma
