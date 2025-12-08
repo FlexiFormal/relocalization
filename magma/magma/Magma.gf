@@ -106,6 +106,7 @@ abstract Magma = {
         statement_enum_as_stmt_v1 : StatementEnum -> Statement;
         stmt_for_term : Statement -> Term -> Statement;     -- "φ for every x"
         stmt_for_term_v1 : Statement -> Term -> Statement;  -- "for every x, φ"
+        stmt_for_term_v2 : Statement -> Term -> Statement;  -- "for every x φ"
 
         term_has_nkind_stmt : Term -> NamedKind -> Statement;
         term_is_property_stmt : Term -> Property -> Statement;
@@ -149,6 +150,8 @@ abstract Magma = {
         assume_stmt_v1 : Statement -> TopStatement;
         assume_stmt_v2 : Statement -> TopStatement;
         assume_stmt_v3 : Statement -> TopStatement;
+        
+        note_that_stmt : Statement -> TopStatement;
 
         -- declarations
         let_kind_decl : Identifiers -> NamedKind -> Declaration;    -- "let k be an integer"; in practice, NamedKind should be anonymous, but Kind is too restricted (e.g. no "such that")

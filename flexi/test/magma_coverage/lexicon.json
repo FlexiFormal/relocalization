@@ -1526,6 +1526,26 @@
         ]
     },
     "N": {
+        "cohomology": [
+            "cohomology",
+            "cohomologies"
+        ],
+        "maximum": [
+            "maximum",
+            "maxima"
+        ],
+        "optimality": [
+            "optimality",
+            "optimalities"
+        ],
+        "wall": [
+            "wall",
+            "walls"
+        ],
+        "weight": [
+            "weight",
+            "weights"
+        ],
         "strategy": [
             "strategy",
             "strategies"
@@ -1789,6 +1809,10 @@
         "generation": [
             "generation",
             "generations"
+        ],
+        "diameter": [
+            "diameter",
+            "diameters"
         ],
         "category": [
             "category",
@@ -3486,6 +3510,10 @@
             "stabilizer",
             "stabilizers"
         ],
+        "stabiliser": [
+            "stabiliser",
+            "stabilisers"
+        ],
         "crossing": [
             "crossing",
             "crossings"
@@ -3630,8 +3658,8 @@
             "specialization",
             "specializations"
         ],
-        "refine": [
-            "refine",
+        "refinement": [
+            "refinement",
             "refinements"
         ],
         "moral": [
@@ -4769,10 +4797,6 @@
         "truth": [
             "truth",
             "truths"
-        ],
-        "A": [
-            "A",
-            "As"
         ],
         "Lie": [
             "Lie",
@@ -12434,6 +12458,9 @@
         ]
     },
     "A": {
+        "strict": [
+            "strict"
+        ],
         "large": [
             "large"
         ],
@@ -13847,6 +13874,12 @@
         "conical": [
             "conical"
         ],
+        "orthonormal": [
+            "orthonormal"
+        ],
+        "conic": [
+            "conic"
+        ],
         "bilipschitz": [
             "bilipschitz"
         ],
@@ -14680,9 +14713,6 @@
         ],
         "profitable": [
             "profitable"
-        ],
-        "weight": [
-            "weight"
         ],
         "grounded": [
             "grounded"
