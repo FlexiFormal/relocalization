@@ -71,7 +71,7 @@ def process_sentence_pgf(sentence):
     return list(results)
 
 
-OUTCOME = Literal['NONE', 'TOO MANY'] | int
+OUTCOME = tuple[Literal['NONE', 'TOO MANY'] | int, int]   # number of readings, sentence length
 
 
 def process_sentence(sentence: str | list, is_train, separator, in_enum: bool = False) -> Iterable[OUTCOME]:
@@ -105,6 +105,7 @@ def process_sentence(sentence: str | list, is_train, separator, in_enum: bool = 
                 break
 
     print(separator)
+    sentence_len = sum(len(s) > 1 for s in sentence_actual.split())
 
     print(f'Sentence: \033[48;2;255;255;0m{sentence_actual}\033[0m')
     try:
@@ -112,15 +113,15 @@ def process_sentence(sentence: str | list, is_train, separator, in_enum: bool = 
         if number < 100:
             if is_train:
                 print('\033[30;42m' + f'OK: {number} readings' + '\033[0m')
-            yield number
+            yield number, sentence_len
         else:
             if is_train:
                 print('\033[30;41m' + f'ERROR: more than 100 readings' + '\033[0m')
-            yield 'TOO MANY'
+            yield 'TOO MANY', sentence_len
     except pgf.ParseError as e:
         if is_train or 'Unexpected token' in str(e):
             print('\033[30;41m' + f'ERROR: {e}' + '\033[0m')
-        yield 'NONE'
+        yield 'NONE', sentence_len
 
 
 def main():
@@ -144,9 +145,14 @@ def main():
 
     print('Coverage results:')
     for file in COVERAGE_FILES:
-        ok = sum(1 for r in results[file] if isinstance(r, int))
+        ok = sum(1 for r in results[file] if isinstance(r[0], int))
         total = len(results[file])
         print(f'{file.name}: {ok} / {total} = {ok / total * 100:.2f} %')
+        for length in range(30):
+            ok_len = sum(1 for r in results[file] if isinstance(r[0], int) and r[1] == length)
+            total_len = sum(1 for r in results[file] if r[1] == length)
+            if total_len > 0:
+                print(f'  Length {length}: {ok_len} / {total_len} = {ok_len / total_len * 100:.2f} %')
 
 
 if __name__ == "__main__":
