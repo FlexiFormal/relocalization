@@ -10,7 +10,9 @@ abstract TestCoverageLexicon = FreeArgs ** {
         
         adjective_to_property : Adjective -> Property;
         hyphenated_adj_adj : Adjective -> Adjective -> Adjective;
+        prefix_arged_adj : Identifier -> Adjective -> Adjective;  -- "$ n $ - dimensional"
         
+        lex_argmark_at : ArgMarker;
         lex_argmark_by : ArgMarker;
         lex_argmark_of : ArgMarker;
         lex_argmark_from : ArgMarker;
@@ -22,6 +24,11 @@ abstract TestCoverageLexicon = FreeArgs ** {
         lex_with_respect_to_v1 : ArgMarker;
 
 -- Prekinds
+        noun_lex_cohomology : Noun;
+        noun_lex_maximum : Noun;
+        noun_lex_optimality : Noun;
+        noun_lex_wall : Noun;
+        noun_lex_weight : Noun;
         noun_lex_strategy : Noun;
         noun_lex_point : Noun;
         noun_lex_curvature : Noun;
@@ -88,6 +95,7 @@ abstract TestCoverageLexicon = FreeArgs ** {
         noun_lex_theory : Noun;
         noun_lex_definition : Noun;
         noun_lex_generation : Noun;
+        noun_lex_diameter : Noun;
         noun_lex_category : Noun;
         noun_lex_image : Noun;
         noun_lex_closure : Noun;
@@ -511,6 +519,7 @@ abstract TestCoverageLexicon = FreeArgs ** {
         noun_lex_increase : Noun;
         noun_lex_norm : Noun;
         noun_lex_stabilizer : Noun;
+        noun_lex_stabiliser : Noun;
         noun_lex_crossing : Noun;
         noun_lex_resolution : Noun;
         noun_lex_handle : Noun;
@@ -547,7 +556,7 @@ abstract TestCoverageLexicon = FreeArgs ** {
         noun_lex_factorial : Noun;
         noun_lex_include : Noun;
         noun_lex_specialization : Noun;
-        noun_lex_refine : Noun;
+        noun_lex_refinement : Noun;
         noun_lex_moral : Noun;
         noun_lex_Caputo : Noun;
         noun_lex_route : Noun;
@@ -832,7 +841,6 @@ abstract TestCoverageLexicon = FreeArgs ** {
         noun_lex_polarize : Noun;
         noun_lex_nmatrix : Noun;
         noun_lex_truth : Noun;
-        noun_lex_A : Noun;
         noun_lex_Lie : Noun;
         noun_lex_Pseudocover : Noun;
         noun_lex_hom : Noun;
@@ -2927,6 +2935,7 @@ abstract TestCoverageLexicon = FreeArgs ** {
         pp_lex_outperform : PrePredicate;
 
 -- Properties
+        prop_lex_strict : Adjective;
         prop_lex_large : Adjective;
         prop_lex_differentiable : Adjective;
         prop_lex_initial : Adjective;
@@ -3092,6 +3101,8 @@ abstract TestCoverageLexicon = FreeArgs ** {
         prop_lex_pointwise : Adjective;
         prop_lex_Priestley : Adjective;
         prop_lex_clopen : Adjective;
+        prop_lex_open : Adjective;
+        prop_lex_circular : Adjective;
         prop_lex_dependent : Adjective;
         prop_lex_basic : Adjective;
         prop_lex_boolean : Adjective;
@@ -3396,6 +3407,8 @@ abstract TestCoverageLexicon = FreeArgs ** {
         prop_lex_short : Adjective;
         prop_lex__algebraic : Adjective;
         prop_lex_conical : Adjective;
+        prop_lex_orthonormal : Adjective;
+        prop_lex_conic : Adjective;
         prop_lex_bilipschitz : Adjective;
         prop_lex_uncommitted : Adjective;
         prop_lex_split : Adjective;
@@ -3674,7 +3687,6 @@ abstract TestCoverageLexicon = FreeArgs ** {
         prop_lex_clockwise : Adjective;
         prop_lex_bosonic : Adjective;
         prop_lex_profitable : Adjective;
-        prop_lex_weight : Adjective;
         prop_lex_grounded : Adjective;
         prop_lex_skeptical : Adjective;
         prop_lex_localized : Adjective;

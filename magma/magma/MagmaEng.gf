@@ -94,6 +94,7 @@ concrete MagmaEng of Magma = MagmaFunctor - [term_is_not_property_stmt] with
         assume_stmt_v3 stmt = lin Utt {s = "suppose that" ++ stmt.s};
 
         note_that_stmt stmt = lin Utt {s = "note that" ++ stmt.s};
+        note_that_stmt_v1 stmt = lin Utt {s = "observe that" ++ stmt.s};
 
         -- definitions
         define_nkind_as_nkind nk1 nk2 = mkS (mkCl (indef_nk nk1) (called_an_nkind_vp nk2));

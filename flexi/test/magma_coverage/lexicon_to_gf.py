@@ -17,7 +17,9 @@ abstract TestCoverageLexicon = FreeArgs ** {
         
         adjective_to_property : Adjective -> Property;
         hyphenated_adj_adj : Adjective -> Adjective -> Adjective;
+        prefix_arged_adj : Identifier -> Adjective -> Adjective;  -- "$ n $ - dimensional"
         
+        lex_argmark_at : ArgMarker;
         lex_argmark_by : ArgMarker;
         lex_argmark_of : ArgMarker;
         lex_argmark_from : ArgMarker;
@@ -44,7 +46,9 @@ concrete TestCoverageLexiconEng of TestCoverageLexicon = FreeArgsEng ** open Par
         
         adjective_to_property adj = mkAP adj;
         hyphenated_adj_adj adj1 adj2 = lin A {s = adj_table_prefix (adj1.s ! AAdj Posit Nom) adj2.s; isPre = adj2.isPre; isMost = adj2.isMost};
+        prefix_arged_adj id adj = lin A {s = adj_table_prefix (id.s ++ " - ") adj.s; isPre = adj.isPre; isMost = adj.isMost};
 
+        lex_argmark_at = mkPrep "at";
         lex_argmark_by = mkPrep "by";
         lex_argmark_of = mkPrep "of";
         lex_argmark_from = mkPrep "from";
