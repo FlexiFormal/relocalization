@@ -11,12 +11,14 @@ def get_percentage(d):
     return ok / total * 100
 
 def get_file_percentages(filename):
+    print('\n'.join([r['hash'] + ' ' + str(get_percentage(r['results'][filename])) for r in results]))
     return [get_percentage(r['results'][filename]) for r in results]
 
 
 for filename in ['definitions_train.json', 'theorems_train.json', 'definitions_test.json', 'theorems_test.json']:
     percentages = get_file_percentages(filename)
     plt.plot(percentages, label=filename)
+
 
 plt.legend()
 plt.show()

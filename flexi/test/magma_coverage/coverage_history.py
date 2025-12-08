@@ -29,7 +29,10 @@ for h in hashes:
     run(['git', '-C', str(coverage_report.REPO_PATH), 'checkout', str(magma_me)])
 
     for d in ['combinations', 'magma', 'formulae', 'other']:
-        run(['cp', '-r', str(magma_tmp / d), str(magma_me / d)])
+        run(['cp', '-r', str(magma_tmp / d), str(magma_me)])
+
+    for d in ['FreeArgs.gf', 'FreeArgsFunctor.gf', 'FreeArgsEng.gf']:
+        run(['cp', str(magma_tmp / 'lexica' / d), str(magma_me / 'lexica' / d)])
 
     get_pgf.cache_clear()
 

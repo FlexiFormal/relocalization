@@ -63,7 +63,8 @@ concrete MagmaEng of Magma = MagmaFunctor - [term_is_not_property_stmt] with
         term_is_not_property_stmt_v1 t p = mkS negativePol (mkCl t.np p);
 
         stmt_for_term stmt term = lin S {s = stmt.s ++ (PrepNP (mkPrep "for") term.np).s};
-        stmt_for_term_v1 stmt term = lin S {s = (PrepNP (mkPrep "for") term.np).s ++ stmt.s};
+        stmt_for_term_v1 stmt term = lin S {s = (PrepNP (mkPrep "for") term.np).s ++ "," ++ stmt.s};
+        stmt_for_term_v2 stmt term = lin S {s = (PrepNP (mkPrep "for") term.np).s ++ stmt.s};
 
         therefore_stmt stmt = lin Utt {s = "therefore" ++ "," ++ stmt.s};
         therefore_stmt_v1 stmt = lin Utt {s = "therefore" ++ stmt.s};
