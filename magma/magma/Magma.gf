@@ -99,6 +99,8 @@ abstract Magma = {
         universal_quantification_v3 : Quantification;    -- each
         definite_quantification : Quantification;        -- the
 
+        nonexistential_quantification : Quantification; -- no
+
         -- properties
         BasePropertyList : Property -> Property -> PropertyList;
         ConsPropertyList : Property -> PropertyList -> PropertyList;

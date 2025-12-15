@@ -4,7 +4,7 @@ incomplete concrete FreeArgsFunctor of FreeArgs = MagmaFunctor ** open MagmaUtil
         PreKind = CN;
         PrePredicate = V;
     lin
-        cast_PreKind_Kind pk = mkKind pk;
+        prekind_to_kind pk = mkKind pk;
         property_prekind pp pk = mkCN pp pk;
         kind_with_arg k am t = {
             cn = k.cn;

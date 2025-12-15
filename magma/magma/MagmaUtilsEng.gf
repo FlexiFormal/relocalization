@@ -6,6 +6,9 @@ resource MagmaUtilsEng = MagmaUtils - [ my_ssubjs ] with (Syntax = SyntaxEng) **
 
         all_Det = lin Det (mkDeterminer plural "all");
 
+        noSg_Det = lin Det (mkDeterminer singular "no");
+        noPl_Det = lin Det (mkDeterminer plural "no");
+
         _iff_subj: Subj = mkSubj "if and only if";
         _iff_subj_v1: Subj = mkSubj "iff";
         _if_subj: Subj = mkSubj "if";

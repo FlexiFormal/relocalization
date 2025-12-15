@@ -13,7 +13,7 @@ abstract FreeArgs = Magma ** {
         PrePredicate;
 
     fun
-        cast_PreKind_Kind : PreKind -> Kind;
+        prekind_to_kind : PreKind -> Kind;
         property_prekind : Property -> PreKind -> PreKind;
         propertylist_prekind : PropertyList -> PreKind -> PreKind;
 

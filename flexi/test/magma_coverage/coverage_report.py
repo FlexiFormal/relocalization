@@ -5,6 +5,8 @@ from typing import Literal, Iterable
 # only the first N paragraphs from each file are considered
 NUMBER_OF_PARAGRAPHS = 1000
 
+MAX_READINGS = 10000
+
 BASE_PATH = Path(__file__).parent
 REPO_PATH = BASE_PATH.parent.parent.parent
 
@@ -63,14 +65,24 @@ def process_sentence_shell(sentence, quiet=False):
     # print(response)
     return response
 
+
+BY_LENGTH = []
+
+
 def process_sentence_pgf(sentence, quiet=False):
     pgf = get_pgf('CoverageTestGrammar')
     cmd = f'p -cat=Sentence "{sentence_preprocess(sentence)}"'
     if not quiet:
         print(cmd)
     concrete = pgf.languages['CoverageTestGrammarEng']
-    results = concrete.parse(sentence_preprocess(sentence), n=100)
-    return list(results)
+    worked = False
+    try:
+        results = list(concrete.parse(sentence_preprocess(sentence), n=MAX_READINGS))
+        worked = bool(results)
+    finally:
+        length = sum((s.isalpha() or len(s) > 1) for s in sentence_preprocess(sentence).split())
+        BY_LENGTH.append(f'{length} {worked} {sentence}')
+    return results
 
 
 OUTCOME = tuple[Literal['NONE', 'TOO MANY'] | int, int]   # number of readings, sentence length
@@ -110,17 +122,17 @@ def process_sentence(sentence: str | list, is_train, separator, in_enum: bool = 
         print(separator)
         print(f'Sentence: \033[48;2;255;255;0m{sentence_actual}\033[0m')
 
-    sentence_len = sum(len(s) > 1 for s in sentence_actual.split())
+    sentence_len = sum((s.isalpha() or len(s) > 1) for s in sentence_preprocess(sentence_actual).split())
 
     try:
-        number = len(process_sentence_pgf(sentence_actual, quiet))
-        if number < 100:
-            if is_train and not quiet:
+        number = len(set(process_sentence_pgf(sentence_actual, quiet)))
+        if number < MAX_READINGS:
+            if True or is_train and not quiet:
                 print('\033[30;42m' + f'OK: {number} readings' + '\033[0m')
             yield number, sentence_len
         else:
             if is_train and not quiet:
-                print('\033[30;41m' + f'ERROR: more than 100 readings' + '\033[0m')
+                print('\033[30;41m' + f'ERROR: >= {MAX_READINGS} readings' + '\033[0m')
             yield 'TOO MANY', sentence_len
     except pgf.ParseError as e:
         if (not quiet) and (is_train or 'Unexpected token' in str(e)):
@@ -137,6 +149,8 @@ def main():
 
         with file.open() as f:
             paragraphs = json.load(f)
+
+        assert len(paragraphs) > NUMBER_OF_PARAGRAPHS, f'File {file} has {len(paragraphs)} paragraphs, more than the allowed {NUMBER_OF_PARAGRAPHS}'
 
         for paranum, para in enumerate(paragraphs[:NUMBER_OF_PARAGRAPHS]):
             print(f'Processing {para["paper"]}')
@@ -157,6 +171,15 @@ def main():
             total_len = sum(1 for r in results[file] if r[1] == length)
             if total_len > 0:
                 print(f'  Length {length}: {ok_len} / {total_len} = {ok_len / total_len * 100:.2f} %')
+
+    with open('/tmp/coverage_results.json', 'w') as f:
+        json.dump({
+            file.name: results[file]
+            for file in COVERAGE_FILES
+        }, f, indent=2)
+
+    with open('/tmp/coverage_by_length.txt', 'w') as f:
+        f.write('\n'.join(BY_LENGTH))
 
 
 if __name__ == "__main__":

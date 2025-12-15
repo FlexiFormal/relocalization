@@ -78,7 +78,7 @@ Here is your input:
         return None
 
 
-nlp = stanza.Pipeline(lang='en', processors='tokenize,mwt,pos')
+nlp = stanza.Pipeline(lang='en', processors='tokenize,mwt,pos,lemma')
 
 non_technical_terms = set()
 
