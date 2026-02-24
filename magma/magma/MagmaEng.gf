@@ -44,7 +44,7 @@ concrete MagmaEng of Magma = MagmaFunctor - [term_is_not_property_stmt] with
         such_that_named_kind_v2 nk s = {cn = mkCN nk.cn (lin Adv {s = "with" ++ s.s}); num = nk.num};
 
 
-        existential_quantification_v1 = mkQuantification someSg_Det aPl_Det;
+        indefinite_quantification_v1 = mkQuantification someSg_Det aPl_Det;
         universal_quantification = mkQuantification every_Det all_Det;
         universal_quantification_v1 = mkQuantification all_Det all_Det;
         universal_quantification_v2 = mkQuantification (mkDeterminer singular "any") (mkDeterminer plural "any");

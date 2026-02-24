@@ -67,7 +67,7 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         it_term = {np = it_NP; just_formula = False};
 
         -- quantifications
-        existential_quantification = mkQuantification aSg_Det aPl_Det;
+        indefinite_quantification = mkQuantification aSg_Det aPl_Det;
 
         -- universal_quantification_sg = ;
 

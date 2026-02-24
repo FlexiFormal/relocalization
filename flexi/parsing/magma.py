@@ -97,7 +97,7 @@ class MagmaGrammar:
                 # print(tree)
                 try:
                     trees = gfxml.parse_mtext_contents(
-                        lambda s: self.parse_to_aststr(s, category='Stmt'),
+                        lambda s: self.parse_to_aststr(s, category='Statement'),
                         tree
                     )
                 except ParseError as e:

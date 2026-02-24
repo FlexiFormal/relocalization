@@ -90,8 +90,10 @@ abstract Magma = {
         it_term : Term;    -- "it". This is tricky for gendered languages... We'd need to anaphor resolution to get the gender right in recontextualizations/translations...
 
         -- quantifications
-        existential_quantification : Quantification;
-        existential_quantification_v1 : Quantification;  -- some
+        -- indefinite articles like 'a' may be existential or universal
+        -- depending on the context (see e.g. discourse representation theory)
+        indefinite_quantification : Quantification;
+        indefinite_quantification_v1 : Quantification;  -- some
 
         universal_quantification : Quantification;       -- every for sg, all for pl
         universal_quantification_v1 : Quantification;    -- all for sg, all for pl
