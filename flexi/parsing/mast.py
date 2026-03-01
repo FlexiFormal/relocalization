@@ -14,11 +14,12 @@ from flexi.parsing.gfxml import GfXmlNode, GfNode, XmlNode, XmlText
 
 
 class GfSymb(str):
-    def __eq__(self, other) -> bool:
-        if not isinstance(other, str):
-            return False
-        return str.__eq__(self, other) or \
-            (other.startswith('regex:') and re.fullmatch(self, other[len('regex:'):]) is not None)
+    pass
+    # def __eq__(self, other) -> bool:
+    #     if not isinstance(other, str):
+    #         return False
+    #     return str.__eq__(self, other) or \
+    #         (other.startswith('regex:') and re.fullmatch(self, other[len('regex:'):]) is not None)
 
 
 class MAst:

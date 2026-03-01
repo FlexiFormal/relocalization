@@ -1,7 +1,5 @@
 import abc
 import dataclasses
-from copy import deepcopy
-from typing import Iterable
 
 
 class SimpleType(abc.ABC):
@@ -28,6 +26,10 @@ class SimpleType(abc.ABC):
         Subtyping relation.
         """
 
+    @abc.abstractmethod
+    def result_type(self) -> 'AtomicType':
+        ...
+
 
 
 @dataclasses.dataclass
@@ -46,6 +48,9 @@ class Arrow(SimpleType):
             return isinstance(other, UnitType)
         return other.a <= self.a and self.b <= other.b
 
+    def result_type(self) -> 'AtomicType':
+        return self.b.result_type()
+
 
 @dataclasses.dataclass
 class AtomicType(SimpleType):
@@ -60,226 +65,149 @@ class AtomicType(SimpleType):
     def __le__(self, other) -> bool:
         return self == other or isinstance(other, UnitType)
 
+    def result_type(self) -> 'AtomicType':
+        return self
+
 
 class UnitType(SimpleType):
-    """ More of a placeholder (or unspecified type that shouldn't be checked) to be honest... """
+    """
+    We probably don't need this, but I had it already from the old implementation...
+    """
     def __eq__(self, other):
         return isinstance(other, UnitType)
 
     def __str__(self):
-        return '?'
+        return '⊤'
 
     def __le__(self, other):
         return isinstance(other, UnitType)
 
 
 class Typ:
-    Any = UnitType()
     T = AtomicType('ο')
     E = AtomicType('ι')
     ET = E ** T
     ET_T = ET ** T
+    TTT = T ** (T ** T)
+    TT = T ** T
+    EET = E ** (E ** T)
+    EE = E ** E
+    EEE = E ** (E ** E)
 
 
-class QLF(abc.ABC):
-    """ Quasi-Logical Formula """
-    typ: SimpleType
+##############
+# Logic
+# (a sort of higher-order logic implemented in a simply-typed lambda calculus)
+##############
 
-    @abc.abstractmethod
-    def children(self) -> Iterable[QLF]:
-        ...
-
-    @abc.abstractmethod
-    def with_substitution(self, var: Var, val: QLF) -> QLF:
-        """
-        Returns a copy of this formula with all occurrences of `var` replaced by `val`.
-        Currently just a placeholder implementation.
-        More work is needed to handle shadowing correctly for DRSs.
-        """
-
-
-class Var(QLF):
+class Expr:
     """ abstract """
-
-    def children(self) -> Iterable[QLF]:
-        yield from ()
-
-    def with_substitution(self, var: Var, val: QLF) -> QLF:
-        return deepcopy(self) if self != var else val
-
-
-class NewVar(Var):
-    counter = 0
-
     def __init__(self, typ: SimpleType):
-        self.no = NewVar.counter
-        NewVar.counter += 1
         self.typ = typ
 
-    def __str__(self):
-        return f'X{self.no}'
 
+class Apply(Expr):
+    __match_args__ = ('func', 'arg')
 
-class NamedVar(Var):
-    def __init__(self, name: str, typ: SimpleType, is_semantic: bool):
-        self.name = name
-        self.typ = typ
-        self.is_semantic = is_semantic   # $n$ vs $\nvar$
-
-    def __str__(self):
-        return self.name
-
-
-class Const(QLF):
-    def __init__(self, name: str, typ: SimpleType):
-        self.name = name
-        self.typ = typ
-
-    def __str__(self):
-        return self.name
-
-    def children(self) -> Iterable[QLF]:
-        yield from ()
-
-    def with_substitution(self, var: Var, val: QLF) -> QLF:
-        return deepcopy(self)
-
-
-class Lambda(QLF):
-    def __init__(self, var: Var, body: QLF):
-        self.var = var
-        self.body = body
-        self.typ = var.typ.to(body.typ)
+    def __init__(self, func: Expr, arg: Expr):
+        assert isinstance(func.typ, Arrow) and arg.typ <= func.typ.a
+        super().__init__(func.typ.b)
+        self.func = func
+        self.arg = arg
 
     @classmethod
-    def multi(cls, *args: Var, body: QLF) -> Lambda:
-        for var in reversed(args):
-            body = cls(var, body)
-        return body
+    def multi(cls, func: Expr, *args: Expr) -> 'Apply':
+        result = func
+        for arg in args:
+            result = cls(result, arg)
+        return result
 
-    def children(self) -> Iterable[QLF]:
-        yield self.var
-        yield self.body
+    def __str__(self):
+        match self:
+            case Apply(Apply(c, a), b) if c in [
+                Const.Implication, Const.Equivalence, Const.Conjunction, Const.Disjunction
+            ]:
+                assert isinstance(c, Const)
+                return f'({a} {c.name} {b})'
+        return f'({self.func} {self.arg})'
+
+
+class Var(Expr):
+    __match_args__ = ('name',)
+    _freshvar_counter = 1
+
+    def __init__(self, name: str, typ: SimpleType, is_semantic: bool):
+        super().__init__(typ)
+        self.name = name
+        self.is_semantic = is_semantic
+
+    @classmethod
+    def fresh(cls, typ: SimpleType) -> 'Var':
+        name = f'?{cls._freshvar_counter}'
+        cls._freshvar_counter += 1
+        # should we mark fresh variables too?
+        return cls(name, typ, is_semantic=False)
+
+    def __str__(self):
+        return self.name
+
+    def __eq__(self, other) -> bool:
+        if isinstance(other, Var) and self.name == other.name:
+            assert self.typ == other.typ
+            return True
+        return False
+
+
+class Const(Expr):
+    __match_args__ = ('name',)
+
+    Forall: 'Const'
+    Exists: 'Const'
+    Negation: 'Const'
+    Implication: 'Const'
+    Equivalence: 'Const'
+    Conjunction: 'Const'
+    Disjunction: 'Const'
+    Truth: 'Const'
+
+    def __init__(self, name: str, typ: SimpleType):
+        super().__init__(typ)
+        self.name = name
+
+    def __str__(self):
+        return self.name
+
+    def __eq__(self, other) -> bool:
+        if isinstance(other, Const) and self.name == other.name:
+            assert self.typ == other.typ
+            return True
+        return False
+
+
+Const.Forall = Const('∀', Typ.ET_T)
+Const.Exists = Const('∃', Typ.ET_T)
+Const.Negation = Const('¬', Typ.TT)
+Const.Implication = Const('⇒', Typ.TTT)
+Const.Equivalence = Const('⇔', Typ.TTT)
+Const.Conjunction = Const('∧', Typ.TTT)
+Const.Disjunction = Const('∨', Typ.TTT)
+Const.Truth = Const('T', Typ.T)
+
+
+
+class Lambda(Expr):
+    __match_args__ = ('var', 'body',)
+    def __init__(self, var: 'Var', body: Expr):
+        super().__init__(var.typ.to(body.typ))
+        self.var = var
+        self.body = body
 
     def __str__(self):
         return f'(λ{self.var}.{self.body})'
 
-    def with_substitution(self, var: Var, val: QLF) -> QLF:
-        if self.var == var:
-            return deepcopy(self)
-        else:
-            return Lambda(self.var, self.body.with_substitution(var, val))
 
-class Apply(QLF):
-    def __init__(self, func: QLF, arg: QLF):
-        self.func = func
-        self.arg = arg
-        if isinstance(func.typ, Arrow) and arg.typ <= func.typ.a:
-            # if arg.typ is unit type, we use it more as a placeholder than anything else...
-            self.typ = func.typ.b
-        elif isinstance(func.typ, UnitType) or (isinstance(func.typ, Arrow) and isinstance(arg.typ, UnitType)):
-            self.typ = UnitType()
-        else:
-            raise TypeError(f'Cannot apply {func} : {func.typ} to {arg} : {arg.typ}')
-
-    def children(self) -> Iterable[QLF]:
-        yield self.func
-        yield self.arg
-
-    @classmethod
-    def multi(cls, func: QLF, *args: QLF) -> Apply:
-        for arg in args:
-            func = cls(func, arg)
-        return func
-
-    def __str__(self):
-        return f'({self.func} {self.arg})'
-
-    def force_single_beta_reduction(self) -> QLF:
-        assert isinstance(self.func, Lambda), f'Cannot force beta reduction of non-lambda {self.func}'
-        var = self.func.var
-        val = self.arg
-        value = deepcopy(self.func.body)
-        return value.with_substitution(var, val)
-
-    def with_substitution(self, var: Var, val: QLF) -> QLF:
-        return Apply(self.func.with_substitution(var, val), self.arg.with_substitution(var, val))
-
-class Seq(QLF):
-    """ for stex argument sequences in formulae (corresponding to MSeq in MAst) """
-    def __init__(self, *args: QLF):
-        self.args = args
-        self.typ = Typ.Any
-
-    def __str__(self):
-        return ', '.join(str(arg) for arg in self.args)
-
-    def children(self) -> Iterable[QLF]:
-        yield from self.args
-
-    def with_substitution(self, var: Var, val: QLF) -> QLF:
-        return Seq(*[arg.with_substitution(var, val) for arg in self.args])
-
-
-class DRS(QLF):
-    def __init__(self, referents: list[Var], conditions: list[QLF]):
-        self.referents = referents
-        self.conditions = conditions
-        self.typ = Typ.T
-
-    def __str__(self):
-        refs = ', '.join(str(r) for r in self.referents)
-        conds = ', '.join(str(c) for c in self.conditions)
-        return f'[{refs} | {conds}]'
-
-    def children(self) -> Iterable[QLF]:
-        yield from self.referents
-        yield from self.conditions
-
-    def with_substitution(self, var: Var, val: QLF) -> QLF:
-        if var in self.referents:
-            return deepcopy(self)
-        else:
-            return DRS(self.referents, [c.with_substitution(var, val) for c in self.conditions])
-
-
-class BinConnective(QLF):
-    def __init__(self, left: QLF, right: QLF, symbol: str):
-        self.left = left
-        self.right = right
-        if left.typ != Typ.T or right.typ != Typ.T:
-            raise TypeError(f'Cannot form binary connective {symbol!r} of {left} : {left.typ} and {right} : {right.typ}')
-        self.typ = Typ.T
-        self.symbol = symbol
-
-    def __str__(self):
-        return f'({self.left} {self.symbol} {self.right})'
-
-    def children(self) -> Iterable[QLF]:
-        yield self.left
-        yield self.right
-
-    def with_substitution(self, var: Var, val: QLF) -> QLF:
-        return type(self)(self.left.with_substitution(var, val), self.right.with_substitution(var, val), self.symbol)
-
-class Iff(BinConnective):
-    def __init__(self, left: QLF, right: QLF):
-        super().__init__(left, right, '⇔')
-
-
-class And(BinConnective):
-    def __init__(self, left: QLF, right: QLF):
-        super().__init__(left, right, '∧')
-
-class TRUE(QLF):
-    def __init__(self):
-        self.typ = Typ.T
-
-    def __str__(self):
-        return '⊤'
-
-    def children(self) -> Iterable[QLF]:
-        yield from ()
-
-    def with_substitution(self, var: Var, val: QLF) -> QLF:
-        return deepcopy(self)
+if __name__ == '__main__':
+    # some quick tests for the logic implementation
+    x = Var('x', Typ.T, is_semantic=True)
+    y = Var('y', Typ.T, is_semantic=True)
+    print(Apply.multi(Const.Implication, x, y))

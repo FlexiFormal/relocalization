@@ -1,7 +1,7 @@
 import sys
 from pathlib import Path
 
-from flexi.semconstr.conversion import convert_1
+from flexi.semconstr.conversion import convert, Context
 
 sys.path.append(str(Path(__file__).parent.parent))
 
@@ -20,7 +20,8 @@ for input_file in [
             for mast in sentence:
                 print(mast)
                 try:
-                    print('RESULT:\n', convert_1(mast))
+                    decls, r = convert(mast, Context())
+                    print('RESULT:\n', decls, str(r))
                 except Exception as e:
                     # print error and stack trace, but continue with the next sentence
                     print(f'Error converting sentence {i}: {e}')
