@@ -22,6 +22,9 @@ for input_file in [
                 try:
                     decls, r = convert(mast, Context())
                     print('RESULT:\n', decls, str(r))
+                    print('SIMPLIFIED:')
+                    print(str(r.beta_reduced()))
+                    print(str(r.simplified()))
                 except Exception as e:
                     # print error and stack trace, but continue with the next sentence
                     print(f'Error converting sentence {i}: {e}')

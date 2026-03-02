@@ -105,6 +105,55 @@ class Expr:
     def __init__(self, typ: SimpleType):
         self.typ = typ
 
+    def beta_reduced(self) -> 'Expr':
+        if isinstance(self, Apply):
+            func = self.func.beta_reduced()
+            arg = self.arg.beta_reduced()
+            if isinstance(func, Lambda):
+                return func.body.substituted(func.var, arg).beta_reduced()
+            else:
+                return Apply(func, arg)
+        elif isinstance(self, Lambda):
+            return Lambda(self.var, self.body.beta_reduced())
+        else:  # constant or variable
+            return self
+
+    def substituted(self, var: 'Var', value: 'Expr') -> 'Expr':
+        if self == var:
+            return value
+        elif isinstance(self, Apply):
+            return Apply(self.func.substituted(var, value), self.arg.substituted(var, value))
+        elif isinstance(self, Lambda):
+            if self.var == var:
+                return self  # variable is bound -> do not recurse
+            else:
+                return Lambda(self.var, self.body.substituted(var, value))
+        else:  # constant or other variable
+            return self
+
+    def simplified(self) -> 'Expr':
+        expr = self.beta_reduced()
+        changed_something: bool = True
+
+        def _helper(e: Expr) -> Expr:
+            nonlocal changed_something
+            if isinstance(e, Apply):
+                match e:
+                    case Apply(Apply(Const.Conjunction, a), Const.Truth) | Apply(Apply(Const.Conjunction, Const.Truth), a):
+                        changed_something = True
+                        return a
+                return Apply(_helper(e.func), _helper(e.arg))
+            elif isinstance(e, Lambda):
+                return Lambda(e.var, _helper(e.body))
+            else:
+                return e
+
+        while changed_something:
+            changed_something = False
+            expr = _helper(expr)
+
+        return expr
+
 
 class Apply(Expr):
     __match_args__ = ('func', 'arg')
@@ -175,6 +224,8 @@ class Const(Expr):
         self.name = name
 
     def __str__(self):
+        if self.name.startswith('http://') or self.name.startswith('https://') and '&s=' in self.name:
+            return f'<...&s={self.name.split("&s=")[-1]}>'
         return self.name
 
     def __eq__(self, other) -> bool:
