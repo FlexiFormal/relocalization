@@ -22,6 +22,7 @@ grammar = MagmaGrammar('EnglishFtmlTestGrammar', 'Eng')
 with wb.new_workbench(result_file, 'Parsing example sentences'):
     for input_file in [
         TEST_FILE_DIR / 'ftml' / 'positive-integer.en.html',
+        TEST_FILE_DIR / 'ftml' / 'quiver-walk.en.html',
     ] if len(sys.argv) == 1 else [Path(arg) for arg in sys.argv[1:]]:
 
         wb.set_default_grammar(grammar)

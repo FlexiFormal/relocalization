@@ -1,6 +1,7 @@
 import dataclasses
 import functools
 import re
+from typing import TypeAlias
 
 from flexi.parsing.mast import MAst, G, TermDef, Formula, M, MSeq, MI, MT
 from flexi.semconstr.logic import Const, Var, Typ, Expr, Apply, Lambda, SimpleType
@@ -104,11 +105,17 @@ class FormulaMeaning(OtherMeaning):
         )
 
 
-def convert(m: MAst, ctx: Context) -> tuple[list[Declaration], Expr | OtherMeaning]:
+ConvMeaning: TypeAlias = tuple[list[Declaration], Expr | OtherMeaning]
+
+
+def convert(m: MAst, ctx: Context) -> ConvMeaning:
     """
     Notes on types:
         NamedKind: a pair of identifiers and kind (see `NamedKindMeaning`).
         Term: (ι ⟶ o) ⟶ o (standard type raising for noun phrases)
+
+    Other notes:
+        Definitions: Translated into propositions, which could be considered "defining axioms" I guess...
     """
     conv = functools.partial(convert, ctx=ctx)
 
@@ -118,44 +125,20 @@ def convert(m: MAst, ctx: Context) -> tuple[list[Declaration], Expr | OtherMeani
             return [], _convert_lex_helper(fun)
 
         match (fun, list(m)):
-            case ('stmt_sentence', [stmt]):
-                return conv(stmt)
+            case ('stmt_sentence' | 'def_sentence' | 'plain_defcore', [a]):
+                return conv(a)
             case ('formula_stmt', [formula]):
                 d, f = conv(formula)
                 assert isinstance(f, FormulaMeaning)
                 return d, f.formula
             case ('subj_stmt' | 'conj_stmt', [subj, a, b]):
-                s = strip_variant_suffix(subj.value)
-                a_decls, aa = conv(a)
-                b_decls, bb = conv(b)
-                if s == 'iff_subj':
-                    return [], decl_merge(
-                        existential_to_universal(a_decls),
-                        Apply.multi(Const.Equivalence, aa, decl_merge(b_decls, bb))
-                    )
-                raise NotImplementedError(f'Conversion for subj_stmt/conj_stmt with subj {s} not implemented yet')
+                return _convert_connective_application(subj.value, conv(a), conv(b))
             case ('term_is_property_stmt', [term, property]):
                 term_decls, t = conv(term)
                 property_decls, p = conv(property)
                 return term_decls + property_decls, Apply(t, p)
             case ('quantified_nkind', [quant, nkind]):
-                quant_map = {
-                    'indefinite_quantification': LQ.exists,
-                    'universal_quantification': LQ.forall,
-                }
-                quant_name = strip_variant_suffix(quant.value)
-                if quant_name not in quant_map:
-                    raise NotImplementedError(f'Conversion for quantifier {quant_name} not implemented yet')
-                extra_decls, nk = conv(nkind)
-                assert isinstance(nk, NamedKindMeaning)
-                p = Var.fresh(Typ.ET)
-                body: Expr = Const.Truth
-                for e in nk.identifiers:
-                    body = Apply.multi(Const.Conjunction, Apply(p, e), body)
-                return (
-                    [Declaration(quant_map[quant_name], v, Apply(nk.kind, v)) for v in nk.identifiers] + extra_decls,
-                    Lambda(p, body)
-                )
+                return _convert_quantify_nkind(quant.value, conv(nkind))
             case ('name_kind', [kind, maybe_identifiers]):
                 decls, k = conv(kind)
                 decls2, ids = conv(maybe_identifiers)
@@ -171,6 +154,12 @@ def convert(m: MAst, ctx: Context) -> tuple[list[Declaration], Expr | OtherMeani
                 decls, f = conv(math)
                 assert isinstance(f, FormulaMeaning)
                 return decls, f.to_identifiers_meaning()
+            case ('defcore_if_stmt', [core, stmt]):
+                return _convert_connective_application('iff_subj', conv(core), conv(stmt))
+            case ('define_nkind_prop', [nkind, property]):
+                qnk_decls, qnk = _convert_quantify_nkind('indefinite_quantification', conv(nkind))
+                property_decls, p = conv(property)
+                return qnk_decls + property_decls, Apply(qnk, p)
     elif isinstance(m, TermDef):
         if m.wrapfun == 'wrapped_property':
             typ = Typ.ET
@@ -196,6 +185,37 @@ def convert(m: MAst, ctx: Context) -> tuple[list[Declaration], Expr | OtherMeani
 
     raise NotImplementedError(f'Conversion for MAst {m} not implemented yet')
 
+
+def _convert_connective_application(connective_fun: str, a: ConvMeaning, b: ConvMeaning) -> ConvMeaning:
+    s = strip_variant_suffix(connective_fun)
+    a_decls, aa = a
+    b_decls, bb = b
+    if s == 'iff_subj':
+        return [], decl_merge(
+            existential_to_universal(a_decls),
+            Apply.multi(Const.Equivalence, aa, decl_merge(b_decls, bb))
+        )
+    raise NotImplementedError(f'Conversion for {s} application not implemented yet')
+
+
+def _convert_quantify_nkind(quant_fun: str, nkind: ConvMeaning) -> ConvMeaning:
+    quant_map = {
+        'indefinite_quantification': LQ.exists,
+        'universal_quantification': LQ.forall,
+    }
+    quant_name = strip_variant_suffix(quant_fun)
+    if quant_name not in quant_map:
+        raise NotImplementedError(f'Conversion for quantifier {quant_name} not implemented yet')
+    extra_decls, nk = nkind
+    assert isinstance(nk, NamedKindMeaning)
+    p = Var.fresh(Typ.ET)
+    body: Expr = Const.Truth
+    for e in nk.identifiers:
+        body = Apply.multi(Const.Conjunction, Apply(p, e), body)
+    return (
+        [Declaration(quant_map[quant_name], v, Apply(nk.kind, v)) for v in nk.identifiers] + extra_decls,
+        Lambda(p, body)
+    )
 
 
 def _extract_refables(m: MAst, ctx: Context) -> list[Expr]:
