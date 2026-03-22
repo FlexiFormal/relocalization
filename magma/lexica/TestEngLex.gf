@@ -4,6 +4,8 @@ abstract TestEngLex = FreeArgs ** {
         lex_argmark_of : ArgMarker;
         lex_argmark_from : ArgMarker;
         lex_argmark_to : ArgMarker;
+        lex_argmark_onto : ArgMarker;
+        lex_argmark_under : ArgMarker;
         -- lex_argmark_invis : ArgMarker;
 
         lex_integer : PreKind;
@@ -22,6 +24,17 @@ abstract TestEngLex = FreeArgs ** {
         lex_proposition : PreKind;
         lex_subset : PreKind;
         lex_function : PreKind;
+        lex_class : PreKind;
+        lex_subclass : PreKind;
+        lex_intersection : PreKind;
+        lex_object : PreKind;
+        lex_union : PreKind;
+        lex_difference : PreKind;
+        lex_family : PreKind;
+        lex_map : PreKind;
+        lex_domain : PreKind;
+        lex_value : PreKind;
+        lex_powerset : PreKind;
 
         lex_finite : Property;
         lex_even : Property;
@@ -30,6 +43,11 @@ abstract TestEngLex = FreeArgs ** {
         lex_countable : Property;
         lex_consistent : Property;
         lex_derivable : Property;
+        lex_equal : Property;
+        lex_empty : Property;
+        lex_disjoint : Property;
 
         lex_divide : PrePredicate;
+        lex_map_V : PrePredicate;
+        lex_surject : PrePredicate;
 }

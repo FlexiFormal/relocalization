@@ -61,6 +61,9 @@ class MagmaGrammar:
             # put space before last period
             string = re.sub(r'\.([0-9m<>/]*)', r' . \1', string)
 
+        # escaping
+        string = string.replace('\\', '\\\\')
+
         cmd = f'p -cat={category} "{string}"'
         shell_output = self.shell.handle_command(cmd)
         if shell_output.startswith('The parser failed at token') or \

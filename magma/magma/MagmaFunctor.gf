@@ -14,6 +14,7 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         Kind = _Kind;
         NamedKind = _NamedKind;
         Term = {np: NP; just_formula: Bool};
+        TermList = {lnp: ListNP; just_formula: Bool};
         Predicate = Grammar.VP;
 
         -- properties
@@ -60,10 +61,30 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         nkind_that_is_property nk pol pp = {cn = mkCN nk.cn (mkRS pol (mkRCl IdRP pp)); num = nk.num};
 
         -- terms
+        BaseTermList t1 t2 = {
+            lnp = mkListNP t1.np t2.np;
+            just_formula = case t1.just_formula of {
+                True => True;
+                False => t2.just_formula   -- if one of them is just a formula, we have to set just_formula to True
+            }
+        };
+        ConsTermList t tl = {
+            lnp = mkListNP t.np tl.lnp;
+            just_formula = case t.just_formula of {
+                True => True;
+                False => tl.just_formula
+            }
+        };
+        finalizeTermList tl = {
+            np = mkNP and_Conj tl.lnp;
+            just_formula = tl.just_formula
+        };
         quantified_nkind q nk = {
             np = DetCN ( case nk.num of { Sg => q.sg; Pl => q.pl }) nk.cn;
             just_formula = False
         };
+
+        -- identifiers_to_term s = {np = symb s.s; just_formula = True}; -- TODO: I believe it should be "True" because it behaves grammatically the same (e.g. in German "Teilmenge von X und Y" vs "Teilmenge der Mengen X und Y"...
         it_term = {np = it_NP; just_formula = False};
 
         -- quantifications

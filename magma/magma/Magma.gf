@@ -18,6 +18,7 @@ abstract Magma = {
         Kind;           -- "bijective function ... from X to Y"
         NamedKind;      -- "bijective function f from X to Y"
         Term;           -- "every function f from X to Y"
+        TermList;
 
         -- properties
         Property;       -- "divisible by 2"
@@ -85,7 +86,13 @@ abstract Magma = {
         such_that_named_kind_v2 : NamedKind -> Statement -> NamedKind;
         nkind_that_is_property : NamedKind -> Polarity -> Property -> NamedKind;
 
-        -- terms
+        -- TERMS
+        -- the `identifiers_to_term` is problematic as it can lead to syntactic ambiguity
+        -- identifiers_to_term : Identifiers -> Term;
+        BaseTermList : Term -> Term -> TermList;
+        ConsTermList : Term -> TermList -> TermList;
+        finalizeTermList : TermList -> Term;
+
         quantified_nkind : Quantification -> NamedKind -> Term;
         it_term : Term;    -- "it". This is tricky for gendered languages... We'd need to anaphor resolution to get the gender right in recontextualizations/translations...
 
@@ -134,6 +141,10 @@ abstract Magma = {
         furthermore_marker_v2 : FurthermoreMarker;
         furthermore_marker_v3 : FurthermoreMarker;
         furthermore_marker_v4 : FurthermoreMarker;
+
+        -- negations
+        not_stmt : Statement -> Statement;       -- "it is not the case that φ"
+        not_stmt_v1 : Statement -> Statement;    -- "it is wrong that φ"
 
         -- top statements
         therefore_stmt : Statement -> TopStatement;

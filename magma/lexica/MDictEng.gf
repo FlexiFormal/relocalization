@@ -16,6 +16,17 @@ resource MDictEng = open SyntaxEng, ParadigmsEng in {
         dict_proposition_N: N = mkN "proposition";
         dict_subset_N: N = mkN "subset";
         dict_function_N: N = mkN "function";
+        dict_class_N: N = mkN "class";
+        dict_subclass_N: N = mkN "subclass";
+        dict_intersection_N: N = mkN "intersection";
+        dict_object_N: N = mkN "object";
+        dict_union_N: N = mkN "union";
+        dict_difference_N: N = mkN "difference";
+        dict_family_N: N = mkN "family";
+        dict_map_N: N = mkN "map";
+        dict_domain_N: N = mkN "domain";
+        dict_value_N: N = mkN "value";
+        dict_powerset_N: N = mkN "powerset";
 
         dict_positive_A: A = mkA "positive";
         dict_even_A: A = mkA "even";
@@ -24,6 +35,11 @@ resource MDictEng = open SyntaxEng, ParadigmsEng in {
         dict_countable_A: A = mkA "countable";
         dict_consistent_A: A = mkA "consistent";
         dict_derivable_A: A = mkA "derivable";
+        dict_equal_A: A = mkA "equal";
+        dict_empty_A: A = mkA "empty";
+        dict_disjoint_A: A = mkA "disjoint";
 
-        dict_divide: V = mkV "divide";
+        dict_divide_V: V = mkV "divide";
+        dict_map_V: V = mkV "map";
+        dict_surject_V: V = mkV "surject";
 }

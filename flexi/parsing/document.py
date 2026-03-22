@@ -1,12 +1,21 @@
+"""
+Light-weight representation of a document.
+It enforces very little structure at the moment.
+This might be a bad trade-off – we'll have to see.
+"""
+
 from __future__ import annotations
 
+import re
 from copy import deepcopy
 from pathlib import Path
-from typing import Iterable, Callable
+from typing import Iterable, Callable, Literal
 
 from lxml import etree
 
+from flexi.parsing import gfxml
 from flexi.parsing.magma import Sentence, MagmaGrammar
+from flexi.parsing.mast import gf_xml_to_mast
 
 
 class DocNode:
@@ -34,7 +43,28 @@ class DocText(DocNode):
         self.sentences = sentences
 
 
-class Definition(DocNode):
+class Paragraph(DocNode):
+    def __init__(self, children: list[DocNode], label: str = ''):
+        super().__init__(children)
+        self.label = label
+
+
+class Definition(Paragraph):
+    pass
+
+
+class Statement(Paragraph):
+    def __init__(
+            self,
+            children: list[DocNode],
+            type_: Literal['theorem', 'proposition', 'axiom'] = 'proposition',
+            label: str = ''
+    ):
+        super().__init__(children, label=label)
+        self.type_ = type_
+
+
+class Proof(Paragraph):
     pass
 
 
@@ -98,3 +128,70 @@ def ftml_to_doc_actual(
             children.append(DocText(sentences))   # TODO: we lose the order here...
 
     return DocGroup(children)
+
+
+def forthel_to_doc(
+        forthel_source: str,
+        grammar: MagmaGrammar,
+) -> DocNode:
+    paragraphs: list[DocNode] = []
+    current_node: DocNode | None = None
+
+    def push_paragraph(node: DocNode):
+        nonlocal current_node
+        paragraphs.append(node)
+        current_node = node
+
+    def analyse_header(line: str) -> tuple[str, str]:
+        m = re.match(r'(?P<type>\w+)(\s+\((?P<label>[^)]*)\))?[.:]', line)
+        if m is None:
+            raise ValueError(f'Failed to parse {line}')
+        return m.group('type'), m.group('label') or ''
+
+    for line in forthel_source.splitlines():
+        line = line.rstrip()
+        if not line:
+            continue
+        if line[0].isspace():  # continue current node
+            assert current_node is not None
+            line = line.strip()
+            # forthel pre-processing
+            line = line.replace(',', ' , ')
+            line = line.replace('(', ' ( ')
+            line = line.replace(')', ' ) ')
+            line += ' .'
+            line = re.sub(r'\s+', ' ', line)
+            if 'leftrightarrow' in line:
+                print('FILTERING problematic sentence:', line)   # too much syntactic ambiguity
+                continue
+            sentence = Sentence([
+                gf_xml_to_mast(gfxml.build_tree([], ast_str))
+                for ast_str in
+                grammar.parse_to_aststr(line, category='Sentence', preprocess=True)
+            ])
+
+            if current_node.children and isinstance(current_node.children[0], DocText):
+                dt = current_node.children[0]
+                assert isinstance(dt, DocText)
+                dt.sentences.append(sentence)
+            else:
+                current_node.children.append(DocText([sentence]))
+
+        else:       # new paragraph
+            type_, label = analyse_header(line)
+            if type_.lower() == 'definition':
+                push_paragraph(Definition([], label=label))
+            elif type_.lower() == 'axiom':
+                push_paragraph(Statement([], type_='axiom', label=label))
+            elif type_.lower() == 'theorem':
+                push_paragraph(Statement([], type_='theorem', label=label))
+            elif type_.lower() == 'proof':  # could check of proof follows theorem etc.
+                push_paragraph(Proof([], label=label))
+            elif type_.lower() == 'qed':
+                pass
+
+    return DocNode(paragraphs)
+
+
+
+

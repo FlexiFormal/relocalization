@@ -4,6 +4,8 @@ concrete TestEngLexConcr of TestEngLex = FreeArgsEng ** open MDictEng, Paradigms
         lex_argmark_of = mkPrep "of";
         lex_argmark_from = mkPrep "from";
         lex_argmark_to = mkPrep "to";
+        lex_argmark_onto = mkPrep "onto";
+        lex_argmark_under = mkPrep "under";
         -- lex_argmark_invis = mkPrep "";
 
         lex_integer = mkCN dict_integer_N;
@@ -22,6 +24,17 @@ concrete TestEngLexConcr of TestEngLex = FreeArgsEng ** open MDictEng, Paradigms
         lex_proposition = mkCN dict_proposition_N;
         lex_subset = mkCN dict_subset_N;
         lex_function = mkCN dict_function_N;
+        lex_class = mkCN dict_class_N;
+        lex_subclass = mkCN dict_subclass_N;
+        lex_intersection = mkCN dict_intersection_N;
+        lex_object = mkCN dict_object_N;
+        lex_union = mkCN dict_union_N;
+        lex_difference = mkCN dict_difference_N;
+        lex_family = mkCN dict_family_N;
+        lex_map = mkCN dict_map_N;
+        lex_domain = mkCN dict_domain_N;
+        lex_value = mkCN dict_value_N;
+        lex_powerset = mkCN dict_powerset_N;
 
         lex_finite = mkAP dict_finite_A;
         lex_even = mkAP dict_even_A;
@@ -30,6 +43,11 @@ concrete TestEngLexConcr of TestEngLex = FreeArgsEng ** open MDictEng, Paradigms
         lex_countable = mkAP dict_countable_A;
         lex_consistent = mkAP dict_consistent_A;
         lex_derivable = mkAP dict_derivable_A;
+        lex_equal = mkAP dict_equal_A;
+        lex_empty = mkAP dict_empty_A;
+        lex_disjoint = mkAP dict_disjoint_A;
 
-        lex_divide = dict_divide;
+        lex_divide = dict_divide_V;
+        lex_map_V = dict_map_V;
+        lex_surject = dict_surject_V;
 }
