@@ -1,0 +1,52 @@
+@TERMS
+
+Kind set = #1 set_N
+
+# TODO: need separate cat for "definite kinds"
+Kind eset = #1 empty_A set_N
+Kind2 intersection = #1 intersection_N of:#2
+Kind2 union = #1 union_N of:#2
+Kind2 setdiff = #1 set_N difference_N of:#2
+
+Kind2 member = #1 element_N of:#2
+Kind family = #1 family_N
+Kind disjfamily = #1 disjoint_A family_N
+Kind2 orderedpair = #1 ordered_A pair_N of:#2
+
+Kind class = #1 class_N
+Kind object = #1 object_N
+Kind map = #1 map_N
+Kind function = #1 function_N
+Kind2 functionof = #1 function_N of:#2
+Kind3 functionfromonto = #1 function_N from:#2 onto:#3
+Kind3 valueofunder = #1 value_N of:#2 under:#3
+Kind2 domain = #1 domain_N of:#2
+Kind2 subclass = #1 subclass_N of:#2
+Kind2 subset = #1 subset_N of:#2
+Kind2 powerset = #1 powerset_N of:#2
+
+Property2 equal = #1 equal_A to:#2
+Property2 disj = #1 disjoint_A from:#2
+
+Predicate3 mapto = #1 map_V noprep:#2 to:#3
+Predicate2 surjectonto = #1 surject_V onto:#2
+
+@NOTATIONS:FUNCTIONS
+cartprod = #1 \\times #2
+imgnotation = #1 [ #2 ]
+
+@NOTATIONS:PREDICATES
+bijection = #1 : #2 \\leftrightarrow #3
+
+@NOTATIONS:IDENTIFIERS
+v0
+v1
+v2
+v3
+v4
+v5
+f
+M
+n
+N
+z

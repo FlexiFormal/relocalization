@@ -161,9 +161,6 @@ def forthel_to_doc(
             line = line.replace(')', ' ) ')
             line += ' .'
             line = re.sub(r'\s+', ' ', line)
-            if 'leftrightarrow' in line:
-                print('FILTERING problematic sentence:', line)   # too much syntactic ambiguity
-                continue
             sentence = Sentence([
                 gf_xml_to_mast(gfxml.build_tree([], ast_str))
                 for ast_str in

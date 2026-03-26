@@ -17,6 +17,11 @@ incomplete concrete SigArgsFunctor of SigArgs = MagmaFunctor ** open MagmaUtils,
             vp : VP;
             prep1 : Prep;
         };
+        Predicate3 = {
+            vp : VP;
+            prep1 : Prep;
+            prep2 : Prep;
+        };
 
     lin
         kind2_to_kind k2 t1 = {
@@ -29,4 +34,5 @@ incomplete concrete SigArgsFunctor of SigArgs = MagmaFunctor ** open MagmaUtils,
         };
         property2_to_property p2 t1 = AdvAP p2.ap (PrepNP p2.prep1 t1.np);
         predicate2_to_predicate p2 t1 = mkVP p2.vp (PrepNP p2.prep1 t1.np);
+        predicate3_to_predicate p3 t1 t2 = mkVP p3.vp (mergeAdv (PrepNP p3.prep1 t1.np) (PrepNP p3.prep2 t2.np));
 }

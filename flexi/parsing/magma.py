@@ -141,8 +141,14 @@ class MagmaGrammar:
 
 @functools.cache
 def get_shell(name: str, lang: str = 'Eng') -> GFShellRaw:
+    filename = f'{name}{lang}.gf'
+    path = MAGMA_PATH / 'combinations' / filename
+    if not path.is_file():
+        path = MAGMA_PATH / 'generated' / filename
+    if not path.is_file():
+        raise Exception(f'Could not find {filename}')
     shell = GFShellRaw()
-    result = shell.handle_command('import ' + str(MAGMA_PATH / 'combinations' / f'{name}{lang}.gf'))
+    result = shell.handle_command('import ' + str(path))
     assert not result, f'GF import failed: {result}'
     return shell
 

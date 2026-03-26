@@ -1,0 +1,67 @@
+--# -path=../magma:../lexica:../other
+
+concrete cantorGrammarEng of cantorGrammar = ForthelEng ** open ForthelOpersEng, ParadigmsEng, ConstructorsEng in {
+  oper
+    _dict_set_N = mkN "set";
+    _dict_empty_A = mkA "empty";
+    _dict_intersection_N = mkN "intersection";
+    _dict_union_N = mkN "union";
+    _dict_difference_N = mkN "difference";
+    _dict_element_N = mkN "element";
+    _dict_family_N = mkN "family";
+    _dict_disjoint_A = mkA "disjoint";
+    _dict_ordered_A = mkA "ordered";
+    _dict_pair_N = mkN "pair";
+    _dict_class_N = mkN "class";
+    _dict_object_N = mkN "object";
+    _dict_map_N = mkN "map";
+    _dict_function_N = mkN "function";
+    _dict_value_N = mkN "value";
+    _dict_domain_N = mkN "domain";
+    _dict_subclass_N = mkN "subclass";
+    _dict_subset_N = mkN "subset";
+    _dict_powerset_N = mkN "powerset";
+    _dict_equal_A = mkA "equal";
+    _dict_map_V = mkV "map";
+    _dict_surject_V = mkV "surject";
+
+  lin
+    set__verb0 = mkKind (makeCN _dict_set_N) ;
+    eset__verb0 = mkKind (makeCN _dict_empty_A _dict_set_N) ;
+    intersection__verb0 = mkKind2 (makeCN _dict_intersection_N) of_Prep;
+    union__verb0 = mkKind2 (makeCN _dict_union_N) of_Prep;
+    setdiff__verb0 = mkKind2 (makeCN _dict_set_N _dict_difference_N) of_Prep;
+    member__verb0 = mkKind2 (makeCN _dict_element_N) of_Prep;
+    family__verb0 = mkKind (makeCN _dict_family_N) ;
+    disjfamily__verb0 = mkKind (makeCN _dict_disjoint_A _dict_family_N) ;
+    orderedpair__verb0 = mkKind2 (makeCN _dict_ordered_A _dict_pair_N) of_Prep;
+    class__verb0 = mkKind (makeCN _dict_class_N) ;
+    object__verb0 = mkKind (makeCN _dict_object_N) ;
+    map__verb0 = mkKind (makeCN _dict_map_N) ;
+    function__verb0 = mkKind (makeCN _dict_function_N) ;
+    functionof__verb0 = mkKind2 (makeCN _dict_function_N) of_Prep;
+    functionfromonto__verb0 = mkKind3 (makeCN _dict_function_N) from_Prep onto_Prep;
+    valueofunder__verb0 = mkKind3 (makeCN _dict_value_N) of_Prep under_Prep;
+    domain__verb0 = mkKind2 (makeCN _dict_domain_N) of_Prep;
+    subclass__verb0 = mkKind2 (makeCN _dict_subclass_N) of_Prep;
+    subset__verb0 = mkKind2 (makeCN _dict_subset_N) of_Prep;
+    powerset__verb0 = mkKind2 (makeCN _dict_powerset_N) of_Prep;
+    equal__verb0 = mkProperty2 (mkAP _dict_equal_A) to_Prep;
+    disj__verb0 = mkProperty2 (mkAP _dict_disjoint_A) from_Prep;
+    mapto__verb0 = mkPredicate3 (mkVP _dict_map_V) noprep_Prep to_Prep;
+    surjectonto__verb0 = mkPredicate2 (mkVP _dict_surject_V) onto_Prep;
+    cartprod__notation0 a1 a2 = a1 ++ "\\times" ++ a2;
+    imgnotation__notation0 a1 a2 = a1 ++ "[" ++ a2 ++ "]";
+    bijection__notation0 a1 a2 a3 = a1 ++ ":" ++ a2 ++ "\\leftrightarrow" ++ a3;
+    v0 = "v0";
+    v1 = "v1";
+    v2 = "v2";
+    v3 = "v3";
+    v4 = "v4";
+    v5 = "v5";
+    f = "f";
+    M = "M";
+    n = "n";
+    N = "N";
+    z = "z";
+}
