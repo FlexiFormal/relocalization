@@ -14,12 +14,25 @@ from flexi.parsing.gfxml import GfXmlNode, GfNode, XmlNode, XmlText
 
 
 class GfSymb(str):
-    pass
-    # def __eq__(self, other) -> bool:
-    #     if not isinstance(other, str):
-    #         return False
-    #     return str.__eq__(self, other) or \
-    #         (other.startswith('regex:') and re.fullmatch(self, other[len('regex:'):]) is not None)
+    @property
+    def core(self) -> str:
+        if match := re.match(r'(.*)_v[0-9]+$', self):
+            return match.group(1)
+        return str(self)
+
+    def __eq__(self, other) -> bool:
+        if not isinstance(other, str):
+            return False
+
+        if other and other[0] == '~':
+            # special pattern matching
+            # other has to be a string for this to work in Python's structural pattern matching
+            # details:
+            #   '#' stands for version suffix
+            pattern = other[1:].replace('#', '(_v[0-9]+)?')
+            return re.match(pattern, self) is not None
+        else:
+            return str(self) == other
 
 
 class MAst:

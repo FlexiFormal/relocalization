@@ -135,7 +135,7 @@ class MagmaGrammar:
         # print('GFXMLTree', gfxml_tree)
         gfxml.linearize_mtree_contents(lambda s: self.shell.handle_command(f'linearize {s}'), gfxml_tree)
         recovery_info, ast_str = gfxml_tree.to_gf()
-        gf_lin = self.linearize_ast_str(ast_str)
+        gf_lin = self.linearize_ast_str(ast_str, postprocess)
         return gfxml.final_recovery(gf_lin, recovery_info)
 
 

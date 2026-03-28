@@ -3,7 +3,7 @@ import functools
 import re
 from typing import TypeAlias
 
-from flexi.parsing.mast import MAst, G, TermDef, Formula, M, MSeq, MI, MT
+from flexi.parsing.mast import MAst, G, TermDef, Formula, M, MSeq, MI, MT, GfSymb
 from flexi.semconstr.logic import Const, Var, Typ, Expr, Apply, Lambda, SimpleType
 
 
@@ -59,14 +59,6 @@ class Context:
     ...
 
 
-def strip_variant_suffix(fun: str) -> str:
-    if not isinstance(fun, str):
-        raise ValueError(f'Expected fun to be a string, got {fun} of type {type(fun)}')
-    if match := re.match(r'(.*)_v[0-9]+$', fun):
-        return match.group(1)
-    return fun
-
-
 class OtherMeaning:
     """ Meanings that are not `Expr` """
 
@@ -120,7 +112,7 @@ def convert(m: MAst, ctx: Context) -> ConvMeaning:
     conv = functools.partial(convert, ctx=ctx)
 
     if isinstance(m, G):
-        fun = strip_variant_suffix(m.value)
+        fun = m.value.core
         if fun.startswith('lex_'):
             return [], _convert_lex_helper(fun)
 
@@ -187,7 +179,7 @@ def convert(m: MAst, ctx: Context) -> ConvMeaning:
 
 
 def _convert_connective_application(connective_fun: str, a: ConvMeaning, b: ConvMeaning) -> ConvMeaning:
-    s = strip_variant_suffix(connective_fun)
+    s = GfSymb(connective_fun).core
     a_decls, aa = a
     b_decls, bb = b
     if s == 'iff_subj':
@@ -203,7 +195,7 @@ def _convert_quantify_nkind(quant_fun: str, nkind: ConvMeaning) -> ConvMeaning:
         'indefinite_quantification': LQ.exists,
         'universal_quantification': LQ.forall,
     }
-    quant_name = strip_variant_suffix(quant_fun)
+    quant_name = GfSymb(quant_fun).core
     if quant_name not in quant_map:
         raise NotImplementedError(f'Conversion for quantifier {quant_name} not implemented yet')
     extra_decls, nk = nkind
