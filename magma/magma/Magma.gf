@@ -78,6 +78,7 @@ abstract Magma = {
 
         -- kinds/named kinds
         name_kind : Kind -> MaybeIdentifiers -> NamedKind;
+        identifiers_as_nkind : Identifiers -> NamedKind;    -- as in "iff there is some n∈N such that ..."
         such_that_named_kind : NamedKind -> Statement -> NamedKind;
         -- Are with/where t synonyms for "such that"?
         -- Or do they act on statements/declarations, not NamedKinds?
@@ -122,8 +123,8 @@ abstract Magma = {
         statement_enum_as_stmt : StatementEnum -> Statement;
         statement_enum_as_stmt_v1 : StatementEnum -> Statement;
         stmt_for_term : Statement -> Term -> Statement;     -- "φ for every x"
-        stmt_for_term_v1 : Statement -> Term -> Statement;  -- "for every x, φ"
-        stmt_for_term_v2 : Statement -> Term -> Statement;  -- "for every x φ"
+        for_term_stmt : Statement -> Term -> Statement;     -- "for every x, φ"
+        for_term_stmt_v1 : Statement -> Term -> Statement;  -- "for every x φ"
 
         term_has_nkind_stmt : Term -> NamedKind -> Statement;
         term_is_property_stmt : Term -> Property -> Statement;

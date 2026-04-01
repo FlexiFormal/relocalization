@@ -29,15 +29,15 @@ abstract cantorGrammar = Forthel ** {
     cartprod__notation0 : ForthelTerm -> ForthelTerm -> ForthelTerm;
     imgnotation__notation0 : ForthelTerm -> ForthelTerm -> ForthelTerm;
     bijection__notation0 : ForthelTerm -> ForthelTerm -> ForthelTerm -> ForthelStmt;
-    v0 : ForthelIdentifier;
-    v1 : ForthelIdentifier;
-    v2 : ForthelIdentifier;
-    v3 : ForthelIdentifier;
-    v4 : ForthelIdentifier;
-    v5 : ForthelIdentifier;
-    f : ForthelIdentifier;
-    M : ForthelIdentifier;
-    n : ForthelIdentifier;
-    N : ForthelIdentifier;
-    z : ForthelIdentifier;
+    v0 : ForthelPlainIdentifier;
+    v1 : ForthelPlainIdentifier;
+    v2 : ForthelPlainIdentifier;
+    v3 : ForthelPlainIdentifier;
+    v4 : ForthelPlainIdentifier;
+    v5 : ForthelPlainIdentifier;
+    f : ForthelPlainIdentifier;
+    M : ForthelPlainIdentifier;
+    n : ForthelPlainIdentifier;
+    N : ForthelPlainIdentifier;
+    z : ForthelPlainIdentifier;
 }

@@ -1,17 +1,14 @@
 --# -path=../magma:../formulae:../lexica
 
-concrete ForthelEng of Forthel = SigArgsEng ** open ParamX, SymbolicEng, Prelude, ResEng, GrammarEng, ParadigmsEng, ConstructorsEng in {
-    oper
-        simple_cn : Str -> CN = \s -> lin CN {s = table { a => table { b => s } }; g = Neutr};
-
+concrete ForthelEng of Forthel = SigArgsEng ** open ParamX, SymbolicEng, Prelude, ResEng, GrammarEng, ParadigmsEng, ConstructorsEng, MagmaUtilsEng in {
     lin
         formula_named_kind m = { cn = simple_cn m.s; num = Sg };
 
     lincat
-        ForthelIdentifier = Str;
+        ForthelPlainIdentifier = Str;
         ForthelTerm = Str;
         ForthelStmt = Str;
-        RestrictedIdentifier = Str;
+        ForthelIdentifier = Str;
 
     lin
         bracketed_stmt stmt = lin S {s = "(" ++ stmt.s ++ ")"};
@@ -26,5 +23,5 @@ concrete ForthelEng of Forthel = SigArgsEng ** open ParamX, SymbolicEng, Prelude
         identifier_term s = s;
         cast_restricted_identifier s = s;
 
-        restricted_identifier_to_named_kind s = { cn = simple_cn s; num = Sg };
+        -- restricted_identifier_to_named_kind s = { cn = simple_cn s; num = Sg };
 }

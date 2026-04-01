@@ -80,7 +80,7 @@ class Lexicon:
 
     def add_identifier(self, line: str):
         i = line.strip()
-        self.abstract_syntax.funs.append(f'{i} : ForthelIdentifier;')
+        self.abstract_syntax.funs.append(f'{i} : ForthelPlainIdentifier;')
         self.concrete_syntax.lins.append(f'{i} = "{i}";')
 
     def add_notation(self, line: str, is_predicate: bool):

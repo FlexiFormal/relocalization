@@ -20,6 +20,9 @@ class GfSymb(str):
             return match.group(1)
         return str(self)
 
+    def __ne__(self, other) -> bool:
+        return not self.__eq__(other)
+
     def __eq__(self, other) -> bool:
         if not isinstance(other, str):
             return False
@@ -31,6 +34,11 @@ class GfSymb(str):
             #   '#' stands for version suffix
             pattern = other[1:].replace('#', '(_v[0-9]+)?')
             return re.match(pattern, self) is not None
+        elif other and other[0] == '@':
+            if other == '@any':
+                return True
+            else:
+                raise ValueError(f'Invalid syntax {other!r}')
         else:
             return str(self) == other
 
@@ -96,6 +104,29 @@ class MAst:
     def find_child(self, filter: Callable[[MAst], bool]) -> Optional[MAst]:
         return next(iter(self.find_children(filter)))
 
+    def get_path(self) -> list[int]:
+        # path to self from the root
+        # encoding: path[0] is the index of the child of the root, path[1] is the index of the child of that node, etc.
+        r = []
+        for n in self.parent_iter():
+            if n._parent_pos is not None:
+                r.append(n._parent_pos)
+        return r[::-1]
+
+    def follow_path(self, path: list[int]) -> MAst:
+        r = self
+        for e in path:
+            try:
+                r = r[e]
+            except IndexError:
+                raise ValueError("Path index out of range")
+        return r
+
+    def get_root(self) -> MAst:
+        node = self
+        while node._parent:
+            node = node._parent
+        return node
 
     def parent_iter(self) -> Iterable[MAst]:
         node = self
@@ -109,6 +140,10 @@ class MAst:
         clone._parent = None
         clone._parent_pos = None
         return clone
+
+    def clone_from_root(self) -> MAst:
+        """ Clones the entire MAst and returns the node that corresponds to self"""
+        return deepcopy(self.get_root()).follow_path(self.get_path())
 
 
 class G(MAst):

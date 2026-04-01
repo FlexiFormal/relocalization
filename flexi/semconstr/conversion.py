@@ -257,7 +257,7 @@ def _convert_math_helper(m, ctx: Context) -> Expr:
         assert len(m) == 1
         assert isinstance(m[0], MT)
         # TODO: what about constants?...
-        return Var(m[0].value, Typ.E, is_semantic=False)
+        return Var(m[0].pattern, Typ.E, is_semantic=False)
     else:
         raise NotImplementedError(f'Cannot convert math node {m} to QLF')
 

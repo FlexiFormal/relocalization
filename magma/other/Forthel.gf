@@ -3,10 +3,10 @@
 abstract Forthel = SigArgs ** {
     cat
         -- FORMULAE
-        ForthelIdentifier;
+        ForthelPlainIdentifier;
         ForthelTerm;
         ForthelStmt;
-        RestrictedIdentifier;   -- n∈N, k, ... (restriction is optional)
+        ForthelIdentifier;   -- n∈N, k, ... (restriction is optional)
     
     fun
         bracketed_stmt: Statement -> Statement;
@@ -19,8 +19,8 @@ abstract Forthel = SigArgs ** {
         cast_identifier : ForthelIdentifier -> Identifier;
         cast_term : ForthelTerm -> Term;
         cast_stmt : ForthelStmt -> Statement;
-        identifier_term : ForthelIdentifier -> ForthelTerm;
-        cast_restricted_identifier : ForthelIdentifier -> RestrictedIdentifier;
-        restricted_identifier_to_named_kind : RestrictedIdentifier -> NamedKind;
+        identifier_term : ForthelPlainIdentifier -> ForthelTerm;
+        cast_restricted_identifier : ForthelPlainIdentifier -> ForthelIdentifier;
+        -- restricted_identifier_to_named_kind : ForthelIdentifier -> NamedKind;
 }
 

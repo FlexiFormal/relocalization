@@ -36,6 +36,8 @@ concrete MagmaEng of Magma = MagmaFunctor - [term_is_not_property_stmt] with
 
         statement_enum_as_stmt_v1 se = mkS (ParadigmsEng.mkAdv ":") se;  -- prepend colon - this is a bit of a hack, but works well (think "A = B iff: 1. ... 2. ...")
 
+        identifiers_as_nkind i = { cn = simple_cn i.s; num = i.num };
+
         -- oxford comma
         finalizeIdentifierList_v2 il = { s = il.tail ++ ", and" ++ il.head; num = Pl };
         
@@ -65,8 +67,9 @@ concrete MagmaEng of Magma = MagmaFunctor - [term_is_not_property_stmt] with
         term_is_not_property_stmt_v1 t p = mkS negativePol (mkCl t.np p);
 
         stmt_for_term stmt term = lin S {s = stmt.s ++ (PrepNP (mkPrep "for") term.np).s};
-        stmt_for_term_v1 stmt term = lin S {s = (PrepNP (mkPrep "for") term.np).s ++ "," ++ stmt.s};
-        stmt_for_term_v2 stmt term = lin S {s = (PrepNP (mkPrep "for") term.np).s ++ stmt.s};
+
+        for_term_stmt stmt term = lin S {s = (PrepNP (mkPrep "for") term.np).s ++ "," ++ stmt.s};
+        for_term_stmt_v1 stmt term = lin S {s = (PrepNP (mkPrep "for") term.np).s ++ stmt.s};
 
         not_stmt stmt = lin S {s = "it is not the case that" ++ stmt.s};
         not_stmt_v1 stmt = lin S {s = "it is wrong that" ++ stmt.s};

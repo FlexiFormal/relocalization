@@ -7,6 +7,8 @@ incomplete resource MagmaUtils = open Syntax, ParamX in {
 
         mergeAdv : Adv -> Adv -> Adv = \a,b -> lin Adv {s = a.s ++ b.s};
 
+        simple_cn : Str -> CN = \s -> lin CN {s = table { a => table { b => s } }; g = Neutr};
+
         empty_Adv : Adv = lin Adv {s = ""};
         mkKind = overload {
             mkKind : CN -> _Kind = \cn -> {cn = cn; adv = empty_Adv};
