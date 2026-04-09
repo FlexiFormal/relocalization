@@ -1,0 +1,16 @@
+@TERMS
+
+FKind "http://mathhub.info?a=smglom/automata&p=mod&m=auto-reachable/EXTSTRUCT_1&s=step relation" = #1 step_N relation_N
+
+# TODO: The document is actually annotated with "s=relation", not "relation on"...
+Kind2 "http://mathhub.info?a=smglom/sets&p=mod&m=relation&s=relation on" = #1 relation_N on:#2
+
+FKind2 "http://mathhub.info?a=smglom/sets&p=mod&m=transitive-closure&s=reflexive transitive closure" = reflexive_A transitive_A closure_N of:#1
+
+FKind "http://mathhub.info?a=smglom/automata&p=mod&m=auto-reachable/EXTSTRUCT_1&s=reachability relation" = reachability_N relation_N
+
+
+# TODO: Where do these words come from?
+Property smallest = #1 ( &superlative small_A )
+Property binary = #1 binary_A
+

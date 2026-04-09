@@ -28,24 +28,6 @@ class RewriteRule(abc.ABC):
                 yield new
 
 
-
-
-# For all v0 , ( if v0 is a class then for all v1 , ... ) .
-#
-#
-# (stmt_sentence (
-#
-# for_term_stmt (bracketed_stmt (
-#
-# if_then_stmt_v1 (term_is_term_stmt (cast_term (identifier_term (v0 ))) (quantified_nkind (indefinite_quantification ) (name_kind (class__verb0 ) (no_idents_sg ))))
-#
-# ...)
-#
-#
-# (quantified_nkind (universal_quantification_v1 ) (identifiers_as_nkind (single_identifier (cast_identifier (cast_restricted_identifier (v0 ))))))))
-
-
-
 class RewritePullKindIntoUnivQuant(RewriteRule):
     """
     "for every x, if x is a foo then φ" ⟶ "for every foo x, φ"
@@ -75,7 +57,6 @@ class RewritePullKindIntoUnivQuant(RewriteRule):
     def apply(self, mast: MAst, ctx: RewritingContext) -> MAst | None:
         if not (pm := pattern_match(mast, self._pattern)):
             return None
-        print('HERE')
         precedent_subj = pm.tag_to_mast['precedent_subj']
         quant_ids = pm.tag_to_mast['quant_ids']
 
@@ -101,35 +82,7 @@ class RewritePullKindIntoUnivQuant(RewriteRule):
         copy.follow_path(nkind.get_path()).replace_in_parent(
             G('name_kind', [kind.clone(), G('cast_Identifiers_MaybeIdentifiers', [G('single_identifier', [quant_ids.clone()])])])
         )
-        # copy.follow_path(antecedent.get_path()).replace_in_parent(
-        #     G('name_kind', [nkind.clone(), quant_ids.clone()])
-        # )
 
         return copy
 
-
-
-'''
-def rewrite_pull_kind_into_univ_quant(mast: MAst) -> Iterable[MAst]:
-    """
-    "for every x, if x is a foo then φ" ⟶ "for every foo x, φ"
-    """
-    for node in mast.find_children(lambda n: isinstance(n, G)):
-        match node:
-            case G(
-                '~for_term_stmt#',
-                [
-                    stmt,
-                    G(
-                        '~quantified_nkind#', [
-                            G('~universal_quantification#'),
-                            G('identifiers_as_nkind', [identifers])
-                        ]
-                    ),
-                ]
-            ):
-                f, s = dewrap(stmt)
-                if not isinstance(s, G) and s.value == '~if_then_stmt#':
-                    continue
-'''
 

@@ -3,7 +3,9 @@
 abstract XmlMagma = Magma, Xml ** {
     fun
         wrapped_named_kind : Tag -> NamedKind -> NamedKind;
+        wrapped_fkind : Tag -> FKind -> FKind;
         wrapped_property : Tag -> Property -> Property;
         wrapped_stmt : Tag -> Statement -> Statement;
         wrapped_sentence : Tag -> Sentence -> Sentence;
+        wrapped_term : Tag -> Term -> Term;
 }

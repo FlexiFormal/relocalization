@@ -307,7 +307,11 @@ def build_tree(nodes: list[XmlNode], ast_str: str) -> GfXmlNode:
     def read_label() -> str:
         nonlocal i
         label = ''
-        while i < len(ast_str) and (ast_str[i].isalnum() or ast_str[i] in {'_', '\'', '/', '?', ':', '#', '.', '-'}):
+        while i < len(ast_str) and (
+                ast_str[i].isalnum() or
+                ast_str[i] in {'_', '\'', '/', '?', ':', '#', '.', '-'} or   # TODO: some of these might only be allowed in single quotes
+                label.count('\'') % 2   # odd number of single quotes
+        ):
             label += ast_str[i]
             i += 1
         return label
@@ -374,7 +378,7 @@ def build_tree(nodes: list[XmlNode], ast_str: str) -> GfXmlNode:
                 elif ast_str[i] == ')':
                     i += 1
                     break
-                elif (ast_str[i].isalnum() or ast_str[i] in {'_', '\'', '/', '?', ':', '#', '.', '-'}):
+                elif ast_str[i].isalnum() or ast_str[i] in {'_', '\'', '/', '?', ':', '#', '.', '-'}:
                     children.append(GfNode(read_label()))
                 else:
                     raise ValueError(f'Unexpected character in AST: {ast_str[i]!r}')

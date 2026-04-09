@@ -1,7 +1,13 @@
+"""
+Lexicon parsing
+
+This whole implementation is just a test to see if the interface is correct.
+In the long term, once the interface has converged, it should be implemented with a clean parser.
+"""
+
 import dataclasses
 import re
 from collections import defaultdict
-from pathlib import Path
 from typing import Literal
 
 from flexi.config import TEST_FILE_DIR
@@ -67,7 +73,7 @@ class NotationManager:
 
 
 class Lexicon:
-    def __init__(self, name: str, mode: Literal['forthel']):
+    def __init__(self, name: str, mode: Literal['forthel', 'ftml']):
         self.abstract_syntax = AbstractSyntax()
         self.concrete_syntax = ConcreteSyntax()
         self.verbalization_manager = VerbalizationManager()
@@ -134,11 +140,23 @@ class Lexicon:
         self.concrete_syntax.opers.append(f'{id_} = {def_};')
         self.covered_word_ids.add(id_)
 
+    @classmethod
+    def tokenize(cls, line: str) -> list[str]:
+        """ at this point just slightly smarter than str.split """
+        l = line.split()
+        r = []
+        for e in l:
+            if r and r[-1].startswith('"') and not (len(r[-1]) > 1 and r[-1][-1] == '"'):
+                r[-1] += e
+            else:
+                r.append(e)
+        return r
+
     def add_term(self, line: str):
         """
         This is just quick-and-dirty implementation with insufficient validation etc.
         """
-        parts = line.split()
+        parts = self.tokenize(line)
         if len(parts) < 4:
             raise ValueError(f'Invalid line in lexicon: {line}')
 
@@ -148,7 +166,12 @@ class Lexicon:
         if parts[2] != '=':
             raise ValueError(f'Invalid line in lexicon: {line}')
 
-        fun = symbol + '__verb' + str(len(self.verbalization_manager.verbs_by_symb[symbol]))
+        _num = str(len(self.verbalization_manager.verbs_by_symb[symbol]))
+        if symbol.startswith('"'):
+            symbol = symbol.strip('"')
+            fun = "'" + symbol + '__verb' + _num + "'"
+        else:
+            fun = symbol + '__verb' + _num
 
         self.abstract_syntax.funs.append(f'{fun} : {typ};')
 
@@ -165,19 +188,25 @@ class Lexicon:
         preps = []
 
         for part in parts[start:]:
-            if ':' in part:
+            if ':' in part:   # arg
                 prep, arg = part.split(':')
                 arg_order.append(int(arg[1:]))
                 preps.append(prep + '_Prep')
             else:
-                id_ = self.word_id_prefix + part
-                if id_ not in self.covered_word_ids:
-                    self.add_word(part)
-                mainword_components.append(id_)
+                if part in {'(', ')'} or part.startswith('&'):
+                    if part.startswith('&'):
+                        part = part[1:]
+                    mainword_components.append(part)
+                else:  # it's a word
+                    id_ = self.word_id_prefix + part
+                    if id_ not in self.covered_word_ids:
+                        self.add_word(part)
+                    mainword_components.append(id_)
 
         mainword_constructor = {
             'Kind': 'makeCN', 'Kind1': 'makeCN', 'Kind2': 'makeCN', 'Kind3': 'makeCN',
-            'Property2': 'mkAP',
+            'FKind': 'makeCN', 'FKind2': 'makeCN',
+            'Property': 'mkAP', 'Property2': 'mkAP',
             'Predicate': 'mkVP', 'Predicate2': 'mkVP', 'Predicate3': 'mkVP'
         }
         if typ not in mainword_constructor:
@@ -198,16 +227,28 @@ class Lexicon:
         path.mkdir(exist_ok=True)
 
         with open(path / f'{self.name}Grammar.gf', 'w') as fp:
-            fp.write('--# -path=../magma:../lexica:../other\n\n')
-            fp.write(f'abstract {self.name}Grammar = Forthel ** {{\n')
+            if self.mode == 'forthel':
+                fp.write('--# -path=../magma:../lexica:../other\n\n')
+                fp.write(f'abstract {self.name}Grammar = Forthel ** {{\n')
+            elif self.mode == 'ftml':
+                fp.write('--# -path=../magma:../lexica:../other:../formulae\n\n')
+                fp.write(f'abstract {self.name}Grammar = SigFtml ** {{\n')
+            else:
+                raise NotImplementedError(f'Unknown mode {self.mode!r}')
             fp.write('  fun\n')
             for fun in self.abstract_syntax.funs:
                 fp.write(f'    {fun}\n')
             fp.write('}\n')
 
         with open(path / f'{self.name}GrammarEng.gf', 'w') as fp:
-            fp.write('--# -path=../magma:../lexica:../other\n\n')
-            fp.write(f'concrete {self.name}GrammarEng of {self.name}Grammar = ForthelEng ** open ForthelOpersEng, ParadigmsEng, ConstructorsEng in {{\n')
+            if self.mode == 'forthel':
+                fp.write('--# -path=../magma:../lexica:../other\n\n')
+                fp.write(f'concrete {self.name}GrammarEng of {self.name}Grammar = ForthelEng ** open SigConstructorsEng, ParadigmsEng, ConstructorsEng in {{\n')
+            elif self.mode == 'ftml':
+                fp.write('--# -path=../magma:../lexica:../other:../formulae\n\n')
+                fp.write(f'concrete {self.name}GrammarEng of {self.name}Grammar = SigFtmlEng ** open SigConstructorsEng, ParadigmsEng, ConstructorsEng in {{\n')
+            else:
+                raise NotImplementedError(f'Unknown mode {self.mode!r}')
             fp.write('  oper\n')
             for oper in self.concrete_syntax.opers:
                 fp.write(f'    {oper}\n')

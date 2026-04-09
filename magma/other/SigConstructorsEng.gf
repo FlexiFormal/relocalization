@@ -1,4 +1,15 @@
-resource ForthelOpersEng = open SigArgsEng, CatEng, ParadigmsEng, ResEng, ConstructorsEng in {
+resource SigConstructorsEng = open SigArgsEng, CatEng, ParadigmsEng, ResEng, ConstructorsEng in {
+    oper   -- things intended to be referenced by the lexicon directly
+        of_Prep : Prep = mkPrep "of";
+        to_Prep : Prep = mkPrep "to";
+        from_Prep : Prep = mkPrep "from";
+        under_Prep : Prep = mkPrep "under";
+        noprep_Prep : Prep = mkPrep "";
+        onto_Prep : Prep = mkPrep "onto";
+        on_Prep : Prep = mkPrep "on";
+
+        superlative : A -> Ord = \a -> mkOrd a;
+
     oper
         mkKind: CN -> Kind = \cn -> lin Kind {
             cn = cn;
@@ -15,6 +26,8 @@ resource ForthelOpersEng = open SigArgsEng, CatEng, ParadigmsEng, ResEng, Constr
             prep1 = prep1;
             prep2 = prep2;
         };
+
+        mkProperty : AP -> Property = \ap -> ap;
 
         mkProperty2 : AP -> Prep -> Property2 = \ap, prep1 -> lin Property2 {
             ap = ap;
@@ -34,20 +47,23 @@ resource ForthelOpersEng = open SigArgsEng, CatEng, ParadigmsEng, ResEng, Constr
             prep2 = prep2;
         };
 
+        mkFKind : CN -> FKind = \cn -> lin FKind {
+            cn = cn;
+            adv = lin Adv { s = "" };
+        };
+
+        mkFKind2: CN -> Prep -> FKind2 = \cn, prep1 -> lin FKind2 {
+            cn = cn;
+            prep1 = prep1;
+        };
+
         _compound_noun : N -> N -> N = \n1,n2 -> mkN (n1.s ! Sg ! Nom) n2;
 
         -- mkCN : N -> N -> CN = \n1,n2 -> mkCN (_compound_noun n1 n2);
         makeCN = overload {
             makeCN : A -> N -> CN = \a, n -> mkCN a n;
+            makeCN : A -> A -> N -> CN = \a1, a2, n -> mkCN a1 (mkCN a2 n);
             makeCN : N -> CN = \n -> mkCN n;
             makeCN : N -> N -> CN = \n1, n2 -> mkCN (_compound_noun n1 n2)
         };
-
-        of_Prep : Prep = mkPrep "of";
-        to_Prep : Prep = mkPrep "to";
-        from_Prep : Prep = mkPrep "from";
-        under_Prep : Prep = mkPrep "under";
-        noprep_Prep : Prep = mkPrep "";
-        onto_Prep : Prep = mkPrep "onto";
-
 }

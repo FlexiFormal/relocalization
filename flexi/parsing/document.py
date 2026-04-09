@@ -74,7 +74,7 @@ class DocGroup(DocNode):
 
 def ftml_to_doc(ftml: etree._Element | Path, grammar: MagmaGrammar) -> DocNode:
     if isinstance(ftml, Path):
-        ftml = etree.parse(str(ftml)).getroot()
+        ftml = etree.parse(str(ftml), parser=etree.HTMLParser()).getroot()
 
     result = ftml_to_doc_actual(deepcopy(ftml), grammar)
     # Still should simplify the result

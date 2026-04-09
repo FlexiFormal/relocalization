@@ -16,6 +16,7 @@ abstract Magma = {
         Subjunction;    -- "if", "iff", ...
 
         Kind;           -- "bijective function ... from X to Y"
+        FKind;          -- functional kinds, "derivative ... of f"
         NamedKind;      -- "bijective function f from X to Y"
         Term;           -- "every function f from X to Y"
         TermList;
@@ -77,6 +78,7 @@ abstract Magma = {
         cast_Identifiers_MaybeIdentifiers : Identifiers -> MaybeIdentifiers;
 
         -- kinds/named kinds
+        fkind_to_term : FKind -> MaybeIdentifiers -> Term;   -- no need for "FNamedKind" as FKinds are much less flexible
         name_kind : Kind -> MaybeIdentifiers -> NamedKind;
         identifiers_as_nkind : Identifiers -> NamedKind;    -- as in "iff there is some n∈N such that ..."
         such_that_named_kind : NamedKind -> Statement -> NamedKind;
