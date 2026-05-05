@@ -1,7 +1,12 @@
 from flexi.parsing.mast import MAst
-from flexi.transform.rewrite_rules import RewritingContext, RewriteRule, RewritePullKindIntoUnivQuant
+from flexi.transform.rewrite_rules import RewritingContext, RewriteRule, RewritePullKindIntoUnivQuant, \
+    RewriteBetaReduction, RewriteProjectionReduction
 
-GREEDY_REWRITING_DEFAULT_RULES: list[RewriteRule] = [RewritePullKindIntoUnivQuant()]
+GREEDY_REWRITING_DEFAULT_RULES: list[RewriteRule] = [
+    RewritePullKindIntoUnivQuant(),
+    RewriteBetaReduction(),
+    RewriteProjectionReduction(attempt_tuple_expansion=True),
+]
 
 
 def greedy_rewriting(mast: MAst, rules: list[RewriteRule], ctx: RewritingContext) -> MAst | None:

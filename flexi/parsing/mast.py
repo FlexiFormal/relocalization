@@ -71,7 +71,7 @@ class MAst:
     def __len__(self):
         return len(self._children)
 
-    def __getitem__(self, item):
+    def __getitem__(self, item) -> MAst:
         return self._children[item]
 
     def __iter__(self):
@@ -84,10 +84,14 @@ class MAst:
         mast._parent = self
         mast._parent_pos = index
 
-    def replace_in_parent(self, new_mast: MAst):
+    def replace_in_parent(self, new_mast: MAst) -> MAst:
         if self._parent is None:
             raise Exception("Cannot replace in parent: this node has no parent")
-        self._parent[self._parent_pos] = new_mast.clone()
+        self._parent[self._parent_pos] = new_mast
+        return self._parent[self._parent_pos]
+
+    def is_root(self) -> bool:
+        return self._parent is None
 
     def find_children(
             self,
@@ -133,6 +137,12 @@ class MAst:
         while node:
             yield node
             node = node._parent
+
+    def get_parent(self) -> Optional[MAst]:
+        return self._parent
+
+    def get_parent_pos(self) -> Optional[int]:
+        return self._parent_pos
 
     def clone(self) -> MAst:
         """ Create a clone of this node. """
@@ -217,11 +227,14 @@ class M(MAst):
 
     notation_pattern: list[MAst]
 
-    def __init__(self, value: str, children: list[MAst], notation_pattern: list[MAst]):
+    def __init__(self, value: str, children: list[MAst], notation_pattern: list[MAst], omt: str):
         super().__init__(value, children)
         if not isinstance(value, str):
             raise TypeError("value must be a string")
         self.notation_pattern = notation_pattern
+        if omt not in {'OMBIND', 'OMA', 'OMID', 'OMV'}:
+            raise ValueError(f"Unexpected value {omt}")
+        self.omt = omt
 
     def __eq__(self, other):
         return super().__eq__(other) and self.notation_pattern == other.notation_pattern
@@ -242,7 +255,7 @@ class Formula(MAst):
 class MSeq(MAst):
     """ A sequence (as argument for a flexary operator) """
     __match_args__ = ('_children',)
-    value: None
+    value: None   # argument number as string
 
     def add_arg(self, arg: MAst):
         arg = deepcopy(arg)
@@ -261,7 +274,7 @@ class MathSeqArg(MAst):
     value: str
     separator: Optional[list[MI]] = None
 
-    def __init__(self, value: str, children: Optional[list[MAst]], separator: Optional[list[MAst]] = None):
+    def __init__(self, value: str, children: Optional[list[MAst]] = None, separator: Optional[list[MAst]] = None):
         assert children is None, "MathSeqArg should not have children"
         super().__init__(value, children)
         self.separator = separator
@@ -414,8 +427,8 @@ def gf_xml_math_to_mast(node: GfXmlNode) -> MAst:
     match node:
         case XmlText(text):
             return MT(text)
-        case XmlNode('mrow', children) as x if (tp := x.attrs.get('data-ftml-term')) in {'OMA', 'OMV', 'OMID'}:
-            if tp == 'OMA':
+        case XmlNode('mrow', children) as x if (tp := x.attrs.get('data-ftml-term')) in {'OMA', 'OMV', 'OMID', 'OMBIND'}:
+            if tp in {'OMA', 'OMBIND'}:
                 notations, args = process_math_sem_node(children)
             else:
                 args = []
@@ -433,7 +446,8 @@ def gf_xml_math_to_mast(node: GfXmlNode) -> MAst:
             return M(
                 x.attrs['data-ftml-head'],
                 args2,
-                notations
+                notations,
+                tp
             )
         case XmlNode('mtext', children) as x:
             return MI('mtext', [gf_xml_to_mast(child) for child in children], x.attrs)
@@ -490,7 +504,7 @@ def mast_to_gfxml(node: MAst, args: Optional[dict[str, MAst]] = None) -> GfXmlNo
             return XmlNode(
                 'mrow',
                 [mast_to_gfxml(child, new_args) for child in m.notation_pattern],
-                attrs={'data-ftml-head': value, 'data-ftml-term': 'OMA'},
+                attrs={'data-ftml-head': value, 'data-ftml-term': m.omt},
             )
         case MathArg(value):
             if args is None or value not in args:

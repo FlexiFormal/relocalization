@@ -1,4 +1,5 @@
 import subprocess
+from pathlib import Path
 
 from flexi.parsing import gfxml, mast
 from flexi.parsing.mast import MAst
@@ -57,6 +58,8 @@ def mast_to_dot(node: MAst) -> str:
     traverse(node)
 
     l('}')
+    if 'fillcolor' in ''.join(result):
+        Path('/tmp/out.dot').write_text('\n'.join(result))
     return '\n'.join(result)
 
 def gfxml_tree_to_dot(g: gfxml.GfXmlNode, no_attrs: bool = False) -> str:
@@ -151,3 +154,18 @@ def dot_to_svg(dot: str) -> str:
             f.write(dot)
         raise ValueError(f'Error running dot (/tmp/out.dot): {result.stderr}')
     return result.stdout
+
+
+def mast_color_diff(mast: MAst, relative_to: MAst):
+    """
+    Colors node in mast based on whether they match `relative_to` or not.
+    If useful, this could be improved in the future to match subtrees etc. (like Josefin did in her thesis)
+    """
+
+    if type(mast) == type(relative_to) and mast.value == relative_to.value and len(mast) == len(relative_to):
+        setattr(mast, ':color', 'green')
+        for a, b in zip(mast, relative_to):
+            mast_color_diff(a, b)
+    else:
+        setattr(mast, ':color', 'red')
+

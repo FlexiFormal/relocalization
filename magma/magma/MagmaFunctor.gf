@@ -59,7 +59,7 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
 
         -- kinds/named kinds
         fkind_to_term fk i = {
-            np = DetCN ( case i.num of { Sg => theSg_Det; Pl => thePl_Det } ) (mkCN (mkCN fk.cn (symb i.s)) fk.adv);
+            np = fkind_to_np fk i;
             just_formula = False
         };
         name_kind k i = {cn = mkCN (mkCN k.cn (symb i.s)) k.adv; num = i.num};

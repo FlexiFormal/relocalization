@@ -114,6 +114,8 @@ concrete MagmaEng of Magma = MagmaFunctor - [term_is_not_property_stmt] with
         define_nkind_as_nkind_v3 nk1 nk2 = we_say_that (mkS (mkCl (indef_nk nk1) (indef_nk nk2)));
         define_nkind_as_nkind_v4 nk1 nk2 = mkS (mkCl we_NP (mkVP (mkVP _call_V2 (indef_nk nk1)) (term_to_adv (indef_nk nk2))));
 
+        define_fkind_as_fkind fk1 i fk2 = mkS (mkCl (fkind_to_np fk1 i) (mkVP (passiveVP _call_V2) (term_to_adv (fkind_to_np fk2 i.num))));
+
         define_nkind_prop nk p = mkS (mkCl (indef_nk nk) (mkVP (passiveVP _call_V2) (property_to_adv p)));
         define_nkind_prop_v1 nk p = mkS (mkCl (indef_nk nk) (said_vp_vp (mkVP p)));
         define_nkind_prop_v2 nk p = mkS (mkCl (indef_nk nk) p);

@@ -9,8 +9,15 @@ FKind2 "http://mathhub.info?a=smglom/sets&p=mod&m=transitive-closure&s=reflexive
 
 FKind "http://mathhub.info?a=smglom/automata&p=mod&m=auto-reachable/EXTSTRUCT_1&s=reachability relation" = reachability_N relation_N
 
-
 # TODO: Where do these words come from?
 Property smallest = #1 ( &superlative small_A )
 Property binary = #1 binary_A
 
+
+
+Kind "http://mathhub.info?a=Papers/25-CICM-AST&p=mod&m=quiver-path/EXTSTRUCT_1&s=path" = #1 path_N
+Property "http://mathhub.info?a=smglom/sets&p=mod&m=finite-cardinality&s=finite" = #1 finite_A
+Kind2 "http://mathhub.info?a=smglom/mv&p=mod&m=sequence&s=sequence" = #1 sequence_N of:#2
+Kind "http://mathhub.info?a=Papers/25-CICM-AST&p=mod&m=quiver/quiver&s=edge" = #1 edge_N
+Kind "http://mathhub.info?a=Papers/25-CICM-AST&p=mod&m=nts/non-deterministic transition system&s=transition" = #1 transition_N
+Kind2 "https://mathhub.info?a=smglom/sets&p=mod&m=set&s=element" = #1 element_N of:#2

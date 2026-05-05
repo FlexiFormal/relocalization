@@ -40,6 +40,10 @@ concrete RglXmlEng of RglXml = XmlConcr, GrammarEng ** open ResEng, XmlResource 
             s = wrap tag x.s
         };
 
+        POSTFIX_Adv tag x = {
+            s = wrap_postfix tag x.s
+        };
+
 --        WRAP_Ant tag x = ;
 
         WRAP_CAdv tag x = { 
@@ -53,6 +57,11 @@ concrete RglXmlEng of RglXml = XmlConcr, GrammarEng ** open ResEng, XmlResource 
                     c => wrap tag (x.s ! num ! c) 
                 } 
             }; 
+            g = x.g 
+        };
+
+        PREFIX_CN tag x = { 
+            s = table { num => table { c => wrap_prefix tag (x.s ! num ! c) } };
             g = x.g 
         };
 

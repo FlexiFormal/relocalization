@@ -17,10 +17,12 @@ abstract RglXml = Grammar, Xml ** open XmlResource in {
         -- WRAP_AdN : TagT -> AdN -> AdN;
         -- WRAP_AdV : TagT -> AdV -> AdV;
         WRAP_Adv : TagT -> Adv -> Adv;
+        POSTFIX_Adv : TagT -> Adv -> Adv;
 
         -- WRAP_Ant : TagT -> Ant -> Ant;
         WRAP_CAdv : TagT -> CAdv -> CAdv;
         WRAP_CN : TagT -> CN -> CN;
+        PREFIX_CN : TagT -> CN -> CN;
         WRAP_Card : TagT -> Card -> Card;
         WRAP_Cl : TagT -> Cl -> Cl;
                 

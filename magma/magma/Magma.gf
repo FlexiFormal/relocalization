@@ -212,6 +212,8 @@ abstract Magma = {
         define_nkind_as_nkind_v3 : NamedKind -> NamedKind -> DefCore;-- we say that an `n1` is a `n2`
         define_nkind_as_nkind_v4 : NamedKind -> NamedKind -> DefCore;-- we call an `n1` a `n2`
 
+        define_fkind_as_fkind : FKind -> MaybeIdentifiers -> FKind -> DefCore;   -- the `f1` `x` is called the `f2`
+
         define_nkind_prop : NamedKind -> Property -> DefCore;
         define_nkind_prop_v1 : NamedKind -> Property -> DefCore;
         define_nkind_prop_v2 : NamedKind -> Property -> DefCore;

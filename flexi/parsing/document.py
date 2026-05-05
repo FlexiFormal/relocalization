@@ -36,6 +36,9 @@ class DocNode:
         for child in self.children:
             yield from child.find_children(filter, recurse_on_match)
 
+    def __repr__(self):
+        return f'{self.__class__.__name__}({", ".join(repr(c) for c in self.children)})'
+
 
 class DocText(DocNode):
     def __init__(self, sentences: list[Sentence]):
@@ -77,20 +80,21 @@ def ftml_to_doc(ftml: etree._Element | Path, grammar: MagmaGrammar) -> DocNode:
         ftml = etree.parse(str(ftml), parser=etree.HTMLParser()).getroot()
 
     result = ftml_to_doc_actual(deepcopy(ftml), grammar)
+    print(result)
     # Still should simplify the result
 
     def _simplify(node: DocNode):
         new_children: list[DocNode] = []
         for child in node.children:
-            new_child = _simplify(child)
-            if isinstance(new_child, DocGroup):
-                if not new_child.children:
+            _simplify(child)
+            if isinstance(child, DocGroup):
+                if not child.children:
                     continue
-                if len(new_child.children) == 1 and isinstance(new_child.children[0], DocGroup):
-                    new_child = new_child.children[0]
-            if isinstance(new_child, DocText) and not new_child.sentences:
+                if len(child.children) == 1 and isinstance(child.children[0], DocGroup):
+                    child = child.children[0]
+            if isinstance(child, DocText) and not child.sentences:
                 continue
-            new_children.append(new_child)
+            new_children.append(child)
         node.children = new_children
 
     result = DocGroup([result])

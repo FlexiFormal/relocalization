@@ -516,6 +516,14 @@ def parse_mtext_contents(parse_fn: Callable[[str], list[str]], tree: GfXmlNode) 
 
             # integrate the parsed contents
             string = re.sub(r'\s+', ' ', ' '.join(strings)).strip()
+            # remove "... < i > </ i >"
+            # these occur in mtext e.g. because of nodes inserted by RusTeX for spacing
+            while True:
+                new_string = re.sub(r'\s+< [0-9]+ > </ [0-9]+ >', '', string).strip()
+                if string != new_string:
+                    string = new_string
+                else:
+                    break
             for gf_ast in parse_fn(string):
                 tree = build_tree(nodes, gf_ast)
                 e.node.children = [tree]

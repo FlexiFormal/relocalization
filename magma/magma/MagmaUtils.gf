@@ -1,4 +1,4 @@
-incomplete resource MagmaUtils = open Syntax, ParamX in {
+incomplete resource MagmaUtils = open Syntax, ParamX, SymbolicEng in {
     oper
         _Kind = {cn: CN; adv: Adv};   -- inspired by Aarne's new grammar
         _Ident = {s: Str; num: ParamX.Number};
@@ -35,4 +35,9 @@ incomplete resource MagmaUtils = open Syntax, ParamX in {
         my_ssubjs : S -> Subj -> S -> S = SSubjS;
 
         indef_nk : _NamedKind -> NP = \nk -> DetCN (indefart nk.num) nk.cn;
+
+        fkind_to_np = overload {
+            fkind_to_np : _Kind -> _Ident -> NP = \fk, i -> DetCN ( case i.num of { Sg => theSg_Det; Pl => thePl_Det } ) (mkCN (mkCN fk.cn (symb i.s)) fk.adv);
+            fkind_to_np : _Kind -> ParamX.Number -> NP = \fk, n -> DetCN ( case n of { Sg => theSg_Det; Pl => thePl_Det } ) (mkCN fk.cn fk.adv)
+        };
 }

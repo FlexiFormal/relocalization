@@ -2,10 +2,10 @@
 
 abstract SigFtml = SigArgs, DollarMath, XmlMagma ** {
     fun
-        -- wrapping kinds is probablematic in a free argument setting
-        -- but works here
-        -- (in free arguments, how should we wrap "power set ... of X" ?)
+        -- in the free argument setting, we can wrap PreKinds,
+        -- but we don't have PreKinds here, so Kinds must be wrappable.
         wrapped_kind : Tag -> Kind -> Kind;
+        wrapped_kind2 : Tag -> Kind2 -> Kind2;
 
 
 
