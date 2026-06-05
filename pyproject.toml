@@ -12,7 +12,7 @@ readme = "README.md"
 license.text = "GPLv3"
 
 dependencies = [
-    "lxml",
+    "lxml", "copium"
 ]
 
 [project.optional-dependencies]
