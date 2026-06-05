@@ -54,7 +54,7 @@ class MastGen:
     @classmethod
     def projection(cls, n: int) -> MAst:
         return M(
-            'http://mathhub.info?a=smglom/sets&amp;p=mod&amp;m=cartesian-product&amp;s=projectionFN',
+            'http://mathhub.info?a=smglom/sets&p=mod&m=cartesian-product&s=projectionFN',
             [MI('mn', [MT(str(n))])],
             [
                 MI('msub', [

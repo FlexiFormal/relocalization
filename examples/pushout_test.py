@@ -48,6 +48,9 @@ def main():
                 wb.push_html(f'<h2>Sentence {i+1}.{j+1}</h2>')
                 filtered_readings = list(filter_readings(sentence, FilteringCtx()))
                 for k, mast in enumerate(filtered_readings):
+                    if k > 20:
+                        wb.push_html(f'<p style="background-color:red">... and {len(filtered_readings) - 20} more readings</p>')
+                        break
                     wb.push_sentence_mast(mast)
                     new = substitute(mast, morphism.assignments)
                     wb.push_sentence_mast(new)
@@ -66,4 +69,6 @@ def main():
 
 
 if __name__ == '__main__':
+    # import cProfile
+    # cProfile.run('main()')
     main()

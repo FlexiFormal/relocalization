@@ -7,6 +7,7 @@ resource SigConstructorsEng = open SigArgsEng, CatEng, ParadigmsEng, ResEng, Con
         noprep_Prep : Prep = mkPrep "";
         onto_Prep : Prep = mkPrep "onto";
         on_Prep : Prep = mkPrep "on";
+        in_Prep : Prep = mkPrep "in";
 
         superlative : A -> Ord = \a -> mkOrd a;
 

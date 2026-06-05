@@ -20,4 +20,7 @@ Property "http://mathhub.info?a=smglom/sets&p=mod&m=finite-cardinality&s=finite"
 Kind2 "http://mathhub.info?a=smglom/mv&p=mod&m=sequence&s=sequence" = #1 sequence_N of:#2
 Kind "http://mathhub.info?a=Papers/25-CICM-AST&p=mod&m=quiver/quiver&s=edge" = #1 edge_N
 Kind "http://mathhub.info?a=Papers/25-CICM-AST&p=mod&m=nts/non-deterministic transition system&s=transition" = #1 transition_N
-Kind2 "https://mathhub.info?a=smglom/sets&p=mod&m=set&s=element" = #1 element_N of:#2
+Kind2 "http://mathhub.info?a=smglom/sets&p=mod&m=set&s=element" = #1 element_N of:#2
+Kind "http://mathhub.info?a=smglom/sets&p=mod&m=cartesian-product&s=triple" = #1 triple_N
+Property2 "https://stexmmt.mathhub.info/:sTeX?a=Papers/cicm25-ling&p=mod&m=nts/non-deterministic transition system&s=applicable" = #1 applicable_A in:#2
+

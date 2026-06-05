@@ -61,9 +61,7 @@ def extract_from_extstructure_interpretmodule(extstructure: _Element, ctx: Morph
             gf_xml_tree
         )
 
-        print('TRYING', )
         masts = [gf_xml_math_to_mast(gxt) for gxt in gf_xml_trees]
-        print('success')
 
         assignments[child.attrib['data-ftml-assign']] = masts
 

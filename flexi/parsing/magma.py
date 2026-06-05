@@ -65,6 +65,7 @@ class MagmaGrammar:
         string = string.replace('\\', '\\\\')
 
         cmd = f'p -cat={category} "{string}"'
+        print(cmd)
         shell_output = self.shell.handle_command(cmd)
         if shell_output.startswith('The parser failed at token') or \
                 shell_output.startswith('The sentence is not complete'):
@@ -119,6 +120,8 @@ class MagmaGrammar:
         Linearize a GF AST string to a sentence.
         """
         shell_output = self.shell.handle_command(f'linearize {ast}').strip()
+        if shell_output.startswith('command not parsed: linearize'):
+            raise Exception(f'Linearize error for {ast!r}: {shell_output}')
         if postprocess:
             if shell_output and shell_output[0].isalpha():
                 shell_output = shell_output[0].upper() + shell_output[1:]

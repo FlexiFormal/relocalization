@@ -7,7 +7,7 @@ abstract SigFtml = SigArgs, DollarMath, XmlMagma ** {
         wrapped_kind : Tag -> Kind -> Kind;
         wrapped_kind2 : Tag -> Kind2 -> Kind2;
 
-
+        wrapped_property2 : Tag -> Property2 -> Property2;
 
         -- TODO: this should go somewhere else - maybe an extension of OpaqueFormulae?
         formula_holds : Formula -> Statement;

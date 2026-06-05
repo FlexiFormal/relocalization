@@ -7,7 +7,8 @@ from __future__ import annotations
 
 import re
 from abc import ABC, abstractmethod
-from copy import deepcopy
+# from copy import deepcopy
+from copium import deepcopy   # faster?
 from typing import Any, Optional, Callable, Iterable
 
 from flexi.parsing.gfxml import GfXmlNode, GfNode, XmlNode, XmlText

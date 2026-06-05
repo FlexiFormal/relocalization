@@ -174,6 +174,7 @@ class RewriteTupleExpansion(RewriteRule):
 
     @classmethod
     def is_var_check(cls, ident) -> bool:
+        print(ident, ident.omt)
         return isinstance(ident, M) and len(ident) == 0 and ident.omt == 'OMV' and len(ident.notation_pattern) == 1
 
     def apply(self, mast: MAst, ctx: RewritingContext) -> MAst | None:
@@ -244,12 +245,13 @@ class RewriteProjectionReduction(RewriteRule):
                 'http://mathhub.info?a=FTML/meta&m=Metatheory&s=apply',
                 [
                     M(
-                        'http://mathhub.info?a=smglom/sets&amp;p=mod&amp;m=cartesian-product&amp;s=projectionFN',
-                        [MI('mn', [MT(indexStr)])]
+                        'http://mathhub.info?a=smglom/sets&p=mod&m=cartesian-product&s=projectionFN',
+                        [MI('mn' | 'mi', [MT(indexStr)])]
                     ),
                     arg
                 ]
             ):
+                print('MATCH')
                 if not indexStr.isdigit():
                     return None
                 index = int(indexStr) - 1
@@ -263,6 +265,7 @@ class RewriteProjectionReduction(RewriteRule):
                         clone = mast.clone_from_root()
                         clone.replace_in_parent(tuplecontents[index].clone())
                         return clone.get_root()
+                # print(self.attempt_tuple_expansion, RewriteTupleExpansion.is_var_check(arg))
                 if self.attempt_tuple_expansion and RewriteTupleExpansion.is_var_check(arg):
                     print('TRIGGER TUPLE EXP')
                     # delegate to RewriteTupleExpansion

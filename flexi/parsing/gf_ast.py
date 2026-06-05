@@ -14,7 +14,10 @@ class GfAst:
         self.children = children if children is not None else []
 
     def to_str(self, _suppress_outer_parens: bool = True) -> str:
-        s = " ".join([self.node] + [c.to_str(False) for c in self.children])
+        node_str = self.node
+        if any(x in node_str for x in ['/', ':', ' ', '"', '?', '&']):
+            node_str = "'" + node_str + "'"
+        s = " ".join([node_str] + [c.to_str(False) for c in self.children])
         if _suppress_outer_parens or not self.children:
             return s
         return f"({s})"
@@ -37,13 +40,19 @@ class GfAst:
             label = ""
             while (
                 i < len(s)
-                and (s[i].isalnum()
-                or s[i] in {"_", "'", "/", "?", ":", "#", ".", "-", '"'})
+                and (
+                        s[i].isalnum()
+                        or s[i] in {"_", "/", "?", ":", "#", ".", "-"}
+                        # string literals (double quotes) and complex function names (single quotes)
+                        # TODO: this needs to be optimized (also doesn't support escape chars yet)
+                        or (label == '' and s[i] in {'"', "'"})
+                        or (label and label[0] == "'" and "'" not in label[1:])
+                        or (label and label[0] == '"' and '"' not in label[1:])
+                )
             ):
-                # Note: quick hack for string literals (does not allow spaces)
                 label += s[i]
                 i += 1
-            return label
+            return label.strip("'")
 
         stack.append(GfAst(read_label()))
         while i < len(s):

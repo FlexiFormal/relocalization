@@ -131,7 +131,11 @@ class GfNode(GfXmlNode):
         return f'G({self.node!r}, {self.children!r})'
 
     def _to_gf(self, _tags: list[tuple[str, str]]) -> str:
-        return f'({self.node} {" ".join(child._to_gf(_tags) for child in self.children)})'
+        node_str = self.node
+        if any(x in node_str for x in ['/', ':', ' ', '"', '?', '&']):
+            node_str = "'" + node_str + "'"
+        v = f'({node_str} {" ".join(child._to_gf(_tags) for child in self.children)})'
+        return v
 
 
 SHTML_NS = 'http://example.org/shtml'
@@ -182,6 +186,18 @@ def get_gfxml_string(shtml: etree._Element) -> tuple[list[XmlNode], str]:
             if node.tail:
                 strings.append(node.tail)
             return
+        if (
+                ('data-ftml-definiens' in node.attrib and node.tag != 'math')   # we don't need them, and they can interfere with parsing
+                or dict(node.attrib) == {'class': 'rustex-contents', 'data-ftml-comp': ''}  # these seem completely useless
+        ):
+            # ignore these tags (but consider their content)
+            if node.text:
+                strings.append(node.text)
+            for child in node:
+                _recurse(child)
+            if node.tail:
+                strings.append(node.tail)
+            return
 
         tag_num = len(nodes)
         if node.tag.endswith('math'):
@@ -212,6 +228,7 @@ def get_gfxml_string(shtml: etree._Element) -> tuple[list[XmlNode], str]:
         assert len(bodies) == 1, 'Expected exactly one <body> tag in the HTML document'
         shtml = bodies[0]
     _recurse(shtml)
+    # print([repr(n) for n in nodes])
 
     return nodes, ''.join(strings)
 
@@ -244,6 +261,7 @@ def sentence_tokenize(text: str) -> list[str]:
     tokenizer = PunktSentenceTokenizer()
     sentences: list[str] = []
     for start, end in tokenizer.span_tokenize(without_tags):
+        print(start, end)
         sentence = ''
         for i in range(start, end):
             for tag in tags[i]:
@@ -314,7 +332,7 @@ def build_tree(nodes: list[XmlNode], ast_str: str) -> GfXmlNode:
         ):
             label += ast_str[i]
             i += 1
-        return label
+        return label.strip("'")
 
     def expect_str(s: str):
         nonlocal i

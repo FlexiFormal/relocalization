@@ -7,5 +7,6 @@ incomplete concrete OpaqueFormulaeFunctor of OpaqueFormulae = MagmaFunctor ** op
 
     lin
         formula_ident m = {s = m.s; num = Sg};
+        formula_idents m = {s = m.s; num = Pl};
         formula_term m = {np = symb m; just_formula = True};
 }

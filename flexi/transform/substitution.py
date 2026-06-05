@@ -11,6 +11,10 @@ class SubstitutionContext:
 
 
 def substitute(mast: MAst, substitutions: dict[str, list[MAst]]) -> MAst:
+    # print('-'*10)
+    # for k, v in substitutions.items():
+    #     print(k, '⟶', v)
+    # print('-'*10)
 
     existing_vars: set[str] = set()
     for node in mast.find_children(lambda x: isinstance(x, M) and x.omt == 'OMV'):
@@ -34,8 +38,12 @@ def _rename_new_vars(mast: MAst, ctx: SubstitutionContext):
 def substitute_actual(mast: MAst, substitutions: dict[str, list[MAst]], ctx: SubstitutionContext) -> MAst:
     """ modifies the mast in place """
 
+    # TODO: This function already grows unreasonably large.
+    # We need to factor out different substitution cases into separate functions or something like that
+
     # check if the current node must be modified
     if isinstance(mast, TermRef) and mast.value in substitutions:
+        # print('YES', mast.value)
         parent = mast.get_parent()
         value = substitutions[mast.value][0]   # TODO: cover all variants
         if isinstance(parent, G):
@@ -45,7 +53,7 @@ def substitute_actual(mast: MAst, substitutions: dict[str, list[MAst]], ctx: Sub
             ]:
                 if isinstance(value, M):
                     # replace it with "element of ..." as Kinds are sets
-                    return mast.clone_from_root().replace_in_parent(
+                    mast.replace_in_parent(
                         # TODO: most of this should go into MastGen
                         G(
                             'kind2_to_kind',
@@ -54,7 +62,7 @@ def substitute_actual(mast: MAst, substitutions: dict[str, list[MAst]], ctx: Sub
                                     'https://mathhub.info?a=smglom/sets&p=mod&m=set&s=element',
                                     [
                                         # TODO: this is just the verbalization from `automata.lexion`
-                                        G('http://mathhub.info?a=smglom/sets&p=mod&m=relation&s=element__verb0')
+                                        G('http://mathhub.info?a=smglom/sets&p=mod&m=set&s=element__verb0')
                                     ],
                                     wrapfun='wrapped_kind2',
                                 ),
@@ -62,11 +70,17 @@ def substitute_actual(mast: MAst, substitutions: dict[str, list[MAst]], ctx: Sub
                             ]
                         )
                     )
-
-        # print(mast)
-        # print(mast.get_parent())
-        # print(value)
-        raise NotImplementedError()   # TODO
+                else:
+                    raise NotImplementedError()
+            else:
+                raise NotImplementedError(
+                    f'unsupported combination: {(parent.value, mast.get_parent_pos())} for {mast}'
+                )
+        else:
+            # print(mast)
+            # print(mast.get_parent())
+            # print(value)
+            raise NotImplementedError()   # TODO
 
     elif isinstance(mast, M) and mast.value in substitutions:
         value = substitutions[mast.value][0]   # TODO: cover all variants
