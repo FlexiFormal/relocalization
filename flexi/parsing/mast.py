@@ -33,6 +33,7 @@ class GfSymb(str):
             # other has to be a string for this to work in Python's structural pattern matching
             # details:
             #   '#' stands for version suffix
+            #   '*' is a wild card (TODO: is this useful needed? - not yet implemented!)
             pattern = other[1:].replace('#', '(_v[0-9]+)?')
             return re.match(pattern, self) is not None
         elif other and other[0] == '@':
@@ -56,12 +57,16 @@ class MAst:
         if self.__class__ == MAst:
             raise TypeError("MAst is an abstract class and cannot be instantiated directly")
         self.value = value
-        self._children = children if children is not None else []
-        for i, child in enumerate(self._children):
-            if child._parent:
-                raise ValueError("Child already has a parent")
-            child._parent = self
-            child._parent_pos = i
+        self._children = []
+        for child in children if children is not None else []:
+            self.append_child(child)
+
+    def append_child(self, child: MAst):
+        if child._parent:
+            raise ValueError("Child already has a parent")
+        child._parent = self
+        child._parent_pos = len(self._children)
+        self._children.append(child)
 
     def __repr__(self):
         return f"{self.__class__.__name__}({self.value!r}, {self._children!r})"
@@ -107,7 +112,7 @@ class MAst:
             yield from child.find_children(filter, recurse_on_match)
 
     def find_child(self, filter: Callable[[MAst], bool]) -> Optional[MAst]:
-        return next(iter(self.find_children(filter)))
+        return next(iter(self.find_children(filter)), None)
 
     def get_path(self) -> list[int]:
         # path to self from the root
@@ -129,15 +134,18 @@ class MAst:
 
     def get_root(self) -> MAst:
         node = self
-        while node._parent:
+        while node._parent is not None:
             node = node._parent
         return node
 
     def parent_iter(self) -> Iterable[MAst]:
         node = self
-        while node:
+        while node is not None:
             yield node
             node = node._parent
+
+    def __bool__(self):
+        raise RuntimeError('Consider using "is not None" instead')
 
     def get_parent(self) -> Optional[MAst]:
         return self._parent
@@ -472,7 +480,7 @@ def gf_xml_to_mast(node: GfXmlNode) -> MAst:
             return Formula([gf_xml_math_to_mast(child) for child in m.children], wrapfun)
         case XmlNode(tag, children, attrs, wrapfun) as x:
             for anno in _ANNOS:
-                if r := anno.try_from_gfxml(x):
+                if (r := anno.try_from_gfxml(x)) is not None:
                     return r
             return X(tag, [gf_xml_to_mast(child) for child in children], attrs, wrapfun)
         case _:
@@ -520,7 +528,7 @@ def mast_to_gfxml(node: MAst, args: Optional[dict[str, MAst]] = None) -> GfXmlNo
                 assert msa.separator is not None, f"Expected separator for MathSeqArg {value} with multiple children"
             updated_children: list[MAst] = []
             for i in range(len(arg._children)):
-                if i > 0 and msa.separator:
+                if i > 0 and msa.separator is not None:
                     updated_children.extend(deepcopy(msa.separator))  # separator is a list of MI nodes
                 updated_children.append(arg._children[i])
             return XmlNode(

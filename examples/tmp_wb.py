@@ -18,6 +18,7 @@ def main():
 
     grammar = MagmaGrammar('AutomataGrammar', 'Eng')
     doc = ftml_to_doc(stmt_path, grammar)
+    print(doc)
 
     with wb.new_workbench('/tmp/tmp_bw.html', 'Pushout Test'):
         wb.set_default_grammar(grammar)

@@ -20,6 +20,7 @@ from flexi.parsing.mast import gf_xml_to_mast
 
 class DocNode:
     """ base class for all document nodes (should not be used directly) """
+    __match_args__ = ('children',)
 
     def __init__(self, children: list[DocNode] = None):
         self.children = children if children is not None else []
@@ -77,10 +78,9 @@ class DocGroup(DocNode):
 
 def ftml_to_doc(ftml: etree._Element | Path, grammar: MagmaGrammar) -> DocNode:
     if isinstance(ftml, Path):
-        ftml = etree.parse(str(ftml), parser=etree.HTMLParser()).getroot()
+        ftml = etree.parse(str(ftml), parser=etree.HTMLParser(encoding='UTF-8')).getroot()
 
     result = ftml_to_doc_actual(deepcopy(ftml), grammar)
-    print(result)
     # Still should simplify the result
 
     def _simplify(node: DocNode):

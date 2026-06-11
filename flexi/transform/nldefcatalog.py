@@ -9,7 +9,7 @@ class NlDefCatalog:
     def __init__(self):
         self.definitions: dict[str, list[Definition]] = {}
 
-    def add_document(self, document: DocNode):
+    def add_document(self, document: DocNode) -> NlDefCatalog:
         for definition in document.find_children(lambda x: isinstance(x, Definition)):
             assert isinstance(definition, Definition)
 
@@ -25,4 +25,6 @@ class NlDefCatalog:
                 if d not in self.definitions:
                     self.definitions[d] = []
                 self.definitions[d].append(definition)
+
+        return self
 

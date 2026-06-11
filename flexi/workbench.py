@@ -63,7 +63,7 @@ def push_html(html: str):
 def push_sentence_mast(tree: MAst):
     assert S.default_grammar is not None, 'No default shell set'
     # push_html(linearize_tree(tree, S.default_grammar))
-    push_html(S.default_grammar.linearize_mast(tree))
+    push_html(f'<div>{S.default_grammar.linearize_mast(tree)}</div>')
     push_mast(tree)
 
 def push_mast(tree: MAst):

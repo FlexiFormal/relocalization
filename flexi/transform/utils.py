@@ -93,3 +93,16 @@ class MastGen:
             omt='OMA'
         )
 
+    @classmethod
+    def def_eq(cls, var: MAst, val: MAst) -> MAst:
+        return M(
+            'http://mathhub.info?a=smglom/mv&p=mod&m=defeq&s=definitional equation',
+            [var, val],
+            [
+                MathArg('1'),
+                MI('mo', [MT(':=')]),
+                MathArg('2'),
+            ],
+            omt='OMA'
+        )
+

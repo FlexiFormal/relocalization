@@ -1,3 +1,4 @@
+from flexi.transform.nldefcatalog import NlDefCatalog
 from lxml import etree
 
 from flexi.config import RECONTEXTUALIZATION_CORPUS, TEST_FILE_DIR
@@ -15,19 +16,23 @@ from flexi.treevis import mast_color_diff
 
 
 def main():
+    augment_lexicon(
+        (TEST_FILE_DIR / 'smglom' / 'automata.lexicon').read_text(),
+        Lexicon('Automata', 'ftml'),
+    ).write()
+    grammar = MagmaGrammar('AutomataGrammar', 'Eng')
+
     # stmt_path = TEST_FILE_DIR / 'smglom' / 'auto-reachable.en.html'
     # view_path = RECONTEXTUALIZATION_CORPUS / 'smglom' / 'views' / 'auto-to-tm_1.en.html'
 
     stmt_path = TEST_FILE_DIR / 'smglom' / 'quiver-path.en.html'
     view_path = RECONTEXTUALIZATION_CORPUS / 'smglom' / 'views' / 'elquiver-to-nts.en.html'
+    rewriting_ctx = RewritingContext(
+        nl_def_catalog=NlDefCatalog().add_document(
+            ftml_to_doc(TEST_FILE_DIR / 'smglom' / 'nts.en.html', grammar)
+        )
+    )
 
-
-    augment_lexicon(
-        (TEST_FILE_DIR / 'smglom' / 'automata.lexicon').read_text(),
-        Lexicon('Automata', 'ftml'),
-    ).write()
-
-    grammar = MagmaGrammar('AutomataGrammar', 'Eng')
     doc = ftml_to_doc(stmt_path, grammar)
 
     view_html = etree.parse(str(view_path), parser=etree.HTMLParser()).getroot()
@@ -56,7 +61,7 @@ def main():
                     wb.push_sentence_mast(new)
                     wb.push_html('<b>simplified</b>')
                     wb.push_sentence_mast(
-                        greedy_rewriting(new, GREEDY_REWRITING_DEFAULT_RULES, RewritingContext()) or new
+                        r if (r := greedy_rewriting(new, GREEDY_REWRITING_DEFAULT_RULES, rewriting_ctx)) is not None else new
                     )
                     if k + 1 < len(filtered_readings):
                         # color diff so that we can improve filtering
