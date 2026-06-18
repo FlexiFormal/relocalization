@@ -1,0 +1,25 @@
+\ExplSyntaxOn
+
+\keys_define:nn {verbalization} {
+  name .tl_set:N  = \l_verbalization_name_tl,
+  name .default:n = {-NoValue-},
+  args .tl_set:N  = \l_verbalization_args_tl,
+  args .default:n = {-NoValue-}
+}
+
+% \verbalization{<symbol name>}[name=<verbalization name>,args=<syntactic type>]{<GF category>}{<verbalization>}
+% e.g. \verbalization{equinumerous}[name=equinumto,args=dd]{???}{#1 equinumerous_A to #2}
+\NewDocumentCommand \verbalization {m O{} m v} {
+  \stex_get_symbol:n {#1}
+  \tl_set:Nn \l_verbalization_name_tl {}
+  \tl_set:Nn \l_verbalization_args_tl {}
+  \keys_set:nn {verbalization} {#2}
+  \exp_args:Ne \stex_annotate_invisible:nn {
+    data-ftml-verbalization-symbol = {\stex_use_symbol_uri:N \l_stex_current_symbol_uri},
+    data-ftml-verbalization-name = {\IfNoValueTF \l_verbalization_name_tl {#2} \l_verbalization_name_tl},
+    data-ftml-verbalization-term = {#4},
+    data-ftml-verbalization-type = {#3},
+    data-ftml-verbalization-args = {\IfNoValueTF \l_verbalization_args_tl {} \l_verbalization_args_tl}
+  } {}
+}
+\ExplSyntaxOff

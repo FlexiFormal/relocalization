@@ -1,5 +1,5 @@
 from flexi.config import TEST_FILE_DIR
-from flexi.lexicon_gen import augment_lexicon, Lexicon
+from flexi.old_lexicon_gen import augment_lexicon, Lexicon
 from flexi.parsing.document import forthel_to_doc, DocText
 from flexi.parsing.magma import MagmaGrammar
 from flexi.parsing.mast import MAst, mast_to_gfxml

@@ -87,8 +87,9 @@ def substitute_actual(mast: MAst, substitutions: dict[str, list[MAst]], ctx: Sub
         if isinstance(value, M):
             value = deepcopy(value)
             _rename_new_vars(value, ctx)
-            # TODO: we don't always need parentheses
-            value.notation_pattern = [MI('mo', [MT('(')])] + value.notation_pattern + [MI('mo', [MT(')')])]
+            # TODO: better heuristic for when we need parentheses
+            if len(value) > 0:
+                value.notation_pattern = [MI('mo', [MT('(')])] + value.notation_pattern + [MI('mo', [MT(')')])]
             children = [child.clone() for child in mast]
             for child in children:
                 value = MastGen.apply(value, child)

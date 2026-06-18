@@ -1,0 +1,26 @@
+\documentclass{stex}
+\usepackage{amsmath,amsfonts,amssymb,amstext}
+\input{verbalizations}
+\begin{document}
+% self-contained for simplicity
+\begin{smodule}[title={Goldbach Conjecture}]{goldbach}
+\symdecl*{even}
+\symdecl*{integer}
+\symdecl*{greater than}
+\symdecl*{sum}
+\symdecl*{prime number}
+
+
+\verbalization{even}{A}{#1 even:A}
+\verbalization{integer}{N}{#1 integer:N}
+\verbalization{greater than}{A2}{#1 greater:A than #2}   % bit of a hack, maybe
+\verbalization{sum}{DefN2}{sum:N of #1}
+\verbalization{prime number}{N}{#1 prime:N}
+\verbalization{prime number}{N}{#1 prime:A number:N}
+
+
+
+Every \sn{even} \sn{integer} that is \sr{greater than}{greater} than $2$
+is the \sn{sum} of two \sr{prime number}{primes}.
+\end{smodule}
+\end{document}

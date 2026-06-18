@@ -2,7 +2,7 @@ from flexi.transform.nldefcatalog import NlDefCatalog
 from lxml import etree
 
 from flexi.config import RECONTEXTUALIZATION_CORPUS, TEST_FILE_DIR
-from flexi.lexicon_gen import augment_lexicon, Lexicon
+from flexi.old_lexicon_gen import augment_lexicon, Lexicon
 from flexi.parsing.document import ftml_to_doc, DocText
 from flexi.parsing.magma import MagmaGrammar
 from flexi.transform.filtering import FilteringCtx, filter_readings
