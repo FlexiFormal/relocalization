@@ -10,6 +10,7 @@ abstract Magma = {
         Definition;     -- "an integer is called odd iff it is not divisible by 2"
         DefCore;        -- "an integer is called odd"
 
+        Cardinal;
         Quantification; -- "some", "every", "at least one"
         Polarity;       -- positive/negative
         Conjunction;    -- "and", "or", ...
@@ -88,6 +89,7 @@ abstract Magma = {
         such_that_named_kind_v1 : NamedKind -> Statement -> NamedKind;
         such_that_named_kind_v2 : NamedKind -> Statement -> NamedKind;
         nkind_that_is_property : NamedKind -> Polarity -> Property -> NamedKind;
+        nkind_that_is_property_list : NamedKind -> Polarity -> PropertyList -> NamedKind;
 
         -- TERMS
         -- the `identifiers_to_term` is problematic as it can lead to syntactic ambiguity
@@ -112,6 +114,11 @@ abstract Magma = {
         definite_quantification : Quantification;        -- the
 
         nonexistential_quantification : Quantification; -- no
+
+        cardinal_quantification : Cardinal -> Quantification;   -- "two" as "two prime numbers"
+
+        -- common cardinalities
+        two_cardinality : Cardinal;
 
         -- properties
         BasePropertyList : Property -> Property -> PropertyList;

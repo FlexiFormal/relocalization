@@ -9,6 +9,7 @@ concrete GoldbachLexiconEng of GoldbachLexicon = SigFtmlEng ** open SigConstruct
     'prime:N' = mkN "prime";
     'prime:A' = mkA "prime";
     'number:N' = mkN "number";
+    'divisible:A' = mkA "divisible";
 
   lin
     'verb_#1-even:A_Property' = mkProperty (mkAP 'even:A') ;
@@ -17,4 +18,5 @@ concrete GoldbachLexiconEng of GoldbachLexicon = SigFtmlEng ** open SigConstruct
     'verb_sum:N-of-#1_FKind2' = mkFKind2 (makeCN 'sum:N') of_Prep;
     'verb_#1-prime:N_Kind' = mkKind (makeCN 'prime:N') ;
     'verb_#1-prime:A-number:N_Kind' = mkKind (makeCN 'prime:A' 'number:N') ;
+    'verb_#1-divisible:A-by-#2_Property2' = mkProperty2 (mkAP 'divisible:A') by_Prep;
 }

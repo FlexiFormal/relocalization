@@ -115,10 +115,10 @@ def filter_conj_ambig(reading: MAst, ctx: FilteringCtx) -> FilterResult:
                             node.clone_from_root().replace_in_parent(
                                 G(
                                     'conj_stmt',
-                                    x
                                     [
+                                        x.clone(),
                                         G('conj_stmt', [
-                                            G('and_conj', [y, z])
+                                            G('and_conj', [y.clone(), z.clone()])
                                         ])
                                     ]
                                 )

@@ -80,6 +80,7 @@ class MagmaGrammar:
             self,
             ftml: etree._Element | Path,
             fail_on_parse_error: bool = True,
+            category: str = 'Sentence',
     ) -> list[Sentence]:
         if isinstance(ftml, Path):
             ftml = etree.parse(StringIO(ftml.read_text()), parser=etree.HTMLParser()).getroot()
@@ -89,7 +90,7 @@ class MagmaGrammar:
         for s in sentences:
             result.append(Sentence())
             try:
-                asts = self.parse_to_aststr(s)
+                asts = self.parse_to_aststr(s, category=category)
             except ParseError as e:
                 if fail_on_parse_error:
                     raise e

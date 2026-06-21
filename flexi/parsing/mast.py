@@ -62,7 +62,7 @@ class MAst:
             self.append_child(child)
 
     def append_child(self, child: MAst):
-        if child._parent:
+        if child._parent is not None:
             raise ValueError("Child already has a parent")
         child._parent = self
         child._parent_pos = len(self._children)

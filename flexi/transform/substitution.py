@@ -34,6 +34,16 @@ def _rename_new_vars(mast: MAst, ctx: SubstitutionContext):
             # TODO: should we also update the notation/presentation?
 
 
+def _is_property(mast: MAst) -> bool:
+    match mast:
+        case G('property2_to_property'):
+            return True
+        case TermRef(_, [x]):
+            return _is_property(x)
+    # TODO: other cases
+    return False
+
+
 
 def substitute_actual(mast: MAst, substitutions: dict[str, list[MAst]], ctx: SubstitutionContext) -> MAst:
     """ modifies the mast in place """
@@ -72,6 +82,33 @@ def substitute_actual(mast: MAst, substitutions: dict[str, list[MAst]], ctx: Sub
                     )
                 else:
                     raise NotImplementedError()
+
+            # replacing property used as `property_kind` with a roperty
+            elif (parent.value, mast.get_parent_pos()) in [
+                ('property_kind', 0),
+            ]:
+                if _is_property(value):
+                    # remove property
+                    parent.replace_in_parent(parent[1].clone())
+                    # find name_kind parent
+                    n = parent
+                    while n is not None and isinstance(n, G) and str(n.value) in {'property_kind'}:
+                        n = n.get_parent()
+                    if n is not None and isinstance(n, G) and n.value == 'name_kind':
+                        n.replace_in_parent(
+                            G(
+                                'nkind_that_is_property',
+                                [
+                                    n.clone(),
+                                    G('positive_pol'),
+                                    value.clone(),
+                                ]
+                            )
+                        )
+                    else:
+                        raise NotImplementedError('only support for named kinds')
+                else:
+                    raise NotImplementedError('only support for properties')
             else:
                 raise NotImplementedError(
                     f'unsupported combination: {(parent.value, mast.get_parent_pos())} for {mast}'

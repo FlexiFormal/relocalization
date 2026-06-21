@@ -26,8 +26,8 @@ def main():
             s = sentence[0]
             assert isinstance(s, MAst)
             # print(grammar.linearize_mast(s))
-            # if grammar.linearize_mast(s) != 'For all v0 , ( if v0 is a class then for all v1 , ( ( v1 is a subclass of v0 ) iff ( v1 is a class and for all v2 , ( if v2 is an element of v1 then v2 is an element of v0 ) ) ) ).':
-            #     continue
+            if grammar.linearize_mast(s) != 'For all v0 , ( if v0 is a class then for all v1 , ( ( v1 is a subclass of v0 ) iff ( v1 is a class and for all v2 , ( if v2 is an element of v1 then v2 is an element of v0 ) ) ) ).':
+                continue
 
             if len(filtered) >= 1:
                 print(mast_to_gfxml(filtered[0]).to_gf()[1])
@@ -35,7 +35,7 @@ def main():
 
                 try:
                     # m = next(iter(RewritePullKindIntoUnivQuant().apply_somewhere(filtered[0], RewritingContext())))
-                    m = greedy_rewriting(filtered[0], GREEDY_REWRITING_DEFAULT_RULES, RewritingContext()) or filtered[0]
+                    m = mast if (mast := greedy_rewriting(filtered[0], GREEDY_REWRITING_DEFAULT_RULES, RewritingContext())) is not None else filtered[0]
                     # print('SIMPLIFIED:', mast_to_gfxml(m).to_gf()[1])
                     print('SIMPLIFIED:', grammar.linearize_mast(m))
                 except StopIteration:

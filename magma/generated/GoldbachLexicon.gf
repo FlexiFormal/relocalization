@@ -8,4 +8,5 @@ abstract GoldbachLexicon = SigFtml ** {
     'verb_sum:N-of-#1_FKind2' : FKind2;
     'verb_#1-prime:N_Kind' : Kind;
     'verb_#1-prime:A-number:N_Kind' : Kind;
+    'verb_#1-divisible:A-by-#2_Property2' : Property2;
 }

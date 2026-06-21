@@ -1,6 +1,6 @@
 --# -path=../magma:../lexica:../other
 
-concrete cantorGrammarEng of cantorGrammar = ForthelEng ** open ForthelOpersEng, ParadigmsEng, ConstructorsEng in {
+concrete cantorGrammarEng of cantorGrammar = ForthelEng ** open SigConstructorsEng, ParadigmsEng, ConstructorsEng in {
   oper
     _dict_set_N = mkN "set";
     _dict_empty_A = mkA "empty";

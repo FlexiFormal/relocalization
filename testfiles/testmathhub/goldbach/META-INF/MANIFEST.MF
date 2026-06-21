@@ -1,0 +1,6 @@
+id: goldbach
+url-base: https://mathhub.info
+description: desc.html
+teaser:Goldbach Conjecture
+title: Goldbach
+format:stex

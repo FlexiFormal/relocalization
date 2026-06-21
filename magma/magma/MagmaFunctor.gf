@@ -17,6 +17,7 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         Term = {np: NP; just_formula: Bool};
         TermList = {lnp: ListNP; just_formula: Bool};
         Predicate = Grammar.VP;
+        Cardinal = Det;
 
         -- properties
         Property = AP;
@@ -64,6 +65,7 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         };
         name_kind k i = {cn = mkCN (mkCN k.cn (symb i.s)) k.adv; num = i.num};
         nkind_that_is_property nk pol pp = {cn = mkCN nk.cn (mkRS pol (mkRCl IdRP pp)); num = nk.num};
+        nkind_that_is_property_list nk pol pl = {cn = mkCN nk.cn (mkRS pol (mkRCl IdRP (mkAP and_Conj pl))); num = nk.num};
 
         -- terms
         BaseTermList t1 t2 = {
@@ -94,6 +96,14 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
 
         -- quantifications
         indefinite_quantification = mkQuantification aSg_Det aPl_Det;
+
+        -- cardinal quantification.
+        -- This is rather hacky... What is the right way?
+        -- It is already a problem that named kinds determine the plurality
+        -- So what is a singular "two"?
+        -- Alternative options:
+        --   * have NamedKindSg and NamedKindPl
+        cardinal_quantification c = mkQuantification c c;
 
         -- universal_quantification_sg = ;
 

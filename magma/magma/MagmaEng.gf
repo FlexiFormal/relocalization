@@ -55,6 +55,8 @@ concrete MagmaEng of Magma = MagmaFunctor - [term_is_not_property_stmt] with
 
         nonexistential_quantification = mkQuantification noSg_Det noPl_Det;
 
+        two_cardinality = mkDet (mkCard "2");
+
         let_ident_decl id = lin Utt { s = "let" ++ id.s } ;
         let_such_that id stmt = lin Utt { s = "let" ++ id.s ++ "be such that" ++ stmt.s } ;
         let_such_that_v1 id stmt = lin Utt { s = "let" ++ id.s ++ "where" ++ stmt.s } ;

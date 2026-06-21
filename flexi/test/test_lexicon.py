@@ -16,7 +16,7 @@ class TestLexicon(unittest.TestCase):
     def test_ftml_import(self):
         l = Lexicon('GoldbachLexicon', 'Eng')
         l.extend_from_ftml(
-            TEST_FILE_DIR / 'smglom' / 'goldbach' / 'goldbach.en.html'
+            TEST_FILE_DIR / 'testmathhub' / 'goldbach' / 'source' / 'goldbach.en.html'
         )
         l.write_gf()
         grammar = MagmaGrammar('GoldbachLexicon', 'Eng')

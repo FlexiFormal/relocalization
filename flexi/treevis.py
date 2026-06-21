@@ -25,7 +25,7 @@ def mast_to_dot(node: MAst) -> str:
                 style = 'filled'
             extra = f', fillcolor="{fillcolor}", style={style}'
 
-        display_val = n.value or ''
+        display_val = '' if n.value is None else n.value
         if len(display_val) > 20:
             display_val = '...' + display_val[-17:]
 
