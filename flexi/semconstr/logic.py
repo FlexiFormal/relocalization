@@ -1,6 +1,7 @@
 import abc
 import dataclasses
 import functools
+import subprocess
 from typing import Literal
 
 class SimpleType(abc.ABC):
@@ -150,7 +151,9 @@ class Expr:
             nonlocal changed_something
             if isinstance(e, Apply):
                 match e:
-                    case Apply(Apply(Const.Conjunction, a), Const.Truth) | Apply(Apply(Const.Conjunction, Const.Truth), a):
+                    case Apply(Apply(Const.Conjunction, a), Const.Truth)\
+                         | Apply(Apply(Const.Conjunction, Const.Truth), a) \
+                         | Apply(Apply(Const.Implication, Const.Truth), a):
                         changed_something = True
                         return a
                 return Apply(_helper(e.func), _helper(e.arg))
@@ -233,6 +236,7 @@ class Const(Expr):
     Conjunction: 'Const'
     Disjunction: 'Const'
     Truth: 'Const'
+    Falsehood: 'Const'
     Equal: 'Const'
     Nil: 'Const'
     Cons: 'Const'
@@ -261,6 +265,7 @@ Const.Equivalence = Const('⇔', Typ.TTT)
 Const.Conjunction = Const('∧', Typ.TTT)
 Const.Disjunction = Const('∨', Typ.TTT)
 Const.Truth = Const('T', Typ.T)
+Const.Falsehood = Const('F', Typ.T)
 Const.Equal = Const('=', Typ.EET)
 # list constructors
 Const.Nil = Const('nil', Typ.E)
@@ -283,12 +288,23 @@ class Lambda(Expr):
 class TptpConvCtx:
     format: Literal['fof'] = 'fof'
 
+    time_out_seconds: int = 3
+    time_out_as_fail: bool = False
+
+    # need to track bound_vars because some vars end up as `Const`s (we can convert them to vars on the go)
+    bound_vars: set[str] = dataclasses.field(default_factory=set)
+
 
 def to_tptp_name(
-        expr: Var | Const
+        expr: Var | Const,
+        ctx: TptpConvCtx,
 ) -> str:
     if isinstance(expr, Const) and expr.name.startswith('http://') or expr.name.startswith('https://'):
         return expr.name.rstrip('+').split('=')[-1].replace(' ', '_')
+    elif isinstance(expr, Var):
+        return f'V{expr.name}'
+    elif isinstance(expr, Const) and expr.name in ctx.bound_vars:
+        return f'V{expr.name}'   # actually a variable
     else:
         return expr.name
 
@@ -313,7 +329,7 @@ def expr_to_tptp(
                 assert len(args) == 1
                 symb = '!' if head == Const.Forall else '?'
                 return f'( {symb} {c(args[0])} )'
-            if head in [
+            elif head in [
                 Const.Conjunction, Const.Disjunction, Const.Implication, Const.Equivalence, Const.Equal
             ]:
                 assert len(args) == 2
@@ -334,20 +350,69 @@ def expr_to_tptp(
                 assert len(args) == 1
                 return f'( ~ {c(args[0])})'
             else:
-                sname = to_tptp_name(head)
+                sname = to_tptp_name(head, ctx)
         elif isinstance(head, Var):
-            sname = to_tptp_name(head)
+            sname = to_tptp_name(head, ctx)
         elif isinstance(head, Lambda):
             raise NotImplementedError('did you forget to simplify?')
         else:
             raise RuntimeError()
         return f'{sname}(' + ', '.join(c(arg) for arg in args) + ')'
     elif isinstance(expr, Const) or isinstance(expr, Var):
-        return to_tptp_name(expr)
+        if expr == Const.Truth:
+            return '$true'
+        elif expr == Const.Falsehood:
+            return '$false'
+        return to_tptp_name(expr, ctx)
     elif isinstance(expr, Lambda):
-        return f'[{expr.var}] : {c(expr.body)}'
+        v = expr.var.name
+        remove_after = v not in ctx.bound_vars
+        ctx.bound_vars.add(v)
+        r = f'[{to_tptp_name(expr.var, ctx)}] : {c(expr.body)}'
+        if remove_after:
+            ctx.bound_vars.discard(v)
+        return r
     else:
         raise RuntimeError()
+
+
+def tptp_verify(
+        conjecture: Expr,
+        axioms: list[Expr],
+        ctx: TptpConvCtx,
+) -> bool:
+    with open('/tmp/flex-check.tptp', 'w') as fp:
+        for i, axiom in enumerate(axioms):
+            fp.write(f'''
+fof(axiom{i}, axiom,
+    {expr_to_tptp(axiom.simplified(), ctx)}
+).
+''')
+        fp.write(f'''
+fof(to_be_checked, conjecture,
+    {expr_to_tptp(conjecture.simplified(), ctx)}
+).
+''')
+
+    result = subprocess.run(['vampire', '/tmp/flex-check.tptp', '--time_limit', str(ctx.time_out_seconds)], stdout=subprocess.PIPE)
+    if result.returncode not in {0, 1}:
+        raise Exception(f'vampire failed with code {result.returncode}')
+    for line in result.stdout.decode().split('\n'):
+        line = line.strip()
+        if line.startswith('% SZS status'):
+            status = line.split()[3]
+            if status == 'Theorem':
+                return True
+            elif status == 'CounterSatisfiable':
+                return False
+            elif status == 'ContradictoryAxioms':
+                raise NotImplementedError()   # TODO: this whole function should be generalized a bit (also for satisfiability checks)
+        elif line == '% Time limit reached!':
+            if ctx.time_out_as_fail:
+                return False
+            else:
+                raise TimeoutError()
+    raise Exception('Found no status code')
 
 
 

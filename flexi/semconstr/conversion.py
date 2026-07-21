@@ -61,7 +61,7 @@ def decl_merge(decls: list[Declaration], stmt: Expr) -> Expr:
 
 
 @dataclasses.dataclass
-class Context:
+class ConversionContext:
     ...
 
 
@@ -72,10 +72,19 @@ class OtherMeaning:
 class NamedKindMeaning(OtherMeaning):
     """
         For quantification, we need to be able to access the name.
-        It is therefore represented as a pair of the identifiers and the kind.
-        For example, "even integers x, y" would be ([x, y], λe.even(e)∧integer(e)).
+
+        Simple idea:
+            It is therefore represented as a pair of the identifiers and the kind.
+            For example, "even integers x, y" would be ([x, y], λe.even(e)∧integer(e)).
+
+        Actual implementation:
+            We also need to store the constraint.
+            E.g. "even integers x, y ∈ S" becomes ([x, y], x∈S∧y∈S, λe.even(e)∧integer(e)).
+            While it could be part of the kind, that would result in duplication and
+            more awkward transforms to avoid ensure that all variables are introduced before the constraint.
     """
     identifiers: list[Var]
+    constraint: Expr
     kind: Expr
 
     def __post_init__(self):
@@ -111,7 +120,7 @@ class FormulaMeaning(OtherMeaning):
         )
 
 
-def finalized_convert(m: MAst, ctx: Context) -> Expr:
+def finalized_convert(m: MAst, ctx: ConversionContext) -> Expr:
     """ like convert, but merges all open declarations """
     d, e = convert(m, ctx)
     assert isinstance(e, Expr)
@@ -121,7 +130,7 @@ def finalized_convert(m: MAst, ctx: Context) -> Expr:
 ConvMeaning: TypeAlias = tuple[list[Declaration], Expr | OtherMeaning]
 
 
-def convert(m: MAst, ctx: Context) -> ConvMeaning:
+def convert(m: MAst, ctx: ConversionContext) -> ConvMeaning:
     """
     Notes on types:
         NamedKind: a pair of identifiers and kind (see `NamedKindMeaning`).
@@ -160,15 +169,15 @@ def convert(m: MAst, ctx: Context) -> ConvMeaning:
                 # identifiers are ([], FormulaMeaning).
                 # itentifiers cannot be declarations yet as they have no quantifier
                 assert not decls2, f'Expected no declarations for maybe_identifiers, got {len(decls2)}'
-                if ids.constraint != Const.Truth:
-                    v = Var.fresh(Typ.E)
-                    k = Lambda(v, Apply.multi(Const.Conjunction, ids.constraint, Apply(k, v)))
-                return decls, NamedKindMeaning(identifiers=ids.identifiers, kind=k)
+                # if ids.constraint != Const.Truth:
+                #     v = Var.fresh(Typ.E)
+                #     k = Lambda(v, Apply.multi(Const.Conjunction, ids.constraint, Apply(k, v)))
+                return decls, NamedKindMeaning(identifiers=ids.identifiers, constraint=ids.constraint, kind=k)
             case ('identifiers_as_nkind', [identifiers]):
                 decls, ids = conv(identifiers)
                 assert isinstance(ids, IdentifiersMeaning)
                 assert not decls, f'Expected no declarations for maybe_identifiers, got {len(decls)}'
-                return [], NamedKindMeaning(identifiers=ids.identifiers, kind=Lambda(Var.fresh(Typ.E), ids.constraint))
+                return [], NamedKindMeaning(identifiers=ids.identifiers, constraint=ids.constraint, kind=Lambda(Var.fresh(Typ.E), Const.Truth))
             case ('prekind_to_kind', [prekind]):
                 return conv(prekind)
             case ('cast_Identifiers_MaybeIdentifiers', [identifiers]):
@@ -190,7 +199,7 @@ def convert(m: MAst, ctx: Context) -> ConvMeaning:
                 assert isinstance(ids, IdentifiersMeaning)
                 assert not decls, f'Expected no declarations for maybe_identifiers, got {len(decls)}'
                 property_decls, p = conv(property)
-                nk = NamedKindMeaning(identifiers=ids.identifiers, kind=Lambda(Var.fresh(Typ.E), ids.constraint))
+                nk = NamedKindMeaning(identifiers=ids.identifiers, constraint=ids.constraint, kind=Lambda(Var.fresh(Typ.E), Const.Truth))
                 qnk_decls, qnk = _convert_quantify_nkind('indefinite_quantification', ([], nk))
                 return qnk_decls + property_decls, Apply(qnk, p)
             case ('stmt_for_term', [stmt, term]):
@@ -207,15 +216,15 @@ def convert(m: MAst, ctx: Context) -> ConvMeaning:
             case ('exists_nkind', [nk]):
                 qnk_decls, qnk = _convert_quantify_nkind('indefinite_quantification', conv(nk))
                 return qnk_decls, Apply(qnk, Lambda(Var.fresh(Typ.E), Const.Truth))
-                # print('::', qnk_decls)
-                # print('--', qnk)
-                # assert False
+                # merge is probably not right (x can be referenced after "there exists an x such that ...")
+                # return [], decl_merge(qnk_decls, Apply(qnk, Lambda(Var.fresh(Typ.E), Const.Truth)))
             case ('such_that_named_kind', [nk, stmt]):
                 nk_decls, nk = conv(nk)
                 stmt_decls, stmt = conv(stmt)
                 assert isinstance(nk, NamedKindMeaning)
                 v = Var.fresh(Typ.E)
-                nk.kind = Lambda(v, Apply.multi(Const.Conjunction, Apply(nk.kind, v), stmt))
+                # nk.kind = Lambda(v, Apply.multi(Const.Conjunction, Apply(nk.kind, v), stmt))
+                nk.constraint = Apply.multi(Const.Conjunction, nk.constraint, stmt)
                 return nk_decls + stmt_decls, nk
 
     elif isinstance(m, TermDef):
@@ -276,14 +285,17 @@ def _convert_quantify_nkind(quant_fun: str, nkind: ConvMeaning) -> ConvMeaning:
     body: Expr = Const.Truth
     for e in nk.identifiers:
         body = Apply.multi(Const.Conjunction, Apply(p, e), body)
+    decls = [Declaration(quant_map[quant_name], v, Apply(nk.kind, v)) for v in nk.identifiers]
+    # put constraint last to ensure that all identifiers it contains are in scope
+    decls[-1].restriction = Apply.multi(Const.Conjunction, decls[-1].restriction, nk.constraint)
     r = (
-        [Declaration(quant_map[quant_name], v, Apply(nk.kind, v)) for v in nk.identifiers] + extra_decls,
+        decls + extra_decls,
         Lambda(p, body)
     )
     return r
 
 
-def _extract_refables(m: MAst, ctx: Context) -> list[Expr]:
+def _extract_refables(m: MAst, ctx: ConversionContext) -> list[Expr]:
     r"""
     Returns referenceable terms from a formula.
 
@@ -361,7 +373,7 @@ def flex_reduce(c: Const, args: list[Expr]) -> Expr:
     return default
 
 
-def _convert_math_helper(m, ctx: Context) -> Expr:
+def _convert_math_helper(m, ctx: ConversionContext) -> Expr:
     """ plain conversion of a formula """
     conv = functools.partial(_convert_math_helper, ctx=ctx)
 

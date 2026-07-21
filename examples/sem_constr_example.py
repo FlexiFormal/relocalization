@@ -3,7 +3,7 @@ from pathlib import Path
 
 sys.path.append(str(Path(__file__).parent.parent))
 
-from flexi.semconstr.conversion import convert, Context
+from flexi.semconstr.conversion import convert, ConversionContext
 from flexi.parsing.magma import MagmaGrammar
 from flexi.config import TEST_FILE_DIR
 
@@ -21,7 +21,7 @@ if __name__ == '__main__':
                 for mast in sentence:
                     # print(mast)
                     try:
-                        decls, r = convert(mast, Context())
+                        decls, r = convert(mast, ConversionContext())
                         print('RESULT:\n', decls, str(r))
                         print('SIMPLIFIED:')
                         print(str(r.beta_reduced()))

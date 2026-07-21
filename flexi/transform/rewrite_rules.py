@@ -4,6 +4,8 @@ from typing import Iterable, TypeVar
 
 from flexi.parsing.document import DocText, DocNode
 from flexi.parsing.mast import MAst, G, M, MSeq, MI, Formula, MT, TermRef, X, TermDef, MathArg
+from flexi.semconstr.conversion import finalized_convert, ConversionContext
+from flexi.semconstr.logic import Expr, tptp_verify, Apply, Const, TptpConvCtx
 from flexi.transform.astmatch import tagged, pattern_match
 from flexi.transform.nldefcatalog import NlDefCatalog
 from flexi.transform.utils import analyse_identifier, MastCheck, MastGen
@@ -18,6 +20,8 @@ def not_none(x: T | None) -> T:
 @dataclasses.dataclass
 class RewritingContext:
     nl_def_catalog: NlDefCatalog = dataclasses.field(default_factory=NlDefCatalog)
+
+    axioms: list[Expr] = dataclasses.field(default_factory=list)
 
     # the following ones are used to control the behavior of specific rules
     focus_var: str | None = None
@@ -597,3 +601,30 @@ class RewriteAccumulateThatIsProperty(RewriteRule):
                     ])
                 )
                 return clone.get_root()
+
+
+class RewriteEliminateRedundantInfo(RewriteRule):
+    def __init__(self, variant: int = 0):
+        self.variant = variant    # one node can potentially trigger multiple rewrite variants
+
+
+    def apply(self, mast: MAst, ctx: RewritingContext) -> MAst | None:
+        def check(m: MAst) -> bool:
+            return tptp_verify(
+                Apply.multi(Const.Equivalence, finalized_convert(mast.get_root(), ConversionContext()), finalized_convert(m, ConversionContext())),
+                ctx.axioms,
+                TptpConvCtx(time_out_as_fail=True),
+            )
+
+        match mast:
+            case G('conj_stmt', [conj, a, b]):
+                if self.variant == 0:
+                    m = mast.clone_from_root().replace_in_parent(a.clone()).get_root()
+                elif self.variant == 1:
+                    m = mast.clone_from_root().replace_in_parent(b.clone()).get_root()
+                else:
+                    return None
+                if check(m):
+                    return m
+
+        return None
