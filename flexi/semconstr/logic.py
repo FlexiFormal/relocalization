@@ -1,6 +1,7 @@
 import abc
 import dataclasses
-
+import functools
+from typing import Literal
 
 class SimpleType(abc.ABC):
     """
@@ -276,6 +277,79 @@ class Lambda(Expr):
 
     def __str__(self):
         return f'(λ{self.var}.{self.body})'
+
+
+@dataclasses.dataclass
+class TptpConvCtx:
+    format: Literal['fof'] = 'fof'
+
+
+def to_tptp_name(
+        expr: Var | Const
+) -> str:
+    if isinstance(expr, Const) and expr.name.startswith('http://') or expr.name.startswith('https://'):
+        return expr.name.rstrip('+').split('=')[-1].replace(' ', '_')
+    else:
+        return expr.name
+
+
+def expr_to_tptp(
+        expr: Expr,
+        ctx: TptpConvCtx,
+) -> str:
+    c = functools.partial(expr_to_tptp, ctx=ctx)
+
+    if isinstance(expr, Apply):
+        # uncurry
+        args = [expr.arg]
+        remainder = expr.func
+        while isinstance(remainder, Apply):
+            args.append(remainder.arg)
+            remainder = remainder.func
+        args = list(reversed(args))
+        head = remainder
+        if isinstance(head, Const):
+            if head in [Const.Forall, Const.Exists]:
+                assert len(args) == 1
+                symb = '!' if head == Const.Forall else '?'
+                return f'( {symb} {c(args[0])} )'
+            if head in [
+                Const.Conjunction, Const.Disjunction, Const.Implication, Const.Equivalence, Const.Equal
+            ]:
+                assert len(args) == 2
+                if head == Const.Implication:
+                    op = '=>'
+                elif head == Const.Equivalence:
+                    op = '<=>'
+                elif head == Const.Conjunction:
+                    op = '&'
+                elif head == Const.Disjunction:
+                    op = '|'
+                elif head == Const.Equal:
+                    op = '='
+                else:
+                    raise RuntimeError()
+                return f'({c(args[0])} {op} {c(args[1])})'
+            elif head == Const.Negation:
+                assert len(args) == 1
+                return f'( ~ {c(args[0])})'
+            else:
+                sname = to_tptp_name(head)
+        elif isinstance(head, Var):
+            sname = to_tptp_name(head)
+        elif isinstance(head, Lambda):
+            raise NotImplementedError('did you forget to simplify?')
+        else:
+            raise RuntimeError()
+        return f'{sname}(' + ', '.join(c(arg) for arg in args) + ')'
+    elif isinstance(expr, Const) or isinstance(expr, Var):
+        return to_tptp_name(expr)
+    elif isinstance(expr, Lambda):
+        return f'[{expr.var}] : {c(expr.body)}'
+    else:
+        raise RuntimeError()
+
+
 
 
 if __name__ == '__main__':

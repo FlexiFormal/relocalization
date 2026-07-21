@@ -111,6 +111,13 @@ class FormulaMeaning(OtherMeaning):
         )
 
 
+def finalized_convert(m: MAst, ctx: Context) -> Expr:
+    """ like convert, but merges all open declarations """
+    d, e = convert(m, ctx)
+    assert isinstance(e, Expr)
+    return decl_merge(d, e)
+
+
 ConvMeaning: TypeAlias = tuple[list[Declaration], Expr | OtherMeaning]
 
 
@@ -153,7 +160,6 @@ def convert(m: MAst, ctx: Context) -> ConvMeaning:
                 # identifiers are ([], FormulaMeaning).
                 # itentifiers cannot be declarations yet as they have no quantifier
                 assert not decls2, f'Expected no declarations for maybe_identifiers, got {len(decls2)}'
-                print(':::', k, ids.constraint)
                 if ids.constraint != Const.Truth:
                     v = Var.fresh(Typ.E)
                     k = Lambda(v, Apply.multi(Const.Conjunction, ids.constraint, Apply(k, v)))
@@ -179,10 +185,39 @@ def convert(m: MAst, ctx: Context) -> ConvMeaning:
                 qnk_decls, qnk = _convert_quantify_nkind('indefinite_quantification', conv(nkind))
                 property_decls, p = conv(property)
                 return qnk_decls + property_decls, Apply(qnk, p)
+            case ('define_ident_prop', [ident, property]):
+                decls, ids = conv(ident)
+                assert isinstance(ids, IdentifiersMeaning)
+                assert not decls, f'Expected no declarations for maybe_identifiers, got {len(decls)}'
+                property_decls, p = conv(property)
+                nk = NamedKindMeaning(identifiers=ids.identifiers, kind=Lambda(Var.fresh(Typ.E), ids.constraint))
+                qnk_decls, qnk = _convert_quantify_nkind('indefinite_quantification', ([], nk))
+                return qnk_decls + property_decls, Apply(qnk, p)
             case ('stmt_for_term', [stmt, term]):
                 stmt_decls, s = conv(stmt)
                 term_decls, t = conv(term)
-                return [], decl_merge(stmt_decls + term_decls, Apply(t, Lambda(Var.fresh(Typ.E), s)))
+                # TODO: are there cases where `t` has useful information?
+                # Typical case:
+                #   bar(x, y) for every foo x, y
+                #   which gives something like
+                #      term_decls = [(∀,x,foo(x)), (∀,y,foo(y))]
+                #      t = λp.p(x) ∧ p(y)          (needed e.g. in "every foo x, y is bar")
+                return [], decl_merge(stmt_decls + term_decls, s)
+                # return [], decl_merge(stmt_decls + term_decls, Apply(t, Lambda(Var.fresh(Typ.E), s)))
+            case ('exists_nkind', [nk]):
+                qnk_decls, qnk = _convert_quantify_nkind('indefinite_quantification', conv(nk))
+                return qnk_decls, Apply(qnk, Lambda(Var.fresh(Typ.E), Const.Truth))
+                # print('::', qnk_decls)
+                # print('--', qnk)
+                # assert False
+            case ('such_that_named_kind', [nk, stmt]):
+                nk_decls, nk = conv(nk)
+                stmt_decls, stmt = conv(stmt)
+                assert isinstance(nk, NamedKindMeaning)
+                v = Var.fresh(Typ.E)
+                nk.kind = Lambda(v, Apply.multi(Const.Conjunction, Apply(nk.kind, v), stmt))
+                return nk_decls + stmt_decls, nk
+
     elif isinstance(m, TermDef):
         if m.wrapfun == 'wrapped_property':
             typ = Typ.ET
@@ -222,6 +257,8 @@ def _convert_connective_application(connective_fun: str, a: ConvMeaning, b: Conv
             existential_to_universal(a_decls),
             Apply.multi(Const.Equivalence, aa, decl_merge(b_decls, bb))
         )
+    elif s == 'and_conj':
+        return a_decls + b_decls, Apply.multi(Const.Conjunction, aa, bb)
     raise NotImplementedError(f'Conversion for {s} application not implemented yet')
 
 
@@ -239,10 +276,11 @@ def _convert_quantify_nkind(quant_fun: str, nkind: ConvMeaning) -> ConvMeaning:
     body: Expr = Const.Truth
     for e in nk.identifiers:
         body = Apply.multi(Const.Conjunction, Apply(p, e), body)
-    return (
+    r = (
         [Declaration(quant_map[quant_name], v, Apply(nk.kind, v)) for v in nk.identifiers] + extra_decls,
         Lambda(p, body)
     )
+    return r
 
 
 def _extract_refables(m: MAst, ctx: Context) -> list[Expr]:
@@ -386,6 +424,7 @@ SMGLOM_CONSTS: dict[str, ConstInfo] = {
     'http://mathhub.info?a=smglom/algebra&p=mod&m=magma/magma&s=operation': ConstInfo(Typ.EE, ['lassoc'], Typ.EEE),
     'http://mathhub.info?a=smglom/sets&p=mod&m=set&s=in': ConstInfo(Typ.EET, ['conjunctwithrest', None]),  # args `ai`
     'http://mathhub.info?a=smglom/algebra&p=mod&m=universe/universe&s=base set': ConstInfo(Typ.E),
+    'http://mathhub.info?a=smglom/algebra&p=mod&m=monoid/monoid&s=unit': ConstInfo(Typ.E),
 }
 
 def get_smglom_type(uri: str) -> SimpleType:

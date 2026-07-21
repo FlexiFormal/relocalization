@@ -9,7 +9,8 @@ from flexi.parsing.magma import MagmaGrammar, Sentence
 
 import flexi.workbench as wb
 from flexi.parsing.mast import MAst
-from flexi.semconstr.conversion import convert, Context
+from flexi.semconstr.conversion import convert, Context, finalized_convert
+from flexi.semconstr.logic import expr_to_tptp, TptpConvCtx
 from flexi.transform.filtering import FilteringCtx, filter_readings
 from flexi.treevis import mast_color_diff
 
@@ -40,13 +41,13 @@ def main():
             wb.push_html(f'<h1>Context [{i}]</h1>')
             for mast in sentence:
                 wb.push_sentence_mast(mast)
-                decls, r = convert(mast, Context())
+                r = finalized_convert(mast, Context())
                 wb.push_html(f'''
 <pre>
-Declarations: {decls}
 Result: {str(r)}
 Reduced: {str(r.beta_reduced())}
 Simplified: {str(r.simplified())}
+TPTP FOF: {expr_to_tptp(r.simplified(), TptpConvCtx())}
 </pre>
 ''')
 
@@ -54,6 +55,15 @@ Simplified: {str(r.simplified())}
             wb.push_html(f'<h1>Sentence {i}</h1>')
             for k, reading in enumerate(sentence):
                 wb.push_sentence_mast(reading)
+                r = finalized_convert(reading, Context())
+                wb.push_html(f'''
+                <pre>
+Result: {str(r)}
+Reduced: {str(r.beta_reduced())}
+Simplified: {str(r.simplified())}
+TPTP FOF: {expr_to_tptp(r.simplified(), TptpConvCtx())}
+                </pre>
+                ''')
                 if k + 1 < len(sentence):
                     # color diff so that we can improve filtering
                     mast_clone = reading.clone()
