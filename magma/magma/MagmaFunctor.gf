@@ -132,7 +132,9 @@ incomplete concrete MagmaFunctor of Magma = open MagmaUtils, Syntax, Grammar, Sy
         term_has_nkind_stmt t nk = mkS (mkCl t.np have_V2 (indef_nk nk));
         term_is_property_stmt t p = mkS (mkCl t.np p);
         term_is_not_property_stmt t p = mkS negativePol (mkCl t.np p);
-        term_is_term_stmt t1 t2 = mkS (mkCl t1.np t2.np);
+        -- term_is_term_stmt t1 t2 = mkS (mkCl t1.np t2.np);
+        term_is_kind_stmt t k = mkS (mkCl t.np (mkNP (indefart (npNumber t.np)) (kind2CN k)));
+        term_is_fkind_stmt t k = mkS (mkCl t.np (mkNP (defart (npNumber t.np)) (kind2CN k)));
         term_predicate_stmt t pred = mkS (mkCl t.np pred);
 
         -- declarations

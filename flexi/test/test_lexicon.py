@@ -9,7 +9,7 @@ class TestLexicon(unittest.TestCase):
     def test_spec_parsing(self):
         r = VerbalizationRecord.from_spec('N2', '#1 finite:A subset:N of #2')
         self.assertEqual(r.typ, 'Kind2')
-        self.assertEqual(r.main_argument, 1)
+        self.assertEqual(r.subject_argument, 1)
         self.assertEqual(r.gf_lin, "mkKind2 (makeCN 'finite:A' 'subset:N') of_Prep")
         self.assertEqual(r.depends_on_words, ['finite:A', 'subset:N'])
 

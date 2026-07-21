@@ -30,6 +30,10 @@ class SimpleType(abc.ABC):
     def result_type(self) -> 'AtomicType':
         ...
 
+    @abc.abstractmethod
+    def get_argument_types(self) -> list['SimpleType']:
+        ...
+
 
 
 @dataclasses.dataclass
@@ -51,6 +55,9 @@ class Arrow(SimpleType):
     def result_type(self) -> 'AtomicType':
         return self.b.result_type()
 
+    def get_argument_types(self) -> list['SimpleType']:
+        return [self.a] + self.b.get_argument_types()
+
 
 @dataclasses.dataclass
 class AtomicType(SimpleType):
@@ -68,8 +75,11 @@ class AtomicType(SimpleType):
     def result_type(self) -> 'AtomicType':
         return self
 
+    def get_argument_types(self) -> list['SimpleType']:
+        return []
 
-class UnitType(SimpleType):
+
+class UnitType(AtomicType):
     """
     We probably don't need this, but I had it already from the old implementation...
     """
@@ -159,7 +169,11 @@ class Apply(Expr):
     __match_args__ = ('func', 'arg')
 
     def __init__(self, func: Expr, arg: Expr):
-        assert isinstance(func.typ, Arrow) and arg.typ <= func.typ.a
+        assert isinstance(func.typ, Arrow) and arg.typ <= func.typ.a, (
+            'Type mismatch:\n'
+            f'{func.typ} @ {arg.typ}\n'
+            f'({func})    @    ({arg})'
+        )
         super().__init__(func.typ.b)
         self.func = func
         self.arg = arg
@@ -174,7 +188,7 @@ class Apply(Expr):
     def __str__(self):
         match self:
             case Apply(Apply(c, a), b) if c in [
-                Const.Implication, Const.Equivalence, Const.Conjunction, Const.Disjunction
+                Const.Implication, Const.Equivalence, Const.Conjunction, Const.Disjunction, Const.Equal, Const.Cons,
             ]:
                 assert isinstance(c, Const)
                 return f'({a} {c.name} {b})'
@@ -218,6 +232,9 @@ class Const(Expr):
     Conjunction: 'Const'
     Disjunction: 'Const'
     Truth: 'Const'
+    Equal: 'Const'
+    Nil: 'Const'
+    Cons: 'Const'
 
     def __init__(self, name: str, typ: SimpleType):
         super().__init__(typ)
@@ -243,6 +260,10 @@ Const.Equivalence = Const('⇔', Typ.TTT)
 Const.Conjunction = Const('∧', Typ.TTT)
 Const.Disjunction = Const('∨', Typ.TTT)
 Const.Truth = Const('T', Typ.T)
+Const.Equal = Const('=', Typ.EET)
+# list constructors
+Const.Nil = Const('nil', Typ.E)
+Const.Cons = Const('::', Typ.EEE)
 
 
 

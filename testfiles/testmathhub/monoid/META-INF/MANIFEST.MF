@@ -1,0 +1,6 @@
+id: monoid
+url-base: https://mathhub.info
+description: desc.html
+teaser: Monoids
+title: Monoid
+format:stex

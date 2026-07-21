@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 import flexi.workbench as wb
@@ -5,6 +6,8 @@ from flexi.config import TEST_FILE_DIR
 from flexi.lexicon import Lexicon
 from flexi.parsing.magma import MagmaGrammar
 from flexi.parsing.mast import G, TermRef, Formula, MI, MT
+from flexi.transform.rewrite_guidance import greedy_rewriting, GREEDY_REWRITING_DEFAULT_RULES
+from flexi.transform.rewrite_rules import RewritingContext
 from flexi.transform.substitution import substitute
 
 
@@ -12,6 +15,7 @@ def main():
     file = TEST_FILE_DIR / 'testmathhub' / 'goldbach' / 'source' / 'goldbach.en.html'
     l = Lexicon('GoldbachLexicon', 'Eng')
     l.extend_from_ftml(file)
+    l.add_word_list(Path(os.environ['MATHHUB']) / 'smglom' / 'meta-inf' / 'source' / 'verbalization-words.en.txt')
     l.write_gf()
     grammar = MagmaGrammar('GoldbachLexicon', 'Eng')
 
@@ -53,8 +57,10 @@ def main():
                 )
                 wb.push_mast(mast_new)
                 wb.push_sentence_mast(mast_new)
-
-
+                wb.push_html('<b>simplified</b>')
+                wb.push_sentence_mast(
+                    r if (r := greedy_rewriting(mast_new, GREEDY_REWRITING_DEFAULT_RULES, RewritingContext())) is not None else mast_new
+                )
 
 if __name__ == '__main__':
     main()

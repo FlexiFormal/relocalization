@@ -1,0 +1,20 @@
+\documentclass{stex}
+\libinput[smglom/meta-inf]{preamble}
+\begin{document}
+\begin{smodule}{commutative-monoid}
+    \importmodule[smglom/algebra]{mod?monoid}
+
+    \begin{extstructure}{cmonoid}[commutative monoid]{monoid}
+        \verbalization{monoid}{monoid:N}
+        \verbalization{commutative monoid}{commutative:A monoid:N}
+        \begin{sdefinition}[title=Commutative Monoid]
+            \vardef{xvar}{x}
+            \vardef{yvar}{y}
+            %
+            A \sn{monoid} is called \definiendum{commutative monoid}{commutative} if
+            \inlineass[name=comm.ax]{$\eq{\op{\xvar,\yvar},\op{\yvar,\xvar}}$
+            for all $\inset{\xvar,\yvar}\bset$}.
+        \end{sdefinition}
+    \end{extstructure}
+\end{smodule}
+\end{document}

@@ -1,0 +1,21 @@
+\documentclass{stex}
+\libinput[smglom/meta-inf]{preamble}
+\begin{document}
+\begin{smodule}{invertible-in-monoid}
+  \importmodule[smglom/algebra]{mod?monoid}
+  
+  \begin{extstructure*}{monoid}
+    \symdecl*{invertible}[def=foo]
+    \verbalization{invertible}{invertible:A}
+
+    \begin{sdefinition}
+      \vardef{xvar}{x}
+      \vardef{yvar}{y}
+      %
+      $\inset\xvar\bset$ is called \definame{invertible} if there exists a
+      $\inset\yvar\bset$ such that $\eq{\op{\xvar,\yvar},\unit}$ and
+      $\eq{\op{\yvar,\xvar},\unit}$.
+    \end{sdefinition}
+  \end{extstructure*}
+\end{smodule}
+\end{document}

@@ -1,10 +1,13 @@
 import dataclasses
 import functools
 import re
-from typing import TypeAlias
+from typing import TypeAlias, Literal, Iterable
 
-from flexi.parsing.mast import MAst, G, TermDef, Formula, M, MSeq, MI, MT, GfSymb
+from torch._dynamo.polyfills import itertools
+
+from flexi.parsing.mast import MAst, G, TermDef, Formula, M, MSeq, MI, MT, GfSymb, X
 from flexi.semconstr.logic import Const, Var, Typ, Expr, Apply, Lambda, SimpleType
+from flexi.utils import get_only_element, concat
 
 
 class LQ:
@@ -29,6 +32,9 @@ class Declaration:
         self.var = var
         self.restriction = restriction
         assert self.restriction.typ == Typ.T  # we capture the variable
+
+    def __repr__(self):
+        return f'{self.quantifier.quantifier} {self.var} {self.restriction}'
 
 
 def existential_to_universal(decls: list[Declaration]) -> list[Declaration]:
@@ -72,6 +78,9 @@ class NamedKindMeaning(OtherMeaning):
     identifiers: list[Var]
     kind: Expr
 
+    def __post_init__(self):
+        assert isinstance(self.identifiers, list), self.identifiers
+
 
 @dataclasses.dataclass
 class IdentifiersMeaning(OtherMeaning):
@@ -91,9 +100,14 @@ class FormulaMeaning(OtherMeaning):
                 identifiers.append(r)
             else:
                 raise ValueError(f'Expected all referenceables to be Vars, got {r}')
+        constraint = Const.Truth
+        if self.formula.typ == Typ.T:
+            constraint = self.formula
+        elif self.formula.typ != Typ.E:
+            raise ValueError(f'Expected type T or E, got {self.formula.typ} for {self.formula}')
         return IdentifiersMeaning(
             identifiers=identifiers,
-            constraint=self.formula
+            constraint=constraint
         )
 
 
@@ -134,15 +148,28 @@ def convert(m: MAst, ctx: Context) -> ConvMeaning:
             case ('name_kind', [kind, maybe_identifiers]):
                 decls, k = conv(kind)
                 decls2, ids = conv(maybe_identifiers)
+                assert isinstance(ids, IdentifiersMeaning)
+                assert isinstance(k, Expr)
+                # identifiers are ([], FormulaMeaning).
+                # itentifiers cannot be declarations yet as they have no quantifier
                 assert not decls2, f'Expected no declarations for maybe_identifiers, got {len(decls2)}'
+                print(':::', k, ids.constraint)
+                if ids.constraint != Const.Truth:
+                    v = Var.fresh(Typ.E)
+                    k = Lambda(v, Apply.multi(Const.Conjunction, ids.constraint, Apply(k, v)))
                 return decls, NamedKindMeaning(identifiers=ids.identifiers, kind=k)
+            case ('identifiers_as_nkind', [identifiers]):
+                decls, ids = conv(identifiers)
+                assert isinstance(ids, IdentifiersMeaning)
+                assert not decls, f'Expected no declarations for maybe_identifiers, got {len(decls)}'
+                return [], NamedKindMeaning(identifiers=ids.identifiers, kind=Lambda(Var.fresh(Typ.E), ids.constraint))
             case ('prekind_to_kind', [prekind]):
                 return conv(prekind)
             case ('cast_Identifiers_MaybeIdentifiers', [identifiers]):
                 return conv(identifiers)
             case ('single_identifier', [identifier]):
                 return conv(identifier)
-            case ('formula_ident', [math]):
+            case ('formula_ident' | 'formula_idents', [math]):
                 decls, f = conv(math)
                 assert isinstance(f, FormulaMeaning)
                 return decls, f.to_identifiers_meaning()
@@ -152,6 +179,10 @@ def convert(m: MAst, ctx: Context) -> ConvMeaning:
                 qnk_decls, qnk = _convert_quantify_nkind('indefinite_quantification', conv(nkind))
                 property_decls, p = conv(property)
                 return qnk_decls + property_decls, Apply(qnk, p)
+            case ('stmt_for_term', [stmt, term]):
+                stmt_decls, s = conv(stmt)
+                term_decls, t = conv(term)
+                return [], decl_merge(stmt_decls + term_decls, Apply(t, Lambda(Var.fresh(Typ.E), s)))
     elif isinstance(m, TermDef):
         if m.wrapfun == 'wrapped_property':
             typ = Typ.ET
@@ -174,6 +205,10 @@ def convert(m: MAst, ctx: Context) -> ConvMeaning:
         else:
             raise NotImplementedError(f'Unknown wrapfun {m.wrapfun} in TermDef')
         return [], Const(m.value, typ)
+    elif isinstance(m, X):   # decorative tag (or unsupported annotation)
+        if len(m) != 1:
+            raise NotImplementedError(f'Expected exactly one term, got {len(m)}')
+        return convert(m[0], ctx)
 
     raise NotImplementedError(f'Conversion for MAst {m} not implemented yet')
 
@@ -211,7 +246,7 @@ def _convert_quantify_nkind(quant_fun: str, nkind: ConvMeaning) -> ConvMeaning:
 
 
 def _extract_refables(m: MAst, ctx: Context) -> list[Expr]:
-    """
+    r"""
     Returns referenceable terms from a formula.
 
     Examples:
@@ -224,16 +259,68 @@ def _extract_refables(m: MAst, ctx: Context) -> list[Expr]:
 
     if isinstance(m, M):
         if m.value.startswith('http://') or m.value.startswith('https://'):
-            if get_smglom_type(m.value) == Typ.T:
+            if get_smglom_type(m.value).result_type() == Typ.T:
                 return extract(m[0])
             else:   # a term?
                 return [_convert_math_helper(m, ctx)]
         else:  # I guess it must be a variable (or possibly a constant...)
             return [Var(m.value, Typ.E, is_semantic=True)]
     elif isinstance(m, MSeq):
-        return [_convert_math_helper(c, ctx) for c in m]
+        return [e for c in m for e in extract(c) ]
     else:
         raise NotImplementedError(f'Cannot extract refables from {m}')
+
+
+def funlist_to_pylist(c: Expr) -> Iterable[Expr]:
+    match c:
+        case Apply(Apply(cons, head), tail) if cons == Const.Cons:
+            yield head
+            yield from funlist_to_pylist(tail)
+        case nil if nil == Const.Nil:
+            return
+        case _:
+            raise ValueError(f'Cannot convert {c} to pylist')
+
+
+def flex_reduce(c: Const, args: list[Expr]) -> Expr:
+    default = Apply.multi(c, *args)   # no reduction
+    ci = SMGLOM_CONSTS.get(c.name)
+    if ci is None:
+        return default
+    shlist = ci.seqhandling
+    if sum(sh is not None for sh in shlist) != 1:   # TODO: cover case > 1 (cannot be annotated in stex though)
+        return default
+
+    if c.name == 'http://mathhub.info?a=smglom/mv&p=mod&m=equal&s=equal':
+        c = Const.Equal  # substitute with builtin equality
+    else:
+        c = Const(c.name + '+', ci.reduced_typ)
+
+    # exactly 1 arg with special treatment
+    pos, sh = get_only_element([(i, sh) for i, sh in enumerate(shlist) if sh is not None])
+    listarg = list(funlist_to_pylist(args[pos]))
+    if sh == 'conjunctwithrest':
+        assert ci.typ.result_type() == Typ.T
+        result = Const.Truth
+        for arg in reversed(listarg):
+            expr = Apply.multi(c, *[
+                (a if i != pos else arg)
+                for i, a in enumerate(args)
+            ])
+            result = Apply.multi(Const.Conjunction, expr, result)
+        return result
+    elif sh == 'pairwiseconjunct' and len(shlist) == 1:
+        result = Const.Truth
+        for a, b in itertools.pairwise(listarg):
+            result = Apply.multi(Const.Conjunction, Apply.multi(c, a, b), result)
+        return result
+    elif sh == 'lassoc' and len(shlist) == 1 and listarg:  # need at least one argument (we do not know the neutral element)
+        result = listarg[0]
+        for arg in listarg[1:]:
+            result = Apply.multi(c, result, arg)
+        return result
+
+    return default
 
 
 def _convert_math_helper(m, ctx: Context) -> Expr:
@@ -245,19 +332,19 @@ def _convert_math_helper(m, ctx: Context) -> Expr:
             t = get_smglom_type(m.value)
         else:
             t = Typ.E   # TODO: be smarter here
-        return Apply.multi(Const(m.value, t), *[conv(c) for c in m])
+        return flex_reduce(Const(m.value, t), [conv(c) for c in m])
     elif isinstance(m, MSeq):
         args = [conv(c) for c in m]
         # TODO: could have other types than E
-        l = Const('nil', Typ.E)
+        l = Const.Nil
         for arg in reversed(args):
-            l = Apply(Apply(Const('cons', Typ.EEE), arg), l)
+            l = Apply(Apply(Const.Cons, arg), l)
         return l
     elif isinstance(m, MI):
         assert len(m) == 1
         assert isinstance(m[0], MT)
         # TODO: what about constants?...
-        return Var(m[0].pattern, Typ.E, is_semantic=False)
+        return Var(m[0].value, Typ.E, is_semantic=False)
     else:
         raise NotImplementedError(f'Cannot convert math node {m} to QLF')
 
@@ -273,13 +360,36 @@ def _convert_lex_helper(lex: str) -> Expr:
     raise NotImplementedError(f'Conversion for lexical item {lex} not implemented yet')
 
 
+@dataclasses.dataclass
+class ConstInfo:
+    typ: SimpleType
+    seqhandling: list[Literal[
+                            'conjunctwithrest',     # a, b, c < d  -->  a < d ∧ b < d ∧ c < d
+                            'pairwiseconjunct',     # a < b < c < d  -->  a < b ∧ b < c ∧ c < d   (arguably a misnomer, name from itertools.pairwise)
+                            'lassoc',               # a * b * c * d  -->   ((a*b)*c)*d
+                      ] | None] = None
+    reduced_typ: SimpleType = None
 
-SMGLOM_TYPES: dict[str, SimpleType] = {
-    'https://stexmmt.mathhub.info/:sTeX?a=smglom/arithmetics&p=mod&m=intarith&s=greater than': Typ.EET
+    def __post_init__(self):
+        if self.seqhandling is None:
+            self.seqhandling = [None] * len(self.typ.get_argument_types())
+
+        assert len(self.seqhandling) == len(self.typ.get_argument_types())
+
+        if self.reduced_typ is None:
+            self.reduced_typ = self.typ
+
+
+SMGLOM_CONSTS: dict[str, ConstInfo] = {
+    'https://stexmmt.mathhub.info/:sTeX?a=smglom/arithmetics&p=mod&m=intarith&s=greater than': ConstInfo(Typ.EET, ['conjunctwithrest', None]),
+    'http://mathhub.info?a=smglom/mv&p=mod&m=equal&s=equal': ConstInfo(Typ.ET, ['pairwiseconjunct']),
+    'http://mathhub.info?a=smglom/algebra&p=mod&m=magma/magma&s=operation': ConstInfo(Typ.EE, ['lassoc'], Typ.EEE),
+    'http://mathhub.info?a=smglom/sets&p=mod&m=set&s=in': ConstInfo(Typ.EET, ['conjunctwithrest', None]),  # args `ai`
+    'http://mathhub.info?a=smglom/algebra&p=mod&m=universe/universe&s=base set': ConstInfo(Typ.E),
 }
 
 def get_smglom_type(uri: str) -> SimpleType:
-    t = SMGLOM_TYPES.get(uri)
+    t = SMGLOM_CONSTS.get(uri)
     if t is None:
         raise NotImplementedError(f'Unknown type for {uri}')
-    return t
+    return t.typ

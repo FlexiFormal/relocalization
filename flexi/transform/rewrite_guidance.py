@@ -1,12 +1,13 @@
 from flexi.parsing.mast import MAst
 from flexi.transform.rewrite_rules import RewritingContext, RewriteRule, RewritePullKindIntoUnivQuant, \
-    RewriteBetaReduction, RewriteProjectionReduction, RewriteComprehensionReduction
+    RewriteBetaReduction, RewriteProjectionReduction, RewriteComprehensionReduction, RewriteAccumulateThatIsProperty
 
 GREEDY_REWRITING_DEFAULT_RULES: list[RewriteRule] = [
     RewritePullKindIntoUnivQuant(),
     RewriteBetaReduction(),
     RewriteProjectionReduction(attempt_tuple_expansion=True),
     RewriteComprehensionReduction(),
+    RewriteAccumulateThatIsProperty(),
 ]
 
 

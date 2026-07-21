@@ -26,7 +26,8 @@ def main():
     # view_path = RECONTEXTUALIZATION_CORPUS / 'smglom' / 'views' / 'auto-to-tm_1.en.html'
 
     stmt_path = TEST_FILE_DIR / 'smglom' / 'quiver-path.en.html'
-    view_path = RECONTEXTUALIZATION_CORPUS / 'smglom' / 'views' / 'elquiver-to-nts.en.html'
+    view_path = TEST_FILE_DIR / 'smglom' / 'elquiver-to-nts.en.html'
+    # view_path = RECONTEXTUALIZATION_CORPUS / 'smglom' / 'source' / 'views' / 'elquiver-to-nts.en.html'
     rewriting_ctx = RewritingContext(
         nl_def_catalog=NlDefCatalog().add_document(
             ftml_to_doc(TEST_FILE_DIR / 'smglom' / 'nts.en.html', grammar)

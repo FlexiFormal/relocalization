@@ -7,9 +7,10 @@ Notes:
 """
 
 import dataclasses
+import re
 from typing import Iterable
 
-from flexi.parsing.mast import MAst, G, TermRef
+from flexi.parsing.mast import MAst, G, TermRef, GfSymb
 
 
 class FilterResult:
@@ -38,6 +39,14 @@ class FilteringCtx:
     language: str | None = None   # e.g. Eng (GF language suffix)
 
 
+def variant_stripped(mast: MAst) -> MAst:
+    clone = mast.clone()
+    for node in clone.find_children(lambda x: isinstance(x, G)):
+        m = re.match('(?P<core>.*)_v[0-9]+', node.value)
+        if m:
+            node.value = GfSymb(m.group('core'))
+    return clone
+
 def filter_readings(readings: Iterable[MAst], ctx: FilteringCtx) -> Iterable[MAst]:
     """ TODO: This needs a cleaner algorithm...
 
@@ -50,6 +59,9 @@ def filter_readings(readings: Iterable[MAst], ctx: FilteringCtx) -> Iterable[MAs
     yielded_mast_reprs: set[str] = set()
 
     for reading in readings:
+        reading = variant_stripped(reading)
+        if repr(reading) in yielded_mast_reprs:
+            continue
         counter_in += 1
         discard: bool = False
         discard_if_masts: set[str] = set()

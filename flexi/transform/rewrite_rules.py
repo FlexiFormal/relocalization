@@ -57,15 +57,16 @@ class RewritePullKindIntoUnivQuant(RewriteRule):
 
     _pattern = ('~for_term_stmt#', [
         (tagged('~if_then_stmt#', 'body'), [
-            ('~term_is_term_stmt#', [
+            # ('~term_is_term_stmt#', [
+            ('~term_is_kind_stmt#', [
                 tagged('@any', 'precedent_subj'),
-                ('~quantified_nkind#', [
-                    '~indefinite_quantification#',
-                    ('~name_kind#', [
+                # ('~quantified_nkind#', [
+                #     '~indefinite_quantification#',
+                #     ('~name_kind#', [
                         tagged('@any', 'kind'),
-                        '~no_idents_sg#',
-                    ])
-                ])
+                #         '~no_idents_sg#',
+                #     ])
+                # ])
             ]),
             tagged('@any', 'antecedent')
         ]),
@@ -541,8 +542,6 @@ class RewriteComprehensionReduction(RewriteRule):
     applicable_to = G
 
     def apply(self, mast: MAst, ctx: RewritingContext) -> MAst | None:
-        print('TRYING')
-        print(mast)
         match mast:
             case G('kind2_to_kind', [
                 TermRef('https://mathhub.info?a=smglom/sets&p=mod&m=set&s=element'),
@@ -552,14 +551,17 @@ class RewriteComprehensionReduction(RewriteRule):
                         t1, t2, MI('mtext', [
                         # TODO: is the div always there?
                         X('div', [
-                            G('term_is_term_stmt', [
+                            # G('term_is_term_stmt', [
+                            #     G('formula_term', [Formula([t3])]),
+                            #     G('~quantified_nkind#', [
+                            #         G('~indefinite_quantification#'),
+                            #         G('name_kind', [kind, G('~no_idents_sg#')])
+                            #     ])
+                            # ])
+                            G('term_is_kind_stmt', [
                                 G('formula_term', [Formula([t3])]),
-                                G('~quantified_nkind#', [
-                                    G('~indefinite_quantification#'),
-                                    G('name_kind', [kind, G('~no_idents_sg#')])
-                                ])
-                            ]
-                              )
+                                kind
+                            ])
                         ])
                     ])
                     ]
@@ -570,3 +572,28 @@ class RewriteComprehensionReduction(RewriteRule):
                     clone.replace_in_parent(kind.clone())
                     return clone.get_root()
                 return None
+
+
+class RewriteAccumulateThatIsProperty(RewriteRule):
+    """
+       integer that is even that is positive -> integer that is even and positive
+    """
+
+    def apply(self, mast: MAst, ctx: RewritingContext) -> MAst | None:
+        match mast:
+            case G('nkind_that_is_property', [
+                G('nkind_that_is_property', [nkind, pol1, prop1]),
+                pol2,
+                prop2
+            ]):
+                if pol1 != pol2:
+                    return None
+                clone = mast.clone_from_root()
+                clone.replace_in_parent(
+                    G('nkind_that_is_property_list', [
+                        nkind.clone(),
+                        pol1.clone(),
+                        G('BasePropertyList', [prop1.clone(), prop2.clone()])
+                    ])
+                )
+                return clone.get_root()

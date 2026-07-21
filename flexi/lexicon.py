@@ -1,4 +1,5 @@
 import dataclasses
+import itertools
 import re
 from pathlib import Path
 from typing import Literal, Iterable
@@ -25,7 +26,7 @@ class BadSpec(Exception):
 class VerbalizationRecord:
     spec_str: str
     argument_order: tuple[int, ...]  # excluding main argument
-    main_argument: int | None
+    subject_argument: int | None
     typ: str
     gf_id: str
     gf_lin: str
@@ -42,8 +43,7 @@ class VerbalizationRecord:
         return record
 
     @classmethod
-    def from_spec(cls, typ: str, spec_str: str) -> VerbalizationRecord:
-        main_argument: int | None = None
+    def from_spec(cls, typ: str | None, spec_str: str, subject_argument: int | None) -> VerbalizationRecord:
         core_tokens: list[str] = []
         prepositions: list[str] = []
         argument_order: list[int] = []
@@ -62,15 +62,17 @@ class VerbalizationRecord:
         while i < len(spec):
             token = spec[i]
             next_token = spec[i+1] if i + 1 < len(spec) else None
-            is_arg = bool(re.match(r'#\d+', token))
-            next_is_arg = bool(re.match(r'#\d+', next_token)) if next_token is not None else False
+            is_arg = bool(re.match(r'[#?]\d+', token))
+            next_is_arg = bool(re.match(r'[#?]\d+', next_token)) if next_token is not None else False
 
             match state:
                 case 'start':
                     if is_arg:
-                        main_argument = int(token[1:])
+                        if subject_argument is not None:
+                            raise BadSpec(f'Unexpected specification of subject argument')
+                        subject_argument = int(token[1:])
                         i += 1
-                    # else: no main_argument -> continue in 'core' state
+                    # else: no subject_argument -> continue in 'core' state
                     state = 'core'
                 case 'core':
                     if is_arg:
@@ -95,7 +97,22 @@ class VerbalizationRecord:
                 case _:
                     raise RuntimeError(f'Unexpected state "{state}"')
 
-        # STEP 2: generate compile into verbalization record
+        # STEP 2: infer missing information
+        if typ is None:
+            if ':' not in core_tokens[-1]:
+                raise BadSpec(f'Cannot infer verbalization type')
+            # by default, we assume a subject argument
+            argnum = str(len(argument_order) + 1) if argument_order else ''
+            pos = core_tokens[-1].split(':')[-1]
+            if pos in {'N', 'V', 'A'}:
+                typ = pos + argnum
+            else:
+                raise BadSpec(f'Cannot infer verbalization type')
+
+        if subject_argument is None and re.match(r'[NVA]\d*', typ):
+            subject_argument = next(iter(x for x in itertools.count(1) if x not in argument_order))
+
+        # STEP 3: generate compile into verbalization record
         if typ not in MAGMA_MAPPING:
             raise ValueError(f'Unexpected type "{typ}"')
 
@@ -104,7 +121,7 @@ class VerbalizationRecord:
         return VerbalizationRecord(
             spec_str=spec_str,
             argument_order=tuple(argument_order),
-            main_argument=main_argument,
+            subject_argument=subject_argument,
             typ=magma_typ,
             gf_id=f'verb_{"-".join(spec)}_{magma_typ}',
             gf_lin=f'mk{magma_typ} ({constr} {" ".join(f"'{ct}'" for ct in core_tokens)}) {" ".join(p + '_Prep' for p in prepositions)}',
@@ -116,7 +133,6 @@ class VerbalizationRecord:
 class WordRecord:
     gf_id: str
     gf_def: str
-    gf_cat: str
     is_inferred: bool
 
 
@@ -168,7 +184,6 @@ class Lexicon:
                 WordRecord(
                     gf_id = wd,
                     gf_def = f'mk{cat} "{word}"',
-                    gf_cat = cat,
                     is_inferred = True,
                 )
             )
@@ -183,18 +198,38 @@ class Lexicon:
                 raise ValueError(f'Duplicate word "{w.gf_id}"')
         self.words[w.gf_id] = w
 
+    def add_word_list(self, path: Path):
+        with open(path) as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                if line.startswith('#'):
+                    continue
+                line = line.split('=', 1)
+                if not len(line) == 2:
+                    raise ValueError(f'Invalid word entry in {path}: "{line}"')
+                self.add_word(
+                    WordRecord(
+                        gf_id = line[0].strip(),
+                        gf_def = line[1].strip().rstrip(';'),
+                        is_inferred = False,
+                    )
+                )
+
     def extend_from_ftml(self, ftml: _Element | Path):
         if isinstance(ftml, Path):
             ftml = etree.parse(str(ftml), parser=etree.HTMLParser(encoding='UTF-8')).getroot()
         assert isinstance(ftml, _Element)
 
         for node in ftml.iter(tag='div'):
-            if 'data-ftml-verbalization-term' not in node.attrib:
+            if 'data-ftml-verbalization-symbol' not in node.attrib:
                 continue
 
             vr = VerbalizationRecord.from_spec(
-                node.attrib['data-ftml-verbalization-type'],
-                node.attrib['data-ftml-verbalization-term'],
+                node.attrib['data-ftml-verbalization-type'] or None,
+                node.text,
+                None if not (s := node.attrib['data-ftml-verbalization-subject'].strip('?').strip('#')) else int(s),
             )
 
             if vr.gf_id not in self.verbalizations:

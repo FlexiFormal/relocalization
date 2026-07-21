@@ -1,25 +1,49 @@
 \ExplSyntaxOn
 
-\keys_define:nn {verbalization} {
-  name .tl_set:N  = \l_verbalization_name_tl,
-  name .default:n = {-NoValue-},
-  args .tl_set:N  = \l_verbalization_args_tl,
-  args .default:n = {-NoValue-}
+\stex_keys_define:nnnn {verbalization} {
+  \str_clear:N \l_stex_key_variant_str
+  \str_clear:N \l_stex_key_args_str
+  \str_clear:N \l_stex_key_subject_str
+  \str_clear:N \l_stex_key_type_str
+}{
+  variant .str_set_x:N  = \l_stex_key_variant_str,
+  args    .str_set_x:N  = \l_stex_key_args_str,
+  subject .str_set_x:N  = \l_stex_key_subject_str,
+  type    .str_set_x:N  = \l_stex_key_type_str,
+  unknown .code:n       = {
+    \str_if_empty:NTF \l_keys_key_str {
+        \str_set:Ne \l_stex_key_variant_str {\l_keys_key_tl}
+    }{
+        \str_set_eq:NN \l_stex_key_variant_str \l_keys_key_str
+    }
+  }
+}{}
+
+% \verbalization{<symbol name>}[
+%   <verbalization variant>,
+%   args=<syntactic type>,
+%   subject=<main argument>,
+%   type=<GF category>
+% ]{<verbalization pattern>}
+% e.g.
+% \verbalization{equinumerous}[
+%   equinumto,
+%   args=dd,
+%   subject=?1,
+%   type=A
+% ]{equinumerous:A to ?2}
+\NewDocumentCommand \verbalization {m O{} v} {
+  \stex_get_symbol:n {#1}
+  \stex_keys_set:nn {verbalization} {#2}
+  \stex_annotate:nn {
+    data-ftml-verbalization-symbol = {\stex_use_symbol_uri:N \l_stex_get_symbol_uri},
+    data-ftml-verbalization-name = {\l_stex_key_variant_str},
+    data-ftml-verbalization-type = {\l_stex_key_type_str},
+    data-ftml-verbalization-args = {\l_stex_key_args_str},
+    data-ftml-verbalization-subject = {\l_stex_key_subject_str},
+    data-ftml-invisible = {true},
+    style = {display:none;}
+  } {#3}
 }
 
-% \verbalization{<symbol name>}[name=<verbalization name>,args=<syntactic type>]{<GF category>}{<verbalization>}
-% e.g. \verbalization{equinumerous}[name=equinumto,args=dd]{???}{#1 equinumerous_A to #2}
-\NewDocumentCommand \verbalization {m O{} m v} {
-  \stex_get_symbol:n {#1}
-  \tl_set:Nn \l_verbalization_name_tl {}
-  \tl_set:Nn \l_verbalization_args_tl {}
-  \keys_set:nn {verbalization} {#2}
-  \exp_args:Ne \stex_annotate_invisible:nn {
-    data-ftml-verbalization-symbol = {\stex_use_symbol_uri:N \l_stex_current_symbol_uri},
-    data-ftml-verbalization-name = {\IfNoValueTF \l_verbalization_name_tl {#2} \l_verbalization_name_tl},
-    data-ftml-verbalization-term = {#4},
-    data-ftml-verbalization-type = {#3},
-    data-ftml-verbalization-args = {\IfNoValueTF \l_verbalization_args_tl {} \l_verbalization_args_tl}
-  } {}
-}
 \ExplSyntaxOff
