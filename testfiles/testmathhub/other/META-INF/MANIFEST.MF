@@ -1,0 +1,6 @@
+id: other
+url-base: https://mathhub.info
+description: desc.html
+teaser: Other
+title: Other
+format:stex

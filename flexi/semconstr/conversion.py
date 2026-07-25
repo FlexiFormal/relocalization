@@ -5,7 +5,7 @@ from typing import TypeAlias, Literal, Iterable
 
 from torch._dynamo.polyfills import itertools
 
-from flexi.parsing.mast import MAst, G, TermDef, Formula, M, MSeq, MI, MT, GfSymb, X
+from flexi.parsing.mast import MAst, G, TermDef, Formula, M, MSeq, MI, MT, GfSymb, X, TermRef
 from flexi.semconstr.logic import Const, Var, Typ, Expr, Apply, Lambda, SimpleType
 from flexi.utils import get_only_element, concat
 
@@ -188,6 +188,15 @@ def convert(m: MAst, ctx: ConversionContext) -> ConvMeaning:
                 decls, f = conv(math)
                 assert isinstance(f, FormulaMeaning)
                 return decls, f.to_identifiers_meaning()
+            case ('formula_term', [formula]):
+                decls, f = conv(formula)
+                assert isinstance(f, FormulaMeaning)
+                # f.referenceables
+                p = Var.fresh(Typ.ET)
+                c = f.formula if f.formula.typ == Typ.T else Const.Truth
+                for r in f.referenceables:
+                    c = Apply.multi(Const.Conjunction, c, Apply(p, r))
+                return [], Lambda(p, c)
             case ('defcore_if_stmt', [core, stmt]):
                 return _convert_connective_application('iff_subj', conv(core), conv(stmt))
             case ('define_nkind_prop', [nkind, property]):
@@ -236,18 +245,18 @@ def convert(m: MAst, ctx: ConversionContext) -> ConvMeaning:
             raise NotImplementedError(f'Unknown wrapfun {m.wrapfun} in TermDef')
         return [], Const(m.value, typ)
     elif isinstance(m, Formula):
-        assert len(m) == 1
+        assert len(m) == 1, m
         return [], FormulaMeaning(
             referenceables=_extract_refables(m[0], ctx),
             formula=_convert_math_helper(m[0], ctx)
         )
-    elif isinstance(m, TermDef):
-        if m.wrapfun == 'wrapped_property':
+    elif isinstance(m, TermDef | TermRef):
+        if m.wrapfun in {'wrapped_property', 'wrapped_prekind'}:
             typ = Typ.ET
         elif m.wrapfun == 'wrapped_sentence':
             typ = Typ.T
         else:
-            raise NotImplementedError(f'Unknown wrapfun {m.wrapfun} in TermDef')
+            raise NotImplementedError(f'Unknown wrapfun {m.wrapfun} in {type(m)}')
         return [], Const(m.value, typ)
     elif isinstance(m, X):   # decorative tag (or unsupported annotation)
         if len(m) != 1:
@@ -437,6 +446,8 @@ SMGLOM_CONSTS: dict[str, ConstInfo] = {
     'http://mathhub.info?a=smglom/sets&p=mod&m=set&s=in': ConstInfo(Typ.EET, ['conjunctwithrest', None]),  # args `ai`
     'http://mathhub.info?a=smglom/algebra&p=mod&m=universe/universe&s=base set': ConstInfo(Typ.E),
     'http://mathhub.info?a=smglom/algebra&p=mod&m=monoid/monoid&s=unit': ConstInfo(Typ.E),
+    'http://mathhub.info?a=smglom/arithmetics&p=mod&m=natarith&s=addition': ConstInfo(Typ.EE, ['lassoc'], Typ.EEE),
+    'http://mathhub.info?a=other&p=odd-even-example-1&m=even-odd-example&s=one': ConstInfo(Typ.E),
 }
 
 def get_smglom_type(uri: str) -> SimpleType:

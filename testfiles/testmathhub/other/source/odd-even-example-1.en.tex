@@ -1,0 +1,14 @@
+\documentclass{stex}
+\libinput[smglom/meta-inf]{preamble}
+\begin{document}
+\begin{smodule}{even-odd-example}
+    \importmodule[smglom/arithmetics]{mod?natarith}
+    \importmodule[smglom/arithmetics]{mod?odd-and-even}
+
+    \symdef{natone}[name=one]{\comp0}
+    \vardef{nvar}{n}
+
+    An \sn{integer} $\nvar$ is \sn{even} iff $\natplus{\nvar,\natone}$ is \sn{odd}.
+
+\end{smodule}
+\end{document}

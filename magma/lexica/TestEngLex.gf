@@ -38,6 +38,7 @@ abstract TestEngLex = FreeArgs ** {
 
         lex_finite : Property;
         lex_even : Property;
+        lex_odd : Property;
         lex_positive : Property;
         lex_divisible : Property;
         lex_countable : Property;

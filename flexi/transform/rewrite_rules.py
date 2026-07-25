@@ -627,4 +627,17 @@ class RewriteEliminateRedundantInfo(RewriteRule):
                 if check(m):
                     return m
 
+        if self.variant != 0:
+            return None
+
+        match mast:
+            case G('such_that_named_kind', [nk, stmt]):
+                m = mast.clone_from_root().replace_in_parent(nk.clone()).get_root()
+                if check(m):
+                    return m
+            case G('~defcore_if_stmt#', [dc, stmt]):
+                m = mast.clone_from_root().replace_in_parent(G('plain_defcore', [dc.clone()])).get_root()
+                if check(m):
+                    return m
+
         return None

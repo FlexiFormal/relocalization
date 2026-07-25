@@ -1,6 +1,8 @@
 import sys
 from pathlib import Path
 
+from flexi.treevis import dot_to_svg, mast_to_dot
+
 sys.path.append(str(Path(__file__).parent.parent))
 
 from flexi.semconstr.conversion import convert, ConversionContext
@@ -13,6 +15,7 @@ if __name__ == '__main__':
 
     for input_file in [
         TEST_FILE_DIR / 'ftml' / 'positive-integer.en.html',
+        TEST_FILE_DIR / 'testmathhub' / 'other' / 'source' / 'odd-even-example-1.en.html'
         # TEST_FILE_DIR / 'ftml' / 'quiver-walk.en.html',
     ] if len(sys.argv) == 1 else [Path(arg) for arg in sys.argv[1:]]:
             print(input_file.name)
@@ -20,6 +23,8 @@ if __name__ == '__main__':
                 print(f'<h2>Sentence {i}</h2>')
                 for mast in sentence:
                     # print(mast)
+                    with open('/tmp/out.svg', 'w') as f:
+                        f.write(dot_to_svg(mast_to_dot(mast)))
                     try:
                         decls, r = convert(mast, ConversionContext())
                         print('RESULT:\n', decls, str(r))

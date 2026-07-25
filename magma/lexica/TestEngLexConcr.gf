@@ -38,6 +38,7 @@ concrete TestEngLexConcr of TestEngLex = FreeArgsEng ** open MDictEng, Paradigms
 
         lex_finite = mkAP dict_finite_A;
         lex_even = mkAP dict_even_A;
+        lex_odd = mkAP dict_odd_A;
         lex_positive = mkAP dict_positive_A;
         lex_divisible = mkAP dict_divisible_A;
         lex_countable = mkAP dict_countable_A;
