@@ -15,7 +15,7 @@ def main():
     file = TEST_FILE_DIR / 'testmathhub' / 'goldbach' / 'source' / 'goldbach.en.html'
     l = Lexicon('GoldbachLexicon', 'Eng')
     l.extend_from_ftml(file)
-    l.add_word_list(Path(os.environ['MATHHUB']) / 'smglom' / 'meta-inf' / 'source' / 'verbalization-words.en.txt')
+    l.add_word_list(Path(os.environ['MATHHUB'].split(',')[0]) / 'smglom' / 'meta-inf' / 'source' / 'verbalization-words.en.txt')
     l.write_gf()
     grammar = MagmaGrammar('GoldbachLexicon', 'Eng')
 

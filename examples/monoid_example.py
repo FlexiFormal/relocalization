@@ -22,7 +22,7 @@ def main():
     l = Lexicon('MonoidLexicon', 'Eng')
     l.extend_from_ftml(path / 'commutative-monoid.en.html')
     l.extend_from_ftml(path / 'invertible-in-monoid.en.html')
-    l.add_word_list(Path(os.environ['MATHHUB']) / 'smglom' / 'meta-inf' / 'source' / 'verbalization-words.en.txt')
+    l.add_word_list(Path(os.environ['MATHHUB'].split(',')[0]) / 'smglom' / 'meta-inf' / 'source' / 'verbalization-words.en.txt')
     l.write_gf()
     grammar = MagmaGrammar('MonoidLexicon', 'Eng')
 
