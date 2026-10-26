@@ -21,7 +21,7 @@ def main():
     for text in doc.find_children(lambda node: isinstance(node, DocText)):
         for sentence in text.sentences:
             filtered = list(filter_readings(sentence, FilteringCtx()))
-            print(len(sentence), 'filtered:', len(filtered))
+            print('\n', len(sentence), 'filtered:', len(filtered))
 
             s = sentence[0]
             assert isinstance(s, MAst)
@@ -31,13 +31,13 @@ def main():
 
             if len(filtered) >= 1:
                 print(mast_to_gfxml(filtered[0]).to_gf()[1])
-                print(grammar.linearize_mast(filtered[0]))
+                print('LINEARIZATION:', grammar.linearize_mast(filtered[0]))
 
                 try:
                     # m = next(iter(RewritePullKindIntoUnivQuant().apply_somewhere(filtered[0], RewritingContext())))
                     m = mast if (mast := greedy_rewriting(filtered[0], GREEDY_REWRITING_DEFAULT_RULES, RewritingContext())) is not None else filtered[0]
                     # print('SIMPLIFIED:', mast_to_gfxml(m).to_gf()[1])
-                    print('SIMPLIFIED:', grammar.linearize_mast(m))
+                    print('SIMPLIFIED:   ', grammar.linearize_mast(m))
                 except StopIteration:
                     print('Not applicable')
 
