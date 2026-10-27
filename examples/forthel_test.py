@@ -10,9 +10,9 @@ from pathlib import Path
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--print-all-asts", action="store_true", help="print all ASTs instead of only the first one")
+parser.add_argument("-a", "--all-asts", action="store_true", help="print all ASTs instead of only the first one")
 parser.add_argument("-i", "--input", help="input file")
-parser.add_argument("--extra-rules", action="store_true", help="allow additional rewriting rules")
+parser.add_argument("-e", "--extra-rules", action="store_true", help="use additional rewriting rules")
 
 def main():
     do_print_all_asts = False
@@ -21,7 +21,7 @@ def main():
 
     args = parser.parse_args()
 
-    if args.print_all_asts:
+    if args.all_asts:
         do_print_all_asts = True
     if args.input is not None:
         input_file = Path(args.input).resolve()
