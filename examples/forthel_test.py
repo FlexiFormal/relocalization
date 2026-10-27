@@ -6,28 +6,31 @@ from flexi.parsing.mast import MAst, mast_to_gfxml
 from flexi.transform.filtering import filter_readings, FilteringCtx
 from flexi.transform.rewrite_guidance import greedy_rewriting, GREEDY_REWRITING_DEFAULT_RULES
 from flexi.transform.rewrite_rules import RewritingContext
-
+from pathlib import Path
 import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--print-all-asts", action="store_true", help="print all ASTs instead of only the first one")
+parser.add_argument("-i", "--input", help="input file")
 
 def main():
     do_print_all_asts = False
+    input_file = TEST_FILE_DIR / 'naproche' / 'cantor.ftl'
 
     args = parser.parse_args()
 
     if args.print_all_asts:
         do_print_all_asts = True
+    if args.input is not None:
+        input_file = Path(args.input).resolve()
 
     augment_lexicon(
         (TEST_FILE_DIR / 'naproche' / 'cantor.lexicon').read_text(),
         Lexicon('cantor', 'forthel'),
     ).write()
 
-    path = TEST_FILE_DIR / 'naproche' / 'cantor.ftl'
     grammar = MagmaGrammar('cantorGrammar', 'Eng')
-    doc = forthel_to_doc(path.read_text(), grammar)
+    doc = forthel_to_doc(input_file.read_text(), grammar)
 
     for text in doc.find_children(lambda node: isinstance(node, DocText)):
         for sentence in text.sentences:
