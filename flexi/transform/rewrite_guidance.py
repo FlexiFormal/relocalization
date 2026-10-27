@@ -1,6 +1,6 @@
 from flexi.parsing.mast import MAst
 from flexi.transform.rewrite_rules import RewritingContext, RewriteRule, RewritePullKindIntoUnivQuant, \
-    RewriteBetaReduction, RewriteProjectionReduction, RewriteComprehensionReduction, RewriteAccumulateThatIsProperty
+    RewriteBetaReduction, RewriteProjectionReduction, RewriteComprehensionReduction, RewriteAccumulateThatIsProperty, RewriteIsEqualToThe
 
 GREEDY_REWRITING_DEFAULT_RULES: list[RewriteRule] = [
     RewritePullKindIntoUnivQuant(),
@@ -10,6 +10,8 @@ GREEDY_REWRITING_DEFAULT_RULES: list[RewriteRule] = [
     RewriteAccumulateThatIsProperty(),
 ]
 
+GREEDY_REWRITING_EXTENDED_RULES: list[RewriteRule] = GREEDY_REWRITING_DEFAULT_RULES + [
+    ]
 
 def greedy_rewriting(mast: MAst, rules: list[RewriteRule], ctx: RewritingContext) -> MAst | None:
     """ Naively applies the rewrite rules until none is applicable anymore.

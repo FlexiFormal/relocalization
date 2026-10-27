@@ -4,7 +4,7 @@ from flexi.parsing.document import forthel_to_doc, DocText
 from flexi.parsing.magma import MagmaGrammar
 from flexi.parsing.mast import MAst, mast_to_gfxml
 from flexi.transform.filtering import filter_readings, FilteringCtx
-from flexi.transform.rewrite_guidance import greedy_rewriting, GREEDY_REWRITING_DEFAULT_RULES
+from flexi.transform.rewrite_guidance import greedy_rewriting, GREEDY_REWRITING_DEFAULT_RULES, GREEDY_REWRITING_EXTENDED_RULES
 from flexi.transform.rewrite_rules import RewritingContext
 from pathlib import Path
 import argparse
@@ -12,10 +12,12 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("--print-all-asts", action="store_true", help="print all ASTs instead of only the first one")
 parser.add_argument("-i", "--input", help="input file")
+parser.add_argument("--extra-rules", action="store_true", help="allow additional rewriting rules")
 
 def main():
     do_print_all_asts = False
     input_file = TEST_FILE_DIR / 'naproche' / 'cantor.ftl'
+    rule_set = GREEDY_REWRITING_DEFAULT_RULES
 
     args = parser.parse_args()
 
@@ -23,6 +25,8 @@ def main():
         do_print_all_asts = True
     if args.input is not None:
         input_file = Path(args.input).resolve()
+    if args.extra_rules:
+        rule_set = GREEDY_REWRITING_EXTENDED_RULES
 
     augment_lexicon(
         (TEST_FILE_DIR / 'naproche' / 'cantor.lexicon').read_text(),
@@ -50,7 +54,7 @@ def main():
 
                     try:
                         # m = next(iter(RewritePullKindIntoUnivQuant().apply_somewhere(filtered[0], RewritingContext())))
-                        m = mast if (mast := greedy_rewriting(ast, GREEDY_REWRITING_DEFAULT_RULES, RewritingContext())) is not None else ast
+                        m = mast if (mast := greedy_rewriting(ast, rule_set, RewritingContext())) is not None else ast
                         # print('SIMPLIFIED:', mast_to_gfxml(m).to_gf()[1])
                         print('SIMPLIFIED:   ', grammar.linearize_mast(m))
                     except StopIteration:
