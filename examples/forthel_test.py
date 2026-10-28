@@ -34,13 +34,14 @@ def main():
 
     lexicon_source = lexicon_file.read_text()
     lexicon_name = Path(lexicon_file).stem
+    grammar_name = lexicon_name + 'Grammar'
 
     augment_lexicon(
         lexicon_source,
         Lexicon(lexicon_name, 'forthel'),
     ).write()
 
-    grammar = MagmaGrammar('cantorGrammar', 'Eng')
+    grammar = MagmaGrammar(grammar_name, 'Eng')
     doc = forthel_to_doc(input_file.read_text(), grammar)
 
     for text in doc.find_children(lambda node: isinstance(node, DocText)):
