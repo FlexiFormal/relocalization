@@ -13,10 +13,12 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-a", "--all-asts", action="store_true", help="print all ASTs instead of only the first one")
 parser.add_argument("-i", "--input", help="input file")
 parser.add_argument("-e", "--extra-rules", action="store_true", help="use additional rewriting rules")
+parser.add_argument("-l", "--lexicon", help="lexicon file")
 
 def main():
     do_print_all_asts = False
     input_file = TEST_FILE_DIR / 'naproche' / 'cantor.ftl'
+    lexicon_file = TEST_FILE_DIR / 'naproche' / 'cantor.lexicon'
     rule_set = GREEDY_REWRITING_DEFAULT_RULES
 
     args = parser.parse_args()
@@ -27,10 +29,15 @@ def main():
         input_file = Path(args.input).resolve()
     if args.extra_rules:
         rule_set = GREEDY_REWRITING_EXTENDED_RULES
+    if args.lexicon is not None:
+        lexicon_file = Path(args.lexicon).resolve()
+
+    lexicon_source = lexicon_file.read_text()
+    lexicon_name = Path(lexicon_file).stem
 
     augment_lexicon(
-        (TEST_FILE_DIR / 'naproche' / 'cantor.lexicon').read_text(),
-        Lexicon('cantor', 'forthel'),
+        lexicon_source,
+        Lexicon(lexicon_name, 'forthel'),
     ).write()
 
     grammar = MagmaGrammar('cantorGrammar', 'Eng')
