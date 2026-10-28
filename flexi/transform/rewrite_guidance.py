@@ -11,7 +11,8 @@ GREEDY_REWRITING_DEFAULT_RULES: list[RewriteRule] = [
 ]
 
 GREEDY_REWRITING_EXTENDED_RULES: list[RewriteRule] = GREEDY_REWRITING_DEFAULT_RULES + [
-    ]
+    RewriteIsEqualToThe(),
+]
 
 def greedy_rewriting(mast: MAst, rules: list[RewriteRule], ctx: RewritingContext) -> MAst | None:
     """ Naively applies the rewrite rules until none is applicable anymore.

@@ -641,3 +641,33 @@ class RewriteEliminateRedundantInfo(RewriteRule):
                     return m
 
         return None
+
+
+
+
+### Additional Rules
+
+class RewriteIsEqualToThe(RewriteRule):
+    """
+        x is equal to the empty set -> x is the empty set
+    """
+    def apply(self, mast: MAst, ctx: RewritingContext) -> MAst | None:
+        match mast:
+            case G('term_is_property_stmt', [
+                trm,
+                G('property2_to_property', [
+                    G('equal__verb0', []),
+                    G('fkind_to_term', [
+                        fk,
+                        id
+                    ])
+                ])
+            ]):
+                clone = mast.clone_from_root()
+                clone.replace_in_parent(
+                    G('term_is_fkind_stmt', [
+                        trm.clone(),
+                        fk.clone()
+                    ])
+                )
+                return clone.get_root()
