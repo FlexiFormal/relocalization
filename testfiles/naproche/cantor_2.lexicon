@@ -25,6 +25,7 @@ Kind2 subclass = #1 subclass_N of:#2
 Kind2 subset = #1 subset_N of:#2
 Kind2 powerset = #1 powerset_N of:#2
 
+Property countable = #1 countable_A
 Property2 equal = #1 equal_A to:#2
 Property2 disj = #1 disjoint_A from:#2
 
