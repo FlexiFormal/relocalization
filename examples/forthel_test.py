@@ -14,12 +14,29 @@ parser.add_argument("-a", "--all-asts", action="store_true", help="print all AST
 parser.add_argument("-i", "--input", help="input file")
 parser.add_argument("-e", "--extra-rules", action="store_true", help="use additional rewriting rules")
 parser.add_argument("-l", "--lexicon", help="lexicon file")
+parser.add_argument("-t", "--tree", action="store_true", help="render ASTs as two-dimentsional trees")
+
+def render_tree(node: GfXmlNode, prefix="", is_last=True, is_root=True):
+    if is_root:
+        print('\n' + node.node)
+        for i, child in enumerate(node.children):
+            render_tree(child, "", i == len(node.children) - 1, False)
+    else:
+        connector = "└── " if is_last else "├── "
+        print(f"{prefix}{connector}{node.node}")
+
+        extension = "    " if is_last else "│   "
+        new_prefix = prefix + extension
+
+        for i, child in enumerate(node.children):
+            render_tree(child, new_prefix, i == len(node.children) - 1, False)
 
 def main():
     do_print_all_asts = False
     input_file = TEST_FILE_DIR / 'naproche' / 'cantor.ftl'
     lexicon_file = TEST_FILE_DIR / 'naproche' / 'cantor.lexicon'
     rule_set = GREEDY_REWRITING_DEFAULT_RULES
+    do_print_two_dimentional_trees = False
 
     args = parser.parse_args()
 
@@ -31,6 +48,8 @@ def main():
         rule_set = GREEDY_REWRITING_EXTENDED_RULES
     if args.lexicon is not None:
         lexicon_file = Path(args.lexicon).resolve()
+    if args.tree:
+        do_print_two_dimentional_trees = True
 
     lexicon_source = lexicon_file.read_text()
     lexicon_name = Path(lexicon_file).stem
@@ -57,8 +76,11 @@ def main():
 
             if len(filtered) >= 1:
                 for ast in filtered:
-                    print('\n', mast_to_gfxml(ast).to_gf()[1])
-                    print('LINEARIZATION:', grammar.linearize_mast(ast))
+                    if do_print_two_dimentional_trees:
+                        render_tree(mast_to_gfxml(ast))
+                    else:
+                        print('\n' + mast_to_gfxml(ast).to_gf()[1])
+                    print('\nLINEARIZATION:', grammar.linearize_mast(ast))
 
                     try:
                         # m = next(iter(RewritePullKindIntoUnivQuant().apply_somewhere(filtered[0], RewritingContext())))
