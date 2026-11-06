@@ -671,3 +671,24 @@ class RewriteIsEqualToThe(RewriteRule):
                     ])
                 )
                 return clone.get_root()
+
+class RewriteIsTermIsNotAdjective(RewriteRule):
+    """
+        it is not the case that x is countable -> x is not countable
+    """
+    def apply(self, mast: MAst, ctx: RewritingContext) -> MAst | None:
+        match mast:
+            case G('not_stmt', [
+                G('term_is_property_stmt', [
+                    trm,
+                    prop
+                ])
+            ]):
+                clone = mast.clone_from_root()
+                clone.replace_in_parent(
+                    G('term_is_not_property_stmt', [
+                        trm.clone(),
+                        prop.clone()
+                    ])
+                )
+                return clone.get_root()
