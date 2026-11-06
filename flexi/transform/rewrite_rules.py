@@ -692,3 +692,24 @@ class RewriteIsTermIsNotAdjective(RewriteRule):
                     ])
                 )
                 return clone.get_root()
+
+class RewriteIsTermIsNotNoun(RewriteRule):
+    """
+        it is not the case that x is a set -> x isn't a set
+    """
+    def apply(self, mast: MAst, ctx: RewritingContext) -> MAst | None:
+        match mast:
+            case G('not_stmt', [
+                G('term_is_kind_stmt', [
+                    trm,
+                    knd
+                ])
+            ]):
+                clone = mast.clone_from_root()
+                clone.replace_in_parent(
+                    G('term_is_not_kind_stmt', [
+                        trm.clone(),
+                        knd.clone()
+                    ])
+                )
+                return clone.get_root()
