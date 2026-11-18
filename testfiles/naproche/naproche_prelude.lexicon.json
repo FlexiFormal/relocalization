@@ -1,0 +1,226 @@
+{
+  "meta": {
+    "name": "naproche_prelude",
+    "date": "2026-11-18",
+    "version": null,
+    "source": null,
+    "language": "en",
+    "dependencies": [
+      "naproche_core"
+    ]
+  },
+  "words": [
+    {
+      "gf_id": "domain:N",
+      "gf_definition": "mkNoun \"domain\""
+    },
+    {
+      "gf_id": "ordered:A",
+      "gf_definition": "mkAdj \"ordered\""
+    },
+    {
+      "gf_id": "pair:N",
+      "gf_definition": "mkNoun \"pair\""
+    },
+    {
+      "gf_id": "defined:A",
+      "gf_definition": "mkAdj \"defined\""
+    },
+    {
+      "gf_id": "member:N",
+      "gf_definition": ""
+    },
+    {
+      "gf_id": "belong:V",
+      "gf_definition": "mkVerb \"belong\""
+    },
+    {
+      "gf_id": "contain:V",
+      "gf_definition": "mkVerb \"contain\""
+    },
+    {
+      "gf_id": "lie:V",
+      "gf_definition": "mkVerb \"lie\""
+    },
+    {
+      "gf_id": "equal:A",
+      "gf_definition": "mkAdj \"equal\""
+    },
+    {
+      "gf_id": "agree:V",
+      "gf_definition": "mkVerb \"agree\""
+    },
+    {
+      "gf_id": "distinct:A",
+      "gf_definition": "mkAdj \"distinct\""
+    },
+    {
+      "gf_id": "value:N",
+      "gf_definition": "mkNoun \"value\""
+    },
+    {
+      "gf_id": "inductively:Adv",
+      "gf_definition": "mkAdv \"inductively\""
+    },
+    {
+      "gf_id": "less:A",
+      "gf_definition": "mkAdj \"less\""
+    }
+  ],
+  "verbalizations": [
+    {
+      "id": "the_domain_of",
+      "pattern": "domain:N of ?2",
+      "type": "DefN2",
+      "signature": "dd",
+      "subject": 1
+    },
+    {
+      "id": "the_ordered_pair_of",
+      "pattern": "ordered:A pair:N of ?2",
+      "type": "DefN2",
+      "signature": "dc2",
+      "subject": 1
+    },
+    {
+      "id": "is_defined_on",
+      "pattern": "defined:A on ?2",
+      "type": "A2",
+      "signature": "dd",
+      "subject": 1
+    },
+    {
+      "id": "a_member_of",
+      "pattern": "member:N of ?2",
+      "type": "N2",
+      "signature": "dd",
+      "subject": 1
+    },
+    {
+      "id": "do_belong_to",
+      "pattern": "belong:V to ?2",
+      "type": "V2",
+      "signature": "dd",
+      "subject": 1
+    },
+    {
+      "id": "do_contain",
+      "pattern": "contain:V ?1",
+      "type": "V2",
+      "signature": "dd",
+      "subject": 1
+    },
+    {
+      "id": "do_lie_in",
+      "pattern": "lie:V in ?2",
+      "type": "V2",
+      "signature": "dd",
+      "subject": 1
+    },
+    {
+      "id": "is_equal_to",
+      "pattern": "equal:A to ?2",
+      "type": "A2",
+      "signature": "dd",
+      "subject": 1
+    },
+    {
+      "id": "is_equal",
+      "pattern": "equal:A",
+      "type": "A",
+      "signature": "c",
+      "subject": 1
+    },
+    {
+      "id": "do_agree_with",
+      "pattern": "agree:V with ?2",
+      "type": "V2",
+      "signature": "dd",
+      "subject": 1
+    },
+    {
+      "id": "do_agree",
+      "pattern": "agree:V",
+      "type": "V",
+      "signature": "c",
+      "subject": 1
+    },
+    {
+      "id": "is_distinct",
+      "pattern": "distinct:A",
+      "type": "A",
+      "signature": "c",
+      "subject": 1
+    },
+    {
+      "id": "the_value_of_at",
+      "pattern": "value:N of ?2 at ?3",
+      "type": "DefN3",
+      "signature": "ddd",
+      "subject": 1
+    },
+    {
+      "id": "is_inductively_less_than",
+      "pattern": "inductively:Adj less:A than ?2",
+      "type": "A2",
+      "signature": "dd",
+      "subject": 1
+    }
+  ],
+  "symbols": [
+    {
+      "id": "Dom(.)",
+      "verbalizations": [
+        "the_domain_of"
+      ]
+    },
+    {
+      "id": "(.,.)",
+      "verbalizations": [
+        "the_ordered_pair_of"
+      ]
+    },
+    {
+      "id": "isDefinedOn(.,.)",
+      "verbalizations": [
+        "is_defined_on"
+      ]
+    },
+    {
+      "id": "aElementOf(.)",
+      "verbalizations": [
+        "a_member_of",
+        "do_belong_to",
+        "do_contain",
+        "do_lie_in"
+      ]
+    },
+    {
+      "id": ".=.",
+      "verbalizations": [
+        "is_equal_to",
+        "is_equal",
+        "do_agree_with",
+        "do_agree"
+      ]
+    },
+    {
+      "id": ".\\neq.",
+      "verbalizations": [
+        "is_distinct"
+      ]
+    },
+    {
+      "id": ".(.)",
+      "verbalizations": [
+        "the_value_of_at"
+      ]
+    },
+    {
+      "id": ".\\prec.",
+      "verbalizations": [
+        "is_inductively_less_than"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "name": "cantor_2",
+    "date": "2026-11-18",
+    "version": null,
+    "source": null,
+    "language": "en",
+    "dependencies": [
+      "cantor"
+    ]
+  },
+  "words": [
+    {
+      "gf_id": "countableA",
+      "gf_definition": "mkAdj \"countable\""
+    }
+  ],
+  "verbalizations": [
+    {
+      "id": "is_countable",
+      "pattern": "countable:A",
+      "type": "A",
+      "signature": "d",
+      "subject": 1
+    }
+  ],
+  "symbols": [
+    {
+      "id": "isCountable(.)",
+      "verbalizations": [
+        "is_countable"
+      ]
+    }
+  ]
+}

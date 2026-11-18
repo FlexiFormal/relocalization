@@ -1,0 +1,244 @@
+{
+  "meta": {
+    "name": "cantor",
+    "date": "2026-11-18",
+    "version": null,
+    "source": null,
+    "language": "en",
+    "dependencies": [
+      "naproche_prelude"
+    ]
+  },
+  "words": [
+    {
+      "gf_id": "empty:A",
+      "gf_definition": "mkAdj \"empty\""
+    },
+    {
+      "gf_id": "intersection:A",
+      "gf_definition": "mkNoun \"intersection\""
+    },
+    {
+      "gf_id": "union:N",
+      "gf_definition": "mkNoun \"union\""
+    },
+    {
+      "gf_id": "difference:N",
+      "gf_definition": "mkNoun \"difference\""
+    },
+    {
+      "gf_id": "family:N",
+      "gf_definition": "mkNoun \"family\" \"families\""
+    },
+    {
+      "gf_id": "disjoint:A",
+      "gf_definition": "mkAdj \"disjoint\""
+    },
+    {
+      "gf_id": "subclass:N",
+      "gf_definition": "mkNoun \"subclass\" \"subclasses\""
+    },
+    {
+      "gf_id": "subset:N",
+      "gf_definition": "mkNoun \"subset\""
+    },
+    {
+      "gf_id": "powerset:N",
+      "gf_definition": "mkNoun \"powerset\""
+    },
+    {
+      "gf_id": "map:V",
+      "gf_definition": "mkVerb \"map\""
+    },
+    {
+      "gf_id": "surject:V",
+      "gf_definition": "mkVerb \"surject\""
+    }
+  ],
+  "verbalizations": [
+    {
+      "id": "the_empty_set",
+      "pattern": "empty:A set:N",
+      "type": "DefN",
+      "signature": "d",
+      "subject": 1
+    },
+    {
+      "id": "the_intersection_of",
+      "pattern": "intersection:N of ?2",
+      "type": "DefN2",
+      "signature": "dc2",
+      "subject": 1
+    },
+    {
+      "id": "the_union_of",
+      "pattern": "union:N of ?2",
+      "type": "DefN2",
+      "signature": "dc2",
+      "subject": 1
+    },
+    {
+      "id": "the_set_difference_of",
+      "pattern": "set:N difference:N of ?2",
+      "type": "DefN",
+      "signature": "dc2",
+      "subject": 1
+    },
+    {
+      "id": "a_family",
+      "pattern": "family:N",
+      "type": "N",
+      "signature": "d",
+      "subject": 1
+    },
+    {
+      "id": "a_disjoint_family",
+      "pattern": "disjoint:A family:N",
+      "type": "N",
+      "signature": "d",
+      "subject": 1
+    },
+    {
+      "id": "a_function_of",
+      "pattern": "function:N of ?2",
+      "type": "N2",
+      "signature": "dd",
+      "subject": 1
+    },
+    {
+      "id": "a_function_from_onto",
+      "pattern": "function:N from ?2 onto ?3",
+      "type": "N3",
+      "signature": "ddd",
+      "subject": 1
+    },
+    {
+      "id": "the_value_of_under",
+      "pattern": "value:N of ?2 under ?3",
+      "type": "DefN3",
+      "signature": "ddd",
+      "subject": 1
+    },
+    {
+      "id": "a_subclass_of",
+      "pattern": "subclass:N of ?2",
+      "type": "N2",
+      "signature": "dd",
+      "subject": 1
+    },
+    {
+      "id": "a_subset_of",
+      "pattern": "subset:N of ?2",
+      "type": "N2",
+      "signature": "dd",
+      "subject": 1
+    },
+    {
+      "id": "is_disjoint_from",
+      "pattern": "disjoint:A from ?2",
+      "type": "A2",
+      "signature": "dd",
+      "subject": 1
+    },
+    {
+      "id": "do_map_to",
+      "pattern": "map:V ?2 to ?3",
+      "type": "V3",
+      "signature": "ddd",
+      "subject": 1
+    },
+    {
+      "id": "do_surject_onto",
+      "pattern": "surject:V onto ?2",
+      "type": "V2",
+      "signature": "dd",
+      "subject": 1
+    }
+  ],
+  "symbols": [
+    {
+      "id": "theEmptySet()",
+      "verbalizations": [
+        "the_empty_set"
+      ]
+    },
+    {
+      "id": "theIntersectionOfAnd(.,.)",
+      "verbalizations": [
+        "the_intersection_of"
+      ]
+    },
+    {
+      "id": "theUnionOfAnd(.,.)",
+      "verbalizations": [
+        "the_union_of"
+      ]
+    },
+    {
+      "id": "theSetDifferenceOfAnd(.,.)",
+      "verbalizations": [
+        "the_set_difference_of"
+      ]
+    },
+    {
+      "id": "aFamily(.)",
+      "verbalizations": [
+        "a_family"
+      ]
+    },
+    {
+      "id": "aDisjointFamily(.)",
+      "verbalizations": [
+        "a_disjoint_family"
+      ]
+    },
+    {
+      "id": "aFunctionOf(.,.)",
+      "verbalizations": [
+        "a_function_of"
+      ]
+    },
+    {
+      "id": "aFunctionFromTo(.,.)",
+      "verbalizations": [
+        "a_function_from_to"
+      ]
+    },
+    {
+      "id": "aSubclassOf(.,.)",
+      "verbalizations": [
+        "a_subclass_of"
+      ]
+    },
+    {
+      "id": "aSubsetOf(.,.)",
+      "verbalizations": [
+        "a_subset_of"
+      ]
+    },
+    {
+      "id": "thePowersetOf(.)",
+      "verbalizations": [
+        "the_powerset_of"
+      ]
+    },
+    {
+      "id": "isDisjointFrom(.,.)",
+      "verbalizations": [
+        "is_disjoint_from"
+      ]
+    },
+    {
+      "id": "doMapTo(.,.)",
+      "verbalizations": [
+        "do_map_to"
+      ]
+    },
+    {
+      "id": "doSurjectOnto(.,.)",
+      "verbalizations": [
+        "do_surject_onto"
+      ]
+    }
+  ]
+}

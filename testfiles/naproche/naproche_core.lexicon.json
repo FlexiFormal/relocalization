@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "name": "naproche_core",
+    "date": "2026-11-18",
+    "version": null,
+    "source": null,
+    "language": "en",
+    "dependencies": []
+  },
+  "words": [
+    {
+      "gf_id": "mathematical:A",
+      "gf_definition": "mkAdj \"mathematical\""
+    },
+    {
+      "gf_id": "object:N",
+      "gf_definition": "mkNoun \"object\""
+    },
+    {
+      "gf_id": "element:N",
+      "gf_definition": "mkNoun \"element\""
+    },
+    {
+      "gf_id": "class:N",
+      "gf_definition": "mkNoun \"class\" \"classes\""
+    },
+    {
+      "gf_id": "collection:N",
+      "gf_definition": "mkNoun \"collection\""
+    },
+    {
+      "gf_id": "set:N",
+      "gf_definition": "mkNoun \"set\""
+    },
+    {
+      "gf_id": "map:N",
+      "gf_definition": "mkNoun \"map\""
+    },
+    {
+      "gf_id": "function:N",
+      "gf_definition": "mkNoun \"function\""
+    }
+  ],
+  "verbalizations": [
+    {
+      "id": "a_mathematical_object",
+      "pattern": "mathematical:A object:N",
+      "type": "N",
+      "signature": "d",
+      "subject": 1
+    },
+    {
+      "id": "a_object",
+      "pattern": "object:N",
+      "type": "N",
+      "signature": "d",
+      "subject": 1
+    },
+    {
+      "id": "a_element",
+      "pattern": "element:N",
+      "type": "N",
+      "signature": "d",
+      "subject": 1
+    },
+    {
+      "id": "a_class",
+      "pattern": "class:N",
+      "type": "N",
+      "signature": "d",
+      "subject": 1
+    },
+    {
+      "id": "a_collection",
+      "pattern": "collection:N",
+      "type": "N",
+      "signature": "d",
+      "subject": 1
+    },
+    {
+      "id": "a_set",
+      "pattern": "set:N",
+      "type": "N",
+      "signature": "d",
+      "subject": 1
+    },
+    {
+      "id": "a_map",
+      "pattern": "map:N",
+      "type": "N",
+      "signature": "d",
+      "subject": 1
+    },
+    {
+      "id": "a_function",
+      "pattern": "function:N",
+      "type": "N",
+      "signature": "d",
+      "subject": 1
+    },
+    {
+      "id": "a_element_of",
+      "pattern": "element:N of ?2",
+      "type": "N",
+      "signature": "dd",
+      "subject": 1
+    }
+  ],
+  "symbols": [
+    {
+      "id": "aObject(.)",
+      "verbalizations": [
+        "a_mathematical_object:N",
+        "a_object",
+        "a_element"
+      ]
+    },
+    {
+      "id": "aClass(.)",
+      "verbalizations": [
+        "a_class",
+        "a_collection"
+      ]
+    },
+    {
+      "id": "aSet(.)",
+      "verbalizations": [
+        "a_set"
+      ]
+    },
+    {
+      "id": "aMap(.)",
+      "verbalizations": [
+        "a_map"
+      ]
+    },
+    {
+      "id": "aFunction(.)",
+      "verbalizations": [
+        "a_function"
+      ]
+    },
+    {
+      "id": "aElementOf(.,.)",
+      "verbalizations": [
+        "a_element_of"
+      ]
+    }
+  ]
+}
