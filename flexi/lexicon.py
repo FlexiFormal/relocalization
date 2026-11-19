@@ -1,5 +1,6 @@
 import dataclasses
 import itertools
+import json
 import re
 from pathlib import Path
 from typing import Literal, Iterable
@@ -243,31 +244,32 @@ class Lexicon:
             )
             self.add_symbol_verb(svr)
 
-    def write_gf(self):
+    def write_gf(self, mode: Literal['forthel', 'ftml'] = 'ftml'):
         path = MAGMA_PATH / 'generated'
         path.mkdir(exist_ok=True)
 
         with open(path / f'{self.name}.gf', 'w') as fp:
-            # if self.mode == 'forthel':
-            #     fp.write('--# -path=../magma:../lexica:../other\n\n')
-            #     fp.write(f'abstract {self.name}Grammar = Forthel ** {{\n')
-            # elif self.mode == 'ftml':
-            fp.write('--# -path=../magma:../lexica:../other:../formulae\n\n')
-            fp.write(f'abstract {self.name} = SigFtml ** {{\n')
+            # TODO: abstract syntax is already language specific!
+            if mode == 'forthel':
+                fp.write('--# -path=../magma:../lexica:../other\n\n')
+                fp.write(f'abstract {self.name} = Forthel ** {{\n')
+            elif mode == 'ftml':
+                fp.write('--# -path=../magma:../lexica:../other:../formulae\n\n')
+                fp.write(f'abstract {self.name} = SigFtml ** {{\n')
             fp.write('  fun\n')
             for vr in self.verbalizations.values():
                 fp.write(f'    \'{vr.gf_id}\' : {vr.typ};\n')
             fp.write('}\n')
 
         with open(path / f'{self.name}{self.lang}.gf', 'w') as fp:
-            # if self.mode == 'forthel':
-            #     fp.write('--# -path=../magma:../lexica:../other\n\n')
-            #     fp.write(
-            #         f'concrete {self.name}GrammarEng of {self.name}Grammar = ForthelEng ** open SigConstructorsEng, ParadigmsEng, ConstructorsEng in {{\n')
-            # elif self.mode == 'ftml':
-            fp.write('--# -path=../magma:../lexica:../other:../formulae\n\n')
-            fp.write(
-                f'concrete {self.name}Eng of {self.name} = SigFtmlEng ** open SigConstructorsEng, ParadigmsEng, ConstructorsEng in {{\n')
+            if mode == 'forthel':
+                fp.write('--# -path=../magma:../lexica:../other\n\n')
+                fp.write(
+                    f'concrete {self.name}{self.lang} of {self.name} = Forthel{self.lang} ** open SigConstructors{self.lang}, Paradigms{self.lang}, Constructors{self.lang} in {{\n')
+            elif mode == 'ftml':
+                fp.write('--# -path=../magma:../lexica:../other:../formulae\n\n')
+                fp.write(
+                    f'concrete {self.name}{self.lang} of {self.name} = SigFtml{self.lang} ** open SigConstructors{self.lang}, Paradigms{self.lang}, Constructors{self.lang} in {{\n')
             fp.write('  oper\n')
             for wr in self.words.values():
                 fp.write(f'    \'{wr.gf_id}\' = {wr.gf_def};\n')
@@ -275,3 +277,75 @@ class Lexicon:
             for vr in self.verbalizations.values():
                 fp.write(f'    \'{vr.gf_id}\' = {vr.gf_lin};\n')
             fp.write('}\n')
+
+
+def compile_json_lexica(
+        lexica: list[Path],
+        name: str,
+):
+    """
+    If successful, this should probably be refactored into separate functions etc.
+    Also, we could mirror the json modularity in gf.
+    """
+    added_lexica: set[str] = set()
+    required_lexica: set[str] = set()
+
+    lexicon_by_lang: dict[str, Lexicon] = {}   # by language
+
+#     @dataclasses.dataclass
+#     class VerbInfo:
+#         json_id: str
+#         distributivity: str | None
+#         gf_id: str
+    json_id_to_gf_id: dict[str, str] = {}
+
+    def _get_lexicon(lang: str) -> Lexicon:
+        lang = {'en': 'Eng', 'de': 'Ger', 'fr': 'Fre'}[lang]
+        if lang not in lexicon_by_lang:
+            lexicon_by_lang[lang] = Lexicon(name, lang)
+        return lexicon_by_lang[lang]
+
+    for path in lexica:
+        j = json.loads(path.read_text())
+        meta = j.get('meta', {})
+        default_lang = meta.get('language', 'en')
+        added_lexica.add(meta.get('name', path.stem))
+        for dep in meta.get('dependencies', []):
+            required_lexica.add(dep)
+
+        for word in j.get('words', []):
+            _get_lexicon(word.get('language', default_lang)).add_word(
+                WordRecord(
+                    gf_id=word['gf_id'],
+                    gf_def=word['gf_definition'],
+                    is_inferred=False,
+                )
+            )
+
+        for verbalization in j.get('verbalizations', []):
+            vr = VerbalizationRecord.from_spec(
+                typ=verbalization.get('type', None),
+                spec_str=verbalization['pattern'],
+                subject_argument=verbalization.get('subject_argument', None),
+            )
+            _get_lexicon(verbalization.get('language', default_lang)).add_verbalization(vr)
+            json_id_to_gf_id[verbalization['id']] = vr.gf_id
+
+        # for symbol in j.get('symbols', []):
+        #     for verb in symbol.get('verbalizations', []):
+        #         ...   # TODO
+
+    missing_lexica = required_lexica - added_lexica
+    if missing_lexica:
+        raise ValueError(f'Missing dependencies: {", ".join(sorted(missing_lexica))}')
+
+    for lexicon in lexicon_by_lang.values():
+        lexicon.write_gf(mode='forthel')
+
+
+if __name__ == '__main__':
+    import sys
+    if len(sys.argv) < 3:
+        print(f'Usage: {sys.argv[0]} <LexiconName> <lexicon1.json> [<lexicon2.json> ...]')
+        sys.exit(1)
+    compile_json_lexica([Path(p) for p in sys.argv[2:]], name=sys.argv[1])
